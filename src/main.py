@@ -931,74 +931,74 @@ async def help_command(ctx: commands.Context) -> None:
     """
     color: int = color_handler.get_user_color(ctx.author.id)
     embed: discord.Embed = discord.Embed(
-        title="🎲 Kullens Terningsrullare",
+        title="🎲 Kullens Tärningsrullare",
         description="För alla dina tärningsbehov. Nästan",
         color=color
     )
     embed.add_field(
-        name="Basic Dice Rolling",
+        name="Grundläggande Tärningsslag",
         value=(
-            "Roll any number and type of dice with optional modifier:\n"
-            "`!roll NdX[+Z]` - Roll N dice with X sides and modifier Z\n"
-            "Example: `!roll 3d6+2` - Rolls three 6-sided dice and adds 2\n"
-            "\nLimits: Maximum 100 dice and 1000 sides per die"
+            "Slå valfritt antal och typ av tärningar med en valfri modifierare:\n"
+            "`!roll NdX[+Z]` - Slå N tärningar med X sidor och modifierare Z\n"
+            "Exempel: `!roll 3d6+2` - Slår tre 6-sidiga tärningar och lägger till 2\n"
+            "\nBegränsningar: Maximalt 100 tärningar och 1000 sidor per tärning"
         ),
         inline=False
     )
     embed.add_field(
-        name="Exploding Dice",
+        name="Obegränsade Tärningsslag",
         value=(
-            "Roll dice that 'explode' when maximum value is rolled:\n"
-            "`!ex NdX[+Z]` - Roll N exploding dice with X sides and modifier Z\n"
-            "Example: `!ex 4d6-1` - Rolls four 6-sided exploding dice and subtracts 1\n"
-            "\nWhen a die shows its maximum value (e.g., 6 on a d6), you get to roll 2 more dice!"
+            "Slå tärningar som 'exploderar' när de visar maxvärde:\n"
+            "`!ex NdX[+Z]` - Slå N obegränsade tärningar med X sidor och modifierare Z\n"
+            "Exempel: `!ex 4d6-1` - Slår fyra obegränsade 6-sidiga tärningar och subtraherar 1\n"
+            "\nNär en tärning visar sitt maxvärde (t.ex. 6 på en T6), får du slå 2 nya tärningar!"
         ),
         inline=False
     )
     embed.add_field(
-        name="Count Successes",
+        name="Räkna Framgångar",
         value=(
-            "Count dice results that meet or exceed a target number:\n"
-            "`!count NdX TARGET` - Roll N X-sided dice and count results >= TARGET\n"
-            "Example: `!count 5d10 7` - Rolls five d10s and counts how many show 7 or higher\n"
-            "\nSuccessful rolls are shown in **bold**"
+            "Räkna tärningsresultat som når eller överskrider ett målvärde:\n"
+            "`!count NdX MÅLVÄRDE` - Slå N X-sidiga tärningar och räkna resultat >= MÅLVÄRDE\n"
+            "Exempel: `!count 5d10 7` - Slår fem T10 och räknar hur många som visar 7 eller högre\n"
+            "\nLyckade slag visas i **fetstil**"
         ),
         inline=False
     )
     embed.add_field(
-        name="Skill Checks",
+        name="Färdighetskontroller",
         value=(
-            "Roll against a target number:\n"
-            "`!roll NdX[+Z] TARGET` - Regular skill check\n"
-            "`!ex NdX[+Z] TARGET` - Exploding skill check\n"
-            "Example: `!roll 4d6+2 24` - Rolls 4d6+2 against target number 24\n"
-            "\n✅ Success if total ≤ target number\n"
-            "❌ Failure if total > target number\n"
-            "The result shows how much you succeeded or failed by"
+            "Slå mot ett målvärde:\n"
+            "`!roll NdX[+Z] MÅLVÄRDE` - Vanlig färdighetskontroll\n"
+            "`!ex NdX[+Z] MÅLVÄRDE` - Obegränsad färdighetskontroll\n"
+            "Exempel: `!roll 4d6+2 24` - Slår 4T6+2 mot målvärde 24\n"
+            "\n✅ Lyckat om totalen ≤ målvärdet\n"
+            "❌ Misslyckat om totalen > målvärdet\n"
+            "Resultatet visar hur mycket du lyckades eller misslyckades med"
         ),
         inline=False
     )
     embed.add_field(
-        name="Session Tracking",
+        name="Sessionshantering",
         value=(
-            "Track dice rolls during your game sessions:\n"
-            "`!startsession [description]` - Start tracking a new session\n"
-            "`!endsession` - End the current session\n"
-            "`!stats` - Show statistics for the current session\n"
-            "`!mystats` - Show your personal statistics\n"
-            "\nNote: Starting and ending sessions requires the 'Game Master' role"
+            "Spåra tärningsslag under dina spelsessioner:\n"
+            "`!startsession [beskrivning]` - Börja spåra en ny session\n"
+            "`!endsession` - Avsluta den nuvarande sessionen\n"
+            "`!stats` - Visa statistik för den aktuella sessionen\n"
+            "`!mystats` - Visa din personliga statistik\n"
+            "\nObservera: Start och avslut av sessioner kräver rollen 'Game Master'"
         ),
         inline=False
     )
     embed.add_field(
-        name="Secret Rolls (Game Master Only)",
+        name="Hemliga Slag (Endast Spelledare)",
         value=(
-            "Make secret rolls that only show results to you:\n"
-            "`!secret roll NdX[+Z]` - Secret normal roll\n"
-            "`!secret ex NdX[+Z]` - Secret exploding roll\n"
-            "`!secret count NdX TARGET` - Secret counting roll\n"
-            "\nResults are sent via DM, and a discreet confirmation appears in the channel.\n"
-            "All secret rolls are logged for session statistics."
+            "Gör hemliga slag som endast visar resultaten för dig:\n"
+            "`!secret roll NdX[+Z]` - Hemligt vanligt slag\n"
+            "`!secret ex NdX[+Z]` - Hemligt obegränsat slag\n"
+            "`!secret count NdX MÅLVÄRDE` - Hemligt räkneslag\n"
+            "\nResultaten skickas via DM, och en diskret bekräftelse visas i kanalen.\n"
+            "Alla hemliga slag loggas för sessionsstatistik."
         ),
         inline=False
     )

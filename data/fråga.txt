@@ -1,0 +1,49 @@
+@bot.command(name="fråga")
+    async def fråga(ctx: commands.Context, *, fråga: str) -> None:
+    """
+    Exempel på hur du kan ställa frågor via FAISS-indexet.
+    """
+    await ctx.send("🔍 Söker efter relevant information...")
+
+    # 1. Sök i FAISS
+    relevant_chunks = search_faiss(fråga, top_k=10)
+    if not relevant_chunks:
+        await ctx.send("⚠️ Hittade ingen relevant information i databasen.")
+        return
+
+    # 2. Klistra ihop chunkar till en (relativt) lång text.
+    #    Men se upp för token-gränser. Om du vill kan du göra en "summarize_chunk"-funktion.
+    context_text = "\n\n".join(relevant_chunks)
+
+    # 3. Bygg prompt
+    prompt = f"""
+    Du är en rollspelsexpert. Här är text från vårt material (PDF:er).
+    Använd endast informationen nedan för att svara på frågan.
+
+    FRÅGA: {fråga}
+
+    KONTEXT (relevanta utdrag):
+    {context_text}
+
+    Om du inte hittar svaret i utdragen, svara: "Jag hittar inte tillräcklig information i materialet."
+    """
+
+    # 4. Skicka prompten till GPT-4 (eller GPT-3.5, beroende på licens/tillgång)
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "Du är en hjälpsam rollspelsexpert."},
+                {"role": "user", "content": prompt}
+            ],
+            # (Valfritt) Ange max_tokens, temperature, etc.
+        )
+
+        svar = response.choices[0].message.content
+
+        # 5. Splitta svaret i 2000-teckensbitar (pga Discords begränsning).
+        for part in split_message(svar):
+            await ctx.send(part)
+
+    except Exception as e:
+        await ctx.send(f"❌ Ett fel uppstod: {str(e)}")

@@ -1,0 +1,53 @@
+# Miljövariabler
+.env
+
+# Python-artefakter
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Databasfiler
+*.db
+*.db-shm
+*.db-wal
+
+# Stora datafiler
+data/knowledge_index.faiss
+data/knowledge_texts.npy
+*.faiss
+*.npy
+
+# Virtuell miljö
+venv/
+ENV/
+env/
+
+# IDEs och redaktörer
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*~
+
+# Temporära filer och caches
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+Chockvärde
+Chockvärdet är ett mått på hur bra man tål smärta, vävnadsskada, omtöckning och chock. Det ger också förmågan man har att behålla medvetandet då kroppen utsätts för våld. Chockvärdet används både när Chockslag och Dödsslag slås. Chockvärdet beräknas som medelvärdet av STY, TÅL och VIL. Chockvärdet kan alltså uttryckas med följande formel:
+(STY+TÅL+VIL)/3 = Chockvärde. 
+
+Dödsslag
+Dödsslaget är ett slag som man måste lyckas med för att inte avlida. När en rollperson får mer Trauma eller Blodförlust skall ett Dödsslag slås omedelbart. Om en rollperson skall slå både ett Dödsslag och ett Chockslag så slås alltid Dödsslaget först. För att lyckas med ett Dödsslag måste man slå ett svårighetsslag under rollpersonens Chockvärde. Svårigheten för Dödsslaget fås ur sektionerna för Trauma och Blodförlust. Observera att svårighetstärningarna från Smärt-sektionen inte räknas in i svårighetsslaget vid Dödsslag. Misslyckas Dödsslaget så avlider rollpersonen av skadan.
+
+Chockslag
+Chockslaget är ett slag som man måste lyckas med för att inte bli medvetslös. När en rollperson får mer Trauma, Smärta eller Blodförlust skall ett Chockslag slås omedelbart. För att lyckas med ett Chockslag måste man slå ett svårighetsslag under rollpersonens Chockvärde. Svårigheten för Chock-slaget fås ur sektionerna för Trauma, Smärta och Blodförlust, då man summerar svårighetstärningarna därifrån. Misslyckas Chockslaget så blir rollpersonen medvetslös och faller orörlig till marken. En medvetslös rollperson får inte göra några medvetna handlingar. Lyckas slaget är rollpersonen vid medvetande och kan agera som vanligt.
+
+Medvetslöshet
+Medvetslöshet är resultatet av ett misslyckat Chockslag. En medvetslös person kan inte utföra några handlingar eller kommunicera med omvärlden. En medvetslös person fortsätter givetvis att blöda om denne har blödande sår. En medvetslös rollperson kommer att förbli medvetslös ända tills rollpersonen lyckas med ett Chockslag. Se den frivilliga regeln för blödningstakt hos medvetslösa på sidan 64 i spelledarguiden.
+
+När slås Chockslag och Dödsslag?
+Dödsslag slås generellt när…
+◊ en rollperson erhåller Trauma-kryss
+◊ en rollperson får ökad Blodförlust och mängden
+Blodförlust medför en svårighetsmodifikation
+◊ en situation uppkommer som specifikt uppmanar att ett Dödsslag skall slås, exempelvis som en följd av
+magi.
+Chockslag slås generellt när…
+◊ en rollperson erhåller Trauma-kryss
+◊ en rollperson erhåller Smärt-kryss
+◊ en rollperson erhåller ökad Blodförlust och mängden Blodförlust medför en svårighetsmodifikation
+◊ en situation uppkommer som specifikt uppmanar att ett Chockslag skall slås, exempelvis som en följd av magi
+
+Observera att man enbart slår ett Chockslag per skada som tilldelas. Om en rollperson får både Trauma-kryss och Smärt-kryss i en och samma attack så slås inte två Chockslag, utan bara ett, med svårigheten summerad från Trauma-, Smärt-, och Blodförlust-sektionerna

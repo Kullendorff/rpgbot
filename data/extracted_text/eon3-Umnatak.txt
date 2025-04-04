@@ -1,0 +1,166 @@
+Source: eon3-Umnatak.pdf
+--- Page 1 ---
+Eon rollformulär v3.1 –  © 1995,1996,2000,2003,2004 Carl Johan StrömSTY
+Lojalitet
+Heder
+Amor
+Aggression
+Tro
+RykteGenerositetNamn
+Yrke
+Ras Längd
+Vikt
+KroppKön
+Ålder
+Hemort
+ReligionTÅL
+RÖR
+PER
+PSY
+VIL
+BIL
+SYN
+HÖRSpelledareSpelare
+ChockvärdeTotal belastning
++Ob7T6+Ob 1T6
++Ob2T60
++Ob3T6+Ob4T6+Ob5T6+Ob6T6Trauma
++Ob8T6
++Ob9T6NärstridsvapenSpeciella fördelar & nackdelarVapenarm: Höger Vänster Ambi
++Ob7T6+Ob 1T6
++Ob2T60
++Ob3T6+Ob4T6+Ob5T6+Ob6T6Smärta
++Ob8T6
++Ob9T6–7–1
+–2
+–3
+–4
+–5
+–6
+–8
+–9+Ob5T6+Ob2T6
++Ob3T6+Ob4T6Utmattning
++Ob 1T60
+Dödslag
+ChockslagHugg Kross Stick BRYT ViktVikt av övrig utrustningKläder & Pansar
+SpurtSprångFÖR Ω0,5=
++=
+SI
+/
+//////Ob
+ObObObObObObObObObObObObObObObObObObObObFärdighet
+Kroppsskydd Ger skydd åt Hugg Kross Stick BRYT ViktSköldar Färdighet Skada BRYT Vikt SI
+/
+/Ob
+ObAvståndsvapen Färdighet Räckvidd Vikt
+mmmMycket lång
+ObObObLångt
+ObObObNormal
+ObObObKort
+ObObObQadosh Tur
+VINITFattningGrund-
+skadaHugg Kross Stick
+Ob Ob Obkg m/r
+m/r
+m/rkg
+kgkg
+Svårighet
+Chockslag FÖR–1
+–2
+–3
+–4
+–5FÖR
++Ob6T60
++Ob1T60
++Ob2T6
++Ob3T6+Ob4T6+Ob5T6Blodförlust
++Ob7T6
++Ob8T6+7/runda+1/runda
++2/runda+1/min
++3/runda
++4/runda+5/runda+6/runda
++8/runda
++9/rundaBlödningstaktDödsslag
+ChockslagSvårighetInsikt=FÖRx2
+=FÖRx3
+Bärförmåga
+=(STY+TÅL)/2kg[5]
+[11]
+---
+---
+---
+
+--- Page 2 ---
+BerättarkonstVärde Specialiseringar
+Dansa
+Fingerfärdighet
+Fiske
+Förföra
+GycklaFörhöra
+Gömma
+Hoppa
+Kasta
+Klättra
+Köra vagn
+Ledarskap
+Marsch
+Matlagning
+Ockultism
+Rida
+Sjunga
+Skidor
+Skådespel
+Smyga
+Speja
+Spel & dobbel
+Spåra
+Supa
+Söka
+Undervisning
+Undvika
+Värdera
+Överlevnad
+Övertala[PP]
+[RP]
+[R]
+[P]
+[PP]
+[P]
+[RP]
+[RP]
+Handel [PP]
+[R]
+[R]
+[R]
+[R]
+[PP]
+[T]Specialiseringar
+Utrustning Utrustning Vikt Vikt[P]
+[B]
+[R]
+[PP]
+[R]
+Slagsmål [R][PP]
+[R]
+[PS]
+[P]
+[PS]
+[T]
+[PS]
+[P]
+[R]
+[B]
+[P]
+[PP](PER+PSY)/4
+(RÖR+PSY)/4(PSY+SYN)/4[PP]
+[RP]
+[PS][R]
+[P]
+[T]
+[B]RÖR/2PSY/2TÅL/2BIL/2Grundchanser
+för färdigheterStridsvana [noll]  
+Övriga färdigheter
+ Värde
+Modersmål PSY
+Övrigt
+

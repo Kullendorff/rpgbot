@@ -1,0 +1,19 @@
+Inre skador (‘Inre skada’)
+Om resultatet från en allvarlig skada visar ’Inre skada’ kan man ta reda på i större detalj vilket vitalt organ som skadats. Detta görs med ett slag på tabell R2-56. Den detaljerade effekten av skadan ersätter då den generella beskrivningen given av termen ’Inre skada’ på sidan 54. Slaget för att ta reda på vilken typ av inre skada som uppkom kan med fördel kontrolleras efter själva striden är över.
+Det enda sättet att åtgärda ett skadat organ är genom kirurgi (kirurgi är som regel ett mycket riskabelt ingrepp) eller magi. Vissa droger kan också hjälpa.
+Regler för kirurgi finns på sidan 71.
+Observera att rollpersonen fortfarande läker Trauma och Smärta som vanligt, även om rollpersonen har inre skador. Som vanligt hindrar eventuella infektioner rollpersonen från
+att läka Trauma, enligt regler på sidan 72.
+
+1T10 Inre skada
+1–2 Magsäcken punkterad. Leder till kraftiga buksmärtor som ger 1 kryss Trauma och 8 kryss Smärta för varje timme som går. All utmattning är fördubblad. Skadan ger en extra infektion.
+3–4 Tunntarmarna skadade. Leder till en allvarlig infektion som ger 1 kryss Trauma och 8 kryss Smärta för varje timme som går. All utmattning är fördubblad. Skadan ger en
+extra infektion.
+5–6 Tjocktarmen punkterad. Leder till en allvarlig infektion som ger 1 kryss Trauma och 8 kryss Smärta för varje timme som går. All utmattning är fördubblad. Skadan ger två extra infektioner.
+7 En njure förstörd. Detta ger 1 kryss Trauma och 6 kryss Smärta för varje timme som går. All utmattning är fördubblad.
+8 Gallblåsa spräckt. Detta ger 1 kryss Trauma och 6 kryss Smärta för varje timme som går. All utmattning är fördubblad.
+9 Mjälten spräckt. Detta ger 1 kryss Trauma och 6 kryss Smärta för varje timme som går. All utmattning är fördubblad.
+10 Levern förstörd. Detta ger 4 kryss Trauma och 6 kryss Smärta för varje timme som går. All utmattning är fördubblad. Skadan ger två extra infektioner.
+
+Punkterad lunga (‘Inre skada’)
+Vid en träff i lungan blir denna punkterad. Detta ger 2 kryss Trauma och 6 kryss Smärta för varje timme som går. All utmattning är fördubblad. Denna inre skada fås automatiskt vid lungträffar i bröstkorgen då regeln om detaljerade inre skador används.

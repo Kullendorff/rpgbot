@@ -1,0 +1,1062 @@
+Source: 5028_regnsynd.pdf
+--- Page 3 ---
+VVälkommen till Regnsynd , ett äventyr till Eon.
+Äventyret som sådant är enkelt upplagt ochbetoningen ligger på att göra det enkelt för oer-
+farna spelledare. Men även en erfaren spelledare kom-mer ha mycket nöje av Regnsynd. Det finns godamöjligheter att expandera äventyret om man så önskar.Regnsynd är tänkt vara ett introduktionsäventyr till Eonoch dess spelvärld Mundana. Att konstruera äventyr tillEon är en tacksam uppgift, eftersom det finns så storamängder bakgrundsmaterial och tilläggsböcker tillrollspelet.
+Regnsynd är format som en ganska rak historia, fylld av
+skräck och fantasy. Det är inte så mycket grottkrälning,skattjakt eller monsterslakt, utan stämningen ligger mermot det mystiska och skräckfulla. Känslan skall varafokuserad på mörker och en olycksbådande tid.
+Delar av äventyret är utformat som rena uppläsnings-
+texter för spelledaren, men om spelledaren känner sigmer rutinerad är dessa bara en hjälp för honom att iklädasig rollerna som presenteras. Målet är att skapa ett litetstycke skräckfantasy som skall vara enkelt att förstå ochacceptera.
+Äventyret måste inte nödvändigtvis vara förlagt till
+Soldarn eller byn Lundnäs – en spelledare som vill bytaplats kan göra detta utan större problem. 
+Jag hoppas att ni kommer få ett par timmars kuslig un-
+derhållning med Regnsynd, och jag hoppas ni finner detlika trevligt att spela som jag fann det att skriva.
+Väl mött!
+Författaren,
+Göteborg, hösten 2001FÖRORDFÖRORD
+
+--- Page 4 ---
+PRODUKTION
+Carl Johan ”Det sprutar mat i hela mikrovågsungnen!” Ström
+KONSTRUKTION
+Marco ”Alla landlevande djur, då?” Berhmann
+MED HJÄLP AV
+Lukas ”Medeltiden har inte förändrats så mycket” Sjöström
+TACK TILL
+Sarah ”Gurkfolk med tändsticksben” Geijer
+Dan ”Kan jag få gå och spotta nu?” Johansson
+Carl Johan ”Jag är orangutangen Calle!” Ström
+LAYOUT & REDIGERING
+Daniel ”Bättre en sur norrlänning än en glad göteborgare...” Lehto
+ILLUSTRATIONER
+Christian ”Jag har hittat mitt eget manér” Svalander
+KARTOR
+Carl Johan ”Om du kör maten på full effekt i tio minuter kommer den att explodera” Ström
+OMSLAGBILD
+Keith ””Parkinson
+KORREKTURLÄSNING
+Sarah ”Jag är så utter, fett med åsnedöd” Geijer
+Joakim ”Jo, jag hörde att du inte var härifrån” Larsson
+Daniel ”Jag har hål i händerna idag” Lehto
+Carl Johan ”Hela hörselgången fylld av varmt lim” Ström
+TRYCK
+Tryckkedjan, MölndalREGNSYND
+Första tryckningen, isbn 91-8912828-1 
+Copyright © 2001 Carl Johan Ström
+göteborg
+www.neogames.se
+
+--- Page 6 ---
+• 5 •INTRODUKTION REGNSYND
+KAPITEL ETTKAPITEL ETT
+REGNSYNDREGNSYND
+HHans regntyngda kappa gjorde honom både frusen och fuktig.
+Han kunde knappt minnas tiden då det inte hade regnat.Detta förbannade regn! Det var som om himlen hade bestämt
+sig för att straffa Lundnäs, att den hade gett sig den på att förgörahela byn. Skördarna ruttnade på fälten, boskapen var sjuk. Ävenbyborna uppvisade tecknen på sjukdom och galenskap. Många hadekommit till honom för att be om råd och för att be. Men Aurias ochPelias verkade inte lyssna, varken på honom eller på byborna. Hantittade upp mot den mörka himlen och knöt näven över huvudet.
+”Detta måste upphöra, hör Ni det?! Vi klarar inte detta längre! Vi
+har alltid varit Era trogna tillbedjare, och detta är tacken vi får?!”Himlen svarade med att lysas upp av en vigg som snabbt åtföljdes avett rullande muller. Den samoriske tempelmannen skakade uppgivetpå huvudet, suckade lätt och fällde upp kåpan över huvudet. Inte föratt det hjälpte – både han själv och kåpan var redan dyngsura. FaderRubiel skakade uppgivet på huvudet och suckade tungt medan hanbörjade bege sig nedåt mot byn.
+Han uppfattade inte skuggorna i skyn förrän det var för sent. Han
+hörde skrina och vände sig om, men då var de redan för nära för attundkommas. Skräcken slog sitt grepp i honom och han blev kall.Kallare än han någonsin varit tidigare. De mörka ögonen såg döttpå honom när det snabba och oförlåtande anfallet kom sekundendärpå. Fader Rubiel skrek och skrek, men ljudet dog snabbt bort iden smattrande regnsymfonin.
+
+
+--- Page 7 ---
+• 6 •INTRODUKTION REGNSYND
+Äventyrets struktur
+Detta äventyr bör spelledaren börja med att läsa från pärm till
+pärm för att skapa sig en uppfattning om dess struktur och inne-håll. Titta gärna på kartorna när det hänvisas till platser i texten.Gå igenom händelseförlopp och skeenden så att spelledaren får enklar bild över dessa. Kom också ihåg var pärlorna finns och vilkasom har dem. Slutligen, försök lära känna de spelledarpersoner(SLP) som är med i Regnsynd.
+Bakgrund
+En fiskare fann i sina nät en fisk, vilken hade varit nere vid ettgammalt vrak där den funnit fyra svarta pärlor vilka den svalde.När fiskaren rensade fisken fann han de fyra pärlorna. Dessa pärlorär en nyckel för att öppna upp en port för nedkallandet av ondamakter. Pärlorna utstrålar starkt negativ magisk energi. Dennaenergi gör att vädret slår om och att landlevande djur i närhetenblir som tokiga. Djuren kommer inte att tillåta att pärlorna färdasfrån platsen de nu befinner sig på, vilket skapar problem förfiskarens hemby Lundnäs i östra Soldarn. Sedan pärlorna hittadeshar djuren varit aggressiva och inte tillåtit någon bybo att lämnabyn. Försöker man, anfaller de.
+Dessutom har det blivit ett kraftigt väderomslag, vilket gör att det
+regnar oavbrutet i olika intensitet – från duggregn till spöregn.Detta har gjort att skördarna är sönderslagna och ruttnade, vilketgör att maten börjar sina i byn. Dessutom håller sig folk inomhusoch de mår fysiskt och psykiskt dåligt utan att de vet varför. Detär givetvis pärlornas aura som påverkar byborna så de blir håglösaoch sjuka. Fiskaren har inte lyckats förstöra pärlorna och han kaninte förmå sig att kasta dem åter. I ett desperat försök kontaktadehan byns samoriman för att få råd. Denne lovade att ta om handom pärlorna och att rådfråga samorismens gudomar omproblemet. 
+Samorimannen skickade bud via en välsignad brevduva efter hjälp
+från Zoriánorden. Efter några dagar anlände hjälpen i form av entempelriddare och dennes väpnare. Att dessa kom genom djurensomringning av byn berodde på att de varit ute i så god tid, innanpärlorna hade hunnit påverka skogens djur lika kraftigt. Riddarenoch samorimannen kom gemensamt överens om att skicka en avpärlorna till Hadarlon, där Zoriánorden har sitt högkvarter. Rid-darens väpnare fick denna uppgift, vilket tyvärr också ledde tilldennes död, då skogens djur jagade och dödade honom. Detta ärdock okänd information för byns invånare.
+En av pärlorna tog riddaren för att undersöka själv, medan sa-
+morimannen behöll de andra två. Någon dag innan äventyretbörjar för rollpersonerna blev samorimannen dessutom attackeradav gripar när han var ute på gravgården en liten bit utanför byn.Dessa dräpte samorimannen, som tappade en av pärlorna på grav-gården, innan de tog med sig honom till sitt näste på en kulle iskogen. Under tiden har pärlornas makt påverkat riddarens psykeså kraftigt att han har blivit vansinnig, som en besatt person, ochhan börjar se häxor och Daakanhängare i varenda buske. Att det
+dessutom bor en klok gumma, eller häxa om man så vill, utanförbyn gör inte saken bättre. Byborna känner i allmänhet inte tillpärlornas existens, utan skyller på mörka makter eller häxerier. 
+Om inget görs snarast kommer Lundnäs att förgås när byborna
+långsamt förtvinar, antingen av sjukdom eller av svält. Att kalla påhjälp utifrån är fruktlöst, då ingen kommer genom den mur somskogens djur skapat. Det enda som kan tänkas vara räddningen ärom någon som inte är påverkad av pärlornas makt skulle anländatill byn. Detta då djuren gärna släpper in folk till Lundnäs, menvägrar släppa ut någon.
+Pärlorna
+De fyra svarta pärlorna har en mycket lång historia. De finnsomnämnda i tidiga legender som enligt vissa forskare är flera tusenår gamla. Pärlorna är delar av en nyckel – en artefakt som användsför att öppna upp himmelen och nedkalla mörker över Mundana.Pärlornas bakgrund har dock inte speciellt mycket med det häräventyret att göra, då det inte är dess egentliga användnings-område som är det intressanta. Det är istället deras korrumperan-de aura som är avgörande. Då de för länge sedan hittades av ljusetsförkämpar så försökte dessa förstöra pärlorna, dock utan fram-gång. Därför försökte de tappra istället förbanna pärlorna så att deinte skulle kunna användas. På pärlorna lades en förbannelse somdrar till sig väktare, vilka förgör de som använder eller flyttar påpärlorna. För att ständigt vara säker på att väktare skulle finnasnärvarande gjordes de landlevande djuren till väktare. Detta göratt djuren är känsliga för pärlorna och försöker förgöra de som harmed dem att göra. Ju fler pärlor som är tillsammans, desto starkareblir djurens drift att förgöra. Dock är havets djur helt opåverkadeav pärlornas makt.
+Personer som har pärlorna i sin närhet påverkas också av dess
+ondska. Ofta får personer en förändrad personlighet – negativadrag förstärks, medan positiva egenskaper förminskas i betydelse.Utöver denna psykiska påverkan blir levande, besjälade varelserfysiskt sjuka av pärlornas aura. De får huvudvärk, ledvärk ochdrabbas av illamående, vilket gör att de inte kan äta eller drickautan att kasta upp. Påverkan ökar gradvis och är även baserad påavståndet mellan målet och pärlan. Det är därför de flesta bybor iLundnäs mår mer eller mindre dåligt när rollpersonerna anländertill byn.
+Utöver djur och människor påverkar pärlorna även vädret. I en
+radie av nästan fem mil runt pärlorna regnar det mer eller mindrekonstant. Regnet blir dock svagare ju längre ut från centrum mankommer (vilket har gjort att det närliggande Emori’an Do’cenariinte har reagerat nämnvärt). Det värsta regnet är inom en knappmil runt pärlorna. Det är aldrig helt uppehåll, när det intespöregnar så kan det snabbt växla till ett stilla duggregn.Växlingarna går fort och mängden regn beror på hur snabbtpärlorna lockar till sig nya regnmoln. Dock påverkas inte tempe-INTRODUKTION
+Välkommen till Regnsynd , ett spännande äventyr till Eon. Regnsynd är gjort med fokus
+på både klassisk skräck och fantasy. Rollpersonerna kommer att dras in i en bys öde ochen urgammal förbannelse. Välkommen till Lundnäs, med sina hemligheter, person-
+ligheter och mysterier.
+
+--- Page 8 ---
+• 7 •REGNSYND INTRODUKTION
+raturen av pärlorna, så det kan fortfarande vara varmt eller kallt
+när regnet strilar från himlen. Även om regnet påverkas upp tillfem mil runt pärlorna så påverkas dock inte levande varelser sålångt ut. Se tabell RS-3 för mer information om pärlornas effektpå levande landvarelser.
+Om man håller i pärlorna så känns de alltid varma och har man
+flera stycken i handen ökar hettan. Har man alla fyra tillsammansså kommer man inte att kunna hålla i dem utan att få bränn-skador. Pärlorna har dock inget antändningsvärde. När alla fyrapärlorna är inom en meter från varandra gör de dessutom vädretextremt dåligt – med mycket kraftig vind och skyfall.
+De svarta pärlorna är oförstörbara och det enda sättet att bli av
+med pärlorna är att gömma dem, så ingen hittar dem. Att göra såunder havets yta eller långt ned i jorden är antagligen den bästalösningen, eftersom kistor alltid kan öppnas. Pärlorna måste läggasså djupt så dess aura inte når att påverka omgivningen i så höggrad. Pärlornas makt grumlas kraftigt av vatten. Men att läggadem vid strandkanten hjälper föga, då detta bara medför att pär-lans räckvidd minskar något. Det krävs ett riktigt djupt vatten för
+att det skall fungera. I vatten så minskar dess räckvidd med ca 1%per meter de ligger under vattnet, både regnräckvidd och psyke-påverkan. Mer om pärlorna och hur de interagerar medomgivningen finns beskrivet löpande i äventyret.
+Djurens påverkan
+De landdjur som påverkas av pärlornas väktarförbannelse kom-mer instinktivt att följa förbannelsen. De vet inte själva om attde påverkas av en yttre kraft. Den inverkan som pärlorna harpå djuren i närheten är flerfaldig. Dels kommer djuren att för-söka se till att pärlorna inte flyttas från platsen, genom att bildaen järnring kring pärlornas centrum. Dessutom dras hela tidenfler och fler djur mot detta centrum, för att ansamlas införhotet. Djuren kommer dessutom att bege sig närmare ochnärmare civilisationen. Däremot vägrar djuren att själva vidrörapärlorna, då detta får allvarliga konsekvenser i form av bränn-skador. 
+Viktiga personer i handlingen
+De viktigaste personerna i Regnsynd beskrivs kortfattat här.Längre beskrivningar förekommer på andra platser i boken.
+Ragnar Fiskare : Ragnar var fiskaren som fick upp pärlorna i
+och med sin fångst en dryg vecka innan rollpersonerna kom-mer in i äventyret. Han är numera en bedrövad, lätt förvirradman som dränker sina sorger i billig öl i Lundnäs gästgiveri.
+Riddar Warg Spegelsköld : En fanatisk zoriánriddare som
+har kommit till Lundnäs på fader Rubiels begäran. Han hadeursprungligen med sig sin väpnare Oke, som när rollperson-erna introduceras i äventyret är död i skogen utanför Lundnäs.Riddar Warg har påverkats kraftigt av pärlan han har i sin ägovilket resulterat i paranoia, som får honom att vara överdrivetmisstänksam och dessutom aggressiv. Han ser häxor och kätta-re överallt. Att han har pärlan har han mer eller mindre glömtbort i sitt fördunklade tillstånd.
+Väpnare Oke : Oke var riddar Warg Spegelskölds väpnare
+och fick uppdraget att ta med en pärla för att låta den bliundersökt i Hadarlon. Tyvärr gick Oke en våldsam död tillmötes i skogen och nu ligger han och hans riddar Wargs hästi en trollgrotta.
+Fader Rubiel : När rollpersonerna anländer är fader Rubiel
+död sedan någon dag. Han dräptes av galna gripar när hanvälsignade gravarna på Lundnäs gravgård. Hans kropp liggernu i griparnas näste. Av de två pärlor som fader Rubiel hade isin ägo finns den ena kvar på hans kropp, medan den andrahamnade i brunnen på gravgården.
+Byfånen Egil : Egil är en lurifax, en komplett tokig gammal
+man som lever av allmosor från byborna. Han skadade sig ihuvudet vid en båtolycka och var inte sig själv efter det. Hanbrukar tala i ramsor eller rim, men har stunder av klarhet. Hanär lätt enerverande men samtidigt harmlös, så byborna be-handlar honom väl. Han är det enda vittnet till när fader Rubi-el anfölls av griparna på gravgården. Detta är dock informationhan själv inte förstår vidden av.Häxan Fredricca : Fredricca är en godmodig medelålders
+kvinna som bor med sina katter i en stuga i skogen. Hon tyck-er om att leva i harmoni med naturen och undviker helst män-niskor. Hon är duktig på att använda örter och har dessutomen hel del kunskap om trollkonster. Hon har inte påverkats såkraftigt av pärlorna, även om hon givetvis har känt av dem.
+Båg-Pieter : En av Lundnäs främste jägare. Har ej påverkats så
+mycket av pärlorna, men har märkt djurens udda beteende.Han är själv en lite udda person.
+Baron Semuel Leijon av Lundnäs : Baronen är en äldre
+sjuklig man, avlägset släkt med den sittande soldiske riks-konungen Sachsar Leijon. Baronen är den som ansvarar förbaroniet där Lundnäs är huvudort. Pärlornas makt har drabbatbaron Semuel kraftfullt, och sedan ett par dagar ligger han ochyrar i sin säng på godset strax utanför Lundnäs. 
+Betjänten Hejden : Baron Leijons betjänt är den dryge Hej-
+den, en man som verkligen tar sig själv och sitt arbete på all-deles för stort allvar. Rollpersonerna kan komma att ha pro-blem med att övertyga Hejden att släppa in dem om de villsamtala med baronen.
+Herr Thall Spjut av Lundnäs : Baron Semuels egen riddare,
+och tillika ansvarig för lag och ordning samt för den lilla vakt-styrkan i Lundnäs. Herr Thall agerar som baron Semuels fogdeöver Lundnäs län. Herr Thall försöker hålla god min utåt, menplågas av en dunkande huvudvärk. 
+Kapten Jeorg Rask : Kapten Rask var ansvarig för ‘Spegel-
+måne’, det fartyg som rollpersonerna färdades med och somblev angripet av kapare. Han kommer att hålla sig passiv underäventyret och befinner sig antingen på fartyget tillsammansmed Masse Huggare, eller på Vansnäs gästgiveri.
+Timmermannen Masse Huggare : Masse Huggare är
+Lundnäs främste timmerman och tillika snickare. Han ochhans halvdussin mannar kommer att hjälpa till med skadornasom fartyget ”Spegelmåne” ådrog sig under piratanfallet.
+
+--- Page 9 ---
+• 8 •INTRODUKTION REGNSYND
+Magin som håller förbannelsen har blivit snedvriden med tiden.
+Om det beror på pärlornas inneboende ondska eller om det ärnågot annat vet ingen, men effekten är att dess väktare påverkasannorlunda än vad som var tänkt. Djur som nu påverkas av auranblir allt mer vansinniga av dess makt, och kommer att uppföra siglångt mer aggressivt än vad som anses vara normalt.
+Djurbestånden som främst påverkas kring Lundnäs är en större
+vargflock, ett fåtal björnar, fåglar samt kanske de farligaste – enfamilj med gripar, vilka håller till på en ö en bit ut i Jarneviken.
+Soldarn
+Soldarn är beläget på Asharinahalvöns sydöstra del. Det är ettbördigt land, med behagligt klimat. Majoriteten av landet täcks avvidsträckta lövskogar, och där det finns både henéa-alver och
+skogstroll. I norr och söder blir landskapet öppet och jordbruks-områdena tar vid. Där odlas vete, korn, råg och havre. Mineral-fyndigheter är ovanliga i de lättillgängliga delarna av Khazimber-gen i väster, varför gruvdrift endast sker på ett fåtal ställen.
+Soldarn är en feodal ärftlig monarki och styrs av rikskonung Sach-
+sar den Vidsynte. Under honom lyder ett antal hertigar som styrvarsitt hertigdöme. Hertigdömena är indelade i grevskap somstyrs av grevar, och grevskapen är i sin tur indelade i baronier somstyrs av baroner. Grevarna i Solds kronomark, rikskonungenskronojord, lyder direkt under rikskonungen och bär titeln mark-greve, medan baronerna i detta område bär titeln markis. Ständigamaktkamper pågår mellan de olika adelsätterna.
+Den främsta religionen i Soldarn är den samoriska läran, vars
+gudomar heter Aurias och Pelias. Dessa representeras av den upp-åtgående respektive nedåtgående solen. Zoriánorden, en ortodoxgren av den samoriska läran, är mäktig i Soldarn och de flestaadelsmän och inflytelserika personer tillhör denna. Vid sidan avden samoriska läran har Jordmoderns kloster ett starkt fäste iSoldarn. Jordmodern, eller Eliana som hon också kallas, är livetsbeskyddare, och hon dyrkas framför allt av bönder.
+Språket i Soldarn är ashariska. Läs- och skrivkunnigheten är låg.
+De flesta dokument skrivs på faliska eller sabriska. Valutan är sil-verdalern vilken har samma värde som den jargiska denaren. Van-ligt är även det kopparmynt som är värt en tiondels silverdaler.Den ashariska gulden, som är värd sex silverdaler, är ovanlig, ochden ashariska guldmarken, som är värd 160 silverdaler, ser manextremt sällan. Tideräkningen är densamma som i Jargien, det vill
+Fakta om baroniet Lundnäs
+Länsherre : Baron Semuel Leijon av Lundnäs.
+Huvudort : Byn Lundnäs.
+Invånarantal : 303 personer i byn, totalt ca 900 i baroniet.
+Befolkning : 98% soldier, 2% övriga (jämt fördelat mel-
+lan alver, tiraker och dvärgar)
+Huvudnäring : Handel med timmer och trä, fiske.
+Handelsvägar : Sjövägen, främst mellan hamnstäder runt
+om Asharinahalvön, Consaber, Momolan och Det cire-faliska samväldet.
+Import (i stort) : Spannmål, metall och sten.
+Export (i stort) : Timmer, stockar, förädlade träarbeten
+såsom möbler.
+Militära resurser : 1 riddare, 4 vakter samt ca 75 man i
+milis i hela länet (ca 40 milismän i byn Lundnäs).
+Religion : Samorismen (85%), Eliana (20%).Byborna
+Byborna i Lundnäs är för närvarande misstänksamma och
+vidskepliga. Regnet och sjukdomarna har förvandlat byntill en plats av tvivel. Byborna kommer att försöka und-vika rollpersonerna, och skulle de tilltalas kommer dehålla sig korta i tonen, för att snabbt avsluta samtalet.
+
+
+--- Page 10 ---
+• 9 •REGNSYND INTRODUKTION
+säga man räknar antalet år som har passerat efter Daak (e.D.). Må-
+naderna är frostmånad, göjemånad, vårmånad, gräsmånad, blom-stermånad, sommarmånad, hömånad, skördemånad, höstmånad,slaktmånad, vintermånad och mörkermånad. Veckodagarna ärsöndag, måndag, vigdag, mittdag, åskdag, fridag och lördag.
+Lundnäs
+Lundnäs är en by som aspirerar på att bli en stad. Inflyttningen harvarit hög under den senaste tiden, vilket också märks när manvandrar i skogen, där de övergivna torpen finns kvar som fallfär-diga monument. Lundnäs har omkring 300 invånare i själva byn,och nästan lika många i närområdet. Byn är belägen i östra Sol-darn, och har en naturlig hamn i anslutning till Jarneviken. Ham-nens skyddade läge gör byn till en bra ankrings- och proviante-ringsplats för fartyg som färdas längs med Soldarns östra kustlinje. 
+Lundnäs främsta näring är skogsavverkning och fiske. Just skogen
+ger byn en fördel, då baron Semuel Leijon, Lundnäs länsherre,har jobbat aktivt för att börja utnyttja skogens resurser. Detta hargjort Lundnäs till ett paradis för skogshuggare och timmermän,men också andra yrkesområden som sysslar med trä i någon form,som snickare och skeppsbyggare. Det har talats om att inom dennärmsta tiden försöka uppföra ett varv för att bygga och moder-nisera Soldarns begränsade flotta. Men de idéerna är bara i plane-ringsstadiet. Länsherren har också använt sina kontakter medhovet för att locka till sig kompetent folk till byn, vilket haft vissframgång. Förra året var självaste rikskonungen på besök i byn,under mycket pompa och ståt.
+Byns stolthet är den nya sågen, där stockar görs om till timmer
+och plankor. En del av råmaterialet förädlas till exempelvis möb-ler eller verktyg på plats av byns skickliga hantverkare. 
+Handeln med timmer gör också att nöjesverksamheten börjar ut-
+vecklas. I Lundnäs har det gamla gästgiveriet fått en ny renässans,med nya gäster som sjömän och handelsmän. Men på det helataget är stämningen i byn lugn och harmonisk, och för närvaran-de finns inte de problem som man kan associera med hamnstäder,som fylla, slagsmål och skadegörelse. Åtminstone några skepp an-länder per vecka, med sjömän och handelsherrar. Än så länge haringa större handelshus brytt sig om Lundnäs, men baron Leijonhoppas att han skall kunna locka till sig något av de större cire-faliska husen till byn. Detta skulle vara en stor seger, både för bynsexpansion, men även för baronens egen prestige och aktning. 
+Ett problem är att Jarneviken är ett favorittillhåll för pirater. Kor-
+sarkriget rasar fortfarande runt hela Soldarns kust, och upp motgrannen i norr – Asharien. Piraterna är välorganiserade och verkarkomma från ön Kathar sydost om Soldarn. Detta avskum börjarbli ett allvarligt problem för skepparna och handelshusen i närhet-en, vilket i sin tur leder till att många försöker undvika området.De som lyckas undvika piraterna har möjligheter att sälja timmeroch trä med god förtjänst i exempelvis Mûhad eller Momolan.
+Byn ser ut som en typisk skogsby med växtvärk. Husen är enkla
+och byggda av trä. Att ett hus skulle ha mer än en våning är säll-synt. Utöver bostadsstugorna finns där två krogar, en förhållande-vis stor och välsorterad handelsbod, ett samoriskt tempel med till-hörande begravningsplats samt ett gästgiveri strax norr om byn.Baron Semuel Leijons gods är den enda byggnaden i områdetsom är uppförd i sten och det ligger beläget strax väster om Lund-näs. Byns militära resurser är begränsade till en dåligt tränad milis
+och en liten vaktstyrka som finns på baronens gods. I syfte attstävja bråk eller andra oegentligheter finns byns fogde – baronensegen riddare, herr Thall Spjut av Lundnäs. Efter pärlornas intrånghåller dock Lundnäs på att förfalla...
+Rollpersonernas inblandning 
+Rollpersonerna kommer in i handlingen på ett bananskal.De är ute och reser med fartyg till någon plats i Mundana.Under en natt befinner sig skeppet, vid namn ‘Spegel-måne’, i Jarneviken och blir ikappseglade av kapare, vilkabordar skeppet. Tumult utbryter, under vilken strid upp-kommer. Dock kommer skeppets inhyrda vakter lyckasbekämpa piraterna vilka flyr. Men inte utan att de lyckassabotera skeppet, i hopp om att återkomma med en störrestyrka och försöka kapa det igen. Spegelmåne blir med and-ra ord eldhärjat av piraterna, och dess mast och segel blirkraftigt brända och måste bytas ut. Därför kommer Spegel-månes kapten, Jeorg Rask, att beordra in skeppet motLundnäs, där han vet att det finns resurser för att repareraskeppet. Rollpersonerna kommer att vara strandsatta iLundnäs under några dagar, under vilka de kommer i kon-takt med personer och incidenter som har pärlorna att göra.
+Stämning i Regnsynd
+Äventyret bör präglas av en tryckt stämning – en känslaav den kommande katastrofen. Regnet bör göra den mestgladlynte irriterad, och även de andra mystiska fenomen-en och upplevelserna kommer slå skräck i rollpersonerna.Tänk att situationen hela tiden känns underlig eller mys-tisk. Spela gärna på pärlornas auror, vilka kommer gerollpersonerna huvudvärk, illamåenden och kanske hallu-cinationer om det skulle gå så långt. Personer som roll-personerna möter kommer inte heller att uppträda somvanliga människor, utan kommer antagligen uppfattassom något underliga.
+Låt spelledarpersonerna ha överdrivna drag; en sur person
+blir aggressiv, en smickrande person blir påfrestande in-ställsam, och så vidare. I skogen ser rollpersonerna djursom beter sig underligt.
+En annan sak att tänka på är att eftersom det har regnat i
+en knapp vecka när rollpersonerna anländer till Lundnässå är terrängen blöt, hal och lerig. Att springa, speciellt isluttningar eller backar gör risken att halka stor. Att tappasina skor till seg lera är också möjligheter man kan ta varapå. Dessutom gör regnet att sikten i många fall är ytterstbegränsad. Under de häftigaste skurarna kanske man inteser längre än 20 meter, vilket är väldigt lite, speciellt omman lägger in vargyl eller liknande alldeles i närheten.
+Försök att spela på den kusliga stämning som råder i den
+slumrande byn. Poängtera att den känns öde när man gårgenom den, hur skogen känns mörk, eller hur ljud ärsvåra att identifiera. 
+
+--- Page 11 ---
+• 10 •FÖRBANNADE REGN REGNSYND
+Resan
+Att introducera rollpersoner i ett äventyr är alltid en svårighet
+och ställer krav på spelledaren, eftersom det är han som kan singrupp bäst. Det här äventyret gör introduktionen förhållande-vis enkel för spelledaren, eftersom det enda som behöver görasär att locka rollpersonerna ombord ett skepp för att företa sigen resa till havs. Spelledaren kan väva in Regnsynd i en pågå-ende kampanj eller så kan man starta med att rollpersonerna fåren uppgift att bege sig havsvägen runt om i Mundana. Ett annatalternativ är att starta ’in media res’, det vill säga mitt i hand-lingen. Vill man göra så är anledningen till resan ointressant,man bara konstaterar att rollpersonerna befinner sig på ettskepp och håller på att utföra en resa.
+Spegelmåne
+Spegelmåne är en något ombyggd vågridare som utöver lastäven kan frakta passagerare i en ombyggd del av det storalastrummet. Skeppets kapten och tillika ägare, är kapten JeorgRask. Rask är en väderbiten veteran som kan sjön på sina femfingrar. Innan han sadlade om till civil tjänst var han en upp-skattad sjöfarare inom det ashariska sjöförsvaret och en tid ävenlärare på Camards Marinkåristakademi. Men när han nådde denbeundransvärda åldern av femtio år lämnade han sjön och togtjänst som styrman i handelshuset Wezis tjänst. Efter ett par årlyckades han få tag på Spegelmåne, ett billigt och mer ellermindre vrakliknande skepp, vilket han och några vännerrustade upp med stor händighet. Sedan dess har han tagitcharterresor runt om Mundana, ofta på uppdrag av olika han-delshus. Kapten Rask är känd som en pålitlig och framför alltkompetent man när det gäller försvar av last och besättning.Hans forna tid som marinkårist har satt sina spår, och han väljeralltid kunniga före detta soldater som vakter ombord påresorna. Kaptenen är också van vid den ökade piratverk-samheten kring Asharien och Soldarn, i och med det så kalladeKorsarkriget vilket rasar för fullt. Han har blivit angripen avpirater vid en mängd tillfällen, men hans skepp har aldrig falliti deras händer – vilket retar gallfeber på piraterna.
+Spegelmåne har oftast omkring ett dussin besättningsmän, alla
+skolade i krigets konst. Ombord finns det även plats för åttapassagerare under däck, i ett spartanskt och trångt rum medkojer. När rollpersonerna reser kommer de att vara Rasks endapassagerare. Lastrummen är fulla med spannmålssäckar och vin-tunnor, vilka antingen skall till Consaber (om rollpersonernakommer från ett rike väster om Lundnäs) eller till Melorion(om rollpersonerna kommer från ett rike öster om Lundnäs).Besättningen på båten är disciplinerad, väldrillad, och duktigaatt använda både kortbåge och bredyxa, den senare tillsammansmed en sköld.Öppning
+Efter det att rollpersonerna väl befinner sig ombord på Spegel-måne kan spelledaren läsa upp följande:
+”Skymningen sveper in från horisonten och den rödgula solen verkar
+sömnigt bege sig ned emot vågorna. Fartyget Spegelmåne knarrarförnöjt i brisen som för er framåt över havet. Skeppets kapten, en äldreväderbiten man vid namn Jeorg Rask, meddelade för ett kort tag sedanatt ni nu var i Jarneviken, öster om Soldarns kust. Ni åt en enkelkvällsvard bestående av fisk och skorpor, innan ni gick upp till däcketför att skåda den vackra solnedgången. Havsluften känns frisk i eralungor, och även om ni inte ser land någonstans så känner ni er ändåtrygga – kapten Rask verkar ha den effekten på de flesta ombord.Spegelmåne är det handelsskepp som skall föra er till ert mål.Förhoppningsvis är vinden gynnsam och för er dit snabbt.”
+Här kan spelledaren fråga rollpersonerna vad de vill sysselsätta
+sig med. Det finns inte speciellt mycket att göra ombord, mennågon kanske vill läsa en medtagen bok, eller kanske dricka liteöl med någon av sjömännen som för närvarande har ledigt skift.Låt gärna rollpersonerna få lite känsla för skeppet och dessbesättning. Det finns också goda möjligheter att samtala litemed kapten Jeorg Rask, och han är villig att slänga några ordmed en rollperson som visar tillbörlig respekt. Kapten Raskkan berätta lite om sin bakgrund, men främst berättar han omKorsarkrigen och om hur vattnen de färdas i just nu inte ärspeciellt säkra. 
+”Det finns tirakiska pirater, cirefaliska kapare, sabriska fribrytare och
+en massa annat pack som förpestar för oss hårt arbetande sjömän, ochsom förstör för många familjer när deras fäder inte återvänder.”
+Men han låter inte bitter, utan meddelar gärna, för att lugna
+eventuella nervösa rollpersoner, att han har blivit utsatt för fler-talet piratangrepp utan att ha förlorat varken last eller skepp.Tiden går och antagligen kommer rollpersonerna att vilja krypatill kojs i rummet under däck. 
+Bordningen
+Efter det att rollpersonerna har gått och lagt sig kommer Spegel-
+måne att få påhälsning. Under natten kommer en mindre pirat-slup att smyga sig intill skeppet, och när änterhakarna viner ge-nom luften går larmet från vakthavande ombord Spegelmåne.Tumultet blir ett faktum när vakten snabbt sänks av ettbågskott från piraterna. På Spegelmånes däck utbryter en rejälstrid mellan sömndruckna, men motiverade, sjömän och girigthungriga pirater. Rollpersonerna uppfattar det hela som följer:
+”Ni vaknar alla samtidigt med ett ryck. Någon ovanför er skriker och
+gormar. Ni uppfattar orden ’bordning’ och ’larm’. Skriket upphör plötsligtoch ni hör hur det verkar vara febril aktivitet längs babords sida. ÖverFÖRBANNADE REGN
+Rollpersonerna kommer under det att de färdas med fartyget Spegelmåne drabbas av
+pirater. Under en regnig natt hörs plötsligt skeppsklockan ljuda och skrik och skränväcker även den mest sömnige av rollpersoner. Skeppet blir bordat och strid
+uppkommer. När väl piraterna tar till flykten konstaterar skeppets kapten att det är i behov avreparation. Därför lägger han om kursen och når Lundnäs. Vad kommer en grupp nyfikna roll-personer att göra när de kommer till en ny plats?
+
+--- Page 12 ---
+• 11 •REGNSYND FÖRBANNADE REGN
+däck hörs ordergivning, och trots att ljudet färdas genom det massiva
+däcket kan ni urskilja kapten Rasks stämma. Springande steg dunsar,tillsammans med stridsvrål och ljudet av metall som möter metall.”
+Rollpersonerna har nu möjligheten att bege sig upp på däck för
+att understöda sjömännen, men kan lika gärna hålla sig underdäck, om de känner att de inte är så bevandrade i stridens konst.
+Piraterna
+Piraterna tillhör en liten grupp som hör hemma i Katharsis, påön Kathar, sydöst om Soldarn. De har varit på seglats undernästan en veckas tid och är nu var på väg hemåt, utan att ha setttill något byte. Så när Spegelmåne upptäcktes fick stridslustanen rejäl skjuts uppåt och piraterna förberedde sig för batalj.Gruppen består av åtta man, inklusive ledaren – Ivon Barsk, enliten, spinkig man med råttansikte. Alla pirater är människor.Målet var att tyst undanröja eventuella vakter och sedan medöverraskning överta hela skeppet, men i och med vaktenslarmande misslyckades det. Så Ivon låter orden gå om attstriden är fri, vilket gör att piraterna så snabbt de kan försökerta sig ombord för att slå ned allt motstånd. Sin vana trogen ärkapten Jeorg Rask förberedd och hans mannar vana stridsmän,så striden faller till piraternas nackdel. 
+Rollpersonernas inblandning
+Om rollpersonerna känner sig manade kan de blanda sig istriden. Spelledaren bör dock se till att rollpersonerna i så fall inteskadas allvarligt, eftersom det försvårar resten av äventyret. Me-ningen med piraternas anfall är inte att skada rollpersonerna, utanatt ge en logisk förklaring till varför rollpersonerna hamnar iLundnäs. Stridskunniga rollpersoner brukar dock inte tveka attmed liv och lust ge sig in i en strid, så låt dem gärna göra det.När striden ser ut att nå ett genombrott för sjömännen såkommer eventuella närvarande rollpersoner att märka hur riggenplötsligt har fattat eld. Det är piratledaren Ivon som har satt rig-gen i brand, eftersom han upptäcker att hans mannar inte harnågon chans. Om inte han kan ta den, ska Rask åtminstone intekunna resa vidare, resonerar hans hämndlystna sinne. HuruvidaIvon tillfångatas, dräps eller lyckas undkomma (för att bli enärkeskurk som kan återkomma i andra äventyr?) är upp till spel-ledaren och situationen. Målsättningen är i alla fall att Spegel-måne eldhärjas så kraftigt att reparationer till lands är nödvändiga,och att Rask därför beger sig mot det närmsta kustsamhället, sområkar vara Lundnäs.
+Efterspel
+Sjömännen och kanske så även rollpersonerna kommer snabbtlyckas få elden under kontroll, och efter en kort undersökningvisar det sig att skadorna är så pass omfattande att kapten Rasklägger om kursen mot närmaste hamn – Lundnäs. Rollperson-erna blir informerade om detta av Rask, som också säger att detfinns övernattningsmöjligheter i Lundnäs; ”En trevlig skogsby, i
+ett härligt klimat!” . Mastens och riggens skador innebär att skep-
+pet färdas långsamt och utan någon större finess i manövreran-det, men i övrigt är hon oskadd. Sjömännen har dock, underkapten Rasks, överinseende satt upp provisoriska segel, vilketgör att skeppet blir något så när manöverdugligt.Kapten Jeorg Rask
+Kapten Rask har en gedigen sjömansbakgrund. Hanväxte upp i Talon och kom tidigt in som däckpojke påhandelsfartygen. Nu, nästan 40 år senare, har han sitt egetfartyg som han hyr ut för att frakta handelsvaror för olikahandelshus. Kapten Rask är en muskulös och ärrad sol-bränd sjöveteran, som kan Mundanas farvatten som sinegen hand. Men hans ålder börja ta ut sin rätt och han ärinte lika fysisk som förr, något som han dock inte tyckerom att bli påmind om. Hans ansikte pryds av några dagarsskäggstubb, som går i samma nyans som hans gråa hår-man. De blå ögonen är pigga och alerta. Jeorg klär sig all-tid i tåliga och rejäla kläder som skall fungera och intehindra honom i hans värv. Han är mycket nöjd med sinnya långa mörka läderrock som han köpte av cirefaliskaköpmän senast han var i Ciremelo, på Melorion.
+Rollpersonerna
+Regnsynd kan spelas med nästan vilken uppsättning roll-
+personer som helst. Äventyret är lätt att anpassa efter grup-pen för spelledaren. Om rollpersonerna behärskar vapenfär-digheter tämligen väl, kan spelledaren se till att de stöter påfler farliga djur i skogen. Annars bör rollpersonerna mest sehur djuren beter sig aggresivt, och kanske bli jagade av ettvildsvin, men hinna undan. Olika raser och yrken spelarinte heller någon roll – i Lundnäs har alla sammaförutsättning. Invånarna har dessutom fullt upp med att varasjuka – de har inte tid att bry sig om ‘exotiska’ besökare. 
+
+--- Page 13 ---
+• 12 •FÖRBANNADE REGN REGNSYND
+Ankomsten till Lundnäs
+När Spegelmåne är omkring tjugofem sjömil från Lundnäs
+ändras vädret hastigt och en rejäl regnskur vräker ned överbåten. Rollpersonerna bör snabbt ta sig under däck för att intebli genomdränkta. Skuren ersätts av ett lätt duggregn, vilketsnabbt viker undan för ett rasande skyfall igen. Om någonrollperson lyckas med ett normalt slag (Ob3T6) mot Väder-kännedom så kan spelledaren förklara för rollpersonen att väd-rets uppförande är synnerligen underligt, och att rollpersonenaldrig har varit med om maken – något som också kapten Rasksäger om man skulle prata med honom.
+Bland sjömännen börjar rykten sprida sig om att det är en ond
+natt – vissa tar ryktena med en stor skopa salt och skämtarskojfriskt om det hela, medan andra tar det mycket allvarligt
+och försöker komma över sin rädsla genom att ständigt prataom tillfälligheternas spel. Det dåliga vädret drar dock inte medsig någon svår sjögång, vilket gör att Spegelmåne utan störreförseningar eller problem kan anlägga Lundnäs hamn i dentidiga morgonen.
+Kapten Rask ber rollpersonerna om ursäkt för dröjsmålet och
+säger att han hoppas att riggen kan vara åtgärdad inom ett fåtaldagar. Han erbjuder sig att stå för rollpersonernas sovplatserunder vistelsen i Lundnäs, om de går med på att tillbringa sintid på gästgiveriet Vansnäs gård, en bit utanför byns mitt. Rasksäger vidare att han själv kommer att sova på Vansnäs, men atthan i övrigt kommer att leda reparationsarbetet på Spegelmåne,för att det ska gå så fort som möjligt.
+Översikt av intressanta platser
+Här följer en snabb sammanfattning av de platser som finnsmed i äventyret eller som är av vikt för Lundnäs. De flestaav nedanstående har också en mer detaljerad beskrivning påannan plats i den här boken.
+Vansnäs Gård : Vansnäs Gård, eller ‘Gästgiveriet’ som det
+också kallas, är Lundnäs enda värdshus med övernattnings-möjligheter för gäster. Gården är bara något år gammal ochär byggd helt i trä. Det finns sovplats för cirka dussinet gästeroch matdelen rymmer nästan 30-talet gäster.
+Samoritemplet : I Lundnäs finns ett mindre samoritempel
+som sköttes om av fader Rubiel. Fader Rubiel är dock sedannågra dagar försvunnen – sanningen är den att han anfölls avgripar och dödades av dem. Templet är enkelt utsmyckat,och intill finns en liten stuga som är tempelföreståndarens.
+Gravplats : Enligt den samoriska läran bränns alla rättrogna
+samorier, men för de som väljer att gå irrvägar gäller att debegravs i jord. Gravplatsen kallas bland folket för ’syndarnasplats’ eftersom det oftast är rövare, skurkar och andra syndare
+som ligger där. Gravplatsen sköts om av samoritemplet ochligger en bit i skogen. 
+Häxans stuga : En bra bit väster om Lundnäs finns häxan
+Fredriccas stuga. Stugan omges av en örtagård och träd-gårdsland, som dock har drabbats hårt av det ihållanderegnet. 
+Godset Leijonsborg : Leijonsborg är en av de få byggnader
+som är gjorda i sten i Lundnäs. Det är länsherrens boning ochbestår av en huvudbyggnad på två plan, ett stall och en illaunderhållen träpallisad. 
+Handelsboden : Vanna Rosenkind håller Lundnäs väl-
+försedd med varor av olika slag. Handelsboden är för-hållandevis stor och välsorterad, något som den skvallrigaVanna håller som sin heder att upprätthålla.
+Garnisonen och häktet : I Lundnäs mitt finns det lilla häk-
+tet och garnisionen. Det består av två ihopbyggda hus där detfinns plats för några vakter och i häktet finns tre celler somvardera kan rymma fyra personer utan att det blir för trångt.
+12
+7
+34561. Stranden.
+2. Fyren.3. Kvarnen.4. Garnisonen.5. Handelsboden.6. Samoritemplet.7. Torget.8. Magsinet.9. Sågen.10. Ankaret.11. Börn-Torgnys.
+Till godset
+Leijonborg
+891011
+
+--- Page 14 ---
+• 13 •REGNSYND PÄRLMAKT
+Landstigning
+När Spegelmåne angör hamn söker kapten Rask upp rollper-
+sonerna för att ledsaga dem till Vansnäs Gästgiveri.
+”Ni stiger iland på den massiva träbryggan, vid vilken Spegelmåne är
+förtöjd. Sjömännen sysslar med sina uppgifter medan kapten Rask lederer in mot fast mark. Regnet gör det svårt att se på längre avstånd.Vattenytan vid sidan om bryggan piskas hårt av regnet. Regnet är kallt,när det färdas in genom era klädnader. Kapten Rask börjar visslande tatäten in mot vad ni antar vara Lundnäs.”
+Rask informerar att han redan vid gryningen skall försöka få tag
+på Lundnäs timmerman för att snabbt reparera mast och rigg.
+Regnet piskar upp marken så att det är lervälling där rollperson-
+erna och Rask färdas genom byn. Stugorna är alla nedsläckta ochfönsterluckorna är igenslagna. Inte en varelse syns utomhus –kanske inte så ovanligt med tanke på att det är tidig morgon.Poängtera för spelarna hur rollpersonerna pinas av vinden och detkalla regnet. 
+Efter cirka tio minuter raskt marscherande når sällskapet gäst-
+giveriet, som ligger en bit utanför staden. Cirka fem minuterspromenad genom en regning och mörk skog krävs för att ta sigtill byggnaden.Vansnäs Gård
+Gästgiveriet är en trivsam byggnad tillverkad i timmerstockarmed ett snedtak av halm. Byggnaden är i ett plan och har ett ut-hus för tre personer. En liten veranda finns intill den rejäla dörreni björk. Insidan är ombonad, med oljelampor på borden i mat-salen, gobelänger på väggarna och flera uppstoppade djurhuvudenöver dörrarna. I matsalen finns det flera långbord med tillhörandeväggbänkar, medan mitten upptas av runda träbord och pallar.Längs norra väggen finns en enorm öppen spis. Husets västra delverkar upptas av sovutrymmen. Det finns ett dubbelrum, två småenkelrum och en sovsal. Ett av dubbelrummen är upptaget avzoriánriddaren Warg Spegelsköld och dennes väpnare. Eftersomsamoritemplet saknar säng och då fader Rubiel inte hade plats attinhysa riddaren så valde denne att bo på gästgiveriet. Att sova hosbaronen var inte heller en tanke, då denne visade tecken på grovsjukdom. Standarden i gästgiveriet är spartansk men med godrenlighet. Det massiva trägolvet är välnött men ger också enhärligt känsla att spatsera över. 
+När rollpersonerna anländer tillsammans med Rask så är bygg-
+naden nedsläckt och tillbommad. Efter några rejäla knackningarpå dörren öppnas den av en tjock äldre man som håller enkandelaber med vaxljus i handen. Han skiner upp när han serRask och öppnar dörren medan han ber sällskapet stiga in.PÄRLMAKT
+När rollpersonerna anländer till Lundnäs kommer de ganska snabbt upptäcka att allt
+inte står helt rätt till i byn. Bara en sådan enkel sak som det mycket underliga vädret ären ledtråd. Rollpersonerna kommer också komma i slang med lokalbefolkningen, vilket
+späder på ryktesspridningen.
+
+
+--- Page 15 ---
+Medan han ber rollpersonerna klä av sig de blöta kläderna lunkar
+han över till den öppna spisen för att snart ha igång en rejäl brasa.Han säger att han kan ta hand om kläderna och se till att de blirtorra tills i morgon. Turam – gästgivaren – är en gammal vän tillRask och dessutom har han inte sett till några gäster på ett tag såsällskapet är ett välbehövligt avbrott från den sinande kassakistan.
+Rask åtar sig att betala för sällskapet varpå Turam visar in dem till
+sovsalen, men rollpersonerna får givetvis ett rum om de vill.
+Det finns en oljelampa i vart och ett av rummen, tillsammans
+med en låg stol på vilken det finns en extra filt. Under sängarnafinns också pottor. Rummen har små gluggar vilka är täckta avluckor och regnet trummar frenetiskt mot dessa. Halmtaket ärrejält konstruerat så det finns inga läckage inne i gästgiveriet.
+Regnmorgon
+Rollpersonerna vaknar till ljudet av ett dämpat sorl. Regnetpiskar fortfarande husets sidor. En doft av mat sprider sig genomhuset. När rollpersonerna tagit sig ut till matsalen finns kaptenRask redan där. Dessutom verkar det finnas tiotalet bybor vilkahåglöst verkar äta sin morgongröt och dricka vatten till. Vid ettbord sitter till och med en man och dricker brännvin.
+Rask vinkar till sig rollpersonerna och ber dem sitta ned, varpå
+han ger tecken på Turam att hämta in frukost. Rask undrar omregnet har hållit rollpersonerna vakna eller om de har kunnat sovaändå? Turam kommer med frukosten, bestående av gröt, vatten,grovt bröd och ost. Plötsligt slås dörren till gästgiveriet upp ochfem genomblöta personer kommer in i salen. Sorlet tystnar. Män-nen verkar vara bönder eller fiskare, om man ser till deras klädsel.De spanar snabbt runt i lokalen och sätter kurs mot den ensammemannen vid brännvinsflaskan. Den främre av männen drar nedhuvan och blottar ett skäggigt anlete. Han sätter sig ned vid denensamme mannen. De övriga ställer sig i en cirkel runt bordet.Det är tyst i lokalen medan de två männen vid bordet tittar påvarandra. Den blöte mannen tar till ord med barsk stämma.
+”Ragnar! Vad är det som händer med vår by?! Jag skulle besöka fader
+Rubiel, men han är spårlöst försvunnen. Han har inte varit sig lik sedandu har ränt hos honom stup i kvarten. Vad sysslar du med?”
+Den andre mannen är tyst, sträcker sig efter brännvinsbuteljen
+och tar en rejäl sup ur flaskan.
+”Om jag visste vad som sker skulle jag inte sitta här, tror du det Thom!?”Mannen lutar sig bakåt och ställer ned flaskan. Den blöte  blänger
+på Ragnar och väser något åt sina kamrater. Han fortsätter:
+”Men vid gudarna, Ragnar, märker du inte att något ondskefullt är i
+görningen! Skörden ruttnar, djuren insjuknar, byn svälter och nu är faderRubiel spårlöst borta! Du måste veta något om det här, du måste!”
+Ragnar lutar sig fram och stirrar Thom stint in i ögonen.”Det enda jag vet är att du har rätt angående en sak, och det är att
+ondskan är här. Det har regnat oavbrutet i jag vet inte hur många dagar.Fisken är som bortblåst och jag sitter här och dricker för att ha något attgöra. Jag råder dig att göra detsamma. Lundnäs är dömt, fördömt av demörka gudarna, det är något som är säkert.”
+Ragnar tar en rejäl sup. Thom skakar på huvudet, gör en rörelse
+till de stående männen varpå de lämnar gästgiveriet. Ännu en rösttar till orda:
+• 14 •PÄRLMAKT REGNSYND
+Huvudvärk
+Spelledaren bör slå några tärningsslag på nedanstående
+tabeller för att se om rollpersonerna har blivit påverkade avpärlorna vid kontakt med dem eller bara genom att befinnasig i Lundnäs. Se nedan för svårighet och modifikationer.
+Tabell RS-3: Tabell för påverkan av pärlorna.Tabell RS-2: Svårigheter för att drabbas av pärlornas makt.Tidsintervall Svårighetsnivå*
+Efter en timmes påverkan Ob1T6Efter tre timmars påverkan Ob2T6
+Efter sex timmars påverkan Ob2T6 Efter tolv timmars påverkan Ob2T6 
+Efter ett dygns påverkan Ob2T6 Per efterföljande dygns påverkan Ob3T6 
+*Slag mot VIL. Misslyckas slaget ökar rollpersonen en nivå
+till på tabell RS-3. Se tabell RS-2 för modifikationer.
+Nivå Effekt*
+I Mild irritation
+II Huvudvärk (Ob1T6–2 Smärta), djur blir nervösa
+III Huvudvärk (Ob1T6–1 Smärta), hosta (1 
+Långtidsutmattning), djur hotar
+IV Huvudvärk (Ob1T6 Smärta), hosta (Ob1T6 
+Långtidsutmattning), otrevliga personlighetsdrag förstärks (+Ob1T6 på PER-slag), djur blir aggressiva
+V Huvudvärk (Ob1T6+2 Smärta), kraftig hosta
+(Ob1T6+2 Långtidsutmattning, 1 Trauma), 
+otrevliga personlighetsdrag förstärks (+Ob1T6 på 
+PER-slag), vilda djur anfaller oprovocerat
+VI+ Huvudvärk (Ob2T6 Smärta), feber (Ob1T6–2 
+Trauma, Ob2T6 Långtidsutmattning), hallucina-tioner (+Ob1T6 på PSY- och RÖR-slag), mycket otrevlig (+Ob2T6 på PER-slag), djur anfaller oprovocerat
+*Observera att ökningarna för attributslag inte är kumulativa.Tabell RS-1: Modifikationer på tabell RS-2. 
+Situation Svårighet
+Ikontakt med pärlorna +Ob2T6
+På 1-25 meters avstånd * +Ob1T6
+På 26-100 meters avstånd * ±0
+På 101-500 meters avstånd * –Ob1T6 
+På 501-2500 meters avstånd *–Ob2T6
+0-3 st pärlor ±0
+4 st pärlor** +Ob2T6Qadosh på 15 eller högre –Ob1T6
+Qadosh på -15 eller lägre +Ob1T6Smärta +Smärta***
+Utmattning +Utmattning****
+*Till den närmaste pärlan i rollpersonens närhet.
+**Om rollpersonerna skulle få tag på alla fyra pärlorna måste
+dessutom alla slå ett slag direkt på tabell RS-1.
+***Svårigheten fås ur Smärtsektionen på rollformuläret.
+****Svårigheten fås ur Utmattningssektionen på rollformuläret.
+
+--- Page 16 ---
+• 15 •REGNSYND PÄRLMAKT
+”Ni har rätt, Fiskare!”
+En kraftig man med ett kort vitt skägg och i skinande rustning står
+vid dörren till sovrummen. 
+”Ni har rätt, ondskan är minsann kommen till denna slumrande by!
+Men er fader hade den goda försynen att sända efter hjälp, och hjälpen ärhär. Det är hög tid för mig att presentera mig själv för er – jag är zorián-riddare Warg Spegelsköld, från Hadarlon. Det lurar kättare och misskun-nare i Lundnäs, vid Aurias och Pelias, de växer som på träd! Men jagskall personligen se till att bränna alla häxor och avfällingar, sanna minaord! Denna regnsynd som drabbat Lundnäs skall snart vara till ända!” 
+Med detta marscherar riddaren genom hela matsalen och ut i
+regnet. Rask vänder sig till rollpersonerna och mumlar något om”en dryg sälle, det där” . Därefter ursäktar han sig med att han skall
+se hur reparationerna av Spegelmåne går, varpå han lämnar dem.
+Konfrontationen
+Rollpersonerna är fria att göra vad de vill inne på Vansnäs gård,men när de väl bestämmer sig att lämna lokalen kommer de atthamna i en hotfull situation. Ragnar Fiskare befinner sig på sti-gen mellan gästgiveriet och Lundnäs, men han är inte ensam. Ibuskarna finns det desperata sällskapet ledda av Thom. De är allapåverkade av pärlornas makt och är därför ovanligt aggressiva ochintoleranta. Att deras hustrur, barn och kreatur dessutom liggersjuka gör inte saken bättre. De är övertygade om att Ragnarsinblandning i regnets synd är avgörande, och har därför bestämtsig för att göra processen kort med honom. 
+När rollpersonerna går längs stigen så hör de med ens skrän och
+skrikanden eka genom regnets smattrade. Om de undersökersaken kommer de se hur de fem männen, ledda av Thom, står i
+en cirkel runt Ragnar och hotar honom högljutt. När rollper-sonerna kommer närmare utbryter med ens ett vilt slagsmål mel-lan Thom och Ragnar. De övriga ger sig inte in i själva slags-målet, men hejar på Thom och kastar glåpord åt Ragnar. Bådaslagskämparna är storväxta och starka, och det är med en storenergi de båda rullar runt på den leriga skogsvägen.
+Om rollpersonerna blandar sig i det hela så kommer de andra by-
+borna att bli lite räddhågsna och nervösa. Både Thom och Rag-nar slutar slåss och reser sig upp. Thom kommer att kasta en långblick på Ragnar och fräsa. 
+”Det är inte det sista du ser av mig, Fiskare, var på din vakt.”Sedan lunkar byborna iväg från platsen. Ragnar lutar sig mot en
+trädstam och pustar ut, regnet spolar rent hans blodiga ansikte ochhan gnuggar sin brutna näsa. Efter ett kort tag pustar han ett ‘tack’
+Ragnar Fiskare
+Ragnar Lokesson Fiskare är en av Lundnäs fiskare. Han ären barsk man som har svårt att tolerera överheter. Ragnarsansikte är fårat av all tid tillbringad på de öppna haven, ävenom han har fått en god utbildning i samoritemplets tjänst.Han är gift med Lea Ormsdotter, en kraftig kvinna i sinabästa år. Oftast är han ute på havet tillsammans med sinäldste son Tegol, en ljushårig spoling. Han går iklädd enstickad yllekofta och ett par impregnerade skinnbyxor somskall skydda mot vätan till havs. Ragnar tvekar inte att ta tillvåld mot inkräktare i sitt hus eller i byn som stör ordningen. 
+
+
+--- Page 17 ---
+• 16 •PÄRLMAKT REGNSYND
+till rollpersonerna för att de så påpassligt dök upp. Om de frågar
+Ragnar vad som egentligen händer i byn sätter han sig tungt nedpå en stubbe och knyter händerna under hakan. 
+”Det är en lång historia, är ni säkra på att ni vill höra den?”Om rollpersonerna säger att de vill höra börjar Ragnar berätta.
+Ragnars berättelse
+”Det hela började när jag var långt ute i Jarneviken för att fiska. Ju längre
+ut man beger sig, desto större är chansen att få god fångst. Det var förövrigt den sista dagen solen sken, såvitt jag kan minnas. När jag tog uppmina nät var de fulla av fisk, men det var speciellt en som drog till siguppmärksamhet. Den var stor och svart, och väldigt aggressiv där densprattlade och det var den som överlevde längst bland fångsten. Ungefärdå började det också regna. Ett regn som har följt efter mig sedan dendagen jag fick upp fisken. Regnet tilltog i styrka och jag satte så snabbtsom möjligt tillbaka mot Lundnäs. Hela tiden ökade regnet ytterligare istyrka och vinden ven kring min båt. Det var med nöd och näppe jaglyckades bege mig hem i ett stycke!
+När jag åter var hemma i Lundnäs tog jag hand om fisken och började
+rensa den. När jag tog ur den svarta fisken fann jag till min förvåning attden hade fyra stycken helt svarta pärlor i sin buk. När jag rörde vidpärlorna brände de lätt mina fingrar. Nästföljande morgon var jag drabbadav huvudvärk och pärlorna kändes mig otäcka. Jag tänkte kasta demtillbaka i havet, men när jag stod vid bryggorna kunde jag inte förmå migatt utföra tanken. Slokörad begav jag mig hemåt för att vila bort värken,men den tilltog snarare. På kvällen kändes också mina närmaste grannarextra griniga och många av dem klagade också på huvudvärk. Jag visadeupp pärlorna för några bekanta på Björn-Torgnys, krogen alltså, och dekände också hur pärlorna liksom brände vid beröring. Samma kväll komockså bud om att en del boskap hade blivit sjuka. Nästa morgon var detännu värre – regnet öste ned och ingen jag kände vågade längre tala medmig. Jag försökte än en gång kasta pärlorna i vattnet, men det gick barainte. Som om de vägrade låta mig göra det. Ingen annan vågade ensförsöka göra samma sak, så till slut visste jag inte råd annat än attuppsöka fader Rubiel, en man jag alltid har haft största förtroende för.”
+Ragnar ruskar om sig och regnet yr om honom. Medan han har
+pratat har intensiteten i regnandet ökat markant och detfullkomligt vräker ned vatten. Ragnar verkar inte bry sig specielltom detta, men rollpersonerna kanske tycker det är obehagligt attkänna vatten rinna längs nackar och ryggar samt känna sinutrustning dränkas. Ragnar fortsätter.
+”Fader Rubiel lyssnade på min historia under tystnad. Sedan bad vi
+tillsammans. Fader Rubiel sade att mina bekymmer skulle lätta om hanfick ta hand om dessa pärlor för att skänka dem Aurias välsignelse.Tacksamt gav jag honom de fyra pärlorna och begav mig hemmåt. Mycketriktigt, den nästföljande dagen mådde jag bättre, men hade fortfarande onti huvudet. Regnet var också kvar. Och mina vänner i byn mådde intespeciellt mycket bättre. Arbetet på åkrarna avstannade, dels på grund avslagregnet, men också för att de flesta var så svaga att de inte orkade rörasig. Det var som en farsot! Som om Daak själv hade kommit för attförbanna oss! Fader Rubiel fick ta emot många besök, sade han när jagträffade honom. Han såg själv inte speciellt kry ut. Och han orkade inteta emot alla som ville prata med honom. Under kvällningen började minavänner berätta om hur de och deras boskap hade attackerats av vilda bestarfrån skogen. Båg-Pieter sade till och med att han hade sett flygandevidunder i skyn. Någon dag därefter kom tempelriddaren med sin väpnaretill Lundnäs, och han red direkt till templet för att samtala med FaderRubiel. Jag tror att baron Leijon också var där, men jag är inte säker. Aj,
+vad mitt huvud värker… Men i alla fall så såg jag från mitt hem hurriddarens väpnare red av i sporrsträck söderut framåt kvällen. Det varhäromnatten. Och sedan dess har riddaren ett par gånger proklamerat attLundnäs är drabbat av kättare, mörka makter och av människoätare iskogen. Hans ögon lyser av något slags vansinne så jag kan inte riktigt tahonom på allvar, men något har ju hänt med vårt hem här. Och sedan imorse är ju fader Rubiel borta... Vad är det som händer här?!”
+Med detta brister Ragnar ut i gråt och varje försök att trösta
+honom ignoreras. Han värjer sig från rollpersonernas försök ochlunkar vidare ned mot byn. Det går inte att få ut så mycket merav honom.
+Uppropet vid Torget
+När rollpersonerna närmar sig Lundnäs så märker de en folk-samling genom regnskurarna. Folksamlingen befinner sig mitt påtorget. I mitten, stående på en genomdränkt vagn står en krigareiklädd fjällpansar, läder och med ett svärd i skida vid sidan. Hanstår där, tillsammans med två spjutbeväpnade underhuggare.Bredvid de tre står en man klädd i bruna och gröna skogskläder,med en huva uppdragen över huvudet och med en pilbåge överryggen. De verkar vänta på att mer människor skall samlas kringdem. Regnet strilar över folksamlingen, från vilken ströddahostanfall och svordomar kan höras.
+Krigaren i fjällpansaret tar till orda och med myndig stämma
+överbrygger han ljudet av regnet. 
+”Bybor i Lundnäs, lystring, lystring! De av er som vet att ni har nära
+och kära hemmavid som lider så illa av farsoten att de inte orkade ta sighit, ni kan väl meddela dessa om vad jag har att säga här idag. BaronLeijon är djupt oroad över utvecklingen och han har också just informeratsom fader Rubiels försvinnande. Det är det som är den primäraanledningen till detta möte. Visserligen har ett flertal bybor attackerats avdjur från skogen runt byn, men ingen har hittills dräpts. Vi måste utgåfrån att brott ligger bakom fader Rubiels försvinnande, eftersom hanskropp inte har återfunnits. Må Aurias och Pelias vara med honom, varhan än befinner sig i detta nu.”
+Krigaren, liksom resten av folket, gör en religiös gest. Ett lätt slag
+(Ob2T6) mot Ockultism (Samorismen) ger att detta är enbönegest inom Den samoriska läran – den dominerande religi-onen i Soldarn. Krigaren tar ett steg tillbaka och låter denskogsbeklädde mannen ta ett par steg framåt. Han tar till ordamed en raspig och sträv röst.
+”Som ni alla vet så började djuren agera underligt ungefär samtidigt som
+regnet kom. Detta är ett tecken. Djurens agerande är medvetet på någotsätt. Jag rekommenderar ingen att bege sig utanför byn, speciellt inte eftermörkrets intrång. Om ni måste ge er ut, så beväpna er. Dessutom har jagspanat flygande odjur i skyn, vilket gör mig orolig. Jag har inte kunnatutröna vad det är för bestar, men jag har onda aningar.”
+Folksamlingen börjar upphetsat mumla och sorla medan mannen
+tar ett par steg tillbaka. Krigaren vinkar nu upp en man från främ-re delen av folksamlingen – det är riddaren från Vansnäs. Krigarentar åter till orda, medan riddaren klättrar upp på vagnen.
+”Bybor! Detta är riddar Warg Spegelsköld, från Zoriánorden. Han är
+här på uppdrag av fader Rubiel, som skickade efter honom. Välkommen,riddar Warg.”
+
+--- Page 18 ---
+• 17 •REGNSYND PÄRLMAKT
+Riddaren tar plats på vagnen.
+”Tack, herr Thall, jag tackar för er introduktion.”Riddaren böjer sig framåt och lyfter armarna så att manteln bildar
+ett skynke bakom honom, i vinden och regnet. 
+”Bybor! Det ni måste förstå är att detta bara är början! Mörkret och regnet
+är här av en anledning! Och den anledningen är att det är synd i byn!Någon eller några här har irrat från den rätta läran! Det är Daaksviskningar som i vinden ljuder! Det är Daaks falska tårar som spelar övervåra ansikten! Ni måste vända er till Aurias och Pelias, och ta emot derasnåd och frälsning! Dessa avfällingar och kättare måste ställas till svars! Demåste ställas till svars!! Vi kan inte acceptera dessa kätterskakannibalkulter som dyrkar den onde Daak! Om de inte stoppas snarastkommer hela Lundnäs att förgås! Förtvina! Gå mot undergången! Ochinse, bybor, att detta är tiden för handling!”
+Med detta faller riddar Warg framåt och nästan av vagnen.
+Regnet tilltar i styrka och en åskvigg syns spela över himlen.Blixten följs av en dov åskknall som mullrar över skyn. RiddarWarg återfår balansen och fortsätter skrika.
+”Ni måste förstå att detta är den yttersta prövningen! Regnets synd är er
+och bara er! Detta är inte naturens verk! Detta är ondskans! Jag skallpersonligen ta reda på vilka vidunder som ligger bakom fader Rubielsförsvinnande, och jag har redan skickat min väpnare efter hjälp frånHadarlon! Han begav sig härifrån för några få dagar sedan och medAurias och Pelias välsignelse borde han snart vara åter, med en lösning!Håll ut och be, mina undersåtar, be för era liv!”
+Med detta pustar riddar Warg ut och tar ett par steg tillbaka.
+Krigaren, herr Thall, tar åter ordet.
+”Bybor, lystra till vad riddar Warg har sagt. Han är en vis man, men
+om ni tror er veta något som är av värde i det här, så agera inte på egenhand, utan sök upp mig eller någon av mina medarbetare. Vi kommer attvara i Lundnäs eller på Leijonsborg. Tveka inte att genast söka upp ossom ni har minsta misstanke.”
+Med detta vänder sig herr Thall om och lämnar vagnen, följd av
+de övriga. Moloket skingras folksamlingen.
+Rykten
+Rollpersonerna kan göra ett antal olika saker vid denna tidpunkt.De mest naturliga är nog att söka upp antingen baron Leijon, herrThall eller riddar Warg. De sistnämnda finns kvar på torget ochsamtalar medan folksamlingen skingras. Om rollpersonernanärmar sig sällskapet så kommer herr Thall att uppmärksammadetta och fråga dem vilka de är. Om rollpersonerna ger ett vettigtsvar nickar han kort och frågar om de vill honom något. Om
+Att uppsöka kapten Rask
+Försöker rollpersonerna söka upp kapten Rask är inte detnågra problem att hitta igen honom vid hamnen. Däremotär han sur, har huvudvärk och är väldigt tvär. Arbetet medatt reparera Spegelmåne går långsamt på grund av att mångaav timmermännen är sjuka. Det dåliga vädret gör arbetetextra farligt och omständigt. Rask kommer att hålla sigkortfattad med rollpersonerna, men om de irrterar Rask pånågot sätt kommer han be dem fara och flyga.
+Riddar Warg Spegelsköld
+Riddar Spegelsköld är en trogen och ambitiös zoriánrid-
+dare. Han har uppnått den andra cirkeln och har mest ar-betat med att tillsammans med andra leta upp Daak-anhän-gare och häxor. Detta har påverkat hans misstänksamhet.Riddaren är kraftigt byggd, muskulös och stabil. Han ärmån om sitt yttre och tar väl hand om sitt välansade kortavita skägg. Hans längd är imponerande – en bra bit över190 cm. I vissa stressituationer ”låser” han sig i vissa tanke-banor – något som  gör det svårt för honom att nå högreinom orden. Riddar Warg är hängiven samorismen och berdagligen till gudarna. Han försöker följa den sanna vägen sålångt det går.Herr Thall Spjut av Lundnäs
+Herr Thall Spjut är en ung ädling på ca 25 år som är avläg-set släkt med baron Leijon. Därför tyckte Thalls far att denunge spjuvern kunde arbeta för baron Leijon, något somockså skedde. Baronen är nöjd med Thall som är en dugligfogde i Lundnäs – han är lagom hård, men kan också varaempatisk och förstående för människor i nöd. Thall saknardock erfarenhet från strid, frånsett en del handgemäng närfulla sjömän bråkat under sena kvällar bland Lundnäs kro-gar. Herr Thall är reslig med sina dryga 180 cm och välträ-nade kropp. Detta gör dessutom att många av Lundnäsunga kvinnor gärna samtalar lite extra med fogden, någotsom Thall försöker att inte utnyttja för mycket. Han är des-sutom känd i byn som en mycket duktig sångare – någotsom givetvis förstärker hans rykte som hjärtekrossare.
+
+--- Page 19 ---
+• 18 •PÄRLMAKT REGNSYND
+rollpersonerna säger att de vill hjälpa till med krisen, som att
+undersöka eller något sådant skiner herr Thall upp. Riddar Wargskjuter också in att utomstående är att föredra, så vida de interedan är förtappade. Med detta skärskådar han rollpersonerna fråntopp till tå med en mycket bister min. Herr Thall säger attrollpersonerna helst bör bege sig till baron Leijon för att fåinformation om vad som har hänt och vilken ersättning de vill ha.Han säger vidare att han själv kommer att finnas i byn eller i dessnärhet, efter det att han och riddar Warg har undersökt templetför att finna spår efter fader Rubiel. Med detta kommer de tvåbege sig mot templet, och de vill inte ha sällskap.
+Rollpersonerna kommer också att uppfatta en trashank som tittar
+på dem en bit bort. Om rollpersonerna försöker närma sig kom-mer trashanken att försvinna in och gömma sig. Rollpersonernahittar honom inte. Om rollpersonerna frågor någon om vemmannen är så får de svaret att det är Egil, Lundnäs egen byfåne.
+Att besöka baron Leijon
+Baron Semuel Leijons gods ligger på en palissadomgiven kulle enbit utanför byn. Det består av ett kvadratiskt stenhus, stall ochvaktbaracker, och den nuvarande baronen har gjort sitt bästa föratt få det att se ut som ett gods värdigt en växande by som Lund-näs. Detta innebär främst att han har hängt upp några gobelängeri bankettsalen och hallen, vilka är de enda rum som besökare seri någon större utsträckning. Annars är godset spartanskt inrett.
+Den första som möter rollpersonerna är en tanig betjänt som
+presenterar sig som Hejden, baronens personlige tjänare. Omrollpersonerna vill komma in för att prata med baronen krävs detatt de kan uppföra sig – om de är aggressiva eller uppkäftigakommer Hejden inte att släppa in dem. Skulle det bli bråk roparHejden på baronens vakter (vilka håller sig inomhus tack vareregnet). Slag mot färdigheter som Etikett eller Övertala behövsför att övertyga Hejden om att rollpersonerna har goda asvikteroch att de inte kommer att stressa upp den sängliggande adels-mannen. Om rollpersonerna uppför sig gott och belevat så räckerdet med ett lätt slag (Ob2T6) mot Etikett eller Övertala, men omde är stökiga så kan svårighetsgraden utan problem nå svårt(Ob4T6) eller mycket svårt (Ob5T6). Om rollpersonerna miss-lyckas med att komma in är inte äventyret över för det – detendasom händer är att de inte har diskuterat fram en belöning försitt kommande arbete.
+Om rollpersonerna lyckas övertyga Hejden om att de vill in och
+samtala med baronen så kommer Hejden att ta deras eventuellaytterkläder och lägga dem i hallen, och sedan leda upp gruppentill baron Leijons sovgemak. Hejden kommer under den kortafärden upprepade gånger säga till rollpersonerna att de måste tadet lugnt och inte stressa upp hans arbetsgivare.
+Baronen
+Baron Semuel Leijon är hårt drabbad av pärlornas förbannelseoch han är sängbunden. Hejden frågar sin husbonde om han kangöra något för honom, men baronen skakar lätt på huvudet,varvid Hejden tyst lämnar rummet. Baronen reser sig något ochsätter sig mödosamt upp i sittande ställning mot flertalet mjukakuddar. Han frågar tyst och hest:
+”Vad vill ni, mina herrar?”Rykten i Lundnäs
+Spelledaren kan gärna använda några av nedanstående
+rykten när rollpersonerna rör sig bland lokalbefolkningen.
+◊”Den där häxan har aldrig sett gott åt Lundnäs!”
+◊”Det här vädret kommer att förstöra skörden...”
+◊”Jag har inte kunnat vara ute och fiska på grund av
+vädret. Fast regnet skrämmer väl ändå bort fångsten.”
+◊”Den där religiöse riddaren verkar vara en skum typ.
+Jag hoppas att han snart reser hem till storstan igen…”
+◊”Det vilar en förbannelse över Lundnäs, så är det!”
+◊”Först regnet, sedan skörden, och nu fader Rubiel.
+Snart går hela Lundnäs går under!”
+◊”Jag trodde verkligen att godsherren skulle hjälpa till nu
+när Lundnäs har drabbats av ondskan, men han hållersig gömd på godset, den ynkryggen!”
+◊”Både min bror och min hustru är insjuknade i någon
+slags feber. Jag känner mig inte heller speciellt bra, menjag måste vara stark för deras skull.”
+◊”Jag undrar varför vargylen har varit så mångtaliga på
+sistone. De kom i samband med regnet…”
+◊”Min bror sade att han såg flygande vidunder svepa
+över staden, men kan det kan vara brännvinet…”
+◊”Jag hörde på tavernan att någon hade sett troll i
+skogen, bara en kort bit utanför byn.”
+◊”Aurias och Pelias har lämnat oss!”
+◊”Jag sätter inte min fot på gravgården medan regnet är
+här, jag såg själv underliga flygande figurer där en natt.”
+◊”Jag vill inte prata med er, det har anlänt för mycket
+underligt folk på sistone. Se så, schas!”
+◊”Med vårt oväder lär vi förlora många handelsresor, jag
+hoppas inte detta påverkar Lundnäs för mycket.”
+◊”Baronen är sjuk, han kan inget göra. Där slutet!”Baron Semuel Leijon
+Innan han insjuknade var baron Leijon en ståtlig man. Med
+sitt axellånga nötbruna hår och sin prydligt ansade mustaschvar han en respektingivande man. Folket tyckte bra omhonom då han såg till att lag och ordning hölls. Semuel självlevde tämligen gott på de skatter han tog in av byborna,men han har också gjort mycket för att få igång en expan-siv marknad i länet i allmänhet och i Lundnäs i synnerhet.Baron Semuel Leijon är en syssling till självaste konungSaschar den vidsynte och det talar han gärna om för folkhan möter. Han är en ganska munter man men kan ta imed hårdhandskarna om nöden kräver det. Men han ärabsolut ingen utsugande adelsman, utan försöker se till attbåde han och hans undersåtar får drägliga liv.
+
+--- Page 20 ---
+• 19 •REGNSYND PÄRLMAKT
+Om rollpersonerna berättar att de vill hjälpa till med Lundnäs
+problem spelar ett snett leende i baronens mungipa. 
+”Så bra, vi behöver verkligen all hjälp vi kan få. Ni verkar inte vara så
+... påverkade av omständigheterna kring byn heller, vilket säkertunderlättar arbetet. Lundnäs håller på att förgöras fullständigt. Regnet slårsönder våra skördar, fiskarna kan inte bege sig till havs och vi kommersnart att börja svälta. Att hela byn är drabbad av sjukdom gör att arbetenadessutom har avstannat. Boskapen avlider. Vi producerar ingenting –bara det är en katastrof. Min skogsvaktare säger dessutom att skogensinvånare uppför sig extremt aggressivt och utan fruktan. Han har självblivit attackerad av fåglar och han har sett flygande beläten i skyn. Ochdetta regnet...” 
+Baronen täcker för munnen och hostar ljudligt och länge. ”Det enda jag vet är, efter att ha samtalat med fader Rubiel, Aurias signe
+honom, att en fiskare i byn överlämnade några pärlor till honom och efterdet att fader Rubiel konsulterat de fåtaliga skrifter Lundnäs innehar såbegärde han hjälp. Han skickade en brevduva till Hadarlon med enförfrågan om hjälp. Samtidigt som riddar Warg från Zoriánorden anländeså deltog jag också vid mötet nere i templet. Där kom vi gemensamt framtill att pärlorna måste analyseras, så riddar Warg tog en av dem. Vi gaven till riddar Wargs väpnare, som i sin tur fick i uppdrag att snabbastmöjligt bege sig till Hadarlon, där har de betydligt större möjligheter attanalysera dess krafter. De sista två behöll fader Rubiel, och jag vet intevar de finns, men jag misstänker att han har dem på sin person.”
+Baron Semuels ögon verkar med ens friskare än tidigare.”Ni får samma erbjudande som de övriga som har sagt sig vara villiga att
+lösa mysteriet. Jag hyser inget större hopp till de som tidigare har sagt sigkunna lösa detta, men er känner jag inte. Om det är bra eller dåligt kanjag inte uttala mig om. Lundnäs är inte en rik by och jag kan inte erbjudaså mycket själv, men ni kan få 500 silverdaler, 10 kaggar öl, ettbiotropiskt kongelat samt mitt egna slagsvärd Mithensvred, smitt av dendvärigiske mästeryxsmeden Khirum klan Ghor Hammarskaft. Mer än såkan jag inte avvara, främst på grund av att det inte finns mer att tillgå.” 
+Baronen utbrister i en enorm hostattack, och Hejden störtar in
+och schasar ut rollpersonerna. Han förmanar rollpersonerna helavägen ut och medan vakterna skrattar åt Hejdens ivrighet såslänger han igen porten efter rollpersonerna, som åter finner sigstå i ösregn. På avstånd hör de dessutom vargyl. För merinformation om svärdet Mithensvred se sidan 36.
+Skölden
+När rollpersonerna antingen lämnar Leijonsborg eller om de harirrat runt i byn ett tag så stöter de på en blöt skogsklädd man –samma man som var med herr Thall på vagnen under torgmötet.Leijonsborg
+1) Hall : Här är borgens entré. Rakt fram finns en trappa
+till övervåningen och en dörr till köket, åt höger en dörrtill vapenstugan och längre fram till vänster en dörr tillbankettsalen. Rummet är kalt, trots att baronen försöktskyla detta genom att hänga upp två svagt malätna gobe-länger föreställande bataljscener på väggarna.
+2) Vapenstuga : Här lägger man av sig vapen och annat
+som det inte passar sig att ha inomhus. Rummets sten-väggar är utrustade med olika hängare och ställ.
+3) Bankettsal : En stor sal med ett långbord. På väggarna
+hänger målningar föreställande baronens förfäder samtgobelänger med jaktmotiv. Bredvid den stora spisen finnsen dörr genom vilken tjänarna bär in maten.
+4) Kök : Ett stort kök. Här är vanligen varmt på grund av
+den stora spis som står i ett hörn. Dessutom är det ganskatrångt då ett flertal personer arbetar här.
+5) Förråd : Här inne finns den mat som krävs för att föda
+baronen och hans eventuella gäster.
+6) Sovrum : Endast baronens sovrum är i bruk då han
+varken har fru eller barn. Det rum som tillhörde hansmoder baronessan är fyllt med bråte, medan det andrasovrummet tjänar som gästrum. I baronens sovrum finnsdet en gobeläng vid ena halvan av skorstenen, samtbaronens säng, i vilken han ligger och mår dåligt. Irummet finns också ett bord utrustat med skrivdon samten garderob. Ljus kommer in genom de tre skottgluggarsom finns längs väggarna.
+7) Tjänarbostäder : I dessa två rum lever de tjänare som
+är lite högre upp i hierarkin. I det yttre rummet soverhusmor Liara, i det inre sover betjänten Hejden.
+8) Yttre rum : Här sover de flesta tjänarna på natten. Det
+går också en trappa upp till taket.
+Hejden Mattisson
+Mattisson är en äldre man som är anställd som personligtjänare åt baronen. Han är ganska snorkig och otrevlig istörsta allmänhet men han är kompetent och målmedve-ten, så han får stanna kvar i baron Leijons tjänst. Hanskläder är mycket fina för att bara tillhöra en enkel tjänareoch han tar sig gärna en extra promenad på bytorget baraför att förvissa sig om att alla har sett dem.
+
+
+--- Page 21 ---
+• 20 •PÄRLMAKT REGNSYND
+Han kommer visslande i regnet och passerar rollpersonerna med
+en nickning. Alla rollpersoner lägger märke till att mannen bär enriddarsköld som verkar vara bucklig och illa åtgången. Dessutomser rollpersoner som lyckas med ett lätt slag (Ob2T6) motOckultism att skölden bär Zoriánordens märke. Det är med andraord ingen sköld som denne skogsman bör bära på. Omrollpersonerna möter skogsmannen (Båg-Pieter) när de är inärheten av herr Thall (det vill säga inne i byn) så hör rollper-sonerna en konversation mellan de två. Om rollpersonerna möterBåg-Pieter någon annanstans så måste de slå upp en konversationmellan dem och skogsmannen – ett enkelt ‘hej’ räcker gott ochväl för att skogsmannen skall stanna upp.
+Skogsmannen presenterar sig som Pieter Franksson:”Men jag kallas för Båg-Pieter, då jag är vass med bågen, serru...”Han fortsätter med att fråga rollpersonerna vilka de är och om de
+säger att de undersöker fader Rubiels försvinnande, regnet elleratt de hjälper baronen så visslar skogsmannen lågt. 
+”Jo, serri, jag fann den där skölden invid den södra stigen, mot Hadarlon,
+så att säga. Så vitt jag kan se tillhör den riddar Wargs väpnare. Eftersomjag fann den bara liggandes och i det skick den är i så blev jag naturligtvismisstänksam och plockade upp den.”
+Båg-Pieter visar upp skölden. Skadorna är omfattande och färgen
+på skölden är kraftigt avflagnad. I dess ena kant finns en halvcirkelsom verkar vara ett avtryck av en gigantisk käft. Vilken personsom helst kan se att detta har tillfogats av något större än en män-niska. Ett slag för Djurlära med normal svårighet (Ob3T6) sägerrollpersonen att bitmärkena inte tillfogats av något djur som finnsi trakten. Båg-Pieter lämnar skrockande sällskapet.
+Om rollpersonerna istället möter Båg-Pieter när han talar med
+herr Thall så hör rollpersonerna följande:
+”Herrn, jag fann denna vid den södra stigen, inne i ett buskage.””En Zoriánsköld, på min ära! Det verkar vara väpnare Okes sköld!”Med detta kommer även riddar Warg in till de två männen.”Låt mig se! Onej! Det är Okes sköld. Åh, Oke. Din tapperhet skall
+belönas och ditt minne skall hämnas! Dessa kättare! Han måste ha fallitoffer för en hednisk kannibalkult!”
+Med detta lämnar riddar Warg de två och börjar predika i byn.
+När riddaren stövlar ut och högljutt varnar befolkningen torderollpersonerna fatta intresse. För den som vill prata med riddaren
+om vad som står på blir svaret en lång harang om de kättare somdöljer sig i skogen och det fasansfulla öde den tappre Oke möttdå han utövade sin plikt inför Aurias och Pelias. Han kan ocksålägga in något om hur försynen hjälpte den gode jägaren att finnaOkes sköld. Just nu är riddar Warg så inne i sina egna förvrängdatankar så han kan inte fås att föra ett vettigt samtal med.
+Herr Thall ger genast order om att stigen måste undersökas och att
+Oke måste hittas. Hans mannar verkar väldigt illa till mods övertanken att bege sig ut i den blöta skogen och drar benen efter sig.När de närmar sig skogsbrynet stannar de nästan helt, men hållersig utom synhåll från herr Thall, som givetvis inte följer med.
+Självklart börjar rykten surra i byn, då Båg-Pieter inte har något
+emot att visa upp sitt fynd – snarare tvärtom. Genom allmännaryktesspridarmekanismer sätts detta i samband med fader Rubielsförsvinnande, och snart vet varenda människa i byn att det finnsonda människoätare i faggorna. Detta gör inte direkt stämningenbättre. Regnet fortsätter sin dystra sång över Lundnäs.
+Vidare efterforskningar
+Vid det här laget finns det flera vägar att gå, till exempel:
+◊Följa sköldspåret längs den södra stigen (se sidan 21).
+◊Till Samoritemplet, fader Rubiels hemvist (se sidan 25).
+◊Prata med Båg-Pieter om de flygande monstren (se sidan 27).
+Dessa kan alla göras utan inbördes ordning.
+Rollpersonernas kontakt med pärlorna
+När rollpersonerna för första gången kommer i kontakt
+med en pärla och ser dess skönhet kommer de alla blibetagna av den. Dess smäckra perfekta form, dess djup ochdess lyster. Det är som att skåda den vackraste kvinna (ellerman) och som att bli häftigt förälskad. Ett lätt slag (Ob2T6)mot Värdera ger också att dessa pärlor är värde mycketpengar för rätt person. Säkert flera tusen silverdaler styck.En välbärgad köpman eller kanske en magiker skulle säkertvilja ha dem för att undersöka eller helt enkelt ha dem föratt de är vacker konst. En rollperson som lyckas med ettmycket lätt slag (Ob1T6) mot Magiförnimmelse kännerdessutom att pärlorna är mycket magiska.Om rollpersonerna kör fast
+Om rollpersonerna skulle köra fast i äventyret kan spelle-daren vara snäll och ge dem ytterligare ledtrådar. Här föl-jer ett antal förslag för att finna respektive pärla:
+Dhormels pärla : Om rollpersonerna inte hittar Dhormel
+så kan exempelvis Båg-Pieter ge info om att han har hörtett vredgat troll i närheten av en grotta, och att han sågdelar av en ringbrynja vid mynningen. Han vågade dockinte gå in själv.
+Riddar Wargs pärla : Om rollpersonerna skulle missa
+när Warg visar sin pärla så kan han med glädje visa den fördem igen.
+Pärlan i brunnen : Egil kan försöka kontakta rollperso-
+nerna igen, om än försiktigt och kanske peka på byns van-liga brunn och börja flaxa med armarna och sedan fallasom död ned. Han kan till och med springa in i brunnenmed en ryslig fart. 
+Griparna : Rollpersonerna kan själva få se griparna som
+går till angrepp mot dem, dock utan att anfalla. De kom-mer att markera och hota vilt och högljutt. Poängtera attde verkar vara helt galna.
+Om rollpersonerna missar hur man gör sig av med
+pärlorna : Ragnar kan slå upp ett samtal med rollperso-
+nerna och poängtera hur det verkligen började regna närpärlorna kom till ytan och hur allt var stilla före det.
+
+--- Page 22 ---
+• 21 •REGNSYND STIGEN OCH TROLLET
+Den södra stigen
+Att bege sig in skogen längs den blöta, leriga och hala stigen
+väcker ingen munterhet. Inga fåglar hörs utan allt dränks avregnets smatter i grenverk och på stigen. Herr Thalls mannarhåller sig en bit in på stigen och de är nervösa. Vapnen ärdragna och de spanar ut i skogen och samtalar tyst till varandra.När rollpersonerna kommer närmare blir de överraskade mensamtidigt lättade. Den större av mannarna, en grov sälle vidnamn Nilles med ett vackert spjut i handen tar till orda.
+”Oj, vid Pelias! Vi trodde ni var någon av skogens förryckta bestar.
+Man kan knappt ta ett steg ut i terrängen utan att bli påhoppad avallt från ekorrar och fåglar till rådjur eller björnar. Vi vägrar bege osslängre ut än så här. Inte ens Thall själv vågar ju följa med. Jag ochmina vänner här har alla familjer, sjuka hustrur och barn, som vi mås-te ta hand om. Vi kan inte gå förlorade nu, inte i en stund som denna.Jag säger att detta är häxkonster och ond magi som ligger bakom, menvad hjälper väl det? Om ni vill fortsätta längs stigen så kommer ni attse platsen där skogvaktar’n fann skölden, det är ett stort buskage, medett vält träd som korsar stigen. Ni kan inte missa det. Beskrivningenfick jag av skogsvaktar’n själv så.”
+Någon direkt annan information får man inte ur mannen, mer
+än att om man frågar om häxerier så nämner han kort att detfinns en häxa en bra bit norr om Lundnäs, men han vet ingafler detaljer.
+”Men skogsvaktar’n vet säkert mer. Fråga honom.”Med ”skogsvaktar’n” menar Nilles givetvis Båg-Pieter.
+Grottrollet
+En bit sydväst om byn har ett stort grottroll vid namn Dhormel
+sin boning i en grotta, belägen i en större kulle. Han hittadeden döde väpnaren tillsammans med riddar Wargs häst, ochdrog hem dem till grottan för ett mål mat. Detta innebar atthan fick med sig pärlan som väpnaren bar i sadelväskorna. Ty-värr har detta gjort så att han knappt kan komma ut ur sin grot-ta eftersom de hundratals fladdermöss som lever i den långagången in dit har blivit mycket aggressiva och anfaller honom.De verkar dock bara vara väktare, så de beger sig inte ända ini Dhormels egna grottutrymme. Dhormel har nu varit utan matett bra tag och börjar bli riktigt sur. Att pärlan skulle vara or-saken har han inte tänkt på – Dhormel tänker faktiskt inte såmycket alls. Dhormel lämnade väpnarens sköld vid platsen fördådet, efter det att han upptäckt att den inte gick att äta.
+Dådplatsen
+Som Nilles sade är det inte svårt att finna platsen där Oke blevupphunnen av de förargade djuren och nedgjord. Trädet – enungbjörk – ligger över stigen och en rollperson med någonsom helst bakgrund varandes i skog och mark ser att trädet ärbryskt avbrutet, som om något tungt (i det här fallet var det
+Okes häst) föll över det. Även om regnet har gjort sitt bästa attspola bort alla spår finns det några att finna. 
+Ett normalt slag (Ob3T6) mot Söka medför att rollpersonerna
+finner tygbitar i buskaget. Tyget är vått, men inte ruttet så detär tämligen nyligen bitarna fastnade där. Ytterligare ett normaltslag (Ob3T6) visar på blod och hårrester i björkstammensbrottyta. Ett svårt slag (Ob4T6) mot Djurlära kan ge att detverkar vara hästhår från en brun häst. Ett svårt slag (Ob4T6)mot Söka medför att rollpersonerna finner tre silverdaler delvisbegravda i gyttjan under buskaget.
+Ett normalt slag (Ob3T6) mot SYN eller Söka gör att man
+finner tydliga dragspår från platsen in i skogen. Inte ens regnethar lyckats ta bort den effekten en tung häst har på underlaget,när den släpas av ett troll. För att följa spåret krävs det ett lättslag (Ob2T6) mot Spåra. Totalt tre lyckade Spåra-slag krävs,och varje misslyckande innebär att det tar en kvart innanrollpersonerna får slå ett nytt slag för att försöka hitta spåret.Sådana avbrott kan givetvis innebära att skogens djur hinnerupp rollpersonerna och kommer försöka skrämma tillbaka demtill byn, alternativt försöka döda dem.
+Färden genom skogen kan bli en skrämmande upplevelse, även
+om alla har druckit av elixiret de fick hos häxan Fredricca, sesidan 27 (om de överhuvudtaget ens har besökt henne än).Djur syns först när de är nära inpå och även om de inte anfallerså morrar de och hotar rollpersonerna. De djur rollpersonernaträffar på får väljas med omsorg – en kanin som sitter och stirrarhar inte samma potential som en fradgande varg när det gälleratt skrämmas. Fast om man istället beskriver hur det sitter om-kring tio kaniner i en glänta och bara lugnt tittar på rollperson-erna kan det utan tvekan te sig mystiskt. Om någon inte drackav elixiret kan i stället detta bli till en ren skräckupplevelse, därrollpersonerna med rabiata vargar i hasorna kämpar för att nåtill något som inte heller verkar särskilt tryggt. Och hela tidenspöregn, halkig gyttja och dålig sikt!
+Spelledaren kan med glädje slänga in någon av de övriga
+händelserna som beskrivs på sidan 23 för att krydda färdengenom den blöta, mörka skogen ytterligare.
+Trollgrottan
+Efter att rollpersonerna nått till trollets grotta kommer ett nyttproblem. Grottgången är mörk och fylld med aggressiva flad-dermöss som yr runt huvudena på rollpersonerna och river uppsår med sina klor. Räkna med att man varje runda man intelyckas med ett svårt (Ob4T6) slag mot Undvika får ett (1) kryssTrauma, två (2) kryss Smärta och en (1) poäng Blödningstakt.Det tar cirka tre rundor att ta sig förbi fladdermössen. Miss-lyckas man med ett slag (Ob3T6) mot Tur fastnar dessutomnågon av de små gynnarna i ens hår (förutsatt att man har till-räckligt långt). Om man kryper på golvet får man inga skador,STIGEN OCH TROLLET
+Den här delen av äventyret innebär att rollpersonerna beger sig in i skogen söder om
+Lundnäs. Där kommer de att få bekanta sig med hur pärlorna har påverkat djuren ochhur dessa inte gillar rollpersonerna speciellt mycket. Dessutom finns stora chanser att de
+stöter på ett surt grottroll vid namn Dhormel.
+
+--- Page 23 ---
+• 22 •STIGEN OCH TROLLET REGNSYND
+men å andra sidan är golvet täckt med de motbjudande restpro-
+dukterna av Dhormels tidigare måltider. Det luktar någotalldeles fruktansvärt, och man får slå ett slag med Ob3T6 motVIL för att inte må illa i 1T6 rundor. Dessutom lär man fåskaffa nya kläder när man kommer tillbaka till byn. Om någonlistig person skulle komma på att tända en fackla (om nu intefacklan är genomsur av regnet) för att skrämma bortfladdermössen, tänk på att Dhormel är ett grottroll och därmedinte gillar eld.Dhormels grotta är beckmörk och upptas till större delen av
+Dhormel själv. Han är inte på världens bästa humör, då hanbara fått några ynka fladdermöss att äta sedan Oke tog slut. Omrollpersonerna har någon ljuskälla som avger värme eller, änvärre, öppen eld, skriker han åt dem och kastar ett lårben motljuskällan. Därefter tar han till orda på mycket dålig ashariskaom rollpersonerna släcker ljuskällan (så Dhormel kan se demmen de bara kan se honom i det lilla dagsljus som kommer in).Släcker de inte ljuskällan tar Dhormel ett handfast grepp omden och blåser ut facklan, alternativt krossar lyktan.
+Han förklarar att han är hungrig och vill ha mat, och om han
+inte får det äter han upp rollpersonerna. Ett lätt slag (Ob2T6)mot SYN ger att det ligger rester av en tabard (klädnad somman har över en rustning) på grottgolvet. Om rollpersonernafann tygbitarna i buskaget så känner de igen tyget som varandessamma. Om rollpersonerna börjar tala om Okes tillgångar ellerpärlan utropar trollet ett trotsigt men bestämt ‘MINA!’ ochdöljer den i sin stora näve. 
+Han säger åt rollpersonerna att springa iväg och hämta mat
+samtidigt som han med förvånansvärd snabbhet sliter åt sig densom verkar mest matnyttig av dem. Denne måste slå ett mycketsvårt slag (Ob5T6) mot Undvika för att ens hinna reagera ochhinna kämpa emot. Han förklarar att om de inte kommertillbaka snart äter han deras vän. 
+Rollpersonerna har nu inte mycket annat val än att springa
+tillbaks till byn, samtidigt som Dhormel är på strålande humör– han får ju mat och en ny lekkamrat. Den fängslade rollper-sonen får nämligen leka lekar med Dhormel, mestadels ganskabrutala sådana. Efter ett tag ledsnar dock Dhormel då han ändåbara vinner. Dhormels våldsamma lekar medför att den till-fångatagna rollpersonen erhåller 1T6 kryss Trauma och 2T6kryss Smärta.
+Handla mat
+Väl tillbaka i byn är priserna på mat skyhöga, räkna med detdubbla mot det som står i regelboken om man ens får böndernaatt sälja sin mat. Användande av Övertala med specialiseringenKöpslå kan få ned priset, dock aldrig till lägre än det som står iregelboken.
+Om rollpersonerna begär hjälp av herr Thall för att försöka
+dräpa Dhormel så säger han att han inte kan bistå med hjälp fördetta – han är bara själv kvar och hans mannar finns i skogennågonstans.
+”Någon måste ju skydda Lundnäs också” säger han och pekar på
+sig själv.
+När rollpersonerna väl har fått tag på mat är det bara att springa
+tillbaka till Dhormel och lämna den. Om rollpersonerna varitlångsamma så låt dem gärna få tag på Dhormel i sista stund närhan just är i begrepp att hugga in på deras vän. Dhormel blirglad över maten om de köpt tillräckligt mycket, det vill sägaungefär två veckors ranson för en människa. Han blir inte gladom man har med sig torrskaffning eller liknande tråkig mat,men han slukar den ändå. 
+Om man inte har så mycket kräver han en skatt för att blidka
+honom. ’Skatten’ kan vara vad som helst som verkarimponerande och glänser – ett svärd, en kaffepanna, rundaEgil
+Egil är en trashank som lever där han för tillfället befin-ner sig – må det vara på en bybos gästfria invit eller heltenkelt under bar himmel. Han har brunt rufsigt hår ochen härjad blick. Han är lång och gänglig, och ansiktet ärsmutsigt, med ett tovigt skägg. Han är iklädd en rejältsmutsig tunika med ett par hosor under. Saken är den attEgil faktiskt kan en hel del berättelser av skiftande kvali-tet och han känner till byns historia mycket bra. Att föraen konversation med Egil kan bli mycket svårt då hanhela tiden glider iväg någon annanstans med tankarna ochatt han gärna talar i för honom helt logiska rim och ram-sor. Efter skadan han fick i huvudet i en olycka till havsså överlever han därför att byn ger honom allmosor –oftast berättar han fantastiska historer som tack. Han ärdessutom en god vän med fader Rubiel, och de båda hartillbringat många kvällar tillsammans.
+
+
+--- Page 24 ---
+• 23 •REGNSYND STIGEN OCH TROLLET
+Riddar Wargs pärla
+Det finns olika sätt att försöka få tag på riddar Wargs pärla. Det
+finns också ett otal metoder som inte kommer att fungera påden hetsige och paranoide riddaren. Kortfattat kan man sägaatt rollpersonerna kan försöka stjäla pärlan, prata till sig pärlaneller genom att bruka våld få fatt i pärlan.
+Övertala riddaren : Bland de metoder som inte fungerar spe-
+ciellt bra är att försöka övertala riddaren – han kommer kon-sekvent att vägra. Om en rollperson kommer med, som spel-
+ledaren bedömmer, mycket goda argument så kan ett slag motÖvertala slås, men svårigheten ligger på i grund extremt svårt(Ob6T6). Om spelaren kommer på bra argument för sin roll-person så kan en snäll spelledare sänka svårigheten en nivå, tillmycket svårt (Ob5T6). Lämpliga specialiseringar som en roll-person kan använda är antingen Argumentation eller Ljuga.Att försöka köpa pärlan faller platt. Observera att riddar Wargssvårighetsslag mot Övertala eller PSY (se sidan 97 i Eon II:sblanka mynt eller ett par välputsade läderstövlar. Ger man
+honom något speciellt vackert, som en större ädelsten eller ensamling med torkade alvöron, kan han bli så glad att han gerdem pärlan. Annars tvingas man försöka sno den medanDhormel är betagen av sin present alternativt mat. Detta kräverett aktivt motståndsslag mellan Dhormels VÄR och tjuvensSmyga, båda med normal svårighet (Ob3T6). För att plocka åtsig pärlan krävs dessutom ett normalt slag (Ob3T6) motFingerfärdighet. Om man misslyckas vrålar Dhormel till ochanfaller. På grund av det lilla utrymmet får man +Ob1T6svårighet på alla attacker med hugg- och krossvapen – det finnshelt enkelt inte tillräckligt med utrymme för att svinga ett svärdeller en klubba. Lyckligtvis för rollpersonerna gäller detta ävenDhormels väldiga armar. Mörkret kan också ställa till det för rollpersonerna. Om det blir
+strid kommer dessutom fladdermössen piggna till och blirusiga. Det smartaste är nog att lämna grottan. Ett normalt slag(Ob3T6) mot Stridsvana eller Krigsföring ger denna infor-mation.
+När man fått tag på pärlan ställs man inför ett nytt problem –
+att ta sig hem. När man bär på pärlan är djuren betydligt agg-ressivare, och det är endast ens snabbtänkthet, stridsvana ochhastighet som kan rädda en. När man är tillbaka i byn kommerman att förhöras av diverse bybor, vilka kommer att reageramed lättnad eller tvivel, beroende på hur paranoida de är. HerrThall kommer i vilket fall som helst att bli irriterad över pärlansåterkomst till byn! Han gör dock inget större väsen av det.
+Övriga händelser under äventyret
+Här följer lite övriga händelser som spelledaren kan slänga innär det passar i historien.
+◊När rollpersonerna är ute i skogen träffar de på en djup
+grop som verkar ha varit en björnfälla. I den ligger endöd och utmärglad man. Med ett lyckat slag för Läke-konst (Ob2T6) ser man att han svultit ihjäl. Mannen ären jägare som halkade och föll ned, och sedan svalt ihjäldå ingen kom ut i skogen. Hans änka i byn är utom sigav oro för var han kan vara. Vad gör rollpersonerna? Omrollpersonerna återbördar kroppen till änkan så kommerhon att lovorda rollpersonernas agerande, vilket innebäratt deras Rykte ökar med ett (+1).
+◊Under en vandring i skogen öser regnet ned. Plötsligt
+blir det uppehåll, och en ensam solstråle bryter moln-täcket och lyser ned på en stor uggla som sitter på enträdgren. Det är helt tyst i skogen. Ugglan tittar på varoch en av rollpersonerna. Så efter några sekunder flygerden iväg, och det börjar regna igen. Ett lätt slag (Ob2T6)mot Ockultism (Samorismen) visar att den ena gudomeninom Den samoriska läran ofta uppenbarar sig som enuggla. Vidskepliga/troende rollpersoner kan alltså tro attdet var Aurias som uppenbarade sig för dem. Helascenen får gärna beskrivas lite lätt övernaturligt.
+◊En bybo drabbas av våldsamma hallucinationer på grund
+av pärlorna och stirrar storögt och skrikande av skräck påvärlden runt sig. Han kan inte utstöta annat än ett plågat”Nej… nej…”, och slår vilt omkring sig om man för-söker röra honom. Om rollpersonerna inte ingriper och
+försöker lugna honom faller han ihop medvetslös i leranefter cirka en minut. Om någon griper tag i honom föratt få honom lugn blir resultatet detsamma, men han bliråtminstone inte smutsig. Han har hög feber och åter-bördas lämpligen till sitt hem.
+◊En sjuk stackare spyr över den mest hetlevrade (högst
+AGG) rollpersonens skor.
+◊Byborna ser snett på rollpersonerna och drar sig undan
+när de kommer, alternativt hotar dem med våld. Detviskas om ”häxans tjänare” och ”utomsocknes galg-fåglar”.
+◊Rollpersonerna uppfattar ett slagsmål utanför staden. Det
+är åter igen Ragnar och Thom som går lös på varandra.Striden avslutas antingen om rollpersonerna blandar sig ieller när slagskämparna båda är för trötta och bara liggeroch flämtar i leran, tämligen oskadda.
+◊När rollpersonerna är i skogen så ser de en liten gynnare,
+knappt tre äpplen hög, som sitter på en stubbe. Hanblänger på rollpersonerna. Gynnaren ser ut som en litengammal gubbe, med ett vitt skägg, en luva och en pipa.Det är en tomte. Han säger kort ”Fint väder vi har”varpå han utbrister i ett avskyvärt hånskratt. Skullerollpersonerna vara aggressiva kommer tomten auto-matiskt göra sig osynlig och bege sig från platsen. Omspelledaren har tillgång till modulen Monster & varelserså kan tomten även uttrycka en tomteförbannelse överen rollperson, om spelledaren så önskar.
+
+--- Page 25 ---
+• 24 •STIGEN OCH TROLLET REGNSYND
+regelbok för regler för Övertalning) alltid är normalt (Ob3T6),
+vilket gör det osannolikt att rollpersonerna rår på den princip-faste tempelriddaren. Att försöka komma med argument somatt det är för folkets bästa, därför att baronen vill det, eller omrollpersonerna hävdar att de skall rädda byn undan förbannel-sen så fnyser bara riddaren föraktfullt. Han följer upp fnys-ningen med att säga att det är därför han är i Lundnäs och atthan kommer behålla ’sin’ pärla.
+Lura riddaren : Det finns olika sätt att luras på. Ett sätt kan
+vara att försöka få fram ett förfalskat dokument som säger attriddar Warg är beordrad att avsäga sig pärlorna och att de skalltas i förvar av rollpersonerna. Att förfalska ett sådant dokumentär både farligt och svårt. För det första måste en rollperson harfärdigheterna Skrift: jargisk skrift samt Språk: ashariska. För attfå till språket i dokumentet krävs två svåra slag (Ob4T6) motrespektive färdighet. Slaget för Språk kan sänkas till lätt om enrollperson lyckas med ett svårt slag (Ob4T6) mot Ockultism –för att få fram rätt religiös känsla i texten samt undertecknadokumentet med en verklig person samt få dit dennes titelkorrekt. Dock måste Ockultism i så fall vara specialiserad motDen samoriska läran. Om dessa tre slag lyckas skall riddar Wargse om han genomskådar dokumentet. Svårigheten är normal(Ob3T6) mot PSY – slår riddar Warg under sin PSY genom-skådar han brevet, kommer gå till anfall för att dräpa dessaavfällingar och lögnare! Om rollpersonerna inte tänker på attsätta ditt ett kladdigt sigill så kommer riddar Warg automaisktgenomskåda förfalskningen. För att få reda på hur samoriskasigill ser ut kan rollpersonerna söka genom templet och i enkista finnas lite dokuement med sigillrester på. För att kleta ditett sigill krävs inget färdighetsslag, men väl råmaterialet. Detfinns i Vannas handelsbod, som tur är. Rollpersonerna kandock försvåra för tempelriddaren att genomskåda dokumentet.Detta görs genom att lyckas använda färdigheten Hantverk:Kalligrafi på en normal svårighetsnivå (Ob3T6) när man skri-ver ned brevet. Detta ökar trovärdigheten i dokumentet så rid-darens svårighet mot PSY ökar med en nivå, till (Ob4T6).Om rollpersonerna prestenterar ett korrekt dokument kom-mer riddar Warg genast göra honör till rollpersonerna ochöverlämna pungen med pärlan till rollpersonerna. RiddarWarg är en diciplinerad och prinicp fast man, även i sitt för-virrade tillstånd. Men han skulle aldrig gå emot en order för enöverordad.
+Stjäla pärlan : Att försöka stjäla pärlan är riskfyllt men fullt
+möjligt. Antingen kan rollpersonerna försöka använda ficktju-veri för att ’avlägsna’ riddarens penningpung, eller så kan deförsöka göra inbrott på dennes rum. Förslag på hur rollperso-nerna genomför båda dessa företag presenteras här.
+Att försöka stjäla riddarens penningpung när denne bär den på
+sig är svårt. Om rollpersonerna arbetar i grupp så ökar chansenatt lyckas. Att bara råka gå på riddaren och ’råka’ sno med sigpungen i sammanstötningen är svårare. Se sidan 85 och fär-digheten Fingerfärdighet för mer info. Men här följer kort vadsom gäller. Grundsvårigheten baseras på omgivningen, menräkna med att riddaren oftast är själv, vilket ger grundsvårighetsvårt (Ob4T6). Penningpungens postion i sig ger ingen svå-righetsmodifikation. Däremot kan som sagt distraktion hjälpatill – exempelvis om en annan rollperson försöker tala medriddaren eller ropa på denne eller liknande. Om rollpersonerna
+lyckas stjäla penningpungen kommer dock riddaren uppfattadetta tämligen snabbt och offra ca en halv timme med att förstleta på marken i gyttjan efter pungen. Efter det kommer hanatt försöka leta upp rollpersonerna, då han har fattat vad sommåste ha skett. Han har ingen annan misstänkt ficktjuv i sin-net. Om riddar Warg upptäcker rollpersonerna kommerdenne att skrika okvädningsord om kättare och därpå anfallagruppen besinningslöst.
+Om rollpersonerna vill vänta till kvällningen så kan de försöka
+bryta sig in i riddarens rum och stjäla pungen när riddarensover. För att få upp haspen till dörren krävs ett lätt slag(Ob2T6) mot Låsdyrkning eller ett svårt slag (Ob4T6) motRÖR. Att Smyga in kräver ett slag som i grund är normals-vårt, men kan modifieras av tabell 4-23 i Eon II (på sidan 94).Riddar Wargs slag mot HÖR för att uppfatta den smyganderollpersonen är svår (Ob4T6). Det krävs två slag mot Smyga –ett för att ta sig fram till riddarens packning, och ett för att tasig ut. Vill man återställa haspen är detta normalsvårt (Ob3T6)mot Låsdyrkningen eller mycket svårt (Ob5T6) mot RÖR.Det krävs ett lätt slag (Ob2T6) mot Fingerfärdighet för att ljus-löst rota genom riddar Wargs utrustning. Om rollpersonenmisslyckas med slaget skall genast ett nytt HÖR-slag slås förriddar Warg, som ett aktivt motståndsslag. Om pärlan stjäls pådetta sätt kommer inte riddar Warg att ha rollpersonerna sommisstänkta, men hans humör kommer att vara genomuseltunder resten av äventyret. Han är efter det extremt otrevligoch aggressiv, och blir han provocerad kommer han att anfallai Aurias namn. 
+Däremot kommer det inte att fungera om man försöker supa
+riddaren under bordet, då denne inte dricker en endastedroppe alkohol.
+Bruka våld : Att försöka slå ned riddar Warg, eller att dräpa
+honom, antingen i strid eller med andra metoder som exem-pelvis gift, är mycket riskabelt. En samoritroende rollperson(som har minst ett (1) i Qadosh riktat mot Den samoriska läran)kommer att vägra göra en sådan sak, då detta går helt emotdennes trosuppfattning. Om spelaren vill att hans rollpersonskall begå brott mot sin tro måste ett mycket lätt slag (Ob1T6)mot karaktärsdraget Tro slås och om resultatet är över värdet påTro kan denne möjligtvis tänka sig att ingå i sådana hemska pla-ner. Om rollpersonerna gör en sådan handling kommer allasom tillhör samfundet Den samoriska läran och som har enQadosh på ett eller mer att bli uteslutna. Om så – sätt Qadoshdirekt till noll (0) och beskriv för rollpersonerna hur de kännersig extremt illa till mods, och hur en uggla flyger förbi dem, ils-ket hoandes. Samvetskvalen bör vara kraftiga för rollperso-nerna. Om rollpersonerna dessutom har dödat riddar Warg ikallt blod (till skillnad från självförsvar om riddaren själv anfal-ler dem) så har de andra, rättsliga problem. Att attackera ellermörda en man i templets tjänst är ett straff som oftast innebärdödsstraff. Rollpersonerna bör i så fall se till att försöka göra sigav med kroppen på ett sätt så ingen hittar denne. Om rollper-sonerna börjar bege sig ut i skogen kan spelledaren med glädjeslänga in lite aggressiva vargar eller björnar för att göra livetextra svårt för rollpersonerna. Låt dem gärna också se ugglor inästan varje träd för att förstärka deras egen paranoja. 
+
+--- Page 26 ---
+• 25 •REGNSYND SAMORITEMPLET OCH GRAVPLATSEN
+Samoritemplet
+En bit utanför Lundnäs ligger byns tempel. Det är beläget vid en
+vacker plats, i en naturlig halvglänta med skogen nära inpå. Sa-moritemplet är byggt i kalksten och ser ut som ett samoritempelbör se ut, med en femskeppig basilika och två torn. Dock är detganska litet och spartanskt inrett. Fader Rubiel levde i egenskapav mivell i en stuga utanför som nu står tom.
+Platsen är kraftigt piskad av regnet och vinden tjuter mellan trä-
+den. På träaltaret brinner levande ljus, vilka fladdrar i vinddragetdå dörren öppnas. Rollpersonerna möter riddar Warg inne i tem-plet där denne ligger på mage framför altaret i bön. När han hörrollpersonerna öppna dörren reagerar han blixtsnabbt, reser sig,drar sitt svärd och skriker med myndig stämma ”Vem där?!”.
+Då han har lugnat sig något går han snabbt fram mot rollper-
+sonerna. Han synar dem och grymtar.
+”Nå, är ni månne kättare!? Nå, hmmm, nej, ja, jo, kanske inte. Men
+byn är förbannad! Lystra på mina ord, ofrälse. Det lurar Daak-trognahädiska kättare i buskarna runt byn. Jag kan se dem hela tiden, men deär för snabba och hinner undan. Fega stackars kräk är vad de är! Vi måstebe om nåd, i Aurias och Pelias namn!”
+Riddar Warg blänger på rollpersonerna, hans ögon brinner av
+upphetsning. Han fortsätter prata så att saliven sprutar.
+”Ni måste förstå! Det är ett tecken, inte bara ett hot mot Lundnäs, utan
+mot samorismen, Soldarn och vår älskade rikskonung! Åh, jag hoppas jagkan förgöra ondskan innan den infekterar hela vårt stolta fadersland! Dehar tagit min väpnare, kättare hela bunten! De skall brännas på bål ochjag skall skratta under hela ceremonin! Ha, jag spottar på kättarna! Föratt inte tala om häxan! Hon skall också brännas, så snart jag får tag pålite folk som kan undsätta mig, men alla är helt förrykta i Lundnäs!”
+Han tar en paus och rusar mot ett fönster för att titta ut.”Där, där är en kättare! Och där är en till!!”Han rusar mot dörren, tar ett par steg ut, stannar till och går in
+igen, med en sur uppsyn.
+”Hmm, de hann försvinna. Givetvis...”Fader Rubiel : Om rollpersonerna berättar för riddar Warg att
+det var ett troll som hade tagit Oke så lyssnar han inte. Frågar roll-personerna om fader Rubiel så berättar riddar Warg följande:
+”Ja, den gode fader Rubiel är en bra man. Jag hoppas vi snart hittar
+honom, innan kättarna sätter sina syndfulla tänder i hans rena kött! Hantillkallade hjälp i en situation det var rätt att kalla på hjälp. Fader Rubielvar övertygad om att fyndet en fiskare gjort hade dragit olycka över byn.Fyndet, fyra svarta pärlor, besatt någon form av värme, en onaturligvärme. En värme som påminner om hedningar! Men en av pärlorna gavvi till Oke för att han skulle ta med den till Hadarlon för att undersökaden. De andra har jag här.” 
+Riddar Warg klappar på sin penningpung i bältet och fortsätter:”De sista två hade fader Rubiel kvar. Han övervägde att besöka häxan
+för att få hennes råd, men jag sade åt honom att slå de dårskaperna urhågen. En häxa kan inte veta något om detta! Det sista jag såg av faderRubiel var kvällen innan han försvann, då han sade att han nästföljandedag skulle vårda gravplatsen för de otrogna. Mer vet jag inte.”
+Riddar Warg börjar vanka av och an inne i templet. Rollperson-
+erna kan slå ett lätt slag (Ob2T6) mot Ockultism – lyckas de vetde att inom den samoriska läran så kremeras döda kroppar. Desom inte tillhör samorismen kan fortfarande få en korrekt döds-ceremoni, men dessa bränns inte utan grävs ned i marken.
+Visa Warg pärlor : Visar de upp en pärla reagerar han dock.
+”Precis, det är den pärlan, eller en likadan sådan?! Var fann ni den?”Om rollpersonerna berättar om Okes öde (kanske för andra
+gången) så kommer riddaren bara att nicka kort.
+”Jaha, ni kan ju behålla den och undersöka den själva, bara ni är beredda
+på att ge den till mig sedan.”
+Häxan : Ställer rollpersonerna frågor om häxan blir riddar Warg
+mörk i synen.
+”Inte ni också! Trollpackan är en hedning! Hon förstår inte det här! Hon
+kanske har hjälpt en och annan bybo, men hur då?! Jo, genom kontaktermed mörka makter, med Daak! Understå er inte att uppsöka henne. Honkommer snart att brinna på bålet ändå, bara jag får ihop manskapet.”
+Templet i övrigt är ointressant. En genomsökning ger ingenting
+av intresse, annat än en större mängd ljus och en del skriftrullarmed gamla sigill på. Även fader Rubiels stuga, som är olåst, ärtämligen ointressant, förutom tre par sandaler. En sådan sandalfinns också på gravplatsen.
+Gravplatsen
+Att hitta till gravplatsen är inte så svårt. Från tempelbyggnadenfinns en välvårdad stig, även om regnet har gjort sitt bästa att för-störa den. En kort stund senare är man i en skogsglänta, runt vil-ken en liten stenmur löper. Vid den rostiga grinden finns en tak-lös brunn och intill den en omkullvält trähink.
+Den lilla gravplatsen rymmer kanske ett trettiotal enklare grav-
+stenar, ofta bara med ett namn och ett årtal på. Vissa stenar ärriktigt söndervittrade. Om man tittar sig omkring ser man att vissagravar är flera hundra år gamla. I ena hörnet av muren finnsruinerna av något som verkar vara ett gammalt gravvalv. Menplatsen känns ändå välordnad, utan ogräs och liknande. Ett parkorpar trotsar regnet och kraxar från skogen när rollpersonernaanländer. Ett mullrande oväder hörs på avstånd. Poängtera attrollpersonerna känner hur korparna observerar dem. Skullerollpersonerna anfalla korparna flyger dessa upp i luften menfortsätter kraxande cirkla kring dem, på behörigt avstånd.
+Om rollpersonerna söker på platsen så får de slå slag mot Söka.
+Svårigheten är normal (Ob3T6) och lyckas de finner de en sandalSAMORITEMPLET OCH GRAVPLATSEN
+Vid samoritemplet kommer rollpersonerna att möta tempelriddaren från Zoriánorden –
+riddar Warg på ett mer personligt vis. De kan också undersöka tempelbyggnaden ochgravplatsen. Lundnäs egen byfåne Egil kan ge rollpersonerna ledtrådar för att finna en
+pärla i brunnen. Om de är tålmodiga och uppfinningsrika, det vill säga.
+
+--- Page 27 ---
+• 26 •SAMORITEMPLET OCH GRAVPLATSEN REGNSYND
+bakom en gravsten. Sandalen är fläckad av torkat blod. Ingen i
+byn känner igen sandalen, men liknande par finns i fader Rubielsstuga. Ett normalt slag (Ob3T6) mot Söka visar dessutom att hin-ken är trasig, och att det verkar som om det har hänt nyligen. Ettlätt slag (Ob2T6) krävs för att hitta en stor fjäder, cirka en fotlång. Fjädern är grågul och skimrar i guld. Ett svårt slag (Ob4T6)mot Djurlära ger att fjädern inte kommer från någon vanlig fågel,utan snarare från något monster. Om inte rollpersonerna ärmycket väl bevandrade och pålästa inom ämnet så kan de inte fåreda på att det är en gripfjäder. Har rollpersonerna den kunskapenså ger det lyckade Djurlära-slaget den informationen. 
+Plötsligt störs stillheten och regnets porlande av en nysning från
+skogsbrynet. Om rollpersonerna tittar dit ser det en gammal man,en trashank. Han har ett tovigt och vildvuxet hår och skägg.Kläderna är genomsura och verkar bestå av säckar. Han har enkraftig gren i handen som han stöder sin krumma person på.Mannen är Lundnäs egen byfåne Egil. Rollpersonerna kan ha setthonom tidigare i byn, men de har inte speciellt lagt märke tillhonom. Skulle Egil bli skrämd av rollpersonerna kommer han setill att de inte träffas mer – något som Egil är mycket skicklig på.
+”Graven får besök, vilka är dessa ök?”Om rollpersonerna svarar hyfsat hövligt så fortsätter han, annars
+lämnar han bara platsen.
+”Regnet från skyn, sjunker ned i dyn. Ni letar efter lösningen, utan att
+finna svaren.”
+Är rollpersonerna toleranta och håller med så fortsätter han:”Svaren finns där och här, och här och där. Vattnet från skyn, vattnet i
+dyn.”
+Om rollpersonerna fortfarande är toleranta och håller med så
+fortsätter han, annars lämnar han platsen.
+”Kärlet ej var hans vapen, då han knappast var vaken.”Klarar rollpersonerna fortfarande av att vara toleranta och håller
+med så fortsätter han, annars lämnar han platsen.”Ögat hans försvann, ner och ner, tills man ej längre kunde se, ty ögat
+landat i mörkret.”
+Skulle rollpersonerna ha en ängels tålamod så fortsätter Egil,
+annars går han därifrån.
+”Vidundren kommo ur himlen, for med en ryslig fart. Aurias och Pelias
+skräckslagna såg hur vidundren tog deras väktare från dem. Väktaren, engod man, fördes bort, bort i skyn, iväg, försvann.”
+Med detta nickar Egil och lämnar rollpersonerna. Han försvinner
+snabbt in i skogen och är spårlöst borta.
+Egil
+Egil låg och sov i skydd av gravarna då fader Rubiel attackeradesav griparna. Förfärat såg han hur två gripar anföll den försvarslösehelige mannen när denne var på väg bort från gravplatsen. Rubielfick ett par rejäla rivsår över bröstet och föll nästan baklänges nedi brunnen. Han tappade en pärla i brunnen, något som den obser-vante Egil uppfattade. Den omtöcknade Rubiel tog upp hinkenför att värja sig från griparnas anfall, träffade den ene så att hinkensprack och gripen tappade en fjäder ur sin skrud. Därefter fick gri-parna tag på Rubiel och flög iväg bort till sitt bo med kroppen.Egil har stora samvetskval för att han inte undsatte Rubiel i kam-pen, och hoppas nu att när han, på sitt sätt, har berättat vad hansåg för rollpersonerna att dessa kan hjälpa honom att få ro i själen.
+Brunnen
+Om rollpersonerna aktivt söker vid brunnen ser de att vattenytanfinns tio meter längre ner. Brunnen är murad på insidan, menjärnringarna som används för att klättra ned har rostat sönder,vilket tyder på att brunnen är gammal. Väggarna är också hala avavlagringar. Mynningen är dryga en meter tvärs över. Att ta signer är så gott som omöjligt utan någon form av rep eller liknande.Att friklättra är extremt svårt (Ob6T6) och det krävs två lyckadeslag för att ta sig ned till vattenytan och tre för att ta sig upp. Omman har rep så krävs det ett normalt slag (Ob3T6) mot Klättra föratt ta sig ned och två normala slag för att ta sig upp. Misslyckandeinnebär inte att man faller, utan bara att man måste ta en paus.Det finns gott om rejäla träd i närheten av brunnen som man kanbinda fast ett rep i. Att vara simkunnig är att föredra i brunnen,eftersom vattnet är omkring tre meter djupt. Bottnen är dyig,trots det grus och den sand som har placerats där. Dessutom är detmörkt – det lilla dagsljus som kommer uppifrån täcker en personsjälv, vilket gör det så gott som omöjligt att se någonting där nere.Det är en väldigt klaustrofobisk känsla att klättra ned i brunnen,speciellt när regnet hela tiden faller över klättraren. Att vara flerän en person i brunnen är inte att rekommendera. 
+Effekt* Fynd
+1 En halvrutten rostig spade.
+2 En rutten läderstövel.
+3T re silverdaler. 
+4 En svart pärla.
+6 En rostig fiskekrok. 
+8 En gulden (ett mynt).
+10+ En rubin, värd ca 400 silverdaler.
+* På Söka-slaget.
+Tabell RS-4: Fynd i brunnen.
+
+--- Page 28 ---
+• 27 •REGNSYND BÅG-PIETER OCH HÄXAN
+Båg-Pieters kunskap
+Skogsvaktaren Pieter Franksson håller sig i byn nu för tiden,
+antingen på någon krog eller ute i regnet. Om rollpersonernafrågar Båg-Pieter något, så berättar han gärna vad han vet.
+Djurens beteende : Båg-Pieter berättar bekymrat om djurens
+aggression och hur det verkar som om det finns en järnring runtLundnäs och hur denna verkar närma sig för var dag.
+”Det är som om de långsamt går till angrepp mot själva byn, som en
+belägring. Jag tycker det är mycket obehagligt. Detta är något unikt somjag inte har sett förr.”
+Häxan : ”Jaså, ni har också hört om Fredricca. Hon är inget hot, utan
+hon hjälper oss ibland här i byn. Även om vissa anser henne vara skumså är hon långt ifrån allierad med de mörka makterna som vissa här i bynpåstår, eller speciellt han den där sprätten från Zoriánorden. Men i vilketfall som helst så brukar hon ’hjälpa’ ungmöer som ’råkat’ i trubbel medpojkarna och blivit gjorda på smällen. Hon har även hjälpt vissa sjukatidigare, men aldrig blivit riktigt accepterad av byn. Det verkar dock intebekomma henne nämnvärt.”
+Båg-Pieter förklarar dessutom vägen till Fredriccas stuga.Flygande vidunder : ”Jo, jag har sett monster i skyn. Stora fåglar,
+eller kanske gripar. Jag hoppas inte att det är drakar, för då är vi allafördömda redan nu.”
+Fjädern : Om rollpersonerna har hittat fjädern vid gravplatsen
+kan Båg-Pieter identifera den för dem.
+”Det ser ut som en gripfjäder, och på storleken och färgen att döma så
+verkar det vara en fullvuxen en, som kommer ifrån trakterna.”Han kommer vara nyfiken över var rollpersonerna hittade
+fjädern, men accepterar om de inte vill berätta. Om de säger attde fann fjädern vid gravplatsen så får Båg-Pieter ett slugt utryck iansiktet och nickar kort. Om rollpersonerna frågar Båg-Pieter omen grip orkar bära en människa så säger han att det tror han nogatt de orkar. Vid en fråga om Båg-Pieter vet var det finns grip-nästen så svarar han:
+”Jag har inte har sett några sådana på land i alla fall, men samtidigt har
+jag hört skepparhistorier om gripar till havs, ute i Jarneviken. Ta ett snackmed Snoar Långnäsa på Ankaret.”
+Mot häxan Fredricca
+Om rollpersonerna bär med sig pärlor nu så kommer de genastatt märka att skogen är mycket mer fientlig. Djur kan komma attanfalla utan vidare provokation. Regnet verkar vara extraintensivt kring dem och vinden tjuter i deras blöta kläder. Siktenär usel i skogen, stigen är lerig och hal. Vätan och kylan gör lederstela. Att möta aggressiva harar, myror eller kanske ett vildsvin äri vanliga fall inte speciellt kul, men det är absolut inte roligareunder dessa förutsättningar. Men låt gärna stämningen varatryckande, otäck mer än direkt konfrontativ.
+Fredricca
+Ett besök hos Fredricca kan te sig mycket olika beroende på hurrollpersonerna bemöter henne. Hon ger då de kommer in ettmycket häxaktigt uttryck, med en stor svart hatt och en skocksvarta katter i hela huset. Regnet verkar något lättare vid hennesstuga. Om rollpersonerna är öppet fientliga kommer hon attförsöka tala dem till rätta – först i nödsituationer använder honmagi. När rollpersonerna kommer erbjuder hon dem att dricka temed henne. Om de accepterar får de smaka ett synnerligen gottte, som dessutom har läkande egenskaper (varje rollperson somdricker te får tillbaka ett kryss Trauma och Smärta direkt). Attdricka mer te hjälper inte. Känslan när kroppen läker är att manblir varm och sömnig i hela kroppen.
+Fredricca säljer också olika sällsynta örter, se tabell RS-5.Fredricca har mängder med kunskap hon kan dela med sig med.
+Men innan hon är beredd att svara på frågor vill hon spå.Fredricca vet inte vad som sker med området runt Lundnäs, ävenom hon känner att det är något magiskt. Alla försök att spå i eldangående detta leder bara till att örterna Fredricca kastar in i eldenBÅG-PIETER OCH HÄXAN
+Båg-Pieter är en skogsman som har bra koll på området kring Lundnäs, där han verkar
+på baronens begäran. Han kommer att kunna ge information om djurens beteende ochäven ge hänvisningar till häxan Fredricca. Båg-Pieter är en lugn person, men han är ändå
+orolig över utvecklingen.Att Söka under vattnet kräver dels ett lyckat lätt slag (Ob2T6)
+mot Simma, eftersom det är fråga om att dyka i mörkt vatten ochatt stämningen gör en extra nervös. Att hålla sig flytande vid ytankräver inget slag, om rollpersonen minst besitter färdighetschans5 i Simma. Detta gäller givetvis under förutsättning att rollper-sonen inte bär med sig tunga föremål, vapen eller en rustning.På brunnens botten finns en mängd olika saker. Vattnet är kallt
+och den som beger sig dit ner kan inte tillbringa någon längre tiddär utan att bli stel av köld. Rollpersonen som söker där får slå ettlätt slag (Ob2T6) mot Söka och effekten ger vad han hittar. Enrollperson får dock bara söka tre gånger och saker som är påträf-fade hittas inte igen. Se tabell RS-4 för resultat för sökningen.
+Båg-Pieter
+Båg-Pieter heter egentligen Pieter Franksson och ärbaron Leijons skogsvaktare. Han är en lång och senigman med ett väderbitet ansikte som ofta pryds av någradagars skäggstubb. Det är svårt att avgöra hans ålder, mende flesta gissningarna hamnar mellan 30-45 år. Visserligenhar Båg-Pieter en stuga i utkanten av byn, men där är hansällan i vanliga fall. Han trivs bra i skogen och kanLundnäs terräng utan och innan. Han klär sig alltid i slits-tarka kläder och lämnar aldrig ifrån sin långbåge.
+
+--- Page 29 ---
+• 28 •BÅG-PIETER OCH HÄXAN REGNSYND
+svartnar och avger en svart rök som luktar ruttet och irriterar
+ögonen. Detta är ett mycket ont omen som Fredricca aldrig råkatut för tidigare. Efter detta har hennes muntra finurliga leendeförsvunnit och hon blir mer allvarsam. Hon väntar pårollpersonernas frågor om...
+Skogens invånare : Fredricca berättar att hon har märkt att
+djuren är betydligt mer alerta och fientliga.
+”Jo, nog är det så alltid. Skogens varelser ter sig allt mer retliga, även om
+de verkar gå i cirklar runt min stuga. Till och med trollet Dhormel verkadeirriterad av djuren sist jag såg honom i skogen.”
+Trollet : ”Det har alltid funnits troll här i trakten. En av de mer om-
+talade är Dhormel, en hungrig sate som alltid är ute efter mat. Han haren grotta i närheten, men akta er för att reta honom. Han må kunnaprata, men han är fortfarande ett troll. Håhåjaja.”
+Fredricca beskriver vägen dit om rollpersonerna önskar.Vädret : Hon nickar och drar ihop munnen. 
+”Åh, min skapare, vädret skall vi inte tala om. Usch-usch. Mina små
+örter och grönsaker får inte växa i fred. Och mina katter, ständigt våta ochblöta. Men det säger jag, vädret som råder är inte naturligt. Regnet villoss något. Tecknen är inte goda.”
+Fjädern : ”Hmm, ja, det ser ut som en gripfjäder. Men det var länge
+sedan jag såg en grip i de här trakterna. Förr så fanns det ett par i skogensnorra delar, men så jag tror de flyttade österut, ut över havet.”
+Pärlorna : Om rollpersonerna visar en eller flera pärlor kommer
+Fredricca att bli skräckslagen och ta sig om huvudet.
+”Åh, ta bort dem, snälla, ta bort dem. Ujuj, vilken chock, nu kan ni visa
+dem igen, när jag är beredd. Det är ondskans redskap, mina vänner!Dessa pärlor är mörkrets artefakter, de är inte välkomna här!”
+Med ens börjar det spöregna över häxans hus, katterna fräser och
+kittelns innehåll börjar bubbla betänkligt. Fredricca böjer sig frammot rollpersonerna och sänker rösten. 
+”Ni har snubblat på något så ondskefullt att jag inte ens vill tänka på
+det. Låt mig känna på pärlorna.”
+Fredricca sluter ögonen och rör handen över pärlorna.”De är kvarter av en helhet, de är fyra i sin storhet. De måste bort, annars
+kommer de att förgöra byn.  Jag måste försöka hjälpa er, annars kommervi aldrig att få bort dem. Dessa pärlor får inte bara att kastas, de måstegömmas och får aldrig hittas!”
+Kitteln kokar med ens över, men häxan verkar inte bry sig.
+Katterna väser och håller sig så långt från rollpersonerna ochpärlorna som möjligt. De tvekar inte att fräsa och visa tändernaom rollpersonerna försöker närma sig dem. Fredricca börjarmumla och humma på ett språk som rollpersonerna inte förstår.Så slår hon upp ögonen med ett ryck. En katt jamar högljutt.
+Ört Doser Pris
+Belladonna 3 doser 20 silverdaler per dosDemagora 5 doser 20 silverdaler per dos
+Ilieteblad 4 doser 25 silverdaler per dosKärleksfloka 8 doser 10 silverdaler per dos
+Vildvippa 2 doser 45 silverdaler per dosFredriccas stuga
+Fredriccas stuga ligger i skogen, en halvtimmes promenadfrån byn. Den har mossbevuxet tak och en örtagård utan-för. Lite längre bort finns ett hönshus och ett avträde. Fördet mesta springer Fredriccas otaliga svarta katter här.
+När man öppnat den knarrande dörren når man rummet
+där Fredricca tar emot besökare som vågar sig upp för att bliav med någon åkomma. Rummet är dunkelt upplyst avhärden i det från dörren sett bortre högra hörnet. Längskortsidorna finns det arbetsbänkar, och i mitten av rummetstår ett stort bord. Det luktar starkt av de mystiska torkadeörter som hänger i taket, och på bänkarna står lerkrukormed felstavade etiketter i stil med ’Öddleögon’ och ’Spar-ve-tugnor’. Vid härden puttrar en stor svart kittel.
+Fredriccas sovrum ligger bakom dörren på bortre långsidan
+från ytterdörren räknat. Detta upptas till större delen av ensäng samt en stol på vilken det hänger en extra filt. NärFredricca inte är ute eller har besökare finns här också enspetsig svart hatt. I rummet finns också ett linneskåp.
+Tabell RS-5: Örter till försäljning hos häxan Fredricca.
+
+--- Page 30 ---
+”Pärlorna har talat till mig. Vänta.”
+Fredricca reser sig och plockar fram lite underliga ingredienser
+från hyllorna. Hon kastar ämne efter ämne i elden, och alla utomett blir fräsande svarta. Det sista blir nämligen skimrande blått, föratt övergå i vitt. Katterna tystnar med ens.
+”Vatten. Sjön. De drar med sig sitt eget hat. Regnet är deras fiende.
+Vattnet är deras fiende! Ni måste sänka dessa pärlor. Djupt, långt bortaifrån land, ut i oceanen. Och ni måste göra det fort. Ju mer ni tvekar ochväntar, ju mer kommer de att försöka hindra er!”
+Fredricca hastar över till en av rollpersonerna – företrädesvis
+gruppens ’ledare’ och greppar tag i dennes kläder.”Ni måste göra detta så snart det går. Naturen kvider av detta missdåd!
+Snälla, ni måste! Finn de fyra, och göm dem där ingen kan finna dem,någonsin, aldrig mer, snälla, gör detta!” 
+Fredricca sjunker genomsvettig ned på en pall och pustar ut.Innan rollpersonerna ger sig av låter hon dem genomgå en ritual
+som tar bort pärlornas effekt på dem, så de inte blir anfallna avvilda djur. Tyvärr innebär det att de måste dricka ett vidunderligtillasmakande elixir som kräver ett normalt (Ob3T6) slag mot VILför att inte spotta ut vad som bjuds. Isåfall har ritualen ingeneffekt. Ritualen håller i sig ett dygn. Rollpersonerna är osynligaför djuren under denna tid. Sedan ber hon dem att gärnaåterkomma om de har några frågor eller funderingar.
+• 29 •REGNSYND GRIPARNA
+Snoar och Ankaret
+Krogen Ankaret har öppet nästan jämt, men klientelet är fåtaligt.
+När rollpersonerna kommer dit första gången sitter Ragnar där,men han slår bort blicken när rollpersonerna kommer in och väg-rar att prata med dem. Skulle de bråka med honom kan Ragnarbli arg och ta till nävarna.
+Snoar kommer genast fram till rollpersonerna när de kommer in
+och visar dem till ett långbord. Dagen till ära har han lappen försitt vänstra öga. Med en tillgjort hes röst tilltalar han gruppen:
+”Harr, harr, vard fårr dert lovv att vare, harr haaarrr?”Rollpersonerna kan beställa öl, men utöver det har Snoar bara en
+vattnig potatissoppa till buds. Om rollpersonerna vill prata medhonom måste de beställa en öl var, annars tycker Snoar att de är
+snåla utsocknes. Men om rollpersonerna gör Snoar till viljes såsätter han sig på en pall vid borden och frågar vad som står på –och plötsligt har han tappat sin grova ’sjömansdialekt’.
+På alla frågor om byn, vädret, pärlor och liknande svarar Snoar
+undvikande och ointresserat. Men på frågor om gripar eller tran-sportmedel är han mer till hjälp.
+Gripar : ”Jo, serru, goa herrar, jag har minsann snappat upp en hel del
+under mina dagar här. Det finns alltid sjömän som vill skryta och berättahistorier, den ena mer fantastisk än den andra. Men en del av dem är fak-tiskt sanna. Vad jag har förstått så finns det ett gripnäste ute i Jarneviken.Segla längs den sydöstra kusten tills ni når en utlöpare efter cirka 15 sjö-mil, där ni kan se en klippö ute i havet. Ön är knappt en kilometer utfrån kusten. På denna klippö skall tydligen griparna häcka.”GRIPARNA
+Griparna är i sig själva inte aggressiva djur, utan snarare rätt skygga. Men pärlorna har
+påverkat dem kraftigt och gjort hela familjen galen. Rollpersonerna kommer här att fåinformation om var griparnas ö finns belägen och även drabbas av en tämligen olustig
+resa till havs.Fredricca
+Fredricca har armslångt svart hår med vita strimmor somofta är tätt flätat och smyckat med blommor av någotslag. Hon är kort, ca 150 cm lång, vilket gör att hon sernågot rundare ut än vad hon egentligen är. Hennes piggaögon kunde ha varit ett barns. På hennes näsa finns enrejäl vårta som drar till sig uppmärksamhet. Till vardagsär hon iklädd en smutsig svart klädnad och en svart hattmed ett rejält brette. Hon går allt som oftast stödd på engammal knotig träkäpp när hon går sina promenader iskogens utkanter. Fredricca trivs bra i sin stuga där honåtnjuter avskildhet. Hon har inget speciellt emot Lundnäsmen trivs inte bland så mycket människor. Hon brukarbege sig till byn någon gång per månad för att provian-tera och byta bort örter och annat hon inte behöver.
+Fredricca är bevandrad i pyromantik, konsten att spå i eld.
+Det går till så att hon slänger in örter i elden och avläserframtida skeenden i eldslågorna och röken. Skulle någonspåkunnig rollperson vilja använda denna typ av spådomkrävs ett lätt (Ob2T6) slag mot Växtlära för att få järtecken.
+
+
+--- Page 31 ---
+• 30 •GRIPARNA REGNSYND
+Transportmedel : Om rollpersonerna ber om hjälp med att hitta
+en båt så rekommenderar han Ragnar, som har en lagom stor båt.
+Ragnar och transportmedel
+Att hitta Ragnar Fiskare är enkelt. Han finns på något av stadensutskänkningsställen, troligtvis Ankaret. Ragnar är ivrig att hjälpatill, men beklagar sig ynkligt hela tiden. Hans andedräkt stinkerbillig sprit. Hans båt är lämplig, då det är en segelbåt på 20 fot.Den går också att ro – i nödfall ensam, men helst bör man varatvå personer. Regnet och vinden gör det svårt att segla – kommervinden rätt så får man bra fart, men om sjön går hög och vindenkommer från fel håll kan båten välta. I båten finns reptampar, nätoch förvaringslådor i trä. Allt är blött och luktar fisk. Ragnar berrollpersonerna vara rädda om båten och önskar dem lycka till.Från kusten och till havs
+Regnet och blåsten gör det svårt att styra båten på ett bra sätt. Attreva seglen och ro är ingen tilltalande tanke, men skulle man göradetta så kommer rollpersonerna som ror tillskanska sig tio kryssLångtidsutmattning per timme. Resan ut till gripön tar cirka fyratimmar om man seglar och sex om man ror. Det krävs att en roll-person lyckas med ett lätt slag för Navigation (Ob2T6) för att hit-ta rätt. Annars tar resan att två timmar extra. Dessutom krävs atten rollperson klarar två slag mot Sjömannaskap för att båten inteskall drabbas av något otrevligt. Svårigheten är normal (Ob3T6)om man seglar och lätt (Ob2T6) om man ror. För att finna gripönkrävs det ett lätt slag (Ob2T6) mot Speja. Varje rollperson får slåtvå gånger för att hitta gripön – skulle alla misslyckas kommer detatt ta cirka två timmar till innan gruppen fattar att de har seglat förlångt, och återvänder. I så fall får gruppen slå Speja-slag igen, medsamma svårighet. Proceduren fortsätter till dess att rollpersonernaantingen ger upp eller hittar gripön. Om slaget mot Sjömanna-skap skulle misslyckas kommer båten drabbas av otrevligheter.Detta kan innebära anfallande fåglar, höga vågor, vinden som näs-tan drar sönder seglen eller liknande. Låt det gärna vara spännandemen inte livsfarligt. Om en rollpersonen skulle ramla överbord såförsök vara så snäll att det blir en rollperson som i alla fall är sim-kunnig och som inte har 30 kg pansar på sig.
+Gripnästet och griparna
+Gripnästet ligger på en klippö vars öst- och västsidor stupar raktned i vattnet. I söder finns en backe som är ganska lätt att ta siguppför, i norr finns en något brantare. På grund av regnet är dessadock ganska hala (Ob2T6 mot RÖR för att inte halka, Ob3T6
+Ankaret
+Ankaret är den krog de flesta sjömän som når Lundnäs
+stiftar bekantskap med. Den ligger i ett gammalt trähusoch ger ett rätt sjabbigt intryck. Ägaren, Snoar Långnäsa,har själv knappt varit ute i en båt men försöker ändå geett intryck av att vara en gammal sjöman, med allt vad detinnebär av huvuddukar, randiga tröjor, ögonlappar (hanser utmärkt på båda ögonen, varför den sitter överomväxlande höger och vänster öga) och piprökande.Krogen är dekorerad med olika inredningsdetaljer frånfartyg, och en uppstoppad papegoja som tappat hälften avfjädrarna och ena ögat sitter på en pinne i hörnet. Matenär inte mycket att hurra för, men den är åtminstone billig.
+
+--- Page 32 ---
+• 31 •REGNSYND SLUTET
+Tillbaka i Lundnäs
+När rollpersonerna når Lundnäs står hela byn vid hamnen och
+hurrar, tjoar och skriker. När rollpersonerna närmar sig blirgruppen nästan extatisk och börjar skandera ”hjältar, hjältar” omoch om igen. Baron Semuel Leijon och herr Thall hjälper självarollpersonerna i land och dunkar dem i ryggen! Baronen tittardem i ögonen och säger kort att det här gjorde de minsann bra!Även riddar Warg, om han lever, välkomnar rollpersonerna. Omrollpersonerna gjort några andra oförätter mot Warg verkar hanha glömt dem – det är som om en annan person står framför dem.
+Den vansinniga blicken verkar ha slocknat och han nämner inteordet kättare en enda gång under sitt korta samtal med rollper-sonerna, under vilket han lovordar dem och ger dem envälsignelse i Aurias och Pelias namn. Gudsfruktiga rollpersonersom tillhör Den samoriska läran får här ett förbättringsslag motQadosh, dock enbart under förutsättningen att inget våldsdåd harutförts mot riddar Warg tidigare. Även om riddar Warg själv harglömt så har inte Aurias, Pelias eller, framför allt, rollpersonensjälv gjort det.SLUTET
+När pärlorna till slut är återförda till havets botten kommer förbannelsens krafter snabbt
+att avta. Hela Lundnäs kommer att vakna upp ur dess kollektiva trauma och känslan avhopp och glädje sprider sig snabbt, tillsammans med den värmande solens sken.
+Rollpersonerna är hjältarna som har räddat hela bygden från undergång.på norra backen). Om man halkar får man Ob1T6 kryss Smärta
+och Ob1T6–4 kryss Trauma (resultat under noll räknas som noll).
+Klipporna är lätt bevuxna med torrt gräs. Ovansidan av ön ligger
+cirka femton meter upp och är också den bevuxen med gräs samtnågra vindpinade små enbuskar. Här reser sig två klippspetsar uppmot himlen. Om man tittar ned över västra stupet ser man enklipphylla med vad som verkar vara en stor rishög samt en lem-lästad människokropp iförd en samorimans kappa. Dessutomuppfattar man en grip, som känner av rollpersonernas närvaro,speciellt om dessa har med sig några andra pärlor. Gripen kom-mer genast att försöka anfalla gruppen. Om striden är för enkelför rollpersonerna kan spelledaren med glädje slänga in en griptill, som kommer efter det att den första gripen är nedgjord. Tänkpå att göra striden storslagen, med regnet som piskar, vinden somylar, det hala fotfästet, den mörka himlen och fienden från luftensom kommer att använda denna fördel så mycket den kan. 
+För att ta sig ned hit krävs att gripen inte finns där samt att man
+har rep (som finns i båten). Dessutom kan det ständiga regnet för-svåra det hela ytterligare. Det krävs minst två normala slag
+(Ob3T6) mot Klättra för att nå ned till boet, och där finner mandels äggskalsrester och dels människoben. I en blodig samorikappafinner rollpersonerna också ett lik med bara en sandal på ena fo-ten. Likets arm verkar vara avgnagd vid armbågen. I kåpans fickafinner rollpersonerna en svart pärla. Om rollpersonerna bestäm-mer sig för att ta tillbaka kroppen till Lundnäs (något som religiösarollpersoner bör vilja göra) så måste kroppen hissas upp. Detta äringet stort problem, mer än om rollpersonerna har alla fyra pär-lorna med sig, så att det märks på vädret och omgivningen. Seäven ’När rollpersonerna har de fyra pärlorna’nedan.
+Att bege sig tillbaka till Lundnäs är lika svårt som att ta sig dit, om
+rollpersonerna fortfarande har med sig pärlorna. Om de bär på allafyra kommer regnet öka alla svårighetsnivåer för Sjömannaskap.Däremot krävs det inget slag för Navigation för att hitta Lundnäs– det går liksom inte att missa så länge man följer kusten.
+När rollpersonerna har de fyra pärlorna
+Så fort rollpersonerna har tagit hand om alla fyra pärlornakommer de uppfatta en känsla av tryck. Regnet börja nåövernaturlig intensitet och hotar att slå omkull personer.Vinden ökar också rejält och når i sina byar orkanstyrka.Dessutom får alla rollpersoner som inte genast klarar ettmycket svårt (Ob5T6) slag mot VIL Ob2T6 i Smärta enövernaturligt kraftig huvudvärk. Balansen blir svårare ochomgivningen ter sig suddig, även utan regnets medverkan.Även hörselintrycken ter sig underliga, med ekoeffekter,borttoningar och öronsmärtor. Om pärlorna separeras så deär mer än en meter från varandra så upphör detta extrematillstånd, men värdet är fortfarande uselt. 
+Det finns två positioner som rollpersonerna kan befinna sig
+vid när de skall göra sig av med pärlorna. Antingen är de ien båt eller så kastar de pärlorna från gripön. Det spelaringen större roll – djupen är tillräckliga vid båda platserna.För att göra sig av med pärlorna bör rollpersonerna kasta
+dem i havet. Beskriv det hela så dramatiskt du bara kan, hurvågorna går höga, hur rollpersonerna är nära att trilla i haveteller kanske kräks av smärta. Den rollperson som försökerslänga pärlorna i havets djup känner hur det verkar som ompärlorna skriker och motstätter sig detta, som om de vet attde håller på att förlora. Beskriv darrande händer, kallsvett,saltvatten i ögonen, kramper och ångest. När rollpersonernaväl har slängt pärlorna i vattnet så släpper genast en del, meninte all av rollpersonernas huvudvärk och den tryckandekänslan upphör som genom ett trollslag. Inom loppet avnågon minut börjar också himlen lätta och regnet långsamtavta. Inom fem minuter så börjar solen spricka genommolnen och efter en kvart är det strålande solsken och roll-personerna känner sig kärnfriska. Det är bara att bege sig till-baka till Lundnäs.
+Och vad som sker med pärlorna vet ingen, utom möjligtvis
+en driftig spelledare...
+
+--- Page 33 ---
+• 32 •LUNDNÄS REGNSYND
+Krogar
+Det finns två krogar i byn, Björn-Torgnys krog och Ankaret.
+Björn-Torgnys korg innehas av Björn-Torgny, en urstarkjägare som sadlat om till krögare. Torgnys styrka och skick-lighet med kastspjut är berömd i hela länet. Krogen är inreddmed björnskinn på väggarna och ett stort björnhuvud hängermitt emot dörren. Främst serveras här olika kötträtter till rim-liga priser. Krogens björnsylta är känd för att vara mycket god,men dessvärre är det inte alltid björnkött finns tillgängligt.Torgny assisteras av sina två söner, Måns och Rune.
+Sågen och brädgården
+Lundnäs stolthet, sågen, ligger vid bäcken i södra delen avstaden. Den drivs av ett vattenhjul och används för att såga tillstockar till brädor. Dessa förvaras på den brädgård som ligger ianslutning till Masse Huggares hus. Vid sågen arbetar förmannenMasse Huggare och tjugo timmermän. I dessa inräknas inte barade som sköter själva sågandet, utan också de som bär timmer ochstaplar brädor. Själva brädgården är en större plan där brädorligger uppallade på grovt tillsågade timmerstockar. För denovane kan det vara svårt att hitta mellan de många brädstaplarna.Vannas handelsbod
+Handelsboden är ett trähus med halmtak. Vanna med familj leveri den norra delen av huset, och handelsboden upptar den södra.Boden är upplyst av en oljelampa som står på disken. Där stårdet även en liten klocka man ringer med för att tillkalla Vanna.Längs väggarna bakom disken finns det hyllor vilka innehållerde varor handelsboden säljer. Då Vanna inte mäter mycket merän fem fot finns det en stege som hjälp för att nå de saker somstår högt upp på hyllorna. De saker som inte får rum i hyllorna,såsom rep och saltsäckar, står på golvet. Vanna pladdraroavbrutet i vanliga fall, men sjukdomen har gjort henne matt.
+Handelsboden säljer mest sådant som man inte kan tillverka
+själv eller få tag på hos byns hantverkare, som salt, rep, glas-varor, olja, tobak, säckar, såpa och honung. Dessa räknas somimporterade från ett, oftast, närliggande ställe.
+Bostaden består av en sektion där man äter, vilken är den man
+kommer in till hyllorna från, och en där Vanna, hennes manoch deras fyra barn sover. De är en ganska välbeställd familj ochhar därför råd med lite bekvämligheter. Matsektionen upptastill större delen av en spis och ett bord. I ’sovrummet’ finns tvårelativt bekväma sängar och några väggfasta britsar för barnen.LUNDNÄS
+Här följer en kortare beskrivning av Lundnäs med omnejd. Här hittar man också lite
+allmän information som kan användas i Regnsynd. Den här delen är i första hand enreferensdel till äventyret, med kortfattade beskrivningar av olika platser som roll-
+personerna kan tänkas vilja besöka.Ragnar Fiskare är så glad att han ger rollpersonerna en butelj med
+brännvin, ‘för han behöver det inte längre’ . Hela byn ljuder av skratt
+och stoj. Solen skiner. Barnen skrattar och leker, kvinnorna sam-talar och ler, männen hugger i och vill gratulera hjältarna.
+Baronen kommer fram igen och säger åt rollpersonerna att besöka
+honom på Leijonsborg senare för att få sin belöning, vilken deockså får. Baronen kommer tacka dem ypperligt och bjuder dempå en måltid så lyxig som Lundnäs kan avvara med tanke pårådande situation. Vinet som serveras är i alla fall ett mycket väl-smakade cimanivin från kiriyaalverna i söder.
+När uppståndelsen har lagt sig och rollpersonerna befinner sig
+ensamma vid aftonen kommer även Fredricca för att besöka dem. 
+”Mina omen sade att ni hade lyckats, mina vänner. Här får ni en lite
+gåva även från mig. Jag hoppas ni använder den vist och bara vid absolutanödfall. Den kommer att ge er styrka när ni behöver det och få er attuträtta större stordåd än ni trodde var möjligt.”
+Därefter lämnar hon rollpersonerna. Drycken som rollpersonerna
+fick av Fredricca är en glasflaska med ett blåskimrande innehåll.Den innehåller två doser och varje dos helar en skadad rollpersonmed Ob2T6 kryss Trauma och Ob2T6 kryss Smärta. Man kanbara dricka en dos effektivt per normal läkeperiod.
+Rollpersonernas bedrifter gör också att deras Rykte ökar med
+fyra (+4) och specialiseras mot ”Lundnäs räddare”. Rollperson-erna kan också tillgodogöra sig extra förbättringsslag i enlighetmed sidan 81 i Eon II.Kapten Rask kommer morgonen efter det att rollpersonerna har
+lyckas med uppdraget att säga att Spegelmåne är klar för avfärdoch att han ser fram emot att segla igen. ‘Och komma bort från det
+här helveteshålet...’ Vad rollpersonerna nu vill göra är upp till dem
+– skall de följa med kapten Rask och uppleva nya äventyr, ellervill de vila ut i Lundnäs, eller så kanske de vill utforska Soldarntill lands. Det är dock upp till spelledaren att avgöra och tas inteupp vidare i den här boken.
+Efter Regnsynd
+En driftig spelledare kan givetvis bygga vidare på äventyret.Kanske kommer handeln igång snabbt igen i Lundnäs med vaddet innebär. Kanske kommer giriga handelsmän dit och vill taöver timmerproduktionen, med mutor, hot och annat. Omcirefalierna kommer lär metoderna inte vara speciellt schyssta.Kanske drabbas Lundnäs handelsnäring av pirater från korsar-kriget, vilka saboterar för baronens planer? En dag kanske sågensaboteras av någon? Vem kan ligga bakom? Den nye samori-mannen kanske har sina egna mörka hemligheter? Är Fredriccaverkligen så god som hon först verkar? Finns det månnenedgrävda skatter i den gamla gravruinen på gravplatsen?Dhormel kanske blir desperat och i ett hungrigt tillstånd anfallerhan kanske någon människa i byn – vad händer då? Möj-ligheterna är oändliga och med Lundnäs och dess invånare harspelledaren stora möjligheter att bygga ut äventyrandet för sinegen del och för rollpersonernas. Den enda begränsningen ärspelledarens egen fantasi och uppfinningsrikedom.
+
+--- Page 34 ---
+• 33 •SPELLEDARPERSONER REGNSYND
+KAPITEL TVÅKAPITEL TVÅ
+SPELLEDARPERSONERSPELLEDARPERSONER
+DDen gamla, saltstänkta kaptenen strök sig över sin grånade
+skäggstubb och spejade mot land. Trots regnet som vräktener över dem från en molntung sky kunde han se ljusen från
+land. ”Förbannade pirater”, muttrade han för sig själv och undradehur många dagar de skulle bli kvar i den lilla hålan Lundnäs, innande kunde fortsätta sin resa.
+Han lutade sig mot relingen och spejade inåt byn då hans män vant
+styrde in skeppet mot bryggan, där de förtöjde och landsteg. Skynd-samt marscherade han över landgången och kände hur stumt detblev under fötterna då han plötsligt befann sig på land. Skulle hannågonsin vänja sig? Genast längtade han ut på havet igen, havet somvar hans liv.
+”Nåja”, konstaterade han för sig själv och vände sig mot sina
+passagerare, ”när vi ändå är här kan vi lika gärna besöka Vansnäsgård, ett trivsamt litet ställe som en gammal vän till mig sköter. Därkan vi övernatta och äta oss mätta.” Men innan han lämnade ham-nen bakom sig kastade han en hastig blick över axeln och svormumlande: ”Förbannade piratpack!”
+
+
+--- Page 35 ---
+• 34 •SPELLEDARPERSONER REGNSYND
+FREDRICCA – STY 8, TÅL 10, RÖR 11,PER 11, PSY 17, VIL 17, BIL 11, SYN 8, HÖR 7. 
+Lojalitet 9, Heder 11, Amor 6 (olust), Aggression 5 (pacifist), Tro 5 (agnostiker), Generositet 13, Rykte 10 (häxa), Tur 16, Re surser 7.
+Förflyttning 8 m/runda, BF 9 kg, UK 7 rutor, Chockvärde 11, Skadetålighet 5 rutor, VINIT 5, Insikt 5, Qadosh –3.
+Slag (5), ObK1T6–1, SI(1/2), Undvika (9).
+Färdigheter : Alkemi 14, Alstra Biotropi 13, Alstra Fototropi 11, Alstra Pneumotropi 12, Ashariska 16, Besvärjelse 14, Djurlära
+16, Historia 11, Läkekonst 19, Magiförnimmelse 16, Ritual 10, Spådom 17, Transformera 12, Växtlära 18, Överlevnad 10.Utrustning : Gamla slitna kläder, läkeörter, knotig träkäpp.
+EGIL – STY 12, TÅL 9, RÖR 13, PER 11, PSY 12, VIL 11, BIL 9, SYN 11, HÖR 12. 
+Lojalitet 5 (opålitlig), Heder 8, Amor 11, Aggression 12, Tro 15 (Den samoriska läran), Generositet 3 (sparsam), Rykte 6 (byfån e),
+Tur 11, Resurser 2.Förflyttning 8 m/runda, BF 10 kg, UK 6 rutor, Chockvärde 10, Skadetålighet 5 rutor, VINIT 5, Insikt 5, Qadosh 0.
+Slag (10), ObK1T6, SI(1/2), Undvika (11).
+Färdigheter : Berättarkonst 10, Fingerfärdighet 11, Historia 13, Slagsmål 10, Supa 12, Undvika 11.
+Utrustning: Riktigt skitiga kläder, en rejäl påk och en butelj Soldiskt gult under armen.
+RAGNAR LOKESSON FISKARE – STY 13, TÅL 14, RÖR 11, PER 10, PSY 13, VIL 14, BIL 11, SYN 13, HÖR 10. Lojalitet 14 (familjen), Heder 12, Amor 10, Aggression 13, Tro 14 (Den samoriska läran), Generositet 10, Rykte 2, Tur 11,Resurser 7.Förflyttning 9 m/runda, BF 13 kg, UK 7 rutor, Chockvärde 13, Skadetålighet 7 rutor, VINIT 5, Insikt 5, Qadosh 1.
+Slag (10), ObK1T6+2, SI(1/2), Huggkniv (13), ObH2T6, SI(1/2), Undvika (13).
+Färdigheter : Ashariska 16, Fingerfärdighet (knopar) 12, Fiske 14, Huggkniv 13, Simma 12, Sjömannaskap 11, Slagsmål 10,
+Stridsvana 6.Utrustning : En segeleka, stickad yllekofta, impregnerade skinnbyxor och en huggkniv.
+BARON SEMUEL LEIJON – STY 13, TÅL 12, RÖR 13, PER 12, PSY 14, VIL 14, BIL 16, SYN 12, HÖR 11. 
+Lojalitet 12, Heder 13, Amor 9, Aggression 8, Tro 16 (Den samoriska läran), Generositet 14 (gästfri), Rykte 12 (länsherre), Tur11, Resurser 14.Förflyttning 9 m/runda, BF 12 kg, UK 6 rutor, Chockvärde 13, Skadetålighet 6 rutor, VINIT 11, Insikt 9, Qadosh 2.
+Slagsvärd (14), ObH4T6+2, SI(3/4), Riddarsköld (12), Bryt 18, Undvika (13).
+Rustning : Ringbrynja [H12, K4, S5], täcker 4–11, 14–20. Generellt : [H12, K4, S5].
+Färdigheter : Ashariska 14, Diplomati 12, Etikett 13, Geografi 11, Heraldik 12, Jakt 13, Krigsföring 10, Lagkunskap 12, Ledarskap
+14, Musik (luta) 12, Rida 12, Sköld 12, Stridsvana 15, Svärd 14, Undvika 13, Övertala 15.Utrustning : Vad han kan tänkas behöva (inom rimliga gränser).
+HEJDEN MARTINSSON – STY 11, TÅL 12, RÖR 12, PER 10, PSY 14, VIL 13, BIL 14, SYN 12, HÖR 9. 
+Lojalitet 14 (Baron Semuel Leijon), Heder 12, Amor 8, Aggression 11, Tro 11, Generositet 6 (snål), Rykte 3 (stroppig tjänare),Tur 11, Resurser 9.Förflyttning 8 m/runda, BF 11 kg, UK 6 rutor, Chockvärde 13, Skadetålighet 6 rutor, VINIT 5, Insikt 5, Qadosh 0.
+Ämbetsstav (12), ObK2T6+1, SI(3/4), Undvika (11).
+Färdigheter : Ashariska 14, Diplomati 13, Etikett 14, Heraldik 11, Matlagning 13, Räkning 12, Spel och dobbel 13, Stav 12,
+Övertala 17.Utrustning : Fina kläder, ämbetsstav, en välfylld penningpung.
+VANNA KJALSDOTTER ROSENKIND – STY 11, TÅL 13, RÖR 12, PER 13, PSY 14, VIL 13, BIL 11, SYN 13, HÖR 12.
+Lojalitet 10, Heder 9, Amor 13, Aggression 5 (diplomatisk), Tro 14 (Den samoriska läran), Generositet 8, Rykte 5(butiksinnehavare), Tur 11, Resurser 13.Förflyttning 8 m/runda, BF 12 kg, UK 6 rutor, Chockvärde 13, Skadetålighet 6 rutor, VINIT 5, Insikt 5, Qadosh 1.
+Slag (10), ObK1T6, SI(1/2), Undvika (9).
+Färdigheter : Ashariska 14, Berättarkonst 11, Diplomati 10, Läkekonst 8, Rida 9, Simma 11, Sjunga 12, Värdera 14, Övertala 14.
+Utrustning : Ett par enkla kläder, sin handelsbod.
+HERR THALL SPJUT AV LUNDNÄS – STY 14, TÅL 13, RÖR 10, PER 13, PSY 12, VIL 12, BIL 14, SYN 10, HÖR 11. 
+Lojalitet 15 (Baron Semuel Leijon), Heder 11, Amor 14 (lusta), Aggression 10, Tro 15 (Den samoriska läran), Generositet 10,Rykte 6 (Lundnäs fogde), Tur, Resurser.Förflyttning 8 m/runda, BF 13 kg, UK 6 rutor, Chockvärde 13, Skadetålighet 6 rutor, VINIT 7, Insikt 5, Qadosh 1.
+Stridssvärd (12), ObH3T6+1, SI(3/3), Riddarsköld (11), Bryt 18, Undvika (10).
+Rustning : Fjällskjorta [H10, K8, S6], täcker 4–11, 14–18. Generellt : [H10, K8, S6].
+Färdigheter : Ashariska 14, Diplomati 10, Etikett 10, Förföra 13, Heraldik 11, Krigsföring 7, Lagkunskap 9, Ledarskap 12, Rida
+12, Sjunga 15, Sköld 11, Slagsmål 10, Stridsvana 9, Svärd 12, Undvika 10.Utrustning : Vapen, pansar, en liten penningpung. En häst vid behov.
+
+--- Page 36 ---
+• 35 •REGNSYND SPELLEDARPERSONER
+RIDDAR WARG SPEGELSKÖLD – STY 15, TÅL 15, RÖR 9, PER 15, PSY 15, VIL 7, BIL 18, SYN 10, HÖR 10.
+Lojalitet 17 (Zoriánorden, släktet Leijon), Heder 16 (hålla sitt ord), Amor 8, Aggression 13, Tro 18 (Den samoriska läran), Gen e-
+rositet 10, Rykte 4 (tempeltiddare), Tur 11, Resurser 11.Förflyttning 8 m/runda, BF 15 kg, UK 6 rutor, Chockvärde 15, Skadetålighet 7 rutor, VINIT 11, Insikt 11, Qadosh 9.
+Bredyxa (15), ObH4T6+1, SI(2/2), Riddarsköld (16), Bryt 18, Undvika (11).
+Rustning : Ringbrynja [H12, K4, S5], täcker 4–11, 14–20. Generellt : [H12, K4, S5].
+Färdigheter : Ashariska 15, Ceremoni 12, Diplomati 12, Etikett 11, Geografi 11, Heraldik 12, Krigsföring 11, Lagkunskap 12, Ledarskap
+14, Ockultism (Samoriska läran) 16, Rida 12, Sköld 16, Stridskonst: Zoriánkämpens väg 15, Stridsvana 18, Undvika 11, Övertala 1 4.
+Utrustning : Vapen, pansar, tabard, extra kläder och en svart pärla. Religiösa symboler och en solmedaljong. 
+BÅG-PIETER (PIETER FRANKSSON) – STY 12, TÅL 17, RÖR 17, PER 10, PSY 13, VIL 16, BIL 9, SYN 16, HÖR 15. 
+Lojalitet 9, Heder 8, Amor 8, Aggression 4 (lugn), Tro 10, Generositet 9, Rykte 3 (skogsvaktare), Tur 11, Resurser 5.Förflyttning 11 m/runda, BF 14 kg, UK 8 rutor, Chockvärde 14, Skadetålighet 6 rutor, VINIT 9, Insikt 7, Qadosh 1.
+Långbåge (19), Räckvidd [5-35-80-175] ObS4T6+2, ObS3T6+2, ObS3T6, ObS2T6+1, Undvika (16).
+Rustning : Vadderat tyg [H2, K3, S1], täcker 4–22. Läder [H3, K4, S3], täcker 23-26. Generellt : [H2, K3, S1].
+Färdigheter : Ashariska 14, Båge (Långbåge) 18, Djurlära 16, Fiske 12, Geografi 14, Gömma 14, Jakt 17, Marsch 16, Rida 12,
+Smyga 13, Speja 16, Spåra 17, Stridsvana 11, Undvika 16, Väderkännedom 12, Växtlära 13, Överlevnad 16.Utrustning : Långbåge, slaktkniv, rejäla kläder, snaror, vattenflaska. I hemmet finns en sovfäll, ryggsäck, kokutrustning och ett tält.
+KAPTEN JEORG RASK – STY 13, TÅL 12, RÖR 12, PER 12, PSY 16, VIL 13, BIL 10, SYN 10, HÖR 8. 
+Lojalitet 14 (sin besättning), Heder 13, Amor 10, Aggression 11, Tro 15 (Den samoriska läran, Navare), Generositet 15 (bjudergärna), Rykte 4 (duglig kapten), Tur 11, Resurser 10.Förflyttning 8 m/runda, BF 12 kg, UK 6 rutor, Chockvärde 12, Skadetålighet 6 rutor, VINIT 9, Insikt 8, Qadosh 0.
+Bredyxa (13), ObH3T6+3, SI(2/2), Rundsköld (15), Bryt 16, Undvika (12)
+Rustning : Läderrock [H3, K4, S3], täcker 4–11, 14–18, Generellt : [H3, K4, S3].
+Färdigheter : Ashariska 16, Astrologi 14, Diplomati 10, Fiske 13, Geografi 18, Klättra 11, Krigsföring 10, Lagkunskap 10, Ledarskap 15,
+Navigation 19, Räkning 12, Simma 10, Sjömannaskap 18, Sköld 15, Slagsmål 14, Stridsvana 13, Supa 12, Undvika 12, Väderkännedom15, Yxa 13.Utrustning : Sitt fartyg Spegelmåne, bredyxa, rundsköld. En pipa med tobak.
+TYPISK PIRAT – STY 12, TÅL 12, RÖR 10, PER 9, PSY 9, VIL 10, BIL 6, SYN 10, HÖR 10. 
+Lojalitet 8, Heder 6 (ohederlig), Amor 12, Aggression 13, Tro 9, Generositet 8, Rykte 2, Tur 11, Resurser 5.Förflyttning 8 m/runda, BF 12 kg, UK 5 rutor, Chockvärde 11, Skadetålighet 6 rutor, VINIT 7, Insikt 5, Qadosh 0.
+Kortsvärd (11), ObH2T6+2, SI(2/3), Undvika (11).
+Färdigheter : Ashariska 10, Klättra 11, Krigsföring 7, Lagkunskap 6, Navigation 7, Sjömannaskap 10, Slagsmål 11, Stridsvana 9,
+Supa 11, Svärd 11, Undvika 11.Utrustning : Sina vapen samt 1T6 silverdaler per skalle.
+TYPISK SJÖMAN PÅ SPEGELMÅNE – STY 13, TÅL 13, RÖR 13, PER 11, PSY 11, VIL 13, BIL 9, SYN 11, HÖR 11. 
+Lojalitet 14 (kapten Rask), Heder 11, Amor 11, Aggression 12, Tro 12, Generositet 11, Rykte 2, Tur 11, Resurser 5.Förflyttning 9 m/runda, BF 13 kg, UK 6 rutor, Chockvärde 13, Skadetålighet 6 rutor, VINIT 9, Insikt 8, Qadosh 0.
+Bredyxa (13), ObH4T6+1, SI(2/2), Kortbåge (11), Räckvidd [5-15-50-125] ObS4T6, ObS3T6+2, ObS2T6+2, ObS2T6,
+Rundsköld (11), Bryt 16, Undvika (11).
+Färdigheter : Ashariska 11, Båge 11, Klättra 11, Krigsföring 10, Lagkunskap 8, Navigation 8, Sjömannaskap 12, Sköld 11, Slagsmål
+11, Stridsvana 12, Supa 11, Undvika 11, Yxa 13.Utrustning : Sina vapen samt 1T6 silverdaler per skalle.
+Typisk milisman i Lundnäs – STY 11, TÅL 13, RÖR 11, PER 10, PSY 10, VIL 11, BIL 10, SYN 11, HÖR 11. 
+Lojalitet 13, Heder 12, Amor 11, Aggression 12, Tro 14 (Den samoriska läran), Generositet 11, Rykte 4 (milisman), Tur 11, Resur ser 7.
+Förflyttning 8 m/runda, BF 12 kg, UK 6 rutor, Chockvärde 11, Skadetålighet 6 rutor, VINIT 6, Insikt 5, Qadosh 0.
+Spjut (11), ObS4T6, SI(4/2), Undvika (11).
+Rustning : Gambeson [H2, K3, S1], täcker 4–11, 14–18, Generellt : [H2, K3, S1].
+Färdigheter : Ashariska 10, Fiske 11, Jordbruk 11, Slagsmål 12, Speja 10, Spjut 11, Stridsvana 7, Supa 8, Söka 8, Undvika 11.
+Utrustning : Sitt spjut och sin tygjacka. 1T6 silverdaler per skalle. 
+Grottrollet Dhormel – STY 46, TÅL 25, RÖR 13, PER 5, PSY 7, VIL 15, BIL 2, VÄR 10, HÖR 14, LUK 13. 
+Förflyttning 12 m/runda, BF 35 kg, UK 10 rutor, Chockvärde 28, Skadetålighet 9 rutor, VINIT 10, Insikt 6, Qadosh 0.
+Slag (15), ObK5T6+2, SI(2/2), Klor (14), ObH4T6, SI(2/1), Bett (12), ObH4T6, SI(1/2), Undvika (12).
+Rustning : Hud [H8, K9, S8], Täcker hela kroppen.
+Färdigheter : Ashariska 5, Bergskunskap 7, Gömma 12, Hoppa 11, Klättra 14, Sakhra 7, Stridsvana 14, Undvika 12
+
+--- Page 37 ---
+• 36 •SPELLEDARPERSONER REGNSYND
+TYPISK BJÖRN – STY 40, TÅL 25, RÖR 16, PSY (10), VIL 14, SYN 9, HÖR 14, LUK 12. 
+Förflyttning 17 m/runda, BF 65 kg, UK 9 rutor, Chockvärde 26, Skadetålighet 9 rutor, VINIT 10, Insikt 7.
+Slag (10), ObK4T6+3, SI(1/2), Klor (12), ObH4T6, SI(2/2), Bett (12), ObH4T6, SI(1/2), Undvika (12).
+Rustning : Päls [H2, K3, S2], Täcker hela kroppen.
+Färdigheter : Simma 12, Stridsvana 12, Undvika 12.
+TYPISK VARG – STY 14, TÅL 16, RÖR 14, PSY (10), VIL 14, SYN 10, HÖR 15, LUK 15. 
+Förflyttning 13 m/runda, BF 30 kg, UK 10 rutor, Chockvärde 14, Skadetålighet 7 rutor, VINIT 9, Insikt 7.
+Språng (14), Se ’Monster & varelser’, Bett (14), ObH2T6+2, SI(1/2), Undvika (12).
+Rustning : Tjock päls [H3, K4, S3], Täcker hela kroppen.
+Färdigheter : Jakt 14, Hoppa 14, Smyga 13, Spåra 14, Stridsvana 12, Undvika 12, Överlevnad 14.
+TYPISKT VILDSVIN – STY 20, TÅL 20, RÖR 12, PSY (8), VIL 14, SYN 8, HÖR 12, LUK 14. 
+Förflyttning 14 m/runda, BF 40 kg, UK 8 rutor, Chockvärde 20, Skadetålighet 9 rutor, VINIT 8, Insikt 6.
+Stånga (10), ObS4T6, SI(3/-), Bett (10), ObH2T6+2, SI(1/2).
+Rustning : Tjock hud [H3, K4, S3], Täcker hela kroppen.
+Färdigheter : Simma 8, Stridsvana 10.
+TYPISK GRIP – STY 24, TÅL 16, RÖR 18, PSY 10, VIL 12, SYN 18, HÖR 8.
+Förflyttning 14* m/runda, BF 40 kg, UK 7 rutor, Chockvärde 17, Skadetålighet 8 rutor, VINIT 11, Insikt 7. * Flygande
+hastighet är 70 m/runda.Greppa (14), Klor (14), ObH3T6+2, SI(2/2), Bett (14), ObH3T6+2, SI(1/2), Dykning (14) [2-5-8-15] ObK1T6+2,
+2xObK2T6+2, 3xObK3T6+2, 4xObK4T6+2, Undvika (14).
+Rustning : Fjädrar [H1, K2, S1], Täcker huvud, framben och vingar, Päls [H2, K3, S2] Täcker bringa, buk och bakben.
+Färdigheter : Flyga 14, Geografi 14, Hoppa 14, Jakt 14, Ashariska 5, Ventus 10, Stridsvana 14, Undvika 12
+Framifrån Höger Vänster Bakifrån Område
+1-2 1-2 1-2 - Huvud
+3-4 - 3 - V. Framben
+5-6 3 - - H. Framben7-8 4-5 4-5 - Bringa (Bröst)
+9- 6-7 1 V. Vinge (Arm)
+10 6-7 - 2 H. Vinge (Arm)
+- 8-9 8-9 3-6 Buk & bakdel
+-- 10 7-8 V. Bakben
+-1 0- 9-10 H. Bakben
+Namnlistor för övriga spelledarpersoner
+Här följer några förslag på namn som spelledaren kan
+använda på vanliga bybor. I Soldarn så är namnen oftastinnehållslösa med vissa undantag, främst då djurnamnsom har gjorts om till människonamn. Förnamnen åtföljsoftast av faderns namn, plus ändelsen –sson eller –sdotter.
+Mansnamn : Arok, Bard, Billing, Cronlan, Derik,
+Devod, Ejgast, Fingal, Finn, Gaifell, Gillis, Hadar, Hens,Idar, Joar, Jon, Kjal, Lillsam, Loke, Mattis, Modar,Mollrik, Nore, Njord, Ottar, Orm, Pedjer, Rake,Rangol, Ruben, Segert, Sibbe, Tegol, Une, Ygge.
+Kvinnonamn : Anja, Bettel, Belinda, Cornelia, Disa,
+Dordi, Emla, Frida, Gulla, Hanna, Hedvig, Ida, Ingri,Janna, Joanna, Katla, Kulla, Lea, Lilja, Malin, Ninni,Nora, Olava, Ottilia, Palla, Penne, Rakel, Regina, Sigga,Silvis, Tisa, Trude, Ulva, Unda, Verna, Ylfa.Slagsvärdet Mithensvred
+Mithensvred är ett bastant slagsvärd i dvärgiskt mangenat-legerat kvalitetsstål. Ett par dvärgarunor finns vid basen avklingan och parerskyddet är rejält och tvinnat med läderoch guldtråd. Klingan är rak och blänkande, som om detaldrig har använts. Handtaget är lindat med svart läder ochknappen som är rejält tung ökar balansen. En vapenskida isvart läder med bruna läderband runt medföljer. Både svärdoch skida är rejält inoljade.
+Slagsvärdet Mithensvred : H+Ob4T6, K+3, S+Ob1T6+2,
+STYK 9, 2H, BRYT 20, SI 3/4, 120cm/1,5kg.
+Kvalitetsegenskaper (se sidan 288 i Eon II): Tungt och
+Höghärdat. Dvärgastålet ger i sig självt +6 i BRYT, utöverhantverksegenskaperna.Tabell RS-6: Gripens träffområden
+

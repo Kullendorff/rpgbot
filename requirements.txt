@@ -1,0 +1,8 @@
+discord.py>=2.0.0
+python-dotenv
+anthropic>=0.10.0
+sentence-transformers
+pinecone-client
+numpy
+tiktoken
+whoosh

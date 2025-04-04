@@ -1,0 +1,675 @@
+Source: Uppgorelse_i_Henecs_famn_20171130_FINAL.pdf
+--- Page 1 ---
+Uppgörelse i Henecs famn
+En äventyrsplats till EON
+ Formgivning
+ Niklas Fröjd ”Hur ska de stackars västmarkarna överleva 
+sina vedervärdiga dagar utan sprit?” FörF attare
+ Andreas Williamsson ”Det arbetas på en hemlig modul om att spela muterade hybrider mellan gäss och traktorer i en avlägsen forntid där det alltid är mörkt och regnar”
+ i
+llustrationer
+ Emanuel Perpåls ”Från och med nu kommer jag vara både oemotståndlig och ostoppbar” g
+raF ik
+ Petter Nallo ”Bevisligen sover jag inte nu”
+
+--- Page 2 ---
+2
+Uppgörelse i 
+Henecs famnBakgrund
+Henecs famn ligger i ett bördigt men träskomgärdat 
+och vattensjukt område mellan floden Krylons många armar i grevskapet Varnos i den sydöstra delen av Damarien. Byn blomstrade under tiden fram till Thamas maktövertagande då den var en lokal knutpunkt för handeln mellan Damarien och Västmark och många resande och handelsmän övernattade här på vägen mellan de två länderna eller anlitade guider, bärare och skjutskarlar för att transportera sina varor. Byborna såg sig själva som lite mer civiliserade, beresta och kunniga än sina inskränkta grannar.
+Thamas maktövertagande innebar att gränsen mot 
+Västmark stängdes och över en natt försvann många bybors födkrok. 
+Även tidigare hade det dock förekommit en hel del 
+smuggling i syfte att undvika tullar, skatter och nyfikna frågor och denna verksamhet ökade i gengäld kraftigt. Thamas Vinskörd utplånade stora delar av adeln i området och lämnade ännu mer spelrum för driftiga personer med god kunskap om gömslen och stigar.
+Den skickligaste och mest beryktade av dem alla var 
+Henec den givmilde som byggde upp ett eget litet 
+imperium med åtskilliga hantlangare i både Västmark och Damarien. Han tog över och byggde ut det stora 
+långhus som givit byn dess namn och fostrade där sina 
+två viljestarka döttrar Xerima och Mircalla till att en dag 
+ta över hans verksamhet.
+Henec är en mytomgärdad gestalt och en lokal folkhjälte, 
+även om många av de historier som finns om honom 
+ursprungligen är gamla folksagor och historiska händelser 
+som utspelade sig långt före hans tid.Efter ett antal goda år i kölvattnet efter Thamas Vinskörd 
+skickade släkten van Marie som tilldelats makten över greveskapet Varnos fogden Ruprecht från Saltviken till byn för att upprätta en gränspostering och börja ta upp ordentligt med skatt igen. Fogden blev snabbt charmad av Henec och övertalad att framförallt ge sig på dennes konkurrenter.
+Vargriddarnas sällskap var en av de grupper som tvingades 
+i exil som en konsekvens av Thamas maktövertagande och har ett av sina läger i Västra skogen strax bortom gränsen mot Västmark. Även vargriddarnas har utnyttjat smugglarnas tjänster för att få information om Thamas planer, trupprörelser och skicka spejare fram och tillbaka över gränsen.
+När äventyret tar sin början har Henec precis avlidit. De 
+exakta omständigheterna bakom hans död är lite oklara, men han var inte längre en ung man och förefaller ha drunknat i en av de många vattendrag som omger byn efter en blöt kväll i Ruprechts sällskap. Strax innan hans död anlände den unge skrivaren Caroc tillsammans med en liten grupp soldater och sade sig vara representant för den ökände och fruktade länsdomaren Forsek Fingerklippare som av oklara skäl börjat intressera sig för vad som händer i byn. Medan Henecs lik kallnar i långhusets förråd har hans döttrar råkat i luven på varandra och utan Henecs lugnande närvaro är risken för en uppsplittrande fejd stor.Inledning
+Äventyret nedan utspelar sig i den lilla byn Henecs famn i de sydöstra delarna av Damarien. Byn har sedan länge livnärt sig på handel och smuggling med grannen Västmark, men Damariens tilltagande isolering har inneburit att kontakten med omvärlden brutits och gränsen är numera mycket hårdare bevakad än tidigare. Detta har dock lett till ett uppsving när det gäller smuggling och flera familjer i byn är på ett eller annat sätt involverade i denna verksamhet. Statsmaktens representanter i området har än så länge sett mellan fingrarna i utbyte mot generösa mutor. Detta är på väg att ändras eftersom medarbetare till den fruktade länsdomaren Forsek Fingerklippare har 
+anlänt och börjat ställa obekväma frågor. Lugnet hotas 
+också av en uppblossande fejd mellan de två systrarna Xerima och Mircalla efter att deras far och bygdens starke man Henec den givmilde nyligen avlidit. Utanför byn 
+gömmer sig också en grupp vargriddare som ser med stor 
+oro på det kaos som hotar Henecs famn.Äventyret är konstruerat för att vara öppet och lätt att 
+anpassa till den enskilda spelgruppens behov. Byn och dess mest intressanta invånare kommer att beskrivas i detalj, liksom de grupper som är engagerade i konflikten, men det finns inget givet slut eller någon färdig lösning. Beskrivningen av de olika fraktionerna är tänkt att vara så pass öppen och flexibel att de lätt kan anpassas och kopplas till den enskilda spelgruppens behov. Rollpersonerna kan antingen vara allierade med några av de olika grupperna, vanliga bybor eller utbölingar som anlänt dit på grund av sina egna skäl.
+Äventyret kommer att inledas med en övergripande 
+beskrivning av byns historia och därefter följer en mer 
+detaljerad genomgång av de olika grupperna och själva samhället.
+
+--- Page 3 ---
+3
+Uppgörelse i 
+Henecs famnHenec
+Även om Henec är död under hela äventyret förblir 
+han en viktig och omtalad person i byn och de flesta av spelledarpersonerna har många positiva minnen av honom. Det finns också en rik flora av skrönor, rykten och historier om hans liv och handlingar. Henecs lik förvaras i ett förråd som hör till det gårdskomplex som han köpte och byggde ut för sina smuggelpengar. Många bybor kommer att besöka det för att sörja och betyga sin vördnad och under äventyrets gång kommer han antagligen att begravas - även om detta också är en av de många konfliktfrågorna mellan hans båda döttrar. I början av äventyret är det ganska enkelt att få tillträde till liket, men efterhand som besökarna blir fler, några bybor börjar klippa lockar av hans hår för att använda som reliker och misstanken om att Henec mördats stärks låser man dörren till förrådet och sätter ut vakter.
+Henec är en lång och bredaxlad man, med lockigt, rött 
+hår som börjat blekna och tunnas ut, ett kort vit-gult skägg och en rejäl näsa som verkar ha brutits vid ett flertal tillfällen. Liket är iklätt enkla, men välgjorda kläder och ett par påkostade stövlar av god kvalitet.
+Viktigt att komma ihåg när man tecknar bilden av Henec 
+är att han var en social och karismatisk person som var lätt att tycka om, men också södra Damariens okrönte smuggelkung och ledare för ett gäng hårda män och kvinnor som inte drog sig för att använda våld när det behövdes. Han är alltså både en sympatisk mysfarbror och en mördare.Det är upp till spelledaren att bestämma huruvida Henec 
+faktiskt blev mördad eller dog en naturlig död. Om han 
+blev mördad behöver man också fundera kring vem som 
+ligger bakom det och vad deras motiv var. Oavsett om han 
+blev mördad eller inte finns det flera spelledarpersoner som kommer att misstänka att hans död inte var en olycka 
+och kommer att börja leta efter svar på hur den gick till 
+när äventyret börjar. Här kan rollpersonerna säkert hjälpa 
+till på olika sätt.
+Rollpersonerna
+Rollpersonerna kan befinna sig i byn för att de 
+är på genomresa, för att de själva är inblandade i smugglingen på något sätt eller för att de själva 
+vill lämna Damarien obemärkta. I beskrivningen 
+av varje fraktion finns dessutom förslag på hur 
+rollpersonerna kan vara kopplade till just dem. Att rollpersonerna initialt är knutna till en viss grupp betyder dock inte de måste förbli lojala mot dem eller 
+sakna egna agendor. Det finns gott om möjligheter 
+att byta sida, uppmuntra konflikter eller försöka få 
+parterna att försonas.
+Om spelgruppen skapar rollpersoner specifikt 
+för detta äventyr kan dessa inspireras av spelledarpersonerna och i vissa fall rentav ta deras plats.
+Rykten om Henec
+Här följer en tabell med exempel på rykten om Henec 
+som spelledaren kan kasta in eller slumpa fram vid passande tillfällen under äventyrets gång:
+1. Henec fick smeknamnet “den givmilde” på grund av 
+sitt stora hjärta. Många bybor har hans generositet och gästfrihet att tacka för att de själva tog sig igenom hårda tider oskadda.
+2. Henec besökte en gång huvudstaden och självaste 
+storfursten fick syn på honom och undrade vad han var 
+för en ståtlig kraftkarl. Henecs vältalighet imponerad så mycket på honom att storfursten skänkte honom en av sina kostbara guldringar.
+3. Henec hade ett avtal med skugglandsfolket och det 
+var med deras hjälp som han alltid hittade de bästa och snabbaste vägarna genom träsk och skogar. Hans döda lemmar vet ännu hur man hittar i gränstrakterna och den som bär en av hans fingrar runt halsen kommer alltid få rätt väg utpekad.
+4. Henec byggde upp en stor förmögenhet genom sin 
+smuggelverksamhet och gömde flera kistor med guld och silver någonstans i sitt hus.
+5. Henec fick smeknamnet “den givmilde” för att han 
+var så långsint och envis att han mindes och generöst gav igen för varenda oförrätt som han utsattes för.6. Henec var den störste smugglaren i hela Damarien och det sägs att den som fångade in honom skulle personligen belönas med sin vikt i guld av storfursten själv.
+7. Henec var en riktig kvinnokarl och det är ingen 
+slump att det finns så många rödhåriga barn och ungdomar i byn. Han lär rentav ha förfört ett skogsrå i sin ungdoms dagar.
+8. Henec är inte född i byn utan vandrade över gränsen 
+från Västmark en dag för många år sedan. En del av de äldste i byn som varit ute i världen och rest mest menar att han bär stora likheter med kungen av Soldarn.
+9. Henec grundade ursprungligen byn för många 
+hundra år sedan, men gick vilse ute i träsken och hamnade i en märklig skuggvärld. Där la han sig för att vila en stund under ett träd med silverfärgad bark och gyllene löv. När han vaknade och åter fann vägen tillbaka till byn hade många mansåldrar passerat och ingen av hans ursprungliga vänner eller släktingar levde längre. Det var några gyllene löv som fallit ner i hans huva som finansierade hans första smuggelverksamhet.
+10. Henec var en av ledarna för motståndsrörelsen 
+mot Thamas styre. Han mördades för att man ville 
+komma åt en lista med namnen på hundra spioner som gömmer sig i Damarien och planerar för ett uppror.
+
+--- Page 4 ---
+4
+Uppgörelse i 
+Henecs famnSmugglingen i Henecs famn
+Damarien har i stort sett stängt sina gränser mot omvärlden 
+och den handel som fortfarande sker är hårt kontrollerad och riktad mot ett fåtal parter såsom Jargien, det stora dvärgfästet Khazim-renk-Ghor och en handfull cirefaliska handelshus. Den en gång så livliga handeln med övriga delar av Asharinahalvön har helt upphört efterhand som Damariens relationer med sina grannländer försämrats. Målet att Damarien ska vara självförsörjande har nästan uppnåtts, åtminstone när det gäller olika basvaror.
+Smugglingen av varor, information och personer har 
+dock ökat i takt med att de officiella kontakterna har upphört, inte minst i grevskapet Varnos som har en lång och svårbevakad gräns mot Västmark. Träsken, de stora skogarna och floden Krylons många biflöden erbjuder många bra gömställen och passager över till Västmark. Befolkningen har en lång tradition av handel, samverkan och umgänge med sina västmarkiska grannar och många familjer har släktingar på båda sidor om gränsen. En serie uppror har dessutom gjort att greve Hans van Marie som styr över Varnos har haft händerna fulla.
+Smugglingen sker av flera skäl
+På grund av att man vill tjäna pengar: Det främsta motivet för att smuggla varor ut ur Damarien är att man vill få bättre betalt. Dels kan priset för olika varor vara högre utomlands och dels kan man undkomma tullar, skatter och andra avgifter genom att ägna sig åt smuggling.
+På grund av att man vill ha mer kontroll: En del 
+hantverkare och bönder äger inte rätten att sätta sina egna priser på det som de producerar utan är tvungen att acceptera vad skrået, den lokala adeln eller myndigheterna har bestämt. Smugglingen blir då en upprorshandling och ett sätt att få bättre betalt för sitt arbete.
+På grund av att man vill komma över varor som är 
+svårtillgängliga eller förbjudna : Mycket av det som 
+smugglas in från Västmark är varor som antingen är förbjudna i Damarien eller som är väldigt svåra och kostsamma att komma över.
+På grund av att man vill lämna landet: En del av 
+smugglingen handlar om att hjälpa personer att fly från Damarien av olika skäl. Det handlar vanligtvis om att 
+de har begått något brott och vill undkomma straff eller 
+att de tror sig ha bättre möjligheter att nå ekonomisk 
+framgång och få ett gott liv någon annanstans. Ibland 
+finns det också personer som anlitar smugglare för att 
+komma in i landet, men det är mycket ovanligare.Den faktiska smugglingen går till på lite olika sätt 
+beroende på vad som smugglas, men den västmarkiska 
+staden Västborg är en knutpunkt för vidare transporter 
+till andra delar av Västmark och Mundana. Smugglingen 
+genom Varnos sker över land, men förr eller senare blir 
+man alltid tvungen att korsa floden Krylon eller någon av dess bifloder för att komma in i Västmark. Det finns nästan inga intakta broar kvar och de flesta färjelägen är 
+bevakade av Thamas eller familjen van Maries soldater, 
+liksom själva floden.
+Samtidigt finns det gott om fiskare som dagligen vistas på 
+Krylon och floden är så stor att det är svårt att bevaka alla 
+delar av den lika noga. Dessutom kan en generös muta 
+ibland få soldaterna som vaktar floden att se åt ett annat 
+håll. Smugglarna i Henecs famn har en god relation till 
+den lokale fogden och har fram till alldeles nyligen inte 
+behövt oroa sig särskilt mycket för att han ska bevaka dem 
+alltför nitiskt.
+Enstaka personer, mindre värdeföremål och sådant som 
+är litet nog att rymmas i en normalstor säck är relativt enkla att transportera över obemärkt i en av de många 
+fiskebåtarna. Även om de inte är särskilt stora har flera 
+av dem lönnfack och dolda utrymmen av olika slag. 
+Större grupper, hästar eller vagnslaster med spannmål är svårare att förflytta och kräver antingen en nattlig operation, förfalskade papper eller en rejäl muta som gör att vakterna inte lägger sig i.
+Förutom själva smugglingen finns det sidoverksamheter 
+som att dölja gods och personer i väntan på transport eller vidare resor, hantera de inkomster som smugglingen ger utan att alltför många frågor väcks, förfalska identitetshandlingar, lejdebrev och sigill och se till att rivaliserande smugglare håller sig borta.
+
+--- Page 5 ---
+5
+Uppgörelse i 
+Henecs famnFraktioner
+Caroc skrivare
+Mål: Samla information om den smuggling som påstås ske 
+i Henecs famn och eventuell annan brottslig verksamhet som också sker.
+Resurser : Lejdebrev och stora befogenheter enligt 
+dokument som undertecknats av Forsek Fingerklippare. 
+Fyra krigare i sin tjänst.
+Caroc är utsänd av länsdomare Forsek Fingerklippare - en 
+mäktig länsdomare som är ökänd för sin omutlighet och grymhet. Han färdas tillsammans med fyra svartklädda knektar som är hans eskort och medhjälpare. Caroc verkar ägna merparten av sin tid åt att ställa besvärliga frågor till byborna och oinbjuden dyka upp och söka igenom deras hem. Blir han ifrågasatt visar han gärna upp Forseks sigill och berättar kusliga historier om länsdomarens brutala domslut.
+Caroc är av medellängd, med mörk skäggstubb och svart, 
+stripigt hårt som halvlångt hänger ner på båda sidor om 
+hans ansikte och ramar in en vass näsa och markerade 
+kindben. Han går klädd i välsydda kläder i olika 
+nyanser av blått och bär ett kort svärd vid sin sida och en läderväska slängd över axeln. Caroc ler ofta på ett lite 
+opassande och hemlighetsfullt sätt och talar med en nasal 
+röst utan några spår av den lokala dialekten. Han agerar 
+med pondus och självsäkerhet trots sin relativt unga ålder.
+De fyra krigarna i hans sällskap är tungt beväpnade och 
+tycks ständigt vara halvt berusade och redo att med våld ge sig på alla som så mycket som höjer rösten åt dem. Caroc kommer med flitiga antydningar om att de i själva verket är nattgardister, men det är det egentligen ingen i 
+byn som tar på allvar. Krigarna är till förväxling lika med 
+undantag för en ärrad kvinna som ständigt befinner sig 
+vid Carocs sida:
+Hajen: Smeknamnet passar bra in på den ärrade 
+kvinnan, med de sneda, gula tänderna och det obehagliga leendet. På vardera underarm har hon en dödskalle intatuerad; den på höger arm ler hånfullt och den på vänster ser arg ut. Enligt skvallret i byn är hon en dömd stråtrövare och mördare som blivit benådad i utbyte mot att hon tog tjänst som bödelsdräng åt Forsek Fingerklippare.Den som frågar Caroc om hans ärende till Henecs famn får som svar en axelryckning och en kommentar om att det torde vara varje friboren damariers rätt att vistas även i en sådan ynklig håla som Henecs famn. I nästa andetag antyder han att han är ute på ett hemligt uppdrag åt sin herre Forsek och att denne visat ett särskilt intresse för smugglingen i södra Damarien och hur denna bidrar till att göda rikets fiender.
+Rollpersonernas agerande
+Rollpersonerna kan utgöra Carocs eskort och på så sätt komma i kontakt med byn. En annan möjlighet är att de är rivaler till honom och konkurrerar om Forseks gunst. Om Caroc verkligen är en av Forseks tjänare är det mycket möjligt att rollpersonerna har anhöriga som straffats av den nitiske domaren vid något tillfälle.
+Hur kan spelledaren använda Caroc?
+Caroc kan dyka upp vid de mest oväntade tillfällen och ge sken av att veta mer än vad han egentligen gör. Hans blotta närvaro och det hot som den implicerar kommer göra människor oroliga, försiktiga och desperata. Ingen vill ha Forsek till byn och de flesta fraktioner är beredda att gå långt för att bli av med Caroc. 
+På pappret är fogden Ruprecht från Saltviken en naturlig 
+allierad eftersom både han och Caroc är representanter för lag och rätt. Samtidigt har fogden under många år misskött sitt jobb och låtit sig mutas av smugglarna i Henecs famn och skulle detta komma ut skulle Ruprecht själv sannolikt bli avrättad. Det innebär att deras samarbete kommer att präglas av misstänksamhet och försiktighet.
+Här beskrivs de olika fraktionerna mer i detalj. 
+Förutom att diskuteras ledarnas motiv och personlighet tar texten också upp viktiga anhängare, relationen till övriga grupper och hur rollpersonerna kan knytas till fraktionen. Beskrivningarna är tänkt att vara flexibla och möjliga att anpassa efter spelledaren och spelgruppens behov och önskemål. Systrarna Xerima och Mircalla kan sägas vara äventyrets huvudpersoner och det är den uppblossande konflikten dem emellan som står i centrum.
+
+
+--- Page 6 ---
+6
+Uppgörelse i 
+Henecs famn
+Rykten om Forsek Fingerklippare
+Forsek Fingerklippare har aldrig besökt byn, men är 
+ändå vida omtalad i grevskapet Varnos och flera bybor har någon gång bevittnat hans domslut när de besökt 
+större samhällen. Ryktena nedan är historien som 
+Caroc och andra återberättar när Forsek kommer på 
+tal:
+1. Det sägs att Forseks hjärta är ersatt med en svart 
+kolbit och att han aldrig sover utan tillbringar nätterna med att recitera olika lagböcker ur minnet.
+2. Forsek ser alltid till att de anhöriga till de personer 
+som han dömer till döden själva får knyta repet till snaran och är med och bevittnar hängningen på nära håll så att de lär sig en läxa.
+3. En gång förklarade Forsek att en kvinna som han 
+dömde till döden var så rutten och ond att det var tvunget att avrätta hela hennes hushåll och utplåna hennes blod från landets yta. Hon hängdes tillsammans med sina äldsta barn och tjänare. Barnbarn och boskap brändes inne när hennes gård tändes på.
+4. Forsek reser alltid tillsammans med en bödelsdräng 
+som har en särskild tång för att klippa bort fingrar, tungan eller andra misshagliga kroppsdelar från dömda brottslingar. De bortklippta lemmarna bär bödelsdrängen sedan i ett halsband.
+5. Forsek beordrade att en hel by skulle ödeläggas för att 
+en tupp galde och störde en rättegång som han höll i.6. Forsek kan se vilka synder och brott en människa har 
+begått bara genom en blick.
+7. Anhöriga till en man som Forsek dömt till döden 
+överföll honom en dag i hans hem, men när deras vapen skar in i hans kött tog han ingen skada och inget blod strömmande heller från hans sår. Istället sköt rep ut från ärmarna på hans ämbetskappa och snärjde förövarna. När Forseks tjänare öppnade dörren till hans arbetsrum hängde de döda från snaror i taket och Forsek själv var helt oberörd.
+8. Ingen rättegång som Forsek leder slutar förrän någon 
+har dömts till döden.
+9. Forsek torterade personligen sin mor till döds för att 
+hon en gång uttryckte tvivel över Thamas styre.
+10. Forseks skugga får mjölk att surna, hans blick ägg 
+att koka och hans beröring blodet att frysa till is.
+Xerima och Mircalla grälar över sin döda faders kropp.
+
+--- Page 7 ---
+7
+Uppgörelse i 
+Henecs famnFogden Ruprecht från Saltviken
+Mål: På kort sikt: att undvika åtal och straff för att ha 
+försummat sitt arbete. På lång sikt vill han helst lämna trakten tillsammans med allt guld som han samlat på sig under många års tid.
+Resurser : Sex stycken soldater och rätten att kalla samman 
+och leda den lokala milisen. Mandat från greve van Marie 
+att samla in skatt och föra dennes talan i området.
+Ruprecht från Saltviken lyder under greve van Marie 
+av Varnos och greven är i sin tur en av Thamas lojala anhängare. I praktiken har dock Ruprecht inte särskilt mycket kontakt med sina överordnade och har fått hyfsat fria händer så länge greven är upptagen med att slå ner upprorsungar och oroligheter i andra delar av grevskapet. Ruprecht har bott i byn i nästan tio år och även om han formellt är ansvarig för det lilla kastellet utanför Henecs famn tillbringar han merparten av sin tid i Henecs långhus som är betydligt bekvämare.
+Ruprecht är en grovt byggd medelålders man, med rejäl 
+kulmage och rödsprängt ansikte. Han är närsynt och pratar alltid med en högljudd röst och kryddar sitt tal 
+med svordomar och obegripliga referenser till sjöfart, 
+hav och nyckfulla vindar. Den moderiktiga klädseln, det 
+färgade skägget och de intrikata frisyrerna visar på en oväntad fåfänga som verkar svårförenlig med Ruprechts burdusa och sluskiga uppförande. Carocs närvaro har 
+dock bidragit till att få Ruprecht att tona ner sin klädsel 
+och bli mer nitisk i sin tjänsteutövning än vad han varit 
+någonsin tidigare.
+Ruprecht är den yngste sonen i en lågadlig familj från 
+Hammarnäs och Saltviken är namnet på den lilla by 
+som hans familj styrde över. Han gick till sjöss redan 
+som barn och inbillar sig att han vid det här laget hade varit kapten över ett eller rentav flera skepp om han inte blivit utmanövrerad av en av Thamas gunstlingar 
+och förödmjukad genom att få befälet över en patetisk 
+gränspostering i rikets utkant. Varje dag längtar Ruprecht 
+tillbaka till havet och de vattensjuka träskmarkerna som omger byn är som ett personligt hån mot hans längtan efter att åter få beträda ett skeppsdäck. Besvikelsen och 
+bitterheten gjorde honom mycket mottaglig för Henecs 
+charm och löften om rikedomar och han har i många 
+år varit en aktiv deltagare i dennes smuggeloperationer. 
+Carocs uppdykande i byn har skrämt slag på honom och 
+gjort honom väldigt nervös. Han fruktar att skrivaren är 
+där för att granska just honom och känner sig pressad att 
+på något dramatiskt och övertydligt sätt bevisa sin lojalitet 
+mot Thamas.
+Ruprecht för befäl över sex stycken soldater från Talem 
+och alla vuxna män och kvinnor som ingår i den lokala milisen Henecs famn är skyldiga att bistå honom under kortare perioder varje år om behov skulle finnas. I praktiken har han dock inget inflytande över milisen och både dem och hans egna soldater är djupt rotade i byn och smuggelverksamheten. Den enda han vågar lita på är sin kompetenta adjutant:Ansigne (svärdsdirigent) Adila : Kort, bredaxlad och 
+med en stram hållning och högljudd stämma har Adila en tendens att synas och höras i de flesta sammanhang. Hon är kompetent, driven och lika missnöjd som Ruprecht med placeringen i avlägsna Henecs famn. Hennes liv har på sistone blivit ännu mer komplicerat efter att hon inlett en kärleksrelation med Mircalla Henecsdotter. Adila försöker att tillbringa majoriteten av sin tid med att drilla soldaterna i det lilla kastellet, men av någon anledning finner hon ständiga ursäkter för att bege sig in till byn.
+Ruprecht och hans soldater har ansvaret för det lilla kastellet utanför Henecs famn, men han har aldrig bott där tidigare eftersom det är fuktigt, dragigt och tråkigt. Istället har han fått ett eget rum i Henecs långhus. För att göra ett mer seriöst intryck på Caroc har han motvilligt och högst tillfälligt flyttat till kastellet.
+Rollpersonernas agerande
+Rollpersonerna kan vara soldater i Ruprechts tjänst. Antingen sådana som varit under hans befäl i flera år och är rotade i byn eller nyanlända rekryter utifrån utan 
+någon koppling till konflikten. De skulle också kunna 
+vara medlemmar av den lokala milisen med rötterna i 
+någon av grannbyarna.
+Hur kan spelledaren använda Ruprecht?
+Ruprecht fruktar samtliga övriga fraktioner och är ett tacksamt offer för påtryckningar och utpressning. Hans desperation och försök att verka lojal för att imponera på Caroc kan få honom att begå extrema handlingar som att försöka gripa och anklaga enskilda bybor för smuggling och förräderi.
+
+
+--- Page 8 ---
+8
+Uppgörelse i 
+Henecs famnXerima Henecsdotter
+Mål: Begrava sin far och straffa eventuella personer 
+som är ansvariga för hans död. Ta kontrollen över hans smuggelimperium.
+Resurser : Fruktad och respekterad i bygden och den 
+rikaste personen i byn. Hållhake på många personer på 
+båda sidor om gränsen till Västmark och ett halvdussin råbarkade hantlangare.
+Henecs äldsta dotter har troget stått vid hans sida under 
+många år och varit en viktig del av hans verksamhet. Hon är en av byns mest respekterade och fruktade invånare, men har aldrig varit lika älskad och populär som sin far eller yngre syster.
+Xerima ser äldre ut än sina 40 år och har ett fårat och 
+magert ansikte med smala läppar och framträdande näsa. Hennes blick är sträng och tycks betrakta världen 
+med misstänksamhet och ogillande. Hon är vältalig och 
+bestämd och förväntar sig tydligt att alltid bli åtlydd. Det 
+gråsprängda håret är uppsatt i en enkel knut och dolt av 
+ett huckle. Kläderna är enkla och det enda smycke som Xerima bär är ett enkelt Daak-kors.
+Xerima har en komplicerad relation till sin syster och 
+även sin far. Hon har länge uppfattat sig själv som ett oönskat barn som Henec struntade i och använde som en piga och tills han plötsligt upptäckte att hon hade ett 
+gott minne och näsa för affärer. Först då vann hon hans 
+uppskattning, men hans kärlek har hon alltid fått kämpa 
+för - precis som allting annat i livet. Det är Mircalla som fått allting gratis och varit sin fars favorit och ögonsten, trots att Xerima varit den som tagit hand om henne som 
+liten efter att deras mor dog tidigt. Mircalla har fått göra 
+som hon velat och tar livet med en klackspark, medan 
+det är Xerima som är den allvarliga, eftertänksamma och ansvarstagande. Varken hennes far eller Mircalla har förstått hur viktigt hennes arbete har varit för 
+familjeföretagets blomstring. Xerima känner en väldigt 
+stark kärlek till sin syster samtidigt som hon irriterar sig 
+på hennes beteende, vanor och personlighet.
+Xerima blev redan i unga år förälskad i mjölnarsonen 
+Domer och bestämde sig tidigt för att de två skulle bli ett par - även om det tog ett tag att övertala honom om saken. Under många år kämpade de för att få barn tillsammans och i desperation vände Xerima sig till hedendomen, Vindorden och Daakkyrkan. Det var först när hon träffade broder Martim som hon fann någon som faktiskt kunde ge henne några svar och tack var Daaks godhet och hans ansträngningar föddes sonen Henec Felix som idag är fem år gammal och högt älskad av båda sina föräldrar.
+Xerima var den som skötte bokföringen, placeringen av 
+inkomsterna från smugglingen och stora delar av den strategiska planeringen. Hon har sällan varit med på själva smuggelresorna eller lämnat byn. Däremot vet hon namnet på alla viktiga kontaktpersoner och har kontrollen över stora delar av det guld som Henec gömt undan och de verksamheter som han investerat pengarna i.Xerima bor i en särskild del av Henecs långhus tillsammans med sin egen familj och närmsta medarbetare
+Domer mjölnare: Domer är lång, bredaxlad och grovt byggd. Hans tjocka skägg och hår tycks alltid vara täckt av ett fint mjöldamm. Han är en lugn, tystlåten och stillsam man som troget levt i skuggan av sin fru och svärfar under mer än 20 år. Det är en inofficiell hemlighet att han och hans bröder är Xerimas främsta torpeder och har gjort sig av med ett flertal konkurrenter under årens lopp. Ibland tvivlar han på om hans hustru verkligen ser honom som något mer än en nyttig hantlangare.
+Broder Martim : Martim är kort, men kraftigt byggd 
+och ser ganska obehaglig ut med sitt ärrade ansikte, 
+sin brutna näsa och ovårdade yttre. Efter ett liv som 
+rumlare och soldat fann Martim oväntat religionen 
+och har sedan dess snickrat ihop sin egen tolkning av 
+Daak-tron. Hans version är mer förlåtande, flexibel 
+och tolerant än det mer officiella alternativet och 
+belönar handlingskraft över allt annat. Martim hade 
+under sitt tidigare liv gjort vissa affärer med Henec och när han hörde om Xerimas problem kan han till 
+hennes räddning och kom samtidigt undan en del 
+köpmän i Targus som insisterade på att han var skyldig 
+dem pengar. Sedan dess har han och Xerima kommit varandra nära och hjälpts åt att skapa en lokal folklig 
+version av Daak-dyrkan. Martim skulle göra nästan 
+vad som helst för Xerima - inklusive att mörda hennes 
+fiender.
+Henec Felix : En glad och nyfiken liten pojke med 
+linblont hår och fräknar. Han viker sällan från sin 
+mors sida och ställer ständigt frågor till henne och Domer som de besvarar med stort tålamod.
+Rollpersonernas agerande
+Rollpersonerna kan vara medarbetare till Xerima, antingen sådana som varit i hennes tjänst under lång tid eller som lejts för ett specifikt syfte, till exempel för att utreda omständigheterna kring hennes fars död, hålla ögonen på Ruprecht och Caroc eller som en förberedelse inför en eventuell konfrontation med Mircalla.
+Hur kan spelledaren använda Xerima?
+Xerima är en handlingskraftig person som kommer att sträva efter att ta kontrollen över sin fars verksamhet och underkuva eller röja undan alla som står i hennes väg. Hon kommer att utöva makt över byborna och övriga spelledarpersoner på olika mer eller mindre subtila sätt och försöka avgöra var deras lojalitet ligger.
+
+--- Page 9 ---
+9
+Uppgörelse i 
+Henecs famnMircalla Henecsdotter
+Mål: Begrava sin far och straffa eventuella personer 
+som är ansvariga för hans död. Ta kontrollen över hans smuggelimperium.
+Resurser : Älskad och respekterad i bygden. Känner till 
+alla de bästa gömställena och smuggelrutterna i trakten. 
+Ledare för ett gäng hårdföra smugglare.
+Mircalla var ett efterlängtat barn som föddes efter många 
+missfall och redan som liten stod sin far nära och fick följa med på många av hans smuggelresor. Hon ärvde sin fars karisma och växte upp till en självständig, gladlynt och viljestark person.
+Mircalla är lång och har kortklippt rött hår. Hon klär 
+sig i praktiska manskläder och hennes ansikte är öppet, 
+fräknigt och märkt av många och långa dagar under bar himmel. Mircalla ler och skrattar ofta och blottar då flera 
+guldtänder i överkäken. Rösten är hög och raspig och 
+hennes kommentarer och skämt oftast av det vulgärare 
+slaget. Vid sin sida bär hon nästan alltid en dolk och en 
+yxa.
+Till skillnad från sin äldre syster är inte Mircalla någon 
+dyster grubblare utan känslosam och ganska impulsiv 
+person som inte oroar sig överdrivet mycket för varken det förflutna eller framtiden. Hon har behållit sin gamla hedendomstro och ser med viss skepsis på Xerimas 
+adopterade Daak-dyrkan och de konstiga vanor som det 
+innebär.
+Mircalla älskar sin syster, men är också trött på att bli 
+behandlad som ett okunnigt barn snarare än en jämlike och allt tjat om hur hon borde ändra sitt beteende, stadga sig och börja leva ett liv lika tråkigt och händelselöst som Xerimas eget. Äventyret ute i träsket och skogsmarkerna tillsammans med andra lockar mycket mer och ger dessutom henne en chans att komma bort ifrån Xerimas oroliga försök att styra henne. Hennes äldre syster har heller inte någon förståelse för Mircallas val av älskare och älskarinnor eller hennes behov av frihet. Den senaste i raden är Ansigne Adila.
+Mircalla har varit den som skött de praktiska delarna av 
+smugglingen och arbetade tillsammans med sin far nära andra smugglare, gränsvakter och myndigheterspersoner med att transportera olika former av gods, personer och korrespondens över gränsen. Majoriteten av de personer som står för smugglingen är framförallt lojala mot henne - även om det har varit Xerima som i slutändan avlönat dem.Mircalla är oftast borta från byn, men har återvänt för att ordna med faderns begravning. Hon bor i egen del av Henecs långhus tillsammans med en ständigt skiftande skara av vänner, hantlangare och följeslagare:
+Nella : En bredaxlad och storvuxen kvinna med 
+kolsvart hår samlat i två rejäla flätor. Mircallas bästa vän sedan barnsben och en av de personer som kan flest snuskiga historier och olämpliga könsord i hela södra Damarien. När de båda vännerna umgås med varandra dröjer det aldrig länge innan de vrider sig av skratt. Bakom den muntra ytan döljer sig både ett oväntat allvar och en större brutalitet än vad de flesta inser. Nella är djupt missnöjd med Thamas styre och har länge försökt övertala Mircalla att bli mer involverad i motståndet mot honom.
+Sotige Grim : En liten man som alltid verkar smutsig 
+och brukar svärta sina ögon med en bit kol. Grim 
+kanske framstår som en lätt försupen småtjuv, men ser 
+sig själv som en trogen anhängare av Dibuk och de 
+hedniska gudarna. I Mircallas gäng har han rollen som 
+uttolkare av gudarnas vilja, spåkarl och allmän expert på allting övernaturligt. Grim avskyr broder Martim 
+och skulle helst se att munken slutade sprida sina 
+irrläror och fördrevs från byn.
+Rollpersonernas agerande
+Rollpersonerna kan vara en del av Mircallas gäng 
+eller vänner som hon lärt känna under sina många smuggelresor och bjudit in till sin hemby. De kan också vara legoknektar hon hyrt in som en förberedelse inför en eventuell fejd med systern eller någon annan i Henecs famn.
+Hur kan spelledaren använda Mircalla?
+Mircalla är en driven person som kommer att dra igång saker. Misstänker hon att hennes far blivit mördad vill hon finna den ansvarige och få rättvisa, upplever hon att byn och hennes familj hotas av yttre krafter vill hon stoppa detta. Hon är inte dum, men planerar sällan sina drag långt i förväg och agerar mycket mer hastigt och impulsivt än sin syster. När de omedelbara problemen är hanterade kommer hon också vilja ta kontrollen över sin fars efterlämnade smuggelverksamhet och nå någon slags samförstånd med sin syster om det går.
+
+--- Page 10 ---
+10
+Uppgörelse i 
+Henecs famnVargriddarna och Nella Bryggerska
+Mål: Att Henecs famn ska bli en bas för deras verksamhet 
+och att smugglarna i byn ska ansluta sig till deras sak. För att detta ska bli verklighet behöver dock någonting göras åt Forsek Fingerklippares snokande lakejer.
+Resurser : En handfull sympatisörer i Henecs famn 
+och den omgivande landsbygden. Ett flertal vältränade 
+krigare, men de flesta finns dock i ordens huvudläger i Västmark och bara en handfull befinner sig i närheten av byn.
+Vargriddarna är svurna fiender till Thamas och orden 
+beskrivs närmare på sida 107 i Damarienmodulen. De har i många år upprätthållit ett nätverk av kunskapare, spioner och anhängare inne i Damarien och är beroende av säkra vägar över gränsen för att kunna få information och hålla kontakten med sina lojala medhjälpare. Flera gånger har de också organiserat attentat, överfall och räder mot Thamas folk och sedan flytt över gränsen när de blivit jagade. Även om Vargriddarna och Henec inte haft ett särskilt nära samarbete bistod han dem emellanåt - mot betalning förstås - och lät dem vara ifred. Att han nu dött samtidigt som mer nitiska representanter för Thamas styre kommit till byn är mycket oroväckande. Om fler och mer nitiska soldater skickas till Henecs famn är risken stor att gränsen blir stängd och vägarna mellan Västmark och Damarien stängs. Detta vore en katastrof och det skulle ta lång tid för Vargriddarna att hitta nya platser där de kan ta sig in i Damarien obemärkta.
+Vargriddarnas agent i Henecs famn är Nella Bryggerska, 
+en driftig, medelålders änka bosatt i byn. Nella är liten och krumryggad och har ett väderbitet och fårat ansikte. 
+Detta tillsammans med hennes klädsel och manér får 
+henne att verka betydligt äldre än vad hon egentligen 
+är. Vanligtvis talar hon med en dialekt som är närmast obegriplig för utbölingar och kryddar dessutom sitt tal med kraftuttryck och anekdoter som anspelar på sedan 
+länge bortglömda lokala händelser och personer.
+Även om hon spelar rollen som original och lokal 
+kraftgumma till perfektion är Nella egentligen dotter till en av de adelsmän som in i det sista kämpade mot Thamas 
+och uppvuxen under helt andra förutsättningar än de 
+som finns i byn. I samband med att fadern stupade och 
+släktens egendomar beslagtogs av Thamas hejdukar blev 
+hon tvungen att fly och som väldigt ung gifta sig med en 
+vanlig bonde som kom ifrån Henecs famn. Äktenskapet 
+blev barnlöst och Nella blev änka tidigt. Trots dessa 
+motgångar har hon lyckats bygga upp ett framgångsrikt 
+jordbruk och blivit välkänd i bygden för det goda öl hon 
+brygger.
+Nella har alltid förblivit lojal med Vargriddarnas orden där 
+hennes far hade en framskjuten position. Strax efter att hennes make avled tog hon kontakt med dem på nytt och hjälpte dem att bygga upp ett nätverk i södra Damarien som försett orden med ytterligare anhängare och viktig information om Thamas handlingar och planer.
+Nella bor i ett välbyggt, men ganska anspråkslöst hus inne 
+i byn. Husets källare döljer dock ett flertal lönnrum där medlemmar av Vargriddarna emellanåt gömmer sig eller förvarar vapen, utrustning och viktiga förnödenheter. En serie lönngångar leder vidare till byns hamn och till en lada utanför byn. Just nu väntar riddar Helm van Heesil på vidare transport till Vargriddarnas läger i Västra skogen och ytterligare tre medlemmar av orden gömmer sig i ladan. På grund av Carocs närvaro och de växande spänningarna mellan Xerima och Mircalla ligger all verksamhet nere, men riddar Helm kan inte stanna hur länge som helst i Nellas källare och har viktig information som behöver föras vidare.
+Nella är pragmatisk och framförallt angelägen att kunna 
+fortsätta med sin verksamhet utan ytterligare hot eller störningar. Hon har under årens lopp lärt känna Henec och dennes båda döttrar väl - särskilt Xerima som hon har en viss respekt för. Samtidigt bryr hon sig föga om deras konflikt och vem som ärver Henecs smugglingsimperium. Båda vet om att hon har kopplingar till Vargriddarna och det är information som i fel händer kan leda till döden för Nella och ett avbräck för Vargriddarnas arbete - något som Nella bekymrar sig mer över.
+Riddar Helm van Heesil : Riddar Helm är en välkänd 
+person i Varnos och alla vet om att han är medlem av Vargriddarna och motståndare till Thamas styre. Helm är drygt 30 år, av normallängd, men vältränad och kraftigt byggd. Även när han försöker förklä sig avslöjar hans prominenta näsa, aristokratiska manér och blonda kalufs honom. Helm har haft i uppdrag att kartlägga olika viktiga makthavares förehavanden i Varnos och har en hel del matnyttigt information om bland annat länsdomare Forsek Fingerklippare.
+Rollpersonernas agerande
+Rollpersonerna kan vara medhjälpare till Nella som arbetar som drängar på hennes gård som täckmantel. De kan också vara fullvärdiga medlemmar av Vargriddarnas orden och likt riddar Helm gömma sig i hennes källare i väntan på transport till Västra skogen eller vara i byn för att planera en aktion av något slag. Att kidnappa eller mörda en inflytelserik länsdomare skulle till exempel vara ett syfte att bege sig till Henec famn.
+
+
+--- Page 11 ---
+11
+Uppgörelse i 
+Henecs famn
+Hur kan spelledaren använda Nella?
+Nella vill framförallt skydda det nätverk som hon byggt 
+upp under många år och fortsätta Vargriddarnas arbete i Varnos och södra Damarien. Hon vill också få riddar Helm i säkerhet. Dessa mål är långt viktigare för henne än vem som segrar i kampen mellan Xerima och Mircalla. Nella kommer att ligga lågt, men agerar om hon känner sig hotad. Hon kan alliera sig med någon av fraktionerna i byn för att det åter ska bli lugnt, men kan också försöka röja systrarna ur vägen för att tysta dem eller vidta andra åtgärder för att Carocs nyfikenhet ska stillas. Genom riddar Helm har hon också tillgång till information om viktiga personer i grevskapet som andra inte känner till. Hon kan dock inte avslöja källan till denna information för någon utomstående.
+Sel dag och natt
+Mål: Att invånarna i Henecs famn ska renas från sina band till Daak-kyrkan och ansluta sig till Kristallorden och bli aktiva deltagare i deras korståg mot vindtron och Vareniklostret.
+Resurser : Den fruktan och respekt som tillkommer 
+någon som är högt uppsatt inom Kristallorden. 
+Dussintals våldsamma fanatiker från byn Ebes tre ätter, två dagsmarscher bort.
+Hedendomen är visserligen stark i grevskapet Varnos, 
+men engagemanget för de regelbundna korstågen mot vindtron har länge varit ganska svalt - med undantag för invånarna i Ebes tre ätter. Detta har Kristallorden försökt råda bot på genom att sända en av sina mest rutinerade och erfarna agitatorer och missionärer till området. Sel har i vanliga fall sin bas i Ebes tre ätter, men skyndade till Henecs famn för att hålla i Henecs begravning och för att försöka utnyttja den öppning som uppstått i samband med hans död.
+Sel dag och natt är androgyn och verkar inte åldras på ett 
+normalt sätt. Den smala kroppen saknar alla former av 
+behåring, huden är kritvit och tänderna färgade svarta. 
+Blicken är intensiv och påtryckande och den hesa rösten 
+är alltid fylld av passion och lidelse. I vardera handflata finns den blodröda silhuetten av en korp tatuerad - ett bevis på att Sel deltagit i minst ett korståg och personligen 
+dräpt två fiender. Sel klär sig i enkla, svarta kåpor och bär 
+ett halsband med korpfjädrar runt halsen.
+Att Sel kallas dag och natt är en anspelning både på den 
+oklara könstillhörigheten och att denne står med en fot i 
+de levandes värld och en fot i dödsriket genom sina band 
+till Dibuk.
+Majoriteten av invånarna i Henecs famn är anhängare 
+av hedendomen, men deras tro är sval och de föredrar mildare guddomar som Leticia och Mirah. Den djupa tro och passion som finns hos Kristallordens medlemmar gör dem illa till mods. Byn Ebes tre ätter ser de som en inavlad avkrok. Samtidigt är respekten och fruktan för de gamla gudarna stor och någon som på ett vältaligt och kompromisslöst sätt företräder deras vilja lyssnar man på.
+Sel har vistats i Varnos under ett drygt år och sakta byggt 
+upp ett rykte som en mycket kunnig och kompetent förkunnare av gudarnas vilja. Det finns en glöd och ett engagemang hos Sel som saknas hos många lokala 
+präster och särskilt de begravningsriter som denne hållit 
+i har varit högstämda och minnesvärda tillställningar. 
+Samtidigt går det också en del rykten om lynchningar och förföljelser mot anhängare av andra religioner som Sel lär ha uppmuntrat och organiserat.
+Sel är obrottsligt lojal mot hedendomens gudar och 
+högaktar särskilt Dibuk. Det långsiktiga målet är ett Damarien helt fritt från andra religioner och en bra början är att rensa ut Varnos. Detta mål kan inte uppnås utan blodspillan och det Sel inte som något problem. Tillvaron är en kamp, döden något naturligt och kättares liv saknar egentligt värde. Sin egen personliga fanatism till trots är Sel slipad nog att veta när tiden är mogen för brandtal och när man ska hålla en lite lägre profil.
+Rollpersonernas agerande
+Rollpersonerna kan själva vara medlemmar av Kristallorden eller djupt troende anhängare till hedendomen. De kan också vara en grupp bybor från Ebes tre ätter som följt med Sel. En annan möjlighet är att de utger sig för att vara anhängare till hedendomen, men i själva verket är infiltratörer från vindtron eller agenter från de damariska myndigheterna.
+Hur kan spelledaren använda Sel?
+Sel är utmärkt som uppviglare och kommer gör allt för att öka klyftan mellan den Daak-troende Xerima och hennes hednadyrkande syster. Prästen kommer försöka 
+ta kontrollen över Henecs begravning, sprida skräck och 
+fruktan bland byborna och manövrera ut mer sansade 
+rivaler. Om det hettar till i Henecs famn kan mycket väl ett gäng beväpnade milismän från Ebes tre ätter dyka upp för att återställa lugnet på sitt eget sätt.
+
+--- Page 12 ---
+12
+Uppgörelse i 
+Henecs famnHenecs famn - byn
+Byn
+I denna del kommer byn och övriga invånare att beskrivas 
+mer i detalj. Särskild vikt kommer att läggas vid det stora hus som gett byn dess namn och där större delen av alla viktiga spelledarpersoner kommer bo och befinna sig under äventyrets gång.
+Henecs famn ligger invid Varnen som är en av Krylons 
+bifloder. På andra sidan floden och en bit norrut ligger den västmarkiska staden Västborg och västerut finns en mindre skog som kallas för Rävens tass eftersom den en gång var en del av den betydligt större Rävskogen. Området är vattensjukt och stora träsk breder ut sig på båda sidor om Varnen. Marken är bördig och en del av träsken har dikats ut för att bli jordbruksmark, men mycket återstår ännu. Träsken är rika på djura, fåglar, växter och risiga busksnår. De år när nederbörden är särskilt riklig växer Varnen och en del av träsken förvandlas till mindre sjöar. Det är lätt att gå vilse ibland träsken eftersom landskapet är föränderligt och fasta landmärken ofta saknas. Det är också lätt att felbedöma hur djupt vattnet är och hur mycket vikt som olika tuvor och öar kan bära.
+Henecs famn är byggd på två stycken mindre höjder som 
+dessutom bättrats på under årens lopp. Byn gör anspråk på att vara väldigt gammal, men de flesta av byggnaderna är relativt nya eftersom tidigare års regn och störtfloder spolat bort och förstört många av de äldre husen. Nästan alla byggnader är byggda av trä från Rävskogen eller Rävens tass och vilar på en rejäl grund av sten eller träpålar. Syftet med detta är att skydda husens invånare och innehåll från regn och fuktighet. Kullarna som byn vilar på är fulla av lönngångar och hemliga tunnlar för att underlätta för byns många smugglare. Många dessa tunnlar binder samman husen i byn och de underhålls mer eller mindre gemensamt av byborna.1. Kastellet
+En gles och dåligt underhållen palissad omger en rektangulär byggnad på tre våningar på tre sidor. På den fjärde sidan finns istället ett brant stup ner floden Varnen. Bottenvåningen är byggd av sten och endast tillgänglig från insidan. En gisten trätrappa utan räcken leder upp till en balkong som går runt hela den andra våningen. En sned dörr med tjocka järnbeslag leder in till ett mörkt rum som bara lyses upp av det solljus som tränger sig in genom en handfull skyttegluggar och några rykande oljelampor. Hela den andra våningen består av en sovsal med väggfasta sängar och en eldstad. Under sängarna finns låsta kistor där soldaterna förvarar sina personliga ägodelar. En rank stege leder upp till vinden där olika 
+förnödenheter förvaras och en lucka i golvet blottar en 
+trappa ner till en lagerlokal med fuktdrypande väggar där det är tänkt att mer värdefulla varor ska stoppas undan.
+Ett ostadigt trätorn ansluter till palissaden. Här finns en 
+rostig järnkorg full med ved som är tänkt att tjäna som en enkel fyr. Även om det är meningen att tornet alltid ska vara bemannat är det sällan så i praktiken.
+Linor med upphängda nät sträcker sig mellan palissaden 
+och huset och delar av området utanför rymmer en stor 
+köksträdgård. Oavsett hur vindstilla det är i övriga delar av Henecs famn tycks det alltid blåsa uppe vid kastellet.
+Av de sex soldater som är avdelade till kastellet är det bara 
+tre stycken som faktiskt bor där, men de har i gengäld flyttat dit sina familjer också. Övriga föredrar att hysa in sig själva nere i byn. Bortsett från någon tunna med rostiga pilspetsar förvaras inget av värde i kastellet och kontrollen över vilka personer som passerar in och ut är dålig.
+1. Kastellet
+ 2. Hamn
+3. Famnen
+4. Nella bryggerskas 
+gård
+5. Kvarnen
+
+--- Page 13 ---
+13
+Uppgörelse i 
+Henecs famn2. Hamn
+Hamnen består av några träbryggor som vilar på fötter 
+av sten och ett antal mindre bodar där byborna förvarar fiskeutrustning, båtdelar och delar av sin fångst. Flera fiskebåtar av olika storlek ligger för ankar vid bryggorna eller uppdragna på land. Mellan några stolpar hänger rad efter rad av fiskenät.
+Det är ofta liv och rörelse i närheten av hamnen. Fiskare 
+kommer och går, båtar underhålls, nät rensas och saker transporteras mellan hamnen och husen.
+3. Famnen
+Det stora huskomplexet mitt i byn är det som ursprungligen gav namn åt den. Medan byborna sällan kallar sitt hem något annat än bara “byn” är det denna byggnad som de menar när de pratar om Henecs famn - eller “famnen” som den ofta benämns som. Famnen är den äldsta och mest prominenta byggnaden i byn och har genom tiderna alltid varit i händerna på den som varit bygdens starke man eller kvinna.
+Husets tjänstgör som en kombination av värdshus, 
+festlokal och lager för byn även om det också är en privat bostad för Henecs hushåll. Hjärtat i byggnaden och den äldsta delen är ett stort långhus från vars ändar två tillbyggnader sticker ut. Den översta tillbyggnaden är dessutom sammankopplad med ett stall.
+Merparten av alla intressanta och viktiga spelledarpersoner 
+kommer att bo och vistas i Henecs famn under äventyret och huset beskrivs därför mer ingående nedan.
+4. Nella bryggerskas gård
+En anspråkslös gård som består av ett enkelt, knuttimrat hus på stenfot och ett mindre uthus där Nella brygger sitt öl. Boningshuset rymmer förutom Nella även en dräng och en piga samt en, några getter och ett halvdussin höns. Det är trångt, men allting är välvårdat och rent. Det finns en källaren under huset precis som när det gäller övriga byggnader i byn, men den rymmer inget särskilt förutom några tunnor med öl. En väl dold lönndörr leder dock vidare till de gömställen och tunnlar som vargriddarna brukar utnyttja.
+5. Kvarnen
+Varnen leds in en smal kvarnränna som i sin tur driver runt ett stort kvarnhjul som sticker ut från långsidan på en rejäl stenbyggnad. På vinden förvaras mjöl och spannmål och inne i själva kvarnen syns ofta Domer och någon av hans många bröder pyssla med mjölmalning eller underhåll. I ett litet skjul lutat mot en av ytterväggarna har de byggt en enkel verkstad där de skissar på förbättringar av kvarnen och nya sätt att använda Varnens krafter på.
+Famnen
+1. Storstugan
+Famnens huvudbyggnad domineras av ett stort rum som är en kombinerad festsal, möteslokal, skänkstuga och sovsal. Besökare anländer in genom ett par vackert mönstrade dubbeldörrar till en farstu där de förväntas lägga ifrån sig eventuella vapen i ett väggfast skåp. Rummet man sedan kommer in i är rejält tilltaget, med två stora eldstäder och öppet ända upp till taknocken. Längs väggarna löper en rad med bänkar som nattetid används som sovplatser. På golvet ligger alltid en lager av fräsch vass och flera bord och stolar är utspridda i rummet. Stora tunnor med öl och cider står öppnade lite varstans och den som betalar för sig eller är en gäst i hushållet kan få en trämugg och fri tillgång till dem. 
+1.2.
+3.4.
+5.6.7.
+8.
+9.Andra våningen
+Källaren
+Första våningena.b.c.
+d.
+
+--- Page 14 ---
+14
+Uppgörelse i 
+Henecs famnFlera av borden tillhör personer i byn som är stamgäster 
+och bär då deras bomärke. Här och var syns olika spelbräden och ett par bänkar har dragits samman till en liten scen där lokala talanger eller besökande barder emellanåt uppträder. Flera tidigare besökare har betalat för sin vistelse genom att utsmycka väggar, dörrar och möbler eller genom att lämna efter sig skickligt hantverk och olika dekorativa föremål. Dessutom hänger de dammiga skeletten från diverse jättefiskar och märkliga bestar ifrån takbjälkarna och betraktar alla gäster med sina tomma ögonhålor.
+Vid husets kortsida har ett enkelt altare till Daak uppförts. 
+Det består av ett manshögt Daak-kors som står på ett bord täckt med en vitt linneduk. Korset är behängt med olika medaljonger och smycken - en del av dem är tecken på att man gjort pilgrimsfärder, men det mesta är bara krimskrams - och på bordet finns alltid en vas full med färska liljor. Broder Martim håller sig alltid i närheten av altaret och delar gärna ut välsignelser eller berättar historier om Daaks mirakel som han läser ur ett tummat exemplar av Liberan.
+Kvällstid är storstugan full av folk som slappnar av efter 
+en lång dag av hårt arbete. Främlingar och besökare 
+lockar alltid ännu fler nyfikna bybor hit. Dessutom finns här alltid ett par storvuxna personer ifrån Xerima och Mircallas gäng både för att upprätthålla ordningen om det skulle behövas och som en slags statussymbol.
+2. Köket
+Ett rejält kök, med bakstuga förser hela hushållet och besökare med mat. Det råder nästan alltid febril aktivitet här utom på natten och doften av färskt bröd och kokande stuvning sprider sig ut i storstugan. Maten som lagas här är enkel men rejäl och består mestadels av grovt, nästan svart bröd och olika grytor och soppor fulla med delar av fisk, skaldjur, groddjur och träskfåglar. Det sägs att den största grytan har stått och puttrat i årtionden och att nya ingredienser fyllts på efter hand. Ett halvdussin personer arbetar i köket.
+I taket hänger stänger fulla med brödkakor eller torkad 
+fisk och en lucka i golvet leder till ett mindre källarförråd där mindre tunnor med öl, cider och vin förvaras. Dörren till köket öppnas ständigt när unga kvinnor och män springer in och ut med mat och dryck. Genom en liten lucka i väggen kan man beställa mat och dryck. Några alternativ finns egentligen inte utan menyn består av det som för tillfället lagas. Det är sällan som några mynt faktiskt växlar ägare och allting förefaller vara tämligen informellt, men i en liten liggare inne i köket noteras alla beställningar och gäster förväntas betala för sig innan de lämnar byn.
+3. Gästrum (a, b, c och d)
+Bottenvåningen på den vänstra flygeln består av en liten korridor med en trappa upp till nästa våning och fyra dörrar som leder in till olika mer avskilda rum för de 
+gäster och besökare som inte vill övernatta i storstugan 
+eller planerar att vistas under en längre tid i Henecs famn.
+De första tre rummen är identiska och möblerade 
+med tre stycken våningssängar och tre stycken låsbara kistor där gästerna kan förvara sina ägodelar. Rummen går att låsa inifrån med ett skjutlås i trä och är enkelt 
+men rejält inredda. Det är här som många av de 
+viktiga spelledarpersoner som inte bor i byn och deras 
+följen tillbringar sin tid och det är mycket möjligt att rollpersonerna kommer att hamna här också.
+Det gästrum som ligger i slutet av korridoren är större 
+och mer exklusivt än övriga. Rummet är inrett med en dubbelsäng med dunbolster, ett skrivbord, ett stort 
+klädskåp och en sittgrupp i trä. Här har den lokale 
+fogden Ruprecht av Saltviken installerat sig sedan många 
+år tillbaka och även om han nu försöker ge sken av att inte vistas här längre finns det fortfarande gott om spår av honom i form av kläder och personliga ägodelar. 
+Rummet är vanligtvis låst och Ruprecht tror sig ha den 
+enda nyckeln, men även Xerima har en kopia.
+4. Stall
+I stallet finns utrymme för gästernas riddjur och 
+dessutom de två stora arbetshästar som Henec hyrde ut till traktens bönder liksom ett halvdussin andra som 
+framförallt använts för att dra någon av de vagnar som 
+står uppställda. På loftet förvaras hö och halm.
+5. Lager
+Här förvaras värdefulla varor som tillhörde Henec 
+och även övriga bybor förvarar värdefulla föremål här mot en mindre avgift. Den flygel är till skillnad från övriga delar av Famnen byggt helt i sten med undantag för ovanvåningen. Väggarna är tjocka, alla dörrar järnförstärkta och försedda med kraftiga lås och fönster saknas helt. I normala fall har inte främlingar tillträde till denna del av huset. Efter Henecs död har dock det första rummet öppnats upp och rensats ut och hans döda kropp vilar i sina vackraste kläder på ett bord. En strid ström av besökare rör sig till och från rummet för att betyga sin vördnad. En stentrappa leder vidare upp till ovanvåningen.
+Rummet innanför användes som Henecs kontor och 
+här finns flera låsta skåp, ett litet skrivbord och en skrivpulpet. Alla värdefulla papper och anteckningar som en gång fanns här har Xerima förflyttat till sitt eget rum.
+I de återstående rummen förvaras byns spannmål, 
+mängder av torkad fisk, öl, rökt kött, segelduk och andra vardagliga varor. I ett väggfast skåp byggt av tjocka brädor och försett med dubbla lås förvaras en del smycken, mynt och mindre värdeföremål som tillhör byborna och här hamnar också gästernas värdesaker om de ber Xerima att förvara dem. Ingenting är dock särskilt värdefullt, uppenbart olagligt eller uppseendeväckande. En väldigt nitisk myndighetsperson skulle möjligtvis kunna anmärka på att byn som helhet förefaller vara lite mindre fattig än vad den ger sken av, men den typen av mindre bedrägeri är vanligt i hela Damarien.
+En mycket väl dold lucka under några tunnor med öl 
+leder ner till en hemlig källare.
+6. Xerima och Domers rum
+Tjocka mattor täcker golvet och på väggarna hänger 
+gobelänger med religiösa motiv från Daak-tron. I mitten 
+av rummet finns en stor dubbelsäng och alldeles intill 
+den en mindre säng för parets son. Den högra kortsidan 
+
+--- Page 15 ---
+15
+Uppgörelse i 
+Henecs famnav rummet består av olika skåp och garderober fulla med 
+kläder, lakan och dukar. En liten träkista rymmer Henec Felix leksaker.
+Rummet är alltid oklanderligt städat och reserverat för 
+Xerima och hennes familj. 
+7. Henecs rum
+I mitten av rummet finns ett stort och ganska slitet skrivbord i mörkt trä, belamrat med pipor, verktyg för träsnideri, knivar och olika - halvt bearbetade - trästycken. 
+Lukten av tobak och träspån är stark. På väggarna hänger 
+olika troféer i form av stora fiskskelett, hornkronor och 
+rovdjurshuvuden med uppspärrade käkar. På ett antal väggfasta hyllor står mängder av djur- och människofigurer snidade i trä och ben. Under en slarvigt bäddad säng 
+finns en stor kista full med Henecs kläder.
+Kort efter Henecs död tar Xerima rummet i besittning, 
+städar upp det och använder det för privata möten.
+Detaljstuderar man de små figurerna på hyllorna 
+upptäcker man snart att det ofta finns symboler och märken någonstans på dem. Henec har använt dem som ett sätt att minnas viktiga kontaktpersoner, hinder och smuggelrutter. I en låst skrivbordslåda finns en hoprullad karta av segelduk som föreställer gränsområdet mellan Damarien och Västmark och tillsammans med figurerna visar viktiga rutter, gömställen och smuggelnätverk.
+8. Mircallas rum
+Vinden ovanför förrådsflygeln var ursprungligen också ett lager, men har under de senaste åren tagits i besittning av Mircalla och hennes vänner. Det består av en enda stor yta där upphängda filtar och segeldukar skapar avskiljda delar för mer privata samtal eller kärleksmöten. Golvet är täckt av en blandning av luggslitna mattor, avlagda kläder, tygstycken och högar av skräp. Här och var syns tomma 
+och halvfulla tunnor med öl, vinflaskor och ölsejdlar. När 
+Mircalla är upptagen med smuggling står rummet tomt, 
+men när hon är på plats är det antingen fest eller vila 
+som gäller. 
+Mircallas egen sovfäll finns längst in i rummet, bredvid 
+en enkel tron av vrakved som hennes gäng har byggt åt 
+henne. Här håller hon hov, berättar rövarhistorier och planerar nya upptåg.
+Alla känner alla i Mircallas grupp och det är svårt för 
+främlingar att få inträde till deras privata kvarter om inte de har blivit inbjudna av någon anledning.
+9. Källaren
+I den dolda källaren förvaras värdefullt smuggelgods som antingen är på väg ut ur Damarien eller vidare inåt landet. 
+Flera tunnlar leder ner till floden eller till andra hus i byn. 
+Vad som faktiskt finns här varierar och ambitionen är att 
+ingenting ska lagras här under någon längre tid. Men här 
+finns finns alltid tillräckligt mycket olagligt smuggelgods för att husets invånare ska kunna dömas till döden flera 
+gånger om.
+Mycket av transporterna och hanteringen sker under 
+kvällar och nätter då källaren och tunnlarna kryllar av folk.
+I en liten låst och järnbeslagen kista finns merparten av 
+det guld som Ruprecht av Saltviken sparat ihop genom att låta smugglingen fortgå.
+Caroc skrivare och Ruprecht för en tuff förhandling inne i Famnens storstuga.
+
+--- Page 16 ---
+16
+Uppgörelse i 
+Henecs famnÖvriga personer
+Gråterskorna
+Det är en urgammal tradition att anlita gråterskor när 
+någon dör och Xerima har hyrt in några av de allra bästa som finns i hela grevskapet. Totalt handlar det om ett dussin kvinnor i olika åldrar som alla är klädda i svarta kläder och på ett högljutt, närmast överdrivet sätt, betygar sin vördnad inför den avlidne Henec. Det är skrik, gråt, tandagnisslan och högljudda utrop om hur han dog alldeles för tidigt och var den mest älskade och vördnadsbjudande av alla män. 
+Gråterskorna positionerar sig vid infarten till byn för att 
+kunna välkomna alla som kommer och går och i närheten 
+av de platser där det finns mycket människor. Tre-fyra stycken finns nästan alltid på plats inne i Famnen. Kvinnorna är för det mesta orädda och ganska fräcka. De 
+har inga problem med att ifrågasätta andras brist på synlig 
+sorg eller följa efter grupper av människor om de känner 
+sig nonchalerade.
+Gråterskorna är en utmärkt distraktion och Xerima 
+kommer också att vid behov använda dem spioner och 
+budbärare.
+Alv-Eber
+Eber är en äldre man, med långt, stripigt grått hår och ett fårat ansikte med sorgsna ögon och utan någon antydan till skäggväxt. Den undernärda kroppen döljs under flera lager av trasor.
+Eber är en utstött särling som livnär sig genom tiggeri och 
+enstaka påhugg som lastare eller dräng. Merparten av de futtiga slantar han tjänar går till att köpa öl och en stank av gammal fylla omger honom.
+Den smala kroppen, bristen på skäggväxt och de 
+utstående öron som döljer sig under håret har gett honom öknamnet “Alv-Eber”.
+Eber är väl insatt i de olika konflikter och intriger 
+som försiggår i Henecs famn och är en bra källa till 
+information, rykten och historier för rollpersonerna. 
+Han har heller inga skrupler när det gäller att vittna falsk, 
+spionera på andra i byn eller sprida rykten. Ebers status 
+och trovärdighet bland övriga bybor är dock mycket låg 
+och han är för rädd och nedbruten för att våga stå på sig 
+någon längre tid.Vug Vugson
+Vug är klädd i enkla kläder och har ett öppet ansikte med 
+nervösa bruna ögon, ett borstigt mörkt skägg och hår som börjat glesna högst upp på hjässan. Tänderna är gulnade och något sneda och de grova händerna solbrända och fulla av valkar. Vug är försynt och överdrivet artig och tilltalar andra med en nästan helt obegriplig lokal dialekt.
+Han påstår sig vara i Henecs famn för att köpa mjöl, en 
+ko, en tunna öl - exakt vad varierar från gång till annan - och försöker att göra så lite väsen av sig själv som möjligt. Merparten av sin tid spenderar han genom att vandra runt i byn eller genom att sitta och sucka i Famnens storstuga.
+Egentligen är han där för att få hjälp att ta sig över till 
+Västmark och påbörja ett nytt liv. Hans riktiga namn är Sekyl Vugson och han är en livegen bonde som rymt från Gråborg i hopp att finna lyckan på andra sidan gränsen. På grund av de oroligheter som sker i Henecs famn ligger dock de flesta smugglare lågt.
+Utöver de tidigare beskrivna spelledarpersoner finns 
+det ytterligare ett antal personer som kan vara av intresse i Henecs famn.
+
+--- Page 17 ---
+17
+Uppgörelse i 
+Henecs famnKomplikationer
+Ond, bråd död
+Flera personer i byn misstänker att Henec i själva verket 
+blivit mördad och är intresserade av att frågan utreds närmare. Det är svårt att i efterhand hitta bevis, men kanske kan man genom att studera skadorna på liket och platsen där det hände få mer information? Genom att tala 
+med byborna och rentav få kontakt med den dödes ande 
+går det att få ytterligare kunskap. Om det är fråga om ett mord kan det finnas flera misstänkta: Ruprecht (driven av oro för Forsek Fingerklippare?), någon av hans döttrar 
+(för att få kontroll över hans smuggeloperation?), Caroc 
+(för att han avslöjat Henecs smuggelnätverk?), Vug (för att 
+Henec inte ville smuggla över honom till Västmark när han inte hade råd med avgiften?).
+Begravningen
+Henecs kropp kan inte ligga utställd för evigt utan förr eller senare måste den begravas. Hans två döttrar Xerima och Mircalla har dock olika uppfattning om hur begravningen ska gå till. Xerima ser gärna att den följer Daak-kyrkans traditioner medan Mircalla är en trogen anhängare av hedendomen.
+En bedragare ibland oss
+Caroc skrivare får nästan all sin auktoritet från kopplingen till den fruktade Forsek Fingerklippare. Men om det börjar ryktas att han är en bedragare som bara är ute efter att sko sig själv blir hans ställning i byn snabbt ohållbar. Ryktena skulle kunna vara tagna ur luften eller komma från riddar Helm genom Nella Bryggerska, men de skulle också kunna förmedlas genom rollpersonerna.Henec återvänder
+Vill man komplicera det ytterligare kan man låta Henec återvända som en gengångare och skrämma slag på människorna i byn. Regler för spöken finns på sidorna 91-106 i äventyret “Ödesväven”. Oklarheter kring hans död, oro för konflikterna i byn eller något annat som inte var avklarat när han dog kan vara skäl till att han återvänder.
+Det skändade liket
+Det går många historier om Henecs skicklighet som smugglare och närmast onaturliga förmåga att klara sig undan myndigheternas snokande. Någon har passat på att skända hans lik och skurit loss dess högra hand. Detta övergrepp väcker stort vrede i byn och snart letar alla efter den ansvarige. Är motivet att provocera fram en konflikt, utpressa hans döttrar eller ta del av Henecs förmodade krafter?
+Skenrättegång
+Ruprechts oro för att straffas för sin slapphänthet gentemot smugglarna i Henecs famn leder till att han vidtar extrema åtgärder. Han arresterar någon från byn - framförallt obetydliga personer som Alv-Eber eller Vug, men det skulle också kunna vara någon rollperson - och fabricerar bevis för att personen i fråga är en förhärdad brottsling. Därefter organiserar han en snabb rättegång med ambitionen att den åtalade personen ska bli fälld och avrättad medels pålning.
+Nedan presenteras ett antal förslag på tänkbara 
+komplikation och händelser som kan användas för att skapa och fördjupa konflikter eller för att tvinga spelledarpersoner och rollpersoner att agera och ta ställning. Flera av dem kan med fördel kombineras på olika sätt.
+
+--- Page 18 ---
+18
+Uppgörelse i 
+Henecs famnHändelseförlopp
+Introduktion
+Rollpersonerna anländer till Henecs famn och lär känna 
+byn och invånarna. Stämningen sätts och de konflikter som finns mellan de olika grupperna antyds. De får chansen att möta alla de viktigaste aktörerna och bilda sig en uppfattning om dem och deras mål. Gruff, groll och sura kommentarer förekommer, men inget våld.
+Eskalering
+De konflikter som bara antytts tidigare blommar nu upp på allvar och det blir allt tydligare att alla parter inte kan 
+få sin vilja igenom. Grupperna börjar positionera sig 
+gentemot varandra och det blir allt svårare att inte välja 
+sida. Rollpersonerna blir ömsom hotade och ömsom övertalade av de olika grupper som är intresserade av deras stöd. Ordkriget tilltar och hotelser utslungas. Våld 
+förbereds men utförs än så länge inte.
+Utbrott
+Konflikterna är i full gång och de olika grupperna 
+använder öppet våld mot varandra. Det finns inget större intresse för prat och diskussioner längre och om rollpersonerna inte själva valt sida har andra dragit sina egna slutsatser utifrån deras tidigare agerande. Avslut
+Konflikten slutar, antingen genom att någon grupp besegrar övriga, ömsesidig förstörelse eller att någon yttre kraft - till exempel greve Hans van Marie - ingriper.
+Det här äventyret är tänkt att vara öppet och möjligt 
+att anpassa efter den egna spelgruppens behov och önskemål. Vad som händer och hur de olika grupperna agerar gentemot varandra är inte bestämt på förhand även om deras mål och bakgrund ger en tydlig vink. Nedan är ett exempel på en struktur som spelledaren kan bygga sin egen version av äventyret kring. De olika konflikter och komplikationer som listas i föregående del kan stoppas in i olika delar av strukturen. Hur långt det går och hur illa det slutar beror förstås väldigt mycket på rollpersonernas agerande. 
+Sel dag och natt håller en improviserad predikan om hedendomens gudar inför en grupp bybor.
+

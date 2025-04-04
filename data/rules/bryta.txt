@@ -1,0 +1,17 @@
+Brutna ben (‘Bryt’) 
+När resultatet ’Bryt’ finns med som en allvarlig skada riskeras att ett ben bryts. Ett slag skall genast slås mot offrets STY.
+Svårigheten fås från brytrisktabellen, tabell R2-55. Om slaget misslyckas bryts benet. Om slaget fumlas och det rör sig om en
+benpipa så splittras benet. Om ett ben är brutet medför detta att rollpersonens funktioner är nedsatta – exempelvis gör ett brutet ben i armen att armen inte kan användas, eller en bruten benpipa i benet medger att rollpersonen mycket långsamt kan ta sig fram genom att hoppa
+eller krypa. Vissa brutna kroppsdelar har speciella effekter.
+
+
+Effekter av brutna ben
+Ett benbrott är en smärtsam skada som allvarligt nedsätter personens rörlighet och förmåga att fungera normalt. De allvarligaste benbrotten är då bensplitter tränger upp genomhuden och orsakar öppna sår. Detta kan allvarligt fördröja läkningen samt skapa infektioner som gör att kroppsdelen måste amputeras. Benbrott gör sig tydliga genom kraftiga svullnader samt en överdriven rörlighet i leden. Ett brutet ben ger direkt ytterligare S/10 kryss. Det är praktiskt taget omöjligt att använda en arm eller ett ben direkt efter ett benbrott. Även efter att det har läkt är det mycket ömt och kroppsdelen är försvagad tills dess att styrkan i den återigen tränats upp. 
+
+Benpipa: Om en benpipa är bruten så kan inte den skadade kroppsdelen användas. Se sidan 72 Läkning av benbrott för mer information.
+Nackkotor: Om nackkotorna bryts så totalförlamas offret. Se sidan 72 Läkning av benbrott för mer information.
+Näsa: Offrets näsben är brutet. Första gången detta händer (och inte efterföljande gånger) sänks offrets PER med ett (–1).
+Revben: Brutna revben innebär att offret har svårare att röra sig. Se sidan 72 ‘Läkning av benbrott’ för mer information.
+Ryggrad: Om ryggraden bryts av en träff i Bröstkorgen blir offret förlamad från midjan och nedåt. Om träffen tog i Magen skall genast ett normalt slag (Ob3T6) mot offrets Tur slås – lyckas detta så undgår offret att bli förlamad. Misslyckas slaget sker samma sak som om träffen tog i Bröstkorgen. Se sidan 72 ‘Läkning av benbrott’ för mer
+information.
+Skallben: Om skallbenet krossas innebär det att rollpersonen har fått en spricka i skallbenet med hjärnskakning och kraftig huvudvärk som följd. Vid riktigt allvarliga skador kan benflisor trängas in i hjärnan och döden är då nära förestående. Se sidan 72 ‘Läkning av benbrott’ för mer information.

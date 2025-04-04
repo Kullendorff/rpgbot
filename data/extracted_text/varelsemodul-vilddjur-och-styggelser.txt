@@ -1,0 +1,1053 @@
+Source: varelsemodul-vilddjur-och-styggelser.pdf
+--- Page 1 ---
+Text: Joel Müller, Magnus Wåhlberg, Petter Nallo, Carl Johan Ström, 
+Marco Behrmann, Roger Lindström
+Bild: Kim Vässmar, Magnus Olsson, Olof NilssonVilddjur och styggelser
+En varelsemodul till Eon
+
+--- Page 2 ---
+2
+Vilddjur och 
+styggelserFerfak
+Även känd som : Dibuksorm, Ikamrisk forndemon, Svartvinge .
+Beskrivning : Ferfaken är en skräckinjagande varelse 
+med ett mycket säreget utseende Den hartvå enorma 
+svarta, läderartade och kloförsedda vingar. En vuxen 
+ferfak kan mycket väl komma upp i en vingbredd av 
+fyra meter och de brukar väga runt 60–75 kilo. De två 
+kraftiga bakbenen avslutas i tretåiga, vassa örnliknande 
+fötter med stora och kraftfulla klor. Den långa smala 
+svansen avslutas i en drygt decimeterlång giftgadd. Det 
+öronlösa, ganska lilla huvudet är vargliknande och sitter 
+på en lång och smal hals. Munnen är fylld av små och 
+sylvassa tänder. Ferfaken har ingen päls utan en mörk, 
+seg och läderliknande hud som blir något brun eller 
+rödaktig vid fötterna och huvudet.
+Utbredning : De återfinns främst i bergs- och skogs-
+områden men det händer att de slår sig ned i gamla ruiner. 
+De lever i familjegrupper om fem till åtta individer, och 
+strider aldrig ensamma om de inte måste. Ferfaker som 
+skiljs från gruppen söker sig ibland till civilisationen 
+där de anfaller tamboskap och människor. Ferfaken är 
+slug och väldigt anpassningsbar och lever vanligtvis på 
+växtätande djur som hjortar och får, men tvekar inte att 
+ge sig på riktigt stora byten som heavédrakar. Under strid 
+och jakt använder ferfaken först och främst sina stora 
+och kraftiga klor samt den giftiga svansen.
+Magikrat Shangi thal Dubaral i Thalamur är känd för att 
+ha lyckats dressera en grupp ferfaker sedan de var små 
+och dessa ser nu honom nu som sin ledare. En fruktad 
+bestraffning för de som på något sätt svikit magikraten är 
+att bli levande uppätna av monstren.
+Vändningar
+1 I ursinnig vrede kastar sig ferfaken mot angriparen. 
+[Anfallaren måste slå Undvika eller blockera/parera mot 
+18 för att slippa 6T6 Huggskada. Om Avståndsanfall : 
+Ferfaken rör sig två avstånd närmare anfallaren.]
+2 Ferfaken slår mot anfallarens ben och fötter med sin 
+svans. [Anfallaren Faller.]
+3 Ferfaken sveper efter sin fiende med klorna och sargar 
+nästan denne. [Anfallaren blir Tillbakaknuffad.]
+4 Attacken träffar en känslig punkt och ferfaken vrålar av 
+smärta. [+2 Utmattning.]
+5 Kraften i anfallet slungar ferfaken bakåt och driver 
+den till försvar. [+2 Utmattning. Ferfaken är automatiskt 
+försvarare nästa runda.]
+6 Huvudet träffas och monstret blir omtöcknat av 
+smärtan. [+2 Utmattning och Omtöcknad.]
+7 Ferfaken börjar blöda kraftigt genom såret eller under 
+huden. [+4 Utmattning.]
+8 Attacken är mycket smärtsam för ferfaken och kan 
+tvinga den på flykt. [+3 Utmattning. Ferfaken måste 
+genast slå Självkontroll mot 18 för att inte ge upp striden.]
+9 Kroppen träffas och attacken glider vidare till att 
+vålla stora revor i en av vingarna. [+4 Utmattning. 
+Flygförmågan går förlorad.]
+10 Den känsliga svansen kapas, eller skadas så 
+smärtsamt att ferfaken rullar upp den intill kroppen. [+4 
+Utmattning. Ferfaken anfaller inte längre med svansen.]
+Regler
+Färdigheter : 
+5T6: Flyga, Spåra villebråd.
+4T6: Djurisk list, Gömma sig, Smyga sig på offer.
+Blodtörst : Ferfaken har en våldsam blodtörst och när 
+den väl får tag i sitt byte sliter den det i stycken. Lägg till 
++2 på alla tabellslag för Allvarliga skador attacken vållar.
+Snabb flygare : Ferfaker får +3T6 på Förflyttning i luften.
+Närstrid Träffa Typ Skada Egenskaper
+Bett & klor 4T6+2 Hugg 5T6+2 Blodtörst, 
+Avväpnande 1
+Svanssnärt 4T6 Stick 4T6+2 Gift, Precis 1, 
+Räckvidd 1 
+Försvar Tärningar
+Med list och frenesi 4T6
+Skydd Hugg Kross Stick Grund
+Seg hud 9 11 9 5
+Förflyttning 4T6 †
+Intryck –
+Kroppsbyggnad 5T6
+Reaktion 4T6
+Självkontroll 4T6
+Vaksamhet 4T6
+Livskraft 4T6
+Grundrustning 5
+Grundskada 4T6
+Återhämtning 8Skada Utm. Vänd.
+1– 4 +1 –
+5– 9 +2 –
+10– 14 +4 1T10
+15– 19 +6 1T10
+20– 24 +8 1T10
+25– 29 +10 1T10
+30– 34 +12 1T10
+35– 39 +14 1T10
+40– 44 +16 1T10
+(+5) (+2 ) (…)
+† Gäller på land. Om ferfaken flyger används Förflyttning 
+7T6.
+Ferfakens gift
+Om ferfaken vållar en Allvarlig skada med sin 
+svanssnärt har giftgadden trängt igenom offrets 
+hud. Den injicerar då ett gift enligt reglerna på sida 
+257 i Grundboken. Effekterna är som följer:
+Påverkan : Ett slag mot 14 varje minut under 3 
+minuter.
+Effekt 1 : 1 Smärta.
+Effekt 2 : 1 Smärta.
+Effekt 3 : Utslagen.
+
+--- Page 4 ---
+4
+Vilddjur och 
+styggelserGruvbest
+Även känd som : Or-dat , Guldslukare , Troch
+Beskrivning : Gruvbesten kan liknas vid en jättelik mask 
+som blir mellan fem och tio meter lång och upp till 1,5 
+meter i diameter. Den väger flera ton. På bestens panna 
+växer ett antal mindre horn som den använder för att 
+gräva sig fram i underjorden, dessa kompletteras av en 
+minst sagt imponerande tanduppsättning som består av 
+stora trubbiga tänder som den använder för att krossa 
+både föda och sten. Monstrets hud är grå till svartfärgad 
+och extremt seg och tjock för att kunna motstå 
+underjordens strapatser. Besten har två öppningar som 
+påminner om ögon, men som egentligen är öron som 
+kan uppfatta ultraljud. Med dessa öron kan gruvbesten 
+urskilja rörelser och ”se” sin omgivning.
+Utbredning : Gruvbestens naturliga hemvist är 
+grottor – då framförallt vittrade grottor, exempelvis 
+kalkstensgrottor – men den lever gärna i övergivna 
+gruvkomplex som de gräver ut så att de passar bestens 
+behov. Gruvbestens förekommer i alla delar av Mundana, 
+men främst i bergsområden och karstområden (område 
+med kalkbergarter med mycket håligheter). Dvärgarna 
+sägs vara de första som stötte på gruvbesten som de kallar 
+troch eller or-dat  vilket rakt översatt betyder bergsätare  
+respektive guldslukare .
+Beteende : Gruvbesten är inte direkt aggressiv eftersom 
+den har få naturliga fiender. Om den upptäcker ett 
+lämpligt byte eller en irriterande varelse kan den anfalla 
+tämligen snabbt. Gruvbesten är ett rovdjur som lever av 
+vad den kan komma åt nere i underjorden – exempelvis 
+limaxer, jordbestar, mindre gruvbestar och en och annan 
+bortkommen äventyrare. Utöver detta tycks de kunna 
+utvinna näring ur vissa speciella berg- och jordarter.
+Egenskaper : Då jordbesten gräver sig igenom jord, sand 
+och berg uppstår vibrationer som fortplantas lång väg 
+genom marken.
+Vändningar
+1 Den enorma besten sluter käftarna om det irriterande 
+vapnet och sliter till. [Anfallarens vapen kastas bort 
+två avstånd. Om vapnet är bräckligt krossas det istället 
+mellan gruvbestens malande käkar. Om Slagsmål : 
+Anfallaren träffas av ett bett i kroppsdelen som användes 
+för anfallet.]
+2–3 Gruvbesten använder sin massiva kroppshydda för 
+att vältra sig över anfallaren. [Anfallaren Faller och måste 
+slå Undvika mot 8 eller ta 6T6 krosskada.]
+4–6 En hård träff huvudet bedövar gruvbesten tillfälligt. 
+[Omtöcknad.]
+7–9 Jack i kraniet. [+5 Utmattning.]
+10 En sargande träff djupt in i varelsens munhåla sliter 
+upp den mjuka vävnaden och orsakar kraftig blödning. 
+[+2 Utmattning per runda.]
+Regler
+Färdigheter : 
+6T6: Gräva tunnlar.
+5T6: Ekohörsel, Sluka saker hela.
+Ekohörsel : Gruvbestar är blinda, men kompenserar med 
+sin ekohörsel, och påverkas därför inte dåligt sikt som 
+ljusförhållanden, rök, dimma etc.
+Jättelik : Gruvbestar är enorma varelser vilket gör att alla 
+försvar med stridsfärdigheter får ett avdrag på –2T6.
+Närstrid Träffa Typ Skada Egenskaper
+Bett 5T6 Hugg 10T6 Splittrande 2, 
+Genomslag Hugg 5
+Försvar Tärningar
+Rå massa 4T6 Fungerar som Kontring.
+Skydd Hugg Kross Stick Grund
+Extremt tjock hud 22 24 20 16
+Förflyttning 4T6
+Intryck –
+Kroppsbyggnad 6T6+30
+Reaktion 3T6
+Självkontroll 4T6
+Vaksamhet 5T6
+Livskraft 6T6+10
+Grundrustning 16
+Grundskada 8T6
+Återhämtning 10Skada Utm. Vänd.
+1– 4 +1 –
+5– 9 +2 –
+10– 14 +4 1T10
+15– 19 +6 1T10
+20– 24 +8 1T10
+25– 29 +10 1T10
+30– 34 +12 1T10
+35– 39 +14 1T10
+40– 44 +16 1T10
+(+5) (+2 ) (…)
+
+--- Page 6 ---
+6
+Vilddjur och 
+styggelser
+Jargiskt kejsarlejon
+Även känd som : De blå lejonen, Leo emperator , Fexiors 
+avkomma .
+Beskrivning : Dessa ståtliga kattdjur sägs vara avkomman 
+från självaste Fexior, Daaks lejon. Deras mörkblå päls 
+och gyllene ögon samt väldiga kroppar tycks sannerligen 
+vara berörda av det gudomliga. Kejsarlejonen dväljs i 
+ensliga bergstrakter, vanligen i gränsen mot Tarkas, men 
+man kan även finna dem i andra bergiga och kuperade 
+delar av kejsardömet. De lever ensamma och har stora 
+revir. De söker kontakt när det är parningsäsong och då 
+hörs deras rytanden eka mellan bergspassen. 
+Deras byten är vanligen bergsgetter, hjortdjur som vågar 
+sig upp från låglanden eller vildhästar men så gott som 
+vad som helst som kommer i dess väg kan bli dess byte. De 
+drar sig inte från att anfalla människor och vissa individer 
+har nästan gjort detta till en konstform. Kejsarlejonens 
+kraftfulla käkar kan bita rätt igenom ett massivt kranium 
+och göra processen kort med även de största bytesdjur. 
+Kejsarlejon jagar till största del under skymningen och 
+natten då de letar sig ned från bergsområdena. De är 
+skickliga klättrare och kan ta massiva språng, ofta ned 
+från klipphyllor eller till och med träd, och överraska ett 
+bytesdjur från ovan.
+Bland folkslaget genverna har kejsarlejonet en nästan 
+mytologisk roll. De både fruktar och ärar djuret och att 
+ensam ha besegrat ett kejsarlejon ses som ett tecken på 
+styrka och att man är utvald för något stort. Likaså att 
+överleva en av deras attacker med klo och bettmärken 
+alltjämt på sin kropp vittnar om mod. Unga män 
+bland genverna brukar som ett mandomsprov ta sig 
+upp till klippskrevor och grottor under dagtid där de 
+misstänker att kejsarlejon ligger och vilar. De försöker 
+sedan provocera dessa med skrik och vrål för att sedan 
+fly undan innan de blir attackerade. 
+Vändningar
+1 Slår ut med klorna och river till. [Anfallaren måste klara 
+att Undvika, Parera eller Blockera mot svårighetsgrad 16 
+eller få 6T6+2 i skada i slumpvis kroppsdel.]
+2 Träffen får kejsarlejonet att hamna i ett djuriskt 
+ursinne. [Kejsarlejonet får +1T6 på alla attacker denna 
+och nästa stridsrunda.]
+3 Lejonet dundrar in i anfaller och slår omkull denne. 
+[Anfallaren Faller.]
+4 Skadan får lejonet att vråla av raseri. [Anfallaren måste 
+slå självkontroll mot 14 (får lägga till Avtrubbning för 
+våld). Misslyckas slaget får denne ett avdrag på –1T6 
+följande stridsrunda.]
+5 Träff över ansiktet och nosen får lejonet att rygga 
+tillbaka. [Tillbakaknuffad.]
+6 Blodet pumpar fram. [Blöder 1 Utmattning per runda. 
+Om Stick : Blöder 2 Utmattning per runda.]
+7 Djupt sår sliter upp köttet. [+4 Utmattning.]
+8 Lejonet vrålar i smärta. [Får ett avdrag på –1T6 för 
+Undvika under resten av striden, som lägst 0.]
+9 Allvarlig skada får lejonet ur balans. [+4 Utmattning, 
+Omtöcknad.]
+10 Träff i bröstkorgen som skadar vitala delar. 
+[+8 Utmattning.]
+Regler
+Färdigheter : 
+5T6: Jakt & fiske, Klättra, Kraftfulla språng, Utstråla 
+värdighet, Injaga fruktan.
+4T6: Ligga i bakhåll, Smyga, Speja, Spåra, Helig kraft.
+3T6+2 : Genomsöka, Gömma, Klättra, Orientering.
+Helig kraft : Kejsarlejonen verkar stå särskilt nära Daak 
+och har vid tillfällen uppvisat mirakulösa egenskaper. 
+Lejonen kan använda motsvarigheterna till bönerna 
+Stigmata , Daaks trogna tjänare , Den svages tvivel  och Vik 
+hädan!  genom att ersätta Kanalisera med ett slag för 
+Helig kraft. Kejsarlejon blir aldrig avvisade och behöver 
+därför inga heliga föremål för att använda Övertag.
+Massivt [1 Övertag] : Kejsarlejonet använder sin tyngd 
+och pressar ned motståndaren på marken. Denne Faller.
+Siktar mot huvudet [2 Övertag] : Lejonet träffar huvudet 
+på sitt byte.
+Sliter sönder [2 Övertag] : Bestens djuriska styrka 
+knäcker spjut och splittrar sköldar. Mot ståndarens 
+bräckliga vapen eller sköld slits till flisor.
+Närstrid Träffa Typ Skada Egenskaper
+Bett 5T6 Hugg 6T6+2 Genomslag Hugg 5
+Klor 5T6 Hugg 6T6+2 Sargande
+Försvar Tärningar
+Undvika 4T6
+Skydd Hugg Kross Stick Grund
+Päls 9 9 9 9
+Förflyttning 5T6
+Intryck –
+Kroppsbyggnad 6T6+2
+Reaktion 4T6
+Självkontroll 3T6
+Vaksamhet 4T6
+Livskraft 5T6+2
+Grundrustning 9
+Grundskada 5T6+2
+Återhämtning 10Skada Utm. Vänd.
+1– 4 +1 –
+5– 9 +2 –
+10– 14 +4 1T10
+15– 19 +6 1T10
+20– 24 +8 1T10
+25– 29 +10 1T10
+30– 34 +12 1T10
+35– 39 +14 1T10
+40– 44 +16 1T10
+(+5) (+2 ) (…)
+
+--- Page 8 ---
+8
+Vilddjur och 
+styggelserJättepadda
+Även känd som : Maazenpaddor, fphural tfvi, gammelgrodor…
+Beskrivning : En jättepadda ser ut som sina mindre 
+släktingar men kan bli stor och kompakt och väger 
+vanligen kring 200 kg även om det finns exemplar som 
+väger nästan 500 kg. Dess hud är grov och vårtig i mörka 
+naturfärgade toner. De är utmärkta simmare men rör sig 
+klumpigt på land. Många gånger ligger de och vakar strax 
+under vattenytan i dyiga vatten. Paddan har en lång och 
+slingrande tunga som den blixtsnabbt kan slunga ut och 
+slingra runt ett byte. Tungan är mycket elastisk och seg 
+och även om den skulle slitas eller skäras av så kommer 
+den växa ut igen. Gamla jättepaddor kan bli listiga och 
+nästintill intelligenta och bland vissa adasiska stammar 
+används dessa som vakttdjur.
+Utbredning : Jättepaddor lever i gölar, kärr och 
+träskmarker där de äter fisk och djur som kommer ned 
+till stranden för att dricka. De kan vila länge strax under 
+ytan och när någon kommer nära strandkanten fångar 
+de dessa med sina långa, slingrande tungor och drar ned 
+dem i vattnet. De trivs bäst i varmare klimat men det 
+finns även jättepaddor i nordliga riken och dessa sover 
+på sjöbottnar under vinterhalvåret i en dvalliknande 
+sömn.
+Beteende : Jättepandor håller sig vanligen gömda strax 
+under vattenytan eller i vassen nära stranden. När ett 
+bytesdjur kommer nära slår de ut med sin tunga och drar 
+in det i sina käftar. 
+Egenskaper : Jättepaddan kan använda sin långa tunga 
+för att fånga in mål och dra in dem i sitt gap. De kan 
+även ta kraftfulla språng som slår omkull eventuella 
+motståndare. 
+Regler
+Färdigheter : 
+5T6: Ligga gömd i vassen, Simma & dyka.
+4T6: Kraftfulla hopp. 
+Sluka [2 Övertag] : Den långa slingrande tunga är 
+blixtsnabb. Den ringlar sig runt ett offer och drar in det 
+i paddans mun. Dess kraftfulla käkar slår igen. Skadan 
+blir 5T6 Krosskada och offret Faller .
+Närstrid Träffa Typ Skada Egenskaper
+Tungattack 4T6+2 Kross 4T6 Sluka, Räckvidd 3
+Hoppattack 4T6 Kross 5T6 –
+Försvar Tärningar
+Undvika 4T6
+Skydd Hugg Kross Stick Grund
+Vårtig hud 8 10 6 6
+Förflyttning 3T6+2
+Intryck –
+Kroppsbyggnad 6T6
+Reaktion 4T6
+Självkontroll 3T6
+Vaksamhet 3T6
+Livskraft 4T6
+Grundrustning 6
+Grundskada 4T6
+Återhämtning 10Skada Utm. Vänd.
+1– 4 +1 –
+5– 9 +2 –
+10– 14 +4 1T10
+15– 19 +6 1T10
+20– 24 +8 1T10
+25– 29 +12 1T10
+30– 34 +16 1T10
+35– 39 +20 1T10
+40– 44 +24 1T10
+(+5) (+4 ) (…)
+Vändningar
+1 Jättepaddan tar ett kraftfullt hopp mot anfallaren.  
+[Anfallaren måste slå Kroppsbyggnad mot 16 eller Faller .]
+2 Träffen glider till stora delar av jättepaddans grå och 
+vårtiga hud. Om Hugg eller Stick:  vapnet borrar sig fast 
+och glider ur attackerarens grepp [Anfallaren Tappar  sitt 
+vapen.]
+3 Den sega huden spricker upp och blottar muskler och 
+senor. [+2 Utmattning.]
+4 Skadan driver tillfälligt Jättepaddan bakåt. [Jättepaddan 
+är Tillbakaknuffad .]
+5 Sekretkörtel skadas och en seg, stinkande, vätska 
+skvätter ut. [+3 Utmattning.] 6 Djupt sår rivs upp och blodet börjar pumpa ut. 
+[Jättepaddan får +1 Utmattning per runda.]
+7 Benen skadade, paddan kan nu endast släpa sig fram. 
+[-2T6 Förflyttning. Kan ej utföra Hoppattack.]
+8 Vitala organ skadade och blod och slamsor rinner ut 
+ur gapet. [+4 Utmattning.]
+9 Ögat träffat och spricker upp. [Jättepaddanfår –1T6 på 
+alla attacker. Skulle detta resultat uppnås igen är paddan 
+blind och har -3T6 på attack och försvar.]  
+10 Träff över munnen får paddan att rygga tillbaka. [+5 
+Utmattning. Om Hugg:  +5 Utmattning. Tungan huggs 
+av, paddan kan nu inte längre göra sin Tungattack.]
+
+
+--- Page 10 ---
+10
+Vilddjur och 
+styggelserPanthera
+Även känd som : Kharzig-Voz , Raunalejon .
+Beskrivning : En panthera är en mycket farlig varelse 
+som man inte bör underskatta. Pantheran är ett mycket 
+stort och kraftigt byggt kattdjur som har silverfärgad päls. 
+Vissa, men inte alla, har mångfärgade fläckar som täcker 
+överdelen och sidorna. Huvudet påminner mer om en 
+hästs än ett kattdjurs då huvud och nacke är mycket 
+kraftiga. En panthera har små horn på huvudet, framben 
+som liknar dem hos en stor rovfågel och har förmågan 
+att spruta eld. Mankhöjden är omkring 1,5 meter och 
+vikten ligger runt 400 kg.
+Utbredning : Pantheraflockar finns som regel bara 
+i nordliga områden, men kan i vissa fall söka sig till 
+sydligare breddgrader under vintern. De trivs bäst 
+på tundran och stäppen, men beger sig ibland upp i 
+bergen. På senaste tid har flockar även siktats i tarkas 
+utkanter något som ses som väldigt underligt eftersom 
+det är långt ifrån deras naturliga klimat. Flocken består 
+av en dominant hanne och mellan fyra och åtta honor. 
+Hannar som inte har någon egen flock brukar slå sig 
+ihop med någon annan ensam hanne eller vandra själva 
+i vildmarken.
+Beteende : Pantheror jagar i flock. Ett vanligt byte är 
+vilda horndrakar (i vissa fall även heavédrakar). Genom 
+extrem list och gruppsamarbete gör de som regel 
+processen kort med dylika pseudodrakar. Pantheror 
+är ganska fredliga om de inte är hungriga eller blir 
+hotade. De har få naturliga fiender och blir sällan 
+skrämda. Drakar hör dock till pantherornas naturliga 
+fiender. Större drakar (lumian och mortuach) brukar de 
+bara undantagsvis anfalla – mest eftersom utsikten att 
+lyckas döda en sådan drake är mycket liten. I början av 
+vintern omkring oktober månad har pantherorna vilda 
+parningsriter då flera flockar samlas då i de nordliga, 
+snötäckta vildmarkerna. Hannarna försöker locka över 
+honor till sin flock genom vilda uppvisningsstrider. 
+Det är även chansen för utstötta hannar att återvända 
+och kämpa om en plats som flockledare. Vinternatten 
+fylls av pantherornas skärande skrik och skenet från 
+deras blågröna eldkvastar. De som lever i de nordliga 
+ödemarkerna vet bäst i att hålla sig undan dessa nätter.
+Egenskaper : Pantheran kan spruta en grönblå fräsande 
+eldkvast från sin gapande käft. Elden åstadkommer 
+en speciell dunst (kallas suozzon) som är söt och 
+välluktande för alla varelser utom för drakar som hatar 
+ångorna. I strider pantheror emellan använder de aldrig 
+sin eldkvast utan kampar med bett och klor. När det 
+gäller uppvisningsstrider brukar de dock blåsa elden upp 
+mot himlen för att hota sin motståndare. Den kände 
+jargiske upptäcktsresanden Gavius konstaterade efter 
+att ha dissekerat en panthera att dess förmåga att spruta 
+eld kommer ifrån två körtlar i gapet. Dessa innehåller 
+två olika vätskor och när vätskorna blandas tar de eld. 
+Vätskorna doftar väldigt gott och anses vara den mest 
+exklusiva parfym som existerar.
+Regler
+Färdigheter : 
+6T6: Spåra. 
+5T6: Hoppa, Flocktaktiker.
+4T6: Klättra, Speja, Jakt.
+3T6+2 : Simma, Smyga, Gömma.
+Beräknande anfall : Kan agera både i avståndsfasen och 
+närstridsfasen. Pantheran kan utföra avståndsattacker i 
+närstrid så länge den är anfallare. Den kan dock bara 
+välja Förflytta sig  i en av faserna.
+Närstrid Träffa Typ Skada Egenskaper
+Bett 5T6 Hugg 7T6 Genomslag Hugg 5
+Klor 5T6 Hugg 10T6 Vådlig
+Avstånd Träffa Typ Skada Räckvidd
+Eldsprut 5T6 Eld 3T6/  
+3T6Kort
+Försvar Tärningar
+Undvika 5T6
+Skydd Hugg Kross Stick Grund
+Kraftig hud och päls 10 10 10 8
+Förflyttning 5T6
+Intryck –
+Kroppsbyggnad 6T6+5
+Reaktion 4T6
+Självkontroll 4T6
+Vaksamhet 4T6
+Livskraft 5T6
+Grundrustning 8
+Grundskada 5T6
+Återhämtning 10Skada Utm. Vänd.
+1– 4 +1 –
+5– 9 +2 –
+10– 14 +4 1T10
+15– 19 +6 1T10
+20– 24 +8 1T10
+25– 29 +10 1T10
+30– 34 +12 1T10
+35– 39 +14 1T10
+40– 44 +16 1T10
+(+5) (+2 ) (…)
+
+--- Page 11 ---
+11
+Vilddjur och 
+styggelser
+Vändningar
+1 Pantheran rycker till av smärtan och sprutar eld mot 
+den som skadade den. [Anfallaren måste slå Undvika 
+mot 18 eller drabbas av 3T6/3T6 Eldskada.]
+2 Pantheran retas till ursinne av träffen och angriper 
+genast sin plågoande. [Pantheran blir automatiskt 
+anfallare nästa runda och anfaller den som orsakade 
+skadan, även om pantheran måste lämna en pågående 
+närstrid för att nå fram till denne.]
+3 Smärtan eggar pantheran att kasta sig mot angriparen 
+och tackla denne. [+2 Utmattning. Anfallaren måste slå 
+Kroppsbyggnad mot 14 eller falla.]
+4 Skadan driver tillfälligt pantheran bakåt [Pantheran är 
+Tillbakaknuffad.]
+5 Ett av pantherans horn huggs eller slås av. [+3 
+Utmattning.] 6 Pantheran slås ur balans och vacklar. [Pantheran faller.]
+7 Smärtsamt slag över ryggraden. [+2 Utmattning. 
+Pantheran är Omtöcknad.]
+8 Allvarlig träff i framklon. [Pantheran får –1T6 på alla 
+anfall med klorna.]
+9 Blodet sprutar efter en träff i halsen. [Pantheran får +2 
+Utmattning per runda.]
+10 En allvarlig träff i huvudet sliter upp pantherans 
+suozzon-körtlar. De lättantändliga vätskorna pumpar 
+ut och detonerar i ett väldoftande eldklot. [Pantheran 
+tar 5T6/5T6 Eldskada och förlorar förmågan att spruta 
+eld. Alla andra involverade i närstrid med pantheran 
+måste slå Undvika mot 12 eller drabbas av 3T6/3T6 
+Eldskada. Har detta redan inträffat under striden; +5 i 
+Utmattning.]
+
+--- Page 12 ---
+12
+Vilddjur och 
+styggelserSumpmonster
+Även känd som : Dydräpare, Gröna flodens fasa .
+Beskrivning : Sumpmonstret är en stor humanoid varelse 
+med en slemmig och mycket hal hud som kan vara allt 
+från ljust grönbrun till helt svart. Sumpmonster är 
+nästan tre meter långa och väger runt 300 kg. Monstrets 
+mun är sugkoppsformat och har en extrem tänjbarhet 
+som gör att odjuret med lätthet får in ett normalt 
+människohuvud i sin tandbeklädda käft. Tänderna sitter 
+runt hela munhålan och är riktade bakåt som hullingar. 
+Även fastän sumpmonster nästan alltid är hungriga så 
+har de en låg kroppsmetabolism vilket gör att de klarar 
+sig en lång tid utan mat. 
+Utbredning : Detta odjur vistas i träskområden och andra 
+blöta och ogästvänliga miljöer. Sumpmonster är speciellt 
+vanliga i de talrika träsk som finns längs Igonhavets kuster, 
+men förekommer på många andra ställen: exempelvis 
+i Västmarks beryktade träskområden eller på Takalorr. 
+Sumpmonster kan förekomma i allehanda antal. Vissa 
+lever helt ensamma andra lever i grupper mellan 2–20 
+individer. På ön Rimcoz i det cirefaliska samväldet 
+hittades en samling med över 40 sumpmonster som höll 
+till i en grotta nära ett floddelta. Ingen vet med säkerhet 
+om alla sumpmonster har fasta boplatser, men troligen 
+bor många i undervattensgrottor som inte sällan är fyllda 
+med skatter eftersom de släpar med sig offret och dess 
+ägodelar till hålan. Vissa av dessa hålor är vanliga grottor 
+men som har ingångarna under vattnet. Grottorna är 
+upplysta av en särskild typ av alger vilka sumpmonstren 
+samlar upp från havsbotten. Algerna läggs i gölar med 
+vatten där de ger ifrån sig ett skimrande grönaktigt ljus. 
+Vissa menar på att sumpmonster är avlägset besläktade 
+med havsfolket coomarorna. Det har bland annat hänt 
+att de betydligt mer intelligenta coomarorna använt sig 
+av sumpmonster i kampen mot melusiner eller andra 
+fiender. Sumpmonster kan leva i både salt- och sötvatten. 
+Beteende : Sumpmonstret ligger oftast under vattnet 
+och tittar efter krusningar på ytan. Om ett byte passerar 
+på vattenytan eller på land flyger sumpmonstret upp 
+ur vattnet och anfaller med en rasande våldsamhet. 
+Sumpmonstret brukar inte ha någon speciell taktik 
+i strid utan går helt enkelt bärsärkargång och litar 
+på sin enorma styrka och sin tålighet för att vinna. 
+Sumpmonstret lever av allt levande det kan lägga sina 
+slemmiga labbar på, men även döda varelser duger 
+fint som mat. Trots sin djuriska och ociviliserade sida 
+tycks de ha något som liknar en primitiv religion. I 
+sina hålor som ligger under vatten samlar de sina döda 
+motståndare (det vill säga resterna av maten) tillsammans 
+med eventuell utrustning i särskilda högar runt omkring 
+något som liknar en gudabild. När sumpmonster lever i 
+grupper tycks de inte ha någon särskild ledare utan delar 
+nästan ett kollektivt medvetande och låter sig styras av 
+sina instinkter.
+Egenskaper : Eftersom sumpmonstret har gälar så kan 
+det stanna under vattnet hur länge som helst. Dess sega 
+hud besitter en enorm tålighet vilket gör att den med 
+lätthet avstöter de flesta svärdsklingor utan att behöva 
+sargas alltför svårt. Sump monstrets hud tål dock inte eld. 
+De flesta sumpmonster tvekar att anfalla de som håller i 
+en fackla även om hungern alltid går före rädslan.
+Regler
+Färdigheter : 
+5T6: Lurpassa i vattenbrynet, Hitta gamla as, Simma. 
+4T6: Smyga i träsk, Överrumplande vrål.
+Amputerande bett : Alla svårigheter för Amputationsrisk 
+ökar med +4 vid Riva & slita anfall.
+Långsamt : Får inte utföra anfallstaktiken Snabbt anfall .
+Stort och starkt : Sumpmonster är så pass stora varelser 
+att de som strider mot den inte får någon bonus 
+för numerärt överläge (se sida 174 i grundboken). 
+Motståndare får ett avdrag på –2T6 för pareringar och 
+blockader mot sumpmonstrets alla attacker. Undvika 
+påverkas inte.
+Skyr elden : Sumpmonster tar dubbel skada av eld. För 
+att angripa någon som bär en fackla, eller motsvarande 
+öppen eld, måste sumpmonstret klara ett Självkontrollslag 
+mot svårighet 10.
+Överrumplande vrål : Sumpmonstret kan använda sitt 
+Överrumplande vrål istället för Reaktion vid öppnandet 
+av en strid.
+Närstrid Träffa Typ Skada Egenskaper
+Riva & slita 4T6+2 Hugg 6T6+3 Genomslag Hugg 5, 
+Vådlig
+Banka & 
+stampa5T6 Kross 6T6+1 Kraftfull, Vådlig
+Försvar Tärningar
+Rasande 3T6+2 Fungerar som Kontring.
+Skydd Hugg Kross Stick Grund
+Seg hud 17 17 17 13
+Förflyttning 5T6
+Intryck –
+Kroppsbyggnad 6T6+12
+Reaktion 2T6+3
+Självkontroll 3T6
+Vaksamhet 2T6+1
+Livskraft 5T6
+Grundrustning 13
+Grundskada 5T6+3
+Återhämtning 10Skada Utm. Vänd.
+1– 4 +1 –
+5– 9 +2 –
+10– 14 +4 1T10
+15– 19 +6 1T10
+20– 24 +8 1T10
+25– 29 +10 1T10
+30– 34 +12 1T10
+35– 39 +14 1T10
+40– 44 +16 1T10
+(+5) (+2 ) (…)
+
+--- Page 13 ---
+13
+Vilddjur och 
+styggelser
+Vändningar
+1 Träffen får sumpmonstret att vråla av ilska samtidigt 
+som den slår ut med sina massiva armar. [Den som 
+tillfogade skadan måste lyckas med Undvika mot 
+svårighet 14 eller få en obeväpnad attack med skada 
+5T6+2. Vid en avståndsattack händer inget.]
+2 Vapnet som tillfogade skadan fastnar i sumpmonstrets 
+tjocka hud och kött. [För att återta vapnet måste man 
+lyckas med ett Förflyttningsslag mot svårighet 10. Denna 
+vändning drabbar inte krossvapen.]
+3 Sumpmonstret får ta en rejäl smäll. [+2 Utmattning. 
+Nästa runda kommer sumpmonstret att uteslutande 
+anfalla den som orsakade skadan. Ursinnet ger monstret 
++1T6 på sina attacker under nästa runda.]
+4 Träffen tar illa i monstrets buk eller bröstkorg. [+3 
+Utmattning. Monstret spyr upp mängder av sumpigt, 
+stinkande vatten som sprutar över de som står omkring 
+monstret. De blir Omtöcknade.]5 Träffen tar i en nervknuta på monstret som stapplar 
+bakåt. [+3 Utmattning, Omtöcknad.]
+6 Slaget träffar monstret rakt över dess vidriga gap. Flera 
+tänder slås ut. [+4 Utmattning. Under sitt nästa anfall 
+kommer monstret inte att använda Riva & slita.]
+7 Monstret faller vrålande omkull. [+5 Utmattning, 
+Faller.]
+8 En rejäl träff i monstrets ena arm. [+5 Utmattning. 
+Tillbakaknuffad. Under sitt nästa anfall kommer 
+monstret enbart att använda Banka & stampa.] 
+9 En djup bukskada får en del av monstrets tarminnehåll 
+att rinna ut. [+5 Utmattning. Omtöcknad, Tillbaka-
+knuffad.]
+10 Allvarlig skada i halsen som får blodet att spruta. [+5 
+Utmattning. Får 1 Utmattning per runda.]
+
+--- Page 14 ---
+14
+Vilddjur och 
+styggelserSvartsvin
+Även känd som : Knivseggsbest från Ru-Zhel .
+Beskrivning : Svartsvinet ser i stort ut som ett enormt 
+vildsvin fast med skillnaderna att det har stora 
+rovdjurständer, två gigantiska betar och ett stort antal 
+spetsar på ryggen. På varje framklöv sitter det också en stor 
+rörlig klo som är in- och utfällbar. Den kolsvarta huden 
+är mycket tjock och beklädd med tätt sammanpackade 
+borst. En stor galt kan väga över 300 kg, honorna är dock 
+något mindre och deras betar är betydligt mindre.
+Utbredning : Svartsvin är vanliga i stäppmarker och 
+andra relativt torra områden. De lever dock inte i öknar, 
+där tillgången på både vatten och föda är för liten. 
+Svartsvin är vanligast i Eumo, Summag, södra delen av 
+Tarkas och på Asha-slätten i Asharien. De lever i flockar 
+med kanske fyra galtar, fyra honor och ett antal kultingar 
+vars storlek beror på årstiden.
+Beteende : Till skillnad från vanliga vildsvin så är 
+svartsvinet ett rovdjur som dras med en ständig törst efter 
+blod. Detta gör det till en hänsynslös jägare som i stort 
+sett kastar sig över alla levande varelser som svartsvinet 
+får syn på. De dras till lukten av blod och brukar ofta 
+jaga bort andra rovdjur och ta deras byte. Samtidigt som 
+svartsvinet är aggressivare än vildsvinet så är det faktiskt 
+betydligt mindre intelligent.
+Egenskaper : Svartsvin har ganska dålig syn och hörsel, 
+men de har ett väl utvecklat luktsinne. Lukten av blod 
+kan de känna på flera kilometers håll.
+Vändningar
+1–2 Svinet stångar ursinnigt anfallaren. [Anfallaren 
+måste slå Undvika mot 14 drabbas av en Stånging.]
+3–4 Smärtsam skada som tyvärr bara retar upp 
+svartsvinet ytterligare. [Nästa runda har svartsvinet +1T6 
+på sin attack.]
+5–6 Svartsvinet tappar fotfästet och dess anstormning 
+lyckas endast driva dess tryne i marken. [Faller.]
+7–9 En kraftfull träff får svartsvinet att se rött, men 
+dimmigt. [Omtöcknad, +2 Utmattning.]
+9 Anfallet får svinet att drivas tillbaka för ett kort 
+ögonblick. [Tillbakaknuffad. Svartsvinet är automatiskt 
+försvarare i nästa runda.]
+10 Ett stort sår slits upp och blodet pumpar ut. [+3 
+Utmattning per runda.]
+Regler
+Färdigheter : 
+6T6: Vädra blod.
+5T6: Jakt, Spåra.
+3T6: Gömma, Simma, Smyga.
+Vilt svin : Motståndare får ett avdrag på –2T6 för 
+pareringar och blockader mot svartsvinets närstrids­
+attacker. Undvika påverkas inte.
+Trampning : Om försvararen faller träffas denne 
+automatiskt av en trampningsattack som orsakar 5T6+2 
+Krosskada.
+Närstrid Träffa Typ Skada Egenskaper
+Bett 5T6 Hugg 6T6+2 Trampning
+Klor 5T6 Hugg 5T6+2 Sargande
+Stångning †5T6 Kross 6T6+2 Försvararen Faller, 
+Trampning
+† Endast när svartsvinet flyttar sig in i närstri
+Försvar Tärningar
+Rasande 4T6 Fungerar som Kontring.
+Skydd Hugg Kross Stick Grund
+Svinpäls 10 10 10 8
+Förflyttning 5T6
+Intryck –
+Kroppsbyggnad 6T6
+Reaktion 3T6
+Självkontroll 3T6+2
+Vaksamhet 3T6
+Livskraft 6T6+2
+Grundrustning 8
+Grundskada 4T6+2
+Återhämtning 8Skada Utm. Vänd.
+1– 4 +1 –
+5– 9 +2 –
+10– 14 +4 1T10
+15– 19 +6 1T10
+20– 24 +8 1T10
+25– 29 +10 1T10
+30– 34 +12 1T10
+35– 39 +14 1T10
+40– 44 +16 1T10
+(+5) (+2 ) (…)
+
+--- Page 16 ---
+16
+Vilddjur och 
+styggelserBlodflygare
+Även känd som : Caerbannogs mördarbest, Volator sanguina .
+Beskrivning: En blodflygare ser ut ungefär som en stor 
+ekorre. Den är ca 30–40 cm lång, inräknat svansen, och 
+väger ungefär två kg. Dess fluffiga päls är rödbrun eller 
+svartbrun i färgen. Blodflygare är rovdjur och använder 
+sig av trädens skyddande lövverk för sina snabba anfall. 
+Blodflygaren har fått sitt namn från sitt anfallssätt 
+– när den anfaller ser den ut att glidflyga ned från 
+trädtopparna med hjälp av sin stora svans. Blodflygarpäls 
+är eftertraktad, speciellt bland societeten i Jargien och 
+även inom det cirefaliska samväldet.
+Utbredning : Blodflygare lever främst i tempererade 
+skogsmiljöer där den håller till högt bland trädkronorna. 
+Blodflygare är mycket vanliga i Mitheraskogen och 
+i Sunariskogen. Just från Mitheraskogen finns det 
+rapporter om samarbetande blodflygare som jagar större 
+djur.
+Beteende : Blodflygaren har fått sin namn på grund av 
+dess otäcka attacksätt. Djuret är ett rovdjur som lever av 
+mindre djur, exempelvis kaniner eller sorkar. Den äter 
+bytesdjurets kött och dricker dess blod.Den ger sig i vanliga fall inte på större djur än av en 
+kanins storlek, men om den är hungrig så kan den 
+anfalla större bytesdjur – även människostorlek. 
+Blodflygare är antingen oerhört aggressiva eller oerhört 
+skygga, beroende på omständigheten. Just deras stora 
+aggressivitet i anfallen har fascinerat forskare som 
+försöker utröna om det finns något ämne man kan 
+utvinna ur en blodflygares kropp.
+Egenskaper : Blodflygarens saliv är farligt för de flesta 
+andra varelser då det förhindrar att blodet koagulerar. 
+En blodflygare kan glidflyga och får på så sätt aldrig 
+fallskador.
+Regler
+Varelsemall : Liten varelse.
+Blixtsnabbt kritter : +2T6 Förflyttning, +1T6 Vaksamhet 
+och Grundskada.
+Antikoagulerande saliv : Alla blödningar blodflygarens 
+attacker orsakar får sina svårigheter ökade med +4.
+
+
+--- Page 17 ---
+17
+Vilddjur och 
+styggelser
+Jättebläckfisk
+Även känd som : Kraken, Lusca .
+Beskrivning : Jättebläckfisken har ett stort huvud och 
+åtta långa tentakler med sugkoppar. Varje tentakel kan 
+vara över 20 meter lång. Djuret väger runt ett ton. De 
+förflyttar sig genom att gå på havsbottnen eller genom 
+att simma i vattnet. Jättebläckfisken förflyttar sig också 
+genom att pumpa vatten genom ett rör längs kroppen 
+och med våldsam kraft susa iväg baklänges med alla 
+tentakler hängande efter sig. Djuret är oftast grått, men 
+även mer svarta eller grönaktiga arter finns.
+Utbredning : De lever i Mundanas större hav. Speciellt 
+vanliga är jättebläckfiskar i Takalorrsundet, Blå havet, 
+Igonhavet och i Övärlden. Mindre varianter finns 
+också ofta inom Melorions områden och i Rhungsjön. 
+Jättebläckfiskar lever i stora underjordiska grottor på 
+havsbottnen.
+Beteende : Jättebläckfiskar lever vanligtvis av köttet från 
+andra havslevande varelser, exempelvis fiskar eller räkor, 
+men det har hänt att jättebläckfisken jagar betydligt 
+större bytesdjur. De är ganska primitiva men kan uppvisa 
+stora mått av klurighet.Det har till exempel hänt att en jättebläckfisk sugit sig fast 
+under skrovet på ett stort skepp, piskat upp över däcket 
+med sina tentakler och på så sätt fångat besättningsmän. 
+Rykten finns att jättebläckfiskar har dragit ned mindre 
+skepp med manskap och allt, i havets djup. Det har 
+även hänt att jättebläckfiskar har tagit sig upp på plana 
+stränder, exempelvis i närheten av fiskebyar. Detta 
+brukar oftast innebära stor panik hos lokalbefolkningen 
+– vem vill ha en 20 meter lång och ett ton tung varelse 
+på gården?
+Egenskaper : En jättebläckfisk kan bara åla eller krypa 
+på land, ej springa eller gå. På land kan det bara vara en 
+bergänsad tid då de inte kan andas luft.
+Regler
+Varelsemall : Mycket stor varelse.
+Piskande tentakler : Jättebläckfisken får inget avdrag för 
+gruppanfall. Bläckfiskens armar har vapenegenskapen 
+Räckvidd 4. 
+Blötdjur : –3T6 Förflyttning på land.
+
+
+--- Page 18 ---
+18
+Vilddjur och 
+styggelserJätteorm
+Även känd som : Apodora .
+Beskrivning : Jätteormarna är fruktade bestar som finns i 
+tropiska djungler och träsk. De kan bli upp till 12 meter 
+långa. Vid sin maximala längd kan dessa bjässar väga 
+upp emot 450 kg. Kroppen är svart med stora bruna och 
+orange fläckar. De är mycket väl kamouflerade och kan 
+trots sin storlek vara svåra att upptäcka.
+Utbredning : Jätteormarna finns bara i Mundanas 
+tropiska djungler och träsk. De riktigt stora exemplaren 
+finns oftast där terrängen är som mest oländig. De simmar 
+antingen omkring på grunt vatten eller ligger och vilar på 
+en tjock trädgren. Jätteormar är ensamlevande djur som 
+bara accepterar andra jätteormar vid parningstiden.
+Beteende : Jätteormarna saknar gifttänder men är nog 
+så farliga ändå. De fångar sina byten genom att slingra 
+kroppen runt dem. Människobarn eller kortväxta 
+personer sväljer de lätt hela. Hur fort det går att svälja 
+bytet beror på hur stort och spretigt det är. Extra 
+farliga är jätteormshonorna då de vaktar sin avkomma. 
+Honorna lägger ägg i stora gropar. De kan lägga upp till 
+20 ägg i samma grop. När de kläcks ungefär samtidigt 
+är ormynglen visserligen små, men mycket hungriga och 
+aggressiva och utgör en stor fara. Mamman vaktar äggen 
+fram till dess att de kläcks. Hon försvarar dem med stor 
+aggressivitet. Den som kommer inom en radie av 25 
+meter från gropen utsätts för en mycket stor risk!Egenskaper : Jätteormar är inte giftiga och deras bett är 
+inte speciellt farligt. Desto farligare är istället jätteormens 
+förmåga att krossa och kväva sitt byte.
+Regler
+Varelsemall : Stor varelse.
+Överraskande snabb : +2T6 Reaktion
+Slingrande : –2T6 Förflyttning
+Krossande grepp [2 Övertag] : Jätteormen lyckas fånga 
+sin motståndare och linda sin kropp om den. Om 
+jätteormen lyckas övervinna sitt offers kroppsbyggnad 
+med sin egen kan offret inte göra något och kommer att 
+börja drabbas av syrebrist (enligt reglerna på sidan 196 i 
+grundboken) så länge ormen väljer att behålla greppet. 
+Det greppade offret kan inte längre delta i striden och 
+ormen får ett avdrag på –2T6 på anfall och försvar mot 
+andra stridande så länge greppet bibehålls. Jätteormen 
+kan bara krossa en motståndare i taget.
+För att offret ska komma loss måste denne övervinna 
+ormens kroppsbyggnad med sin egen, vilket denne får 
+försöka göra varje runda, men ormen får en bonus på 
++1T6 på grund av det redan kopplade greppet. Alternativt 
+kan ormen tvingas släppa genom att bli utslagen eller 
+dödad, eller släppa frivilligt om den t ex tvingas fly.
+
+
+--- Page 19 ---
+19
+Vilddjur och 
+styggelser
+Krokodil
+Även känd som : Adasisk träskdrake , Takalorrsk fasa , 
+Soukhos .
+Beskrivning : Krokodiler är amfibiska kräldjur – de 
+tillbringar tid både i vattnet och på land. Kroppen är 
+stor och gråaktig, med en lång nos. I munnen har de 
+en imponerande rad av sylvassa tänder. Huden är 
+pansarliknande hård och seg. De kan bli upp till sju 
+meter långa.
+Utbredning : De lever som sagt i och kring vatten och 
+föredrar varmt klimat. De finns i tropiska sumpmarker 
+och längs flodsystem. De rör sig ganska ovigt på land 
+men kan tillryggalägga korta sträckor förvånansvärt 
+fort. I vattnet är de dock mycket effektiva, kroppen drivs 
+framåt med kraftiga slag av svansen. Det är helt omöjligt 
+att simma ifrån en krokodil i vattnet.
+Beteende : Krokodilen är en utpräglad köttätare, som 
+äter allt från kräftor till människor. En hungrig krokodil 
+anfaller vilket stort djur som helst som kommer ner till 
+stranden för att dricka. När den tar ett stort landdjur 
+försöker den omedelbart dra ner det i vattnet. Om den 
+lyckas håller den offret där tills det är dött. Offret slits 
+sönder, dött eller levande, genom att krokodilen biter tag 
+i en arm eller ett ben och roterar sin egen kropp i vattnet 
+så att kroppsdelen slits av. Man är inte säker för angrepp 
+ens om man sitter i en båt, antingen anfaller den genom 
+att försöka hoppa upp och ta tag i någon kroppsdel eller 
+så försöker den välta båten. Krokodilhonorna vaktar 
+noggrant det bo av fuktiga multnande växtdelar i vilket 
+de lägger sina ägg. Sedan ungarna kläckts fortsätter 
+beskyddet, det är nog så nödvändigt eftersom hannarna 
+ofta försöker äta upp sin egen avkomma.Egenskaper : Både skinnet och köttet av dessa djur är 
+mycket användbart. Köttet smakar ungefär som fiskkött. 
+Skinnet är starkt och dessutom vackert. En krokodil kan 
+vara länge under vattnet utan att andas och har speciella 
+hålor i flodbankar under vattnet dit de drar med byte de 
+inte orkat äta upp med en gång. 
+Regler
+Varelsemall : Mycket stor varelse.
+Dödens käftar : +2T6 Grundskada.
+Kräldjur : –2T6 Förflyttning på land.
+Ryggpansar : Naturligt skydd är 14/14/14 (grund rustning 
+är 8).
+Dödsrullning : Om en krokodil lyckas med en bettattack 
+sluter den käftarna om sitt offer och börjar kasta sig runt 
+för att slita det i stycken eller dränka det. Om krokodilen 
+lyckas övervinna offrets kroppsbyggnad med sin egen 
+sitter offret fast och får –1T6 på alla handlingar följande 
+runda och kan endast försvara sig med standardförsvar. 
+Om tillräckligt djupt vatten finns till hands kommer 
+krokodilen dessutom försöka dränka sitt offer (se 
+Syrebrist på sida 196 i grundboken).
+
+
+--- Page 20 ---
+20
+Vilddjur och 
+styggelserLimax
+Även känd som : Lamado, Shumsk styggelse .
+Beskrivning : En limax är jättelik gul snigel med svarta 
+ränder. Den är ungefär en meter lång och väger ibland 
+över 50 kg. Den har inget skyddande skal utan är istället 
+utrustad med giftiga taggar som täcker hela ryggen. 
+Snigelns slemmiga undersida kantas av giftiga spetsar 
+som kan fällas fram då de används för att anfalla byten. 
+Limax är ett rovdjur – monstret besitter en enorm 
+spänst och kan utföra otroliga anfallssprång på upp till 
+fem meter. Det är som regel inga svårigheter att känna 
+stanken från limaxens slemspår flera timmar efter den 
+passerat.
+Utbredning : Limaxer vistas i mörka fuktiga skogar 
+samt i träsk- och våtmarker. Den föredrar platser som 
+är svala och fuktiga. Limax lever ensamma förutom en 
+gång varje år då de förökar sig. Limax är hermafroditer 
+och befruktar varandra. Detta utmynnar vanligtvis i ca 
+tio plommonstora ägg. Parningen är även en fruktad 
+tid för andra skogsinvånare eftersom limaxer samlas på 
+speciella platser i skogarna och det är inte ovanligt med 
+ett hundratal av dem på samma ställe. När de är små så 
+lever de i stora flockar. De är givetvis inte lika farliga som 
+fullvuxna limax – taggarna är små och giftet svagt.
+Beteende : Limax ligger ofta och lurpassar på sina 
+tilltänkta byten – ibland ovanifrån från lämpliga träd 
+och ibland dolda i undervegetationen. Under språnget 
+fäller limaxen ut giftspetsarna på undersidan av kroppen. 
+Med hjälp av odjurets tyngd kan dessa med lätthet tränga 
+igenom de flesta bytesdjur och på så sätt injicera ett 
+paralyserande gift. Limax-gift är starkt nog att slå ut stora 
+djur som exempelvis en vattenbuffel. När bytet slutar 
+att röra sig pumpar snigeln in ett enzym som löser upp 
+bytets kroppsvävnader så att kadavret till slut omvandlas 
+till en slemmig och illaluktande hög. Monstret har ingen 
+mun utan förlitar sig på ett sugrörsliknande organ som 
+sitter dolt strax under huvudet med vilket den suger upp 
+det upplösta kadavret.Egenskaper : En limax klarar inte av torra miljöer under 
+längre tider. Regeltekniskt medför detta att för varje 
+minut som den befinner sig i stark värme eller direkt 
+solljus får den en poäng utmattning. En annan egenskap 
+är att limaxen snabbt kan anpassa sin kroppstemperatur 
+till omgivningen – det är därför betydligt svårare att se 
+limaxer med värmesyn.
+Regler
+Varelsemall : Medelstor varelse.
+Anfallssprång : Limaxen får +2T6 på Reaktion när 
+den kan öppna en närstrid med ett språng. Limaxen 
+använder alltid försvarstaktiken Kontring .
+Giftspetsar : +1T6 Grundskada. Limaxens taggar 
+injicerar ett nervgift (sida 257 i grundboken) om de går 
+igenom huden.
+Ryggradslös : –2T6 Förflyttning.
+Växelvarm : Alla försök att upptäcka en limax med 
+kännetecknet Värmesyn får ett avdrag på –2T6.
+
+

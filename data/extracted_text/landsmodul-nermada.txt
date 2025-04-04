@@ -1,0 +1,3707 @@
+Source: landsmodul-nermada.pdf
+--- Page 1 ---
+Text: Magnus Wåhlberg
+Bild: Joakim Olofsson, Olof Nilsson, Niklas FröjdNermada
+En landsmodul till Eon
+
+--- Page 2 ---
+2
+NermadaNermada är ett feodalrike som är beläget dels på den ikamriska halvön, 
+dels på en stor ö sydväst om denna. Man delar historia med sin norra 
+granne Thalamur, och har under mer än tusen år i stor utsträckning 
+kommit att bli detta slutna rikes port mot omvärlden.
+Här möts tankar, människor och handelsvaror från en stor del av Mun ­
+dana, och man har bidragit till att förmedla riddarnas ideal från Con ­
+saber vidare till Soldarn och Drunok. Landets styrande har lärt sig att 
+balansera mäktiga intressen och spela ut hotande makter mot varandra, 
+och detta politiska spel är Nermadas själva puls.
+Även om man bedriver handel med närbelägna såväl som fjärran länder 
+är landets valuta mer än någonting annat kontakter och välplanerade 
+äktenskap, vilket låter landet både överleva och i stor utsträckning fro ­
+das och vara önskat av sina mäktigare grannar.Vi är inte lika goda köpmän som cirefalierna, och våra trupper kan inte stå Thalamurs emot, och våra skepp når 
+inte lika långt som sabriernas – men vi färdas längre än thalaskerna, och vi köpslår bättre än sabrierna, och vi har 
+dugligare krigare än cirefalierna; det är på detta vi bygger vår lycka.
+ –Furstinnan Ryana Finnira Varmagash, ambassadör i TargusKungariket Nermada
+Fakta om Nermada
+Statsskick : Monarki.
+Statsöverhuvud : Drottning Avhene Ranodira Varmagash.
+Rättsväsende : Lokala adelsmän dömer enligt grevarnas lag.
+Areal : 32.000 km² (varav 8.500 km² utgörs av Arighal).
+Invånarantal : 650.000 invånare.
+Befolkningstäthet : 20,3 invånare per km².
+Befolkning : Nermadier 82 %, thalasker 5 %, sabrier 4 %, 
+soldier 3 %, asharier 2 %, jargier 2 %, övriga 2 %.
+Religion : Jargisk Daakkyrka 30 %, anti-teister 25 %, 
+samoriska läran 25 %, sabrisk Daakkyrka 15 %, jordmoderns 
+lära 5 %.
+Språk : Nermadiska. Skrivs med thalaskisk skrift.
+Huvudstad : Heramon, 12.500 invånare.
+Huvudnäring : Handel, fiske.Handelsvägar : Huvudsakligen landvägen till södra Thalamur 
+och över haven till Consaber och östra Asharina.
+Import (i stort) : Järn (från Thalamur och i viss mån från 
+Asharien), timmer (från Soldarn), torkat kött (från Con-
+saber).
+Export (i stort) : Torkad och saltad fisk, exklusiva viner, guld.
+Militära resurser : Stående styrkor bestående av infanterister 
+och ett stort antal riddare. I händelse av krig kan en an-
+ständigt tränad milis mönstras för rikets försvar. Dessutom 
+har man, åtminstone i nuläget, goda möjligheter att hyra in 
+legoknektar.
+Vänner : Traditionellt goda relationer med de flesta grannar, 
+men står i nuläget närmast Thalamur och Soldarn.
+Fiender : Inga rena fiender, men kontakterna med Caserion 
+och Consaber är för närvarande inte de allra bästa.
+Myntfot : Identisk med den cirefaliska: 1 dukat = 20 floriner, 
+1 florin = 6 dinarer (dinaren har samma värde som den 
+jargiska denaren).
+
+--- Page 3 ---
+3
+Nermada
+Geografi
+Den stora frågan gäller naturligtvis den administrativa indelningen av landet. Mitt förslag 
+till er, mina ärade likar, är att den snart erövrade provinsen preliminärt behåller det nu­
+varande namnet Kamrida även sedan vi gjort den till en del av vårt ärorika hemland. Vad 
+gäller den sydliga ön föreslår jag istället följande…
+ –Veshin Daganir Nogila ätt Arginakus, magikrat av Sava, i brev år 1289 i Mastranidynastin
+Det stolta Nermada består av två landområden: den 
+södra spetsen av den ikamriska halvön, på vilken man 
+har landgräns mot Thalamur, samt ön Arighal. En gång 
+i tiden var även den soldiska ön Kathar en del av riket, 
+men det är nu länge sedan.
+Området på fastlandet kallas sedan gammalt Kamrida, 
+och sträcker sig från landmassans sydspets till Yilfloden 
+på den östra sidan av det ikamriska bergsmassivet. På 
+västsidan av bergskedjan utgörs gränsen av floden Gidos, 
+belägen söder om den thalaskiska staden Egida. På södra 
+res pektive norra sidan om det nordligt belägna Tara con­
+berget ligger Nermadas största skogspartier, varav det 
+norra är en del av den thalaskiska Sidraskogen. Denna 
+har samma namn i Nermada, och även där undviker 
+man den helst då den är förvildad, svårframkomlig och 
+utgör hem för åtskilliga sorters bestar. 
+Desto mer skogs bruk, gränsande till rovdrift, bedrivs i 
+Kejsarskogen vid Tara conbergets fot, där några få rejäla tallar växer sida vid sida med en mängd olika lövträd. 
+Detta är dock inte till närmelsevis nog för att täcka rikets 
+behov av träd för upp förandet av byggnader och skepp. 
+I skogens utkanter växer olivträd av god kvalitet, och 
+många byar i trakten har förädling av oliverna till olja 
+som en viktig näring. De som ogräs betraktade sorge­
+tallarna som är relativt van liga i Thalamur finns även i 
+Ner mada, och liksom i grann landet gör man sitt bästa 
+för att bli av med dem efter  som de anses suga ut jorden 
+och inte duger särskilt bra till vare sig bränsle eller bygg­
+material.
+De bördigaste områdena i Kamrida, och för den delen i 
+hela riket, ligger i gränstrakterna mot Thalamur i relativ 
+när het till floderna Tehar och Yil. På dessa böljande fält 
+driver idoga bönder målmedvetet upp korn och vete, 
+men de styrande är medvetna om riskerna med att en så 
+stor del av rikets matförsörjning kommer från en trakt 
+som lätt skulle kunna hotas av den mäktiga grannen 
+
+
+--- Page 4 ---
+4
+Nermadai norr i tider av krig. Således är även de södra delarna 
+av Kamrida väl uppodlade, även om avkastningen från 
+jordbruket där inte alls är lika god. Tidigare var Kamrida 
+genomkorsat av väl underhållna vägar, men även om 
+Ner madas styrande har gjort vissa ansträngningar att 
+underhålla vägnätet har det i viss mån förfallit. Den 
+gamla huvudvägen norrut, från huvudstaden Heramon 
+via Thara och vidare in i Thalamur, är dock fortfarande 
+i jäm förelsevis gott skick och stenläggningen bättras på 
+med någorlunda jämna mellanrum.
+På Arighal finns mindre skogspartier av lövträd som 
+sällan blir särskilt stora, vilket gör att man har tillgång 
+till ved och trä till enklare bruksföremål men sällan för 
+större byggen. Utöver ett icke föraktligt antal vingårdar 
+od lar man huvudsakligen dinkel och en del andra sorters 
+vete, men öns livsmedelsproduktion till lands är i stor 
+utsträckning baserad kring får ­ och getskötsel. 
+I hela Nermada står fisket för en stor del av anskaffandet 
+av mat; på Arighal är detta framför allt centrerat till Ve­
+xial bukten, där många havsfiskar av olika slag föredrar 
+att leka. Ön är här och var svår att landstiga på då vissa 
+delar av kusten består av höga klippor, men det finns 
+ock så långa sandstränder med endast svag lutning uppåt. 
+De båda handelsinriktade städerna Kero och Loam har 
+väl konstruerade hamnar som kan ta emot stora skepp, 
+medan man i Vexial oftare använder sig av flatbottnade 
+fiske skutor som kan dras upp på stranden och bara har 
+ett fåtal pirar där handelsfartyg kan lägga till.
+Både Arighal och Kamrida har i allmänhet varma och 
+ganska torra somrar. Vintrarna är sällan särskilt kalla 
+men kan ofta komma med kraftiga regn från havet, i 
+synnerhet på Arighal. Någon enstaka gång faller det snö 
+över det fåtal bosättningar som är belägna högt upp på 
+de ikamriska bergens sluttningar.
+Djurlivet varierar mellan ö­ och fastlandsdelen, främst i att 
+Arighal sedan länge ganska effektivt har rensats på såväl 
+monster som större vilda djur. I grottor längs Arighals kust kan man finna mindre bestånd av ferfaker, vilka 
+regelbundet tar boskap men tycks ha lärt sig att frukta 
+människor. I Kamridas skogar finns det ännu bestånd av 
+större hjortdjur och en del bestar; bland annat sägs det 
+att det finns hyggelmonster i djupet av Kejsarskogen och 
+högst sannolikt även i Sidra. Somliga påstår att det ännu 
+finns troll i det ikamriska bergsmassivet, men detta anses 
+av många (i synnerhet längre söderut) vara rena rykten. I 
+små byar i de allra nordvästligaste delarna av landet har 
+man också flera gånger rapporterat att man skådat en 
+drake som flyger över Sidraskogen inne i Thalamur, men 
+så vitt man vet har den aldrig härjat inne i Nermada.
+Huvudsakligen på fastlandet, men i mindre utsträckning 
+även på Arighal, finns det fornlämningar som vittnar 
+om traktens mycket långa historia av civilisation. Många 
+gamla ruiner har med tiden rivits för att ge såväl plats 
+som material till nya byggnader, men här och var finns 
+de gamla resterna kvar. Vissa adelsmän är restriktiva med 
+att låta sina underlydande hämta sten från ruinerna efter­
+som de ser de gamla lämningarna som påminnelser om 
+det ärorika förflutna, medan andra anser att det gamla 
+måste lämna plats åt det nya; således kan före kom sten 
+av mer eller mindre åtgångna husgrunder och lik nande 
+variera märkbart från ett baroni till ett annat. 
+Någonting som man dock nästan alltid drar sig för är 
+att förstöra gamla gravar, eftersom detta anses vara ett 
+mycket dåligt omen nästan oavsett vilken tro man har. 
+Den anses också betyda otur att skända gamla gränsrösen 
+och liknande markeringar, även om de sedan länge är 
+inaktuella, eftersom det sägs att de döda som en gång 
+mätte upp marken då inte kan få ro. Vidskepliga bönder 
+och länsherrar ser hellre att sådana råmärken begravs i 
+jordhögar än tas bort.
+Överallt i Nermada spinns intriger i adelsmännens borgar, och de vackraste platser kan en 
+dag förvandlas till slagfält.
+
+--- Page 5 ---
+5
+Nermada
+Historia
+Colonier kunna vi icke vara; thalasker vilja vi icke bliva; låtom oss vara nermadier!
+ –Tillskrivet administrat Reubin Taoradir Mastrani (1361 – 1392 e. D.)
+Introduktion
+Det finns goda skäl att hävda att Nermadas historia är 
+det coloniska imperiets. Innan området föll under kej­
+sardömets makt var det en del av det forna Danarth, men 
+jämförelsevis få uppteckningar finns numera kvar från 
+det långa danarthiska styret. För ingående be skriv nin­
+gar av imperiets historia hänvisas till böckerna Legen der 
+& hemligheter , Geografica Mundana  och Thala mur, efter­
+som denna text har sitt fokus på Nermadas tid som obe­
+roende statsbildning. Då alla beskrivna händelser äger 
+rum efter Daak (e. D.) anges inte denna förkortning vid 
+årtalen.
+Rikets grundande
+I samband med att de områden som nu är Nermada 
+skakades av våldsamma uppror mot det tyranniska 
+coloniska styret under 1250­talet bestämdes det att såväl 
+fastlandsdelen som ön Arighal skulle ställas under styre 
+av en duglig administrat, vilken hade kejsarens direkta 
+uppdrag att hålla ordning i provinsen.
+De första administraternas namn har gått förlorade 
+med tiden, men någon som inte har blivit glömd är 
+kej sardottern Nerma. Hon var tvillingsyster till den bli­
+vande kejsaren Aminerva Thalama av Mastrani­dynastin, 
+och historiker tror allmänt att hon fick uppdraget inte 
+minst för att visa sin duglighet för den händelse att hen­
+nes sjuklige bror inte skulle visa sig kapabel att ta över 
+sty ret av det coloniska imperiet. Hennes tid som ad mini­
+strat blev mycket lyckad, och hon sägs ha skapat trohet 
+till imperiet i en tid när upprorsstämning och sönderfall 
+fanns i hela riket.
+När gamle kejsaren dog gav Aminerva Thalama som ny 
+kej sare sin syster fortsatt förtroende att hålla ordning 
+i den sydliga provinsen. Det berättas att de båda upp­
+rätt höll en tät korrespondens och ansåg sig stå varandra 
+nära, även om deras plikter hindrade dem från att nå­
+gon sin träffas igen.
+Emellertid var det coloniska imperiets dagar räknade, 
+och år 1330 kom det att splittras i en östlig och en västlig 
+del. Kejsaren avrättades eller mördades, beroende på 
+ens syn på saken, och Nerma slöt sin provins gränser 
+mot norr eftersom hon fruktade total anarki till följd 
+av broderns död. Snart nådde hennes territorium sin 
+största geografiska omfattning när ståthållaren över 
+ön Kathar kontaktade henne och bad att få ställa ön, 
+tidigare en del av det Coloniska imperiet, under hennes 
+beskydd.
+På grund av senare händelser har nästan all doku men ta­
+tion från deras avtal gått förlorad, och därmed vet man 
+inte riktigt hur det kom sig att ståthållaren ifråga vare sig kontaktade den västcoloniske kejsaren eller förklarade 
+sig oberoende under imperiets sönderfall. Vad som är 
+känt är att Nerma i och med anslutandet av Kathar in­
+förde poster som kallades kantonsfurstar, vilka vardera 
+hade ansvar för att administrera Arighal, Kamrida res­
+pek tive Kathar och svarade direkt inför henne. (Dessa 
+kan tons furstar fick senare, under 1400­talets allra sista 
+år, istället titeln hertig.) Av rent geografiska skäl kom 
+dock Kathars härskare att förbli mycket självständiga.
+År 1338 avled Nerma Thalama, och hennes son tog över 
+uppgiften att administrera den i praktiken självständiga 
+provinsen. Detta skedde med den västcoloniske kej­
+sa rens uttryckliga gillande, sannolikt eftersom denne 
+redan planerade ett fälttåg för att åter ställa Östcolonan 
+under sitt styre och inte ville riskera att dra på sig vrede 
+från någon som legitimt skulle kunna göra anspråk på 
+tronen genom släktskap med Mastrani­dynastin. När 
+kej sa ren så förde sina trupper österut fick han visst stöd 
+av det som nu kallades Nermada (”Nermas land”) med 
+trupp  trans porter över Thalahavet.
+En viss oro uppstod efter återerövringen av Östcolonan. 
+Folket såväl som adeln i Nermada ansåg sig vara under 
+gott styre och fruktade att härskarna i norr nu skulle vilja 
+åter integrera ens land i kejsardömet. Skickligt politiskt 
+manöv rerande gjorde dock att detta inte inträffade, 
+inte minst när man med stor framgång målade upp an­
+komsten av cirefalier som flydde från den misslyckade 
+ocku pationen av nuvarande Soldarn 1377 som ett mili­
+tärt hot. Det krigströtta och splittrade coloniska im  pe riet 
+överlät med varm hand åt Nermadas folk att själva för­
+svara sina gränser.
+I realiteten utgjorde cirefalierna aldrig något riktigt hot, 
+i den mån de alls kom som erövrare, och de integrerades 
+snabbt och förvånansvärt genomgående i sitt nya hem­
+land. Som Nermadas framsynta härskare hade förutsett 
+blev också återföreningen av imperiet kort, och år 1450 
+till 1456 utkämpades det krig som gjorde östra Colonan 
+självständigt under namnet Consaber. Det är sannolikt, 
+men inte bevisat, att Nermadas dåvarande ledare åt min­
+stone finansiellt bidrog till sabriernas krigföring, även 
+om man utåt talade för det rättfärdiga i kejsarnas krig för 
+att hålla ihop imperiet.
+Efter det sabriska frihetskriget följde en period av spänd 
+oro, där Nermadas härskare agerade mycket försiktigt för 
+att inte provocera det sårade Thalamur, som Västcolonan 
+numera börjat kallas. Emellertid kom inget militärt an­
+grepp från norr. Istället kom det unga landet att härjas 
+av stridigheter, och Nermas ätt att slockna ut, när den 
+man som gått till historien som den Galne Drakprästen 
+vållade ett uppror.
+
+--- Page 6 ---
+6
+Nermada
+Slutet på en epok – den Galne Drakprästen skövlar Heramon. Bland de många stupade är Yerak Davadir Mastra ­
+ni, den sista ättlingen till Nerma Thalama.
+
+--- Page 7 ---
+7
+Nermada
+Drakprästens tid
+Exakt vem han var vet ingen säkert, då inga uppteckningar 
+om hans namn har överlevt, men såväl legender som 
+många historiker hävdar att det rörde sig om en av de 
+mystiska Drakväktare som tjänat som präster i det gamla 
+Colo nans drakkult. Vad man vet är att han framträdde 
+tidigt på våren år 1493 och samlade en mindre armé av 
+fanatiska anhängare runt sig – huvudsakligen män och 
+kvinnor av folket som i hemlighet bevarat den gamla 
+dyrkan av drakarna som gudomliga varelser.
+Drakprästen svepte regelbundet fram över himlen buren 
+av en mäktig drake, och han deklarerade öppet sin avsikt 
+att utropa sig till landets kejsare och krossa den etablerade 
+makten. Våldsamma strider följde när folk anslöt sig till 
+honom eller satte sig till motvärn, och i ett fruktansvärt 
+slag något halvår efter att han först gett sig till känna 
+plund rade den självutnämnde kejsaren tillsammans med 
+sin här huvudstaden Heramon och brände Nermas sista 
+ättling levande i det ståtliga Administratens palats.
+Lika plötsligt som han dykt upp försvann sedan den Gal­
+ne Drakprästen ur historien. Den mest allmänt accep­
+te rade berättelsen om hans fall gör gällande att han 
+för sökte leda sina trupper över Arighalsundet för att 
+krossa de sista utposterna av motstånd, och att tappra 
+sjö sol da ter lyckades sänka upprorsmakarnas skepp i ett 
+av gör ande sjöslag. I samband med detta ska hans drake 
+ha ge nom borrats av ett regn av pilar från såväl enkla bå­
+gar som tunga ballistor och döende störtat i havet och 
+drunk nat tillsammans med den vansinnige usurpatorn.
+Det är väl belagt att ett mäktigt slag ute i sundet blev 
+döden för åtskilliga av Drakprästens trogna, men upp­
+gif terna om att han själv ens ska ha funnits närvarande 
+vid striden är sentida och har inget egentligt stöd i det 
+historiska källmaterialet. De flesta lärda som studerat 
+saken bedömer det dock som rimligt att han dog eller 
+flydde vid tillfället eller åtminstone i nära anslutning till 
+det, eftersom det inte existerar några som helst uppgifter 
+om att han ska ha synts till därefter.
+Kungarikets bildande
+I efterdyningarna av upproret kom Nermada att genom­
+gå flera fundamentala förändringar. För det för  sta ut­
+ropa des för första gången en administrat som visser ligen 
+var av en gammal och aktad familj men likväl saknade 
+blods band till Nerma Thalama.
+De styrandes grepp om folket hårdnade också markant 
+och man blev mer uppmärksam på tendenser till upp­
+rors stämningar, även sedan man nedgjort de som stått 
+Drak prästen nära och de som kunde bevisas ha begått 
+grym heter i hans namn.
+Slutligen genomförde man ett antal reformer gällande hur 
+landet skulle styras, och lade grunden för de adelstitlar 
+som ännu idag är de gällande; det är uppenbart om än 
+aldrig direkt erkänt att man i detta tog inspiration från 
+det stabiliserande Consaber. Detta inflytande sågs inte 
+med helt blida ögon av grannen i norr, men de högre 
+samhällsklasserna i Nermada ägnade sig med stor iver åt 
+förhandlingar och ränkspel för att säkra sitt oberoende.En triumf i denna process var när Nermadas härskare 
+Aramo Elinneir Lohaki år 1534, i närvaro av rep resen­
+tanter från såväl Thalamur som Consaber, kunde över  ge 
+sin titel som administrat och låta sig krönas till ko nung. 
+För att inte förhäva sig valde man den sabriskt in spi­
+rerade titeln istället för att kalla monarken för kejsare. 
+(När man berättar om landets historia, men inte i his  to­
+rie vetenskapliga verk, är det mycket vanligt att referera 
+till även de föregående seklernas administrater från 
+Nerma och framåt som ”kungar” och ”drottningar”.)
+De första kronstriderna
+Under perioden 1609–1610 drabbades landet åter av 
+svåra inbördes stridigheter. Den siste kungen av släkten 
+Lohaki avled barnlös och med de dåvarande lagarna var 
+det inte enkelt att reda ut vem av hans avlägsna släktingar 
+som stod på tur att ärva tronen.
+Det som gjorde att det blev krig (ett ord som historiker 
+i Nermada undviker till förmån för formuleringar som 
+”strid” eller ”konflikt”) var dock att en ung adelsdam, 
+Darena Varolira Temelak, tillkännagav att hon äktat 
+kungen på hans dödsbädd. När hon lät sig krönas till re­
+gerande drottning fick hon stöd av sin mäktiga släkt och 
+många andra adelsmän som fann henne karismatisk och 
+duglig, även om få egentligen trodde på hennes uppgifter 
+om äktenskap. Dock hade hon tillräckligt många emot 
+sig för att det skulle bli väpnat uppror under ledning 
+av den inflytelserika släkten Namator, med stöd av åt­
+skilliga av den avlidne kungens släktingar. De politiska 
+turerna och drabbningarna kallas gemensamt för Första 
+kron striden. 
+Efter mer än ett års strider kapitulerade drottningens 
+anhängare samfällt i utbyte mot amnesti och att ätten 
+Teme lak fick behålla sitt gamla grevedöme; drottningen 
+begick självmord genom att ta gift. Efter dessa händelser 
+valde den splittrade, krigströtta och nära nog ruinerade 
+släkten Lohaki att inte göra vidare anspråk på kronan. 
+Istället stödde man att upprorsledaren Sanik Milranir 
+Namator kröntes till kung.
+Nermadas folk fick tyvärr inte njuta av fred i mer än 
+trettio år, även om nästa period av oro var såväl kortare 
+som avsevärt mindre blodig. Vad som hände i Andra 
+kron striden år 1641 var att den revanschlystna släkten 
+Te me lak, som tålmodigt bidat sin tid och i lönndom 
+knu tit kontakter med olika grupper av hyrsvärd, ledde 
+ett överraskande anfall mot huvudstaden. Man av rät­
+tade/mördade kungen som hämnd för sitt nederlag en 
+ge ne ration tidigare, men hann aldrig kröna någon egen 
+mo nark innan man besegrades av en allians av kon kur­
+rerande ätter.
+Under Andra kronstriden gjorde den från Soldarn in­
+flyttade ätten Silversparre (nermadiska Silvaspar) stora 
+in satser för att hjälpa familjen Namator att återta sin 
+tron, och kom därmed att vinna kungamaktens gunst. 
+Efter och under kriget avrättades eller fördrevs huset 
+Temelaks medlemmar, i de fall de inte accepterade att 
+avsäga sig sina namn och giftas in i mindre hus, och den 
+mör dade kungens enda överlevande barn Indra Kar na­
+rira Namator blev ny drottning.
+
+--- Page 8 ---
+8
+NermadaFredsåren och Kampen om 
+Kathar
+Seklerna efter Andra kronstriden kom med rätta att 
+kallas de tvåhundra Fredsåren. I sagoberättarnas legender 
+om gamla tider har den delen av Nermadas historia ett 
+närmast mytiskt skimmer över sig och betraktas som en 
+guldålder av fred och välstånd.
+Även om berättelserna om skördarnas överflöd, folkets 
+vällevnad och kungarnas visdom och godhet är ordent­
+ligt överdrivna rörde det sig om en period där Nermada 
+inte drogs in i några större konflikter, och ingenting 
+tyder heller på att svält eller naturkatastrofer ska ha före­
+kommit i någon nämnvärd omfattning under Fredsåren.
+Det hela varade fram till år 1862, när den dåvarande her­
+tigen av Kathar utropade sig till kung och bröt kon takten 
+med övriga Nermada. Även om det reella inflytandet 
+över ön alltid varit begränsat kunde man förstås inte 
+visa svaghet genom att acceptera detta, och på hösten 
+av seglade så en flotta från Arighal för att återinlemma 
+Kathar i riket och krossa den upproriske vasallen. Detta 
+blev början på Kampen om Kathar.
+När man väl anlände till Kathar fann man dock sitt forna 
+hertigdöme redan härjat av stridigheter, och hamnade i 
+konflikt med en motståndare man varken förväntat eller 
+önskat sig. Kathars självutnämnde kung hade nämligen 
+låtit genomföra ett flertal anfall mot handelsfartyg från 
+framför allt Soldarn för att fylla sina skattkistor, och den 
+soldiske rikskonungen Sold X hade som svar på detta 
+invaderat ön.
+I och med nermadiernas ankomst vidtog så ett krig mel­
+lan tre olika styrkor. Samtliga dessa gjorde anspråk på 
+att företräda det legitima styret av ön, eftersom soldierna 
+an såg att Nermada genom sin oförmåga att hålla Kathars 
+her tig under kontroll förlorat sina anspråk. Att den så 
+kallade kungen av Kathar stupade under vinter må na­
+derna tidigt år 1863 gjorde därmed inte slut på kriget, 
+efter som varken Soldarn eller Nermada ville vika sig när 
+det kom till frågan om vilka som skulle härska över ön.
+En vapenvila för att möjliggöra förhandlingar slöts först 
+ett år senare, efter att Kathar härjats svårt och mängder 
+av soldater från båda sidor fått sätt livet till, och i freden 
+i Katharsis år 1866 avgjordes slutligen öns öde. Vid det 
+laget hade kung Mazoum Heranir Namator bestämt sig 
+för att svårigheterna i att hålla den omstridda trakten 
+under nermadiskt styre var större än det var värt, och 
+istället för att tillsätta en ny hertig och riskera att åter 
+väcka soldiernas vrede valde han att avstå Kathar till 
+Soldarn.
+I utbyte mot detta fick man goda handelsavtal, flera fina 
+äktenskapsmöjligheter (bland annat gifte sig kun gens 
+dotter med Soldarns kronprins, den blivande riks ko nun­
+gen Pa ro wyn IX), samt en enligt ryktet ofantlig summa 
+pen gar. I någon mån betraktades förstås landavträdelsen 
+som ett nederlag och orsakade ett visst miss nöje inom 
+den ner ma diska adeln, men samtidigt insåg många att 
+det fak tiskt var ett närmast ogörligt projekt att behålla 
+kon trol len över Kathar. Dessutom riskerade man uppror 
+om man skulle fortsätta tvinga iväg soldater över havet 
+för att slåss för en trakt de inte kände någon koppling 
+till.
+De kommande århundradena utmärks främst av de 
+stund tals våldsamma sammanstötningarna mellan sa mo­ri tro ende och de som följde den från mitten av 1800­talet 
+in tro du ce rade Daaktron, vilket behandlas närmare i ka­
+pit let om religion.
+I övrigt fortsatte det mesta som tidigare i landet, med 
+skill naden att monarkerna aktivt började arbeta för att 
+minska hertigarnas makt för att undvika att någon adels­
+man åter blev mäktig nog att bryta sig loss. Även om 
+tiderna inte alltid var så hårda framställs den här pe ri­
+oden ofta på ett mer jordnära sätt än de legend om susade 
+Freds åren.
+Relationerna till Soldarn blev stadigt bättre även om det 
+var något av en smolk i bägaren att den rikskonungaätt 
+man gift in sig i snart tvingades att lämna ifrån sig tronen, 
+så att det nermadiska inflytandet inte blev riktigt det 
+man hoppats på. Den största förändringen av samhället 
+under denna tid gällde annars arméns utformning, där 
+man under det tidiga 2100­talet kom att ta allt starkare 
+intryck från Consaber och dess tungt rustade riddare.
+Savakonflikten
+År 2205 drogs Nermada åter in i krig, den så kallade 
+Savakonflikten, vilket hade kunnat hota landets existens. 
+Denna gång rörde det sig inte om aldrig så blodiga interna 
+strider, utan kriget kom i form av rikets stora skräck – en 
+väpnad konflikt med det mäktiga Thalamur. Vad som 
+hände var att magikraten Veshin Daganir Nogila som 
+rege rade över den sydostliga provinsen Sava invaderade 
+norra Nermada efter att ha hävdat sig ha bevis för att 
+greve Caraleigh av Thara konspirerade mot honom.
+Den verkliga orsaken till det ursinniga angreppet, som 
+sak nade förankring hos de andra magi kraterna i Thala­
+mur, har aldrig riktigt kunna fast ställas, och det har spe­
+ku lerats i att Veshin helt enkelt led av förföljelsemani. 
+Trots att angriparna inte hade Thalamurs fulla militära 
+styrka bakom sig krossade de ändå det väpnade mot­
+ståndet och lade snabbt under sig nordöstra Nermada, 
+med undantag för ett baroni som under ätten Fervakons 
+styre höll ut i nästan ett halvår trots att man var avskurna 
+från sitt hemland och omgivna av fiender. Motvilligt drog 
+sig nermadierna tillbaka och befäste efter bästa förmåga 
+en ny gräns på Teharflodens södra strand, väl medvetna 
+om den överhängande risken för att magikratens agg res­
+sioner skulle fortsätta.
+Som motdrag intensifierade man det politiska arbetet, 
+och även om de exakta detaljerna är okända anses det 
+nu mera att Nermadas dåvarande ambassadör i Con saber 
+hade en inte blygsam del i att underblåsa gräns kon flik­
+terna som var under uppsegling i Colonan. Mindre stri­
+der eskalerade till att år 2206 åter bli ett fullskaligt krig 
+mel lan Thalamur och Consaber, vilket kom att plåga län­
+derna i femton år och göra det omöjligt för Thala mur att 
+låta Savas magikrat använda trupper till att genomföra 
+några ytterligare angrepp söderut.
+Efter att den thalaskiska ätten Arginakus själva valt att 
+avsätta Veshin Daganir Nogila som sin ledare på grund 
+av dennes alltmer uppenbara störningar genomförde 
+Ner madas trupper så en koncentrerad militärkampanj 
+under ledning av greve Caraleigh år 2209. Då thalaskerna 
+var så trängda i strider längre norrut lyckades man återta 
+sina förlorade områden, men i ett djärvt och mycket kon­
+tro ver si ellt drag nöjde man sig inte med detta. Istället 
+plund rade man den sydthalaskiska staden Strakh och 
+
+--- Page 9 ---
+9
+Nermada
+fortsatte åtskilliga mil upp över östkustens slätter tills 
+man slutligen korsade floden Hirath.
+Ännu hade man bara mött närmast symboliskt motstånd 
+från den mycket splittrade thalaskiska armén, och kunde 
+inleda en belägring av Yndrath. Vad som sedan skedde 
+förvånade många av de som fick uppleva det, men har 
+senare hyllats som ett av de beslut som gjort mest för att 
+säkra Nermadas framtid: man valde att dra sig tillbaka till 
+sin gamla gräns vid Yilfloden och såväl skona Yndrath 
+som återlämna Strakh i thalaskisk ägo.
+Vid flodens stränder lämnade man efter sig åtskilliga 
+meter  höga stenpelare, liggande men redo att ställas upp, 
+samtliga med inskriptioner som angav att platsen ut­
+gjorde riksgräns mellan Thalamur och Nermada. Inom 
+några få veckor hade thalaskerna låtit resa dem alla, och 
+mer än 700 år senare markerar de fortfarande de båda 
+ländernas gränser.
+Eftersom den forne magikraten anfallit utan krigs för­
+kla ring och inte haft mandat att starta striderna hade 
+man formellt inte legat i krig, varför något fredsfördrag 
+hel ler aldrig undertecknades. Under åren närmast efter 
+Sava kon flikten genomfördes dock flera statsbesök för att 
+poäng tera de goda relationerna mellan grannländerna.
+Kriget fick stora konsekvenser inte minst för Nermadas 
+nationella identitet, men även för dess inrikes makt­
+förhållanden. Man hade visat omvärlden att man var 
+redo att slåss för sitt oberoende, och att man därtill hade 
+såväl dugliga krigare som slipade politiker.
+Den tidigare ganska marginaliserade släkten Fervakon 
+och dess tappra kämpar vann berömmelse utrikes och 
+stor respekt inom landet, men samtidigt föll den sabrisk­
+ättade familjen Caraleigh i onåd i Consaber. Deras poli­
+tiska motståndare i det gamla hemlandet ansåg nämligen 
+att de borde ha visat sin solidaritet genom att inte dra sig 
+ur Thalamur, utan istället fört in Nermada på Consabers 
+sida i det stora kriget.
+Under åren efter krigsslutet migrerade familjen nästan 
+helt till Nermada, och den sabriska grenen av släkten 
+slocknade ut inom några få generationer. Man var dock 
+fortfarande välsedda i Nermada och förblev där grevlig 
+ätt.
+Savakonflikten kom emellertid också i praktiken att 
+inne bära slutet på en epok i och med släkten Namator 
+för lorade sin status som kungafamilj. På sommaren 
+2211 tog en stor del av befolkningen till vapen för att 
+av sätta kung Kader Torgalir Namator. Denne ansågs ha 
+visat prov på inkompetens och bristande handlingskraft 
+under thalaskernas anfall sex år tidigare, och nu ledde 
+adelsätterna Lohaki och Caraleigh en revolt mot honom.
+En bister vinter dämpade stridslystnaden något, men på 
+våren året därpå led de kungatrogna ett svårt nederlag i 
+slaget vid Im’moran. I detta läge antog Kader Torgalir 
+Nama tor ett erbjudande om att abdikera och dra sig 
+tillbaka för ett liv i ett av den samoriska lärans kloster till­
+sammans med sina två söner. I och med detta upphörde 
+Namators 600­åriga välde i Nermada, även om familjen 
+fortsatt att vara både betydelsefull och aktad.
+Under några månader stod Nermada utan formell regent 
+innan många förhandlingar, intriger och rena mutor 
+ledde fram till att greve Connacht Lifemir Maneras 
+accep  te rades av adeln som ny kung. Som en del i att 
+etab lera den nya dynastin, och inte minst för att hålla 
+fa mil jen Namator på mattan, avskaffades samtidigt for­mellt de hertigtitlar vilkas betydelse minskat under de 
+fö re gå ende århundradena.
+I fortsättningen blev monarken istället direkt överordnad 
+grevarna. Upproret och maktskiftet kallas för den Tredje 
+kronstriden, även om den ofta betraktas som en del av 
+Savakonflikten.
+De goda kungarnas tid
+Under ätten Maneras goda styre repade sig Nermada 
+successivt från efterdyningarna av krigen, även om det 
+tog ett antal år innan landet verkligen frodades igen. 
+Stolt heten över nationen tilltog och många av de mest 
+kända hyllningssångerna och ­dikterna till rikets ära 
+till kom under denna period, liksom ett flertal ännu be­
+römda målningar och statygrupper.
+Det dröjde mer än 200 år innan Nermada drabbades 
+av stridigheter av större omfattning än strandhugg från 
+pirater och räder av monster från Sidraskogen, och den 
+kon flikt som till slut blossade upp var fortfarande av 
+avsevärt mindre omfattning än Kronstriderna. (Detta 
+2449 års krig behandlas i Religionskapitlet.)
+Historiker talar ofta om Maneras regim som en period 
+av lycklig befolkning och olyckliga kungar, och det finns 
+abso lut fog för den framställningen. Många av familjens 
+monarker var kända såväl för sin melankoliska läggning 
+som för sin stora omsorg om landet och de var mer än 
+redo att åsidosätta sina egna önskningar för rikets bästa. 
+Ingen av de kungar och drottningar som släkten krönte 
+har heller blivit känd för sin grymhet, vilket är mer än 
+vad som kunnat sägas om flera tidigare härskare.
+Från början av 2640­talet härjades Nermada av flera svåra 
+epidemier, vilket dels gav upphov till en märkbar be folk­
+nings minskning och dels innebar slutet på Maneras 
+dynasti. Skildringarna av att varje man och kvinna av 
+ätten dog i farsoterna är överdrivna men träffande, i den 
+mån att man faktiskt drabbades hårt och tvingades inse 
+att man snart skulle förlora greppet om makten.
+I detta läge valde kung Davad Keshinir Maneras att år 
+2649 kalla till riksdagar för att förhandla om ett fred­
+ligt överlämnande av tronen till en starkare ätt, någon­
+ting som i efterhand har gjort honom hyllad för sin 
+klok het och godhet. I enlighet med hans personliga 
+vilja kom kronan i händerna på den välbeställda släkten 
+Varmagash, även om kungen själv dukade under för en 
+koppepidemi innan han kunde abdikera.
+Varmagash era
+Varmagash era har över lag varit en period av fred och 
+stabilitet. Det rådde viss oro åren runt 2766 när kung 
+Gaedas Nafasir Varmagash ville att landet skulle ta 
+ställning för Thalamur i det pågående kriget mellan Con­
+saber och Thalamur, men talet om uppror mot regenten 
+mattades av när denne lät sig övertalas att hålla Nermada 
+utanför de mäktiga grannarnas krig.
+Under ättens regim har landet sett många tekniska land­
+vinningar introduceras och man kan allmänt säga att lär­
+domen har spritt sig, samtidigt som rikets diplomater har 
+fortsatt den sedan århundraden utvecklade strategin att 
+skapa allianser genom äktenskap och försöka att und­
+vika att framstå som kappvändare.
+
+--- Page 10 ---
+10
+NermadaUnder det Pereinska frihetskriget tog Nermada officiellt 
+ställning för att Thalamur hade rätt att bevara sina 
+gränser. Man blandade sig dock inte i striderna annat än 
+genom enstaka hetsporrar av släkten Fervakon som på 
+eget bevåg reste till Pereine och stred mot upp rors män­
+nen, inte minst i syfte att få erfarenhet av riktig kamp.
+Många av dem kom tillbaka som brutna individer efter 
+de fruktansvärda upplevelserna men hyllades som hjältar 
+av sina fränder trots att de stått på den förlorande sidan 
+i kriget. Att riddare från Nermada stridit på thalaskernas 
+sida fick inga nämnvärda konsekvenser för relationerna 
+till vare sig Consaber eller de nya republikerna, eftersom 
+deras närvaro i praktiken knappast märktes i de för­
+virrade och blodiga drabbningarna.
+Vad som dock har drabbat landets utrikespolitiska rela­
+tioner är att den regerande drottningens make Conner, 
+en yngre bror till sabriernas kung Constantin XIV, år 
+2963 avled i Heramon. Även om allt talar för att kung 
+Conner, som föll ihop på sin stol när han beskådade 
+ett tornerspel, drabbades av någon sorts svår invärtes 
+sjukdom spred sig snart rykten om att han i själva verket 
+blivit mördad.Consaber har mer än antytt att det var Thalamurs 
+mäktiga underrättelsetjänst Rakhori som lät mörda drott­
+ningens gemål, men bland borgarna i huvudstaden dök 
+det upp påståenden att han bara blivit febersjuk – och 
+att de cirefaliska läkare som genast kallades till palatset 
+i själva verket hade förgiftat honom. En ilsken pöbel 
+vandaliserade flera hus tillhörande cirefalier i staden och 
+lynchade nästan ett dussin personer innan stadsvakten 
+slutligen samlade sig och skingrade upploppsmännen.
+Några personer som bedömdes ha varit pådrivande i 
+mob ben dömdes och avrättades för mord, men offrens 
+ur sprungs land Caserion har rest skarpa protester och 
+krävt offentliga ursäkter efter händelserna. Con saber 
+läg ger inte öppet någon skuld på Nermada för kunga­
+bro derns död, men många sabrier har blivit markant av­
+stånds  ta gande och har börjat dra ner på sina kontakter 
+med riket. Om inte relationerna snart förbättras kan 
+detta, tillsammans med caseriernas vrede, komma att in­
+verka mycket menligt på handeln.
+Årtal Händelse
+1292 Nerma Thalama av Mastrani­dynastin blir 
+administrat av Kamrida och Arighal
+1330 Coloniska imperiet splittras när kejsarstaven går 
+förlorad
+Nerma Thalama sluter sin provins gränser
+1332 Kathar ansluts till Nerma Thalamas områden
+1338 Nerma Thalama avlider och hennes son tar över 
+styret
+1343 Namnet “Nermada” finns belagt första gången
+1345 Västcolonan återerövrar de östliga områdena med 
+stöd från Nermada
+1456 Östcolonan slår sig fritt under det nya namnet 
+Consaber
+1493 Den galne drakprästens uppror plågar landet
+Den siste administraten av Nermas ätt dör
+Josefas Margadhir Lohaki blir ny administrat och 
+inleder familjen Lohakis tid som härskare
+1534 Aramo Elinneir Lohaki kröns till Nermadas första 
+kung
+1609 Första kronstriden utbryter när kungen avlider 
+barnlös
+Drottning Darena Varolira Temelak är under ett år 
+sin ätts första och sista monark
+1610 Första kronstriden slutar
+Sanik Milranir Namator blir första kung av sin släkt
+1641 Andra kronstriden inleds med att släkten Temelak 
+anfaller huvudstaden och mördar kungen
+Släkten Temelak utplånas
+Indra Karnarira Namator blir drottning
+1707 Den politiskt oduglige vällustingen Kung 
+Orin Ergashir Namator mördas utan att större 
+ansträngningar görs för att finna mördaren
+1862 Kathar bryter med Nermada och förklarar sig 
+självständigtÅrtal Händelse
+1862 Krig mellan Soldarn, Nermada och Kathar
+1866 Nermada avträder Kathar till Soldarn
+1935 Daaktroende missionärer från Jargiska kejsardömet 
+börjar predika i Nermada
+2205 En av magikraterna i Thalamur låter invadera norra 
+Nermada och startar Savakonflikten
+Stora delar av grevskapet Thara går förlorade
+2209 Nermadiska trupper återtar de erövrade 
+territorierna
+Vapenvila mellan Nermada och Thalamur
+2211 Tredje kronstriden börjar med ett uppror mot 
+kungen
+2212 Tredje kronstriden slutar
+Kungen ger upp både sina och sin ätts anspråk på 
+kronan
+Connacht Lifemir Maneras utses till ny kung av 
+Nermada
+2449 Interna konflikter i familjen Silvaspar drar in delar 
+av Kamrida i ett mindre inbördeskrig
+2649 Den utdöende släkten Maneras avsäger sig kronan
+Ätten Varmagash blir ny kungafamilj
+2849 Drottning Satima Lennaira Varmagash insjuknar 
+och dör oväntat dagarna innan hon tänkt utfärda 
+ett dekret som skulle göra Jargisk Daaktro till 
+statsreligion
+2898 Före detta soldater från det fallna Voromanien 
+härjar som pirater längs Kamridas och Arighals 
+kuster innan de krossas i ett sjöslag sydväst om 
+Dharim
+2963 Drottning Avhene Ranodira Varmagash make 
+avlider i en plötslig sjukdom
+Kronprinsessan Zamoni Connerira Varmagash föds
+2967 NuViktiga årtal i Nermadas historia
+
+--- Page 11 ---
+11
+Nermada
+Nermadas religioner
+De två dominerande religionerna är den samoriska läran 
+och Daaks tro. Den sistnämnda är sedan uppdelad i en 
+sabriskt influerad och en större, mer jargisk, del vilka allt 
+emellanåt står i konflikt med varandra. Vad som också 
+utmärker Nermada på området är att en jämförelsevis 
+stor del av befolkningen, delvis på grund av influenser 
+från Thalamur, inte dyrkar någon gud alls.
+Den ursprungliga tron i Nermada var dels en numera 
+ganska perifer dyrkan av Jordmodern under hennes 
+gamla coloniska namn Sastera, dels hemliga sekter som 
+fort farande höll drakarna och deras gamla prästerskap 
+Drak väktarna för heliga. Efter Drakprästens fall (se 
+stycket om Historia) dog drakdyrkan ut så gott som full­
+ständigt. Landet kom rentav att bli hemvist åt ett fåtal 
+grupper tillhörande den pseudoreligiösa sekten Drä­
+parna som aktivt sökte efter drakar att nedgöra. Dessa 
+har alltjämt i praktiken kontroll över två ensligt belägna 
+byar i Nermada.
+Samorismen
+Samor den Heliges budskap introducerades förmodligen 
+på Kathar kring år 1200, men började inte predikas på 
+Arighal förrän i samband med att adelsfamiljen Silva­
+spar etablerade sig där på 1610­talet. Många bönder och 
+köpmän fascinerades av den nya läran; de högre klas­
+serna, undantaget ätten Silvaspar, var inledningsvis mer 
+svalt inställda och ganska skeptiska. Många oroade sig 
+bland annat för att talet om allas värde skulle sätta griller 
+i huvudet på det enkla folket.
+Emellertid blev många adelsmän mer positivt inställda 
+när de märkte att allmogen tog till sig samorismens 
+uppfattning om varje människas plats i tillvaron och 
+buden om att lyda överheten. Detta, tillsammans med 
+några genuint religiösa uppvaknanden, gjorde att den 
+nya tron så sakteliga kom att sprida sig till fastlandet och 
+bli populär även inom adeln.
+Det tros ha dröjt till början av 1720­talet, kanske något 
+senare, innan dyrkan av Aurias och Pelias kom att bli 
+lika vanlig som tillbedjan av Jordmodern. Ett potentiellt 
+bak slag kom med de anti­soldiska stämningarna när Sol­
+darn 1862 invaderade Kathar. Då annekteringen inte var 
+reli giöst motiverad och samorismen nu var väletablerad 
+i Ner mada riktades dock föga vrede mot religionen som 
+sådan, även om adelsfamiljer som inte låtit omvända sig 
+använde sina rivalers religiösa tillhörighet för att miss­
+tänk liggöra dem.Anti-teisterna
+Efter att magikraterna tog makten i Thalamur och 
+förbjöd religion inom sitt rike 1764 började man få in 
+anti­teistiska filosofiska strömningar i Nermada. Det tog 
+emellertid lång tid för detta att slå rot och ännu längre 
+innan det nådde ner i bredare folklager. Först i och med 
+att ätten Varmagash etablerade sig i Nermada år 2388 
+vann detta avvisande av gudar riktig ställning som en 
+acceptabel världssyn.
+Daakkyrkan
+Det finns historiska dokument som antyder att vissa ner­
+madier kring år 1850 börjat utöva den form av Daak tro 
+som redan praktiserades i Consaber. Denna grupp av 
+troende var dock mycket liten och nära nog ingenting 
+finns bevarat om deras verksamhet.
+Ett större genomslag för religionen kom år 1935 då mis­
+sionärer och tempelriddare från Jargiska kejsardömet 
+anlände till Nermada och började predika sin guds bud­
+skap. Historiker ser det ofta som att det mest rörde sig 
+om en mellanlandning på vägen för att understödja en 
+tronpretendent i Consaber (i vilket Daaks lära gjordes till 
+statsreligion av kungen S:t Conner den Kyske år 1955).
+Vissa Daaktroende stannade dock kvar på den ikamriska 
+halvön och försökte sprida sin tro. Efter några misslyckade 
+och blodiga försök att omvända hedningarna i Thalamur 
+fokuserade nykomlingarna på att missionera i Nermada. 
+Även där mötte de emellanåt väpnat motstånd – från 
+den samoriska lärans anhängare.
+Man fick dock en fristad hos en baron vid namn Kranzel 
+Mirvasir av det numera utslocknade adelshuset Maneras. 
+Denne konverterade till Daaks tro, tog emot jargierna 
+i sin borg och skyddade dem med vapen i hand mot 
+angripande samoritroende. På så sätt kunde missionen i 
+Nermada inledas på allvar. Baron Maneras kanoniserades 
+något halvsekel senare som S:t Kranzel och räknas som 
+alla livvakters beskyddare, och dessutom som Nermadas 
+nationalhelgon. (Det är värt att nämna att Nermadas två 
+helgon, S:t Kranzel och S:t Johstan, är de praktiskt taget 
+enda nermadier som rutinmässigt omnämns med enbart 
+sitt förnamn.)
+Det stora genombrottet för Daakkyrkan i Nermada kom 
+dock först i samband med att stora delar av landets 
+skördar förstördes av fruktansvärda oväder åren 1994–
+1996. Även om det finns många pålitliga vittnesmål om 
+att Aurias och Pelias präster gjorde sitt bästa för att lindra 
+folkets nöd har svältåren i religiösa sammanhang främst 
+kommit att förknippas med att en präst vid namn Rahor Religion
+Hedningar! Hedningar som gick omkring helt öppet på gatorna! Ack, vilken fasa…
+ –Ulf Melarsson, skrivare till ambassadören från Soldarn
+
+--- Page 12 ---
+12
+NermadaGiradir Sangal gjorde åtskilliga under i Daaks namn. 
+Denne var ursprungligen från Thalamur, vilket också 
+tros vara anledningen till att han aldrig blivit helgon­
+förklarad.
+Prästerskapet i Nermada tenderar dock att se genom fing­
+rarna med att allmogen betraktar honom som ett helgon 
+och i hemlighet riktar böner till honom, inte minst som 
+många delar upprördheten över hans uteblivna kano ni­
+sering. Faktum kvarstår att ”S:t Rahors” mirakler gjorde 
+att många, hög såväl som låg, lät sig omvändas till Daaks 
+lära. Det enda egentliga religiöst motiverade kriget 
+i landet (om man undantar den galne Drakprästens 
+upp ror) utkämpades under våren och sommaren 2449 
+på grund av splittringar inom den samoriska familjen 
+Silvaspar.
+Sedan huvudmannen, greve Ragath Tjelvarir Silvaspar, 
+efter en uppenbarelse förkunnat att ätten numera var 
+Daaks trogna undersåtar gjorde hans brorsdotter Lisaele 
+Cherokira Silvaspar väpnat uppror från sitt baroni och 
+allierande sig med den samoritrogna ätten Fervakon.
+Striderna blev långa och hårda när omgivande baroner 
+drogs in i konflikten, och höll på att urarta helt när den 
+Daaktroende greven av familjen Caraleigh ställde sig på 
+Ragath Tjelvarir Silvaspars sida – greve Silvaspar litade 
+nämligen inte alls på sin grevlige broder, och passade 
+dessutom på att deklarera sin övertygelse att Caraleighs 
+sabriska Daaktro var värsta sortens kätteri. Den absurda 
+slutresultatet blev att ätten Caraleigh i Daaks namn 
+hjälpte de samoritroende att krossa grevens trupper och 
+att baronessan Silvaspar tog makten över ätten.
+Under åren som gått har de olika religionerna lärt sig 
+att i någon mån samexistera. Huvudsakligen bygger man 
+detta på den gemensamma motviljan mot att splittra 
+landet i krig.
+Det finns dock fortfarande starka spänningar mellan 
+samoritroende och Daaks anhängare och det är långt 
+ifrån uteslutet att nya stridigheter kan komma att blossa 
+upp. Dessutom påverkar skillnaden i trosuppfattning 
+mycket av den dagliga politiken gällande vilka släkter 
+som är benägna att stödja varandra och ingå äktenskap.
+På folklig nivå är det vanligast att bönders och borgares 
+religion anses vara deras länsherres även om vissa fri­
+sinnade personer låter var och en inom sin förläning 
+välja sin egen tro. Mest märkbart är att legenderna om 
+Rahor Giradir Sangals mirakel från det sena 1990­talet 
+har en stark plats i mångas hjärtan, till den grad att det 
+inte är ovanligt att Daak dyrkas i hemlighet även av de 
+inom allmogen vars herrar tillsvär sig Aurias och Pelias 
+tro.
+Någonting som emellertid inte accepteras någonstans är 
+försök att förena de båda stora religionernas läror. Inte 
+ens de furstar som låter varje underlydande finna sin 
+egen väg till saligheten brukar vara toleranta inför detta, 
+inte minst av rädsla för att i onödan ådra sig prästernas 
+vrede.
+Den senaste att försöka skapa en gemensam tro var en 
+tidigare novis inom det samoriska templet, vilken för 
+drygt 200 år sedan predikade på landsbygden i södra 
+Kamrida och förkunnade att Aurias och Pelias utgjorde 
+Daaks två ansikten och att tiden var kommen för deras 
+anhängare att förbrödras och samlas i en tro, som den 
+helige och allsmäktige Aurias­Daak ­Pelias alltid avsett.Det enda religiösa samarbete den djärve predikanten 
+lyckades åstadkomma var att samorister och Daakdyrkare 
+i ett vilt upplopp hjälptes åt att lyncha honom, men där­
+efter återgick man till att som minst titta snett på var­
+andra. Det har i smyg viskats att den namnlöse pro fetens 
+läror ska ha överlevt honom, men de flesta tvivlar på att 
+han faktiskt skrev ner något eller att det ens fanns något 
+riktigt sammanhang i hans förkunnelse.
+Samoritemplets organisation
+Organisatoriskt styrs samorismen i Nermada av pre den­
+ten i Dharim, vilken försöker upprätthålla tät kor res pon­
+dens med sina förtrogna i Soldarn och Asha rien för att 
+bevara läran ren.
+Nuvarande predent är furst Lokar Neremir Silvaspar som 
+är kusin till greve Karalas Geadonir Silvaspar. Predenten 
+är mycket angelägen om att följa gudarnas vilja till punkt 
+och pricka och är inte rädd för att säga emot sin grevlige 
+släk ting om denne bryter trons bud eller försöker lägga 
+sig i religionens angelägenheter.
+Daakkyrkans organisation
+Daakkyrkan har två huvudsakliga grenar i landet, och 
+därmed också olika högsta representanter. Den sabriska 
+in rikt ningen är starkast på Arighal och svarar inför pri­
+mo den av Calnia, vilken skickar en ambassadör som för 
+hans talan. Denne, för närvarande primodens avlägsne 
+släk ting riddar Janere Daversin, är inte själv präst vigd, 
+men har studerat tron noggrant och är en skicklig po­
+li tiker.
+Även om den högste adelsman i riket som tillhör den 
+sabriska Daakkyrkan är greven av Vexial så residerar pri­
+mo dens diplomat i Arighals största stad Kero, där han 
+har en ganska god kontakt med stadens greve. Riddaren, 
+som i Nermada av artighetsskäl kallar sig Janere Eginir 
+Daver  sin, hamnar dock regelbundet i tämligen hätska 
+teo lo giska diskussioner med den jargiskt troende 
+primoden av Kero, Oroga Tashinir Antrego.
+Den jargiska Daakkyrkan, ofta kallad moderkyrkan, 
+är vanligast på fastlandet, inte minst då kungafamiljen 
+Varma gash nästan mangrant är varmt troende. Trons 
+främste präst är primoden av Heramon, baron Marius 
+Jus tianir Lascaris, vilken ursprungligen kommer från Jar­
+gien men har gift in sig i den nermadiska adeln.
+Primoden av Heramon vistas så gott som alltid på drott­
+ningens gods Nalmankar som hennes personlige råd­
+givare i religiösa frågor, och skvallret säger att han är 
+förälskad i den mer än 20 år yngre kvinnan – eller rentav 
+är hennes älskare.
+Rent tekniskt har primoderna av Heramon och Kero 
+samma rang, men det råder inget tvivel om att Marius 
+Justianir Lascaris har avsevärt större inflytande. De båda 
+Daakprästerna har en mycket kylig relation till varandra, 
+inte minst beroende på deras olika åsikter gällande 
+vilken profets ord som bör sättas först.
+
+--- Page 13 ---
+13
+Nermada
+Nermadas befolkning
+Majoriteten av befolkningen utgörs av neromenzer – det 
+vanariska folkslag som dominerade såväl det forntida 
+Danarth som det coloniska imperiet, och vilka än idag 
+är den absolut största folkgruppen i Thalamur. Således 
+har den klassiska nermadiern svart eller mycket mörkt 
+brunt hår, fina och aningen spetsiga ansiktsdrag och 
+något olivfärgad hy. Liksom i södra Thalamur är många 
+av dessa typiska neromenzer grönögda och har ofta 
+lockigt eller vågigt hår. Det klassiskt nordneromenziska, 
+milt sjukliga utseende som beskrivs på sida 6 i boken 
+Thalamur  är däremot mycket ovanligt i Nermada.
+Till skillnad från i grannriket är dock Nermadas be folk­
+ning, i synnerhet adeln, markant uppblandad med in­
+vand rare från olika håll, och därför är den ovan stående 
+be skrivningen visserligen ofta träffande men inte al lena­
+rådande. Under århundradenas gång har ner madierna 
+av siktligt gift sig med folk från andra länder för att skapa 
+allianser och få in rikedomar, och med dessa äktenskap 
+har också utseendet förstås kommit att på verkas.
+Således är andra hår ­ och ögonfärger långt ifrån sällsynta 
+även om man fortfarande kan tala om ett typiskt nero­
+men ziskt utseende. Det är inte ovanligt att finna ut­
+seende mässiga drag från såväl conrier och soldier som 
+så fjärran som den jargiska befolkningen. Bondeståndet 
+och borgarna har förstås mer sällan haft möjlighet att 
+ingå äktenskap med främlingar; däremot kan de slavar 
+som fortfarande finns kvar ha väldigt olika bakgrund, 
+beroende på var man fått tag i dem eller deras förfäder.Det är viktigt att inse att nermadier rent generellt (med 
+undantag för en del individer inom släkten Namator) 
+inte gör någon riktig koppling mellan att vara av ett visst 
+folkslag och att vara medborgare i Nermada. Typiskt 
+an ses man vara nermadier om man är bosatt i landet, 
+helst sedan några generationer, och erkänner dess lagar. 
+Detta är också en attityd som de styrande aktivt har upp­
+muntrat när de driver tesen att Nermadas identitet hand­
+lar om ideal och trofasthet, inte om blod.
+Andra raser än människor är sällsynta i Nermada. Det 
+finns som i de flesta länder mindre grupper pyaralviska 
+handels män i städerna, men övriga alver förekommer 
+inte annat än i form av enstaka individer. Trots ryktet 
+(eller snarare folktron) att det ska existera ett dolt dvärga­
+fäste under Taraconberget finns det inga dvärgar i riket 
+utöver ett fåtal zolod som lever och verkar som köpmän 
+och hantverkare i Dharim och Heramon.
+Inte heller tiraker är vanliga, men till skillnad från i 
+Thalamur är de åtminstone välkomna att besöka landet 
+och stuvargillet i Arighals största stad Kero har ett drygt 
+30­tal marnakhtiraker anställda. Dessa har dock, liksom 
+resten av gillet, ett ganska dåligt rykte eftersom de tros 
+ha kopplingar till den allt mer organiserade brottslighet 
+som grasserar i staden. Några bazirk arbetar också som 
+skepps byggare i Loam. Misslor, slutligen, är oerhört 
+sällsynta i Nermada, men de som bor i landet anses alla 
+fjorton vara hederligt folk. De är bosatta i ett baroni i 
+grevs kapet Thara och anser sig tillhöra den så kallade 
+Thalaska nation.Befolkning och rollpersoner
+Många säger att nermadierna skulle vara lika oss cirefalier, både i utseende och i uppträdande. Det är varken smick ­
+rande eller helt korrekt, men jag måste tillstå att jag förstår var de får det ifrån.
+ –Cirmez av husfurst Rakons familj i Marek Pomian, caserisk ambassadör i Heramon
+Nermadier
+En typisk nermadisk kvinna är omkring 165 cm lång och 
+väger cirka 60 kg. En typisk nermadisk man är omkring 
+175 cm lång och väger cirka 70 kg.
+Grundattribut
+Styrka 2T6
+Tålighet 2T6
+Rörlighet 2T6
+Uppfattning 2T6Vilja 2T6
+Psyke 2T6+1
+Visdom 2T6
+Utstrålning 2T6+1
+Egenskaper
+Överlevare : +1 Livskraft.
+Diplomatisk tradition : 4 enheter till Sociala färdigheter 
+och 2 enheter till Språk.
+Händelserik tillvaro : 1 slag på Färder & äventyr eller 1 
+slag på Intriger & illgärningar.
+Konfliktlösare : +1T6 på alla slag i Sociala konflikter där 
+rollpersonen förespråkar en fredlig lösning.Språk
+Talade språk : Nermadiska, thalaska.
+Skriftspråk : Thalaskisk skrift.
+Namn
+Namnen i Nermada har tagit en del intryck från olika 
+kulturer, vilket också syns i listan på namnförslag. Fri­
+heten i vilka namn man kan välja är därför stor även om 
+det coloniska arvet fortfarande är tydligt.
+Kvinnonamn : Amida, Callia, Daria, Deila, Elane, Elias, 
+Fatia, Haryene, Indra, Kame, Liselle, Miera, Orile, 
+Revana, Ryana, Satima, Xemi, Zanna.
+Mansnamn : Amos, Baar, Caras, Daoud, Egin, Finn, 
+Gadon, Hafer, Heran, Hran, Imaz, Kadek, Malon, 
+Menor, Nadir, Raf, Salon, Torden, Veder, Yrnas.
+
+--- Page 14 ---
+14
+Nermada1–2 Arkitekt : Konsten att planera såväl 
+hus som broar och andra byggen är såväl 
+viktig som uppskattad, och dess utövare 
+är ofta välbetalda. På detta område anses 
+nermadierna tillhöra Mundanas allra 
+främsta. [1  slag på Intriger & illgärningar, 
+4 enheter Kunskapsfärdigheter, 2  poäng 
+Hantverk.]
+3–4 Bard : Den som kan under  hålla med 
+musik och med ryckande be rätt elser blir 
+väl mottagen vart han än vandrar. [1  slag 
+på Färder & äventyr, 4  enheter Rörelse­
+färdig heter, 4  enheter Sociala färdig­
+heter.]
+5–6 Baron : Baroner och baronessor är 
+inflytels erika läns herrar som styr ett län i 
+utbyte mot en trohetsed till en av de sju 
+grev arna och glatt intrigerar sinse mellan 
+för att öka sin makt. [1  slag på Intriger & 
+ill gärn ing ar, 4  enheter Kun skaps färdig­
+heter, 4  enheter Sociala färdig heter.]
+7–8 Bödel : Även i ett samhälle som det 
+nermadiska, där bödeln inte befinner 
+sig på botten av samhället, rör det sig 
+om en fruktad och mytom spunnen 
+person. [1  slag på Strider & drabbningar, 
+4 enheter Strids färdigheter, 2  poäng 
+Hant verk.]
+9–10 Brottsling : Såväl som i städerna 
+som landsbygden finns det folk som 
+använder sig av allehanda ohederliga och 
+inte sällan våldsamma metoder för att 
+försöka bli rika eller bara överleva till nästa 
+dag. [1  slag på Intriger & illgärningar, 
+4 enheter Rörelsefärdigheter, 4  enheter 
+Stridsfärdigheter.]
+11–12 Dansmästare : Uråldriga trad ition­
+er från det coloniska imperiet förvaltas 
+av de skickligaste underhållare, som 
+framför fantastiska be rättelser med sina 
+akrobatiska danser. [1  slag på Intriger 
+& illgärningar, 4  enheter Rörelse­
+färdigheter, 2  poäng Kännetecken.]
+13–14 Diplomat : Vare sig de tjänar 
+vid furstehov inom landet eller som 
+Nermadas ambassadörer i fjärran 
+länder är diplomaterna aktade för 
+sina insatser och fruktade för sina lena 
+tungor och slipade intellekt. [1  slag 
+på Intriger & illgärningar, 4  enheter 
+Kunskapsfärdigheter, 4  enheter Sociala 
+färdigheter.]
+15–16 Dödgrävare : Döden tar alla, och 
+alla måste tas om hand när livet är slut. 
+Att gräva gravar och hantera de döda 
+anses ofta vara en av samhällets lägsta 
+sysslor, men deras täta kontakter med 
+prästerskapet gör många dödgrävare 
+förvånansvärt kunniga på allehanda 
+områden. [1  slag på Kunskap & 
+mysterier, 4  enheter Rörelsefärdigheter, 
+2 poäng Expertiser.]
+17–18 Fiskare : Havet skänker ner mad­
+ierna en stor del av deras föda, och det anses vara ett rejält och hederligt arbete 
+att med envishet och skicklighet skörda 
+dess frukter. [1  slag på Färder & äventyr, 
+4 enheter Vildmarksfärdigheter, 2  poäng 
+Expertiser.]
+19–20 Lärd : De lärda fyller mångahanda 
+roller i samhället, och deras kunskaper 
+kan vara av de mest skiftande slag. För 
+många är en tjänst där man undervisar 
+och rådger vid hoven den mest önskade 
+sysslan, men lärda arbetar också inom 
+handelsbolag eller på lägre poster inom 
+admin istrationen. [1  slag på Kunskap 
+& mysterier, 4  enheter Kunskaps­
+färdigheter, 2  poäng Expertiser.]
+21–22 Fältskär : De djärvaste av läke­
+kunniga söker sig till tjänster nära de 
+strider där folk sargas av fienders vapen 
+och bestars klor. Andra har helt enkelt 
+oturen att kommenderas till tjänst på 
+dessa utsatta platser, och gör vad de 
+kan för att överleva och hålla andra vid 
+liv. [1  slag på Strider & drabbningar, 
+4 poäng Kunskapsfärdigheter, 4  poäng 
+Stridsfärdigheter.]
+23–24 Förfalskare : Varje sigill och 
+vapen sköld som skapas och varje 
+doku ment som under  tecknas är en 
+möjlighet för förfalskaren och hans 
+ibland högt uppsatta uppdrags givare. 
+[1 slag på Intriger & ill gärn ing ar, 
+4 enheter Kunskaps färdigheter, 2  poäng 
+Hantverk.]
+25–26 Gardessoldat : Varje ädling av 
+betydelse måste ha skickliga stridsmän 
+till hands som kan skydda såväl ägor 
+som person. Dessa gardes soldater hand­
+plockas ofta bland de skickligaste krigare, 
+och kan ha mycket olika träning och 
+specialkompetens. [1  slag på Strider & 
+drabbningar, 4  enheter Stridsfärdigheter, 
+4 valfria enheter.]
+27–28 Gatuförsäljare : Mer framstående 
+köpmän markerar ofta sitt avstånd mot 
+de månglare som måste skrika ut sina 
+varors förträfflighet på gator och torg, 
+men handlarna ser och hör mycket som 
+inte når in i de slutna salongerna. [1  slag 
+på Intriger & illgärningar, 4  enheter 
+Sociala färdigheter, 2  poäng Expertiser.]
+29–30 Grovarbetare : Det finns alltid 
+hårda arbeten som behöver göras, och 
+många fattiga som sliter ut sina kroppar 
+för att utföra dem. [1  slag på valfri tabell, 
+4 enheter Vildmarksfärdigheter, 2  poäng 
+Hantverk.]
+31–32 Gycklare : Gyckelkonster och 
+deras utövare är långt ifrån lika aktade 
+som att fängsla en publik med musik 
+och sagor, men många har inget val 
+och andra anser att ett liv i någon sorts 
+frihet är värt rotlösheten och de sneda 
+blickarna. [1  slag på Färder & äventyr, 
+4 enheter Rörelsefärdigheter, 2  poäng 
+Kännetecken.]33–34 Hamnsjåare : Om än betraktade 
+som råskinn som man gör bäst i att 
+inte stöta sig med fyller hamnsjåarna en 
+mycket viktig funktion genom att lassa 
+och lossa varor i Ner madas hamnar. 
+[1 slag på Strider & drabb ningar, 4  en­
+heter Strids färdig heter, 2  poäng Ex­
+pertiser.]
+35–36 Hantverkare : Det finns alltid 
+saker som behöver lagas eller skapas 
+från grunden, och hantverkare låter sig 
+svårligen klumpas ihop till en grupp. 
+Allt från krukmakare till snickare och 
+vapensmeder ryms i denna bakgrund. 
+[1 slag på Intriger & illgärningar, 
+4 enheter Rörelsefärdigheter, 2  poäng 
+Hantverk.]
+37–38 Härold : Det faller på häroldens 
+lott att både skapa passande vapen­
+sköldar och med tillbörlig inlevelse till­
+kännage sin herres närvaro, så dessa 
+ibland adliga män och kvinnor måste 
+ha såväl hantverksmässig skicklighet 
+som förmåga att ta folk. [1  slag på 
+Intriger & illgärningar, 4  enheter Sociala 
+färdigheter, 2  poäng Hantverk.]
+39–40 Indrivare : De flesta indrivare 
+är föga mer än utpressare som jobbar 
+för ännu värre skurkar, men vissa av 
+dem tjänar någorlunda legitima herrar. 
+Metoderna är dock ofta desamma. [1  slag 
+på Strider & drabb ningar, 4  enheter 
+Sociala färdig heter, 4  enheter Strids­
+färdigheter.]
+41–42 Jordbrukare : Vare sig de driver 
+boskap eller tvingar ur jorden dess ibland 
+magra skördar är det jordbrukarna som 
+tillsammans med fiskare och jägare 
+står för att driva upp den mat som alla 
+behöver. [1  slag på Färder & äventyr, 
+4 enheter Vildmarksfärdigheter, 2  poäng 
+Hantverk.]
+43–44 Jägare : Att jaga för födan är 
+inte särskilt vanligt i Nermada, och det 
+är inte ovanligt att en stor del av den 
+professionella jägarens tid går åt till att 
+hålla ett vakande öga på länsherrens 
+marker. [1  slag på Färder & äventyr, 
+4 enheter Stridsfärdigheter, 4  enheter 
+Vildmarksfärdigheter.]
+45–46 Konstnär : Nermadas konstnärer 
+är oftast skulptörer, men måleriet 
+håller på att bli allt populärare och 
+dess kvalitet allt högre. Konstnärerna 
+distanserar sig gärna från de hantverkare 
+med vilka de delar många drag, och 
+är inte sällan av ädel börd. [1  slag på 
+Intriger & illgärningar, 4  enheter Sociala 
+färdigheter, 2  poäng Hantverk.]
+47–48 Kunskapare : Kunskap är makt, 
+och det finns alltid någon som är 
+beredd att betala för hemligheter. [1  slag 
+på Intriger & illgärningar, 4  enheter 
+Rörelsefärdigheter, 4  enheter Sociala 
+färdigheter.]Bakgrundstabell: Nermada
+
+--- Page 15 ---
+15
+Nermada
+49–50 Kurirryttare : Att färdas med bud 
+ställer stora krav på såväl kuriren som 
+hans riddjur. Det finns budbärare som 
+arbetar för vem som än kan betala, men i 
+allmänhet är de anställda av någon ädling 
+eller förmögen person. [1  slag på Färder 
+& äventyr, 4  enheter Rörelsefärdigheter, 
+4 enheter Vildmarksfärdigheter.]
+51–52 Köpman : Även om konkurrensen 
+bland köpmännen är hård anser många 
+att det är värt att ge sig in i den eviga 
+kampen om den bästa affären. De främsta 
+blir också närmast ofattbart rika. [1  slag 
+på Intriger & illgärningar, 4  enheter 
+Kunskapsfärdigheter, 4  enheter Sociala 
+färdigheter.]
+53–54 Legosoldat : De som strider för 
+den som kan betala betraktas ofta som 
+ett orosmoment i de styrandes ögon, 
+men samtidigt behövs deras tjänster och 
+de kan ibland dra in en god sold. [1  slag 
+på Strider & drabbningar, 4  enheter 
+Strids färdigheter, 4  enheter Vild marks­
+färdig heter.]
+55–56 Läkekunnig : Vare sig hon är en 
+medikus i en stad eller en klok gumma på 
+landsbygden är den läkekunniga mycket 
+uppskattad, även om det alltid finns de 
+som viskar bakom hennes rygg om källan 
+till hennes kunskap. [1  slag på Kunskap 
+& mysterier, 4  enheter Kunskaps färdig­
+heter, 4  enheter Vildmarks färdig heter.]
+57–58 Munk/nunna : Innan för klost­
+rens skyddande väggar kan de varmt 
+troende reflektera över trons mysterier 
+och dessutom förkovra sig i allehanda 
+lärdom och färdigheter, allt efter sin 
+ordens krav och sina egna talanger. 
+[1 slag på Kunskap & mysterier, 
+4 enheter Kunskapsfärdigheter, 4  valfria 
+enheter.]
+59–60 Ockrare : Att livnära sig på att 
+låna ut pengar anses långt ifrån heder­
+värt, men den skicklige ockraren kan 
+bli förmögen och leva i ett överflöd som 
+annars är förbehållet adeln. [1  slag på 
+Intriger & illgärningar, 4  enheter Sociala 
+färdigheter, 4  valfria enheter.]
+61–62 Officer : Besluten om var trupp­
+er ska placeras på slagfält och hur över­
+gripande strategier ska läggas upp fattas 
+av befäl som antingen själva är av nobel 
+börd eller tjänar någon ädling. Dessa 
+krigs konstens främsta leder dess utom 
+djärvt trupper i strid. [1  slag på Strider & 
+drabb ningar, 4  enheter Kunskaps färdig­
+heter, 4  enheter Strids färdigheter.]
+63–64 Pirat : Havets fasor härjar även 
+kring det fredliga Nermada, med såväl 
+brutala överfall till havs som snabba 
+strandhugg. [1  slag på Färder & äventyr, 
+4 enheter Stridsfärdigheter, 4  enheter 
+Vildmarksfärdigheter.]
+65–66 Prisjägare : Uppdragen att jaga ner 
+personer på flykt kommer omväxlande 
+från den dömande makten och från 
+rika och hämndlystna privatpersoner. 
+Vilka uppdrag prisjägaren tas styrs av 
+dennes moral och möjlighet att välja 
+och vraka, såtillvida han inte är anställd 
+av någon vars order han bara har att lyda. [1  slag på Strider & drabbningar, 
+4 enheter Rörelsefärdigheter, 4  enheter 
+Stridsfärdigheter.]
+67–68 Präst : Vare sig man förmedlar 
+Aurias och Pelias budskap eller tolkar 
+Daaks heliga ord är prästen en mycket 
+viktig och i allmänhet respekt  erad 
+person. [1  slag på Kunskap & myst­
+erier, 4  enheter Kunskaps färdig heter, 
+4 enheter Mystik färdig heter.]
+69–70 Riddare : Att tjäna sin länsherre 
+med vapen i hand är ett sätt att leva 
+och en källa till stolthet för Nermadas 
+riddare. [1  slag på Strider & drabbningar, 
+4 enheter Sociala färdigheter, 4  enheter 
+Stridsfärdigheter.]
+71–72 Sjöfarare : Ingen kan berätta 
+lika mycket om främmande länder och 
+märkliga folk som en berest sjöman, men 
+få stretar heller lika hårt eller riskerar 
+lika mycket. [1  slag på Färder & äventyr, 
+4 enheter Rörelsefärdigheter, 4  enheter 
+Vildmarksfärdigheter.]
+73–74 Skrivare : Även om de flesta 
+nermadier kan läsa och skriva åt­
+min stone hjälpligt finns det goda 
+möjligheter till arbeten för den som 
+snabbt och elegant kan fästa ord på 
+pränt. [1  slag på Intriger & illgärningar, 
+4 enheter Kunskapsfärdigheter, 2  poäng 
+Hantverk.]
+75–76 Sköka : Vare sig hon är mer eller 
+mindre slav på någon bordell eller 
+bespottad sockenhora ute på landet 
+är skökan en kvinna som folk från 
+alla samhällsskikt såväl föraktar som 
+gör affärer med. [1  slag på Intriger 
+& illgärningar, 4  enheter Sociala 
+färdigheter, 2  poäng Expertiser.]
+77–78 Slav (arbetare) : Även om slaveriets 
+omfattning har minskat används slavar 
+alltjämt för en hel del ofta hårda och 
+farliga arbeten. [1  slag på Färder & 
+äventyr, 4  enheter Rörelsefärdigheter, 
+4 valfria enheter.]
+79–80 Slav (gladiator) : De kämpar som 
+strider på gladiator  arenorna är aldrig 
+fria, men de kan vinna en berömmelse 
+som arbets slavar aldrig kommer i när­
+heten av. [1  slag på Strider & drabb­
+ningar, 4  enheter Strids  färdig heter, 
+2 poäng Känne  tecken.]
+81–82 Slavhandlare : Slavhandlarna för 
+en allt mer tynande tillvaro i en tid när 
+de flesta slavar föds in i sina roller och 
+ofta tjänar samma herre eller släkt under 
+hela sina liv. Ännu går det dock att göra 
+stora vinster i handeln med slavar som 
+är dugliga eller på andra sätt intressanta. 
+[1 slag på Intriger & ill gärningar, 
+4 enheter Sociala färdig heter, 2  poäng 
+Expertiser.]
+83–84 Smugglare : Där det finns någon 
+som kräver in tullar finns det någon som 
+lever på att försöka frakta varor utan 
+att behöva dela med sig av sina pengar. 
+[1 slag på Färder & äventyr, 4  enheter 
+Stridsfärdigheter, 4  enheter Vildmarks­
+färdigheter.]85–86 Soldat : Som soldaten tillhör man 
+de fasta militära styrk  orna, och får en an­
+ständig strids  träning. [1  slag på Strider & 
+drabbningar, 4  enheter Stridsfärdigheter, 
+4 valfria enheter.]
+87–88 Spelare : Spelaren försörjer sig 
+på att bedriva hasardspel eller vad­
+slagningar, men få har den enorma 
+talang eller sanslösa tur som krävs för 
+att alltid kunna säkra en vinst på ärligt 
+vis. [1  slag på Intriger & illgärningar, 
+4 enheter Rörelse färdigheter, 4  enheter 
+Sociala färdigheter.]
+89–90 Stadsvakt : Den dagliga till varon 
+för stads vakterna är sällan särskilt spänn­
+ande, men städerna kan inte vara utan 
+dem och det finns vissa möjligheter att 
+avancera till bättre avlönade tjänster. 
+[1 slag på Strider & drabb ningar, 
+4 enheter Sociala färdigheter, 4  enheter 
+Strids färdig heter.]
+91–92 Stråtrövare : Grupper av desperata 
+män och kvinnor slår sig ibland ihop och 
+driver runt på landsbygden, där de stjäl 
+vad de kan under hot om och utövande 
+av våld. [1  slag på Färder & äventyr, 
+4 enheter Stridsfärdigheter, 4  enheter 
+Vild marks färdigheter.]
+93–94 Tempelriddare : Varje religion 
+kan förr eller senare behöva försvaras 
+med vapen i hand, och dessa strider 
+är tempelriddarnas uppdrag. [1  slag 
+på Kunskap & mysterier, 4  enheter 
+Strids färdigheter, 4  enheter Vild marks­
+färdigheter.]
+95–96 Tjuv : Tjuvens tvek samma syssla 
+kan bestå av allt från simpla fick stölder 
+när ingen tittar till halsbrytande fasad­
+klättring för att bryta sig in hos den 
+som tror sig vara säker bakom höga 
+murar. [1  slag på Intriger & illgärningar, 
+4 enheter Rörelsefärdigheter, 4  enheter 
+Vildmarksfärdigheter.]
+97–98 Värdshusvärd : Det ställe som kan 
+tillhanda hålla ätlig mat, starka drycker 
+och anständigt lopp fria bäddar kan 
+utgöra ett välkommet inslag i stads bilden 
+eller vara en bys själva centrum, och 
+somliga värdshus värdar lever mycket gott 
+på sin verksamhet. [1  slag på valfri tabell, 
+4 enheter Sociala färdigheter, 2  poäng 
+Expertiser.]
+99–100 Äktenskapsmäklare : Kanske 
+finns det inget mer typiskt ner madiskt 
+yrke än den nobla syssel sätt ning en 
+att förhandla fram äkten skap. [1  slag 
+på Intriger & ill gärningar, 4  enheter 
+Kunskaps färdig heter, 4  enheter Sociala 
+färdig heter.]
+
+--- Page 16 ---
+16
+NermadaKultur
+I Nermada lägger man stor vikt vid att hälsa på alla 
+när varande när man kommer in i ett rum, om än bara 
+genom att ta ögonkontakt och nicka om det rör sig om 
+någon man redan känner väl och träffar ofta. Om två 
+främ lingar möts presenteras de helst för varandra av 
+någon närvarande om de har olika rang, men om de 
+är jämlikar är det absolut inte fel att gå fram och hälsa 
+ändå – tvärtom. Man tar inte i hand utan stannar till på 
+något stegs avstånd, möter den andra partens blick en 
+kort sekund, och låter sina armar hänga längs sidorna 
+med handflatorna framåtvända för att visa att man inte 
+håller i något vapen. Därefter bugar man sig till ungefär 
+30 graders vinkel, idealt samtidigt som man flyttar bak 
+väns ter fot en dryg fotlängd, och säger ”var hälsad” eller 
+något liknande. Om man känner till den andres namn 
+är det extra artigt att säga både det och titeln tillsammans 
+med hälsningsfrasen. Om man inte kan varandras namn 
+be rättar man vem man är när båda parter har hälsat. 
+Hälsningar mellan personer av olika rang går till på 
+ungefär samma sätt, förutom att den ”finare” personen 
+är den som förväntas komma fram om han vill ta ini­
+tia tivet till en hälsning, medan den som har lägre rang 
+bugar sig och talar först och dessutom bugar djupare än 
+vanligt. Endast om man tillhör olika stånd är det accep­
+tabelt för den mer högättade personen att inte gengälda 
+hälsningen, och även då brukar man kosta på sig en artig 
+nick för att bekräfta att man hört den andre. Män och 
+kvinnor hälsar på samma sätt, men en artig man bugar 
+gärna före kvinnan även om han står över henne på 
+samhällsstegen.
+Att vidröra någon anses vara mycket intimt. Det är inte 
+direkt någonting som anses oanständigt offentligt, men 
+det är ett tydligt tecken på att två personer anstår sig stå 
+varandra mycket nära, vare sig de är gifta, nära vänner 
+eller har någon annan viktig relation. Något så till synes 
+alldagligt som en lätt beröring av en kind kan förmedla 
+oerhört mycket känslor för en nermadier och fungerar 
+som ett sätt att visa omvärlden att personen har ens fulla 
+tillit. 
+Det enda undantaget, förutom sådan kontakt som måste 
+förekomma exempelvis i arbeten, är om man är sysselsatt 
+med att dansa, då beröring oftast är oundviklig. Det 
+anses dock inte oartigt, möjligen i överkant känsligt, att 
+avböja dans just för den kroppsliga integritetens skull. 
+Liksom beröring betyder också blickar mycket i Nermada, 
+inklusive sådant som hur länge man tittar på någon 
+eller håller ögonkontakt och vem som först vänder bort 
+blicken. Någonting som alltid anses förolämpande är att 
+peka på någon; om man måste visa på en person är det 
+mycket artigare att göra en gest med hela handen istället.
+Gästfrihet är en viktig princip på alla nivåer i samhället, 
+och man förväntas ta emot en gäst med det finaste huset 
+kan uppbåda. En mycket vanlig vana är att, förutom nå­
+gon ting att dricka, erbjuda gästen en pipa tobak. Rök­ningen har blivit allt populärare i Nermada under det 
+sista dryga seklet, och det är förväntat av gentlemän att 
+de röker pipa. En dam har inte riktigt samma krav på sig 
+att nyttja tobak, men det uppskattas av många värdar om 
+hon åtminstone tar ett litet bloss. Det förekommer ganska 
+ofta att man delar rökverk, vilket anses symbolisera sam­
+hörighet men ursprungligen snarare berodde på att man 
+inte hade råd att hålla sig med hur många vackert ut­
+sirade pipor som helst. Den finaste tobaken hämtas från 
+Asharien och de sabriska kolonierna, men många ur 
+all mogen odlar av nödtvång själva på bakgården. Vissa 
+adels män håller sig också gärna med egna, ibland mycket 
+om fångsrika, odlingar.
+När det kommer till folknöjen var det länge tornerspel 
+som ansågs vara den högsta formen av underhållning hos 
+såväl adel som borgare och bönder, i den mån sådana 
+hade tillträde till dessa uppträden. Även i modern tid är 
+tor ne ringarna, och i synnerhet dusten, mycket populära 
+bland adelsmän och ­kvinnor, men i de breda folklagren 
+har de ganska ritualiserade uppgörelserna kommit att be­
+trak tas som väl långdragna och blodfattiga. Istället har 
+gla di ator spel efter jargisk och asharisk modell blivit allt 
+mer populära, och stora folkmassor samlas för att se trä­
+nade krigare konfronteras med såväl varandra som vilda 
+bestar. Gladiatorkamper förekommer inte som av rätt­
+nings metod, det anses som ett ovärdigt sätt att ta döds­
+dömda av daga, så ofta är det mycket skickliga kämpar 
+som deltar. Gladiatorer är alltid slavar, och detta har gett 
+upp hov till fenomenet att vissa män och (ytterst sällsynt) 
+kvinnor frivilligt säljer sig som slavar för att kunna delta 
+i spelen. 
+De mest stridsdugliga och publikfriande gladiatorerna 
+kan vinna både rikedom och berömmelse, och i slut­
+ändan lyckas vissa köpa sig fria med den lilla symboliska 
+andel av vinsten som många får av sina ägare. De mest 
+kända fasta arenorna för gladiatorstrider finns i Kero 
+och Dharim, men det förekommer ofta att provisoriska 
+arenor ställs i ordning för att underhålla folket i samband 
+med firanden, festivaler och överhetens tornerspel.
+En annan populär form av underhållning är olika former 
+av musik. Adeln har generellt tagit till sig den sabriska 
+kon sert musiken, vilken i stor utsträckning har trängt 
+undan många av de gamla coloniska sångformerna som 
+ännu dominerar i Thalamur. Undantag finns dock, och 
+inte bara inom familjen Lohaki som generellt håller fast 
+vid den colonisk ­thalaskiska traditionen: både bland 
+adel och vanligt folk förekommer ännu stri gila, döds kvä­
+den, vilka komponeras till minne av familjens avlidna 
+och sjungs till deras ära. Det är inte alla som hyllas med 
+stri gila, men många familjer av alla sam hälls klasser har 
+under åren bevarat minnessånger över åt min stone något 
+halv dussin kända förfäder. 
+Borgare och bönder har annars allmänt börjat roa sig 
+med sånger som är mer lättsjungna än de ibland mycket 
+krä vande forn colo niska melodierna. En populär variant 
+är att rytmiskt dek  lamera en kortare dikt, helst med nå­Kultur och sedvänjor
+Fagra Nermada, gift dig!
+ –Ur Hymn till den Fagra, av baron Tengran Alenneir Namator
+
+--- Page 17 ---
+17
+Nermada
+gon sorts lustig knorr och inte sällan i form av en ren 
+vits, vilken man ackompanjerar med enbart några slag på 
+en trumma eller knäppningar på luta vid valda tillfällen. 
+Dans är även det vanlig underhållning, med två huvud­
+sakliga former: sådan som är avsedd att betraktas som 
+upp visning, och sådan som alla kan delta i. Till den 
+senare kategorin hör pardanser, vilka är ganska vanliga 
+i adels klassen och har börjat förekomma allt mer på 
+de väl bärgade borgarnas fester, och allmogens muntra 
+ringdanser. 
+Uppvisningsdanserna är av samma typ som de som 
+är vanliga i Thalamur, och utförs helst just av tha las­
+ker. Detta gör att det oftast bara är de mycket rika som 
+har råd att hyra in dansare till speciella tillfällen, men 
+det finns undantag. Det existerar också ett fåtal tha las­
+kiska dansare som har lämnat sitt hemland för gott och 
+försörjer sig på att uppträda utomlands, och då ligger 
+Ner mada nära till hands eftersom man delar kulturell 
+bak grund och många nermadier förstår att uppskatta 
+fram trädandena. Något av det allra populäraste (och 
+mest sällsynta) man kan få uppleva är en vältränad tha­
+lask som kombinerar dans och sång till skådespel som 
+används för det i Thalamur helt otänkbbara syftet att 
+fram föra helgonlegender. Dessa uppvisningar anses vara 
+den högsta formen av underhållning bland många tro­
+ende nermadier, och åtminstone i huvudstaden bru kar 
+man göra sitt yttersta för att kunna ordna offent liga 
+fram trä danden på Daakkyrkans heligaste dagar.
+Inom konsten är framställandet av skulpturer, främst 
+huggna i sten men även gjutna, mycket populärt, men 
+den rådande trenden är att måleriet blir allt mer ansett 
+som konstart. Inflytandet kommer främst från fram­
+stående soldiska konstnärer, och porträttmåleri betraktas 
+som finare än landskapsskildringar. Den senaste segern 
+för målarkonsten är att drottning Avhene Ranodira Var­
+magash nyligen har låtit utse en hovmålare (soldiern 
+Knape Helmarsson), vilket har ökat intresset för konsten 
+drastiskt. 
+Att kunna – eller ge intryck av att kunna – leva på 
+sina artistiska färdigheter anses i Nermada mycket im­
+po ne rande, och betraktas som en värdig yrkesbana för 
+en adelsman eller ­dam. Detta gäller även den från det 
+gamla Colonan ärvda arkitekturen, där nermadier anses 
+vara bland de få som kan mäta sig med thalasker och 
+moderna cirefalier. Det sedan mycket länge rådande 
+arki tektoniska idealet inkluderar skarpa kanter, höga 
+men smala fönster samt generöst tilltagna takhöjder. 
+Mer rundade former förekommer ibland som valv över 
+fönster och dörröppningar, mest för att bevisa att man 
+har kompetensen att konstruera dem.
+Vare sig man visar sin kreativitet genom sång, dans, dikt, 
+skulptur, vävning eller vad det vara må finns det ett tema 
+som förekommer mer än någonting annat – kärleken 
+till fosterlandet och dess historia. Ingenting berör en 
+nermadier så mycket som en patriotisk hyllning av landets 
+ärorika förflutna och gyllene framtid, nästan oavsett 
+vilken form den tar eller rentav hur skickligt utförd den 
+är. Man berättar gärna om forna kungars godhet och 
+lyckliga regeringstider, och framför allt lovsjunger man 
+Fagra Nermada – personifieringen av riket. Denna själva 
+landets avbild framställs som en vacker och stolt kvinna, 
+ofta mer eller mindre identisk med Nerma Aminerva 
+Mastrani, som under alla tider står som representant för 
+allt som är vackert och gott i världen och skyddar folket vilka prövningar man än möter. Fagra Nermada tar om 
+hand och omhändertas, och man älskar henne.
+Skönhetsideal och mode
+De flesta manliga nermadier väljer att hålla såväl hår 
+som skägg tämligen kortklippt, vilket för adelsmän anses 
+symbolisera att de är stridbara (mer specifikt vana att 
+bära hjälm) och för andra helt enkelt är praktiskt för att 
+det inte ska vara i vägen.
+Långt hår ses ofta som typiskt kvinnligt och därmed, i 
+synnerhet för Daaktroende, som någonting som en man 
+bör undvika. Inom släkterna Lohaki och Namator, vilka 
+har sitt ursprung i det gamla imperiet, förekommer det 
+dock att man väljer att bära håret långt på thalaskiskt 
+manér. Detsamma var tidigare vanligt inom den tha las­
+kiska släkten, numera kungafamiljen, Varmagash, men 
+har i stor utsträckning fallit ur bruk sedan man anslöt 
+sig till Daaks lära.
+Smink förekommer framför allt hos kvinnor, gärna i 
+form av ögonskugga som enligt nuvarande mode ska 
+kon tras tera mot ögonfärgen. Det händer ibland att ad­
+liga män sminkar sig med olika sotblandningar som an­
+vänds för att dra uppmärksamheten till något drag som 
+man finner särskilt attraktivt hos sig själv, såsom en ädel 
+näsa eller en markerad haka.
+Smycken är även de vanligast hos kvinnor, ofta i stora 
+mängder där utförandet och materialet är underordnade 
+antalet. Både män och kvinnor inom adeln bär gärna 
+något överdimensionerade ringar med sitt eller familjens 
+vapen på vänster långfinger.
+Klädseln bland ofrälset består av kjortlar och yllehosor 
+i naturfärger för män, medan kvinnor oftast bär klän­
+ningar. Adelns kläder är inte särskilt olika vad de lägre 
+klas serna använder förutom att kvaliteten är bättre, 
+tygerna mer exklusiva och färgerna oftast starkare.
+Tidigare var det vanligt att män av ädel börd bar fotsida 
+tuni kor av det slag som ännu är vanligt i Thalamur, men 
+numera anses detta nästan helt föråldrat och den man 
+som väljer att framträda i sådan utstyrsel får många att le 
+i mjugg. Det brukar halvt seriöst sägas att seden att bära 
+det arkaiska plagget kommer att dö med den nuvarande 
+gre ven av Kero, Tabalo Myriyamir Lohaki.
+En colonisk kläddetalj som redan helt försvunnit är 
+den höga, styva läderkrage som alltjämt används av tha­
+las kiska medborgare vid högtider – liksom i Consaber 
+symboliserar kragen i Nermada att man inte är en fri 
+man.
+
+--- Page 18 ---
+18
+NermadaMatkultur
+Oavsett var i Nermada man befinner sig är det mycket 
+sannolikt att man blir serverad fisk till åtminstone 
+något av dagens mål. Tillgången på havsfisk har alltid 
+varit god, och man har lärt sig att göra det allra bästa av 
+utbudet. En populär rätt som man har gemensam med 
+södra Thalamur är matzoum khamir, vilken består av 
+panerad och friterad fisk med starka kryddor. Spannmål 
+är en vanlig bas i maten på fastlandet, medan Arighals 
+befolkning i större utsträckning varierar sin föda med 
+får­ och getkött även om de naturligtvis äter även bröd 
+och stuvningar. 
+Bland dem som är så rika att de kan välja sin mat med 
+omsorg förekommer det två märkbara tendenser: an­
+tingen att man ser ner på fisken som ”pöbelmat”, eller 
+att man betraktar den som en del av Nermadas kultur 
+och historia. Rikemän av den sistnämnda åsikten väljer 
+inte sällan att helt hålla sig till fisk och vegetarisk föda, 
+och hävdar gärna att detta är nyttigt för kroppen och 
+stäv jar åldrandets framfart. Daaktroende människor av 
+alla stånd äter naturligtvis fisk på fredagar som gu den 
+påbjuder, vilket också har gjort att många av den samo­
+riska lärans anhängare försöker unna sig kött denna dag.
+Den föredragna drycken är vin, vilket man till vardags 
+brukar servera diskret utspätt med vatten. Inom bonde­
+ståndet serveras ofta även det billigaste vin med närmare 
+lika delar vatten eller mer. De flesta nermadier anser att 
+det inhemska vinet, framför allt det ljusröda thara­vinet, 
+är den finaste dryck som går att uppbåda, men man 
+unnar sig ofta importerade varor om man kan för att få 
+lite variation och en chans att uppleva det främmande. 
+Just nu är thalaskiskt kryddvin och olika soldiska viner 
+populära, men sådant varierar mycket fort.
+Vid festligheter är maten viktig, och adeln ordnar 
+gärna storslagna banketter med så många rätter de kan 
+uppbringa. Dessa tillställningar skiljer sig dock från 
+den klassiska bilden av riddares gästabud, i det att man 
+har en mer thalaskisk syn på bordsskick. Exempelvis 
+använder man sig av både kniv och gaffel när man intar 
+sin föda; man är däremot inte särskilt rädd för att vara 
+högljudd vid bordet, och det är inget socialt problem att 
+bli kraftigt berusad. 
+Det nedlåtande thalaskiska uttrycket ”att bete sig som 
+en sabrier” när någon har dåligt bordsskick har aldrig 
+riktigt etablerat sig i Nermada, men även släkter med 
+ursprung i Consaber är stolta över de fina sederna och 
+milt överseende mot sina släktingar i nordöst. Kvinnor 
+förväntas normalt inte dricka lika måttlöst som män, 
+men väcker samtidigt en viss beundran om de kan 
+supa en karl under bordet utan att själva bli alldeles för 
+oregerliga. 
+I bondeståndet har man förstås inte råd att bjuda lika 
+överdådigt som vid adelns tillställningar, och där lägger 
+man istället mycket stor vikt vid att maten ska vara 
+vällagad. Detta kan innebära att välbärgade bönder vid 
+festligheter äter mindre än sina adliga herrar, men i vissa 
+fall faktiskt godare mat. Fylleriet brukar vara på ungefär 
+samma nivå samhällsklasserna emellan, även om drycken 
+vid böndernas bord är av sämre kvalitet.Språk
+Språket nermadiska härstammar från den äldre colo­
+niskan, och har mycket gemensamt med thalaskan. 
+Den främsta skillnaden är att nermadiskan har fler 
+lånord – huvudsakligen från ashariskan och den därmed 
+besläktade jargiskan, men även sabriskan har haft en 
+viss påverkan. Personer från Thalamur och Nermada 
+har ganska lätt att förstå varandra, då thalaskan alltjämt 
+utövar stort inflytande på nermadiskans utveckling. 
+De största språkskillnaderna inom landet är att mängden 
+lånord är något färre på Arighal, och att det språk som 
+talas där därför låter något mera ålderdomligt än fast­
+lands ner madiskan. Detsamma gäller vissa områden i 
+Kam rida som inte har stor del i den internationella han­
+deln. Skillnaderna är dock inte större än att ner madier 
+utan problem förstår varandra oavsett var de kommer 
+ifrån.
+För skrift används de från coloniskan utvecklade tha­
+las kiska tecknen, och i likhet med Thalamur (och i viss 
+mot sats till Consaber) har man inga allmänt veder  tagna 
+stav nings regler utan skriver ”som det låter”. Det är dock 
+en växande åsikt bland landets lärda, inte minst på språk­
+liga fakulteten vid Heramons akademi, att det bör göras 
+åtminstone ett försök att standardisera stavningen i 
+landet. Huruvida detta verkligen kommer att ske är ännu 
+en mycket öppen fråga. 
+Läskunnigheten i landet är ganska utbredd, ursprungligen 
+eftersom man förväntades kunna skriva ner sitt namn i 
+skatterullorna och underteckna avtal om giftermål men 
+senare mycket beroende på att handeln stadigt ökat i 
+betydelse. Ansvaret för att lära ut konsten att läsa och 
+skriva faller i allmänhet på det lokala prästerskapet, eller 
+någon av samhällets äldre invånare i de landsdelar där 
+präster inte är välkomna.
+Språkkunskaper anses allmänt vara något efter  sträv ans­
+värt i de högre klasserna i Nermada, och att behärska ett 
+eller flera främmande språk är ett säkert sätt att bli be­
+trak tad som en kultiverad person. Det absolut van ligaste 
+andra språket är förstås thalaskan, men den an ses sam­
+tidigt vara så enkel att lära sig att den inte rik tigt im  po­
+nerar. Betydligt finare anses det att kunna tala sab riska 
+eller asha riska, för att inte tala om kejserlig eller lägre 
+jar giska. Behärskar man mer främmande språk än så kan 
+det öppna många dörrar och göra en till en mycket po pu­
+lär gäst i vissa kretsar.
+Namn och tilltal
+Nermada använder en form av det gamla coloniska 
+namnskicket. Varje person har ett egennamn följt av ett 
+namn som består av faderns eller moderns namn med 
+ändelsen ­ir (om personen som bär namnet är man) eller 
+­ira (för kvinnor). Detta följs sedan av ett släktnamn. Slavar 
+har enbart ett egennamn, eftersom deras härstamning 
+anses irrelevant; allmogen har däremot tre namn. I det 
+gamla imperiet användes enbart patronymikon (faderns 
+namn kompletterat med en ändelse) som mellannamn, 
+och det är även i Nermada det absolut vanligaste. Man 
+bygger i princip enbart på moderns namn om hon har 
+högre rang än fadern, eller om man av någon anledning 
+vill uppmärksamma henne särskilt. På Arighal används 
+det emellanåt för att hedra en moder som avlidit vid 
+förlossningen, även om seden av vissa anses vara något 
+osmaklig eller rentav olycksbringande. Frågan om barns 
+
+--- Page 19 ---
+19
+Nermada
+namn kan i adelskretsar vara en av de saker som avtalas 
+redan när man beslutar att äktenskap ska ingås. 
+Den thalaskiska vanan att ändra sitt namn och ta sig eller 
+få diverse nya namn förekommer överhuvudtaget inte, 
+och ses som mycket märklig av nermadier som betraktar 
+det som ett tecken på bristande stolthet över vem man är.
+Som tilltal är det absolut artigast att använda en persons 
+titel och hela dennes namn. Eftersom det läggs mycket 
+stor vikt vid att vara adlig är det dock fullt acceptabelt 
+att tilltala eller omtala någon med ”[Titel] [Ättenamn]”, 
+”Herr/Fru [Ättenamn]”, eller något mer informellt med 
+”Herr/Fru [Förläningens namn]”. Bara det faktum att 
+man nämner att någon är av furstlig släkt (vilket tilltalet 
+“Herr/Fru” markerar) är fint nog på alla nivåer. När två 
+personer känner varandra väl kan den av högre rang 
+vänligt föreslå att man ”håller sig till titlarna”, alltså nöjer 
+sig med att tilltala varandra som ”baron” eller ”greven”. 
+Samma förenklande kan mellan personer av samma 
+rang föreslås av äldre till yngre och av kvinnor till män. 
+Observera att detta dock fortfarande inkluderar en grad 
+av formalitet – naturligtvis förekommer det emellanåt att 
+nermadier tilltalar varandra enbart med förnamn. 
+Utanför adeln förekommer det att man tilltalar varandra 
+med ”Skattebonden” eller ”Hovslagaren”, men det är 
+ganska vanligt att man fortsätter att använda en persons 
+hela namn ganska långt in i bekantskapen. Såväl adel 
+som ofrälse varierar också ofta sina formuleringar så att 
+direkt tilltal inte hela tiden är nödvändigt: ”Får det lov 
+att vara en bägare vin?” är till exempel artigt nog för att 
+ingen ska ta anstöt, och man slipper använda den andres 
+namn eller titel. Allt det ovanstående gäller också bara 
+direkt tilltal, så om man nämner något icke närvarande 
+person behöver man inte använda hela dennes namn. 
+Även drottning Avhene Ranodira Varmagash kan i 
+sådana fall helt enkelt kallas ”drottningen”, såväl av adel 
+som ofrälse.Tideräkning och viktiga dagar
+Efter att kung Eronn Tharavir Maneras på 2330­talet lät 
+omvända sig till Daaks lära drev han igenom att man 
+därefter skulle räkna tiden på samma sätt som i Jargiska 
+kejsardömet. Åren räknas således från Ljusbringarens 
+ankomst, vilket gör att det för närvarande är år 2967 e.D. 
+(efter Daak). Månaderna fick även de jargiska kyrkliga 
+namn: primal, sekanda, tretoria, kuadra, pentanda, 
+hexaria, sebaria, oktanda, novanda, dekanda, udekanda 
+och dodekanda. Däremot trängdes aldrig de gamla colo­
+niska namnen på dagarna undan, och Daaks präster 
+driver inte heller frågan aktivt. Dagarnas namn är således 
+följande: domi, luni, mari, merkari, goedi, veni och sabi.
+Särskilt viktiga dagar är framför allt de som den troende 
+(eller i praktiken oftast den lokala länsherren) håller för 
+heliga. Inom samorismen är detta främst 1 hexaria (juni) 
+vilket var dagen för Samor den Heliges mest berömda 
+profeterande samt höst­ och vårdagjämningarna jämte 
+midsommar. Daaktroende högtidlighåller en eller flera 
+helgondagar, och lägger därtill extra vikt vid att fira 
+Ljusbringarens ankomst 7 primal (januari), alla själars 
+dag 24 tretoria (mars) och Daaks uppenbarelsedag 23 
+dodekanda (december).
+Utöver högtider med religiös anknytning är det mycket 
+vanligt att man uppmärksammar Nermas åminnelsedag, 
+då man firar Nermadas legendariska administrat och 
+föregivna grundare. Datumet är 17 kuadra (april), hennes 
+dödsdag, och patriotiska skådespel är mycket vanliga, 
+liksom tornerspel och andra kämpalekar. Lokalt är det 
+vanligt att länsherrarna låter fira sina födelsedagar med 
+att ställa till med fester och gärna lätta på pengapungen 
+för att ge allmosor till traktens fattiga. 
+En högtid som är mycket älskad är Sagonatt, vilken 
+fanns redan under det coloniska imperiets dagar och 
+som man har gemensam med Thalamur. Sagonatt firas 
+med berättande, sånger och överlämnande av gåvor, och 
+infaller 12 novanda (september). En mindre munter men 
+viktig dag är den från Thalamur inhämtade Pestmåne, 
+natten till den 2 dekanda (oktober), då det sägs att 
+farsoter sprids land och rike kring och såväl troende som 
+gudlösa försöker avvärja ofärd med hjälp av olika sorters 
+folklig magi.
+Myntsystem
+De flesta mynt godtas i Nermada, och man har åt min­
+stone i städerna ofta en god uppfattning om vad många 
+sor ters utländska pengar är värda. Länge hade man en 
+egen valuta, baserad på den som användes i det coloniska 
+im pe riet, men efter långa överläggningar beslöt kungen 
+år 2691 att landet för att underlätta handeln skulle 
+börja använda och prägla samma mynt som fanns i bruk 
+inom det cirefaliska samhället. Detta mötte först stort 
+mot stånd bland de som höll hårt på traditionerna, men 
+under de sekler som förflutit har de cirefaliska mynten 
+kom mit att bli accepterade och betraktade som en smi­
+dig valuta. 
+Myntfoten är således följande: 1 dukat = 20 floriner, 1 
+florin = 6 dinarer (dinaren har samma värde som den 
+jargiska denaren).
+Exempel på tilltal
+Den unge Lestar av adelsfamiljen Caraleigh är son 
+till Daniek Malonir Caraleigh, baron av Enorith. 
+Eftersom Lestar inte har någon egen förläning 
+tilltalas han artigast som ”Furst Lestar Daniekir 
+Caraleigh”, även om det går bra att kalla honom 
+”Herr Caraleigh” – förslagsvis när hans far inte 
+är närvarande, så att det inte kan missförstås vem 
+som avses. När han pratar med sin närmaste vän, 
+en året äldre son till en annan baron, tilltalar de 
+sedan länge helt enkelt varandra med ”Fursten” i 
+halvofficiella sammanhang. Privat säger hans vän 
+helt enkelt ”Lestar”.
+När hans far avlider och Lestar ärver baronstiteln 
+blir det artigaste tilltalet istället ”Baron Lestar 
+Danie kir Caraleigh”. Fullt godkänt är då även 
+”Baron Caraleigh”, ”Herr Caraleigh” eller, då han 
+numera har en egen förläning, ”Herr Enorith”.
+
+--- Page 20 ---
+20
+NermadaSamhälle
+Nermada är uppbyggt enligt en feodal modell, vilket 
+landet har gemensamt med de närliggande länderna 
+Soldarn och Consaber och det mer avlägsna Drunok. 
+Härskare är kungen eller drottningen, vilken sedan 
+delegerar ansvaret för att sköta om riket till olika vasaller 
+som i sin tur har egna vasaller som styr över delar av 
+landet. Denna klass av styrande kallas gemensamt adeln 
+eller fursteståndet, och utgör en knapp procent av den 
+totala folkmängden. Adelstitlarna har, liksom riddar­
+idealen, i stor utsträckning hämtats från Consaber och 
+för medlats vidare till Soldarn.
+I nästa samhällsskikt återfinns bönder, hantverkare och 
+köpmän, vilka anses vara likställda även om det natur­
+ligtvis finns skillnader i hur viktig en person anses vara 
+beroende på rikedom och anseende. Ofta anser sig de 
+handels män och hantverkare som håller till i städer vara 
+förmer än folk som lever på landsbygden, medan denna 
+grupp i sin tur tenderar att betraktar stadsborna som 
+uppblåsta och ovana vid hårt arbete. 
+Bland bönderna finns också en viktig statusmarkör i 
+frågan om huruvida man själv äger den jord man brukar 
+eller arrenderar den av länsherren. Dessa grupper kallas 
+i Nermada alltid skattebönder respektive frälsebönder, 
+eftersom den på andra håll förekommande distinktionen 
+fria respektive ofria bönder kopplas till slaveriet.
+Slavarna
+På samhällets botten finner man slavarna. Slaveriet är en 
+kvarleva från det gamla coloniska imperiet, i vilket det 
+var en utbredd företeelse, och Nermada är ett av ganska 
+få länder där det alltjämt tillämpas. En slav är egendom 
+och har inte rätt att bestämma över sitt eget liv, och under 
+gångna århundraden har de ofta behandlats synnerligen 
+brutalt. Med tiden har dock synen på slaveriet, och 
+framför allt på slaven som individ, kommit att förändras, 
+och det är inte längre lika allmänt accepterat att hålla 
+slavar även om det fortfarande är lagligt. Huvudsakligen 
+beror detta på att man följer en tendens i många andra 
+länder och inte vill bli betraktade som gammaldags. 
+Framsynta härskare har ofta gjort försök att på laglig 
+väg förbättra slavarnas villkor och lagliga ställning, om 
+än från en markant låg nivå, och flera grevar har under 
+de senaste seklerna rakt av förbjudit sina baroner att 
+hålla sig med slavar. Ett annat problem är att slavarnas 
+existens emellanåt har vållat spänningar och uppror 
+i ett antal provinser, inte nödvändigtvis på grund av 
+omtanke om dem så mycket som för att de utför arbete 
+som människor ur bonde­ och borgarståndet anser sig 
+ha rätt att göra mot betalning. Detta har lett till hotfull 
+stämning och i några fall stridigheter och massakrer, 
+påfallande ofta riktat just mot slavarna. I modern tid 
+köps det in få slavar från utlandet, och det har blivit 
+allt vanligare att adelsmän friger slavar och gör dem till frälsebönder. Somliga markägare är dock noga med att 
+hävda sina rättigheter, och det finns mindre områden 
+där slavar som sliter på fälten ännu är en vanlig syn. I 
+vissa fall förekommer det också att man håller sig med 
+högt bildade slavar som undervisar och ger råd, men 
+detta var vanligare förr när slavhandeln var mer spridd 
+och tillgången på välutbildade slavar från utlandet var 
+bättre.
+Rättsväsende
+Rättssystemet i Nermada kallas Grevarnas lag, vilket 
+baserar sig i att det till allra största del är de sju 
+grevarna som bestämmer vilka lagar som ska gälla inom 
+deras respektive territorier. De tämligen få, kungligt 
+sanktionerade lagar som övertrumfar grevarnas lag 
+berör i stort sett aldrig vanliga människor som inte är 
+adliga, utan handlar om sådant som arvsföljder inom 
+fursteståndet, vasallers och länsherrars rättigheter och 
+plikter, samt andra grundläggande fundament för rikets 
+uppbyggnad. Det finns ett litet antal straffrättsliga 
+bestämmelser i kungalagarna, men det mesta är upp till 
+respektive greve. 
+Märk väl att regenten till skillnad från i framför allt 
+Consaber själv anses stå över lagen, och i teorin kan 
+stifta nya lagar eller ändra de befintliga efter eget skön. 
+Skämtsamt har det sagts att det i Nermada är upp till 
+kungen att bestämma vad som är lag, och upp till de som 
+lagen berör att ta ställning till om den är värd ett uppror. 
+Ansvaret för att tolka lagen och avkunna domar ligger på 
+den lokale länsherren, men det är mycket vanligt att han 
+delegerar ut uppgiften på någon släkting. Bara i undan­
+tags fall förekommer personer utanför fur  ste ståndet som 
+lagmän. Endast adliga män och kvinnor har rätt att över­
+klaga domar, och då till den som befinner sig över deras 
+domare i rang. I praktiken betyder detta att den som 
+inte har baronsvärdighet kan vädja till en greve, och att 
+en baron kan vända sig till monarken för att få sin sak 
+prövad.
+Allmänt är Nermadas lagar kända för att vara hårda, i 
+den mån att man ofta riskerar dödsstraff redan andra 
+gången man begår ett visst brott om det inte är synner­
+ligen ringa. Fängelsestraff förekommer inte, däre mot för­
+va ring i häkten i väntan på dom, och det är van ligt att ut­
+döma böter om den anklagade verkar ha förut sätt ningar 
+att betala. Enligt konungsligt beslut är inte tortyr ett 
+accep  ta belt straff, men det är däremot fortfarande fullt 
+le gi timt att tortera någon för att få dem att erkänna ett 
+brott eller ange medbrottslingar. Det är inte helt ovan­
+ligt att miss  tänkta brottslingar avlider under de ibland 
+mycket grymma förhören. 
+Tortyr och spöstraff utförs normalt av någon råbarkad 
+vakt, emedan bödeln sedan gammalt är en avsevärt mer 
+an sedd yrkesman än i de allra flesta länder. I ett försök Samhälle
+Försök att göra som lagen säger – de är känsliga med sådant här i landet. Du verkar inte 
+vara den som använder skallen mest, men du skulle se löjlig ut utan den.
+ –Barriz, tirakisk skeppsbyggare i Loam, till anländande släkt
+
+--- Page 21 ---
+21
+Nermada
+att både lyfta bödelns status och få tjänsterna tillsatta 
+med kompetent folk har det beslutats (och rentav letat sig 
+in i kungalagarna) att skarprättaren inte får vara dömd 
+brottsling. Inte heller ska han ägna sig åt sidosysslor som 
+dödgräveri eller latrintömning, vilket tidigare varit vanligt 
+och fortfarande är standard i större delen av Mundana. 
+Yrket har en viss möjlighet till avancemang, då man 
+förutom att endast vara lokal bödel kan vinna titeln som 
+”landsbödel” (underställd en greve, och därmed den som 
+i vissa situationer kan komma att avrätta adelsmän) eller 
+rentav bli ”riksskarprättare” och stå under monarkens 
+direkta kontroll. Bödlar omges på alla dessa nivåer av 
+vidskepelse och har sällan särskilt många vänner, men de 
+har en anständig lön och en viss auktoritet. Dödsstraff 
+utförs vanligen genom halshuggning för ofrälse såväl 
+som adel, men den lokale länsherren har beslutanderätt 
+om vad som gäller i hans förläning.Värt att notera är att kvinnor och män i Nermada döms 
+lika för samma brott, även om de sociala konsekvenserna 
+ofta kan vara märkbart hårdare för kvinnor. Kvinnor är 
+dock fortfarande diskriminerade i arvsfrågor, i synnerhet 
+när det gäller hur titlar ärvs. De kommer alltid ett 
+steg efter män i arvsordningen – exempelvis ärvs en 
+baronstitel i första hand av äldste sonen, medan döttrarna 
+blir aktuella först om inga söner finns. (Är förhållandet 
+barnlöst går arvsrätten normalt till den avlidnes bröder, 
+och först om sådana saknas till en eventuell syster.) 
+I den mån prästerskapet har i uppgift att utdöma 
+påföljder, såsom vid många sedlighetsbrott, lägger sig 
+inte lagen i om dessa är ”rättvisa”. Den anklagades ålder 
+spelar ingen roll om han eller hon är äldre än tolv år; 
+under denna ålder kan man välja att rikta åtal mot 
+syndarens föräldrar, eller låta saken bero.
+Greve Lohakis lag
+Nedan följer ett kort utdrag ur den nu gällande lagen 
+i grevskapet Kero. Enligt grevens nådigaste beslut har 
+de dömande vasallerna rätt att utdöma mildare, men 
+inte hårdare, straff om de finner det lämpligt.
+Lönskaläge , varmed förstås köttslig förbindelse mel­
+lan man och kvinna varav inga äro gifta: Vid första 
+för bry telsen, böte vardera 5 floriner. Vid följande för­
+bry tel ser, böte vardera 10 floriner. I övrigt vad påföljd 
+syn da rens överordnade präst finner för gott.
+Hor, varmed förstås köttslig förbindelse mellan man 
+och kvinna som äro gifta, dock icke med varandra: För 
+gift part, böte vid första förbrytelsen 1 dukat. I övrigt 
+vad påföljd syndarens överordnade präst finner för 
+gott. Vid följande förbrytelser, döden enligt traktens 
+sed. För icke gift part, döme som för lönskaläge.Tillgrepp , varmed förstås stöld av annans ägodel utan 
+att våld brukats: Vid första förbrytelsen, återlämna 
+stöldgods och böte godsets fulla värde, miste därtill 
+vänster hand. Vid andra förbrytelsen, döden enligt 
+traktens sed.
+Dråp , varmed förstås tagande av annans liv i hastigt 
+mod, i dryckenskapens dimma eller under eljest för­
+mild rande omständigheter: Vid första förbrytelsen, 
+böte 10 dukater, varav hälften till den dödes efter lev­
+ande, och miste vänster hand. I övrigt vad påföljd syn­
+da rens överordnade präst finner för gott. Vid andra 
+för bryt elsen, böte 20 dukater, varav hälften till den 
+dödes efter levande, och miste höger hand. I övrigt vad 
+på följd syndarens överordnade präst finner för gott. 
+Vid ytterligare förbrytelser, döden enligt traktens sed.
+Adelsranger
+Den högsta adliga titeln i Nermada är förstås den 
+regerande monarkens – konung eller drottning, be­
+ro ende på kön. Den som äktar monarken får formellt 
+titeln gifteskonung eller giftesdrottning, men det är 
+fullt legitimt att referera till exempelvis en regerande 
+drottnings make som ”kungen”. Barnen till en monark 
+kallas för prinsar och prinsessor, och enligt mönstret 
+ovan kallas en prinsessas make för giftesprins.
+Under monarken återfinns grevarna/grevinnorna, vilka 
+är sju till antalet och styr från varsin stad. Precis som 
+städerna är de fördelade så att det finns tre grevskap på 
+Arighal och fyra på fastlandet. Grevarna har stor makt 
+över sitt område och har historiskt ofta varit mäktiga nog 
+att agera mycket självständigt gentemot kungamakten. 
+Den som gifter sig med en greve eller grevinna får 
+själv motsvarande titel, vilket även gäller de följande 
+adelsrangerna.
+De lägst rankade ädlingarna som förvaltar jord är ba­
+ron erna och baronessorna, vilka administrerar län inom 
+ett grevskap. Under dessa på rangskalan finner man de 
+adels män som inte har egna domäner, vilka samtliga 
+har titeln furste eller furstinna. Detta inkluderar också 
+exempelvis barn inom adeln, vilka formellt har en 
+furstetitel redan från det att de föds. Till skillnad från i 
+andra feodalstater är ”riddare” mycket påtagligt en syssel­
+sättning som inte säger något om personens status utöver att de tillhör frälseståndet – exempelvis kallas ätten Fer­
+vakons medlemmar (inklusive grevinnan av Loam) näs­
+tan genomgående riddare, eftersom de i allmänhet är 
+strids  tränade.
+Liksom i Soldarn kan inte en nermadisk ädling ha mer 
+än en adelstitel, så om en baron exempelvis ärver sin 
+förälders grevevärdighet går baronstiteln vidare till någon 
+annan i släkten. Normalt är detta den nyblivna grevens 
+barn, eller om sådana saknas yngre syskon. Undantag 
+har dock gjorts flera gånger och mäktiga länsherrar har 
+vissa möjligheter att påverka arvsföljden.
+Varje vuxen nermadier som är baron eller högre har 
+rätt att upphöja andra till fursteståndet. Man kan inte 
+skänka någon samma rang som man själv har, vilket 
+innebär att baroner kan utse furstar och grevar kan ge 
+någon en furste­ eller baronstitel; monarken kan rentav 
+fatta beslut om att nya grevskap ska instiftas, även om 
+detta naturligtvis är något mycket sällsynt. Den som adlar 
+har ett ansvar att se till att den nyblivne ädlingen och 
+hans familj kan leva ståndsmässigt, vilket kan innebära 
+att ordna med en försörjning och ett värdigt yrke (för 
+en furste) eller en förläning (för den som blivit baron). 
+Detta, liksom adelns önskan att hålla sin krets liten och 
+exklusiv, gör att det är mycket sällan ståndscirkulation 
+äger rum. Förlänas någon en titel får dennes make eller 
+maka, samt eventuella existerande och kommande barn, 
+samma adelsvärdighet.
+
+--- Page 22 ---
+22
+NermadaMaktspel
+Jag har all respekt för nermadiernas förmåga att mäkla fred – men den som kan få 
+folk att lägga ner vapen kan lika väl förmå någon annan att ta upp dem.
+ –Duce Legator Eramo Marcian, berömd jargisk ambassadör
+Diplomati och oberoende
+Under sin långa historia har Nermada blivit känt som 
+ett land av framstående diplomater och, bland dem som 
+inte gillar invånarna, notoriska kappvändare. På många 
+sätt har man präglats mycket hårt av sin tillvaro som ett 
+litet rike med en mycket mäktig granne i norr, och det 
+sägs att hela befolkningens sinnelag domineras av den 
+allt överskuggande längtan att behålla sitt oberoende. 
+Allt en nermadier gör påstås ha sin grund i denna eviga 
+känsla av utsatthet och stolthet.
+Vad som är sant är att det politiska spelet, med ingående 
+av avtal och välplanerade äktenskap, är en central del 
+av många nermadiers tillvaro. Sedan man i praktiken, 
+och senare även officiellt, blev en självständig nation har 
+man utvecklat förmågan att spela ut större och mäktigare 
+länder mot varandra, ofta som en ren överlevnadstaktik. 
+Det är ett bevis på taktikens effektivitet att det under en 
+mer än 1600­årig historia bara finns två dokumenterade 
+fall av att Nermada varit involverat i stridigheter (större 
+än rent perifera skärmytslingar) med andra länder. 
+Man har inte alltid varit så välbärgade som man numera 
+är – landet betraktas för närvarande med fog som rikt – 
+men förmågan att skapa allianser och göra upp utrikes 
+tvister genom förhandlingar snarare än med vapen har 
+alltid funnits där. Det är varken historiskt eller i nu­
+tiden sällsynt att diplomater från Nermada hyrs in för att 
+hjälpa till i fredsförhandlingar och andra större upp gö­
+rel ser länder och mäktiga potentater emellan (inte sällan 
+då just anordnandet av äktenskap), och även om många 
+misstänker dem för att försöka exploatera minsta lucka 
+i avtalen för egen vinning anses det generellt att de både 
+håller sitt ord och är förmögna att få andra att göra det.
+Vad gäller att säkra sitt oberoende, främst mot Thalamur, 
+är situationen komplicerad. Det är visserligen sant att 
+ingen härskare i Nermada kan bortse från den enorma 
+risk det skulle innebära att få sämre relationer med det 
+långt mäktigare grannlandet, men samtidigt har man 
+övervägande en historia av mycket goda och ömsesidigt 
+frukt samma förbindelser. Såväl kungar som magikrater 
+i de båda rikena är medvetna om att kontakten inte är 
+enkel riktad – det lilla Nermada är mycket nyttigt för sin 
+mer slutna granne, som därigenom etablerar många kon­
+takter med omvärlden utan att öppna upp sig för mycket. 
+Det har också varit till stor hjälp att Nermada aldrig 
+under krigiska former bröt sig loss från det Colo niska 
+im pe riet, och det finns fortfarande många som ser en 
+viss möjlighet till en återförening om Kej sarstaven skulle 
+åter finnas och imperiet födas på nytt. Ännu är dock inte 
+den dagen kommen, och till dess har Thalamur mycket 
+att vinna på grannlandets existens.
+Inrikes är stabiliteten större än vad många utlänningar 
+har fått för sig. Däremot pågår det ständigt intensiva 
+makt kamper i riket, vilka inom adeln i princip försigår 
+på två nivåer: i det högsta skiktet, vilket handlar om att grevarna pressar gränsen för hur självstyrande de kan 
+vara utan att provocera regenten för hårt, och på en lägre 
+nivå, där baroner och furstar intrigerar mot varandra och 
+i viss mån grevarna. Det kan visserligen vara en ambition 
+för baroner att uppnå grevestatus, men detta är ofta en 
+mycket avlägsen tanke då styresrätt över något av de sju 
+grevskapen i allmänhet är utom räckhåll även för mycket 
+skickliga maktspelare. Grevarna är å sin sida normalt de 
+som skulle kunna ha en någorlunda rimlig chans att ta 
+över tronen, men detta skulle så gott som undantagslöst 
+kräva ett inbördeskrig som ingen egentligen vill riskera. 
+Att vara greve är trots allt i sig en svindlande hög position, 
+och det är långt ifrån alla som velat sitta på kungatronen 
+i Hera mon – en kungs position är utsatt, och mången 
+greve har förstått att den högsta makten inte alltid står 
+att finna där det tycks.
+Stora delar av Nermadas politiska manövrerande, in rikes 
+såväl som utrikes, sköts av mycket respekterade am bas sa­
+dörer. Dessa är nästan utan undantag adliga av furste­
+rang, och upprätthåller en så tät korrespondens som 
+möj ligt med sina överordnade för att säkerställa att de 
+all tid är uppdaterade på dessas aktuella önskemål. 
+Samt liga släkter har en egen ambassadör stationerad vid 
+drottningens hov, och vissa håller sig rentav med egna 
+ambas sadörer i andra länder – exempelvis har greve 
+Silva spar sedan länge låtit stationera sin kusins äldste 
+son i Jhamalo Tamatz för att sköta ättens kontakter med 
+hertig Amirro Silversparre. Normalt är annars att drott­
+ningen utser en kunglig ambassadör som för Ner madas 
+talan vid andra länders hov, och sådana sändebud finns 
+i nästan alla Mundanas länder även om man inte kan 
+hålla sig med storslagna ambassader överallt. Den senaste 
+kontakten som knöts bestod i att furstinnan Elsgit Takhi­
+mira Sanavar posterades i Colonan, och om man inte 
+drog sig för att provocera Thalamur ytterligare skulle 
+man antagligen snart skicka ett permanent sändebud 
+även till Pereine. Det läggs stor vikt vid att diplomaterna 
+är mycket kunniga i det lokala språket, förstår traktens 
+seder och allmänt har ett oklanderligt uppträdande, 
+samt självklart att de är sluga förhandlare och obrottsligt 
+lojala mot Nermadas intressen.
+Det är till sist värt att notera att kärleken till förhandlingar 
+av olika slag inte är förbehållen adeln i Nermada, även 
+om man kan förledas att tro det. Det tycks vara en del av 
+men ta li teten hos de flesta invånare i landet att uppskatta 
+nog granna överläggningar och intrigerande, så även ett 
+bröl lop inom bondeståndet kan vara föremål för om­
+fat tande köpslående och undersökande kring huru vida 
+en viss person är ett gott parti, vilka andra anbud man 
+måste förbigå om man väljer en viss person, samt hur 
+för eningen påverkar ägorna i byn och om någon kan 
+komma att ta anstöt. Ädlingar upplever ofta att allmogen 
+här mar dem och betraktar inte sällan det hela med irri­
+tation eller nedlåtande överseende, men det hela är blo­
+digt allvar för människorna det berör.
+
+--- Page 23 ---
+23
+Nermada
+Högadeln
+Vi ädlingar kan sällan få de äktenskap vi önskar oss, fru Fervakon  
+– det är en del av priset för vår ställning.
+Ingen kan ge mig det äktenskap jag önskar mig, furst Armili.
+ –Furst Iavhas Renagodir Armili och grevinnan Sanna Mahorira Fervakon
+De styrande släkterna
+Nermadas mest berömda och inflytelserika släkter är de 
+sju familjer som håller varsitt grevskap i landet, och det 
+är dessa som presenteras i följande uppslag. Det finns 
+fler adels familjer i landet som för närvarande inte kan 
+göra anspråk på grevetitlar, men väl kan ha mäktiga och 
+kom pe tenta baroner inom sina led. Dessutom finns det 
+exem  pel på adliga ätter som slocknat ut eller aktivt blivit 
+för drivna eller utrotade under landets historia.
+Generellt brukar man dela upp släkterna efter deras ur­
+sprung: vanligen de som räknar sin härstamning från 
+det gamla Coloniska imperiet, de som är inflyttade från 
+Con sa ber, samt de som har sitt ursprung i Soldarn. I mo­
+der nare tid har även familjen Varmagash som började 
+som en familj inom en av de thalaskiska ätterna etablerat 
+sig och dessutom blivit kungafamilj. I allmänhet ten derar 
+släkter som har ett gemensamt ursprung att ge var  andra 
+stöd i konflikter, men det är långt ifrån någon själv klar­
+het och beror helt på den aktuella politiska si tu ationen.
+De sju grevskapens härskare har alla svurit en trohetsed 
+till den regerande monarken, vilket enligt den feodala 
+ordningen ska göra risken för konflikter mellan dem 
+och kungamakten obefintlig. I praktiken är det sällan 
+så enkelt, vilket gör grevarnas och grevinnornas grad av 
+självstyre och lydnad mycket beroende av monarkens 
+duglighet och karaktär.Den regerande drottningen
+Den nyss 28 år fyllda drottningen av Nermada, Avhene 
+Ranodira Varmagash, befinner sig för närvarande i en 
+pressad situation. När hon vid sin fars död för snart 
+tio år sedan kröntes till regent verkade saker och ting 
+i allmänhet gå hennes väg: hon hade redan rykte om 
+sig att vara en efter  tänksam men bestämd kvinna, som 
+troddes kunna hålla den ibland bångstyriga nermadiska 
+adeln i ett grepp fast nog att kunna kontrollera men 
+mjukt nog att inte kväva.
+Hon var trolovad med den sabriske kungens bror Con­
+ner, genom ett avtal som hennes far med stor försiktighet 
+och mycket takt lyckats ordna utan att allt för mycket 
+reta upp Thalamur, och när de unga tu faktiskt träffades 
+och äktade varandra år 2961 hade de båda svårt att tona 
+ner sin uppenbara förälskelse ens vid de stramaste cere­
+monier.
+Lyckan blev dock kort, och när hennes make plötsligt dog 
+två år senare var det inte längre läge att med pompa och 
+ståt offentliggöra anledningen till att man alls samlats 
+till den festlighet som blev hans sista – att drottningen 
+väntade en arvinge. Detta gjordes istället känt genom 
+bud kavlar som skickades ut från Nalmankar under de 
+följande månaderna. I sin sorg över den man hon av en 
+lycklig slump kommit att älska kunde drottningen bara 
+delvis glädjas när hon trots allt födde en välskapt dotter 
+som fick namnet Zamoni Connerira Varmagash.
+Avhene Ranodira Varmagash av Nermada har dock 
+inte tid att koncentrera sig på sina egna känslor, utan 
+tvingas fokusera på styret av sitt land. Efter händelserna 
+i sam band med makens död kräver cirefalierna i landet 
+ökat statligt stöd eller rätten att hålla sig med större 
+egna styrkor för att skydda sina intressen och liv, och 
+kontakten med Consaber har oundvikligen påverkats av 
+det olyckliga dödsfallet.
+Mitt i detta måste hon också ständigt vara redo att ut­
+kämpa sin svage släkting greve Amak Carosir Var magash 
+makt kamper mot ambitiösa grevar, och allt fler äd lingar 
+talar dessutom om att det mycket snart är dags för henne 
+att finna en ny gemål – även om hon har en arvinge är 
+hon ett mycket gott parti, och om hon skulle föda en ny 
+make söner skulle dessa trots allt ha före  träde över sin 
+syster i tronföljden.
+Drottningen är dock föga positivt inställd till idén att 
+gifta om sig. Hon oroar sig dessutom för de kommande 
+po litiska utmaningarna, även utan att behöva fundera 
+över äktenskap hon inte vill ha. Hon är stark, starkare än 
+någon borde behöva vara, men innerst inne fruktar hon 
+att hennes sorg ska komma ikapp henne.
+
+
+--- Page 24 ---
+24
+NermadaLiksom familjen Caraleigh, vilken man ofta ger sitt stöd 
+och försöker ha goda kontakter med, härstammar släkten 
+Dunmargon från Consaber. Dunmargon har historiskt 
+varit en ganska marginaliserad ätt i det gamla hemlandet, 
+men man har till skillnad från Caraleigh heller aldrig 
+kom mit i onåd och under tiden efter Savakonflikten på 
+tidigt 2200­tal har man varit den släkt som haft klart bäst 
+relationer med den sabriska kronan. Detta har blivit allt 
+mer betydelsefullt sedan greve Tyrdal Dunmargon blev 
+utsedd till det viktiga ämbetet som Rikets skattmästare 
+i Consaber.
+Inflytandet håller på att öka även i Nermada och man 
+håller numera ett grevskap på Arighal – den lilla staden 
+Vexial. Under greve Damer Karonir Dunmargon för­
+söker man öka sin makt och etablera sig som en kraft 
+att räkna med, men vissa inom familjen oroar sig för 
+att behovet av att hävda sig håller på att stiga greven åt 
+huvudet. Det mest talande ex­
+emp let är att det på­
+går all varligt me nade 
+försök att få till ett 
+giftemål mellan greve 
+Dunmargon och gre­
+vinnan Sanna Ma ho­
+rira Fervakon av Loam – ett äktenskap som skulle ge 
+dem kontroll över två av öns tre grevskap, men sam ti digt 
+riskera att utmana den mäktige greven av Kero.
+Dessutom skulle det kräva att någon av de båda parterna 
+bytte religion för att kunna få till ett lagligt äktenskap. 
+Många fruktar dessutom att grevinnan av Loam skulle 
+för söka få med sig Dunmargon på Fervakons och Silva­
+spars sida i frågan om hur Nermada ska förhålla sig vid 
+ett krig i Soldarn, vilket i sin tur allvarligt skulle kunna 
+skada relationerna mellan Dunmargon och Caraleigh.Dunmargon
+Familjen Caraleigh etablerade sig tidigt i Nermada 
+och utgjorde länge den främsta länken österut. Av den 
+anledningen var det ett hårt slag mot dem när de i 
+början av 2200­talet förlorade sina förläningar och sitt 
+goda rykte i Consaber och där sågs som illojala mot sitt 
+ursprung. Numera har man ingen representation inom 
+den sabriska adeln, men i takt med handelns ständigt 
+ökande betydelse har man trots det lyckats stärka sina 
+kontakter med den gamla modernationen. 
+Ett modernare bakslag i relationerna är dock att allt 
+fler av släktens medlemmar har övergett den sabriska 
+tolkningen av Daaks lära och istället börjat följa den 
+jargiska moderkyrkan, i vissa fall förmodligen för att 
+stärka banden till den regerande ätten Varmagash. Cara­
+leigh är kända som såväl dugliga administratörer som 
+tappra krigare, och har i Nermada rykte om sig att hålla 
+de ridderliga idealen mycket högt. Släktens huvud säte 
+är grevskapet Im’moran, men man har flera min dre 
+förläningar både på fastlandet och på Arighal. I nu­
+läget är familjens viktigaste fråga att motverka att ätten 
+Silva spar drar in Nermada i det förestående soldiska 
+inbördeskriget.
+Överhuvud : Grevinna Nielli Hegonira Caraleigh av 
+Im’moran
+Huvudsäte : Staden och grevskapet Im’moran. På Arighal 
+be trakt as baroniet Enorith som familjens viktigaste för­
+läning, då den har varit i släktens ägo i mer än tusen år.
+Styrkor : Gott rykte inrikes, stadigt ökande förmögenhet 
+genom handelskontakter österut.
+Svagheter : Dåligt anseende i Consaber och illa omtyckta 
+i Thalamur på grund av sitt ursprung.
+Vänner : Ätterna Varmagash och Dunmargon står för 
+närvarande på god fot med Caraleigh.Fiender : Historiskt 
+då liga relationer till 
+ätten Silva spar, vilka 
+bara har blivit sämre 
+i och med Silva spars 
+makt  am bitioner i 
+Sol darn och riskerar 
+att ex plo dera i kon  flikt. Sedan gammalt ser man också 
+med stor miss  tänk sam het på ”krigshetsarna” i släkten 
+Fervakon.
+Kända medlemmar
+Grevinna Nielli
+Grevinnan Caraleigh är en bit över sextio år gammal, 
+men företar fortfarande gärna resor emellanåt och be­
+söker bland annat huvudstaden någon gång vartannat 
+år och låter då sin nästan tio år yngre make sköta grev­
+skapets löpande affärer.
+Primod Marius
+Marius Justianir Lascaris som gift sig med en av familjens 
+baronessor är Primod av Heramon, och därmed landets 
+mest inflytelserike medlem av den jargiska moderkyrkans 
+prästerskap.
+Furst Iavhar
+Landets mest berömda äktenskapsmäklare, furst Iavhar 
+Reonir Caraleigh, är en annan av ättens stoltheter, och är 
+även känd utrikes då han hjälpte till att förhandla fram 
+Soldarns rikskonungs äktenskap med Marian Solfjäder.Caraleigh
+
+
+--- Page 25 ---
+25
+Nermada
+I motsats till de gamla, traditionstyngda familjerna är 
+ätten Fervakon fortfarande att betrakta som ganska ung. 
+Man har också ett enkelt ursprung, men ett som man 
+är stolt över: man räknar sina anor till Garvis Hanakir 
+Turas som adlades år 2008. Denne var från början en 
+enkel bonde som tjänade på familjen Silvaspars ägor 
+i deras dåvarande grevskap Vexial. När hans hemby 
+utsattes för anfall av en onormalt stor flock ferfaker tog 
+han modigt och beslutsamt kommandot och samlade 
+den handlingsförlamade milisen till motangrepp mot 
+bestarna. Den dåvarande greven blev så imponerad när 
+han hörde talas om insatsen att han lät adla den unge 
+mannen och senare såg till att han blev baron över 
+hemtrakten. 
+Under årens lopp har Fervakons inflytande växt, även 
+om det i början var svårt för dem att få riktigt pres  tige­
+fyllda äktenskap på grund av sitt enkla ursprung. Nu­
+mera har de ett eget grevskap, Loam, på Arighal och är 
+kända som stolta krigare som väl representerar riddarens 
+stridsduglighet – om än inte alltid de ridderliga dygderna. 
+De anses också vara tämligen hetlevrade, och har ännu 
+starka band och en kvardröjande känsla av lojalitet gen­
+te mot ätten Silvaspar. Man är en av få ätter som ännu 
+håller fast vid traditionen att ha ett gemensamt valspråk: 
+”Lita på min vrede.”
+Överhuvud : Grevinna Sanna Mahorira Fervakon av 
+Loam.
+Huvudsäte : Staden Loam på Arighal, vilken man är 
+mycket stolt över då man först i modern tid fått grevlig 
+status.
+Styrkor : Ätten har ett rykte som mycket framstående 
+stridsmän, och tenderar att få markant ökat inflytande 
+vid risk för krig. Goda handelskontakter med Takalorr 
+och delar av Soldarn, och har vänskapliga relationer med 
+flera adelsfamiljer i Soldarn.
+Svagheter : Anses som oputsade och har svårt att bli 
+accepterade i hög adliga kretsar, och anses sällan vara särskilt lämpliga ma­
+kar för ädlingar av de 
+andra ätterna.
+Vänner : Mycket star­
+ka band till ätten 
+Sil va spar, och allt 
+när ma re för bin del ser med familjen Dunmargon då det 
+på går äk ten skapsförhandlingar mellann grevinnan Fer­
+va kon och greve Dunmargon.
+Fiender : Misstros kraftigt av den fredsförespråkande fa­
+mil jen Caraleigh, och anses som ovärdiga adelsmän av 
+såväl Lohaki som, i något mindre grad, Namator.
+Kända medlemmar
+Grevinna Sanna
+Liksom många i sin familj är den unga Sanna Mahorira 
+Fervakon en duglig krigare, i synnerhet med lans och 
+sköld, men numera tar grevinnan sig bara stundtals tid 
+att delta i tornerspel. Det är dock alltid en välkommen 
+syn bland hennes undersåtar när hon demonstrerar sin 
+skicklighet.
+Furst Vareld
+Drottningens förkämpe Vareld Tazmakir Fervakon är 
+känd som en av rikets absolut främsta krigare, och anses 
+vara en för sin ätt ovanligt hövisk riddare som överser 
+drottningens personliga garde.
+Furstinna Xemi
+Motsats till Vareld som sägs agera som rovriddare från 
+sin fars baroni i Thara där det rests allt starkare protester 
+mot hennes vilda framfart och illegala krav på ”skatt” av 
+bönder i angränsande förläningar.Fervakon
+Överhuvud : Greve Damer Karonir Dunmargon av 
+Vexial.
+Huvudsäte : Släktens makt är mycket påtagligt samlad 
+kring Vexial på Arighal.
+Styrkor : Goda kontakter i Consaber, stor kontroll över 
+matproduktionen på Arighal.
+Svagheter : Familjen betraktas fortfarande som något av 
+uppkomlingar av äldre släkter i Nermada, även om man 
+har en lång historia i landet, och riskerar på grund av 
+nuvarande politiska manövrer att fjärma sig från sina 
+gamla allierade i ätten Caraleigh.
+Vänner : Traditionellt familjen Caraleigh, men under 
+senare år har man kommit att etablera allt fler kontakter 
+med släkten Fervakon.
+Fiender : Få rena fiender, men betraktas med visst ned­
+låtande av de mäktiga släkterna Lohaki och Namator.Kända medlemmar
+Greve Damer
+Tidigare var familjens greve, Damer Karonir Dun mar­
+gon, framför allt berömd som en av landets främsta 
+vin kännare, men på senare år har många slagits av hans 
+skick lighet i förhandlingar.
+Furst Harmegad
+Harmegad Synoreir Dunmargon är Nermadas ambas­
+sadör i Consaber, där han är känd som en skicklig poli­
+tiker som kanske ägnar något mer tid än han borde åt att 
+främja sin familjs intressen.
+Furstinna Jaina
+En annan berömdhet är greve Vexials kusindotter Jaina 
+Sekha rira Dunmargon, vilken är en mycket skicklig hyd­
+ro tropiker och har kopplingar till den sabriska magi ker­
+orga ni sa tionen Legio Colonan.
+
+--- Page 26 ---
+26
+NermadaTrots att familjens tid som regenter över Nermada är 
+över sedan mer än tusen år och bara omfattade ett sekel 
+och sex härskare är ätten Lohakis medlemmar oerhört 
+stolta över sina gamla anor. Även om all dokumentation 
+som kunde ha bevisat eller vederlagt saken har gått 
+förlorad med åren sägs det att den förste Lohaki var en 
+av Nermas trognaste underlydande när hon en gång fick 
+i uppdrag att förvalta det som numera är Nermada. Man 
+ser sig som, och är i stor utsträckning, levande bevis på 
+den stabilitet och koppling till det gamla som landet 
+fortfarande har, och drar sig inte för att använda sin 
+familjs långa historia som argument för det rättfärdiga i 
+sina ståndpunkter i de mest skilda frågor. 
+Allmänt anses Lohakis medlemmar vara gammaldags 
+och de håller kvar vid många seder som är på utdöende 
+i resten av landet, vilket brukar ge dem lika delar respekt 
+och överseende leenden beroende på vem man frågar. 
+Ättens grevskap är för närvarande den viktiga hamn­
+staden Kero som styrs av Tabalo Myriyamir Lohaki. 
+Denne åldrande men långt ifrån försvagade man driver 
+en politik mot kronan där man inte aktivt bryter mot 
+förordningar men är noga med att markera sin makt och 
+rela tiva oberoende. I grevens unga dagar trodde många 
+att han en dag skulle försöka få sin ätt bakom sig i ett 
+försök att utmana Varmagash om kungamakten, men 
+an tingen har han misslyckats med att få familjens stöd 
+eller också var det aldrig hans mål. 
+Överhuvud : Greve Tabalo Myriyamir Lohaki av Kero.
+Huvudsäte : Släktens makt är mycket påtagligt kon cen tre­
+rad till grevens palats i Kero, men man håller sig också 
+med flera imponerande hus i Heramon där icke bofasta 
+släk tingar kan mötas vid besök i huvudstaden.
+Styrkor : Mycket gott anseende inrikes, i synnerhet bland 
+folk som imponeras av deras historia. Stora delar av släk­
+ten är enormt förmögen sedan gammalt och vet att för­
+valta sina rikedomar. Man har bättre relationer med cire­
+faliska handelsmän än de flesta släkter.
+Svagheter : Ses med rätta som gammaldags av de flesta, 
+vilket inte alltid imponerar, och har lagt mindre fokus på 
+utrikes kontakter än andra familjer.
+Vänner : Lohaki hyser stor respekt för familjen Namator, 
+och de båda kan samarbeta bra även om de ofta har varit 
+och är rivaler om makten. Generellt bra kontakter med 
+Varmagash, även om det snabbt kan ändras vid en mer 
+påtaglig maktkamp.
+Fiender : Även om man försöker hålla sig väl med de flesta 
+ten derar motviljan mot yngre ätter som Dun margon 
+och Fer  vakon att skina igenom. Dessa ses dessutom i 
+och med det eventuella förestående äktenskapet mellan 
+greven av Vexial och grevinnan av Loam som allt mer 
+uppstudsiga konkurrenter om makten på Arighal, vilka 
+många i släkten anser att man snart måste plocka ner 
+några pinnhål. Man är dessutom mycket uppmärksam 
+på Silvaspars förehavanden och har skickat signaler om 
+att man tycker att dessa spelar ett farligt spel genom att 
+engagera sig i Soldarns interna konflikter.Kända 
+medlemmar
+Greve Tabalo
+Den konservative gre­
+ven av Kero är en av 
+landets mest kända politiker, och har gjort sig känd för 
+att hylla många av de traditioner som andra be  trak tar 
+som föråldrade. Det brukar sägas att han är mer tha las­
+kisk än vilken traditionsbunden thalask som helst, men 
+själv framhäver han hellre att han bevarar och hyllar 
+arvet från det gamla Coloniska imperiet. Greven gör 
+ingen hemlighet av att han tycker att Nermada i allt för 
+stor utsträckning har fjärmat sig från sitt förflutna, och 
+han drömmer helt uppenbart om att det gamla Colonan 
+en dag ska återuppstå. 
+En black om foten för Tabalo Myriyamir Lohakis strävan 
+efter makt är dock det envisa ryktet att hans gren av 
+familjen är närmast ruinerad efter att ha spenderat allt 
+för mycket pengar på att utsmycka sin stad. Nyligen 
+lämnade cirefaliern Zehrmoz en mycket välavlönad tjänst 
+inom kredithuset Elizimaz för att istället ta tjänst som 
+grevens närmaste man och bokhållare – enligt ryktet för 
+att se till att enorma skulder till cirefalierna blir betalda.
+Baron Tenak
+Baron Tenak Iefredir Lohaki styr över baroniet Vaethal 
+i grevskapet Dharim, men överlåter det mesta av arbetet 
+med att sköta förläningen till sin hustru medan han själv 
+skriver religionshistoriska verk som blivit allt mer kända 
+på senare tid. Baronen är själv varmt troende enligt 
+den samoriska läran, men har även författat en känd 
+avhandling om Daakkyrkans två nermadiska helgon.
+Baron Kiovar
+Baron Kiovar Hegondir Lohaki av Mihla har det tvek­
+samma ryktet om sig att vara släktens största odugling, 
+vil ken är i färd med att köra sin förlänings ekonomi 
+full ständigt i botten; det spekuleras i att den enda an­
+led ningen till att han inte på något sätt blivit ersatt är 
+att han är ett orosmoment för sin länsherre, greven av 
+Vexial.
+Furst Marvihl
+Den knappt 19 år gamle furst Marvihl Demarkir Lohaki, 
+vilken är son till en av släktens baroner i grevskapet 
+Im’moran, är ett populärt sändebud till de olika hoven i 
+landet; han är en skicklig diplomat, men är mest berömd 
+som en av landets mest lovande sångmästare på över 
+hundra år och Nermadas mest eftertraktade ungkarl.Lohaki
+
+
+--- Page 27 ---
+27
+Nermada
+Familjen Namator är den ätt som, tillsammans med 
+släkten Lohaki, har den längsta och mest ärorika his  to­
+rien i Nermada. Sedan administrat Nermas dagar har 
+man haft ett nära samarbete med såväl den styrande 
+fa mil jen som grannen Thalamur, och många av ättens 
+medlemmar har haft viktiga positioner i samhället – 
+exem  pelvis har man alltid haft grevlig värdighet, även om 
+vilken domän man styrt över har skiftat ett par gånger. 
+Stol tast är man förstås över att man var kungafamilj 
+under 600 år, en längre period än någon annan ätt, och 
+även om det nu var länge sedan anser många att tiden 
+snart är kommen då en Namator åter bör krönas. 
+Den nuvarande greven Gilath Anorazir Namator av Thara 
+är mycket noga med att framhålla att han är drottningens 
+lojale undersåte, men samtidigt är det ingen hemlighet 
+att han och hans närmaste familj håller på att utarbeta 
+ett förslag på en reformering av Nermadas styre. Mer 
+specifikt vill man rekommendera att man återupplivar 
+det gamla systemet med två hertigar av Kamrida res­
+pek tive Arighal, vilka överser grevarnas aktiviteter och 
+”avlastar monarken”. Ingen tvivlar på att Namator då ser 
+sig själva som det enda rimliga alternativet som hertigar 
+av Kamrida, även om man varken är rikast i inflytande 
+eller pengar. När dokumentet med reformförslag till 
+slut är redo att presenteras för drottningen och adeln är 
+det inte osannolikt att man kan få stöd av ätten Lohaki 
+på Arighal, vilka helt säkert skulle anses lämpade som 
+hertigar. 
+Det kommer inte att hjälpa motståndarna att den nu var­
+ande greve Varmagash är en erkänt svag beslutsfattare 
+som kanske rentav skulle uppskatta att flyttas ner en 
+aning i hierarkin. Samtidigt finns det många som kom­
+mer att vända sig emot en förändring inte minst på grund 
+av risken att Namator tar makten på Kamrida, efter  som 
+släkten bland annat anses ha väl starka band till Thala­
+mur och vissa rentav ifrågasätter var deras lojalitet finns.
+Överhuvud : Greve Gilath Anorazir Namator av Thara.
+Huvudsäte : Den nordliga staden Thara med om­
+givningar. 
+Styrkor : Synnerligen goda kontakter med Thalamur, 
+framför allt ätterna Arginakus och Cartika, och genom 
+gifte många band även till andra länders makthavare. 
+Man underhåller även kontakter med Consaber eftersom 
+Thara är centrum för stora delar av den diskreta handeln 
+mellan sabrier och thalasker. Namator åtnjuter också 
+respekt för sin gamla historia.
+Svagheter : Mycket begränsat inflytande på Arighal, där 
+man endast har ett litet baroni. De som vill markera 
+självständighet gentemot Thalamur misstänker ofta 
+Namator för att vara mer intimt knutna till grannlandet 
+än man vill erkänna, och det viskas att Thalamurs 
+hemliga polis Rakhori har hållhakar på nästan samtliga 
+högt uppsatta familjemedlemmar. Många i familjen har 
+en historia av att inte kunna hålla sina anti­teistiska 
+uppfattningar för sig själva, vilket har vållat många 
+konflikter genom åren.Vänner : Även om 
+re la tionen kan vara 
+om byt lig står man 
+of tast på ganska god 
+fot med sina mäktiga 
+ut ma nare i släkten 
+Lo haki. Med kunga fa­
+mil jen Var ma gash delar man mycket av sitt ursprung, 
+men Var magash är samtidigt ett mer påtagligt mål för 
+släk tens maktspel.
+Fiender : Man är alltid uppmärksam på konkurrenter om 
+makten, och har en något paranoid inställning gentemot 
+de flesta adelsätterna i landet. För närvarande anser 
+många att släkten Caraleigh börjar växa sig för starka 
+igen.
+Kända medlemmar
+Greve Gilath
+Greve Namator har rykte om sig att vara en slug räv, 
+och somliga gör rentav gällande att han använder sig av 
+magi för att påverka människors sinnen. De som känner 
+honom anser att det sistnämnda är rent nonsens, och 
+ofta är en undanflykt för att bortförklara att man låtit sig 
+överlistas av den listige och vältalige greven.
+Furst Sabion
+Furst Sabion Teramir Namator håller det prestigefyllda 
+ämbetet som Drottningens härold, och anses kunna 
+mer om både nermadisk och utrikes heraldik än någon 
+annan i landet – eller för den delen, hävdas det, i 
+världen. Han har liksom många av sina företrädare 
+på posten tillbringat tid i Consaber för att studera 
+landets heraldiska traditioner och även verkat där som 
+ambassadör en kortare tid.
+Baronessa Ytessa
+Berömd är också baronessan av Lagoran i grevskapet 
+Im’moran, Ytessa Sarimira Lohaki, som är ingift i 
+släkten och från början tillhörde ätt Arginakus i Thala­
+mur. Baronessan är känd som en av de sköna kons  ternas 
+största beskyddare i Nermada, och ordnar gärna stor­
+slagna sammankomster där hon knyter viktiga kontakter.
+Furstinna Eriela
+En känd person man talar mer tyst om är greve Namators 
+syster, vilken är fast övertygad om att hon är en häst och 
+oftast hålls mer eller mindre inlåst på familjegodset 
+utanför Thara. Elaka rykten gör gällande att hennes 
+märkliga sinnessjukdom är ärftlig i släkten.Namator
+
+
+--- Page 28 ---
+28
+NermadaAv gammal tradition och stolthet över sitt ursprung 
+an vänder medlemmarna av denna släkt emellanåt 
+fortfarande den soldiska formen av sitt namn, Silver­
+sparre, men andra kallar dem vid det lokalt anpassade 
+Silva spar. Sedan familjen för första gången gifte in sig i 
+Ner madas adel, och snart genom lyckliga omständigheter 
+kom att ha egna domäner i landet, har de gjort sig kända 
+som bru tala maktspelare som man gör klokt i att hysa 
+respekt för. 
+Även om de aldrig har kunnat nå sin hett eftertraktade 
+kunga titel har de ett mycket stort inflytande genom att 
+ättens överhuvud, greve Karalas Geadonir Silvaspar, styr 
+över handelsstaden Dharim. Från denna underhåller han 
+in tensiva kontakter med sin avlägsna släkting i Soldarn, 
+her tig Amirro Silversparre, och han har på senare tid 
+bli vit allt mer öppen med sin vilja att Nermada ska ta 
+ställ ning för hertigen i dennes förestående uppror mot 
+den soldiske rikskonungen. Det spekuleras i om hertig 
+Amirro har lovat sin grevlige anförvant nermadiskt in fly­
+tande över Kathar i utbyte mot ekonomiskt och mili tärt 
+stöd, vilket dock skulle riskera hertigens relation till sin 
+allierade hertig Basur Två Lansar av Kathar. I en kon flikt 
+har greve Silvaspar med sig sin familjs ständiga al lierade, 
+de kri giska medlemmarna av ätten Fervakon, men de 
+flesta adelsmän i Nermada är synnerligen skeptiska till 
+att engagera sig i ett krig på främmande mark.
+Överhuvud : Greve Karalas Geadonir Silvaspar av 
+Dharim.
+Huvudsäte : Ett storslaget palats i Dharim. 
+Styrkor : Goda kontakter med delar av den soldiska adeln, 
+i synnerhet sina anförvanter i familjen Silversparre. Stora 
+och ständigt växande rikedomar genom inflytandet över 
+Dharims handel.
+Svagheter : I takt med att ambitionerna att dra in Ner­
+mada i maktkonflikten i Soldarn blir mer uppenbara 
+till tar skepsisen mot Silvaspar bland många släkter i 
+Nermada.
+Vänner : Ätten Fervakon har alltid varit släktens allierade, 
+och ingenting tyder på att det kommer att ändras. Alla 
+familjer gör sitt bästa för att upprätthålla åtminstone 
+neutrala relationer med de omåttligt rika Silvaspar.
+Fiender : För närvarande är Caraleigh ättens mest öppna 
+kritiker, vilka även om de så gott som alltid talar för 
+fred rentav skulle kunna höja vapen mot Silvaspar om 
+de drar in Nermada i krig. Även familjen Lohaki har 
+markant skärpt tonen mot Silvaspar.
+Kända medlemmar
+Greve Karalas
+Greve Silvaspar har en förmåga att hamna i den politiska 
+hetluften, och av allt att döma trivs han där. Kontakterna 
+med Soldarn tar upp mycket av hans tid, men samtidigt 
+sköter han ättens grevskap med stor skicklighet.Furst Dalan
+Eu nuck  en från 
+Thara, som han kallas 
+av sina fiender, är en 
+av Ner madas absolut 
+mest rutinerade am­
+bas sa dörer. Han är rikets officielle representant i An­
+Tha la mur, och har där goda kontakter med såväl flera 
+av magi kraterna (och åtminstone försiktigt positiva re­
+la tioner med de övriga) som med utsända från andra 
+länder. 
+Sitt öknamn fick fursten på grund av de svåra skador 
+han ådrog sig när han för ett antal år sedan hamnade 
+mitt i kalabaliken kring det som kommit att kallas 
+An­Thalamurs vedhuggning, då de två ghordvärgarna 
+Khammer och Kharzim med stora mängder våld slog 
+sig ut från staden och lämnade landet. Utan egen 
+förskyllan hamnade ambassadören mellan de flyende 
+dvärgarna och lokala vakter, och hans försök att lugna 
+ner situationen belönades med ett antagligen missriktat 
+yxhugg i underlivet. Furst Silvaspar överlevde enbart tack 
+vare de fantastiskt skickliga thalaskiska biotropikerna, 
+och vissa säger rentav att magikrat Sanguis thal Qatada 
+själv hjälpte till att hela hans svåra skador. 
+Efter händelsen sägs Nermadas ambassadör vara kast­
+rerad och har synbart mycket svårt att röra vänster 
+höft. Han försöker att inte låta det hela påverka hans 
+poli tiska gärning, men vet med sig att hans åsikter om 
+dvärgar för alltid har färgats av den brutala drabbningen 
+och försöker hantera detta. Dalan Indhilir Silvaspar är 
+skarpsinnig, en god talare, och mycket duktig på att läsa 
+av sina medmänniskor. Han är en av mycket få personer 
+som misstänker att magikraterna av någon anledning 
+medvetet lät den dvärgiske ambasssadören och hans 
+kusin komma undan från Dubaral i samband med 
+Vedhuggningen, även om han ännu inte vet varför.
+Furstinna Mariel
+Mariel Karalasira Silvaspar, äldsta dotter till greven av 
+Dharim, är grevens arvtagare och förutspås bli en mycket 
+skicklig ledare när hennes far går ur tiden. Hon befinner 
+sig för närvarande utomlands, i Camard, för att försöka 
+mäkla fram ett äktenskap mellan sin yngsta syster och en 
+brorson till Ashariens överjarl Anstir Tyldon.
+Grevinna Janida
+En annan inflytelserik kvinna i grevens familj är hans 
+hustru, Janida Bragoira Silvaspar, som med sitt fan tas­
+tiska minne och närmast sjukliga noggrannhet sköter 
+översynen av familjens handelsintressen. Vissa med­
+lemmar av släkten hävdar i smyg att hon är en olämplig 
+hustru för att hon inte fött några söner, men ingen vågar 
+säga det inom hörhåll för greven – eller, ännu värre, 
+grevinnan själv.
+Baron Lakus
+Ättens främste krigare är baron Lakus Doriakir Silvaspar 
+som är känd som en av Nermadas allra främsta svärdsmän 
+och två gånger har ställt upp i svärdsspelen i Hadarlon. 
+Hans rykte påverkas dock, positivt eller negativt, av 
+att han har en stor skara oäkta barn på bygden, även i 
+Soldarn.Silvaspar
+
+
+--- Page 29 ---
+29
+Nermada
+Sedan lite drygt 300 år är ätten Varmagash kungafamilj 
+i Nermada, och de har därtill en stabil maktbas i det att 
+de håller det kring huvudstaden centrerade grevskapet 
+Heramon. Från första början var Varmagash en mäktig 
+familj inom den thalaskiska ätten Sala, och när de 
+genom gifte etablerade sig i Nermada förde de med sig 
+stora rikedomar och värdefulla kontakter. 
+Deras politiska motståndare anklagar ibland dem för 
+att vara Thalamurs knähundar, men sanningen är att 
+familjens relationer till sina släktingar i det norra grann­
+riket är ganska svala om än diplomatiska. En orsak till 
+detta är att familjen närmast mangrant konverterade till 
+den jargiska Daakkyrkan för flera hundra år sedan, en­
+ligt ryktet efter någon sorts mystisk religiös upplevelse 
+vid ett släktmöte. Det spekuleras dock i om omvändelsen 
+var en del i att stärka banden till det övervägande Daak­
+tro ende Consaber utan att rakt av ansluta sig till den sab­
+riska kyrkan. Varmagash är kända för att vara skickliga 
+och inte överdrivet brutala politiker och deras grepp om 
+kungamakten är i nuläget inte direkt hotat, även om 
+den grevliga ätten Lohaki på Arighal är ständiga kon­
+kurrenter om inflytandet i landet.
+Överhuvud : Drottning Avhene Ranodira Varmagash.
+Huvudsäte : Heramon, huvudstad och mest eftertraktade 
+grevskap i Nermada, även om drottningens lantpalats 
+Nalmankar i mångt och mycket är att betrakta som 
+ättens högsäte.
+Styrkor : Ätten är synnerligen rik och fortsätter att dra 
+in pengar genom tullar på den livliga handeln. Det finns 
+många mycket goda diplomater i familjen även med 
+nermadiska mått mätt, och man underhåller inte minst 
+utrikes relationer med stor skicklighet. Kontakterna med 
+den jargiska Daakkyrkan är synnerligen goda.
+Svagheter : Varmagash dras med envetna rykten om att 
+vara allt för lojala mot sina släktingar i den thalaskiska 
+ätten Sala, vilket bland annat har gått ut över deras re la­
+tioner till det mäktiga Consaber. Drottningen är inom 
+landet erkänd som en god politiker, men har ännu inte 
+hun nit etablera sig på den världspolitiska scenen och 
+dras dessutom med problemet att grevskapet Heramon 
+är under svag administration av hennes släkting greve 
+Var ma gash. Dessutom hamnar man ofta i konflikt med 
+den samoriska lärans företrädare i landet.
+Vänner : De mest hjärtliga kontakterna har man med 
+familjen Caraleigh, men generellt står man också på 
+tämligen god fot med den mäktiga familjen Lohaki. 
+Utrikes har man mycket goda förbindelser med det 
+jar giska kejsardömet, och man har även lyckats vid­
+makt hålla diplomatiska relationer med det isolerade 
+Damarien där Nermada ännu har en öppen ambassad.
+Fiender : Inga öppna fiender, även om det ofta har fun­
+nits starka spänn ingar mot de över  väg ande samo r ist iska 
+fam ilj erna Fer  vakon och Silvas par. För när  var ande oroar 
+Silvaspars intressen i Soldarn, och man är dess utom 
+alltid vaksamma på den maktlystna släkten Namator.Kända 
+medlemmar
+Drottning Avhene
+Se full beskrivning på 
+sida 23.
+Kronprinsessa Zamoni
+Den knappt 4 år gamla kronprinsessan Zamoni Conne­
+rira Varmagash är förstås redan mycket känd och be  tydel­
+se full eftersom hon, tills hon eventuellt någon gång får 
+yngre bröder, är tronarvinge.
+Greve Amak
+I teorin är drottningens kusin, greve Amak av Heramon, 
+en av Nermadas absolut mäktigaste män, och många 
+har också en mycket stor respekt för honom. Den bittra 
+sanningen är dock att Amak Carosir Varmagash är en 
+olycklig man som är lagd åt svårmod och grubblerier, och 
+dessutom lider av en närmast sjuklig oförmåga att fatta 
+beslut. Det som i början kunde tolkas som noggrannhet 
+och en motvilja mot att överila sig har allt mer uppenbart 
+visat sig vara djupt rotat i hans plågade själ, till den grad 
+att en sådan fråga som huruvida han vill fördriva en 
+lugn förmiddag med att vandra i norra eller östra parken 
+kan ta en timme att avgöra och ge honom ångest över 
+huruvida han har valt rätt. 
+Greven försöker utföra sina plikter efter bästa förmåga 
+och inser att hans obeslutsamhet är till svåra men för 
+hans närstående och allierade, men han ser inget sätt att 
+bryta sitt beteende. Han kan ofta återfinnas sittande på 
+en sten och stirrande ut över Thalahavet, i vilket hans 
+vänner fruktar och hans fiender önskar att han en dag 
+kommer att avsluta sitt liv. Den fråga som för närvarande 
+väcker störst oro hos den snart 35 år gamle greven är 
+den om hans äktenskap; det har kommit allt mer skarpa 
+påstötningar från drottningen att han snart måste gifta 
+sig för att föra sin gren av ätten vidare.
+Kapten Yibaz
+Kaparfursten, Yibaz Vermadhir Varma gash, är en ur­
+sprungligen nästan helt obetydlig sjätte son till en av 
+släk tens baroner, men har brutit med familjen och lagt 
+beslag på en del av faderns förmögenhet för att tillvälla sig 
+mak ten över en mindre piratflotta som plågar Arighals 
+syd kust men ibland gör anfall mot skepp en bra bit upp 
+i Thala havet. Drottningen har återkallat hans adelstitel, 
+och hans närmaste släktingar har utlyst en belöning på 
+hela 500 dukater till den som gör det möjligt att föra 
+honom inför rätta.Varmagash
+
+
+--- Page 30 ---
+30
+NermadaDharim
+Ingen vet exakt hur länge det har funnits bebyggelse där 
+staden Dharim nu ligger, men de första anteckningarna 
+om en regelrätt stad på platsen är en bra bit över två 
+tusen år gamla. Under det senaste tusentalet år har 
+Dharim stadigt vuxit till att i nuläget ha drygt 16 000 
+invånare, vilket överglänser till och med huvudstaden. 
+Den är dock långt ifrån anpassad för denna folkmängd, 
+vilket gjort att många av de hus som uppförts är av 
+undermålig kvalitet och att stadsplaneringen i praktiken 
+är obefintlig. 
+Staden är känd för att ständigt ha besökare från stora 
+delar av världen, och den har också många fast bosatta 
+invånare som inte kommer från Nermada. Ett av de 
+tydligare exemplen på detta är de så kallade falierkvarteren 
+som hyser närmare 250 välbärgade cirefalier och filialer 
+till två stora kredithus (Temiranz och Elizimaz), men 
+staden är också boplats åt en av rikets mycket få grupper 
+av pyaralver. De flesta av det sistnämnda är liksom 
+cirefalierna sysselsatta med handeln, huvudsakligen via 
+handelshuset Elisari vilkas medlemmar dock, till skillnad 
+från i Consaber, inte har erkännande som adel. Dharim 
+lever till största del på handeln över Rhung­sjön, även 
+om den hyser en icke föraktlig fiskeflotta, och regeras av 
+greve Karalas Geadonir Silvaspar.
+Heramon
+Nermadas huvudstad har ungefär 12 500 invånare, vilket 
+gör den till rikets nästa största stad efter han dels met­
+ro polen Dharim. Staden innehåller bland flera kända 
+bygg nads verk Akademien, ett imponerande lär  doms­
+center som många av rikets adelsmän har hjälpt till att finansiera i hopp om att kunna påverka vad som där 
+lärs ut, och flera pampiga ambassader från olika länder. 
+Andra sevärdheter är Aurias och Pelias tempel, en av 
+religionens största och mest påkostade helgedomar, samt 
+den nästan fyra meter höga bronsstatyn till kejsardottern 
+Nermas minne. En omtalad plats är också det stora så 
+kallade Kluvna torget: Daaktroende hävdar med emfas 
+att torget en gång namngavs Ignariosplazan, medan sa­
+moritroende lika envetet vidhåller att det alltid var avsett 
+att heta Nimto torg. Det har ingen fysisk avdelare som 
+mo ti verar namnet Kluvna torget, men det är vad de flesta 
+fak tiskt benämner det sedan mycket länge. Den högst 
+uppsatte ädling som är permanent bosatt i staden är 
+greve Amak Carosir Varmagash, vilken är kusin till den 
+re gerande drottningen. Drottningen själv besöker staden 
+emel lanåt, men har sitt residens på godset Nalmankar 
+några mil från stadens smuts och oväsen.
+Im’moran
+Im’moran är en stad med cirka 4000 invånare belägen 
+bland klipporna på sydspetsen av Ikamriska halvön och 
+livnär sig på saltindustrin som står för största delen 
+av rikets saltbehov. På klippsluttningarna har stora av­
+dunst ningsbassänger huggits ut i stenen och runt staden 
+finns keramikbassänger utplacerade så att havs vattnet 
+av dunstar i solens sken och lämnar de vita kri stallerna 
+kvar. Staden i sig är mycket ovanlig då många av husen 
+är huggna direkt ur klipporna och istället för reliefer och 
+stenutsmyckningar är många av stadens väggar vac  kert 
+målade med historiska och sagolika motiv. Under de 
+senaste fyra seklerna har ätten Caraleigh styrt i Im’mo­
+ran, i nuläget under grevinnan Nielli Hegonira Cara­
+leighs fasta hand.Städer
+Okej, så här är det: Dharim är rik, Heramon är gammal, Kero är snygg, Im’moran är 
+målad, Thara kryllar av Rak ­vad­de­nu­heters folk, Vexial luktar gammal fisk och Loam 
+duger att supa i. Gör inte allt så förbannat invecklat!
+ –Ivon den Ärrade, asharisk legosoldat och hobbygeograf
+Till Dharims hamn anländer ständigt skepp från Mundanas många riken väster om Nermada, vilket har gjort 
+staden till ett av landets allra främsta maktcentra.
+
+--- Page 31 ---
+31
+Nermada
+Kero
+Med sina 9500 invånare är Kero den med bred marginal 
+största staden på Arighal, och de som bor där är stolta 
+över den saken. Den sedan länge styrande familjen Lo­
+haki drar sig inte för att spendera enorma summor av 
+fa mil je förmögenheten på att hålla centret för sin makt 
+stor slaget vackert, och överallt kan man finna välputsade 
+fa sa der och dessutom stora statyer som före stäl ler be­
+römd heter ur Nermadas historia. Kero byggdes om efter 
+en för  ödande brand 2539, och man kon trak terade be­
+römda cire faliska arkitekter och stads pla nerare för att 
+ordna ritningar som både skulle ge staden ett väl planerat 
+och estetiskt intryck och göra det möjligt för den att växa. 
+En ligt cirefalisk modell har man också ordnat ett väl fun­
+ge rande kloaksystem som un derlättar ren håll ningen och 
+byggt enorma – rent  av över  di men sionerade – akve dukter 
+som leder in färsk vatten från sjöar i inlandet. 
+Ett av de mest kända bygg nads verken är det nästan 60 
+meter höga fyr  tornet som kal las Brons fack lan eftersom 
+dess tak och den över  sta delen av tornet har klätts med 
+dyrbara ljus ref lek terande plåtar av brons. Bronsfacklan 
+är uppförd på en mindre ö vid ham nens inlopp, och 
+är ett mycket berömt land märke. Även om staden är 
+anslående menar syrliga kri ti ker att den är svårförsvarad 
+och skulle ha svårt att stå emot en be lägring, men detta 
+verkar inte bekomma de sty rande nämnvärt. Kero lever 
+främst på handeln med Con saber, men tar dessutom 
+emot skepp så fjärran som från det mytiska Ebhron. 
+Greve Tabalo Myriyamir Lo haki av Kero residerar i ett 
+överdådigt palats i stadens mitt. 
+Loam
+Den på Arighal belägna staden Loam har länge varit ett 
+handelscentrum, även om den inte förmår konkurrera 
+med Dharim om kontrollen över handelstrafiken väster­
+ut. Delvis beror detta på att vattnen utanför stadens 
+hamn har ett rykte om sig att vara svårnavigerade och har 
+blivit många fartygs sista vila, men i modern tid beror 
+un der läget också på att den styrande ätten Fer  vakon 
+inte riktigt prioriterar att uppmuntra den i deras ögon 
+något ovärdiga handeln. Ätten har förvisso en del sli­
+pade realpolitiker som försöker uppmuntra köp män att 
+etablera sig, men det har sedan länge blivit stan dard att 
+de flesta skepp från Soldarn, Asharien och i synner  het 
+Ca se rion istället seglar till Dharim. Det som ger Loam 
+ett viss mått av konkurrenskraft är att man håller tul­
+larna tämligen låga, och att handelsresande från Takalorr 
+före drar att lägga till där – i synnerhet om de vill handla 
+spe ci fikt med Arighal och inte med Nermada i stort. 
+De be sökande tirakerna brukar uppskatta staden och 
+menar att den har en rustik charm och att man ”kan vara 
+sig själv där”. Även om många invånare önskar att tira­
+kerna kunde vara sig själva någon annanstans vet man 
+att de gäs  tande handelsmännen för in varor som är svåra 
+att kom ma över på annat håll, och dessutom ten derar att 
+spen dera en hel del av sina pengar i staden. Utö  ver han­
+deln är staden känd för att hysa ett museum, Min nenas 
+hall, där den styrande ätten har samlat många gamla 
+sevärda föremål från nermadisk och colonisk his  toria. 
+Museet är inrymt i en borg som grevarna Fervakon döm­
+de ut som för liten när de blev härskare av Loam. Staden 
+har ungefär 4500 invånare och har enligt de krigiska 
+styrandes sed en såväl stor som vältränad vaktstyrka.Thara
+Den mest nordligt belägna staden i Nermada, Thara, 
+har nästan 9000 invånare och har länge utgjort den 
+viktigaste knutpunkten för handeln med Thalamur. 
+Här har köpmän från de båda länderna mötts sedan 
+århundraden tillbaka, även under tider då den mäktiga 
+magi kratin i praktiken inte haft någon annan kontakt 
+med omvärlden, och beskattningen av handeln har in­
+bringat enorma rikedomar åt den ätt som lyckats göra 
+sig till grevar av staden. Även om man har kunnat märka 
+en nedgång i mängden köpenskap i staden sedan Tha­
+la mur lät öppna sin sydliga stad Strakh för handel med 
+om världen är Thara fortfarande av avgörande betydelse 
+för relationen mellan länderna. Detta har dock en viss 
+bak sida, i det att man samtidigt vet att Thara skulle drab­
+bas mycket hårt om det föll sig så illa att det kom till en 
+kon flikt med den nordliga grannen. 
+I alla år, och inte minst sedan Savakonflikten, har staden 
+fungerat som samordningsplats för de militära styrkorna 
+i norra Nermada, även om man för att inte i onödan 
+måla upp staden som ett militärt hot har valt att förlägga 
+många träningsläger och baracker på den omgivande 
+lands bygden. De styrande i staden är väl medvetna om, 
+eller utgår åtminstone ifrån, att Rakhori har en stor när­
+varo i Thara. 
+Förutom handeln och sin vikt som diplomatiskt centrum 
+är Thara känt för det högklassiga vin som pro du ceras i 
+grev skapet, och man administrerar dess utom stora delar 
+av den gruvindustri som bedrivs i de ikam riska bergen. 
+Det sist nämnda har blivit viktigare sedan guld fynd ig het­
+erna i bergen visat sig vara större än man kunnat ana. 
+Staden styrs av den ärevördiga och Thala mur vänliga fa­
+mil jen Namator.
+Vexial
+Med sina knappt 2000 invånare är Vexial den minsta av 
+Nermadas städer, även om den ligger i ett för Arighal 
+tätbefolkat grevskap. Staden består av en samling fiske­
+byar som med tiden växte ihop, och kusten i hela Ve  xial­
+bukten är fortfarande full av små fiskelägen. Att Ve  xial 
+överhuvudtaget fick stadsprivilegier och blev greve säte 
+berodde officiellt på att man ansåg sig behöva ett lokalt 
+administrativt centrum som en del i strävan att stärka 
+översynen av trakten och därmed se till att skatterna be­
+talades in som de skulle; det är dock allmänt känt att 
+grev skapets instiftande också i stor utsträckning kom sig 
+av att den dåvarande greven av Kero ville göra sin när­
+maste allierade och vän, en baron av familjen Armili, till 
+greve (och därtill minska grevskapet Loams yta en hel 
+del). 
+Så gott som hela befolkningen är i någon mån engagerad 
+i fiskenäringen som båtbyggare, rökare, tunnbindare och 
+förstås just fiskare. Staden saknar allt som ens vagt på­
+min ner om en medveten planlösning och har med goda 
+skäl rykte om sig att vara den mest illaluktande plat sen i 
+hela Nermada – och för den delen, menar de vitt beresta, 
+en av de mest stinkande städerna i det kända Mundana. 
+Stadens härskare, greve Damer Karonir Dunmargon, 
+residerar i ett överdådigt befäst palats som en milt 
+storhetsvansinnig förfader låtit uppföra på en udde i 
+stadens utkant.
+
+--- Page 32 ---
+32
+NermadaI alla tider har Thalamur varit Nermadas huvudsakliga 
+handelspartner. Varor av alla de slag passerar gränsen 
+från båda håll, och historiskt har handeln på grund av 
+Thala murs mycket slutna natur huvudsakligen ägt rum 
+på ner madisk mark och då i synnerhet i den nordliga 
+staden Thara. Under det senaste knappa seklet har dock 
+den sydthalaskiska staden Strakh etablerat sig mer som 
+ett handelscentrum och börjat utgöra en seriös kon kur­
+rent, vilket gjort att Tharas betydelse har börjat minska 
+något.
+Över haven bedriver man en intensiv handel med såväl 
+Consaber som de östra delarna av Asharinahalvön. An­
+talet nermadier som själva arbetar med utrikeshandeln 
+är dock färre än man skulle kunna tro, eftersom man 
+sedan länge i någon mån har resignerat inför det faktum 
+att cire falierna är överlägset skickliga handelsmän och 
+där för ofta nöjer sig med att ta tull på de varor de skep­
+par in från Asharien, Soldarn och Caserion. I den mån 
+folk från Nermada beger sig ut på handelsresor sker det 
+oftare österut, till Consaber och i synnerhet Dan bréann, 
+där cirefalierna är föga välkomna.
+Importen består i första hand av järn från Thalamur och 
+Asharien, timmer från de soldiska skogarna och torkat 
+kött från Consaber. På senare tid har det också blivit 
+allt vanligare att man köper lyxvaror från de sabriska 
+(och i viss mån cirefaliska) kolonierna; framför allt 
+tobaksimporten ökar ständigt, men även bomullen är en 
+populär vara bland adeln och rikare borgare. 
+De varor man exporterar är främst torkad och saltad 
+fisk av olika slag, men man har även en mer lyxinriktad 
+export främst bestående av de exklusiva viner landet är 
+känt för. Även den olivolja som tillverkas har gott rykte, 
+och man har dessutom börjat använda en del av det guld 
+man funnit i den ikamriska bergskedjans södra utlöpare. 
+Man är dock fortfarande ganska måttfull med att dra 
+uppmärksamheten till guldet, eftersom det finns en viss 
+oro för att visa omvärlden (och då främst Thalamur) 
+exakt hur stora fyndigheterna faktiskt är.
+En intressant aspekt av handeln i Nermada är att den gör 
+det möjligt för fiender att handla med varandra utan att 
+behöva besöka varandras länder. I viss mån används detta 
+förstås av cirefalier och sabrier, men mest utmärkande 
+(om än ofta artigt ignorerat) är utbytet mellan Consaber 
+och den eviga fienden Thalamur. Även om den här 
+sortens kontakter formellt är olagliga i bägge rikena 
+finns det alltid opportunister som är mer intresserade av 
+profit än av lagens bokstav, och Nermada utgör den enda 
+lämpliga platsen för handel mellan de båda länderna. I 
+Consaber är det en etablerad, artig omskrivning att säga 
+att man är ”handelsresande i varor från Nermada”, vilket 
+alla som har någon koll vet innebär att varorna är från 
+Thalamur. Uttrycket finns även i viss mån i Thalamur, men där används det mer sarkastiskt och besvaras ofta 
+med någon syrlig variant av ”mångkunnigt folk, de där 
+nermadierna”.
+Adeln tar en stor del i handeln, i synnerhet kring Dha­
+rim och Thara, och det finns ingen utbredd attityd att 
+det skulle vara en ovärdig syssla. Detta beror dels på 
+den stora graden av praktiskt och realistiskt tänkande 
+som genomsyrar den nermadiska kulturen, genom att 
+man inser att köpenskapen är avgörande för att riket 
+ska kunna frodas. Ännu viktigare är dock inställningen 
+att handeln med andra riken är en viktig del av det alli­
+ans byggande och nätverkande som är Nermadas sanna 
+styrka, och därför ses insamlandet av rikedomar ofta 
+som en (visserligen mycket angenäm) bieffekt av kon­
+takt skapandet med omgivande länder. Delvis spelar det 
+na tur ligt vis också in att många adelsmän är tvek samma 
+till att släppa allt för mycket kontroll till en alltmer väl­
+be ställd borgarklass, då pengar oundvikligen ger en makt 
+som man inte vill ska existera utanför adelsståndet. Av 
+dessa anledningar är borgerskapet i landet mindre in­
+flyt el se rikt än i många andra riken, och den icke­adliga 
+över klassen består ofta av mycket skickliga hantverkare 
+sna rare än handelsmän.
+Även i Nermada existerar förstås handelns eviga släkting 
+– smugglingen. Huvudsakligen går den land vägen från 
+och till Thalamur, och i allmänhet är tha las kerna mer 
+engagerade än nermadierna i att stoppa verk samheten. 
+Man visar förstås en principiell motvilja mot den kri mi­
+nella verksamheten i den mån den skadar eko nomin och 
+undergräver respekten för lagen, men sam tidigt sägs vissa 
+läns herrar i norra Nermada ha personliga in tressen i den 
+olag liga handeln. I den mån varorna sedan förs vidare 
+från Nermada till andra platser brukar man dessutom 
+ofta lyckas dra in tullintäkter på dem i åtminstone något 
+led av verksamheten. 
+Vad man däremot är mycket uppmärksam på är de 
+sällsynta försöken till flykt från Thalamur som äger rum 
+via gränsen. Grannen i norr har återkommande uttryckt 
+sitt missnöje med att folk har kunnat ta sig in i Nermada 
+utan att ha legitima skäl att lämna landet, och för att 
+hålla sig väl med thalaskernas makthavare försöker man i 
+största möjliga mån hjälpa till att hindra att oliktänkande 
+medborgare flyr från den stängda magikratin. Dessutom 
+väljer man mycket aktivt att inte låtsas om när Rakhori 
+sedan i många fall gör processen kort med dem som flytt 
+längre in i Nermada.Handel
+Handel med Nermada? Ja, alltså, det är nästan svårt att låta bli om du förstår vad 
+jag menar. De är anständiga köpmän, och de tillverkar saker som är svåra att få tag 
+på någon annanstans. För att inte tala om att de har goda kopparådror i bergen.
+ –Benrad Dunvaren, sabrisk handelshusherre
+
+--- Page 33 ---
+33
+Nermada
+Då Nermada sedan århundraden har anammat systemet 
+med tungt rustade, beridna krigare är det självklart dessa 
+riddare som är den mest kända av landets trupptyper. En 
+typisk riddare bär hel metallrustning och beväpnar sig 
+med en lans för chockanfall, för att i närstrid övergå till 
+att använda svärd och sköld om han inte har möjlighet 
+att genast falla tillbaka för att kunna göra en ny an storm­
+ning. Det absolut populäraste svärdet på slagfältet är den 
+gamla svärdstyp som kallas thalaskiskt huggsvärd, efter­
+som det låter sig kombineras med hanterandet av sköld 
+även om det kräver en icke föraktlig styrka. Andra svärd 
+och sekundära vapen förekommer också – i synnerhet 
+samoritroende riddare använder gärna yxor av olika 
+tyngd.
+Eftersom det naturligtvis inte finns resurser att hålla en 
+armé bestående av enbart riddare tillämpar man även ett 
+in del ningssystem där en invånare av 50 ska kunna ställa 
+upp med vapen i hand i krigstider. Detta gör att man 
+i händelse av krig kan mönstra 13 000 personer, vilka 
+man försöker hålla rimligt tränade i att hantera både 
+ett avstånds­ och ett närstridsvapen – ofta pilbåge och 
+kort svärd. Detta antal är dock ett minimum, och en feo­
+dalherre har full rätt att ställa högre krav på kom  petens 
+i vapenhantering bland sina undersåtar så länge han 
+till han da håller träning. Utöver denna milis till kom mer 
+förstås de som har som yrke att upprätthålla lag och ord­
+ning, liksom att vakta rikets gränser. Denna grupp be står 
+av uppåt 6500 vapenföra män som normalt är be väp­
+nade med glavar och klubbor.
+Nermada har ingen större stående flotta, och de krigs­
+skepp man har är baserade i huvudstaden Heramon och 
+främst sysselsatta med att bevaka Arighalsundet för att 
+säkra kontakterna mellan ön och fastlandet. Man har 
+också avsatt ett fåtal skepp för att delta i Korsarkriget 
+mot pirater på Rhung­sjön, mest för att visa god vilja mot 
+länd erna på Asharinahalvön. De nermadier som faktiskt 
+ägnar sig åt ett liv till havs är för all del kompetenta yrkes­
+män, men man är med rätta inte någon berömd sjöfarar­
+nation.
+Nermadas armé är inte på något sätt anpassad för att 
+anfalla andra länder, och även i händelse av försvarskrig 
+är det en brutal sanning att den förmodligen inte skulle 
+kunna hålla ut särskilt länge. Ett skräckscenario, men ett som man alltid tvingats räkna med, är risken att Thala­
+mur blir mer fientligt sinnat. De militärt insatta vet 
+mycket väl att man inte skulle kunna stå emot grannen i 
+norr någon längre tid, så om det värsta skulle inträffa är 
+det bästa man kan hoppas på att göra angreppet dyrbart 
+för en invasionsstyrka. Den fördel man har är att det 
+finns ett begränsat område från vilket thalaskerna skulle 
+kunna angripa. Sidraskogen och de ikamriska bergen 
+mer eller mindre garanterar att ett anfall skulle komma 
+över slättlanden vid Yilfloden, vilket är områden där de 
+ner ma diska riddarna kan komma till sin rätt och verka 
+av skräck  ande på fiendens trupper. Om man har tid att 
+förbereda sig för ett angrepp har man förstås också goda 
+möj lig heter att leja legoknektar av olika slag, inte minst 
+från Asharien och Takalorr.
+Först som sist är dock Nermadas skydd i händelse av 
+krig det faktum att man så framgångsrikt etablerat, och 
+fort sätter att etablera, kontakter med såväl grannar som 
+mer fjärran länder. Ett angrepp från Thalamur eller en 
+land sätt ning av trupper från Consaber skulle nästan 
+ofrån komligen leda till ett nytt storkrig mellan de två 
+arv fienderna i Rhung­ Alari, eftersom de båda har in tres­
+sen i Nermada och inte skulle tolerera mot stån darnas 
+mi li tära närvaro där. I händelse av anfall från Con saber 
+finns dessutom den högst påtagliga risken att cire falierna 
+skulle lägga sig i – dels för att skydda sina eko no miska 
+in tressen i Nermada, men i stor utsträckning för att man 
+länge velat näpsa sabrierna.
+Sin huvudsakliga erfarenhet av strid får de flesta ner ma­
+diska riddare från tornerspel och målmedveten kamp  trä­
+ning, men för att få uppleva riktig fara och hålla sina 
+fär dig heter levande tar många del i exempelvis jakt på 
+de rö  var band som stundtals härjar på landsbygden. Även 
+små skaliga väpnade konflikter mellan olika länsherrar 
+in träffar emellanåt, liksom konfrontationer med enstaka 
+rena rovriddare. När det någon gång förekommer anfall 
+från mons  ter i Sidraskogen anses det vara mycket ofint 
+av den lokala länsherren att inte låta riddare från när och 
+fjär ran ta chansen att slipa sina förmågor i våldsamma 
+dus ter mot bestarna. Milisen har i allmänhet ingen riktig 
+er far en het av kamp på liv och död, medan de ofrälse 
+yrkes soldaterna i stort har samma möjligheter som rid­
+darna att delta i stridigheter.Krigsmakt
+Om vänner sviker och spjut bryts kan jag fortfarande lita på min vrede.
+ –Garvis Hanakir Turas, senare Baron Fervakon
+Thalaskiskt huggsvärd
+[110 cm, 1,6 kg. Färdighet: Svärd.]Svärd Bruk 1H 2H Hugg Kross Stick Egenskaper Pris
+Thalaskiskt 
+huggsvärdOvanlig* 3T6 2T6 G+2T6+3 G+1T6+2 G+1T6+1 Måttande 1, Splittrande 1 150 s
+
+--- Page 34 ---
+34
+Nermada
+Rustad brottning
+En av de få berömda innovationerna i nermadisk strids­
+konst är den så kallade rustade brottningen. Liknande 
+tek ni ker existerar på många håll i Mundana, men det 
+är få länder som på detta sätt har systematiserat trä­
+ningen och ger den sådan vikt.
+Det sägs att den rustade brottningen går tillbaka på 
+käm pa lekar där forntidens coloniska krigare för­
+sökte brotta ner och låsa fast varandra medan man 
+bar tyngsta tillgängliga rustningar. Det hela ska ha 
+varit en övning i balans och en demonstration av oer­
+hörda kroppskrafter, men det finns få historiska upp­
+teckningar som tyder på att det någonsin rörde sig om 
+en utbredd sed. Sannolikt är istället att den rustade 
+brott ningen inte förekom i större omfattning förrän 
+en bit in på 2300­talet e. D. Den förste länsherre som 
+man säkert vet lät träna sina riddare i den var Ungal 
+Gara thir Fervakon (död 2336 e. D.).Brottningen består i en mängd tekniker för att kämpa 
+iförd full rustning men utan vapen. Namnet till trots 
+används inte bara låsningar och fällningar, även om 
+sådana förekommer i stor utsträckning, utan man 
+använder också slag främst med nävar och arm bågar. 
+Det huvudsakliga fokuset för träningen är att kunna 
+stå stadigt, utnyttja musklerna maximalt, och an­
+vända rustningen som ett vapen för att tufsa till mot­
+ståndaren. Den ibland mycket vilda stridsmetoden 
+anses inte vara särskilt sofistikerad, men den är en 
+popu lär syssla för riddare som sällan ser riktiga strider 
+och kan vara förvånansvärt effektiv i en situation 
+där krigaren finner sig avväpnad. I tävlingar finns en 
+domare till hands som med jämna mellanrum frågar 
+de tävlande om de vill fortsätta; den som inte bekräftar 
+detta (exempelvis på grund av medvetslöshet) har 
+förlorat.Det finns ingen egentlig inhemsk organisation för magi 
+i det moderna Nermada. Även om kejsardottern Nerma 
+på sin tid hade flera magiker i sin närmaste krets kom 
+de aldrig att samla sig på det sätt som skedde i Thalamur 
+och Consaber, och även om monarken ofta har haft 
+en hovmagiker att rådgöra med är det inte en av rikets 
+viktigare poster. Den ende magikern med stor makt i 
+nuläget är greve Gilath Anorazir Namator av Thara, och 
+han är mindre känd för sina medelmåttiga kunskaper 
+i helio­ och semotropi än för sin politiska gärning. De 
+flesta nermadier är mycket skeptiska till magi även om 
+de erkänner dess existens, och i synnerhet de som tillhör 
+den jargiska Daakkyrkan har förstås en uttalat negativ 
+inställning till ”kättarna” som brukar magiska krafter.
+De nermadier som trots allt vill lära sig hantera magi 
+använder i allmänhet sitt folks traditionella talang för 
+alliansbyggande för att söka inträde i magikersällskap i 
+andra riken. Av hävd föredrar många att i första hand 
+studera vid någon av Thalamurs akademier, men trots 
+de generellt goda relationerna länderna emellan är det 
+ingen lätt sak att få lära sig thakalernas magi. Dessutom 
+betraktas den som har studerat inom en thakalatribunal 
+ofta med en ganska stark skepsis, eftersom det mer eller 
+mindre förutsätts att Thalamurs säkerhetstjänst Rakhori 
+försöker (och ofta lyckas) sätta klorna i eleverna. 
+Istället väljer många att istället färdas över Rhung­sjön 
+till den ebhronitiska Kabalordens akademi i Chadarians 
+hopp. Det anses allmänt att Kabalen inte är lika benägen att utnyttja främmande studenter, utan faktiskt strävar 
+efter att sprida sin kunskap till de värdiga. Att de sedan 
+ändå växer i makt av att ha många medlemmar räknas 
+som en självklarhet som man bara har att acceptera om 
+man vill ta del av deras läror. Få nermadier ansluter sig 
+till någon av den sabriska Legio Colonans grenar, även 
+om det förekommer i undantagsfall. Oavsett vart de 
+beger sig för sina studier kommer många hem med goda 
+kontakter och inte sällan fina äktenskapsanbud eller en 
+utländsk trolovad eller maka.
+För den som vill lära sig magi i hemlandet återstår möj­
+ligheten att finna en privatlärare. Vissa av dessa är så­
+dana som själva har studerat utomlands, medan andra 
+för val tar magiska traditioner som de har utvecklat eller i 
+sin tur lärt sig av isolerade mästare. Seriöst organiserade 
+magi ker i andra länder betraktar dessa mentorer som 
+ama törer, även om vissa av dem är kapabla att använda 
+enorma krafter fastän de sällan har en stadig teoretisk 
+bas. Ett fåtal av dessa inhemska magiker lever isolerat 
+och uppfyller den klassiska bilden av en trollkarl som för 
+ere mit liv, men de flesta lever i städer och har det magiska 
+ex pe ri menterandet som en sidosyssla till sitt egentliga 
+yrke. För att ta ett exempel är furstinnan Mirena Haferira 
+Silva spar, huvudföreläsare vid geografiska institutionen 
+vid aka demien i Heramon, en mycket kompetent al ke­
+mist och biotropiker, men gör ingen större affär av det 
+och undervisar ingen utom sin älskares unga dotter i de 
+magiska konsterna.Magi
+De som vill studera den högsta konsten måste nästan mangrant röra sig bortom sitt 
+lands gränser. Många hamnar hos oss, andra vänder sig till klenare traditioner i andra 
+sällskap. Vi för vår del ser möjligheter i båda valen.
+ –Matron Liselle den Upphöjda ätt Kobinku, magikrat av Taga
+
+--- Page 35 ---
+35
+Nermada
+Intressanta personer
+Dansmästaren från Khoro
+Manamil Tekadavir Rhadal ätt Zadhaz är den mest be­
+römde underhållare som är verksam i Nermada. Han har 
+vistats i landet i närmare 20 år och anser sig vara ner­
+madier, även om ingen ser honom som något annat än 
+thalask. Många tror att han inte, som han själv påstår, 
+har gått i landsflykt, utan i själva verket är informatör åt 
+Rakhori, men ingen bryr sig riktigt om saken – han är 
+för älskad och beundrad för att någon ska fokusera på 
+annat än att få se hans fantastiska framträdanden.
+Varje år deltar den skicklige dödsdansaren i firandet av 
+Nermas åminnelsedag i Heramon, där han tillsammans 
+med ett stort antal mycket vältränade assistenter sätter 
+upp ett fantastiskt dansskådespel som skildrar Nermadas 
+historia. Inledningen är så populär att han aldrig ändrar 
+den av oro för att publiken skulle göra uppror; hans med­
+hjälpare sätter upp en makaber dans där de är skräm­
+mande sminkade till vandrande lik som rör sig över 
+scenen, innan han själv gör entré iförd en enorm mantel 
+smyckad med det coloniska imperiets symboler. 
+I en fantastiskt koreograferad strid nedkämpar han de 
+”vandöda” som symboliserar det gamla Danarth, och 
+breder sedan dramatiskt ut sin mantel över centrum av 
+skådeplatsen – Coloniska imperiet står segrande. Från 
+denna standardiserade inledning fortsätter han sedan 
+att visa upp valda scener ur Colonans och, främst, Ner­
+madas historia, men det exakta innehållet varierar från 
+år till år och sägs bero på den betalande monarkens 
+önske mål. Den ”första drottningen” Nerma finns förstås 
+alltid närvarande, liksom ofta någon av kronstriderna, 
+men även mindre berömda händelser behandlas i det 
+näs tan två timmar långa skådespelet. Efteråt syns Dans­
+mäs taren aldrig till på minst två veckor – enligt ryktet 
+bru kar han vara sängliggande av utmattning efter re pe ti­
+tionerna och föreställningen.
+Ryktet säger att Manamil Tekadavir Rhadal har bestämt 
+sig för att ta sig an en lärling som han kan föra vidare alla 
+sina konster till. Även om det mesta talar för att någon av 
+de assistenter som hjälpt honom, ibland under flera år, 
+kommer att få äran samlas förhoppningsfulla under  hål­
+lare vid hans hus i Im’moran för att be honom att ta sig 
+an just dem. Hittills har han avvisat dem alla.Riksskarprättaren
+Sayana Parekir Vihlan är någonting så unikt som en 
+kvinn lig riks skarprättare – den första kvinna som någon­
+sin har haft positionen som rikets främsta bödel. Hennes 
+far hade tidigare samma tjänst och hon erbjöds av ren 
+artig het att ta över posten när han blev för gammal för 
+att fortsätta sitt värv, och till allas stora förvåning tackade 
+hon ja. Många utgick från att det var någon sorts maka­
+bert skämt, eller att hon var sinnesförvirrad, och nästan 
+alla förväntade sig att hon snart skulle lämna eller av­
+skedas från ämbetet. Det är snart 30 år sedan.
+Riksskarprättare Vihlan ser åtminstone ett dussin år 
+äldre ut än hon faktiskt är, och hennes långa hår som hon 
+ofta bär i en stram knut har sedan länge vitnat. Eftersom 
+hon ytterst sällan behöver genomföra några avrättningar 
+vet ingen säkert om hon längre är kapabel att svinga sitt 
+tunga bödelssvärd, men det är ett oemotsägligt faktum 
+att hon vid de tillfällen då hennes tjänster behövts alltid 
+har hanterat klingan med största skicklighet. 
+Hon tillbringar ofta sin tid i stillhet i ett enkelt hus i 
+Hera mons bättre kvarter, omgiven av en hushållerska 
+och två katter, men hon har också för lång och trogen 
+tjänst tilldelats ett mindre hus på landsbygden dit hon 
+stund tals drar sig undan. Som alla av sitt värv har hon 
+i prin cip inga vänner och är fruktad, men det finns de 
+som i hemlighet söker upp henne för att få hennes råd: 
+ryk tet säger nämligen att den gamla damen ser mer än 
+andra, och att de dödas andar berättar för henne hur 
+fram tiden kommer att gestalta sig.
+Intressanta platser
+Enoriths högar
+I centrum av baroniet Enorith på Arighals nordkust 
+finns vad som misstänks vara oerhört gamla gravar. Det 
+råder inga tvivel om att de enorma stenhögarna har 
+sam lats ihop på platsen av tänkande och målmedvetna 
+varelser, men ingen har egentligen någon aning om vilka 
+som ligger begravda där. Det finns sedan urminnes tider 
+säg ner om att det är kungar från en annan tid som fått 
+sin sista vila på de ensliga hedarna och att de ska ha be­
+gravts med furstliga rikedomar, men det är samtidigt all­
+mänt känt att det vilar en förbannelse över platsen. 
+Någon gång har modiga eller desperata personer gett sig 
+till att gräva bland stenarna och rentav, sägs det, hittat 
+något silversmycke; men det berättas att ingen som fin­
+ner rikedomar i Enoriths högar någonsin kommer att 
+få glädje av dem. Traktens nuvarande härskare, baron 
+Cara leigh, tillåter ingen form av undersökningar av hög­
+arna, vilket ses som ett tecken på gott förstånd.Kampanj
+Det spelar ingen roll att vårt land är genomsökt från norr till söder och från öster till 
+väster. Det spelar ingen roll att varje man och kvinna sägs finnas upptagen i skatte­
+rullor och prästernas listor över folket vandel. Det bor vålnader i Nermada.
+ –Sayana Parekir Vihlan, Riksskarprättare
+
+--- Page 36 ---
+36
+NermadaNalmankar
+Den ståtliga herrgården Nalmankar uppfördes i grev­
+skapet Heramon av en av ätten Varmagash första kungar, 
+vil ken önskade sig en plats i relativ avskildhet från vilken 
+han kunde regera landet utan att distraheras av huvud­
+stadens stök och nöjesliv. Med åren har godset byggts om 
+och kommit att omfatta allt större ägor, och det finns nu 
+två byar i närheten som i princip enbart existerar för att 
+hålla godset med den mat och annan lyx som behövs. 
+Liksom flera av sina föregångare har drottning Avhene 
+Ra no dira Varmagash valt att tillbringa det allra mesta av 
+sin tid på Nalmankar och bara besöka Heramon när det 
+är nöd vändigt, och således anses det vara en mycket stor 
+ära att få besöka henne i detta hennes hem. Primoden av 
+huvud staden är en av de mest frekventa gästerna, lik som 
+åt skil liga sändebud från såväl fjärran riken som de stora 
+adels husen i Nermada. Sevärdheterna på och runt herr­
+går den inkluderar flera parker utsmyckade med skulp­
+turer av samtliga rikets tidigare härskare, ett mena geri 
+med djur hämtade från Mundanas alla hörn, samt ett 
+be römt konstgalleri och en av landets största balsalar.
+Trollborgen
+Den så kallade Trollborgen är belägen högt upp på de 
+ikam riska bergens sluttningar, i trakten där Tehar ­ och 
+Yilfloderna närmar sig varandra. Borgen består i själva 
+verket inte av mycket mer än tre mycket stadiga murar 
+av staplade men inte murade stenblock, innanför vilka 
+är beläget en knapp halvhektar stenhällar på vilka man 
+kan finna svaga spår av att det en gång har funnits inre 
+väggar. 
+Namnet har platsen fått av att det i sagorna hävdas att 
+det är bergstrollen som en gång haft ett fäste här, och det 
+är sant att det åtminstone förr i tiden finns tro  vär diga 
+upp gifter om att det faktiskt ska ha funnits troll i trak­
+ten. I sam band med att trollen utplånades i Thala mur 
+år 2964 e. D. kom flera rapporter om att gruv arbetare 
+sett bergs  troll röra sig kring Trollborgen, men de verkar 
+inte ha blivit kvar. För närvarande håller baro nessan 
+Tyani Garelmira Dunmargon på att sätta sam man en 
+expedition av bergsvant folk, militärer och nå gon arki­
+tekt som ska undersöka möjligheten att bygga en mo­
+dern borg på platsen för att ge bergsborna en trygg plats 
+i händelse av oro i regionen.
+Äventyrsuppslag
+Dödens sändebud
+Det börjar med rykten i Heramons mest nergångna kvar­
+ter – den unge mannen som nyligen hittades med av  sku­
+ren strupe i en gränd föll inte offer för brutala rånare. 
+Det fanns någonting annat bakom. Snart därefter hittas 
+en novis inom den samoriska läran mördad i sin säng, 
+till sy nes utan något bakomliggande motiv. Stämmer 
+det att även den stiligaste ynglingen i byn Merko några 
+fjärdingsväg från staden mött samma grymma öde? 
+Vare sig rollpersonerna är stadsvakter som kommenderas 
+att undersöka saken, nobla ädlingar som vill hindra att 
+en galning går lös, eller lejda krigare som anställs av en 
+för krossad fader kommer de att få anstränga sig till sitt 
+ytter sta för att kunna stoppa den förslagne mördarens 
+härj ningar. Och helst av allt bör de göra det innan det 
+blir allmänt känt att ett Daakkors i en avsliten kedja hit­
+tats tappat hemma hos ett samoritroende offer…Flyktingen från Thalamur
+Rollpersonerna kommer av en eller annan anledning i 
+kontakt med en smutsig, utmattad och uppenbarligen 
+vett skrämd man. Denne hävdar sig vara den berömde 
+tha lask iske metallurgen och uppfinnaren Imdramvrev, 
+vilken ligger bakom många av de vapenförbättringar som 
+genom förts i Thalamurs armé under senare år. Även om 
+han inte vågar lita på någon är mannen desperat och an­
+tyder att han har fått reda på fruktansvärda hem lig heter 
+som Tha la murs styrande är beredda att döda för att tysta 
+ner. Är flyktingen den han påstår? Varför an  vän der han 
+så öppet sitt namn? Känner hans alls till några hem lig­
+heter, och vad i hela världen tar sig rollpersonerna till? 
+Räc ker det ens att lämna honom och försöka glömma 
+det mystiska mötet, eller har någon redan observerat 
+dem tillsammans? 
+Det här äventyret kan dra iväg åt nästan vilket håll som 
+helst, och kan inte minst se mycket olika ut beroende på 
+vilken samhällsklass rollpersonerna tillhör. Vad gör en 
+baron som får oväntat besök av Thalamurs mest efter­
+spanade man?
+I ovigd jord
+Ett äventyr som lämpar sig för rollpersoner som befinner 
+sig på samhällets skuggsida, och dessutom ett tämligen 
+maka bert sådant. Anslaget är enkelt: de anlitas för att 
+smuggla en säregen last över gränsen från Thalamur till 
+Ner mada. Lasten består i en kärra med fem kistor, vilka 
+sägs innehålla kropparna efter en grupp nyligen av lidna 
+tha lasker som i hemlighet varit varmt troende. Deras 
+sista önskan var att kunna begravas någonstans där de 
+fick ta del av sin religions sista ritualer och läggas till väl­
+sig nad vila, och den närmaste sådana platsen är lands­
+bygden söder om Thara. 
+Är rollpersonerna villiga att smuggla döda män över 
+gränsen? Finns det någon sorts falska intyg eller generösa 
+mutor som kan hjälpa dem om gränsvakterna ertappar 
+dem? Och hur, mer exakt, får de till slut reda på att de 
+avlidna är vandöda som för en enorm summa har skapats 
+av en thalaskisk nekro man tiker, och att uppdragsgivaren 
+har alla skäl att dölja sin in blandning?
+Spelet om Arighal
+En spelledare som vill blanda in rollpersonerna i den 
+ner madiska politiken, och ge dem en ordentlig chans 
+att ta del i maktspelet, uppmuntras att använda sig av 
+de spänningar som är under uppsegling på Arighal. När 
+det talas om att greven av Vexial önskar gifta sig med 
+gre vinnan av Loam kommer gamla konflikter upp till 
+ytan, och många är beredda att gå långt för att bröl lopet 
+inte ska komma till stånd. Vare sig spelarna ge stal tar 
+äk ten skaps mäklare och diplomater, eller de lönn mör­
+dare som desperata aktörer kan få för sig att skicka mot 
+någon eller alla inblandade, kommer de att bli or  dent­
+ligt insyltade i skeenden vars konsekvenser kan vara oer­
+hört svåra att förutse. Kommer greve Lohaki att öppet 
+försöka motarbeta koncentrationen av makt som äkten­
+skapet skulle ge? Hur ställer sig samorismens och Daak­
+kyrkans representanter till att någon av parterna måste 
+kon vertera? Och vad är egentligen anledningen till att 
+gre vinnan Fervakon är så ointresserad av de politiska 
+turerna kring äktenskapet?
+

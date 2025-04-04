@@ -1,0 +1,645 @@
+import os
+import random
+import discord
+from discord.ext import commands
+from color_handler import ColorHandler
+from roll_tracker import RollTracker
+from dotenv import load_dotenv
+
+# Ladda miljövariabler från .env filen
+load_dotenv()
+
+# Hämta Discord token från miljövariablerna
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
+
+# Konfigurera Discord-boten med nödvändiga behörigheter
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='!', intents=intents)
+color_handler = ColorHandler()
+roll_tracker = RollTracker()  # Skapa en instans av RollTracker
+
+@bot.event
+async def on_ready():
+    print(f"{bot.user} has connected to Discord!")
+
+def parse_dice_string(dice_string: str):
+    """
+    Tolkar en tärningssträng med eventuell modifierare.
+    Exempel: "3d6+2" returnerar (3, 6, 2)
+             "4d8-1" returnerar (4, 8, -1)
+             "2d10" returnerar (2, 10, 0)
+    """
+    # Leta efter + eller - i strängen
+    modifier = 0
+    if '+' in dice_string:
+        dice_part, mod_part = dice_string.split('+')
+        modifier = int(mod_part)
+    elif '-' in dice_string:
+        dice_part, mod_part = dice_string.split('-')
+        modifier = -int(mod_part)
+    else:
+        dice_part = dice_string
+
+    # Tolka tärningsdelen (NdX)
+    num_dice, sides = map(int, dice_part.lower().split('d'))
+    return num_dice, sides, modifier
+
+@bot.command(name='startsession')
+@commands.has_role('Game Master')
+async def start_session(ctx, *, description: str = None):
+    """Startar en ny spelsession och börjar spåra tärningskast."""
+    session_id = roll_tracker.start_session(description)
+    await ctx.send(f"Started new game session (ID: {session_id})")
+    if description:
+        await ctx.send(f"Session description: {description}")
+
+@bot.command(name='endsession')
+@commands.has_role('Game Master')
+async def end_session(ctx):
+    """Avslutar den aktiva spelsessionen."""
+    roll_tracker.end_session()
+    await ctx.send("Game session ended.")
+
+@bot.command(name='showsession')
+@commands.has_role('Game Master')
+async def show_session(ctx):
+    """Visar information om den aktiva sessionen."""
+    if roll_tracker.current_session:
+        await ctx.send(f"Active session ID: {roll_tracker.current_session}")
+    else:
+        await ctx.send("No active session.")
+
+@bot.command(name='dicehelp')
+async def help_command(ctx):
+    """Visar hjälpinformation för alla tillgängliga tärningskommandon."""
+    color = color_handler.get_user_color(ctx.author.id)
+    
+    embed = discord.Embed(
+        title="🎲 Kullens Terningsrullare",
+        description="För alla dina tärningsbehov. Nästan",
+        color=color
+    )
+    
+    embed.add_field(
+        name="Basic Dice Rolling",
+        value=(
+            "Roll any number and type of dice with optional modifier:\n"
+            "`!roll NdX[+Z]` - Roll N dice with X sides and modifier Z\n"
+            "Example: `!roll 3d6+2` - Rolls three 6-sided dice and adds 2\n"
+            "\nLimits: Maximum 100 dice and 1000 sides per die"
+        ),
+        inline=False
+    )
+    
+    embed.add_field(
+        name="Exploding Dice",
+        value=(
+            "Roll dice that 'explode' when maximum value is rolled:\n"
+            "`!ex NdX[+Z]` - Roll N exploding dice with X sides and modifier Z\n"
+            "Example: `!ex 4d6-1` - Rolls four 6-sided exploding dice and subtracts 1\n"
+            "\nWhen a die shows its maximum value (e.g., 6 on a d6), "
+            "you get to roll 2 more dice!"
+        ),
+        inline=False
+    )
+    
+    embed.add_field(
+        name="Count Successes",
+        value=(
+            "Count dice results that meet or exceed a target number:\n"
+            "`!count NdX TARGET` - Roll N X-sided dice and count results >= TARGET\n"
+            "Example: `!count 5d10 7` - Rolls five d10s and counts how many show 7 or higher\n"
+            "\nSuccessful rolls are shown in **bold**"
+        ),
+        inline=False
+    )
+    
+    embed.add_field(
+        name="Skill Checks",
+        value=(
+            "Roll against a target number:\n"
+            "`!roll NdX[+Z] TARGET` - Regular skill check\n"
+            "`!ex NdX[+Z] TARGET` - Exploding skill check\n"
+            "Example: `!roll 4d6+2 24` - Rolls 4d6+2 against target number 24\n"
+            "\n✅ Success if total ≤ target number\n"
+            "❌ Failure if total > target number\n"
+            "The result shows how much you succeeded or failed by"
+        ),
+        inline=False
+    )
+    
+    embed.add_field(
+        name="Session Tracking",
+        value=(
+            "Track dice rolls during your game sessions:\n"
+            "`!startsession [description]` - Start tracking a new session\n"
+            "`!endsession` - End the current session\n"
+            "`!stats` - Show statistics for the current session\n"
+            "`!mystats` - Show your personal statistics\n"
+            "\nNote: Starting and ending sessions requires the 'Game Master' role"
+        ),
+        inline=False
+    )
+    
+    embed.add_field(
+        name="Secret Rolls (Game Master Only)",
+        value=(
+            "Make secret rolls that only show results to you:\n"
+            "`!secret roll NdX[+Z]` - Secret normal roll\n"
+            "`!secret ex NdX[+Z]` - Secret exploding roll\n"
+            "`!secret count NdX TARGET` - Secret counting roll\n"
+            "\nResults are sent via DM, and a discreet confirmation appears in the channel.\n"
+            "All secret rolls are logged for session statistics."
+        ),
+        inline=False
+    )
+    
+    await ctx.send(embed=embed)
+
+@bot.command(name='secret')
+@commands.has_role('Game Master')
+async def secret_roll(ctx, *args):
+    """
+    Gör ett hemligt tärningskast som endast visas för spelledaren.
+    Stödjer alla typer av tärningskast: roll, ex, och count.
+    """
+    try:
+        # Försök ta bort originalmeddelandet för sekretess
+        try:
+            await ctx.message.delete()
+        except:
+            pass
+
+        # Validera indata
+        if len(args) < 1:
+            await ctx.author.send("Använd formatet:\n"
+                                "`!secret roll 2d6` - Vanligt slag\n"
+                                "`!secret ex 3d6` - Exploderande slag\n"
+                                "`!secret count 4d6 4` - Räkna resultat")
+            return
+
+        command_type = args[0].lower()
+        dice_args = args[1:]
+
+        # Skapa basembed för resultatet
+        color = color_handler.get_user_color(ctx.author.id)
+        result_embed = discord.Embed(
+            title="🎲 Secret Roll",
+            description=f"Command: !{command_type} {' '.join(dice_args)}",
+            color=color
+        )
+
+        # Hantera olika typer av tärningskast
+        if command_type == "roll":
+            if len(dice_args) < 1 or len(dice_args) > 2:
+                await ctx.author.send("Felaktigt format för roll-kommando")
+                return
+
+            dice = dice_args[0]
+            target = int(dice_args[1]) if len(dice_args) == 2 else None
+            
+            num_dice, sides, modifier = parse_dice_string(dice)
+            rolls = [random.randint(1, sides) for _ in range(num_dice)]
+            total = sum(rolls) + modifier
+
+            result_embed.add_field(name="Rolls", value=str(rolls), inline=False)
+            if modifier != 0:
+                result_embed.add_field(name="Modifier", value=str(modifier), inline=True)
+            result_embed.add_field(name="Total", value=str(total), inline=True)
+
+            if target is not None:
+                difference = target - total
+                success = total <= target
+                result = f"✅ Success! ({difference:+d})" if success else f"❌ Failure ({difference:+d})"
+                result_embed.add_field(name=f"Skill Check (Target: {target})", value=result, inline=False)
+
+        elif command_type == "ex":
+            if len(dice_args) < 1 or len(dice_args) > 2:
+                await ctx.author.send("Felaktigt format för ex-kommando")
+                return
+
+            dice = dice_args[0]
+            target = int(dice_args[1]) if len(dice_args) == 2 else None
+            
+            num_dice, sides, modifier = parse_dice_string(dice)
+            all_rolls, final_total = exploding_replace_max(num_dice, sides, modifier)
+
+            result_embed.add_field(name="All Rolls", value=str(all_rolls), inline=False)
+            if modifier != 0:
+                result_embed.add_field(name="Modifier", value=str(modifier), inline=True)
+            result_embed.add_field(name=f"Final Total (excl. {sides}s)", value=str(final_total), inline=True)
+
+            if target is not None:
+                difference = target - final_total
+                success = final_total <= target
+                result = f"✅ Success! ({difference:+d})" if success else f"❌ Failure ({difference:+d})"
+                result_embed.add_field(name=f"Skill Check (Target: {target})", value=result, inline=False)
+
+        elif command_type == "count":
+            if len(dice_args) != 2:
+                await ctx.author.send("Felaktigt format för count-kommando")
+                return
+
+            dice, target = dice_args
+            target = int(target)
+            
+            num_dice, sides, modifier = parse_dice_string(dice)
+            if modifier != 0:
+                await ctx.author.send("Modifierare stöds inte för count-kommandon")
+                return
+
+            rolls = [random.randint(1, sides) for _ in range(num_dice)]
+            successes = sum(1 for roll in rolls if roll >= target)
+            formatted_rolls = [f"**{roll}**" if roll >= target else str(roll) for roll in rolls]
+            
+            roll_display = ", ".join(formatted_rolls)
+            result_embed.add_field(name="Rolls", value=f"[{roll_display}]", inline=False)
+            
+            success_text = "Success" if successes == 1 else "Successes"
+            success_display = f"✨ {successes} {success_text}"
+            if successes == 0:
+                success_display = "❌ No successes"
+            
+            result_embed.add_field(name="Results", value=success_display, inline=False)
+
+        else:
+            await ctx.author.send("Ogiltigt kommando. Använd 'roll', 'ex', eller 'count'.")
+            return
+
+        # Logga det hemliga slaget
+        roll_tracker.log_roll(
+            user_id=str(ctx.author.id),
+            user_name=ctx.author.display_name,
+            command_type=f'secret_{command_type}',
+            num_dice=num_dice,
+            sides=sides,
+            roll_values=rolls if command_type != "ex" else all_rolls,
+            modifier=modifier,
+            target=target,
+            success=success if 'success' in locals() else None
+        )
+
+        # Skicka det detaljerade resultatet till spelledaren
+        await ctx.author.send(embed=result_embed)
+
+        # Skicka en diskret bekräftelse i kanalen
+        confirm_embed = discord.Embed(
+            title="🎲 Secret Roll",
+            description=f"{ctx.author.display_name} made a secret {command_type}",
+            color=color
+        )
+        await ctx.send(embed=confirm_embed)
+
+    except Exception as e:
+        await ctx.author.send(f"Ett fel uppstod: {str(e)}")
+
+@bot.command(name='count')
+async def count_command(ctx, *args):
+    try:
+        # Kontrollera att vi har rätt antal argument
+        if len(args) != 2:
+            await ctx.send("Use format: `!count YdX Z` (e.g. `!count 5d10 7` to count results >= 7)")
+            return
+
+        # Tolka tärningskastet och målvärdet
+        dice, target = args
+        target = int(target)
+        
+        # Använd vår befintliga parse_dice_string funktion
+        num_dice, sides, modifier = parse_dice_string(dice)
+        if modifier != 0:
+            await ctx.send("Modifiers are not supported for counting successes!")
+            return
+            
+        if num_dice > 100 or sides > 1000:
+            await ctx.send("Too many dice or sides!")
+            return
+            
+        if target > sides:
+            await ctx.send(f"Target number ({target}) cannot be higher than die sides ({sides})!")
+            return
+
+        # Slå tärningarna och räkna lyckade resultat
+        color = color_handler.get_user_color(ctx.author.id)
+        rolls = [random.randint(1, sides) for _ in range(num_dice)]
+        
+        # Räkna lyckade slag och skapa en lista med formaterade resultat
+        successes = sum(1 for roll in rolls if roll >= target)
+        formatted_rolls = [f"**{roll}**" if roll >= target else str(roll) for roll in rolls]
+        
+        # Logga tärningsslaget
+        roll_tracker.log_roll(
+            user_id=str(ctx.author.id),
+            user_name=ctx.author.display_name,
+            command_type='count',
+            num_dice=num_dice,
+            sides=sides,
+            roll_values=rolls,
+            target=target,
+            success=None  # För count behandlar vi framgång annorlunda
+        )
+        
+        # Skapa embed med resultaten
+        embed = discord.Embed(
+            title=f"{ctx.author.display_name}'s Count Check",
+            description=f"**Rolling {num_dice}d{sides}**, counting results >= {target}",
+            color=color
+        )
+        
+        # Visa resultaten med fetstil för lyckade slag
+        roll_display = ", ".join(formatted_rolls)
+        embed.add_field(
+            name="Rolls", 
+            value=f"[{roll_display}]", 
+            inline=False
+        )
+        
+        # Visa antal lyckade slag
+        success_text = "Success" if successes == 1 else "Successes"
+        success_display = f"✨ {successes} {success_text}"
+        if successes == 0:
+            success_display = "❌ No successes"
+            
+        embed.add_field(
+            name="Results", 
+            value=success_display, 
+            inline=False
+        )
+
+        await ctx.send(embed=embed)
+        
+    except ValueError:
+        await ctx.send("Use format: `!count YdX Z` (e.g. `!count 5d10 7` to count results >= 7)")
+
+@bot.command(name='roll')
+async def roll_command(ctx, *args):
+    try:
+        # Kontrollera om vi har ett eller två argument
+        if len(args) == 1:
+            dice = args[0]
+            target = None
+        elif len(args) == 2:
+            dice, target = args
+            target = int(target)
+        else:
+            await ctx.send("Use format: `!roll YdX[+Z]` or `!roll YdX[+Z] TARGET` (e.g. `!roll 2d6+1` or `!roll 4d6-2 24`)")
+            return
+
+        # Tolka tärningskastet med eventuell modifierare
+        num_dice, sides, modifier = parse_dice_string(dice)
+        if num_dice > 100 or sides > 1000:
+            await ctx.send("Too many dice or sides!")
+            return
+
+        # Slå tärningarna och beräkna summan
+        color = color_handler.get_user_color(ctx.author.id)
+        rolls = [random.randint(1, sides) for _ in range(num_dice)]
+        total = sum(rolls) + modifier
+
+        # Lägg till loggning av kastet
+        success = None
+        if target is not None:
+            success = total <= target
+        
+        roll_tracker.log_roll(
+            user_id=str(ctx.author.id),
+            user_name=ctx.author.display_name,
+            command_type='roll',
+            num_dice=num_dice,
+            sides=sides,
+            roll_values=rolls,
+            modifier=modifier,
+            target=target,
+            success=success
+        )
+
+        # Skapa embed med grundläggande information
+        embed = discord.Embed(
+            title=f"{ctx.author.display_name}'s Roll",
+            description=f"**Rolling {num_dice}d{sides}{'+' + str(modifier) if modifier > 0 else str(modifier) if modifier < 0 else ''}**",
+            color=color
+        )
+        embed.add_field(name="Rolls", value=str(rolls), inline=False)
+        if modifier != 0:
+            embed.add_field(name="Modifier", value=str(modifier), inline=True)
+        embed.add_field(name="Total", value=str(total), inline=True)
+
+        # Om vi har ett målvärde, lägg till resultatet av färdighetskontrollen
+        if target is not None:
+            difference = target - total
+            if total <= target:
+                result = f"✅ Success! ({difference:+d})"
+            else:
+                result = f"❌ Failure ({difference:+d})"
+            embed.add_field(name=f"Skill Check (Target: {target})", value=result, inline=False)
+
+        await ctx.send(embed=embed)
+    except ValueError:
+        await ctx.send("Use format: `!roll YdX[+Z]` or `!roll YdX[+Z] TARGET` (e.g. `!roll 2d6+1` or `!roll 4d6-2 24`)")
+        
+@bot.command(name='ex')
+async def ex_command(ctx, *args):
+    try:
+        # Kontrollera om vi har ett eller två argument
+        if len(args) == 1:
+            dice = args[0]
+            target = None
+        elif len(args) == 2:
+            dice, target = args
+            target = int(target)
+        else:
+            await ctx.send("Use format: `!ex YdX[+Z]` or `!ex YdX[+Z] TARGET` (e.g. `!ex 2d6+1` or `!ex 4d6-2 24`)")
+            return
+
+        # Tolka tärningskastet med eventuell modifierare
+        num_dice, sides, modifier = parse_dice_string(dice)
+        if num_dice > 100 or sides > 1000:
+            await ctx.send("Too many dice or sides!")
+            return
+
+        # Slå tärningarna med exploderande funktion
+        color = color_handler.get_user_color(ctx.author.id)
+        all_rolls, final_total = exploding_replace_max(num_dice, sides, modifier)
+
+        # Lägg till loggning av kastet
+        success = None
+        if target is not None:
+            success = final_total <= target
+        
+        roll_tracker.log_roll(
+            user_id=str(ctx.author.id),
+            user_name=ctx.author.display_name,
+            command_type='ex',
+            num_dice=num_dice,
+            sides=sides,
+            roll_values=all_rolls,
+            modifier=modifier,
+            target=target,
+            success=success
+        )
+
+        # Skapa embed med grundläggande information
+        embed = discord.Embed(
+            title=f"{ctx.author.display_name}'s Exploding Roll",
+            description=f"**Exploding {num_dice}d{sides}{'+' + str(modifier) if modifier > 0 else str(modifier) if modifier < 0 else ''}** (max face triggers +2 dice)",
+            color=color
+        )
+        embed.add_field(name="All Rolls", value=str(all_rolls), inline=False)
+        if modifier != 0:
+            embed.add_field(name="Modifier", value=str(modifier), inline=True)
+        embed.add_field(name=f"Final Total (excl. {sides}s)", value=str(final_total), inline=True)
+
+        # Om vi har ett målvärde, lägg till resultatet av färdighetskontrollen
+        if target is not None:
+            difference = target - final_total
+            if final_total <= target:
+                result = f"✅ Success! ({difference:+d})"
+            else:
+                result = f"❌ Failure ({difference:+d})"
+            embed.add_field(name=f"Skill Check (Target: {target})", value=result, inline=False)
+
+        await ctx.send(embed=embed)
+    except ValueError:
+        await ctx.send("Use format: `!ex YdX[+Z]` or `!ex YdX[+Z] TARGET` (e.g. `!ex 2d6+1` or `!ex 4d6-2 24`)")
+
+def exploding_replace_max(num_dice: int, sides: int, modifier: int = 0):
+    """
+    Slår tärningar med exploderande effekt och adderar en modifierare till slutresultatet.
+    När en tärning visar sitt maxvärde, läggs två nya tärningar till.
+    Returnerar en tuple med (alla slag, slutsumma inklusive modifierare)
+    """
+    dice_to_roll = num_dice
+    all_rolls = []
+    final_total = 0
+    while dice_to_roll > 0:
+        roll = random.randint(1, sides)
+        all_rolls.append(roll)
+        dice_to_roll -= 1
+        if roll == sides:
+            dice_to_roll += 2
+        else:
+            final_total += roll
+    return all_rolls, final_total + modifier
+    
+@bot.command(name='stats')
+async def stats_command(ctx, session_id: str = None):
+    """Visar statistik för den aktiva sessionen eller en specifik session."""
+    stats = roll_tracker.get_session_stats(session_id)
+    
+    if "error" in stats:
+        await ctx.send(stats["error"])
+        return
+
+    color = color_handler.get_user_color(ctx.author.id)
+    embed = discord.Embed(
+        title="Session Statistics",
+        description=(
+            f"Session: {session_id or roll_tracker.current_session}\n"
+            f"Total Players: {stats['session_info']['unique_players']}\n"
+            f"Total Rolls: {stats['session_info']['total_rolls']}"
+        ),
+        color=color
+    )
+
+    # Session Information
+    session_info = stats["session_info"]
+    embed.add_field(
+        name="Session Info",
+        value=(
+            f"Started: {session_info['start_time']}\n"
+            f"{'Ended: ' + session_info['end_time'] if session_info['end_time'] else 'Still active'}\n"
+            f"Description: {session_info['description'] or 'No description'}"
+        ),
+        inline=False
+    )
+
+    # Player Statistics
+    players_text = ""
+    for player in stats["player_stats"]:
+        players_text += (
+            f"**{player['name']}**\n"
+            f"Rolls: {player['total_rolls']}"
+        )
+        if player['successes'] + player['failures'] > 0:
+            players_text += f" (Success rate: {player['success_rate']}%)"
+        players_text += "\n"
+
+    if players_text:
+        embed.add_field(
+            name="Player Statistics",
+            value=players_text,
+            inline=False
+        )
+
+    # Command Usage
+    if stats["command_stats"]:
+        cmd_text = "\n".join(
+            f"{cmd['command']}: {cmd['uses']} uses" +
+            (f" ({cmd['success_rate']}% success)" if cmd['success_rate'] is not None else "")
+            for cmd in stats["command_stats"]
+        )
+        embed.add_field(
+            name="Command Usage",
+            value=cmd_text,
+            inline=False
+        )
+
+    # Popular Dice Types
+    if stats["popular_dice"]:
+        dice_text = "\n".join(
+            f"{dice['type']}: {dice['uses']} times"
+            for dice in stats["popular_dice"]
+        )
+        embed.add_field(
+            name="Most Used Dice",
+            value=dice_text,
+            inline=False
+        )
+
+    await ctx.send(embed=embed)
+
+@bot.command(name='mystats')
+async def my_stats_command(ctx, session_id: str = None):
+    """Visar statistik för den aktiva spelaren."""
+    stats = roll_tracker.get_player_stats(str(ctx.author.id), session_id)
+    
+    if "error" in stats:
+        await ctx.send(stats["error"])
+        return
+
+    color = color_handler.get_user_color(ctx.author.id)
+    embed = discord.Embed(
+        title=f"Stats for {ctx.author.display_name}",
+        description=f"Session: {session_id or roll_tracker.current_session}",
+        color=color
+    )
+
+    # Visa de senaste tärningskasten
+    recent_rolls = stats["rolls"][:5]  # Visa bara de 5 senaste
+    if recent_rolls:
+        roll_text = "\n".join(
+            f"{r['command']} {r['dice']}" +
+            (f" (Target: {r['target']})" if r['target'] else "") +
+            f": {r['values']}" +
+            (f" {'✅' if r['success'] else '❌'}" if r['success'] is not None else "")
+            for r in recent_rolls
+        )
+        embed.add_field(
+            name="Recent Rolls",
+            value=roll_text,
+            inline=False
+        )
+    else:
+        embed.add_field(
+            name="Recent Rolls",
+            value="No rolls yet",
+            inline=False
+        )
+
+    await ctx.send(embed=embed)
+
+# Starta Discord-boten
+if __name__ == "__main__":
+    bot.run(DISCORD_TOKEN)

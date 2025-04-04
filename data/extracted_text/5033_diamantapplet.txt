@@ -1,0 +1,1011 @@
+Source: 5033_diamantapplet.pdf
+--- Page 3 ---
+FFör snart tre år sedan låg första versionen av
+Diamantäpplet färdigt. Inte mycket har ändrats iäventyret sedan dess, annat än att fler alternativa
+slut lagts till och att äventyret tyvärr blivit lite kortare.Utrymme är alltid ett problem, men för den som vill hamer finns det ytterligare texter som rör äventyret upp-lagda på Neogames hemsida (www.neogames.se), gratisför alla spelledare att ta del av. 
+Diamantäpplet utgör startskottet på en kampanj som jag
+valt att kalla Sylfens vrede. Redan nu har jag förstås idéerom vad som skall tima i de kommande delarna, och nikan vara säkra på att precis som vanligt när det gäller Eonså finns det händelseförlopp som påbörjats långt bak i tid-en som ligger bakom allt som sker i Mundana. Dettagäller även de sällsamma saker som dyker upp i även-tyret. Att skriva kampanjer är svårt, särskilt när de skallpassa alla grupper av rollpersoner, men också otroligtroligt. Denna första del är skriven främst för nybörjare,men innehåller mycket som borde tilltala spelare ochspelledare med stor spännvidd av erfarenhet. I kom-mande delar av Sylfens vrede kommer jag att flytta fokuspå mitt skrivande för att ännu bättre ta tillvara deönskemål som ofta finns när man hunnit skaffa sig litekunskaper i rollspelandets ädla konst. Jag kommer till ochmed att leka lite med formen för rollspel och hur äventyrofta är uppbyggda. Men nu skall vi inte gå händelserna iförväg. Iväg till Västmark istället – du och din spelar-grupp har ju ett diamantäpple att bärga!
+– Författaren,
+Selet, hösten 2004FÖRORDFÖRORDDiamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 2
+
+--- Page 4 ---
+PRODUKTION
+Carl Johan ”Sju sorger och bedrövelser” Ström
+KONSTRUKTION
+Dan ”Börja med att dunka huvudet i väggen” Johansson
+TACK TILL
+Marco ”Idioterna härskar i världen” Behrmann
+Kenneth ”Tusen miljoners miljarders skökors horstig” Lundgren
+Petter ”Mer, mer, mer!” Nallo
+Andreas ”Våta läppar” Roman
+LAYOUT & REDIGERING
+Dan ”Mannen som får ett världskrig att verka tamt!” Johansson
+Carl Johan “Jag kan blöda jättemycket ur hjärnan” Ström
+ILLUSTRATIONER
+Björn ”Han ser inte så bakom flötet ut längre” Öberg
+KARTOR
+Dan ”Om zombien ifråga är huvudlös?!” Johansson
+Carl Johan “Jag har lagat mat – jäst kött” Ström
+OMSLAGBILD
+Keith ”I just forgot I had done that…” Parkinsson
+KORREKTURLÄSNING
+Erik “Kan jag ta ledigt för att spela rollspel?” Fryksdahl
+Anton ”frkrt. ej lämpligt” Wahnström
+SPELTESTARE
+Johan ”Nu blir det cirkus igen” Eriksson
+Kenneth ”Ingen mer cola efter Pearl Harbor” Lundgren
+Johan ”En fest kombinerad med villfarelse” Tufberg
+TRYCK
+Oskarshamn Tryck & MediaFörsta upplagan, isbn 91-85223-33-6 
+Copyright © 2004 Carl Johan Ström
+göteborg
+www.neogames.seDIAMANTÄPPLETDiamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 3
+
+--- Page 6 ---
+• 5 •DIAMANTÄPPLET SYLFENS VREDE
+SYLFENS VREDESYLFENS VREDE
+DIAMANTÄPPLETDIAMANTÄPPLET
+MMisslan torkade blodet av kniven och räckte över den flådda
+haren till barbaren. Hon behövde inte säga något. Barbarenlog mot henne och satte med ens igång med att halstra den
+nyfångade krabaten, gnolande på någon visa han satt ihop när hanhaft lite att göra: ”Jag och Nattros letar skatter, uti denna natt. Rör oss som
+två tysta katter, spelar dig ett spratt. Jag knycker ditt silver, hon tar ditt guld,sen lämnar vi dig med ett skratt.” Sedan undslapp sig barbaren sitt bull-
+rande gnägg till skratt och riktigt storlog mot Nattros.
+Nattros sträckte ut sig i den våta mossan, fick tag i en blomma i sin
+lilla näve. Varför ska allt vara så gulligt jämt när det gäller oss misslor,tänkte hon medan hon sakta smulade sönder blomman mellan sinafingertoppar. ”Du Krole” , sa hon och tittade upp mot barbaren. ”Jaa,
+Nattis?” , genmälde den store klunsen. ”Hrmpf! Passa dig du så jag inte
+spöar up dig!” Krole skrattade igen och Nattros kunde inte låta bli att
+le tillbaka. ”Ta dig samman nu Krole. Om vi ska rå på de där äventyrarna
+så måste vi ha en plan. Hur många saker tror du att du kan komma ihåg utanatt det blir snurrigt inne i den där tjockskallen din?” Krole fånlog.
+”Jaaaaaouuu... få se, jag har tre bröder, och jag kan namnen på alla tre. Såtre saker kanske?” Nattros ögon tindrade i skenet från elden. ”Tre
+saker... hmmm... narras, stjäla, fly... ja, det där har vi ju gott om vana på.Kanske behövs det inte mer. Hur går det med haren förresten?” Krole hade
+bleknat i samma takt som den för tillfället obevakade haren svartnat,det vill säga fort. ”Ööh, oj.” Nattros suckade och tog fram en halv
+limpa torrt bröd ur sin ränsel. ”Egentligen borde du få vara utan mat
+ikväll, din drummel. Tur för dig att jag tycker så bra om dig.”Diamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 5
+
+--- Page 7 ---
+• 6 •DIAMANTÄPPLET SYLFENS VREDE
+INLEDNING
+Diamantäpplet är den första boken i en serie om fem löst sammanhållna äventyr.
+Äventyret är bäst lämpat för en grupp nyskapade rollpersoner, men kan enkelt byggas utför att bättre passa mer erfarna rollpersoner med höga färdighetschanser. Äventyret kan
+spelas fristående eller utgöra starten på en kampanj kallad Sylfens vrede.
+Äventyret
+Diamantäpplet för rollpersonerna till Västmarks skogar ochträskmarker i jakten på en fantastisk skatt: en diamant lika storsom ett moget äpple. Diamanten är en urgammal artefakt, skap-ad som offer för det gamla Ramoras trenne gudar. Om detta vetrollpersonerna emellertid intet. För rollpersonerna är diamanten’bara’ en skatt som, om den verkligen är så stor som legendensäger, borde garantera dem ett liv i rikedom och överflöd.
+Mot rollpersonerna står en utbrytarfraktion ur Västmarks
+ökända spindelkult, gudinnan Arachnas folk. Spindeldyrkarnaäger den enda nyckeln till det forntida tempelvalv där diamant-äpplet vilar. Spindelgudinnans lakejer anar att en skändning avdet sedan urminnes tider orörda templet skulle kunna störa degamla gudarnas slummer. För rollpersonerna framstår spindel-kulten som en synnerligen ondskefull sekt och kommer för-modligen inte att tveka att med alla medel nå templets inre.Rollpersonerna tvingas på ett eller annat sätt konfronteraArachnas tjänare för att tillskansa sig nyckeln.
+Vid sidan om spindelkulter och dunkla legender korsas även-
+tyrarnas väg också av träskens fasor och allehanda odjur. Iäventyret figurerar även döda men ändå levande paddor samten stor och en liten bedragare. Viktiga roller har även en vrångspegelmakare samt Hon som ser allt men yppar smått och hen-nes valhänta tjänare.
+Om man väljer att spela äventyret som en del av kampanjen
+Sylfens vrede är målet med äventyret dels att starta en seriehändelser som kan få stora konsekvenser för Asharina och delsatt få rollpersonerna så involverade i detta skeende som möjligt. 
+Struktur
+Äventyret är uppbyggt runt fem avsnitt som alla sammanfallermed varsin geografisk plats, nämligen: staden Quilla; Sänkan,och de träskmarker som omger den; Orakelklyftan; spindel-kultens bosättning; samt det urgamla templet.
+Avsnitten avverkas i en någorlunda fast ordning, även om det
+finns möjlighet för rollpersonerna att ända ordningen till följdav hur de handlar och tänker. En trolig ’färdväg’ är att rollper-
+sonerna från staden Quilla reser till Sänkan där templet skallfinnas, men tvingas vända om när de vägras inträde till dengamla helgedomen. Efterforskningar leder rollpersonerna tillOrakelklyftan, där de efter viss möda får veta att den enda’nyckeln’ till templet finns hos träskens mest ökända spindel-kult. Efter att ha konfronterat spindelkulten kan rollpersonernaåtervända till Sänkan och ta sig in i templet för att söka dia-mantäpplet. Färdvägen är flexibel och rollpersonerna kan tillexempel mycket väl besöka oraklet redan innan de beger sigiväg till Sänkan första gången, eller ledas in på olika sidospår.
+Om avsnitten (och vägarna däremellan) är någorlunda fastlagda
+så är rollpersonernas handlande under de olika avsnitten destofriare. Varje avsnitt bereder rollpersonerna (och spelarna) ettflertal problem som kan lösas på flera olika sätt. Här och varintroduceras även viktiga spelledarpersoner som kan interageramed rollpersonerna för att antingen hjälpa dem eller hindradem nå sitt mål.
+Spelledaren är fri att bygga ut äventyret med fler avsnitt, men
+bör ta hänsyn till rollpersonernas skicklighet och erfarenhet.Västmark är ett mycket ogästvänligt ställe, även för garvadekrigare, så spelledaren bör vara försiktig med att bussa allt förmånga träskmonster och jättespindlar på rollpersonerna.  
+Rollpersonernas inblandning
+Hur rollpersonerna introduceras till äventyret är spelledarenssvåraste bryderi. Olika spelargrupper och rollpersoner kan haväldigt olika motiv och drivkrafter. Grundtanken är att rollper-sonerna skall kontaktas av en äldre man, förslagsvis en vän ellerbekant till en av rollpersonerna, som säger sig ha ett erbjudandesom rollpersonerna inte kan motstå. Den gamle mannen repre-senterar ett ’hemligt’ sällskap som vill leja rollpersonerna för attfinna en skatt. Mannen ber rollpersonerna att resa till stadenQuilla i Västmark där de skall träffa en viss herr Kandari påvärdshuset Vågskålen. Herr Kandari kan förse rollpersonernamed all den information och utrustning de behöver för attfinna och hämta skatten. Den gamle mannen kan betala roll-personerna ett visst förskott om de åtar sig uppdraget med dendiskretion det kräver. 
+Det åligger spelledaren att sy ihop en vettig introduktion ut-
+ifrån de motiv rollpersonerna kan tänkas ha. En tjuv eller krig-are kan lockas av skattens rikedom, och kanske finns det möj-lighet för rollpersonerna att behålla skatten för sig själva? Enmagiker kan ha hört talas om skatten i någon obskyr legend,och tycker sig minnas mäktiga krafter hos något av föremålen.Den introduktion som följer i rutan med rubriken ’FarbrorCalvin’ på sidan 7 kan användas för de flesta spelargrupper,men kan behöva modifieras av spelledaren. Den typen av startsom presenteras där är mycket lämplig av många skäl, främst föratt den erbjuder en naturlig ingång i kampanjen.
+Färdigheternas svårighet
+Ett färdighetsslags svårighet anges vanligtvis enbart omsvårigheten är annan än normalsvår (Ob3T6). Där ettslags svårighet utelämnats i texten bör man således tolkadet som att slaget skall göras med Ob3T6.
+Låsta dörrar och kistor är alltid normalsvåra (Ob3T6) att
+dyrka upp, såvida inget annat anges i texten.Diamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 6
+
+--- Page 8 ---
+• 7 •SYLFENS VREDE DIAMANTÄPPLET
+Uppdragsgivaren
+Äventyret tar sin början när rollpersonerna kontaktas av en
+gammal man. Mannen är troligtvis en bekant till någon av roll-personerna, eller också en bekant till en bekant. Spelledarenkan använda sig av någon spelledarperson från tidigare äventyreller kanske äntligen få nytta av någon av de kontakter somslogs fram på bakgrundstabellerna när rollpersonen skapades.Huvudsaken är att mannen är gammal, helst äldre än 60 år.
+Mannen, i fortsättningen kallad uppdragsgivaren, säger sig be-
+höva rollpersonernas hjälp. Han vill att de färdas till Västmarkoch staden Quilla vid Gröna flodens mynning. Uppdrags-givaren vill inte säga mycket om ärendets natur, mer än att detrör sig om att finna en skatt. Rollpersonerna kan pressa man-nen på mer information, och han kommer då att precisera sigmot att det rör sig om mängder av juveler och värdeföremål,bland annat en jättelik diamant vars like ingen tidigare skådat.
+Om rollpersonerna tvekar, vilket torde vara oundvikligt, kan
+mannen visa upp ett underligt format spö av solitt guld.Mannen hävdar att spöet är en del av skatten, och att det bärg-ades av den man som för en tid sedan upptäckte skattgömmanför första gången på tusentals år. Ett lyckat lätt (Ob2T6) slag förfärdigheten Värdera kan säga rollpersonerna att spöet verkligenär gjort av äkta guld och förmodligen värt tusentals silvermynt.Det ser dessutom ut att vara gammalt. Ett lyckat mycket svårt(Ob5T6) slag mot Ockultism ger informationen att spöet för-modligen är ett religiöst föremål som användes i fruktbarhets-ritualer i någon äldre religion. Exakt vilken religion är höljt idunkel. Målningar finns bevarade, bland annat på katakomb-väggarna i ruinerna under det gamla Talon, där spön med lik-nande form avbildas när de används för rituell plöjning i jord-en. Båda färdighetsslagen bör göras dolt av spelledaren.
+Om rollpersonerna accepterar, eller fortfarande tvekar, kan de
+ges ett rejält förskott (dock inte mer än en börs med en ashar-isk guldmark per person) och utlovas en andel i skatten senare.De uppmanas bege sig till Quilla med så få dröjsmål som möj-ligt. Vattenvägen torde i de allra flesta fall vara den snabbasteoch uppdragsgivaren kan vara rollpersonerna behjälplig med attfinna en kapten som skall till Västmark. (Om ressträckan är långfinns det risk att rollpersonerna måste färdas med flera olika far-tyg innan de når sitt slutmål.) Rollpersonerna förväntas betalaresan själva.
+Anledningen till att uppdragsgivaren vänder sig till just rollper-
+sonerna kan vara att mannen är vän med någon av dem, att hankänner till dem ryktesvägen (”Jag har hört talas om er insats vidinfångandet av lönnmördaren vid herredagarna” eller lik-nande), att de blivit rekommenderade av en gemensam bekanteller på något annat sätt vunnit uppdragsgivarens tillit. Att roll-personerna verkligen har den gamle mannens förtroende är heltoch hållet avgörande – i annat fall skulle han inte göra sig detstora besväret att vända sig till dem med sitt förslag. Det är så-ledes att rekommendera att uppdragsgivaren känner någon av
+rollpersonerna sedan tidigare, eller kanske till och med är släktmed rollpersonen.
+De gamla
+Uppdragsgivaren representerar en grupp lärda män, många avdem med gemensamt förflutet vid Stora universitetet iChadarians Hopp (eller någon annan passande läroanstalt).Detta kan komma som en total överraskning för rollperson-erna, om mannen väljer att avslöja sina lojaliteter vill säga.Uppdragsgivaren har kanske aldrig berättat för rollpersonernaom sina, låt vara sporadiska, kontakter med sina forna studie-kamrater. Gruppen, som kallar sig själva De gamla, är ett löstsammanknutet nätverk vars medlemmar i olika utsträckningstuderar gamla språk och forntidshistoria. 
+Vad som hänt är att en av gruppens medlemmar, en historiker
+vid namn herr Kandari, fått kontakt med det förflutna på ettfantastiskt sätt. Herr Kandari har alltid varit intresserad avAsharinas äldsta historia, och det gamla Västmark och Ramorai synnerhet. En kväll fick historikern av en slump kontakt meden jägare som påstod sig ha funnit och nedstigit i de gamla tem-pelvalv som enligt de mest obskyra legender skulle finnasgömda i en otillgänglig sänka i Västmarks inre. Templet skulleenligt myten vara en rest av det gamla Ramora, vars gränser engång sträckte sig över hela södra Asharina. Herr Kandari lät sigtill en början inte imponeras av jägarens berättelse, men man-nen visade då upp en rad föremål som han tagit från templet.Föremålen, bland annat en juvelbesatt kalk och ett halsband avguld, bar onekligen de attribut som man kunde förvänta sig avramorianska ting. Jägaren sade att föremålen bara var en bråk-del av allt som fanns där nere, men att inga skatter i världenkunde få honom att återvända. Det fanns någonting monstru-ÄVENTYRETS BÖRJAN
+Rollpersonernas möte med en gammal man kommer att utgöra startskottet för en skatt-
+jakt där belöningen är stor men farorna många. Spelledaren måste fastställa den gamlemannens identitet utifrån rollpersonernas bakgrund – han kan vara en bekant eller en
+släkting. Om spelledaren vill kan han använda sig av farbror Calvin (se rutan nedan).
+Farbror Calvin
+Farbror Calvin är en flintskallig man i sjuttioårsåldernmed kort vitt skägg och stor näsa. Calvin går klädd i ensvart, lappad och lagad kappa som doftar underligt – litegrann som av mögel och gamla böcker. Calvin livnär signumera som skrivare men har ett förflutet som studentvid Stora universitetet i Chadarian.
+En av rollpersonerna känner farbror Calvin sedan länge.
+Calvins många besök var ett vanligt inslag i rollpersonensbarndom, och det var ’fabbo Cavvin’ som en gång i tidenlärde rollpersonen läsa och skriva hjälpligt. När rollperso-nen blev äldre blev kontakterna förstås mer sporadiska,men det händer fortfarande att rollpersonen besökerCalvin eller tvärtom.
+Diamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 7
+
+--- Page 9 ---
+• 8 •DIAMANTÄPPLET SYLFENS VREDE
+öst i templet; något som jägaren visserligen inte kunde se, men
+som hela tiden bevakade honom. Jägaren flydde från templetmed vad han kunde bära och beslutade sig sedan att för attavyttra föremålen och leva gott på förtjänsten. Herr Kandariköpte föremålen av jägaren och dessutom beskrivningen av vartemplet fanns gömt.
+Den gamle historikern konsulterade sina samlingar av perga-
+ment och böcker och fann snart de passager han sökte. IRamfalos krönika, tredje versen, talas om templet i dalen, i varsinre diamantäpplet vilar. Enligt legenden är diamantäpplet enknytnävsstor diamant; för länge sedan någon form av kultföre-mål i det gamla Ramora. 
+Nästföljande sommar gav sig en hemlig expedition av mot den
+sänka där templet skulle finnas gömt. Umbärandena blev förstora för de medlemmar av De gamla som vågat denna färd och
+expeditionen avbröts. Nu befinner sig De gamla i en brydsamsituation där de måste ta hjälp utifrån för att nå skatten. Bud harsänts ut till sällskapets medlemmar att bistå med pålitliga ochdugliga män och kvinnor att delta i nästa expedition. Totaldiskretion måste råda och de personer som anlitas måste varafullt lojala. Det är därför bra om de personer som sänds tillQuilla för att delta i expeditionen är släkt eller nära vänner tillmedlemmarna.
+Hur mycket av ovanstående som uppdragsgivaren berättar för
+rollpersonerna beror på hur väl han känner att han kan lita pådem, men också på hur frågvisa de är. Uppdragsgivaren försök-er troligtvis vara så ärlig som möjligt, men han är redo att bro-dera ut historien för att vinna rollpersonernas intresse. 
+VÄSTMARK
+Sydvästra Asharina utgörs av rådsrepubliken Västmark – en löst sammanhållet rike
+splittrat i till stor del självständiga kantoner, alla styrda av en mäktig furste. Västmarks högsteledare är president Kamand av Xerims ätt, som residerar i huvudstaden Rampor. Landet är
+till stora delar vilt och otämjt, med djupa skogar och outforskade träskmarker.
+Låglandet
+Nära kusten finns de låglänta områden som rymmer en storandel av Västmarks befolkning. Jorden är någorlunda bördigoch erbjuder viss möjlighet till jordbruk, men då vattenståndetofta ändras stort och utan förvarning är det ingen ovanlig synför Västmarks bönder att se sina skördar bortsvepta av vattnet.Allra närmast kusten består jorden mestadels av gyttjig sank-mark och ständigt föränderliga vikar och sjöar av havsvatten.Mangroveträden växer tätt, liksom vass och slingrande rankor.Dessa områden befolkas enbart av fiskare eller enstaka pirater.Allra längst i söder blir berggrunden hårdare och klippigare,och de föränderliga sankmarkerna ger vika för en mer stabilgeografi, med höga havsklippor och långsträckta havsbukter.Här ligger bland annat huvudstaden Rampor, tronande på enklipphalvö som skjuter ut mot ön Naldor.
+Träsken
+Längre in övergår låglandet i mer höglänta träskområden. Om-rådena drabbas ofta av kraftiga skyfall, vilka ibland drar med sigdelar av terrängen ner mot de låglänta områdena och havet.Marken är till stora delar uppsprucken i sjöar och bäckar avstinkande dyigt vatten, omringade av bottenlös sankmark. Fåstigar existerar, och många av dem är ytterst förrädiska. Över-allt finns höga, knotiga lövträd, slingerväxter, ormbunkar ochrankor, ofta inbäddat i en matta av tjockt, vått gräs och fuktigdimma. I trädkronorna bor apor, fladdermöss, fåglar ochormar, medan marken behärskas av reptiler och diverse mon-ster, bland annat spindeltroll och arachnider. 
+Skogarna
+Nordligaste och mellersta Västmark rymmer stora, outforskadeskogspartier. Växtligheten är riklig och vissa delar av skogarnakan vara väldigt svåra att forcera, även om man håller sig efter
+stigarna. Under träden har björnarna sina jaktmarker, liksomvildhundarna och vargarna. Det finns också gott om myror iskogarna; vissa av dem långa som ett mänskligt pekfinger ochytterst farliga att komma i vägen för.
+Det finns tre stora skogspartier vilka kartograferna valt kalla
+Norra, Mellersta respektive Södra skogen. Skogarna, och delarav skogarna, har oftast lokala namn som används till vardags.Till exempel benämns Mellersta skogens sankare delar Träsk-veden medan den del av Södra skogen som vetter mot Grönafloden av många kallas för Sumpskogen. De västra delarna avNorra skogen går ofta under namnet Västra skogen.
+Bergen
+Längst i öster tronar Khrûnbergen. Från bergssluttningarna rin-ner små bäckar ned mot Västmark och mynnar ut i någon avfloderna eller träsken. Terrängen är klippig och karg, men täm-ligen förskonad från de skyfall som drabbar stora delar av övrigaVästmark. Vintrarna kan emellertid bli kalla, och Västmarksberg är sannerligen ingen förlåtande plats för de som inte ärvana att vistas i vildmarken.
+Invid Gröna flodens övre lopp ligger den viktiga men illa be-
+ryktade gruvstaden Forsfara, där handeln med dvärgarna iKrhun-Renk-Roghan är mycket intensiv. 
+Slumpmöten
+När rollpersonerna reser i Västmark kan det vara på sin plats attbereda dem olika händelser – resan lär knappast gå helt hän-delselös förbi. Spelledaren kan slå eller välja från tabell DI-1, engång per dag eller oftare som rollpersonerna färdas i tätbefolk-ade områden. Slagen modifieras enligt tabell DI-2. Det är heltDiamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 8
+
+--- Page 10 ---
+• 9 •SYLFENS VREDE DIAMANTÄPPLET
+och hållet upp till spelledaren vilka resultat han vill använda.
+Kom ihåg att anpassa eventuella monstermöten efter rollper-sonernas skicklighetsnivå, eller åtminstone erbjuda rollperson-erna en chans att gömma sig eller på annat sätt undvika mötet. 
+Slumpmötena skall erbjuda spänning eller ett avbrott i resandet
+och helst inte äventyra rollpersonernas liv i alltför stor grad.
+Ett möte behöver heller inte betyda att varelsen ifråga anfaller.
+Spelledaren måste bestämma hur djuret reagerar när de får synpå rollpersonerna. Att till exempel låta rollpersonerna se enjättespindel mumsa på sitt kokonginspunna byte inne blandträden medan båten glider förbi kan vara minst lika effektfulltoch skrämmande som en regelrätt spindelattack.Observera att tabell DI-3 bör användas tillsammans med boken
+Monster & Varelser, eller de tre böckerna Monster i Mundana,Bestialiska folk och Vilddjur & Bruksdjur. 
+Vad gäller jakt utförs denna med färdigheten Jaga (eller möj-
+ligtvis Överlevnad). Små jaktbyten såsom kaniner och fåglarfinns inte medtagna i slumptabellerna.
+Utöver mötestabellerna finns även en slumptabell för olika
+växtbestånd som rollpersonerna kan tänkas passera. Förklaring-ar till de olika växterna finns på sidorna 89–92 i Spelledarensguide (Eon III).
+Slumptabellerna är framförallt avsedda att användas i Västmarks
+lågland och träskområden, men kan användas även för bergenoch skogarna om spelledaren ändrar vissa otroliga resultat. (Detfinns till exempel inga krokodiler i bergen.) Spelledaren kanförstås strunta i att slå på tabellerna och välja resultat istället.
+Tabell DI-1: Slumphändelser i Västmarks vildmark.1T100 Händelser och möten i vildmarken
+01–30 Rollpersonerna konfronteras med ett vilddjur 
+eller en varelse. Slå på tabell DI-3 för att
+avgöra vilket djur det rör sig om.
+31–50 Rollpersonerna passerar ett växtbestånd vars
+örter, blommor, rötter eller liknande har speci-ell verkan. Slå på tabell DI-4 för att avgöraväxtbeståndets art.
+51–95 Ingenting speciellt inträffar.
+96–125 Rollpersonerna konfronteras med en eller flera
+personer. Slå på tabell DI-5 för att se vilka.
+Färdväg Mod.
+Rollpersonerna färdas på en landsväg eller flod* +25Rollpersonerna färdas på en kärrväg eller stig +10
+Rollpersonerna färdas i vildmark +0
+*När rollpersonerna färdas i civiliserade trakter är det ofta
+läge att slå flera slag per dag på tabell DI-1.
+Tabell DI-2: Modifikationer för slumphändelser beroende på var roll-
+personerna färdas.
+1T100 Vilddjur och varelser Antal
+01–05 Basilisk 106–15 Björn 1*
+16–20 Blodflygare 121–30 Giftorm 1
+31–40 Giftspindel 141–42 Hyggelmonster 1
+43–50 Jätteorm 151–57 Jättespindel** 1
+58–60 Kamorfer 1T6/261–70 Krokodiler 1T6/2
+71–75 Limax 176–80 Mermän 1T6
+81–84 Spindeltroll 185–87 Sumpmonster 1
+88–95 Vildsvin 1T6*
+96 Vättar 2T6+4
+97–00 Ylker 3T6
+*Åtföljs ibland av ungar.
+**Kan röra sig om den vanliga jättespindeln eller någon av
+arterna dyspindel, spetsare eller nattspindel (se bokenMonster i Mundana).
+Tabell DI-3: Slumpmöten med vilda djur och varelser i Västmark. 1T100 Växtbestånd Övrigt
+01–06 Anatel
+07–11 Belladonna endast sommar
+12–18 Bitter vattenört endast sommar/höst19–23 Demagora endast höst
+24–26 Dunna endast sommar/höst
+27 Eldfot
+28–32 Fingerbunke33–40 Grå tveblading endast sommar
+41–45 Iliete endast sommar46–50 Krippträd
+51–55 Kärleksfloka endast vår/sommar56–60 Månklocka endast vår/sommar
+61–66 Naken flenört endast sommar67–71 Röd jordklöver endast höst
+72–74 Silverört endast vår75–81 Småborre endast vår/sommar
+82–87 Sårläka endast sommar88–90 Vandringssav endast vår/sommar/höst
+91–95 Vildvippor endast sommar96–00 Övriga*
+*Det är upp till spelledaren om han vill hitta på en växt eller
+helt enkelt ignorera resultatet.
+Tabell DI-4: Växtbestånd i Västmark.
+1T100 Personer Antal
+01–05 Dvärgar 1T6
+06–20 Fiskare 2T6–4 (minst en)
+21–35 Jägare 1T6/236–40 Kantonsrättare 1T6+2
+41–45 Köpmän 1T646–50 Rymlingar 1T6/2
+51–65 Skogshuggare 1T6+366–70 Spindelkultister 1T6
+71–75 Tiraker 2T676–80 Träskpirater 1T6+4
+81–89 Örtplockare 1T6–3 (minst en)90–00 Övriga* SL väljer
+*Slå ett slag på tabell R1-58 i Spelarens bok (Eon III) för att
+fastställa personens yrke eller uppgift. Orealistiska resultatbör slås om.
+Tabell DI-5: Slumpmöten med personer i Västmark.
+Diamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 9
+
+--- Page 11 ---
+• 10 •DIAMANTÄPPLET SYLFENS VREDE
+Historia
+Hur länge människor bott i området kring Quilla vet ingen.
+Den klippiga sten som utgör berggrunden på den sydöstrabanken av Gröna floden är ett av få stabila områden på den an-nars så föränderliga västkusten. Man kan därför sluta sig till attområdet kring Quilla var ett av det första att koloniseras eftermänniskornas erövring av tirakernas forna riken. 
+Den första staden byggdes kring år 1000 e.D.. Huvudnäringen
+var det stenbrott som under de hundra första åren i stadenshistoria kom att möjliggöra byggnation och handel. När sten-brottet utarmats vändes köpmännens blickar istället norrut,uppströms Gröna floden där dvärgarna sedan länge haft ettfäste. Handeln med Krhun-Renk-Roghan tog fart och stadenverkligen blomstrade. 
+Under krigen mot tirakerna 1371–1377 förstördes stora delar av
+staden och under missväxtens århundrade (1500-talet) var po-pulationen nära att helt och hållet utrotas. Under den senaredelen av årtusendet återuppbyggdes staden, ironiskt nog medtirakisk hjälp. Under tvåtusentalet har Quilla återigen kommitatt bli en viktig handelsstad, där handeln med dvärgarna iKrhun-Renk-Roghan räknas som den absolut viktigaste. Medfurstarna av Xerims ätt som kantonens ledare har staden skiftatsin huvudsakliga religion från Daaktro till samorism, även omstaden än idag förmodligen tillhör en av Asharinas mest otrogna.
+Styre och rättskipning
+Kantonen Quilla styrs av furst Rangol Bebel av Xerims ätt,samma ätt som också styr republiken och stora delar avVästmarks militära styrkor. Staden Quilla å andra sidan lyderfrämst under stadens råd, där furst Bebel sitter som högstarådande (med hela tre röster). Övriga tio medlemmar har var-sin röst, och de flesta frågor som rör staden avgörs med simpelmajoritetsomröstning. I frågor som rör kantonen har furstenabsolut makt och han tvekar inte att använda den.Lagen upprätthålls av stadsvakten, vars femmannapatruller åt-
+minstone hjälpligt bevakar stadens gator och portar. Stadenhåller även en mindre garnison, direkt underställd fursten avQuilla, vars huvudsakliga uppgift är att patrullera och under-hålla palissaden och pålverken. På landsbygden och i sällsyntafall även i träsken patrullerar särskilda kantonsrättare – ridandepoliser som utgår från den närmsta staden.
+Vid misstanke om brott har stadsvakterna och kantonsrättarna
+befogenhet att arrestera och fängsla den misstänkte förbrytaren.Om förseelsen är ringa (till exempel svinaktigt uppträdandeunder kvasr-rus) brukar den häktade släppas fri nästföljande dag.Allvarligare brott tas efter Ob1T6+6 dagar upp inför lagmännensom utreder brottet och utdömer ett lämpligt straff. Då stadensfängelse redan är överbefolkat blir straffen ofta av typen ’an-tingen eller’, det vill säga spöstraff och varning eller, om brott-et är grovt, halshuggning. Straffarbete är också en variant. 
+Hamnen
+Quillas hamn skyddas av ett pålverk som tvingar ankommandefartyg att lägga sig i bredsida mot staden för att nå fram. Invidhamnen finns ett högt stenfäste med en stor katapult på taket,redo att avfyras mot piratskepp som vågat sig in mellan pål-verken. Stenfästet fungerar som garnisonshus och rymmer fleravåningar med logement och förråd. Hela den översta våningenupptas av stadens kommendant, den före detta piratkaptenenDamar Svartflagg.
+I hamnen arbetar många av stadens tiraker med lastning och
+lossning av fartyg. Endast en handfull fartyg kan samtidigt läggatill i hamnen. Detta för med sig att det så gott som alltid liggerfartyg ankrade en bit utanför kusten, otåligt väntande på sin tur.I hamnen finns även furst Bebels privata kaga – en snabb far-kost med latinsegel som både kan ros och seglas.
+Invid gatan som löper parallellt med floden och hamnen utgörs
+ungefär vartannat hus av lagerlokaler och vartannat av krogarQUILLA
+Handelsstaden Quilla är Västmarks näst största stad – endast huvudstaden Rampor är
+större. Staden vilar på en relativt säker del av den östra banken av Gröna floden, alldelesinvid havet där floden mynnar i det breda Takalorrsundet. Staden är känd för sina många
+nöjeskvarter, men också ökänd för sin laglöshet. En karta över Quilla återfinns på sidan 4.Väderlek
+Vädret i Västmark är synnerligen opålitligt och kan snabbt slåom från solsken till skyfall. Spelledaren kan varje ny morgon slå1T6 och avläsa tabell DI-6 för att bestämma dagens väder. Re-sultaten modifieras enligt tabell DI-7. Extrema väderskiften kanförekomma – klimatet i Västmark är mycket nyckfullt. Väder-omslag kan förutspås med lyckade slag mot Väderkännedom.Ob1T6 Väder
+1 Soligt2 Omväxlande sol och mulet
+3 Mulet4 Lätt regn
+5 Regn
+6+ Slå två gånger på tabellen: ett slag för förmid-
+dagens väder och ett för eftermiddagens. (Omspelledaren slår fram detta resultat ytterligare engång innebär detta resultat kraftigt regn medåska och skyfall.)
+Tabell DI-6: Vädret i Västmark.Årstid Modifikation
+Sommar +0Övriga +1
+Tabell DI-7: Vädermodifikation beroende på årstid.Diamantäpplet KLUMP.qxd  04-11-05  12.42  Sida 10
+
+--- Page 12 ---
+• 11 •SYLFENS VREDE DIAMANTÄPPLET
+och billiga hamnsyltor. Gatan (och några av dess sidogator)
+kallas för Tusen krogars stråt, men har även getts det mindresmickrande namnet Tusen skökors stråt. 
+Redan runt aftonsnåret är stämningen god i hamnkvarteren
+och framåt kvällningen är överförfriskning och slagsmål merregel än undantag. När de alltför stökiga blir utkastade från enkrog kan de lugnt ragla vidare mot nästa – och sedan nästa, ochsedan nästa.
+Svartmalmstorget
+I stadens östligaste kvarter, alldeles intill Solporten och endast ettkvarter från hamnen, ligger det berömda Svartmalmstorget. Härsamlas handelsmän och kommissionärer för omlastning av varorfrån bergen för vidare transport över havet. Gyttret av människorär slående; överallt pågår budgivning och kommers, och trans-porter av malm till och från sina lagringsplatser och hamnen.
+Torget är oerhört stort, nästan tusen fot brett och helt och håll-
+et belagt med kullersten. Överallt finns högar med sten, kol,malm, metaller, ännu mer sten och ännu mer kol. Det är ontom utrymme, bland annat till följd av den lag som förbjudermalmmånglarna att stapla högre än tio fot på höjden. För att tasig fram på Svartmalmstorget måste man kryssa mellan de olikahandelshusens uppallade laster. I mitten av torget finns resternaav det gamla stenbrott som en gång i tiden utgjorde den förstabosättningens huvudnäring. Stegar och trappor leder ett tiotalmeter ned i det gamla brottet, som numera utgör ett välkom-met extra lagerutrymme. Grova hiss- och vinschanordningar,några med dvärgiskt ursprung, möjliggör nedsänkning ochupptagning av gods.
+Bebyggelsen runt torget utgörs av stora stenhus, vars fasader
+täckts av sot och damm från den malmkommers som bedrivsdag och natt. De flesta av stenhusen har flera våningar, medbalkonger och balustrader som löper mellan husen. I husensnedre våningar finns förråd och lagerutrymmen, medan över-våningarna håller kontorslokaler och en och annan krog. 
+I öster finns så Solporten; den breda port i vars valv solen kan
+ses höja sig över bergen i fjärran under slutet av sommarmånadoch början av hömånad. Porten är byggd i massiv granit ochsammanbunden med stadens palissadverk via två korta sten-murar som ändar i varsitt högt stentorn. Ovanför porten sitteren stor sköld av mässing som bär formen av en sol. Mässings-plåten poleras en gång i månaden av det lokala templets tjänare,men får mesta delen av tiden finna sig i att vara täckt av etttjockt lager sot och koldamm.Under varma soliga dagar virvlar ständigt ett tjockt svart moln
+av damm upp från torget. Dammet och sotet förs med vindenöver den närmaste bebyggelsen, ibland flera kvarter bort. Detär svårt att andas på torget under de mest hektiska timmarna(vilket till mångas stora förtret är större delen av dagen och enbra bit in på kvällen), och de flesta av de som arbetar med ochkring malmkommersen har problem med dammlunga och svårhosta. Koldammet sätter sig i kläderna och håret på alla somvistas på eller i närheten av torget. När regnväder sveper inöver staden blir luften lättare att andas, men istället samlas sotetoch smutsen på marken och rinner i svarta, trögflytande, ränn-ilar ned mot hamnen och floden.
+Om natten brinner sotiga eldar på torget, omkring vilka han-
+delsmännens utsända håller vakt över sina laster, samtidigt somde letar efter intresserade köpare. Man roar sig med att berättasagor och samtala med de andra för att vakten skall gå fortare.Fakta om Quilla
+Furste : Rangol Bebel
+Invånarantal : ca 4.000 personer.
+Befolkning : Västmarkare 70%, marnakhtiraker 25%,
+övriga 5%.
+Religion : Den samoriska läran 30%, Mahktah 25%,
+Daak 3%.
+Huvudnäring : Handel.
+Handelsvägar : Över havet till Melorion och Soldarn.
+Gröna floden uppströms mot Forsfara och Krhun-Renk-Roghan. Den huvudsakligen nord-sydliga handelsvägenmellan Rampor och Västborg.
+Import (i stort) : Spannmål, kött, tyg, öl, vin, kryddor,
+lyxvaror.
+Export (i stort) : Malm, sten, metall, smidesvaror, kol,
+ädelstenar.
+Militära resurser : ca 60 yrkessoldater i garnison och
+ytterligare drygt 80 stationerade i kantonen. En milis kansamlas vid behov.
+Känd för : Svartmalmstorget och det rika nöjeslivet.
+Staden är ökänd för sin höga brottslighet.
+Furst Bebels vapenQuillas marknader
+Det finns ett antal marknader i Quilla där man, förutom
+det man förväntar sig att finna i en stad, också saluför vissaspecialiteter. Till exempel kan man köpa ett mycketstarkt, (och något elastiskt) rep som tydligen importerasfrån någon form av koloni ute i träsken (se rubriken’Arachnas dotter’ på sidan 26). Repet kostar 2 thaler permeter. En typisk köpman i Quilla har färdigheternaÖvertala och Värdera till en färdighetschans av 12. 
+Quillas stadsvapen
+gröntsilverröttguld
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 11
+
+--- Page 13 ---
+• 12 •DIAMANTÄPPLET SYLFENS VREDE
+Hamnen och Tusen krogars stråt
+Det troligaste är att rollpersonerna anländer till staden med båt.
+Om detta sker kvällstid kan de redan på avstånd se ljuset frånhundratals lyktor som lyser upp gatorna närmast hamnen – detökända Tusen krogars stråt. Trots att lastning och lossning på-går dygnet runt kan man inte göra plats i hamnen för nya far-tyg. Tiden räcker helt enkelt inte till. Rollpersonerna måstedärför antingen vänta ombord medan fartyget ankrar upp utan-för hamnen (i väntan på en ledig pir) eller förhandla med kap-tenen om att få bli rodda iland. Ett sådant arrangemang kangenomföras för en thaler per person. 
+Redan med några hundra meter kvar att ro kan man höra en
+blandning av musik och skratt inifrån land – ett dovt sorl somskvallrar om de nöjen som staden erbjuder om kvällen ochnatten. Om vinden är ostlig (vilken den sällan är, då vindenoftast blåser in från havet) kan man dessutom känna doften avstaden – en blandning av rök och sot. Under dagen, om solenvisar sig, förbyts doften istället i tung rök uppblandad med rutt-nande avskräde. Ovan pirarna seglar då måsar, skränande ochgirigt spanande efter fisk eller fiskrens.Från pirarna finns små lejdare som leder upp från vattenytan till
+själva piren och hamnen. Om rollpersonerna anländer medroddbåt kan de använda sig av dessa – annars, om rollperso-nerna valt att vänta tills fartyget erbjuds inträde i hamnen, ärdet fartygets landgång som gäller.
+Det finns av förståeliga skäl ingen välkomstkommitté som tar
+emot rollpersonerna. Scenen som målas upp framför rollper-sonerna är istället ett myller av människor och tiraker, mångaav dem hamnarbetare, som febrilt arbetar med stuvandet avlast. En enda lång gata löper längs floden, där var och vartannathus ser ut att vara en krog eller spelhåla. Här och var slingrarsig mindre gator upp mellan de låga husen, mot stadens inre.En gata är större än de andra, och en ärgad skylt förkunnar attdess namn är Stora bronsklockans väg. I bakgrunden syns kon-turerna av det mörka stenfästet och längre upp skimrar ettsotigt ljus från Svartmalmstorgets många eldar.
+Det är mycket troligt att rollpersonerna väljer att spendera sin
+första kväll på någon av krogarna i hamnen. För detta ändamålfinns krogen Sjömansknuten beskriven (se rutan nedan).Denna krog kan användas som typisk mall för övriga krogar iROLLPERSONERNAS ANKOMST
+Till denna kokande gryta av malmhandel, fylleslag och spel och dobbel anländer så roll-
+personerna. De har fått instruktioner att söka upp värdshuset Vågskålen för att där mötaupp med en viss herr Kandari. Troligtvis är detta rollpersonernas första möte med Quilla,
+så spelledaren bör lägga stor vikt vid att presentera staden i hela sin solkade glans.
+Sjömansknuten
+Inklämt mellan två (hänglåsförsedda) lagerlokaler ligger eninbjudande krog som kallas Sjömansknuten. Ovanför denekdörr som vetter ut mot Tusen krogars stråt hänger eninvecklad knop, knuten i tjock tross av hampa. 
+Dörren leder in till en liten hall där två bistra utkastare häl-
+sar besökare ’välkomna’ med grymma blickar. De ser till attalla vapen större än knivar lämnas kvar ute i den angrän-sande vapenstugan – sedan bjuder de besökarna att stiga in.
+En liten trappa leder ned till skänkstugan som ligger en halv
+våning under jord. Det första som fångar rollpersonernasblickar är förmodligen den stora eldstad som brinner vid denbortre väggen. Över elden halstras fisk. Nere i själva skänk-stugan trängs människor och tiraker. Serveringsflickortränger sig fram mellan borden har ingen möjlighet att värjasig för de trånande männens händer. Det spills öl ur stånkoroch det öl som till sist når sitt mål försvinner snabbt ned itörstiga strupar. Inklämd i ett hörn finns en bardisk, bakomvilken en skäggig man med flottigt förkläde gör sitt bästa föratt hinna fylla i alla tomma ölkrus.
+Om man lyckas bana sig väg mellan borden utan att reta upp
+alltför många sjömän, och sedan mot förmodan finner ledigaplatser vid något bord, kan man ropa till sig öl eller bränn-vin. Priserna är ganska höga med tanke på dryckens karak-tär – avgjort utspädd och simmig. Den som vill ha ett målmat i magen har egentligen kommit till fel ställe, men krög-aren kan erbjuda fisk till överkomliga priser. Stämningen är
+högljudd och luften i rummet kväljande. Svett, rök och ölär de doftsensationer som bjuds, och man får skrika ochteckna med armarna för att ens begäran om mer dryck skalluppfattas borta vid bardisken.
+Underhållningen står gästerna själva för. Ölhävning och
+kortspel (till exempel broggin) hör till vanligheterna, mendet händer även att någon får för sig att dansa på borden ochsjunga en smula. Alltför oförsiktig dans leder oundvikligentill utspillda ölglas med slagsmål som följd. I och utanförkrogen finns också ett antal skökor, mestadels kvinnor ifemton- till fyrtioårsåldern, men även en del män som säljersina tjänster till den som kan betala. Själva akten utförs medfördel på plats, med skökan sittandes grensle över kunden ibänken, eller i ett bakre rum om kunden lätt låter sig gene-ras. I anslutning till dessa rum finns även förrådsutrymmenoch ölkällare.
+Under den tidigaste morgonen och förmiddagen vilar tyst-
+nad över krogen. Längst upp mot taket finns små fönster-luckor som vetter ut mot bakgatan. Dagtid står luckornaöppna för att släppa in ljus och ny (om än illaluktande) luft.Förmiddagen är den tid då de sista slocknade kunderna släp-as ut och dumpas på gatan. Spyor torkas från golven ochoset från eldstaden avtar och lägger sig som en oljig mattaöver inredningen. Krögaren och hans flickor får sedan någravälbehövliga timmars sömn innan man återigen slår uppdörrarna till hamnkrogen.Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 12
+
+--- Page 14 ---
+• 13 •SYLFENS VREDE DIAMANTÄPPLET
+distriktet. Spelledaren kan också förbereda ett antal hak att ta
+fram vid behov, eller helt enkelt improvisera. Det viktiga är attfånga stämningen i Quillas hamndistrikt: högt tempo, galenalkoholkonsumtion och alltid nära till rejäla slagsmål.
+Annars är rollpersonernas mål förstås att finna värdshuset
+Vågskålen, för att där träffa herr Kandari. Det kan vara en aningsvårt att fråga sig fram till värdshuset – hamnkrogarnas klienteloch Vågskålens är inte direkt detsamma. Spelledaren kan redanhär låta rollpersonerna smaka på Quillas ökända brottslighetoch låta en falsk guide visa dem vägen. Istället för att leda roll-personerna till Vågskålen för guiden rollpersonerna rakt in i enfälla – på en bakgata väntar ett antal kumpaner för att över-rumpla och slå ned rollpersonerna, med avsikt att ta deraspengar och vapen. Spelledaren kan använda standardmallen förbusar (se sidan 31) för alla rånare, överförfriskade sjömän ochannat slödder som rollpersonerna stöter ihop med.
+Förr eller senare, speciellt om rollpersonerna överger hamnen
+för de mer städade kvarteren i norr och öster, får rollpersonernaemellertid reda på var Vågskålen ligger, nämligen invid det re-lativt vackra Jungfrutorget.
+Jungfrutorget
+Detta trivsamma och lugna torg ligger i Quillas sydligaste di-strikt, även kallat furstekvarteren. I närheten finns furst Bebelseget hus (omgärdat av höga järnstaket och väl bevakat av hund-ar och skickliga armborstskyttar) och många av de rikaste köp-männen har sina hem här. Torget är belagt med kullersten. 
+Jungfrutorget har fått sitt namn efter den staty som står rest i
+torgets mitt. Statyn avbildar en ung kvinna med stolt uppsyn,draperad i tunna slöjor av jargiskt snitt. Med ett mycket svårt(Ob4T6) slag mot Ockultism (svårigheten är lätt (Ob2T6) förvästmarkare) kan man få reda på att kvinnan är Västmarks jung-fruprofet, den blinda Elektra, som spred den helige Samors läratill Västmark. Elektra tillfångatogs av jargiska korsfarare ochfördes till Tibara för att ställas inför valet att antingen tjäna somslavinna eller avrättas. Elektra behöll sin mödom och valdemartyrdöden på bålet.
+Värdshuset
+Bredvid Jungfrutorget, med dörrar ut mot såväl själva torgetsom Träsnidarnas gata, ligger värdshuset Vågskålen – ett väl-skött etablissemang som erbjuder mat och sovplatser åt resande.Värdshusets öppettider är från soluppgången till timmarnainnan midnatt. Övriga tider är och förblir dörrarna låsta.
+Själva värdshuset är ett stort timrat tvåvåningshus med glasade
+fönster, nattetid skyddade av stängda fönsterluckor. En litentrappa leder upp till en dubbeldörr som dagtid alltid står öppen(utom under de värsta skyfallen eller när vinden ligger på frånSvartmalmstorget till). När rollpersonerna stiger in genom dörr-en möts de genast av värdshusvärden eller någon av serverings-flickorna. De får lämna sina vapen och tunga rustningsdelar i ettsidorum och leds sedan in i salen där de bereds ett bord eller ettbås. Först vid bordet frågar värdshusvärden om rollpersonernaönskar något att äta eller dricka och om de vill ha ett rum förnatten. Om rollpersonerna svarar jakande ser värdshusvärden tillatt skaffa fram det som begärs – notan kommer senare.Om rollpersonerna frågar efter herr Kandari kan värdshusvärd-
+en låta sända bud efter honom. Värdshusvärden känner dengode herrn som en stamgäst sedan länge. 
+Herr Kandari 
+När herr Kandari nås av budet att någon vill träffa honom påVågskålen kränger han på sig ytterkappan och stegar iväg motvärdshuset. Ca fyrtio minuter efter det att rollpersonerna säntbud efter den gode borgaren anländer han till värdshuset ochvisas till rollpersonerna av värdshusvärden.
+Herr Kandari är en lång man, nära 190 cm. Han har vitt skägg
+och rynkigt ansikte. Under ytterkappan, som värdshusvärdenhjälper den gamle mannen av med, bär den gode herrn en saff-ransgul skjorta och jordfärgade byxor. Runt hans hals hängeren tunn silverkedja, och de knotiga fingrarna är så gott som allaprydda med ringar.
+Mannen väntar på att rollpersonerna skall stiga upp och hälsa
+honom, men om inte det händer tar mannen något indignerattill orda. Han presenterar sig som Kandari och undrar i vilketärende rollpersonerna söker honom. När han övertygats om attrollpersonerna är utsända av uppdragsgivaren (farbror Calvin?)vinkar han till sig värdshusvärden och ber om att få ett bås iord-ningsställt. Sedan leder han rollpersonerna in i båset och drarför draperierna. a. Förstuga
+b. Vapenhusc. Sald. Kök och förråde. Skänkstugaf. Stallbyggnadg. Badstuga
+Måltid eller tjänst Pris
+Enklare måltid (soppa, bröd, ost) 1 thaler
+God måltid (stekt krokodil, fasan) 5 thaler
+Öl (stop) 1 thalerKvasr (stop) 6 thaler
+Vin (bägare) 1 thalerVin (flaska) 13 thaler
+Enkelrum, med frukost (1 natt) 3 thalerDubbelrum, med frukost (1 natt) 4 thaler
+Bad 1 thalerStallplats, med foder (1 dygn) 3 thaler
+Tabell DI-8: Prislista på värdshuset Vågskålen.c.
+a.b.d.e.f.g.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 13
+
+--- Page 15 ---
+• 14 •DIAMANTÄPPLET SYLFENS VREDE
+Herr Kandari upprepar mycket av det uppdragsgivaren redan
+sagt rollpersonerna, men har en del extra information att till-foga. Följande kan läsas högt för rollpersonerna, efter det attmannen berättat för rollpersonerna om uppdraget:
+”Vi vet att templet och skatten existerar.” Mannen tar upp vad som
+ser ut att vara en handritad karta, samt en påse med silvermynt.”En man som varit där förde med sig en rad föremål, bland annatdessa mynt. Som ni ser är de inga vanliga mynt, utan ytterst gamlasådana. Se på präglingen – otvivelaktigt det gamla Ramora. Dessamynt, och andra av de föremål som mannen förde med sig, har över-tygat oss om att templet verkligen existerar. Mannen hade dessutomsans nog att rita en karta över området, vilket borde hjälpa er att loka-lisera platsen när ni väl når Sänkan. Sänkan ja. Det är den plats därtemplet finns gömt. Exakt var vet vi inte, men kartan torde kunnaleda er rätt.” Herr Kandari lämnar över kartan till er. (Kartan
+finns återgiven på sidan 32.)
+Om rollpersonerna frågar om mannen kan herr Kandari berätta
+att dennes namn är Vitabrek av Vallinge, och att han numeralever gott för de pengar som herr Kandari, genom det sällskaphan representerar, betalade mannen för föremålen och kartan.Herr Kandari säger att han knappast tror att Vitabrek kan varatill någon större hjälp, och han vet heller inte var mannen be-finner sig. Herr Kandari vet mer än han avslöjar, men vill inteatt rollpersonerna skall få höra Vitabreks berättelser om denlevande varelse han säger sig ha sett eller åtminstone varsebliviti templets inre. Herr Kandari berättar hellre om de skattermannen såg:
+”Vi är högeligen intresserade av alla skatter och föremål som finns inuti
+templet; även de som inte ser direkt värdefulla ut vid första anblick. Vivet inte exakt hur stora skatter templet rymmer, men ett flertal resor kanbli nödvändiga för att bärga allt. Jag föreslår att ni vid denna första resaanvänder ert sunda förnuft och bär med er det mest värdefulla: juveler,guldföremål och diamanten – mynten kan vänta till senare. Diamantenja. Vitabrek av Vallinge hävdar att han såg en diamant där inne, storsom ett äpple. Jag har konsulterat de gamla skrifterna och hittat en pas-sage som mycket riktigt talar om en sådan skatt. Det är av högsta viktatt ni får med er diamantäpplet därifrån. Har ni förstått?”Sedan låter herr Kandari rollpersonerna ställa frågor och hjälper
+dem svara så gott han kan. Före de skiljs åt betalar han derasrum och måltider i förskott och ger dem en handfull mynt (30thaler) för att ordna med proviant. Han ber dem sedan besökahonom i hans hem på Myntslagargränd före de ger sig av, därde kommer att få en del viktig utrustning. 
+Herr Kandari är tämligen sjuklig och hans tal bör då och då av-
+brytas av hostattacker. Spelledaren kan beskriva hur det, efteren synnerligen svår rossling, börjar rinna blod ur herr Kandarismungipa. Den gode borgaren skyndar sig att torka bort detmed en näsduk.
+Tjuvlyssnarna
+Bland kortsvärden inne i vapenstugan hänger även ett kragg-svärd. Detta tillhör Krole – en barbar som slagit följe med enmissla från Daggbacken. Misslan, som lystrar till namnet Natt-ros, är en cynisk liten varelse, kvacksalvare till yrket och o-hederligheten personifierad. Nattros och Krole sitter i båset in-till herr Kandari med sällskap och den nyfikna misslan lyckas tillrollpersonernas stora olycka uppsnappa hela samtalet mellanhistorikern och äventyrarna. Om rollpersonerna av någon an-ledning inte talar med herr Kandari på värdshuset får spelled-aren ordna så att de båda gynnarna hör rollpersonerna samtalasinsemellan vid ett senare tillfälle. Nattros och Kroles medverk-an i äventyret kan då behöva ändras en aning. Hur som helst:om Nattros får tillfälle (vilket hon troligtvis får) så tecknar honned det herr Kandari säger när han går igenom sin tolkning avkartan med rollpersonerna. Tidigt nästföljande morgon begersig Nattros med beskyddare iväg norrut längs floden med enstulen pråm. Mer om dessa filurer senare.
+Herr Kandaris hus
+Herr Kandari bor i ett tvåvåningshus beläget vid Myntslagar-gränd. Gatan ligger mitt i staden, nära Stora torget. Huset ärbyggt av sten och har ett brant sluttande skiffertak. På neder-våningen finns, förutom en hall och ett kök där kokerskan hus-erar, även en matsal och herr Kandaris kontor. Övervåningenrymmer herr Kandaris privata rum, ett sällskapsrum, samt ettantal gästrum. Gästrummen bebos just nu av ett antal vännertill herr Kandari – alla medlemmar av De gamla.
+Om rollpersonerna besöker herr Kandari i hemmet tar han
+emot dem inne på kontoret, dit de visas av Kandaris hushåll-erska. Mot ena väggen står en bokhylla i trä, fylld med perga-mentrullar, högar med papper och en och annan tjock bok. Påden motsatta väggen, bakom den gode herrns mahognyskriv-bord och ebenholtssmyckade karmstol, hänger ett långsvärd. Iett hörn står en matt blänkande helrustning uppställd, arrange-rad med pansarhandskarna vilande över skaftet av en lång två-bladig yxa. I ett annat hörn står ett skåp som innehåller starkadrycker och bredvid detta hänger porträtt av herr Kandaris faroch farfar. Här finns även en vacker vas, vilken herr Kandaristolt kan presentera som kostbart alvhantverk. På golvet liggercirefaliska mattor.
+Herr Kandari har samlat på sig en hel del information om dia-
+mantäpplet och Sänkan, och när rollpersonerna besöker honomlämnar han över ett papper med anteckningar (se sidan 32, därpapperet finns återgivet). Om rollpersonerna själva vill nyttja
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 14
+
+--- Page 16 ---
+• 15 •SYLFENS VREDE DIAMANTÄPPLET
+herr Kandaris boksamling kommer han muttrande att gå med på
+detta (ett lyckat slag för Övertala kan eventuellt krävas). Fär-digheten Bibliotekskunskap används för att gå igenom skrift-samlingen. Ett lyckat slag innebär att rollpersonerna finner enpassage om skatten som herr Kandari själv inte funnit. Ett ut-drag av sidan återges på baksidan av den här boken. Räkna medatt det tar en hel dag att gå igenom böckerna, men om rollper-sonerna använder längre tid kan svårigheten för slaget sänkas.
+Vitabrek av Vallinge
+Om rollpersonerna frågar runt en del finns det möjlighet att defår höra var Vitabrek av Vallinge håller till, nämligen i ett ny-införskaffat hus på Damar sockerbagares gata. Vitabrek harstrött en del pengar runt sig den senaste tiden, så det är inte heltomöjligt att någon värdshusvärd eller serveringsflicka minnshonom – om de får lite silver först för att friska upp minnet.
+Vitabrek finns i sitt hus dagtid, men är endast anträffbar framåt
+eftermiddagen. Om morgonen och förmiddagarna sover hanruset av sig (och kan inte väckas) och vid aftonsnåret drar hanut på sina sedvanliga krogrundor. Den före detta jägaren är inteberedd att ställa upp för rollpersonerna gratis. Om de vill hörahans berättelser får de snällt betala för dem, gärna i form avdricka, varpå mannen sveper in sig i sin yttermantel och hän-visar rollpersonerna till närmaste krog. Om rollpersonernabeter sig trevligt och frikostigt kommer Vitabrek att vara demtill lags och svara så sanningsenligt som möjligt på alla deras frå-gor. Följande är vad Vitabrek vet:
+◊ I Sänkan finns ett dolt tempel som Vitabrek fann av en
+slump när han förföljde ett bytesdjur. I templets inre liggeren stor skatt gömd. Han har själv sett den och fört delar avden med sig. Stora delar av skatten finns kvar.
+◊ Det finns någon eller något i templet. Vitabrek fick aldrig
+syn på denne någon, men en olustkänsla ilade efter hansrygg, precis som om han vore iakttagen där han gick. Somjägare säger sig Vitabrek kunna känna sådana saker, precissom en varg kan känna vittringen av ett byte, fast lite tvärt-om, om rollpersonerna förstår. Detta är huvudanledningentill varför Vitabrek hade så bråttom därifrån och senare inteville bege sig till templet igen. (Den andra anledningen äratt Vitabrek nu är en relativt rik man och nöjer sig meddetta. Vitabreks idé om lycka är att ha råd med sina dagligaölrundor och en och annan flicka.)
+◊ Vitabrek har behållit en del av skatten för sig själv, närmare
+bestämt en medaljong. Vitabrek bär den runt halsen ochkan ta fram och visa den för rollpersonerna. Han tror attmedaljongen ger honom vissa krafter. Vitabrek kan varavillig att sälja medaljongen, men ’utropspriset’ är högt:4.000 thaler.
+◊ Han öppnade tempelportarna med ett underligt utformat
+dörrvred som han fann i sin ryggsäck. Han har ingen aningom hur det hamnade där. Han har inte kvar föremålet, menå andra sidan lämnade han tempelportarna olåsta när hanhastade därifrån med skatterna, så detta borde inte medföranågra problem.
+Vitabrek kan under inga omständigheter övertalas att följa roll-
+personerna till templet (till exempel som vägvisare). Vitabrekhar lovat sig själv att aldrig mer färdas till området. Han skulle
+möjligtvis kunna gå med på att föra rollpersonerna så långt somtill Sänkan, men inte ett steg längre. Och hans tjänster är integratis: 20 thaler per dag vill han ha, och allt betalat i förskott.
+Rykten
+På Quillas krogar och värdshus går många rykten om träskenoch Sänkan. Om rollpersonerna vill språka med någon kanspelledaren välja eller slå på tabell DI-9.
+1T10 Rykte
+1 Det finns ingenting att hämta i träsken förutom 
+ond, bråd död. (Mannen kan visa upp en 
+benstump – en krokodil tog benet.) För att
+inte tala om spindeltrollen…
+2 I träsken finns en damm där undersköna kvin-
+nor svalkar sig under soliga dagar. Man skalldock inte låta sig luras av deras lockrop – de ärinte vad de ser ut att vara.
+3 Det finns gott om tiraker i träsken – inte 
+Marnakh utan barbariska Frakk. De kommer 
+förmodligen från bergen för att söka byte eller
+ta slavar.
+4 Handeln med dvärgarna i Krhun-Renk-
+Roghan har nått nya rekordhöjder på sistone.Det ryktas om att dvärgarna vill sluta ett avtalmed folket i Forsfara och Quilla om att derasdelegater skall få sitta med i städernas råd. Manundrar hur tirakerna reagerar, och vad somhänder om dvärgakungen får som han vill.
+5 Träsken kan vara förrädiska, speciellt när det 
+regnat en längre tid. Virvelströmmar, bottenlös 
+sankmark och giftiga växter är endast några av
+farorna.
+6 Handelsmän på Gröna floden har på sistone
+härjats av flodpirater. Piraterna låter vanligtvisbesättningen på den kapade båten leva, så längealla värdeföremål lämnas över utan  gnäll.
+7 Det finns jättespindlar i träsken. När man väl 
+ser dess nät vet man att det redan är för sent, 
+för då finns spindeln förmodligen i närheten,
+redo att anfalla.
+8 Vid Gröna flodens övre lopp finns en plats som
+kallas Orakelklyftan. Det sägs att det skall fin-nas en sierska där som vet allting om det för-flutna och om det som komma skall.
+9 Djupt inne i Träskveden finns ett tempel 
+helgat åt spindelgudinnan. Det viskas att 
+hennes präster kidnappar oskyldiga bönder och
+fiskare för att offras till Den åttabenta.
+10 Det finns mycket riktigt en sänka i norr, belä-
+gen i den dalgång som löper mellanSpindeltrollens tvillingtoppar. Sänkans bottenbestår av gungfly och träskmarker som varjeklok människa bör undvika. Det ryktas omdvärgaguld och magiska föremål på sänkansbotten, men vem vet om det är sant?
+Tabell DI-9: Rykten i Quilla.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 15
+
+--- Page 17 ---
+• 16 •DIAMANTÄPPLET SYLFENS VREDE
+Herr Vorsel av Rampor
+Herr Vorsel av Rampor är en riktig ungdom, endast 50 år
+gammal och en av de gamlas nyaste medlemmar. Han har glestgrått skägg, plirande ögon och nästan ständigt ett fåraktigt le-ende på läpparna. På näsan bär han ett par läsglas. Herrn ärmagiteoretiker till yrket (en vanlig fras från herr Vorsel är: ”jag
+är teoretiker, inte praktiker” ) och härstammar från Rampor. Han
+har kallats till Quilla av herr Kandari för att följa med rollper-sonerna mot Sänkan. Herr Vorsel är förmodligen den ende isällskapet som har fysiken att klara en sådan prövning. Den för-ra expeditionen, ledd av herr Kandari själv, fick som bekantvända om efter dagar av moskitterror, värkande leder och tillsist även ett fatalt ryggskott för den 93-årige Teofal.
+Rollpersonerna måste ta med sig herr Vorsel – annat kommer
+inte på fråga. Herr Vorsel ”besitter kunskaper som ni inte kan vara
+utan” . Detta är mest ett svepskäl, ty De gamla vill att någon ser
+till att rollpersonerna inte lockas av att dra iväg med skattensjälva när de hittar den. Herr Vorsel kommer att prata en heldel under resan – om han behandlas med respekt vill säga. Omrollpersonerna är otrevliga eller försöker ignorera honom, slu-ter han sig och färdas vidare under tystnad. Om herr Vorselskulle dö eller försvinna under resans gång kommer rollperso-nerna att åtminstone misstänkas för mord vid ett eventuelltåtervändande till Quilla och De gamla.
+Ganska snart kan herr Vorsel komma att bli en belastning för
+rollpersonerna, med tanke på hans sviktande fysik. Om roll-personerna har översseende med detta och lyckas hålla teore-tikern vid liv så kommer de så småningom att upptäcka dengode mannens fördelar. Han kan till exempel en hel del omhistoria och ockultism, vilket kan visa sig viktigt längre fram.Ett sista ord på vägen
+Strax innan rollpersonerna ger sig av blir herr Kandari mycketallvarlig. Han gör klart för rollpersonerna att De gamla intetänker finna sig i att rollpersonerna sviker deras förtroende. ”De
+gamla finns överallt” , som herrn säger, ”och vi har resurserna att
+utkräva hämnd på våra fiender. Jag vill understyrka att vi förväntar ossatt ett ingånget avtal hålls. Både för vår och för er skull.”
+Det är förstås inte helt otänkbart att rollpersonerna, trots sina
+band till uppdragsgivaren, väljer att svika De gamla för att självage sig iväg efter skatten. I sådana fall kommer De gamla att sesig om efter nya expeditionsmedlemmar. Den expedition somsänds iväg två dagar efter rollpersonernas avfärd består till storadelar av slödder, hopsamlade från Quillas hamndistrikt ochledda av den ökände skrävlaren och påstådde drakdräparenDralg Tiraken. Förr eller senare kommer de två expeditionernaatt drabba samman och då ligger rollpersonerna risigt till. Menallt detta endast om rollpersonerna sviker.
+Rutten
+Den bästa vägen mot Sänkan torde vara uppströms Gröna flo-den, ungefär två dagar. Vid flodens östra strand finns en biflodsom ändar i ett kolarläger, förklarar herr Vorsel, där man kanlägga till. Sedan måste färden gå österut, genom Mellersta skog-ens träskmarker, mot bergen. Detta blir förmodligen den svå-raste delen av resan, menar Vorsel, eftersom markerna är sankaoch dessutom farliga att vistas i. Så snart man tagit sig genomträsken kan man emellertid sikta in sig på det riktmärke somSpindeltrollens tvillingtoppar utgör. Mellan dessa toppar finnsen dalgång där Sänkan är belägen. Väl framme vid Sänkanmåste man lita till den karta som ritades av Vitabrek.
+Flodbåten
+Herr Kandari har hyrt en flodbåt som rollpersonerna kananvända för att ta sig den första sträckan upp till kolarnas läger.Båten ligger förtöjd ca en halvtimmes färd norrut från staden,vid ett litet fiskeläge som heter Laxhundra. 
+Den stora flodbåten mäter 12 meter och har en latinriggad
+mast. I aktern finns en kombinerad hytt och kabyss, inreddmed ett skåp, ett bord och tre stolar. I ett hörn finns kokmöj-ligheter. Röken leds ut genom ett rökgaller i taket. Undermidskepps finns ett lastutrymme med lågt tak och längst fram iförpiken finns ett förrådsutrymme som innehåller 20 metertross, ett rostigt ankare, en stor bit segelduk, en tom spannmåls-säck och ett par råttor som snabbt kilar iväg när någon kommerin. Båten seglar som snabbast 1 knop uppströms och 2 knopmedströms, förstås modifierat beroende på hur vinden blåser. 
+Till sist, målat på flodbåtens ena sida nära fören med röd färg,
+finns båtens namn: Merflickan.AVRESAN
+Avtalet var att rollpersonerna, innan de gav sig av, skulle besöka herr Kandari i dennes
+hem på Myntslagargränd. När rollpersonerna anländer möts de inte bara av herr Kandari,utan även av ytterligare fyra män – alla gamla. Deras namn är Teofal, Andres, Ferenc
+Skrivaren och herr Vorsel av Rampor.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 16
+
+--- Page 18 ---
+• 17 •SYLFENS VREDE DIAMANTÄPPLET
+Händelser på floden
+Båtresan uppströms floden från Laxhundra till kolarnas läger är
+beräknad att ta cirka fyra dagar. (Samma rutt tar ungefär tvådagar medströms.) Om natten måste båten förtöjas, ty att färdaspå floden nattetid kan vara mycket farligt.
+Nedan finns ett antal händelser att krydda resan med. Spelled-
+aren bör välja ut en eller ett par av dessa händelser – för mångahändelser blir lätt orealistiskt och i längden tråkigt. Det finnsemellertid stor chans att rollpersonerna tvingas färdas upp ochned längs floden ett antal gånger innan äventyret är slut, så förreller senare bör spelledaren få användning av alla händelserna.
+Flodmånglarna : En låg flodbåt styr upp mot rollpersonernas
+farkost. Vid relingen står ett antal skabbigt klädda personer, tillsynes småhandlare, och på däck står en del av deras last upp-ställd. De ropar ohoj och erbjuder sig sälja rollpersonerna mat,hantverk, lätta vapen och pilar med mera. Mycket av varornaär av låg kvalitet, och månglarna kommer att göra sitt bästa föratt skinna rollpersonerna. Månglarna har en riktigt speciell vara:en liten tirakflicka som de funnit och som de nu säljer för 250thaler. Flickan ligger bunden under däck. Om hon skulle åter-bördas till sin rätta stam skulle rollpersonerna förmodligenkunna vinna tirakernas vänskap och få en möjlig allierad. Läsmer om träskets tiraker på sidan 19.
+En båt i nöd : En handelspråm håller på att sjunka och kapte-
+nen ropar ut kommandon till höger och vänster. Pråmen harlyckats ränna upp på ett par vassa stenar invid flodkanten ochtar in vatten. Nära pråmen har krokodiler samlats för att för-söka snappa åt sig någon sjöman. Totalt rör det sig om 1T6+4sjömän och minst lika många krokodiler. Om rollpersonernahjälper till att rädda sjömännen, eller ännu bättre: hjälper till atträdda lasten (60 tunnor med tjära), kommer kaptenen att lönadem väl. Kaptenen och hans män kan bland annat berätta hist-orier och rykten om träsket.
+Flodpiraterna : En låg, snabbgående pråm förföljer rollperson-
+ernas farkost en kort bit och går sedan upp jämsides för attborda. Om rollpersonerna gör motstånd anfaller piraterna. Densom ger sig utan strid skonas, men alla andra försöker piraternahugga ned eller vräka överbord. Piraterna försöker sedan läggabeslag på alla värdeföremål, inklusive alla vapen av god kvalitet.Piraterna är ungefär lika många till antalet som rollpersonerna.De strider så länge de tror sig ha en chans att vinna – om debörjar dö som flugor kommer de så snabbt som möjligt att för-söka ta sig tillbaka till sin pråm för att fly.
+Spökbåten : Sent en kväll styr en flodbåt upp jämsides med
+rollpersonernas farkost. Det syns inga människor ombord ochseglet hänger vindstilla, oavsett hur mycket det blåser. Om roll-personerna går ombord på båten kommer de att finna en osaligande under däck. Om rollpersonerna övervinner sin rädsla ochtalar till den ger anden rollpersonerna anvisningar om den platsdär den drunknade. Om rollpersonerna bärgar den uppsvällda
+drunknade kroppen (vid pass två kilometer uppströms, skyddadfrån krokodiler på grund av sitt läge bakom en sten och en träd-stam) och ser till att den tas om hand av den samoriska läranspräster kommer den osalige anden att uppbåda sina sista jordiskakrafter till att avslöja var hans arv finns gömt; en mindre silver-skatt (värd runt 500 thaler) som stoppats undan i ett ihåligt trädstrax norr om Laxhundra. Om spelledaren vill förlänga scenariotkan rollpersonerna istället för skatten få finna en karta i ett vatt-entätt pergament som kan leda dem ut på en större färd. Tänkdock på att De gamlas uppdrag hastar och kräver rollpersoner-nas fulla uppmärksamhet för en tid framöver.
+Drömmen : En natt härjas en av rollpersonerna (den med högst
+Tur) av svåra mardrömmar. Han jagas genom en mörk gång avett osynligt väsen, någonting ondskefullt som vill honom död.En gammal kvinnas skratt ekar mellan de fuktiga, stinkandeväggarna. Rollpersonen springer för sitt liv, springer tills hjärtathotar brista av ansträngningen när mörkret slutligen bryts ochhan snubblar ut i ett grottrum som lyses upp av tre stora fyrfat.Vid den bortre väggen sitter en man kedjad. Han har en stoltmen samtidigt uppgiven uppsyn, som om elden som en gångbrunnit i hans hjärta falnat och nu endast något litet fortfarandespeglas i hans yttre. Han är klädd i karmosinrött, och klädernaser ut att härstamma från en svunnen tid. Han formar ett ordmed sina läppar, men innan rollpersonen hinner uppfatta ordetuppenbarar sig en skräckinjagande varelse i hans väg och kastarrollpersonen till marken. Den tycks dyka upp ur tomma intet.Varelsen har ett lejons underkropp och en människas överkroppmen med vingar. I höger hand håller varelsen ett blåskimrandesvärd och i den andra en tärning. Den spänner sina brinnandeögon i rollpersonen och talar: ”Jag är Ödets tjänare! Är du värdig
+att tjäna mig, o dödlige?” Om rollpersonen svarar jakande får
+denne tärningen ur tjänarens hand. Sedan vaknar han – utan tär-ning). Denna rollperson får 1T6 Ödespoäng (se Spelledarensguide (Eon III), sidan 178), som resultat av välsignelsen. Omrollpersonen inte visar underkastelse vrålar varelsen: ”Maliks tjä-
+nare är du, för ödets svärd skall du blöda” , och sedan anfaller den
+rollpersonen och slaktar honom i drömmen. När rollpersonenvaknar upp kommer han att ha tre nivåer svårare (+Ob3T6) påalla slag mot Tur under resten av äventyret.
+Expeditionens första delmål
+Cirka fyra dagars båtfärd norrut från Quilla och ungefär tvåtimmars färd efter den lilla bifloden, ligger kolarnas läger.Redan på håll syns stora, svarta rökpelare slingra sig mot him-len. När båten kommer närmre kan man se en brygga skjuta uti floden på den norra banken. 
+Själva lägret är uppbyggt runt ett antal byggnader (se kartan på
+sidan 18), och i bakgrunden syns ett tiotal stora svarta kolmil-or spy ut sin svarta rök. Under provisoriska regnskydd av segel-GRÖNA FLODEN & TRÄSKEN
+Strax norr om Quilla ligger ett litet fiskeläge kallat Laxhundra. Byn har ca 150 invånare,
+varav de flesta livnär sig på jakt eller fiske. I en provisorisk hamn ligger ett antal fiskebåtar,men även flodbåten Merflickan. Ett kort samtal med fiskaren Tors är allt som behövs för
+att övertyga fiskarna om att båtens rättmätiga ’ägare’ har kommit för att bruka den.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 17
+
+--- Page 19 ---
+• 18 •DIAMANTÄPPLET SYLFENS VREDE
+duk ligger stora högar med träkol. Kolarlägret är en viktig pro-
+ducent av kol, och den som hindrar produktionen lär få han-delshuset Drakes vrede över sig.
+a.Kolarstuga. En timrad långstuga, spartanskt inredd med
+britsar, bord, palliknande stolar, en vedkista och en eldstadmed tillhörande kittel. Stugan har, förutom en hall, ett endastort rum.
+b.Kolarstuga. En timrad långstuga med hall och tre rum.
+Rummen bebos av högste förmannen Sote och två av den-nes underhuggare. Rummen är torftigt inredda med enklabäddar, varsin snickrad kista, ett lågt bord och en del per-sonliga tillhörigheter. SL: Här finns bland annat förmän-
+nens pengar och lönekassan, totalt 520 silver i blandadevalörer, framförallt thaler.
+c. Förråd . Liten förbommad förrådsstuga. Inuti finns tre
+kaggar med lampolja, fem tunnor med tjära, ett tiotal ved-och handyxor, lika många sågar, fyra spadar, sju långa järn-krattor, en hel del verktyg, ett lätt armborst och nio lod.
+d. Kolarkoja . En typisk koja som utgör bostad för en kolare
+med familj. Totalt 1T6+1 människor, unga som gamla,finns i hushållet. Barnen och kvinnorna arbetar främst medtvätt och kokning, men även med mjölkning av de få korsom finns vid lägret.
+Högste förmannen vid kolarlägret är Sote – en lång, senig karl
+med slokmustascher och kort välskuret skägg. Förmannen häls-ar rollpersonerna med: ”Det var värst vilket rännande det var här.”
+Denna kryptiska hälsningsfras syftar på de myckna besök lägretfått av främlingar på sista tiden. För en kväll sedan (eller några,beroende på hur lång tid rollpersonerna tillbringade i Quilla)anlände en missla i sällskap med en lång och reslig man – skick-lig armbrytare förresten – och för bara någon dag sedan över-nattade en riddare av något slag i timmerstugan. Alla färdadesin mot träsken till.
+Sote kan gå med på att låta rollpersonerna övernatta i kolarläg-
+ret om de så önskar, men vill förstås ha några slantar för besvär-et. Sote och de andra kolarna byter gärna information omträsken i utbyte mot vad dricka rollpersonerna än har med sig.Om kvällen kan rollpersonerna utmana kolarna på kortspel
+eller tärning, bryta arm eller byta historier. Kolarna har sammadata som typiska busar (se sidan 31), med den skillnaden att deäven behärskar färdigheten Yxa 10 och hantverksfärdighetenKolare 12, men saknar färdigheterna Låsdyrkning och Skum-raskaffärer. Allt är upplagt för en trevlig kväll i kolarkojan.
+Om rollpersonerna övernattar hos kolarna får de ett brutalt upp-
+vaknande morgonen efter. Grim, den störste, fulaste och svart-muskigaste av alla kolarna kastar en hink vatten över en av roll-personerna och sliter upp honom ur bädden. Om rollpersonengör motstånd börjar han puckla på honom med sparkar, skall-ningar och slag. Efter ett par rundor går kolare (och rollper-soner?) mellan och särar de stridande åt. I hårda ordalag far Grimdå ut mot rollpersonen och anklagar honom för att ha stulit enbörs under natten. Stämningen är mycket otrevlig, och om roll-personerna drar blankt eller visar andra ’tecken på skuld’ lär fullstrid utbryta. Varje gång en kolare dräps eller skadas svårt skallspelledaren slå ett slag mot Sotes Ledarskap. Om slaget lyckas fårSote sina mannar att backa undan och ge rollpersonerna fri lejdned mot båten – Sote vill inte ha mer blodspillan.
+Tvisten kan också lösas mer smidigt, genom att rollpersonerna
+lyckas övertyga kolarna om sin oskuld (här måste det till lyck-ade slag mot PER och Övertala och/eller en god portion brarollspel) eller till och med erkänner ett brott de inte begått ochbetalar tillbaka det stulna med råge. Det krävs nog åtminstone50 thaler för att den bestulne skall bli nöjd och ännu mer försveda och värk om rollpersonerna lyckats skada någon kolare.
+Skyldig till stölden är misslan Nattros, som övernattade i stugan
+tillsammans med Krole en eller ett par kvällar innan rollperson-ernas ankomst. Grim kontrollerade aldrig sin börs förrän nu,och därför riktas hans ilska främst mot rollpersonerna.
+Träskmarkerna
+För att nå dalgången och Sänkan måste rollpersonerna forceraTräskveden. Västmarks stinkande träsk och sumpskogar finnsdetaljerat beskrivna på sidan 8. Spelledaren slår i vanlig ordningslag på tabell DI-1 för att bestämma eventuella slumpmöten.
+Från kolarnas läger går en gammal kärrväg in genom träsk-
+markerna. Sote tror att stigen skall vara möjlig att följa ändaupp till bergen, men helt säker är han inte. Rollpersonerna kanfå höra ett och annat om träsken, och kolarna varnar dem föratt lämna vägen. Kärrvägen ringlar sig mellan Träskvedensknotiga träd. Vid sidan om vägen finns vidsträckta sankmarkeroch illaluktande pölar med dyigt vatten, men ibland även vadsom ser ut att vara fast mark. 
+Vid tre tillfällen försvinner kärrvägen i tät terräng eller gungfly.
+Vid dessa tillfällen måste man lyckas med ett lätt (Ob2T6) slagmot Spåra för att återfinna vägen. Ett misslyckat slag innebär attman antar att vägen faktiskt tagit slut, och man måste då be-stämma om man vill vända åter eller fortsätta. Om man väljerdet sistnämnda, se rutan ’Att lämna vägarna’. En snäll spelledarekan låta rollpersonerna återfinna vägen av en slump efter 1T6timmars färd genom träsken. Kärrvägen delar sig också tydligtpå två ställen (se kartan på sidan 4). Den första mindre vägen,som leder söderut, mynnar så småningom vid Dimslöjornas sjödär spindelkulten huserar. Spindelkulten och dess bosättningbeskrivs på sidan 25. Den andra vägen, som inte är större än en
+a. Floden
+b. Kolarstugac. Förrådd. Kolarkojore. Milorf. Brygga
+f.e.
+d.
+c.b.b.
+a.Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 18
+
+--- Page 20 ---
+• 19 •SYLFENS VREDE DIAMANTÄPPLET
+bred stig, leder norrut mot dalgången mellan Spindeltrollens
+tvillingtoppar. Om man väljer att fortsätta rakt fram (efter kärr-vägen) kommer man så småningom fram till den övergivnajordklöverplantagen. Observera att växtligheten är tät vid den-na korsning, och att man inte kan se tvillingtopparna i norr. 
+Den övergivna jordklöverplantagen
+Kärrvägen ändar i vidsträckta öppna fält, översvämmade av dy-vatten eller vildvuxna och snåriga. Under snåren kan man finnastora mängder röd jordklöver (se Spelledarens guide (Eon III),sidan 92), men även horder av svarta igelmaskar som lystet sät-ter i sig av de blodåterbildande örterna. Mellan fälten finns ettantal delvis raserade och förfallna hus, alla uppförda på pålarsom står nedsänkta i den leriga marken. Inuti husen finns fort-farande en del verktyg (skäror, spadar, tunnor) och förnöden-heter (ej mat dock) som kan komma rollpersonerna till använd-ning. I ett av husen finns ett stort träskgetingbo (se resultat 6 itabell DI-9), men surret från getingarna bör varna rollperson-erna innan de hinner stiga in och få dem att tänka om. Hur somhelst utgör dessa övergivna hus en utmärkt lägerplats, då deerbjuder rollpersonerna tak över huvudet. 
+Spelledaren kan krydda en eventuell övernattning med otäcka
+läten utifrån träsket, tät spöklik dimma eller kanske ett nattligtanfall från ett listigt spindeltroll eller jagande frakktiraker.
+Träskets tiraker
+Sedan snart ett år tillbaka har en stam Frakktiraker tagit träskenoch skogarna som sina jaktmarker. Just uppgår stammens tal tillarton personer: trokkan Thamerka (’storhjälm’), en binderakk,en ung schaman och femton jägare och krigare. Utöver dessahålls även fyra slavar – alla gûrder. Om resan hittills varit förhändelselös kan spelledaren låta rollpersonerna stöta ihop medjagande tiraker eller finna deras läger.
+På Neogames hemsida (www.neogames.se) finns en beskriv-
+ning av hur detta läger kan se ut. Beskrivningen, som är gratisatt ladda ned, innehåller även en intressant spelledarperson somkan komma att bli rollpersonernas följeslagare.
+Ut ur träsken
+När rollpersonerna bryter igenom Träskvedens skogsbryn inorr möts de av synen av de stora bergen. I norr finns två speci-ellt höga berg: Spindeltrollens tvillingtoppar. Mellan dessa bådaberg skär en dalgång en djup skåra i de annars så massiva berg-en. Stigen leder upp mot denna dalgång.
+Dalgången
+Skogen växer väldigt gles i backarna upp mot dalgångens myn-ning. Här och var rinner små porlande bäckar ned från toppar-na i norr, ner mot träsken. Vattnet är gott och friskt, liksomluften. Spelledaren bör göra klart för spelarna vilken befrielserollpersonerna känner när de lämnar de dyiga, förpestade träsk-en och istället kan andas frisk bergsluft. 
+När rollpersonerna rör sig upp mot det första krönet, alldeles
+där de båda bergssidorna bildar dalgångens mynning, skall spel-ledaren slå dolda lätta (Ob2T6) slag mot rollpersonernas SYN.1T10 Händelse
+1 Öppet vatten. Rollpersonerna måste ta en
+omväg på 1T6 kilometer eller simma.
+2 Gungfly. Rollpersonerna måste vid tre tillfällen
+lyckas med slag mot Hoppa eller ta en omvägpå 1T6 kilometer runt gungflyn. MisslyckadeHoppa-slag leder till att rollpersonen hamnarunder vatten. Använd reglerna för drunkningpå sidan 67 i Spelledarens guide (Eon III).
+3 Oändligt tät vegetation. Rollpersonerna måste 
+gå tillbaka 1T6 kilometer och sedan välja en
+annan färdriktning.
+4 Bottenlös dy. Slå SYN för att upptäcka faran,
+annars sjunker rollpersonen. Använd reglernaför drunkning i regelboken. Det krävs ett svårt(Ob4T6) slag mot STY för att dra upp rollper-sonen (en nivå enklare per person som hjälpertill – slå mot den starkastes STY).
+5 Mycket hala stenar. Att ta sig över partiet med 
+hala stenar kräver ett eller flera slag mot RÖR 
+eller annan lämplig färdighet. Ett dopp i kärr-
+vattnet är straffet för den som misslyckas.
+6 Träskgetingbo. En svärm getingar anfaller roll-
+personerna. Den som inte tar skydd i vattneteller på annat sätt (magi?) lyckas göra sig avmed getingarna får Ob1T6 i Trauma ochOb3T6 i Smärta till följd av den aggressivasvärmen.
+7 Omtöcknande sumpgas. Rollpersonerna får 
+Ob1T6 i långtidsutmattning (ett lyckat TÅL-
+slag halverar verkan).
+8 Stickande sumpgas. Rollpersonerna får Ob1T6
+Smärta (ett lyckat TÅL-slag halverar verkan).
+9 Giftig sumpgas. Rollpersonerna tar Ob1T6 
+Trauma i skada (ett lyckat TÅL-slag halverar
+skadan).
+10 Köttätande klängväxter attackerar. Se data på
+sidan 32.
+Tabell DI-10: Händelser i träsken, bortom vägarna.
+Att lämna vägarna
+Om rollpersonerna, frivilligt eller inte, väljer att lämnakärrvägen eller stigarna, ligger de illa till. Västmarks träskär oförlåtande och endast de skickligaste och uthålligastekan räkna med att komma levande därifrån.
+För det första sjunker rollpersonernas restakt markant.
+Använd reglerna för resor i Spelledarens guide (Eon III)på sidan 76 och framåt. Räkna med att svårigheten förMarsch är svår (Ob4T6) i de sanka och stinkande träsken.Det kan också bli svårt att hitta då det ena knotiga, moss-bevuxna trädet är det andra likt. 
+För det andra lär rollpersonerna konfronteras med en väl-
+digt skiftande och farlig terräng. Förutom de vanliga slag-en på mötestabellen (Di-1) skall man varannan timme (påresande fot) göra ett slag på tabell DI-10.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 19
+
+--- Page 21 ---
+• 20 •DIAMANTÄPPLET SYLFENS VREDE
+De som lyckas upptäcker hur några varelser ligger på lur bakom
+ett par stenblock en bit upp längs ena bergssidan. De gömda ärtre spindeltroll som hört rollpersonerna närma sig. Om spindel-trollen tycker sig ha en chans anfaller de – först genom att vältastenar över rollpersonerna, och sedan genom att kasta sig nedfrån bergssidan och försöka slita sina offer till marken. Omspindeltrollen möter hårt motstånd flyr de för att terroriserarollpersonerna senare nere i Sänkan.
+Stigen löper längs den västra bergssidan. Längre ned, i dalgång-
+ens botten, flyter floden Geler i en strid ström söderut. Flodenser inte ut att vara farbar, vare sig med båt eller kanot. Stigen ärbred och branten ned mot floden inte särskilt stupande – det ärmed andra ord inte särskilt farligt att ramla utför bergssidan, menman bör akta sig för att tumla ända ned till floden. Den stridafloden är svårsimmad (Ob4T6). Branten är uppsprucken i småfjällbäckar som ibland även korsar stigen. Bäckarna mynnar ifloder Geler. När det regnat mycket kan bäckarna svämma överoch bli svåra att passera, särskilt om man har mycket packning.
+Dalgången sträcker sig ungefär fyra mil in i bergen, svagt slutt-
+ande uppåt. När rollpersonerna så färdas över ett krön kan deblicka ned i en djup klyfta. Stigen delar sig – de breda stigenfortsätter upp mot bergen (efter ytterligare två mil slutar stigenabrupt, någon kilometer under snögränsen) medan en någotsmalare och brantare stig leder nedåt mot klyftan. Över klyftanligger en gråblå dimma. Stigen ringlar nedåt någon kilometerinnan den slutar i klyftans mynning. Dimman blir hela tidentjockare och rollpersonerna sveps in i fukt och väta. Trots dim-man kan man ana en stor, rund formation nere i klyftan –Sänkan! Om Vitabrek följt med rollpersonerna som vägvisaretackar han för sig. Han kan inte övertalas att vänta på rollper-sonerna, än mindre följa med ner i Sänkan.
+Sänkans väggar
+Sänkans väggar är mycket branta. Av de stigar som en gångfunnits här finns inte mycket kvar – det mesta ser ut att ha bli-vit bortspolat av tunga skyfall. Det mest naturliga sättet att ta signed i Sänkan och dimman är att klättra. Här och var finnsklängväxter, rötter och rankor som man kan ta tag i för att saktamen säkert arbeta sig nedåt, vilket gör väggen lättklättrad(Ob2T6) de branta väggarna till trots. Sänkan är otroligt djup– hela 200 meter. Man ser aldrig botten förrän man i principredan är nere, vilket kan ge ohyggliga olustkänslor. Lägg därtillatt vissa av klängväxterna som finns på Sänkans sidor är köttä-tande (se data på sidan 32).
+Det behövs totalt åtta lyckade slag mot Klättra innan man är
+nere på Sänkans botten (och lika många när man vill klättra uppigen). Använd reglerna för klättring på sidan 112 i Spelarensbok (Eon III). Om någon skulle falla bör denne ges en eller ettpar chanser att få fatt i en utstickande trädgen eller ranka. Ettslag mot RÖR klarar biffen. 
+Det finns en alternativ väg ned i Sänkan. Den norra väggen (ej
+synlig från stigen) har delvis rasat ned och bildar nu en brantkana ned mot den dimhöljda botten. En dristig person kan heltenkelt kasta sig ned längs den hala och slippriga branten och fåen hissnande åktur ned i det okända. Efter 200 meters fasans-full rutchfärd slutar resan i en djup damm på sänkans botten. Enfallskada på Ob1T6 på ett träffområde (någonstans kring rump-an?) bör utdelas till följd av de vådliga omständigheterna.
+Givetvis finns alltid möjligheten att låta någon oförsiktig roll-person hitta denna alternativa väg av misstag. De andra rollper-sonerna kan då höra hans skrik när han försvinner ned i djupet. 
+Sänkans botten
+Över Sänkans botten vilar en tät dimma. Om solen lyser ovan-för syns denna bara som ett svagt sken genom det tjocka diset.Marken består av våt, mossig mark, men med berggrundunder. Det är svårt att orientera sig här nere, men om rollper-sonerna söker igenom närområdet kommer de, mellan enstakaträd och skarpa klippblock, att finna en två meter hög, spetsigmonolit. Stenstoden är uthuggen ur ett enda blekgrönt sten-block. Om man undersöker den närmare finner man småskrifttecken nära basen, skrivna på ett sedan länge utdött språk(ramorianskt tungomål). Tecknen kan inte tydas.
+Med hjälp av Vitabreks karta (eller oraklets spådom) kan roll-
+personerna nu lokalisera templet. 250 meter rakt norrut frånmonoliten finns ytterligare en monolit. Denna ser precis lika-dan ut som den första, men tycks betydligt ljusare i färgen –nästan genomskinlig. Monoliten är magisk och kommer attväcka templets tjänare så snart någon sätter sin fot i Sänkan.Ytterligare cirka 125 meter norrut finns en smal ström somflyter från en underjordisk källa i Sänkans vägg (ett vattenfallporlar ut ur bergssidan ungefär en kilometer längre österut) ochöver det rinnande vattendraget finns en portal i samma grönasten som monoliterna. I portalen finns uthuggna bilder av vadsom ser ut att vara ormar, drakar och andra vidunder, alla sling-rande runt varandra bildandes en komplex men vacker orna-mentering. De uthuggna bilderna är onaturligt välbevarademed tanke på var portalen står. Omkring 200 meter nedströmsvattendraget finns portarna till det gamla templet. 
+Om rollpersonerna inte gjorde sig av med spindeltrollen som
+låg i bakhåll uppe i dalgångens mynning har dessa smugit efterrollpersonerna och med stor vighet tagit sig ned i Sänkan. Dekommer att attackera rollpersonerna vid bästa tillfälle, men flyom de finner sig övermannade. Det troligaste tillfället för enattack är nattetid, under någon av de senare vakterna, eller närrollpersonerna skall klättra upp ur Sänkan.
+Templet
+Vattendraget delar sig i två delar, vilka flyter in i vad som serut att vara kanaler runt en låg stenbyggnad. Kanalerna omringarbyggnaden men tycks inte leda någonvart. Vattnet försvinnergenom en dold avtappningsbrunn i botten av en av kanalerna.Brunnen leder till en underjordisk, vattenfylld gång som myn-nar i en stor damm ungefär 50 meter söder om templet. Omen av rollpersonerna misslyckas med ett lätt (Ob2T6) Tur-slagså har 1T6/2 krokodiler sökt sig till dammen för att finna byte.
+Stenbyggnadens tak är övervuxet av mossa, och det är inga
+problem att klättra upp på taket tack vare alla de slingerväxtersom slagit rot på och kring templet. Den enda synliga ingångenär ett par bastanta portar av brons, ärgade och till synes förfall-na. Portarna går dock inte att rubba, vare sig med råstyrka ellermed magi. Trots sitt förfallna yttre är templet skyddat av myck-et stark magi. Portarna har inga nyckelhål, däremot finns enfördjupning mitt mellan dörrarna i form av en triangel.Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 20
+
+--- Page 22 ---
+• 21 •SYLFENS VREDE DIAMANTÄPPLET
+Det enda sättet att smidigt öppna tempelportarna är med den
+nyckel som en gång tillhörde templets överstepräst. Vitabreklämnade kvar nyckeln när han flydde templet med de skatterhan funnit. När spindelkultens ledarinna i en mardrömslikvision fick reda på att templet öppnats gav hon order till sinakultister att färdas till templet, försegla dörrarna och återvändamed nyckeln. Detta var precis vad som hände. Nyckeln finnsnu i säkert förvar i spindelkultens tempel, av anledningar somskall avslöjas senare. 
+Rollpersonerna kommer kanske att försöka öppna templets
+portar med hjälp av våld, eller försöka slå hål i tak eller väggarför att ta sig in. Detta är en mycket tidsödande process, kräververktyg (som lätt går sönder om de används i syftena ovan) ochleder enbart till att rollpersonerna konfronteras med nästa dörr,och nästa (se beskrivningen av templet på sidan 27). Dessutomkommer de att ansättas av allehanda ohyggligheter (krokodiler,spindeltroll och så vidare) och snart få dåligt om proviant. Medandra ord: som spelledare bör man försöka få rollpersonerna attinse att de gör klokast i ge sig av för att försöka finna en nyckeltill templet istället för att banka sina huvuden blodiga i ett futiltförsök att ta sig in med våld. De bästa är förstås om rollperso-nerna kommer på detta själva, utan att behöva ledas alltförmycket i sitt beslut.
+Nattros och Krole
+Vid templet (eller om rollpersonerna tagit mycket god tid påsig: vid Sänkans kant) har Nattros och Krole slagit upp ett tem-porärt läger. De inser att de inte kan ta sig in i templet på egenhand och har därför beslutat sig för att vänta in rollpersonerna. 
+Nattros är en dryg meter lång och har mörkbrunt hår, med
+rödlätta inslag. Hon är typiskt misslesöt och bär en väska medläkeörter och diverse redskap. (En bild på Nattros finns påsidan 29.) Krole är nästan 210 cm lång och har brunt långt håroch skägg. Han har nära till skrattet: ett bullrande godmodigt
+gnägg. Krole är inte världens mest snabbtänkte, men fullstän-digt lojal mot sin lilla skyddsling.
+Nattros vill göra sig ’vän’ med rollpersonerna, och erbjuder dem
+hennes och Kroles hjälp. Hon säger sig ha hört ett rykte om detglömda templet och på egen hand funnit dess läge. Hon ljugerlagom mycket om Kroles fantastiska styrka och sina egna färdig-heter i läkekonst. Om rollpersonerna vägrar slå följe kommer debåda filurerna att hålla sig i närheten av rollpersonerna för attutröna om de har framgång i sitt sökande. Nattros och Krolesplan är att utnyttja rollpersonerna, för att sedan använda sig aven osynlighetsring som Nattros stulit av trollkarlen Belkor Gulik(det är en lååång historia) och dra rollpersonerna vid näsan.
+JAKTEN PÅ NYCKELN
+Nu när templet lokaliserats märker rollpersonerna att de förmodligen behöver någon form
+av nyckel för att komma vidare. Jakten på nyckeln kan gå åt olika håll beroende på hurrollpersonerna resonerar. Troligt är att rollpersonerna ger sig av till Orakelklyftan för att
+konsultera Hon som ser allt, eller att de återvänder till Quilla för att konsultera De gamla.
+Och nu då?
+Viss frustration kommer onekligen att sprida sig bland rollper-sonerna när de märker att de inte kan ta sig in i templet. Trealternativ är mer troliga än andra:
+1. Rollpersonerna återvänder till Quilla för att rapportera till
+De gamla eller tala med Vitabrek.
+2. Rollpersonerna besöker oraklet (enbart om de hört ryktas
+om henne).
+3. Rollpersonerna ger upp.Spelledaren bör vara beredd på att rollpersonerna kan handla
+annorlunda. På sidan 206 i Spelledarens guide (Eon III) finnsgott om tips hur man kan omärkligt kan ’rädda’ ett äventyr.Tillbaka till Quilla
+De gamla blir modstulna när de får höra om det stängda temp-let, men erbjuder genast rollpersonerna ytterligare betalning(ett antal thaler om dagen) om de vill fortsätta stå till De gam-las tjänst. Några dagar förflyter när rollpersonerna antingen kanvila upp sig eller hjälpa till med efterforskningar. Sedan kon-taktas de återigen av herr Kandari som nu vill att rollpersonernaskall färdas till en plats som heter Orakelklyftan. Medan Degamla fortsätter sina undersökningar i de gamla skrifterna skallrollpersonerna besöka ett orakel och höra vad hon vet om denförsvunna nyckeln. De gamla är skeptiska huruvida detta besökverkligen kommer att ge något vettigt, men istället för att harollpersonerna drällande i Quilla (detta gäller speciellt om roll-personerna fördrivit tiden med att slå runt på stadens krogar) så
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 21
+
+--- Page 23 ---
+• 22 •DIAMANTÄPPLET SYLFENS VREDE
+tycker man att de lika gärna kan göra lite nytta för all den lön
+de har fått. Ett par kvällar på Quillas krogar kan också ge roll-personerna ryktet om oraklet, dock ur opålitliga män och kvin-nors munnar.  Jägaren Vitabrek kan inget mer säga än det somfinns beskrivet på sidan 15.
+Rykten om oraklet
+Vid Gröna flodens övre lopp finns en plats som kallasOrakelklyftan. Ryktena säger att det skall finnas en sierska därsom vet allting om det förflutna och om det som komma skall.Herr Vorsel har hört ryktena och kan i ren desperation föreslåett besök hos henne. Detta är emellertid något han helst und-viker – Herr Vorsel tror mest att oraklet är en saga, även ommånga återvänt från hennes boning med fantastiska historier attberätta och vissa med ödesdigra spådomar i bagaget.
+Om rollpersonerna ger upp
+Om spelledaren märker att rollpersonerna kört fast så till denmilda grad att de inte finner det lönt att fortsätta sökandet börspelledaren plocka fram sitt trumfkort – Västmarks mest ökändaspindelkult. Spindelkulten har haft ögonen på rollpersonernasedan deras nedstigning i Sänkan (via Eivinas kula, se sidan 25),och i ett obevakat ögonblick omringas rollpersonernas nattlä-ger (i vildmarken eller på ett värdshus) av maskerade kultister.Kvinnorna bär svarta huvor med hål för ögonen och är ikläddasvarta mantlar med underliga vita mönster. Ett slag motDjurlära kan avslöja att dessa mönster är typiska spindelteck-ningar, till exempel kors och symmetriska fläckmönster. En avkultisterna har en ring med vilken hon kan kontrollera enrödänkespindel. Rödänkespindelns gift är djupt sövande. Omkultisterna är diskreta, vilket de anstränger sig för att vara,kommer denna enda rödänkespindel att kunna slå ut hela grup-pen av rollpersoner. Om rollpersonerna skulle upptäcka farankommer kultisterna, beväpnade med fångstnät och dolkar ins-metade med rödänkegift, att göra sitt bästa för att övermannadem. Kultisterna försöker ta rollpersonerna levande till sin hög-borg i träsken, där de kastas i fängelsehålan. Se ’I kultisternasklor’ på sidan 26.
+Även om kultisterna misslyckas med att fånga in rollpersonerna
+så bör detta intermezzo ha tjänat spelledarens syfte – att ge roll-personerna ett nytt spår att börja nysta i.Vägen till Orakelklyftan
+Där Balvisfloden möter Gröna floden finns en liten väg somvindlar sig upp mot bergen i öster. Vägen följer Balvisflodendär den ringlar sig fram i botten av en klyfta, men stiger helatiden uppåt. Redan efter några kilometer befinner man sig merän hundra meter över floden där nere och ett fall torde varaödesdigert. Balvisfloden blir fort mycket strid och båtar kaninte seglas längre än en kilometer uppströms – sedan blir for-sen för stark. Klipporna är väldigt höga här, så det enda sättetatt ta sig upp på vägen ovan floden är att vända om till det ställedär floderna möts, eller bege sig uppför den branta klippväggenpå en vådlig klättring.
+Efter ungefär en mil krymper vägen till en stig och efter ytter-
+ligare någon mil kan rollpersonerna se floden försvinna inunder berget, långt nedanför. Stigen vindlar nu mycket brantuppför och vid tre tillfällen krävs lyckade slag mot Klättra innanrollpersonerna kan komma upp på den första fjällheden.Svårigheten är emellertid Mycket lätt (Ob1T6).
+Väl uppe på fjällheden kan rollpersonerna blicka ut över en
+fantastisk vy (förutsatt att det är någorlunda ljust ute och dess-utom någorlunda regn- och disfritt. I söder breder Västmark utsig: träsk, skogar och i fjärran det breda Takalorrsundet. Åtväster finns Gröna floden, nu som en smal blåsvart rand sombryter genom landskapet. I norr syns Istappsbergens tre sylvassatoppar sträcka sig mot himlen och i väster finns en vidsträcktfjällhed som tycks sluta i ytterligare stigningar upp mot en nyhed. Med ett lyckat slag mot SYN (Svårigheten är lätt (Ob2T6)under en dag med god sikt; Svår (Ob4T6) under en mycketregnig dag) kan rollpersonerna se en rökpelare (dagtid) eller ettsvagt ljus (nattetid) som stiger upp från den andra heden. Detär nästan en halv mil till källan för härden: oraklets koja!
+Oraklets koja
+Omgiven av fjällblomster och nästan övervuxen av lavar liggeren liten träkoja. Kojan är sammanbunden med rep och det ärett under att den inte blåst bort under något oväder på dennakarga hed. Från taket bolmar rök ut en öppen lucka. En rang-lig dörr är den enda synliga ingången. När rollpersonernanärmar sig möts de av Mortis och Mortimer som hälsar democh ber att få veta deras ärende. Om rollpersonerna vill träffaoraklet säger de båda att ett sådant möte är omöjligt, men attde kan föra rollpersonernas talan. Om rollpersonernas avsikterinte är fientliga bjuds de in i kojan av orakeltjänarna.Rollpersonerna bjuds vatten att dricka.
+Kojan är inte speciellt stor. Rummet är sparsamt möblerat: här
+finns två bäddar; en liten eldgrop; och en låg bänk belamradmed ett fyrfat, där fnöske pyr, ett knippe örter och en liten säckmed proviant. Bredvid bänken står en tunna med sotigt vatten,och invid den ligger en näverskopa. Vid kojans bortre väggfinns ett skynke som döljer ett inre ’rum’. Hela kojan stinkersvagt av exkrementer. SL: Örterna är torkat grenbingel (se
+Spelledarens guide (Eon III), sidan 91). Inuti Mortis fäll liggerden svarta spegeln.
+Bakom skynket finns en två meter djup grop, på vars botten
+oraklet håller till. Oraklet sitter kedjat. Här finns ingenting för-utom en skål med vatten och en hel del exkrementer. Stankenär avskyvärd.
+Rödänkegift
+Rödänkegift är ett snabbverkande sömnmedel som strykspå skarpa vapen. Så litet som en rispa i offrets hud, vilketlåter en knivsudd av saften komma i kontakt med blod-omloppet, innebär ofta att benen viker sig under offretoch sedan sover offret en djup sömn. Den klarvita saftenger +Ob6T6 poäng Långtidsutmattning vid fyra tillfällenmed en rundas mellanrum. Effekten kan halveras vid ettlyckat TÅL-slag. Om man påverkats av rödänkegift måsteman slå ett slag mot TÅL en gång varje runda (i fyra run-dor) med svårighet från utmattningskolumnen. Om sla-get misslyckas eller fumlas faller man i djup sömn iOb1T6+3 timmar.Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 22
+
+--- Page 24 ---
+• 23 •SYLFENS VREDE DIAMANTÄPPLET
+Väl inne i kojan berättar Mortis att oraklet, som de benämner
+Hon som ser allt men yppar smått, inte kunnat spå sedan mångamånvarv tillbaka. För att oraklet skall kunna spå behöver hontvå speglar: en svart och en vit. Mortis ansvarar för den svartaspegeln, medan Mortimer ansvarade för den vita. Mortimertappade spegeln, varvid en djup spricka uppstod i glaset.Spegeln är nu värdelös för oraklet.
+Om rollpersonerna vill bli spådda måste de uppsöka spegel-
+makaren. Denne har sin grotta längre norrut, vid Istappsberg-ens sydligaste utlöpare. Om rollpersonerna är villiga att skaffafram en ny spegel åt oraklet skall rollpersonerna bli spådda utanatt behöva göra det sedvanliga offret: att slita ut sina ögon sompris. (Ögonen äts sedan av oraklet.)
+Om rollpersonerna godtar villkoren gör sig Mortimer redo att
+visa dem vägen. Rollpersonerna får lova att inte yppa vem somskall ha spegeln, oavsett vilka trick spegelmakaren använder.Om spegelmakaren får veta vem som skall nyttja hans spegel ärallt förlorat. Mer vill orakeltjänarna inte avslöja.
+Mortis och Mortimer
+Mortis och Mortimer är två barn i tioårsåldern. De skullekunna vara tvillingar: båda har stora blå ögon, små näsor ochrunda ansikten. Mortis har långt svart hår och ringar av silver iöronen. Hon är klädd i en mörkbrun läderkolt och har ett repkring midjan. Mortimer har en smutsgul läderkolt och bär des-sutom en liten kniv i bältet. Han har liksom Mortis svart hår,men betydligt kortare.
+De båda är orakeltjänare. De föddes med oraklets märke och
+vandrade, oberoende av varandra, från Damarien för att söljasitt kall, ledda av ödets osynliga händer. De är bundna vid orak-let av gudomliga eller kanske demoniska krafter och kan inteförmå sig att gå längre än en dagsmarsch från kojan. Mäktigakrafter håller dem tillbaka.
+När de båda dör (och de kommer att dö samtidigt – sådant är
+ödet för orakeltjänarna) kommer de krafter som styr att sändanya orakeltjänare att ta deras plats.
+Hon som ser allt men yppar smått
+Hon som ser allt men yppar smått är en motbjudande varelsesom för mycket länge sedan dömdes till evig fördömelse och atti all evighet sia spådomar och besvara människors frågor om detfördolda. Varelsen har en gammal kvinnas huvud och över-kropp, men underkroppen liknar mer en snigels. Oraklet leverfjättrad i en grop bakom det magiska skynket i kojans inre.Hon är ljuskänslig och solljus är direkt dödande för henne. 
+Oraklet är flera hundra år gammalt och lär leva i hundratals år
+till, så länge hennes tjänare förser henne med vatten och småmatbitar. Hon kan inte kommunicera med någon annan änorakeltjänarna. De enda läten som kommer från henne är gurg-landen och bubblanden från diverse kroppsöppningar.
+Spådomar
+För att oraklet skall kunna spå måste hon använda sig av tvåspeglar: en vit och en svart. Oraklet får visuella hallucinationerav klärvoajant slag när hon tittar in i de båda speglarnas reflekt-erande glas. Spådomarna blir mycket precisa för oraklet, men
+då oraklet ofta vränger sina ord blir de sällan lätta att tyda.Ingen rollperson släpps bakom skynket. Alla spådomar återbe-rättas av Mortis eller Mortimer i exakt samma ’ord’ som orak-let använt.
+Rollpersonerna kan tänkas ha två frågor som rör äventyret: var
+finns det glömda templet och var finns nyckeln? Svaren pådessa båda frågor kan låta ungefär såhär:
+”Templet står i töcknig svacka, djupt belägen under spetsar. Åderns
+lopp skall följas bakvart: portar väntar, stängda, lyckta.”
+”Traktad nyckel hålles fången, spindelögon följer den. Platsen vaktar
+tjänarinnor: åtta ben och åtta kvinnor.”
+Det kan tänkas att rollpersonerna ställer andra frågor också –
+sådana som rör deras egna liv. Spelledaren kan då förbereda svari stil med ovan eller improvisera. Tänk bara på att hålla svarenså generella som möjligt. Oraklet mattas också ganska fort, såantalet frågor kan lätt bli begränsat.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 23
+
+--- Page 25 ---
+• 24 •DIAMANTÄPPLET SYLFENS VREDE
+Spegelmakarens grotta
+En dagsmarsch från oraklets koja, över fjällhedar och förbi
+klipputsprång, ligger Istappsbergens sydligaste utlöpare. Spegel-makarens grotta är belägen vid foten av bergen. Inga synligastigar finns, så en kort klättring måste göras innan man når upptill grottöppningen. Mortimer vägrar gå längre, märkbart rädd.
+Grottöppningen sträcker sig fyra meter över marken och blott-
+ar en gång som leder in i berget. Gången är mörk och de somsaknar mörkersyn behöver en fackla för att kunna ta sig framutan att snubbla på all den lösa sten som ligger spridd över grott-gångens golv. Gången kröker sig två gånger innan den mynnari en stor grottsal, kanske tio meter hög. I salens mitt sitter spe-gelmakaren – en stor, muskulös varelse som med grova nävarpolerar även den hårdaste sten till blank och slät yta. När (om)spegelmakaren upptäcker besökare reser han sig i sin fulla längdoch frågar med mullrande röst om besökarnas ärende.
+Om rollpersonerna säger att de vill ha en vit spegel kommer han
+att fråga vem som skall ha den. Bergstrollet gör sitt bästa för attluska sanningen ur rollpersonerna. Han ljuger för dem och sägeratt han har en ring som kan avslöja alla lögner; han säger att omde fortsätter ljuga om vem som skall ha spegeln skall han dräpadem (en bluff även det); han säger dessutom att oraklet är enhäxa och om de, kanhända, skulle ge henne spegeln så kommerde att förvandlas till grodor. Nå, vem är det som skall ha spegeln?
+Om rollpersonerna någon gång försäger sig eller svarar att
+oraklet skall ha spegeln kommer bergstrollet att slita upp sinhammare, krossa ett stort antal speglar i vrede och sedan ge sigpå rollpersonerna (om de är okloka nog att stå kvar). Orakletoch spegelmakaren är inga goda vänner. Om rollpersonernaflyr och sedan återvänder har bergstrollet glömt både dem,deras ärende och sitt lilla utbrott tidigare. Det enda spegelma-karen minns är sina speglar, och hur de tillverkas.
+Om bergstrollet till sist övertygas om att rollpersonerna inte
+skall ge spegeln till oraklet berättar han att vitsten finns nere ihålorna. De måste hämta den åt honom – själv är han för storför att kunna ta sig ned i gångarna.a. Spegelmakarens grotta . Spegelmakarens boning består av
+en enda grotta, stor som ett trevåningshus. Grottan är fylldav speglar; vissa svarta av polerad obsidian, andra av glas ellerspröd pärlemor. Speglarna har olika former och olikastorlek. På golvet ligger ett tiotal björnpälsar och diversestora verktyg. Ibland brinner här även ett fyrfat, stort som ettvagnshjul. Mot ena väggen står en otäckt stor stridshammarelutad. I taket hänger stalaktiter. SL: Speglarna är mästerligt
+gjorda och skulle alla inbringa ett pris på mellan 10 och 400thaler per styck. Spegelmakaren kommer att skydda sinadyrgripar med sitt liv. Trollets boning är högmagisk förpsykotropi. Detta har att göra med en händelse under detförra Mörkret, när bergsandarna höll stånd mot Världs-förgörarens makter i trakterna, sida vid sida med tiraker.Döende andar flydde till grottan och uppgick i berget.
+b. Gångarna . De kalla, mörka och fuktiga gångarna är endast
+ca 180 cm höga och vindlar sig ömsom uppåt, ömsomnedåt (se kartan). SL: Platserna som är utmärkta med kryss
+på kartan hyser fladdermöss som kastar sig ned moteventuella inkräktare. Alla som hamnar i en svärm medfladdermöss får 1T6 lyckade (höga) attacker emot sig sommåste undvikas eller pareras. Skadeverkan är ObH1T6–1.
+c. Vattengången . Den lägsta av gångarna slutar i en trång
+vattenfylld passage, endast ett antal handflator hög. Det äromöjligt att avgöra hur lång gången är, eller om den över-huvudtaget mynnar ut någonstans. SL: Den som vill simma
+igenom måste lyckas med ett slag mot Simma. Ett fummelinnebär att personen fastnat halvvägs och kan börja tadrunkningsskada.
+d. Vitstensgrottan . Denna grotta har alldeles klarvita, delvis
+genomskinliga väggar. SL: Stenen är hård, men med lämp-
+liga verktyg (hammare, svärd eller liknande) kan stora bitarhackas bort.
+Spegelmakaren
+Bergstrollet Wagazog är Västmarks och kanske hela Mundanasskickligaste spegelmakare. I sjutusen år har han arbetat medspeglar; härdat dem i eld och format dem med sina grova nävar.Han säljer sällan speglar, annat än till dvärgar från bergen ellerandra troll. Spegelmakaren föredrar att ge bort sina alster, utanatt ta annat betalt än ett och annat jaktbyte, eller någon litengentjänst. Hundratals år av vistelse i grottan har fått trolletssinne att förändras. Den vilda psykotropi som flyter innanförbergets väggar har gjort trollet mycket misstänksamt ochvrångt. Han hatar oraklet eftersom hon en gång bestal honompå två speglar: en svart och en vit. Psykotropin är också förklar-ingen till varför trollet fortfarande är vid liv efter alla dessa år.
+a.b.
+c.d.x
+xxDiamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 24
+
+--- Page 26 ---
+• 25 •SYLFENS VREDE DIAMANTÄPPLET
+Kulten
+Träskvedens spindelkult består av ett knappt femtiotal kultister
+under ledning av spindeljungfrun Eivina Vanaria. Åtta av dessaär stridstränade prästinnor (men räkna med att alla som kankommer att försvara sig själva och sin kult om nödvändigt),resten sysslar mest med jakt och samlande, de dagliga sysslornai bosättningen och tillsynen om barnen och de gamla. När roll-personerna anländer håller man som bäst på att tvätta kläder isjöns vatten. Kultisterna är som människor i Västmark är mest,dock automatiskt misstänksamma mot alla främlingar och för-stås starkt troende. De låter gärna Eivina föra dess talan. 
+Kulten är mycket gammal, förmodligen över tusen år. Spindel-
+kulten tillber gudinnan Arachna, en spindel med tusen ben somspunnit sitt nät sedan tidens födelse och som kommer att fort-sätta spinna tills tiden själv dör. Religionen är starkt regelstyrd,och varje otillåten förändring av Arachnas väv måste motver-kas med alla medel. Störandet av templet, och vad som därdväljes, är en sådan otillåten förändring. Öppnandet av templetkan i värsta fall kan leda till en försvagning av gudinnans makt(se vidare om detta i kommande delar av kampanjen Sylfensvrede) och spindeljungfrun är därför mån om att alla hot motfriden i Sänkan elimineras. 
+Typiska spindelkulter finns mer detaljerat beskrivna på sidorna
+39–40 i boken Religioner: Gudarnas kamp. Träskvedens spin-delkult är mycket lik moderkulten Arachnas folk.
+Bosättningen
+Kultmedlemmarna lever i hus som uppförts på pålar. I en leriginhägnad håller man svin, och en bit bort från husen finns ettdussin bikupor. Vid ett av husen står en vagn som används fören årlig resa till Quilla där man (så diskret som möjligt) inhand-lar sådant man inte kan skaffa själva. En oxe står tjudrad vid enpåle och tycks besväras svårt av moskiter. Den piskar oavbrutetmed svansen.
+Den sjunkna zikkuraten
+Spindelkultens tempel är en gammal zikkurat som till storadelar sjunkit i träsket, och som fortfarande sjunker ungefär endecimeter per år. Bara tre meter av den sticker upp ur sank-marken. I zikkuratens topp finns en öppning som leder in itemplets inre. Öppningen vaktas dag som natt av två stridsträn-ade prästinnor (se bilden på sidan 1). Zikkuratens tidiga histor-ia är okänd.
+Alla rum i zikkuraten (utom de vattenfyllda nivåerna och cell-
+en) är upplysta av antingen fyrfat eller facklor. Alla rum har gottom spindelväv i hörnen och taken. Kultmedlemmarna skyddasfrån eventuella giftspindlar av sin tro till Arachna.a. Hall . En trappa leder nedåt i rummets bortre ände.
+b. Mottagningsrum . Detta rum är sparsamt möblerat med
+en lång bänk.
+c. Trapphus . En lång spiraltrappa som leder nedåt.
+d. Kammare . Tomma kammare avsedda för meditation.
+e. Vapenförråd . Här finns läderrustningar, klubbor och ett
+fåtal armborst med tillhörande lod. Om kultisterna väntarstrid eller larmas kommer de att beväpna sig här.
+f. Spindeljungfruns kammare . Jungfruns kammare består av
+två rum: ett förrum och ett sovrum. I förrummet står en åtta-bent pall, en sarkofagliknande garderob och en låst kista.Sovrummet innehåller en enkel säng med svarta, vita och gråtäcken och lakan. Här finns också en liten bokhylla med etttjugotal volymer och skiftrullar, en låst kista och en staty aven naken kvinna med spindelhuvud. Vid sängen står ett lågtbord, på vilket en kristallkula vilar. SL: Spindeljungfrun har
+alla nycklar (till dörren och de två kistorna). Garderobeninnehåller svarta, vita och grå kläder och mässkrudar, alla till-hörande jungfrun. Kistan innehåller filtar, sängkläder och ettantal uppsättningar tunikor och underkläder. I bokhyllanfinns en tämligen nyskriven pergamentrulle som beskriverdet glömda templets exakta position i Sänkan. I kabinett-skåpet finns en svartbladig dolk, fem skototropiska kongelat ien påse, en uppstoppad spindel, en amulett i guld i form avett spindelhuvud (värde cirka 135 thaler) och en liten kistainnehållande 632 thaler. Dolken är magisk och gör +Ob1T6extra i Hugg- och Stickskada (demoniskt aggregat med effek-ten Skärpa). Kristallkulan kan användas för fjärrskådning ochär just nu ’inställd’ på det glömda templets portar.
+g. Cell . En tom cell, så när som på en del benrester. En ba-
+stant trädörr förhindrar fångar från att fly.SPINDELKULTENS BOSÄTTNING
+Mitt ute i Träskveden ligger den ökända Dimslöjornas sjö. Sjöns vatten tycks skifta i
+temperatur beroende på årstid, dock tvärtemot vad som är brukligt. Om vintern är vatt-net varmt och som sommaren kallt, vilket för med sig att ånga eller dimma ständigt höl-
+jer sjöns vatten i en vit mist. Invid sjön finns spindelkultens bosättning och några hundra meterbort ligger den sjunkna zikkurat som används som kultplats.
+a.
+översta våningen.näst översta våningen.
+tempelvåningenb.
+c.
+d. e.
+f. g. h.
+i. j.k.l.
+l.
+l.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 25
+
+--- Page 27 ---
+• 26 •DIAMANTÄPPLET SYLFENS VREDE
+h. Tortyrkammare . En kall kammare inredd med en bänk
+som offret kan spännas fast på. Här finns diverse redskapspeciellt gjorda för att få folk att tala, exempelvis tänger,vassa knivar, olika klämmor och skruvar, meterlånga nålarmed vasst skärande tråd och en otäckt kittlande gåsfjäder.
+i. Vaktrum . Inrett med ett bord och några stolar. På bordet
+står vanligen en tennkanna med vatten och ett par trämugg-ar. SL: Om kultisterna tagit fångar vaktas rummet ständigt
+av två prästinnor.
+j. Trapphus . En hall och ett trapphus som lyses upp av en
+stor ljuskrona av järn. Runt väggarna står statyer av naknakvinnor med spindelhuvuden. SL: Rummet, och framför-
+allt trappan, vaktas alltid av två prästinnor.
+k. Tempelsal . En stor sal vars bortre vägg domineras av ett
+podium, på vilket ett vackert marmoraltare står uppställt.Mot väggen bakom altaret finns tre stora statyer av naknakvinnor med spindelhuvuden och åtta långa spretandearmar eller ben. Till vänster från trappan sett finns träbänkarvända mot altaret och det stora sumpvattenfyllda hål somfinns i golvet på höger hand.
+l. Förråd . Dörrarna är låsta (spindeljungfrun har nyckeln). I
+förråden finns saker som används i kultens ceremonier, tillexempel mässhakar, kåpor, vaxljus, rökelser, olikfärgadeoljor och så vidare.
+Spindeljungfrun
+Spindeljungfrun är kultens högsta prästinna. Hon är lång (näst-an 185 cm) och blek och hennes hår är alldeles vitt. Anletsdrag-en är mjuka, men hennes ögon är svarta och hennes blick hård.Hon ser ut att vara i fyrtioårsåldern. Prästinnan bär en svartläderrustning och över denna en mörkgrå mantel dekoreradmed ett vitt kors. Runt halsen bär hon ett halsband spunnet avtråd från flera spindlar. Det är heligt och gör henne nästintill im-mun mot alla spindelgifter. I strid använder hon en vit benstav.Om rollpersonerna får en audiens med spindeljungfrun (endastmöjligt om rollpersonerna inte har blivit infångade, utan besö-ker bosättningen på eget bevåg) kommer hon att lyssna till
+deras ärende. Om nyckeln eller det glömda templet kommerpå tal försöker hon luska ut allt rollpersonerna vet om detta.Sedan går hon iväg för att ”hämta nyckeln”. I själva verket gerhon order till sina prästinnor att storma in i rummet och griparollpersonerna. Om kultisterna lyckas i sitt uppsåt: se ’I kultis-ternas klor’. Annars samlar spindeljungfrun de överlevandeprästinnorna i ett försvar av trapphuset (rum j), och själv gårhon ned i tempelsalen (rum k) för att tillsammans medArachnas dotter bevaka nyckeln.
+Arachnas dotter
+Arachnas dotter är en stor vattenspindel som lever i zikkuratenslägre nivåer, av vilka många är vattenfyllda. Arachnas dotterkommer när hennes mästarinna kallar. Hon använder hålet igolvet i tempelsalen som passage till sina domäner. Arachnasdotter har endast djurisk intelligens men lyder sin härskarinnasorder. När hon inte deltar i kusliga ceremonier så är hon kul-ten behjälplig med att spinna mycket starka rep av tjocka spin-deltrådar som kulten byter mot förnödenheter i Quilla.
+I kultisternas klor
+Om rollpersonerna infångas av spindelkulten kommer de attsättas i fängelsecellen (rum g) i väntan på att offras. Alla vapenoch all utrustning tas ifrån dem och placeras i vaktrummet (rumi). Spindeljungfrun kommer att välja ut den av rollpersonernasom ser bräckligast ut och eskorterad av kultister föra denne tilltortyrkammaren. Väl där kommer hon att låta kultisterna ’be-handla’ rollpersonen för att få reda på allt denne vet om temp-let, om de varit där och i sådana fall varför och på vems order.Senare kommer spindeljungfrun att tala om för rollpersonernaatt nyckeln de söker hålls i säkert förvar av kulten och att de al-drig kommer att få lägga sina smutsiga fingrar på den. Roll-personerna skall offras till Arachnas dotter. 
+Det finns (åtminstone) två sätt för rollpersonerna att komma ur
+fånghålan: dyrka upp låset (extremt svårt (Ob6T6) med otill-räckliga verktyg, såsom benbitar eller dylikt) eller anfalla de be-väpnade prästinnorna när de kommer för att sätta in mat.
+Nyckeln
+Eivina tror sig ha nyckeln till det glömda templet i säkert för-var i ett av förråden (rum l). Nyckeln har emellertid inga pla-ner på att förbli i spindelkultens ägo. För några timmar sedanförvandlade den sig till en orm (ja, du läste rätt!) och kröp ivägför att försöka fly. Nyckeln, vars egentliga namn är Molankenav Svarta Din och vars historia skall förtäljas i en senare del avSylfens vrede, kan inte röra sig särskilt långt utan hjälp ochväntar därför på ett lämpligt tillfälle att få krypa ned i en rygg-säck. Det råkar nu bli någon av rollpersonernas. Om rollper-sonerna skulle hamna i fånghålan kommer Molanken att för-vandla sig till en annan nyckel, låsa upp dörren och så omärk-ligt som möjligt leta sig in i fickorna på någon rollperson för attdär anta formen av nyckeln som leder till det glömda templet.Detta ger rollpersonerna ett ypperligt tillfälle att fly. Om spel-ledaren vill kan ha låta rollpersonerna få slå svåra (Ob4T6) slagmot SYN för att upptäcka när Molanken kommer krypande.Skeendet lär med rätta orsaka viss förvåning och förvirring. 
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 26
+
+--- Page 28 ---
+• 27 •SYLFENS VREDE DIAMANTÄPPLET
+Templets historia
+Det glömda templet restes för över sextusen år sedan för att ära
+Ramoras trenne gudar: Maar, Malik och Madura. Pestens,olyckans och ålderdomens gudar blidkades med både blodsoff-er och själsoffer. De stränga gudarna straffade alla som inte öd-mjukt krälade i dyn för dem.
+Området kring Sänkan var på det gamla Ramoras tid både
+bördigt och beboeligt, men i och med den jargiska invasionenav Ramora någon gång på 100-talet efter Daak försvann kult-en runt de trenne gudarna, och med den områdets befolkning.Ruinerna av den gamla provinsstaden Nazabe vilar idag djuptunder dy och slam – ett träsk som behärskas av krokodiler ochmonster. Det enda som återstår av den ramorianska kulturenkring Nazabe är templet. Spindelgudinnan Arachna blev efterkultens tillbakagång den nya härskarinnan över området. Detgamla templet föll i glömska.
+Det är få som har kunskap om templets historia idag, och spel-
+ledaren bör inte lämna ut annat än vaga antydningar eller frag-ment även för rollpersoner som lyckas väl med slag motHistoria och Ockultism.
+De övre kamrarna
+När någon sätter nyckeln i den triangulära fördjupningen ochvrider om öppnas portarna genast. Besökaren kan träda in itemplets första sal: ett trapprum som leder nedåt och ändar iytterligare en dörr med ett lås. Även denna kan öppnas mednyckeln. Ytterligare en port måste forceras innan rollpersoner-na kan stiga in i ett rektangulärt rum, inrett med bänkar utmedlångväggarna och en stor triptyk (tredelad altartavla) i kopparpå den bortre väggen. Triptyken har reliefer som i tur och ord-ning avbildar: en naken kvinna med paddansikte, som i sin enahand håller en orm och i den andra en bägare; en varelse meden människas överkropp men ett lejons underkropp som ihänderna håller ett svärd och (om man tittar noga) en tärning;och en mycket gammal kvinna, klädd i trasor och med en lie idubbelfattning. Mycket svåra (Ob5T6) slag mot Ockultism kanidentifiera dessa som Maar, Malik och Madura. Under triptyk-en finns en bred trappa som leder nedåt. Alla dessa rum liggergivetvis långt under markytan.
+Under hela vistelsen i de övre kamrarna kommer rollpersoner-
+na att kunna höra dova steg som närmar sig och sedan försvinn-er, känna kusligt kalla vinddrag och höra tunga andetag fråningenstans. Detta är Ödets tjänare (se ’Drömmen’ på sidan 19)som följer deras väg och iakttar dem i andeform. Den som möttÖdets tjänare i drömmen kan faktiskt få syn på varelsen, somen vag skepnad. Ingen annan kan se den, bara förnimma den.
+a. Sal . Trappan från hallen mynnar i ett rum inte helt olikt det
+första. Det rektangulära rummet har bänkar utmed lång-väggarna och i rummets bortre ände finns ett bord uppå
+vilket en stor keramikurna står uppställd. Det finns en(olåst) dörr i den södra väggen, vid sidan av bordet. På allaväggar finns väggmålningar som avbildar paddor, bedjandemänniskor, döda människor, sörjande och skrattande präst-innor. SL: Denna sal (och i synnerhet keramikurnan) an-
+vändes av de boende i området för att avlägga sina offer.Längst ner i urnan finns fortfarande 321 kopparmynt präg-lade i det gamla Ramora (omkring år 150 e.D.).
+b. Rum . Tomma rum. SL: Detta var tjänarbostäder, men ma-
+drasser och fällar är sedan länge bortruttnade.
+c. Kök . Detta rum är belamrat med hyllor och stenbänkar. På
+en av hyllorna ligger en handformad träsked. I golvet finnsen kokgrop, vid vars sida en stor bronskittel vilar. I taketfinns ett sotigt rökhål, som dock verkar vara igenvuxet (!)av slingerväxter, trädrötter och blek mossa. Det dropparvatten från hålet. SL: Att ta ur det smala hålet skulle inne-
+bära att dyvatten från träsken forsar in med oroväckandehastighet. Det tar emellertid några timmar för hela templetatt bli vattenfyllt.
+d. Förråd . Tomma amforor och ett och annat råttskelett vitt-
+nar om att detta rum en gång i tiden användes som skafferioch förråd. Det finns ett antal bronskittlar och pannor härinne, liksom trätallrikar och en del typiska köksredskap.
+e. Förråd . Detta skafferi rymmer ett tjugotal amforor och ler-
+krukor, staplade ovanpå varandra.
+f. Rum . En av dörrarna är upphuggen, den andra har svällt
+och fastnat i sin ram. Båda rummen innehåller en sängramoch ett litet stenbord. SL: Vitabrek högg upp den ena
+dörren under sitt ’besök’. Den andra dörren har BRYT 10.I det oplundrade rummet finns ett mycket gammalt spjutmed bronsspets, en tom hålig vattensäck och en skör krukainnehållande 435 ramorianska kopparmynt.
+g. Förråd . Detta rum innehåller multnande högar med tyg
+som faller sönder om någon försöker ta upp det. Bland alllump kan man dessutom finna ett tomt tio kannors lerkrus,flera par sandaler, en trasig spegel, en förseglad keramik-flaska och en öppen bronshjälm. SL: Hjälmen har BRYT
+14 och är värd drygt 300 thaler. Flaskan innehåller ett halvtkilo kalisalpeter som en gång var tänkt att användas i fram-ställning av rökelse.
+h. Trapphus . Här finns en trappa som leder ned till ett
+vattenfyllt rum. Man måste dyka för att kunna utforska det.SL: Rummet är tomt, så när som på en vattenlevande gift-
+orm som tagit sig in via en spricka i väggen. Rummet tjän-ade fordom som en fängelsehåla – hål efter bronskramporfinns fortfarande i en av väggarna. Vatten från träsket harläckt in och översvämmat rummet.DET GLÖMDA TEMPLET
+När rollpersonerna funnit nyckeln måste de än en gång färdas till templet på Sänkans bot-
+ten. Nu kan det vara dags att använda de händelser (se sidan 17) som ’blivit över’ för attkrydda resan. Bra är om någon av rollpersonerna haft händelsen ’Drömmen’. Väl nere i
+Sänkan kommer rollpersonerna att finna att templet nu kan öppnas, med hjälp av den urgamlanyckeln. Alla rum inuti templet är täckta av smuts, fukt och mögel. Rummen vilar i mörker. 
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 27
+
+--- Page 29 ---
+• 28 •DIAMANTÄPPLET SYLFENS VREDE
+i. Matsal . Samtliga väggar täcks av väggmålningar avbildande
+en svärm paddor som äter upp säd och sprider sjukdombland sörjande bönder. I mitten av rummet står ett lågtstenbord, och på golvet ligger multnande, trasiga kuddar(utan stoppning) med jämna mellanrum. I ett hörn liggerett brunt skelett, draperat i en trasig, ruttnande klädedräkt.I rummets nordöstra hörn står vad som ser ut att vara enpredikstol i sten och trä, upphöjd på ett meterhögt träpod-ium. SL: Podiet är mycket murket och bär inte vikten av
+en människa. Under plankorna finns ett gömsle där följandeföremål finns dolda: Ett antal maskstungna bönerullor varssidor förstörts av väta, dock hopsnörda av bronsringar(värda 5 thaler per styck), en vackert utsirad men illa åt-gången bönekäpp, två träfigurer och ett mänskligt kraniummed rubinögon (värda 250 thaler styck). Kraniet är i självaverket ett fjärde magnitudens vortex som används för atttransformera daimotropiska filament till nekrotropiska dito.
+j. Sal . En stor sal, mot vars östra vägg ett antal stenbänkrader
+står uppställda. Från den västra väggen löper stenhyllor utmot rummets mitt. På hyllorna ligger gamla sköra perga-ment, de flesta förstörda av fukt och ålderdom. SL: Denna
+sal har använts för utbildning av kultens troende, men ävensom bibliotek. Några av skriftrullarna har bevarats medhjälp av mäktiga alkemiska processer, bland annat ett antalceremonibeskrivningar (Välsignelse, Sköld mot vandödaoch Ingjuta mod) för en gammal religion – vilken religiondet rör sig om framgår inte (men spelledaren vet förstås attdet är de trenne gudarnas religion som avses). Rullorna ärskrivna på ramorianska med arkaiska runtecken (nej – ingenav rollpersonerna kan tyda detta språk, men De gamla kan-ske kan om de får tid på sig).
+k. Rum . Ett rum med tre stenbord. På en hylla ligger diverse
+föremål: en trasig lerflaska, en bronskniv, ett krus med för-torkade örter och en stor mängd ruttna tyglindor och spjäl-or. SL: Detta rum fungerade tidigare som sjukrum.
+l. Badhus . Nästan hela den södra väggen upptas av en djup
+bassäng, full med dyigt vatten. På väggen finns tre ansikts-masker i brons: ett paddansikte, ett djuriskt mansansikte ochett gammalt kvinnoansikte. Alla har stora hål till munnar,genom vilka en svaga strömmar av tjockt, lerklumpigt vatt-en passerar. Här finns även väggmålningar av badande mänoch kvinnor. SL: En gång användes rummet som kallbad-
+rum, men år utan underhåll har gjort att träsket nu tagit öv-er. Istället för porlande källvatten fylls rummet nu av slamoch dy utifrån. Avrinningen fungerar fortfarande skapligt,vilket ger upphov till att bassängens yta då och då krusaseller bubblar till; något som kan oroa paranoida rollpersoner.
+m. Cell . I rummet står tio stora kalebasskålar uppställda med
+jämna mellanrum, innehållande lump och svårt fuktskadadepergament. På golvet ligger bruna, intakta människoskelett.
+n. Allrum . Ett rum med gamla, svårt fuktskadade och mög-
+lade rester av mattor som enda inredning. På några av matt-orna ligger bruna, ruttnade och angripna skelett av män-niskor. Väggarna är våta och kalla. SL: Alla skatter (bland
+annat vackra ljusstakar) har blivit bortförda av Vitabrek.
+o. Vaktrum . Ett tomt rum. I södra väggen finns en öppning
+in till en rak trappa som leder nedåt, i exakt 333 trappsteg.SL: Trappan leder till rum q. Det var så här långt Vitabrek
+vågade sig.
+p. Vapenrum . Ett rum innehållande ett trasigt och bräckligt
+vapenställ med två bronssköldar, fyra korta och slöa brons-svärd, åtta stridsklubbor med huvud av brons och en ansen-lig hög med slungstenar. Det finns inga spår av några slung-or. SL: Dörren hit in är låst och låset sönderärgat (och kan
+alltså inte dyrkas). Den stadiga dörren har BRYT 15. Vap-nens totala värde uppgår till 5.100 thaler, och vapenskattenstotala vikt är ungefär 30 kg. 
+De lägre kamrarna
+De lägre kamrarna är belägna mellan 50 och 100 meter underdet övriga templet. Stenväggarna och taken har ersatts med kallberggrund, och rummen är skrovliga och illa slipade. Man fårkänslan av att befinna sig någon slags grottor. Trappan frånvaktrummet mynnar i en stor träport. Porten har svällt och kanendast pressas upp av en sammanlagd Styrka på 60 eller mer(maximalt fem personer kan samtidigt effektivt trycka på dör-ren). Porten har BRYT 20 och är minst sagt svårforcerad.
+q. Hall . Ett rum med tre dörrar, en stor bronsport i söder och
+två mindre bronsdörrar till höger och vänster. Bronsportenflankeras av två vittrade statyer, föreställande män med
+a.b.
+c.
+d.
+e.f. g.
+h.
+i.j. k.
+l.
+m. n.o. p.
+q.r.
+s.De övre kamrarnaDe lägre kamrarnaDet glömda templet
+t.u.b.b.
+b.f.
+m.
+NDiamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 28
+
+--- Page 30 ---
+• 29 •SYLFENS VREDE DIAMANTÄPPLET
+paddhuvuden och med svärd i händerna. Porten har en
+slags mekanism bestående av tre triangulära bronsplattor,fästa ovanpå varandra och ställda i samma utgångsläge medbasen nedåt. SL: Plattorna kan snurras oberoende av var-
+andra runt sin egen axel. Om de ställs in så att de bildar enniouddig stjärna och lämnas så i knappa fem sekunderrasslar det till i portspelet från rummet intill, och sedan gårportarna sakta upp. Bronsportarna har annars BRYT 36.
+r. Kammare . Rummet innehåller en sängram, tre brons-
+krukor och en piedestal. Piedestalen håller en bokrulle meden svag bläckmålning av en man: korthårig och med skarpnäsa och en tom ögonhåla. På golvet ligger ett brunt män-niskoskelett. SL: Detta är den gamle översteprästens kam-
+mare. Porträttet är ett självporträtt som den gamle överste-prästen gjorde när han var döende av hunger nere i detnästintill övergivna templet. På baksidan av pergamentetfinns en teckning av tre trianglar lagda ovanpå varandra –de bildar en niouddig stjärna. I en av krukorna finns entrögflytande blodröd vätska – fyra biotropiska kongelat! Iden andra krukan finns 624 ramorianska kopparmynt och 3ramorianska guldmynt. Den tredje krukan är tom.
+s. Förråd . Ett rum som innehåller högar av lump, tydligen en
+gång fina kläder med tanke på de rester av guld- och silver-tråd som löper genom det maskätna tyget.
+t. Tempelsal . Bakom bronsportarna sträcker en jättelik
+tempelsal ut sig, där stengolvet och väggarna är alldelesjämnt slipade. Det finns ingen möjlighet att se tydligt ändabort till den bortre sidan av salen, men i mörkret syns ändåen litet svagt ljussken. Väggarna, om någon lyser upp dem,syns vara täckta av väggmålningar som avbildar människorsom tillber stora krönta paddvarelser, paddor som äter avmänniskokroppar och hela härar som går under i brinnandeeldhav eller städer som raseras av vattenvågor. Taket hållsupp av grova, grönaktiga stenpelare. I mitten av salen finnsen underlig teckning i salsgolvet. Den tycks bestå av tre tri-anglar målade över varandra med mörkgul färg. Mönstretsom formas påminner om en niouddig stjärna. Vid det myst-iska tecknet syns ljuset från den bortre väggen starkare – detemanerar från diamantäpplet som vilar på en grön stenpied-estal! SL: När rollpersonerna når så långt fram som till stjärn-
+an (eller i nivå med densamma) aktiveras paddmumierna, serubrikerna ’Mumierna’ och ’Stölden’. I salens bortre ändefinns en dörröppning som leder in till skattkammaren.
+u. Skattkammaren . Bakom den tomma dörröppningen
+finns ett litet fyrkantigt rum, på vars golv man kan finnaspår av multnade tygrester; en gång kanske de var mattor.Bortre änden av rummet är alldeles vått, då det tycks sippravatten från taket. Det finns ett antal tomma fyrfat i rummet,sotiga och ärgade. Utspridd på golvet ligger dock en fan-tastisk skatt: kopparmynt och bägare, skålar och lergods,ljusstakar och ceremoniföremål. SL: Skatten har ett totalt
+värde av minst 200 ashariska guldmarker, men är ganskaskrymmande. Allt som allt väger skatten ca 100 kg. Det ärupp till spelledaren att bestämma skattens sammansättningmer detaljerat om nödvändigt. Eventuellt kan det finnas etteller ett par magiska föremål eller kongelat bland skatternaockså, framförallt hydrotropiska sådana. Spelledaren bördock addera maximalt ett eller två sådana till skatten.Mumierna
+För mycket länge sedan levde en slags paddvarelser i Västmarksträsk. Varelserna, som var besläktade med ödlemännen, ärsedan länge utdöda, och de sista levande individerna balsamera-des av de trenne gudarnas präster för att fungera som vandödatempelvakter. När någon träder in i tempelsalen (rum t) kom-mer dessa varelser som lurar i skuggorna i bortre delen av salenatt anfalla skoningslöst. De är två till antalet, men om spelled-aren vill kan han anpassa deras antal till allt mellan en och femstycken, beroende på rollpersonernas stridsskicklighet.
+Mumierna är stora och kraftiga, men dess groteska apparitioner
+är delvis dolda av de lindor som omvärver de balsameradekropparna och dessutom rör de sig i en isande vitgrå dimmasom tycks emanera från deras kroppar. (Se bilden på baksidanav boken.) De rör sig vigt och kan kasta sig över rollpersonernamed tyngd och målmedvetenhet: deras enda uppgift är attdräpa inkräktarna! De svingar tunga storsvärd av brons.
+Stölden
+Oavsett om rollpersonerna slagit följe med Nattros eller intekommer följande dramatiska händelser att utspelas. Händelsersom kan göra rollpersonerna till huvudpersoner i en kampmellan mäktiga väsen, och föremål för Sylfens vrede.
+Om rollpersonerna slagit följe med Nattros : När striden
+rasar som hetast använder sig Nattros av sin osynlighetsring.Hon stjäl diamantäpplet och lägger det i sin väska. Detta gårmycket fort – i ena stunden finns ädelstenen där, i nästa stundär den uppslukad. De som är inblandade i striden mot padd-mumierna eller befinner sig i mumiernas magiska dimma kom-mer inte att märka stölden innan det är för sent. Nattros flyrsedan ut ur templet. När hon springer förbi Krole gör honhonom uppmärksam på att det är dags att dra sin kos. Krolemåttar ett sista hugg med flatsidan av svärdet, inte mot varelsenutan mot ryggen på en av rollpersonerna. Han flyr sedan till-sammans med den fortfarande osynliga misslan mot friheten.Kuppen är förstås noga planerad.
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 29
+
+--- Page 31 ---
+• 30 •DIAMANTÄPPLET SYLFENS VREDE
+Om rollpersonerna inte slagit följe med Nattros : Unge-
+fär som ovan, men misslan och Krole har då istället smugit efterrollpersonerna ned i templet. Nattros har använt sin osynlig-hetsring för att undgå upptäckt, och när rollpersonerna är sommest upptagna med att bekämpa paddmumierna genomförmisslan sin fräcka stöld. Krole väntar utanför i hallen, redo atttäcka misslans reträtt.
+När Nattros genomfört stölden skyndar hon ut ur salen och
+sluter bronsportarna utifrån med hjälp av det mekaniska låset.Rollpersonerna är nu fångar i den stora salen! Nattros vidtarsedan ännu fler försiktighetsåtgärder för att rollpersonerna inteskall kunna förfölja henne och Krole. Exempelvis sätter honrollpersonernas eventuella riddjur i sken och förstör proviant.
+Det finns förstås en chans att rollpersonerna lyckas grusa de två
+gynnarnas planer, eller att Nattros av någon anledning är dödeller förhindrad att närvara (placerad i häktet?). I sådana fall ärrollpersonerna att gratulera. Om de nu lyckas besegra padd-mumierna vill säga.   
+Diamantäpplet
+Det finns alltså en möjlighet att rollpersonerna får lägga sinasmutsiga plundrarfingrar runt diamantäpplet, även om det trol-igaste är att diamanten ryckts bort under näsan på dem. Dia-manten är verkligen stor som ett äpple och är förstås i det när-maste ovärderlig. Rollpersonerna bör nu så fort som möjligtförsöka få diamanten till De gamla i Quilla, som avtalat. 
+Om rollpersonerna skulle besluta sig för att behålla äpplet har
+de knappast något för det. Det kommer inte att gå att sälja medtanke på att ingen, kanske med undantag för cirefaliernas ärke-furst, har råd att köpa det. Tjuvar kommer utan tvekan attflockas runt rollpersonerna som flugor runt ruttnade lik. Des-sutom får rollpersonerna De gamlas vrede över sig (se ’Girig-hetens makt’). I del 2 av Sylfens vrede kommer diamantäppletdessutom att förändras på det mest märkliga sätt...
+Att ta sig ut
+Troligtvis är rollpersonerna instängda i templet och måste för-söka finna en väg ut. Kanske kan de med stor möda slå inbronsportarna (BRYT 36), men annars står nog deras endahopp till att försöka öppna dem inifrån. Portspelet, stora brons-lod som synligt hänger i kättingar på insidan av den västraväggen, kan justeras för att dörrarna ska svänga upp inifrån. Omnågon hänger i dem, och ytterligare någon eller några tar spjärnvid portarna och försöker slita, kan portarna öppnas en liten bitåt gången. För varje tio minuter mekanismen bearbetas öppnasspringan mellan portarna ca en centimeter.
+Stjärnhimlen
+Första natten efter att diamantäpplet flyttats från templet kom-mer rollpersonerna (och många med dem) att kunna se någon-ting underligt på himlavalvet. En av stjärnorna i den svagt lys-ande stjärnbilden Sylfen lyser nu med ett blekt rödaktigt sken.Vad detta betyder vet ingen vid det här laget, och gemene mantar inte speciellt stor notis om detta. I lärda kretsar väcksemellertid vissa orostankar till liv, särskilt inom spindelkulternaoch hos dödsguden Dibuks högsta prästerskap.Till Quilla
+Om rollpersonerna återvänder till Quilla blir De gamla anting-en nöjda över äpplets hembringande eller besvikna över att dia-mantäpplet undsluppit dem. Det sistnämnda torde vara det tro-ligaste, men De gamla tröstar sig ändå med de skatter som roll-personerna för med sig. Rollpersonerna belönas enligt avtalet.Om det behövs fler vändor till Sänkan för att bärga mer skatt-er kommer De gamla att ta hand om detta, med eller utan roll-personernas hjälp. Om diamantäpplet stulits av Nattros (ochrollpersonerna berättar detta) kommer De gamla genom sinakontakter snart att få reda på att Nattros passerat staden straxföre rollpersonernas hemkomst. Hon steg ombord på ett skeppsöderut mot Rampor. Herr Kandari betalar rollpersonerna braom de åtar sig att förfölja misslan. Detta äventyr (och mycketannat) beskrivs i del 2 av Sylfens vrede.
+Herr Vorsel kommer att stanna med De gamla. Han kommer
+att leda eventuella nya expeditioner upp till Sänkan och temp-let. Nattros och Krole kommer, om de stulit äpplet, att för-svinna med båt med sikte på först Rampor och sedanMelorion, med avsikt att sälja diamantäpplet dyrt. Detta kom-mer dock inte att lyckas.
+Girighetens makt
+Det finns förstås en möjlighet att rollpersonerna väljer attbehålla skatterna de funnit i templet och aldrig mer sätta sin foti Quilla. Detta innebär problem för den eller de som rekom-menderade rollpersonerna för sällskapet, och det innebär ocksåatt denne måste lösa problemet – i annat fall kommer han atthudflås och hans skinn att beredas till pärmmaterial för Degamlas luntor. Den här personen kommer att göra allt för att fåtag på rollpersonerna och övertala dem att ge upp sitt dumdrist-iga bedrägeriförsök, om rollpersonerna hyser några som helstkänslor för honom bör de foga sig. Rollpersonerna kommerdessutom garanterat att få en och annan prisjägare efter sig.Spelledaren kan då på ett eller annat sätt ’arrangera’ så att roll-personerna så småningom hamnar i Rampor, där del två avSylfens vrede kommer att utspela sig.
+Sylfens vrede
+Kampanjen Sylfens vrede fortsätter med att rollpersonerna nårRampor. De har huvudsakligen två skäl att bege sig dit. För detförsta pekar alla tecken (läs värdshusvärdars upplysningar ochhamnarbetares vittnesbörd) på att tjuven/tjuvarna gett sig avmed båt mot Rampor och för det andra lägger de flesta fartygtill i Rampor innan de lämnar Västmark, vilket ofrivilligt förrollpersonerna till huvudstaden om de vill lämna landet efter ettfullgjort uppdrag. Spelledaren kan även tänka ut andra lockbe-ten för rollpersonerna att färdas till Rampor – ju förr destobättre. Om rollpersonerna envisas med att ta vägen över ber-gen eller dra norrut kan en elak spelledare alltid se till att derashästar dräps av troll eller skrämmas lite med rykten om tirakeroch vrakher. Det är emellertid ingen katastrof om rollperso-nerna drar åstad – det finns möjlighet för spelledaren att ledaandra äventyr innan del 2 i Sylfens Vrede. Rollpersonernakommer ändå aldrig att hinna upp de eventuella tjuvarna, ävenom de kommer att mötas igen långt senare i kampanjen, mendet är en annan historia...Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 30
+
+--- Page 32 ---
+• 31 •SYLFENS VREDE DIAMANTÄPPLET
+NATTROS – STY 5, TÅL 6, RÖR 15, PER 16, PSY 17, VIL 15, BIL 13, SYN 11, HÖR 16.
+Lojalitet 7 (nyckfull), Heder 7 (ohederlig), Amor 10, Aggression 8, Tro 5 (ateist), Generositet 10, Rykte 5, Tur 11, Resurser 5 .
+Förflyttning 7 meter/runda, BF 5 kg, UK 5 rutor, Chockvärde 8, Skadetålighet 5 rutor, VINIT 6, Insikt 5.Dolk (10), ObS2T6+2, Bryt(5), SI(1/2). Undvika 13. Rustning : Ingen.
+Färdigheter : Ashariska 17, Dolk 10, Fingerfärdighet 15, Gömma 17, Klättra 10, Skumraskaffärer 11, Skådespel 16, Smyga 18, Stridsvana 5,
+Undvika 13, Värdera 13, Övertala 16.
+KROLE – STY 21, TÅL 18, RÖR 14, PER 11, PSY 7, VIL 17, BIL 6, SYN 14, HÖR 13.Lojalitet 16 (Nattros), Heder 9, Amor 12, Aggression 11, Tro 10, Generositet 11, Rykte 7, Tur 11, Resurser 3.Förflyttning 10 meter/runda, BF 19 kg, UK 8 rutor, Chockvärde 18, Skadetålighet 8 rutor, VINIT 11, Insikt 10.Kraggsvärd (18), Ob7T6, Bryt(13), SI(4/2). Undvika 16.
+Rustning : Kort fjällskjorta [H10, K8, S6] täcker 4–7, 14–18. Generellt: [H10, K8, S6].
+Färdigheter : Ashariska 7, Fiske 7, Gömma 14, Jakt 13, Klättra 16, Marsch 18, Smyga 16, Stridsvana 15, Svärd (kraggsvärd) 17, Undvika 16.
+HERR VORSEL AV RAMPOR – STY 11, TÅL 11, RÖR 10, PER 12, PSY 13, VIL 12, BIL 17, SYN 6, HÖR 8.
+Lojalitet 15 (de gamla), Heder 12, Amor 9, Aggression 8, Tro 10, Generositet 9, Rykte 7, Tur 11, Resurser 12.Förflyttning 7 meter/runda, BF 11 kg, UK 5 rutor, Chockvärde 11, Skadetålighet 6 rutor, VINIT 5, Insikt 4.Trästav (9), ObK2T6+2, Bryt(7), SI(3/4). Undvika 9. Rustning : Ingen.
+Färdigheter : Ashariska 15, Alkemi 9, Historia 12, Jargisk skrift 17, Ockultism 13, Stav 9, Stridsvana 5, Teoretisk magi 18, Undvika 9.
+SPEGELMÄSTAREN – STY 65, TÅL 38, RÖR 12, PER 12, PSY 16, VIL 6, BIL , SYN 6, HÖR 12.
+Förflyttning 15 m/runda, BF 51 kg, UK 9, Chockvärde 36, Skadetålighet 8 rutor, VINIT 8, Insikt 7.Stor stridshammare (10), ObK11T6+3, Bryt(18), SI(4/1).
+Rustning : Hud [H8, K9, S8] täcker alla kroppsdelar. Generellt: [H8, K9, S8].
+Färdigheter : Ashariska 10, Bergskunskap 23, Klubba 10, Sakhra 16, Smide 15, Spegelmakare 26, Stridsvana 10.
+SPINDELJUNGFRUN – STY 11, TÅL 14, RÖR 12, PER 12, PSY 17, VIL 19, BIL 18, SYN 12, HÖR 9.
+Lojalitet 17 (Arachna), Heder 10, Amor 4 (celibat), Aggression 7 (beräknande), Tro 17 (Arachna), Generositet 6 (misstänksam), R ykte 10, Tur
+11, Resurser 13, Qadosh 14.Förflyttning 9 m/runda, BF 12 kg, UK 8, Chockvärde 14, Skadetålighet 6 rutor, VINIT 9, Insikt 8.Benstav (13), ObK2T6+2, Bryt(5), SI(3/4). Undvika 13.
+Rustning : Läder [H3, K4, S3] täcker 4–7, 14–18. Generellt: [H3, K4, S3].
+Färdigheter : Ashariska 17, Ceremoni 18, Historia 14, Jargisk skrift 15, Ledarskap 18, Ockultism 18, Sjunga 16, Stav 13, Stridsvana 12, Und vika
+13. Ceremonier : Percunctor, Spindelhamn, alla ceremonier på sidan 155 i Spelledarens guide (Eon III).
+Viktig utrustning : Spindeljungfrun har en liten pärla med vilken hon kan kontrollera spindlar; även Arachnas dotter. Pärlan kan endast använ-
+das av spindeljungfrun.
+ARACHNAS DOTTER – STY 34, TÅL 28, RÖR 16, PSY (10), VIL 12, VÄR 14.Förflyttning 18 meter/runda, BF 62 kg, UK 10 rutor, Chockvärde 24, Skadetålighet 9 rutor, VINIT 11, Insikt 9.Bett (14), ObH3T6, Bryt(–), SI(1/1). Bett som penetrerar pansar ger +Ob1T6 Smärta varje runda under loppet av tio rundor. Undvika 12.
+Rustning : Hård hud [H5, K6, S5] täcker fram och bakkropp. Hårt skal [H9, K8, S8] täcker benen. Generellt: [H5, K6, S5].
+Färdigheter : Klättra 15, Simma 15, Smyga 12, Stridsvana 15, Söka 15, Överlevnad 12.
+PADDMUMIERNA [Rang 7] – STY 21, TÅL 11, RÖR 9, PSY (7), SYN 12, HÖR 12.
+Förflyttning 7 m/runda, BF 16 kg, Chockvärde 16, Skadetålighet 7 rutor, VINIT 8, Insikt 7.Storsvärd av brons (12), ObH5T6, Bryt(10), SI(4/3). Undvika 12.
+Rustning : Ingen. Lindorna gör dem däremot extra ömtåliga för eldattacker; antändningssvårighet (Ob3T6).
+Färdigheter : Storsvärd 12, Stridsvana 12, Undvika 12. Nekrotropiska förmågor : Sjukdom (om paddmumien vidrör en rollperson skall denne
+slå ett lätt (Ob2T6) slag mot TÅL. Misslyckas slaget har denne smittats med blodkoppor.) Underjordens dimma (Den vandöde omges av en vit-
+grå isande dimma från underjorden. Alla som kommer in i dimman har en nivå svårare (+Ob1T6) på alla stridshandlingar. Dimman 14  m radie.
+TYPISK BUSE ELLER KOLARE – STY 13, TÅL 13, RÖR 11, PER 8, PSY 7, VIL 11, BIL 6, SYN 10, HÖR 10.
+Förflyttning 8 m/runda, BF 13 kg, UK 6, Chockvärde 12, Skadetålighet 6 rutor, VINIT 5, Insikt 4.Klubba (10), ObK2T6+1, Bryt(8), SI(2/2). Slag (12), ObK1T6+2, Bryt(–), SI(1/2). Vedyxa (10), ObH3T6, Bryt(9), SI(2/2). Undvika 10.
+Rustning : Ingen.
+Färdigheter : Ashariska 8, Fingerfärdighet 8, Gömma 10, Låsdyrkning* 10, Skumraskaffärer* 11, Smyga 11, Spel & Dobbel 10, Stridsvana 5,
+Supa 12, Söka 10, Värdera 10. Kolarförmannen Sote har även färdigheten Ledarskap 12. * Kolarna saknar dessa färdigheter men har istället Kolare 12 och Yxa 10.
+TYPISK PRÄSTINNA – STY 9, TÅL 11, RÖR 13, PER 13, PSY 13, VIL 12, BIL 12, SYN 11, HÖR 11.Förflyttning 8 m/runda, BF 10 kg, UK 5, Chockvärde 10, Skadetålighet 6 rutor, VINIT 8, Insikt 7.Kortsvärd (12), ObS3T6, Bryt(14), SI(2/3). Undvika 13.
+Rustning : Läder [H3, K4, S3] täcker 4–7, 14–18. Generellt: [H3, K4, S3].
+Färdigheter : Ashariska 15, Ceremoni 12, Historia 12, Jargisk skrift 13, Ledarskap 11, Ockultism 13, Sjunga 13, Stridsvana 10, Svärd 12,
+Undvika 13. Ceremonier : Percunctor, Spindelhamn, alla ceremonier på sidan 155 i Spelledarens guide (Eon III).
+Diamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 31
+
+--- Page 33 ---
+• 32 •DIAMANTÄPPLET SYLFENS VREDE
+TYPISK TRÄSKPIRAT – STY 12, TÅL 13, RÖR 13, PER 8, PSY 8, VIL 11, BIL 7, SYN 11, HÖR 11.
+Lojalitet 11, Heder 7 (skurk), Amor 12, Aggression 13, Tro 8, Generositet 7 (plundrare), Rykte 5, Tur 11, Resurser 7.Förflyttning 9 m/runda, BF 12 kg, UK 6, Chockvärde 12, Skadetålighet 6 rutor, VINIT 8, Insikt 6.Handyxa (12), ObH2T6+2, Bryt(9), SI(2/2). Kortbåge (12), [5-15-50-125m], ObS3T6+2, ObS3T6, ObS2T6, Ob1T6+2.
+Liten rundsköld (12), Bryt(14). Undvika 10.
+Rustning : Läder [H3, K4, S3] täcker 4–7, 14–18. Generellt: [H3, K4, S3].
+Färdigheter : Ashariska 9, Båge 12, Simma 12, Sjömanskap 12, Slagsmål 10, Speja 10, Stridsvana 10, Undvika 10, Yxa 12.
+TYPISK KROKODIL – STY 25, TÅL 15, RÖR 14, PSY (3), VIL 12, SYN 12, HÖR 6.
+Förflyttning 9 meter/runda, BF 20 kg, UK 6 rutor, Chockvärde 17, Skadetålighet 9 rutor, VINIT 10, Insikt 8.Bett (14), ObH5T6, Bryt(–), SI(2/2). Svanssnärt (14), ObK3T6, Bryt(–), SI(1/1).
+Rustning (generellt) : Hård hud [H5, K6, S5].
+Färdigheter: Jakt 14, Simma 14, Stridsvana 14.
+KÖTTÄTANDE KLÄNGVÄXTER – STY 6, TÅL 6, RÖR 10, PSY (2), VIL 16, KÄN 12.Förflyttning 0 m/runda, BF 6 kg, UK 5, Chockvärde 9, Skadetålighet 5 rutor, VINIT 8, Insikt 7.Greppa (9). Dess 1T10 långa slingrande rankor till armar gör Ob1T6/Ob1T6/– i brännskada enligt reglerna på sidan 66 i Spelledarens Gui de
+(Eon III). Bett (8), ObH2T6–1, Bryt(–), SI(1/2).
+Rustning (generellt) : Hård bark [H4, K5, S4]. Färdigheter : Stridsvana 12.
+TYPISKT SPINDELTROLL – STY 27, TÅL 18, RÖR 14, PSY 8, VIL 11, SYN 14, HÖR 11.
+Förflyttning 10 m/runda, BF 22 kg, UK 7, Chockvärde 18, Skadetålighet 8 rutor, VINIT 9, Insikt 7.Klor (12), ObH4T6, SI(2/2). Bett (10), ObH5T6, SI(2/2).
+Rustning (generellt) : Mycket seg hud [H8, K6, S7].
+Färdigheter : Gömma 16, Jakt 17, Simma 18, Smyga 16, Spåra 16, Speja 16, Stridsvana 11, Överlevnad 14.
+TYPISK TIRAK I TRÄSKEN – STY 15, TÅL 16, RÖR 13, PER 6, PSY 7, VIL 11, BIL 6, SYN 11, HÖR 11.
+Förflyttning 9 meter/runda, BF 15 kg, UK 10 rutor, Chockvärde 14, Skadetålighet 7 rutor, VINIT 9, Insikt 8, Qadosh 1.Gûrdersvärd (12), ObSOb3T6+1, Bryt(13), SI(2/3). Liten rundsköld (10), Bryt(14). Undvika 10.
+Rustning : Bokklath [H6, K5, S3] täcker 4–5, 14–15. Generellt: [H6, K5, S3].
+Färdigheter : Jakt 12, Sköld 10, Slagsmål 13, Smyga 12, Spåra 12, Speja 10, Stridsvana 13, Svärd 12, Undvika 10, Överlevnad 13. Tirakernas
+schaman har även färdigheterna Andeförnimmelse 16 och Schamanism 16.
+Ramorianska mynt
+Det ramorianska guldmyntet har en triangel på ena sidan
+och ett ansikte på den andra som avbildar den härskaresom styrde landet på den tid som myntet präglades. Guld-myntet väger 16 gram och är värt 169 silver. En samlarekan vara beredd att betala det dubbla för myntet.
+Kopparmynten har olika vikter och former, men medel-
+myntet kan sägas motsvara ett vanligt kopparmynt i viktoch värde; ungefär 0,7 gram och 1/10 silver alltså. Ensamlare kan dock vara beredd att betala mer än det tio-dubbla för myntet.
+Herr Kandaris anteckningarVitabreks kartaDiamantäpplet KLUMP.qxd  04-11-05  12.43  Sida 32
+

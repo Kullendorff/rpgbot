@@ -1,0 +1,14 @@
+Utmattning avser hur trött, stressad och jagad en rollperson är. Varje gång rollpersonen utför en handling, springer eller spurtar så blir denne utmattad. Varje poäng utmattning markeras med ett kryss i utmattningssektionen. Tabell R2-40 sammanfattar. Hur utmattning fungerar beskrivs i detalj på sidan 74. Varje anfallshandling eller försvarshandling som en rollperson utför ger en poäng (+1) utmattning. Om rollpersonen utför flera handlingar i en och samma runda så får rollpersonen alltså flera poäng utmattning i en och samma runda. Observera att även avståndsanfall, att dra vapen, och resa sig ger utmattningskryss, då det är handlingar. Varje förflyttningsfas som rollpersonen springer så får rollpersonen en poäng (+1) utmattning. Om rollpersonen spurtar så får rollpersonen i stället två poäng (+2) utmattning. Övriga typer av förflyttning ger ingen utmattning. Visst agerande kan medföra att utmattningen dubblas. Exempel på detta är raserianfall eller stormanfall. Det innebär att varje gång rollpersonen drabbas av nya utmattningskryss så dubblas antalet kryss.
+
+Anfallshandling* +1
+Försvarshandling* +1
+Springa +1
+Spurta +2
+*Om man gör flera handlingar i en runda får man utmattning
+från varje handling.
+**Om man är drabbad av dubblerade utmattningsförluster så
+får man dubbelt så många kryss varje gång man erhåller ett
+nytt utmattningskryss.
+
+Exempel:
+Jac springer i varje förflyttningsfas under 15 rundor. Han har då fått 15 poäng utmattning. Därefter börjar Jac spurta – något som han håller på med i fyra rundor vilket ger honom ytterligare 8 poäng utmattning. Jac har nu totalt 23 kryss i utmattningssektionen. Han når fram till en fiende och gör ett stormanfall (som dubblar utmattningsförlusten under denna rundas närstrids fas). Jac vinner initiativet och utför två anfall, vilket ökar utmattningen med (12)+(12)=4 kryss, till totalt 27 kryss

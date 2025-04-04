@@ -1,0 +1,3 @@
+Amputationsrisk (‘Amp’) 
+Huggskador som medför allvarliga skador kan ge att en kroppsdel kapas, detta kallas att den amputeras. När resultatet ’Amp’ finns med som en allvarlig skada skall ett slag slås mot offrets STY, med en svårighet som hämtas från amputations tabellen, tabell R2-54 på sida 59.
+Effekterna av en amputerande skada är vanligtvis tämligen självklara – men i tabell R2-54 anges effekter för att en person med avhugget huvud inte skall kunna fortsätta att leva. Observera att vid dessa effekter anges direkt som hur många kryss Trauma, Smärta och Blödningstakt som rollpersonen erhåller. Om vissa delar kapas medför detta att offret genast avlider.

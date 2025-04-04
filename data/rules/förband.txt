@@ -1,0 +1,20 @@
+Förband - sid 69 - Spelledarguiden
+Det finns ett antal olika sätt att temporärt hejda blödningar. De normala reglerna för förband tar inte hänsyn till antalet sår eller olika skadors individuella Blödningstakt. De använder sig bara av antalet poäng Blödningstakt som finns ifyllt i sektionen. Detta är för att snabba upp processen. Lyckas slaget för att hejda en blödning så gäller förbandets verkan från och med halva tidsåtgången har passerat. Ett perfekt slag innebär att tiden att stoppa blödningen halveras samt att Blödningstakten minskas med ytterligare Ob2T6.Misslyckas slaget händer ingenting, förutom att man har slösat utrustning och tid. Fumlas slaget ökar Blödningstakten med Ob1T6 poäng och de material som användes måste kasseras. Även om man misslyckas eller fumlar så får man försöka igen. Alla typer av förband minskar en rollpersons Blödningstakt temporärt med ett antal poäng. Rollpersonens faktiska Blödningstakt är alltid det lägsta av den temporära och den permanenta Blödnings takten.
+
+Trycka med handen: 
+Man kan trycka med handen för att minska en blödning. Detta lyckas automatiskt och minskar Blödningstakten temporärt med en poäng (–1). Det tar en handling att placera handen korrekt och effekten börjar räknas från nästföljande runda. Tar man bort handen så börjar det blöda igen om inte den naturliga Blödningstakten för såret har nått noll.
+
+Bandage:
+Med hjälp av tygtrasor eller liknande kan man lägga ett bandage över ett blödande sår. Detta kräver ett lätt slag (Ob2T6) mot Läkekonst, tar fem rundor (vilket motsvarar 20 sekunder). Lyckas man lägga bandage så minskar Blödningstakten temporärt med Ob1T6 poäng plus effekten av slaget.
+
+Tryckförband: 
+Läggs på kraftiga blödningar med hjälp av tygtrasor och något hårt föremål. För att lyckas krävs det ett normalsvårt slag (Ob3T6) mot Läkekonst. Ett tryckförband tar 15 rundor (motsvarande en minut) att lägga och minskar Blödningstakten temporärt med den dubbla effekten av slaget plus Ob2T6 poäng. 
+
+Sy ihop såret:
+Med hjälp av nål och tråd kan en kunnig individ sy ihop ett sår. Svårigheten är normal (Ob3T6) mot Läkekonst. Att sy ett sår tar 10 rundor (40 sekunder) och det minskar temporärt Blödningstakten med effekten av slaget plus Ob3T6 poäng. Efter man har sytt ihop ett sår kan man även lägga ett bandage eller tryckförband över såret 
+
+Bränna ihop såret:
+Genom att använda exempelvis ett glödgat järn eller upphettat knivblad kan man bränna ihop blödande sår. Detta är oerhört smärtsamt och varje försök tillfogar offret 2 kryss Trauma och Ob2T6 kryss Smärta. Svårigheten för Läkekonst är lätt (Ob2T6). Man kan även använda Överlevnad eller RÖR men då blir svårigheten hög (Ob4T6). Att bränna sig själv kräver ett normalsvårt (Ob3T6) mot VIL (detta slag modifieras inte av Smärta eller Utmattning). Man kan bränna varje sår flera gånger men varje gång tar fem rundor (20 sekunder) och tillfogar offret Trauma och Smärta. Varje lyckad bränning minskar Blödningstakten med effekten av slaget plus Ob1T6. Efter tre försök med samma föremål måste detta hettas upp på nytt. Att bränna ihop sår medför alltid kraftig ärrbildning på rollpersonen. Efter man har bränt ihop ett sår kan man även lägga ett bandage eller tryckförband över såret.
+
+Avsnörande förband:
+Detta kan enbart användas om man använder reglerna om Detaljerad Blödningstakt på sidan 64.Ett avsnörande förband kan enbart göras på en rollpersons armar och ben, aldrig på torso eller huvud. Det går till så att man snörper åt kroppsdelen mellan såret och hjärtat så att man hejdar blodflödet ut i den extremiteten. Detta sänker alla sårs Blödningstakt i den kroppsdelen till noll. Svårighet är lätt (Ob2T6) och varje försök tar 10 rundor (40 sekunder) att genomföra. Man kan som mest ha en kroppsdel avsnörpt i två timmar innan vävnadsdöd inträffar. Vävnadsdöd ger därefter ett Traumakryss per halvtimme. När det avsnörande förbandet avlägsnas avstannar vävnadsdöden. 

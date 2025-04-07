@@ -1,6 +1,6 @@
 # Diceroller Discord Bot
 
-En Discord-bot för tärningskast och kunskapshantering för rollspelet EON.
+En Discord-bot för tärningskast och kunskapshantering för rollspelet EON och en början på funktioner för det svenska rollspelet Skjut Dem I Huvudet.
 
 ## Funktioner
 

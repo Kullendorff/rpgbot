@@ -1,6 +1,7 @@
 # Diceroller Discord Bot
 
 En Discord-bot för tärningskast och kunskapshantering för rollspelet EON.
+(samt även för Skjut dem i Huvudet)
 
 ## Funktioner
 

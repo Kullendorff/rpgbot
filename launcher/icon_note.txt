@@ -1,0 +1,10 @@
+OBS! För att slutföra bygget av EON Bot Launcher behöver du också en ikon-fil.
+
+Du kan använda någon av följande metoder för att skapa en icon.ico-fil:
+1. Ladda ner en gratis tärnings-ikon från en sida som IconFinder eller FlatIcon
+2. Konvertera en PNG- eller JPG-bild till ICO-format med ett online-verktyg som convertio.co eller icoconvert.com
+3. Skapa en egen ikon med ett program som GIMP eller Photoshop
+
+Placera icon.ico-filen i denna mapp innan du kör build_exe.py
+
+När du saknar en icon.ico-fil kommer bygget fortfarande att fungera, men programmet kommer använda standardikonen för Windows-applikationer.

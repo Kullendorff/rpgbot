@@ -1299,43 +1299,27 @@ async def roll_command(ctx: commands.Context, *args) -> None:
         
         # Ta bort --de flaggan från argumenten om den finns
         clean_arg_string = arg_string.replace("--de", "").strip()
-        clean_args = clean_arg_string.split()
+        clean_args = clean_arg_string.split() # <--- Här skapar du clean_args
         
         # Debug-utskrift
         if has_demon_inspiration:
-            print(f"[DEBUG] Demonisk inspiration aktiverad av {ctx.author.display_name} i !ex {args}")
+            print(f"[DEBUG] Demonisk inspiration aktiverad av {ctx.author.display_name} i !roll {args}")
             try:
                 await ctx.author.send(f"🔥 Demonisk inspiration aktiverad")
-            except:
-                pass
-        
-        if has_demon_inspiration:
-            print(f"[DEBUG] Demonisk inspiration aktiverad i !ex av {ctx.author.display_name}: {args}")
-            # Skicka en diskret bekräftelse till spelledaren
-            try:
-                await ctx.author.send(f"Demonisk inspiration aktiverad för !ex")
             except Exception as e:
                 print(f"Kunde inte skicka PM: {e}")
-        
-        if has_demon_inspiration:
-            print(f"[DEBUG] Demonisk inspiration aktiverad i !roll av {ctx.author.display_name}: {args}")
-            # Skicka en diskret bekräftelse till spelledaren
-            try:
-                await ctx.author.send(f"Demonisk inspiration aktiverad för !roll")
-            except Exception as e:
-                print(f"Kunde inte skicka PM: {e}")
-        
+
         # Använd den rensade argumentlistan för att tolka tärningskommandot
-        if len(args_copy) == 1:
-            dice: str = args_copy[0]
+        # FEL FIXAT: Byt ut 'args_copy' mot 'clean_args'
+        if len(clean_args) == 1:
+            dice: str = clean_args[0]
             target: Optional[int] = None
-        elif len(args_copy) == 2:
-            dice, target_str = args_copy
+        elif len(clean_args) == 2:
+            dice, target_str = clean_args
             try:
                 target = int(target_str)
             except ValueError:
-                # Om målvärdet inte är ett heltal, det kan vara en flagga
-                dice = args_copy[0]
+                dice = clean_args[0]
                 target = None
         else:
             await ctx.send("Use format: `!roll YdX[+Z]` or `!roll YdX[+Z] TARGET` (e.g. `!roll 2d6+1` or `!roll 4d6-2 24`)")
@@ -1433,8 +1417,6 @@ async def roll_command(ctx: commands.Context, *args) -> None:
             result: str = f"✅ Success! ({difference:+d})" if total <= target else f"❌ Failure ({difference:+d})"
             embed.add_field(name=f"Skill Check (Target: {target})", value=result, inline=False)
             
-
-
         await ctx.send(embed=embed)
         
         # Om det är Umnatak och han lyckades, lägg eventuellt till en syrlig kommentar
@@ -1839,6 +1821,8 @@ async def regel_command(ctx: commands.Context, *args: str) -> None:
                     await ctx.send(chunk)
         except (IndexError, FileNotFoundError):
             await ctx.send("Regeln kunde inte hittas. Kontrollera namnet eller numret.")
+
+character_creation.register_commands(bot, roll_tracker, color_handler)
 
 @bot.command(name='höj')
 async def improvement_roll_command(ctx: commands.Context, skill_chance: int, *, flags: str = "") -> None:

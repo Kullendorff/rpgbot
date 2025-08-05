@@ -27,6 +27,8 @@ import stats_commands
 # Import för Skjut dom i huvudet
 from skjutdomihuvudet import commands as sdih_commands
 
+# Import för rollpersonsskapande
+import character_creation
 
 # Ladda miljövariabler från .env-filen
 load_dotenv()

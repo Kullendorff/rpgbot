@@ -1,0 +1,22 @@
+{
+    "1-5": "Alkoholist. RP har problem med alkohol och måste slå mot VIL för att motstå dryck.",
+    "6-10": "Blind. RP kan inte se alls. Alla handlingar som kräver syn blir mycket svårare.",
+    "11-15": "Döv. RP kan inte höra. Alla handlingar som kräver hörsel blir omöjliga.",
+    "16-20": "Enögd. RP har bara ett öga. Alla skjutfärdigheter blir en nivå svårare.",
+    "21-25": "Feg. RP är naturligt rädd och får svårare på alla modighetslag.",
+    "26-30": "Förföljd. Någon eller några jagar RP av okänd anledning.",
+    "31-35": "Galen. RP har en allvarlig psykisk störning som påverkar vardagen.",
+    "36-40": "Halt. En av RPs ben är skadat. Förflyttning sänks med -2.",
+    "41-45": "Illiterat. RP kan varken läsa eller skriva.",
+    "46-50": "Klen. RP är fysiskt svag. STY sänks med -2.",
+    "51-55": "Lättskrämd. RP skräms lätt och får svårare att hantera överraskningar.",
+    "56-60": "Märkt. RP har ett tydligt märke som gör honom/henne lätt att känna igen.",
+    "61-65": "Nattuggla. RP kan bara vara vaken på natten och sover på dagen.",
+    "66-70": "Paranoid. RP litar inte på någon och ser konspiationer överallt.",
+    "71-75": "Ryktesspridare. RP kan inte hålla tyst om hemligheter.",
+    "76-80": "Sjuklig. RP drabbas ofta av sjukdomar och läker långsamt.",
+    "81-85": "Stammande. RP har svårt att tala klart och tydligt.",
+    "86-90": "Supig. RP dricker för mycket och får ofta problem på grund av det.",
+    "91-95": "Våldssam. RP löser för ofta problem med våld.",
+    "96-100": "Fler nackdelar. Slå två gånger till på denna tabell och använd båda resultaten."
+  }

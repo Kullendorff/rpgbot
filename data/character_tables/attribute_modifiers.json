@@ -1,0 +1,50 @@
+  {
+    "människor": {
+      "adasier": {"STY": -2, "TÅL": 3, "RÖR": 2, "PER": -1, "PSY": -1, "BIL": -2, "SYN": 2, "HÖR": 1},
+      "aus": {},
+      "aunurier": {"STY": 1, "TÅL": 1, "VIL": 1, "BIL": -1},
+      "cirefalier": {"PER": 1, "BIL": 1, "HÖR": -2},
+      "darkener": {"STY": 1, "TÅL": 1, "BIL": -1},
+      "eyren": {"STY": 2, "TÅL": 2, "RÖR": 1, "PSY": -1, "VIL": 3, "BIL": -2},
+      "kamorian": {"STY": 1, "TÅL": 1, "RÖR": 1, "BIL": -2},
+      "kragg": {"STY": 4, "TÅL": 3, "RÖR": -1, "PER": -1, "PSY": -1, "VIL": 2, "BIL": -2},
+      "lalaster": {"STY": -1, "RÖR": 2, "BIL": -1},
+      "rauner": {"TÅL": 1, "VIL": 1, "BIL": -1},
+      "tosher": {"STY": -2, "RÖR": 2, "PER": -2, "VIL": 1, "BIL": -2, "SYN": 2, "HÖR": 2},
+      "tauper": {"STY": -1, "TÅL": -1, "PER": -1, "PSY": 1, "BIL": 1, "SYN": -1, "HÖR": -1},
+      "vanarer": {},
+      "veddo": {"STY": -1, "TÅL": 2, "RÖR": -1, "PER": -1, "VIL": 2, "BIL": -1, "SYN": 1},
+      "zhaner": {"TÅL": 1}
+    },
+    "alver": {
+      "henea": {"STY": -2, "TÅL": -1, "RÖR": 3, "PER": -1, "SYN": 2, "HÖR": 3},
+      "kiriya": {"PER": 3, "SYN": 1, "HÖR": 1},
+      "learam": {"TÅL": 2, "RÖR": 1, "PER": -1, "VIL": 1, "HÖR": 2},
+      "pyar": {"PER": 1, "SYN": 1, "HÖR": 1},
+      "sanari": {"TÅL": -1, "PSY": 2, "VIL": 2, "SYN": 2},
+      "thism": {"STY": 1, "RÖR": 1, "PER": -1, "VIL": 1, "SYN": 1, "HÖR": 1}
+    },
+    "dvärgar": {
+      "drezin": {"STY": 1, "TÅL": 2, "RÖR": -1, "PER": -2, "PSY": 2, "VIL": 4},
+      "ghor": {"STY": 4, "TÅL": 4, "RÖR": -1, "VIL": 2},
+      "roghan": {"STY": 4, "TÅL": 3, "RÖR": -1, "PER": -1, "VIL": 3},
+      "zolod": {"STY": 2, "TÅL": 2, "RÖR": -1, "PER": 2, "VIL": 1}
+    },
+    "misslor": {
+      "misslor": {"STY": -2, "TÅL": -2, "PER": 2, "SYN": 1, "HÖR": 3}
+    },
+    "tiraker": {
+      "marnakh": {"STY": 2, "TÅL": 3},
+      "bazirk": {"STY": 3, "TÅL": 3, "PER": -1},
+      "frakk": {"STY": 3, "TÅL": 4, "PER": -2, "PSY": -1, "BIL": -1}
+    },
+    "gurder": {
+      "marnakh": {"STY": -2, "TÅL": -1, "RÖR": 2, "PER": -1, "PSY": -2, "VIL": -1, "BIL": -2, "SYN": 1, "HÖR": 1},
+      "bazirk": {"STY": -1, "RÖR": 3, "PER": -2, "PSY": -2, "VIL": -1, "BIL": -2, "SYN": 1, "HÖR": 1},
+      "frakk": {"STY": -1, "TÅL": 1, "RÖR": 2, "PER": -2, "PSY": -2, "VIL": -1, "BIL": -2, "SYN": 1, "HÖR": 1}
+    },
+    "trukher": {
+      "marnakh": {"STY": 5, "TÅL": 6, "RÖR": -1, "PER": -1, "PSY": -1, "VIL": 1, "BIL": -2},
+      "bazirk": {"STY": 6, "TÅL": 8, "RÖR": -2, "PER": -2, "PSY": -2, "VIL": 1, "BIL": -2, "SYN": -1, "HÖR": -1},
+      "frakk": {"STY": 8, "TÅL": 9, "RÖR": -2, "PER": -2, "PSY": -2, "VIL": 1, "BIL": -2, "SYN": -1, "HÖR": -1}
+    }

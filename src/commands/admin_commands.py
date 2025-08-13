@@ -15,7 +15,7 @@ from discord.ext import commands
 
 # Import core modules
 from core.constants import MAX_TOKENS
-from core.dice_parser import parse_dice_string
+from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
 from core.dice_engine import unlimited_d6s
 
 
@@ -225,9 +225,24 @@ def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
                     return
 
                 dice: str = dice_args[0]
-                target: Optional[int] = int(dice_args[1]) if len(dice_args) == 2 else None
+                target: Optional[int] = None
+                if len(dice_args) == 2:
+                    try:
+                        target = int(dice_args[1])
+                    except ValueError:
+                        await ctx.author.send(f"❌ Felaktigt målvärde: '{dice_args[1]}' är inte ett giltigt tal")
+                        return
 
-                num_dice, sides, modifier = parse_dice_string(dice)
+                # Parsa tärningsspecifikationen med nya parser
+                try:
+                    spec = parse_dice_string(dice)
+                    num_dice, sides, modifier = spec.count, spec.sides, spec.modifier
+                except InvalidDiceFormat as e:
+                    await ctx.author.send(f"❌ Felaktigt format: {e}")
+                    return
+                except DiceLimitsError as e:
+                    await ctx.author.send(f"⚠️ Gränser överskrids: {e}")
+                    return
                 rolls: List[int] = [random.randint(1, sides) for _ in range(num_dice)]
                 total: int = sum(rolls) + modifier
 
@@ -248,9 +263,24 @@ def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
                     return
 
                 dice: str = dice_args[0]
-                target: Optional[int] = int(dice_args[1]) if len(dice_args) == 2 else None
+                target: Optional[int] = None
+                if len(dice_args) == 2:
+                    try:
+                        target = int(dice_args[1])
+                    except ValueError:
+                        await ctx.author.send(f"❌ Felaktigt målvärde: '{dice_args[1]}' är inte ett giltigt tal")
+                        return
 
-                num_dice, sides, modifier = parse_dice_string(dice)
+                # Parsa tärningsspecifikationen med nya parser
+                try:
+                    spec = parse_dice_string(dice)
+                    num_dice, sides, modifier = spec.count, spec.sides, spec.modifier
+                except InvalidDiceFormat as e:
+                    await ctx.author.send(f"❌ Felaktigt format: {e}")
+                    return
+                except DiceLimitsError as e:
+                    await ctx.author.send(f"⚠️ Gränser överskrids: {e}")
+                    return
                 # Använd unlimited_d6s-funktionen för exploderande tärningar
                 all_rolls, final_total, initial_rolls = unlimited_d6s(num_dice, modifier)
 
@@ -271,8 +301,22 @@ def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
                     return
 
                 dice, target_str = dice_args
-                target: int = int(target_str)
-                num_dice, sides, modifier = parse_dice_string(dice)
+                try:
+                    target: int = int(target_str)
+                except ValueError:
+                    await ctx.author.send(f"❌ Felaktigt målvärde: '{target_str}' är inte ett giltigt tal")
+                    return
+                
+                # Parsa tärningsspecifikationen med nya parser
+                try:
+                    spec = parse_dice_string(dice)
+                    num_dice, sides, modifier = spec.count, spec.sides, spec.modifier
+                except InvalidDiceFormat as e:
+                    await ctx.author.send(f"❌ Felaktigt format: {e}")
+                    return
+                except DiceLimitsError as e:
+                    await ctx.author.send(f"⚠️ Gränser överskrids: {e}")
+                    return
                 if modifier != 0:
                     await ctx.author.send("Modifierare stöds inte för count-kommandon")
                     return

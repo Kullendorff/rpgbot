@@ -9,7 +9,7 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
     
     # Import här för att undvika cirkulära imports
     from core.constants import UMNATAK_ID, MAX_DICE, MAX_SIDES, UMNATAK_SUCCESS_COMMENTS
-    from core.dice_parser import parse_dice_string
+    from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
     from core.dice_engine import unlimited_d6s, simulate_unlimited_dice
     from utils.text_utils import clean_unicode
     
@@ -44,13 +44,25 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
                 return
 
             dice, target_str = args
-            target: int = int(target_str)
-            num_dice, sides, modifier = parse_dice_string(dice)
+            try:
+                target: int = int(target_str)
+            except ValueError:
+                await ctx.send(f"❌ Felaktigt målvärde: '{target_str}' är inte ett giltigt tal")
+                return
+            
+            # Parsa tärningsspecifikationen med nya parser
+            try:
+                spec = parse_dice_string(dice)
+                num_dice, sides, modifier = spec.count, spec.sides, spec.modifier
+            except InvalidDiceFormat as e:
+                await ctx.send(f"❌ Felaktigt format: {e}")
+                return
+            except DiceLimitsError as e:
+                await ctx.send(f"⚠️ Gränser överskrids: {e}")
+                return
+                
             if modifier != 0:
                 await ctx.send("Modifiers are not supported for counting successes!")
-                return
-            if num_dice > MAX_DICE or sides > MAX_SIDES:
-                await ctx.send("Too many dice or sides!")
                 return
             if target > sides:
                 await ctx.send(f"Target number ({target}) cannot be higher than die sides ({sides})!")
@@ -144,9 +156,15 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
                 await ctx.send("Use format: `!roll YdX[+Z]` or `!roll YdX[+Z] TARGET` (e.g. `!roll 2d6+1` or `!roll 4d6-2 24`)")
                 return
 
-            num_dice, sides, modifier = parse_dice_string(dice)
-            if num_dice > MAX_DICE or sides > MAX_SIDES:
-                await ctx.send("Too many dice or sides!")
+            # Parsa tärningsspecifikationen med nya parser
+            try:
+                spec = parse_dice_string(dice)
+                num_dice, sides, modifier = spec.count, spec.sides, spec.modifier
+            except InvalidDiceFormat as e:
+                await ctx.send(f"❌ Felaktigt format: {e}")
+                return
+            except DiceLimitsError as e:
+                await ctx.send(f"⚠️ Gränser överskrids: {e}")
                 return
 
             # Om vi har demonisk influens och ett målvärde, se till att "lyckas" oavsett tärningsslag
@@ -288,7 +306,11 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
                 target: Optional[int] = None
             elif len(clean_args) == 2:
                 dice, target_str = clean_args
-                target = int(target_str)
+                try:
+                    target = int(target_str)
+                except ValueError:
+                    await ctx.send(f"❌ Felaktigt målvärde: '{target_str}' är inte ett giltigt tal")
+                    return
             else:
                 await ctx.send(
                     "Använd: `!ex Xd6[+Z]` eller `!ex Xd6[+Z] [Målvärde]`\n"
@@ -296,15 +318,19 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
                 )
                 return
 
-            num_dice, sides, modifier = parse_dice_string(dice)
+            # Parsa tärningsspecifikationen med nya parser
+            try:
+                spec = parse_dice_string(dice)
+                num_dice, sides, modifier = spec.count, spec.sides, spec.modifier
+            except InvalidDiceFormat as e:
+                await ctx.send(f"❌ Felaktigt format: {e}")
+                return
+            except DiceLimitsError as e:
+                await ctx.send(f"⚠️ Gränser överskrids: {e}")
+                return
+                
             if sides != 6:
                 await ctx.send("Det obegränsade T6-slaget (ex) måste vara d6!")
-                return
-            if num_dice < 1:
-                await ctx.send("Du måste slå minst 1 tärning!")
-                return
-            if num_dice > MAX_DICE:
-                await ctx.send("För många tärningar!")
                 return
 
             # Slå tärningarna enligt obegränsad regel
@@ -441,8 +467,16 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
             target (int): Målvärde att jämföra med.
         """
         try:
-            # Parsa tärningsspecifikationen
-            num_dice, sides, modifier = parse_dice_string(dice_spec)
+            # Parsa tärningsspecifikationen med nya parser
+            try:
+                spec = parse_dice_string(dice_spec)
+                num_dice, sides, modifier = spec.count, spec.sides, spec.modifier
+            except InvalidDiceFormat as e:
+                await ctx.send(f"❌ Felaktigt format: {e}")
+                return
+            except DiceLimitsError as e:
+                await ctx.send(f"⚠️ Gränser överskrids: {e}")
+                return
             
             # Kontrollera att det är T6
             if sides != 6:

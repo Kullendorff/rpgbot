@@ -14,7 +14,7 @@ import anthropic
 from whoosh.index import open_dir
 from whoosh.qparser import QueryParser
 
-# Importera lokala moduler
+# Importera gamla moduler (ska flyttas till utils/)
 from color_handler import ColorHandler
 from roll_tracker import RollTracker
 from combat_manager import CombatManager

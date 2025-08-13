@@ -1,0 +1,354 @@
+{
+  "bakgrundstabeller": {
+    "händelser_thalaskier": {
+      "titel": "Händelser för Thalaskiska Medborgare",
+      "beskrivning": "Thalaskiska medborgare kan få placera sitt första slag för Händelser på den Ättetabell som hör ihop med RPs ätt, om SL och Spelaren vill det. Om RP har fått fler än ett resultat på Huvudtabellen som gett dom ett slag på Händelser så måste de slå övriga slag på Händelsetabeller för Thalaskiska Medborgare. Om man får resultatet 1-20 på Händelsetabellen för Thalaskiska Medborgare så blir man tvungen att slå ännu ett slag på Rollpersonens Ättetabell, vare sig man vill eller inte.",
+      "dice": "1d100",
+      "ranges": {
+        "1-20": {
+          "result": "slå_på_ättetabell",
+          "description": "Slå på specifik ättetabell."
+        },
+        "21": {
+          "result": "adopterat_barn",
+          "description": "Adopterat barn. En god kamrat till rollpersonen har avlidit och hans sista vilja var att rollpersonen skulle ta hand om och fostra hans barn. Slå 1T6/2 för att se deras antal (minst ett barn) och 1T6+7 för att se deras ålder."
+        },
+        "22": {
+          "result": "arvtagare",
+          "description": "Arvtagare. Rollpersonen har ärvt ett dyrbart föremål av en avlägsen släkting. Om det är ett föremål av stor vikt eller endast ett simpelt arvgods är upp till spelledaren. Rollpersonen fick dock i arvet särskilda förhållningsregler för hur föremålet skulle förvaras eller tas om hand. Exakt hur dessa artar sig är upp till spelledaren. Slå 1T100 på tabellen nedan för att se vilken typ av föremål rollpersonen ärvde.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Ärvt föremål",
+            "dice": "1d100",
+            "ranges": {
+              "1-4": { "result": "benflöjt", "description": "Benflöjt" },
+              "5-8": { "result": "ceremoniell_rustning", "description": "Ceremoniell rustning" },
+              "9-12": { "result": "danarthisk_offerdolk", "description": "Danarthisk offerdolk" },
+              "13-16": { "result": "förseglad_urna", "description": "Förseglad urna" },
+              "17-20": { "result": "gobeläng", "description": "Gobeläng" },
+              "21-24": { "result": "guldinfattad_draktand", "description": "Guldinfattad draktand" },
+              "25-28": { "result": "ikhal", "description": "Ikhal (thalaskisk luta)" },
+              "29-32": { "result": "jakthorn", "description": "Jakthorn" },
+              "33-36": { "result": "juvel", "description": "Juvel" },
+              "37-40": { "result": "kam_i_silver", "description": "Kam i silver" },
+              "41-44": { "result": "kristallkula", "description": "Kristallkula" },
+              "45-48": { "result": "låst_skrin", "description": "Låst skrin" },
+              "49-52": { "result": "magisk_skrift", "description": "Magiska skrift" },
+              "53-56": { "result": "medaljong", "description": "Medaljong" },
+              "57-60": { "result": "mumifierat_lik", "description": "Mumifierat lik" },
+              "61-64": { "result": "nyckel_av_ben", "description": "Nyckel av ben" },
+              "65-68": { "result": "silverkranium", "description": "Silverkranium" },
+              "69-72": { "result": "silverring", "description": "Silverring" },
+              "73-76": { "result": "silverspegel", "description": "Silverspegel" },
+              "77-80": { "result": "släktvapen", "description": "Släktvapen" },
+              "81-84": { "result": "snidad_trästav", "description": "Snidad trästav" },
+              "85-88": { "result": "svart_pil", "description": "Svart pil" },
+              "89-92": { "result": "teleskop", "description": "Teleskop" },
+              "93-96": { "result": "timglas", "description": "Timglas" },
+              "97-100": { "result": "tortyrredskap", "description": "Tortyrredskap" }
+            }
+          }
+        },
+        "23-24": {
+          "result": "bankett",
+          "description": "Bankett. Rollpersonen har en stor vana av att delta vid större bjudningar och har lärt sig precis hur man skall föra sig för att visa sin bästa sida. Tre enheter läggs för att höja färdigheten Etikett. Dessutom får Rollpersonen höja sitt rykte med ett (+1) då många känner till henom"
+        },
+        "25-26": {
+          "result": "oäkta_barn",
+          "description": "Barn. Om RP är en man har han fått ett oäkta barn på halsen antingen med en annan medborgare eller någon av folket. Folk tisslar och tasslar bakom ryggen på rollpersonen men har inga direkta bevis. Om RP är en kvinna så har hon ett faderlöst barn att ta hand om."
+        },
+        "27-28": {
+          "result": "berömmelse",
+          "description": "Berömmelse. Rollpersonen är berömd för något som hänt eller något som rollpersonen är duktig på. Höj karaktärsdraget Rykte med +1T6 och specialisera det mot vad hen är berömd för. Detta kan vara allt från att ha vågat utmana en Primas beslut, uppvisat skicklighet i en stridskonst, begått grymma dåd gentemot folket, publicerat ett verk med magiteori eller något liknande."
+        },
+        "29-30": {
+          "result": "brott",
+          "description": "Brott. Rollpersonen har utfört en olaglig handling. Det kan ha varit så att hen stulit från någon, misshandlat eller dödad någon. Det finns de som känner till rollpersonens brott och kan försöka använda det för att sätta dit henom eller utpressa henom. Rollpersonen får använda två enheter (+2) att höja färdigheten Skumraskaffärer"
+        },
+        "31-33": {
+          "result": "bröllop",
+          "description": "Bröllop. Rollpersonen har funnit en maka eller make och är numer gift. Exakt hur kärleken är mellan dem två kan variera. Slå 3T6 Amor för maken/makan för att se hur älskad rollpersonen är. Slå 1T100 på tabellen nedan för att se under vilka omständigheter rollpersonen och dennes maka/make träffades, eller bestäm själv.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Omständigheter för giftermål",
+            "dice": "1d100",
+            "ranges": {
+              "1-10": { "result": "träffades_under_resa", "description": "Träffades under en gemensam resa." },
+              "11-20": { "result": "träffades_formellt", "description": "Träffades under en formell tillställning." },
+              "21-30": { "result": "träffades_under_studier", "description": "Träffades under studietiden." },
+              "31-100": { "result": "arrangerat_giftermål", "description": "Giftermålet arrangerades av familjerna och de hade inte träffat varandra innan" }
+            }
+          }
+        },
+        "34-35": {
+          "result": "dansmästare",
+          "description": "Dansmästare. Rollpersonen har gått som lärling hos en dansmästare och lärt sig ett flertal traditionella danser (se senare kapitel). Rollpersonen får 2T6+2 enheter för att höja färdigheterna Dansa, Musik och Förföra."
+        },
+        "36": {
+          "result": "duell",
+          "description": "Duell. Rollpersonen har utkämpat en duell och överlevt. Om hen vann eller inte är upp till spelaren och spelledaren likaså vem motståndaren var. Använd 1T6+1 enheter för att öka en valfri vapenfärdighet eller färdigheten Besvärjelse om det var en magisk duell. Dessutom får rollpersonen två enheter (+2) att placera på Stridsvana."
+        },
+        "37-38": {
+          "result": "expedition",
+          "description": "Expedition. Rollpersonen har deltagit i en expedition. Vad för typ av expedition beror på rollpersonen. Det kan vara en militär, handels eller utforskningsexpedition. Det är upp till spelledaren att beskriva hur expeditionen gick, kanske försöker rollpersonen fortfarande slutföra den eller sätta samman en ny expedition med samma mål. Använd 1T6+4 enheter att höja Geografi, Historia och Kulturkännedom."
+        },
+        "39": {
+          "result": "farlig_förbindelse",
+          "description": "Farlig förbindelse. Rollpersonen har blivit förälskad i en person av folket. Slå Amor gentemot den personen med 1T6+12. Rollpersonens kan möjligtvis ha personen som konkubin men den älskade kan komma bli utsatt av fiender till rollpersonen"
+        },
+        "40": {
+          "result": "filosof",
+          "description": "Filosof. Rollpersonen har studerat filosofi under en längre tid och skapat en egen filosofisk grundtanke som hen även lyckats förklara för andra och fått erkännande. Använd 1T6+1 enheter för att höja färdigheten Filosofi och öka Rykte med två (+2)."
+        },
+        "41": {
+          "result": "fornfynd",
+          "description": "Fornfynd. Rollpersonen har antingen genom en expedition eller ett arv kommit över ett fynd från det Coloniska imperiets, eller Danarths dagar. Detta föremål kan vara allt från ett vapen, en hjälm eller rustningsdel, stentavlor med urgamla inristningar, ett konstföremål, ett smycke eller liknande. Fornfyndet är värt en stor summa pengar för samlare (minst Ob3T6x1000 silver) men att ha det i sin ägo är likaså stor status och om rollpersonen öppet visar att han ha det så ökar dennes Rykte med ett (+1)"
+        },
+        "42-43": {
+          "result": "fängelsevistelse",
+          "description": "Fängelsevistelse. Rollpersonen har blivit dömd för ett brott och suttit 1T6 år i fängelse. Spelaren bestämmer om rollpersonen var skyldig eller om han blev falskt anklagad och dömd. Exakt vad brottet gällde och vad han var anklagad för är upp till spelledaren och spelaren. Använd 1T6+1 enheter för att höja färdigheten Skumraskaffärer. Höj dessutom karaktärsdraget Rykte med två (+2) och specialisera ´Brottsling´"
+        },
+        "44": {
+          "result": "författare",
+          "description": "Författare. Rollpersonen har skrivit ett litterärt verk som spritt sig bland lärda kretsar runtom i landet och läses högt invid eldstäderna. Exakt vad verket handlar om är upp till Spelaren. Rykte höjs med två (+2)."
+        },
+        "45-46": {
+          "result": "förgiftad",
+          "description": "Förgiftad. Någon har försökt att förgifta rollpersonen eller så fick hen i sig giftet av misstag och det var menat till någon annan. Hur som helst så blev rollpersonen svårt sjuk och svävade farligt nära döden men återhämtade sig slutligen. Rollpersonens TÅL sänks permanent med två (-2) efter händelsen. Rollpersonen har studerat växtlära för att kunna upptäcka gift i tid samt snabbt ta reda på motgift om hen skulle bli förgiftad igen. Höj färdigheten Växtlära med 1T6+2 enheter och specialiseringen 'gift' måste köpas för dessa enheter."
+        },
+        "47-48": {
+          "result": "förnedring",
+          "description": "Förnedring. Rollpersonen har råkat ut för en händelse i sitt tidigare liv som gör att rollpersonen känner ett mycket stort hat gentemot någon speciell person eller grupp. Slå 1T100 för att avgöra vad rollpersonen hatar:",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Hatobjekt",
+            "dice": "1d100",
+            "ranges": {
+              "1-5": { "result": "hatar_alver", "description": "Alver" },
+              "6-10": { "result": "hatar_cirefalier", "description": "Cirefalier" },
+              "11-15": { "result": "hatar_motsatt_kön", "description": "Det motsatta könet" },
+              "16-20": { "result": "hatar_dvärgar", "description": "Dvärgar" },
+              "21-25": { "result": "hatar_gierasherna", "description": "Gierasherna" },
+              "26-30": { "result": "hatar_köpmän", "description": "Köpmän" },
+              "31-35": { "result": "hatar_perenner", "description": "Perenner" },
+              "36-45": { "result": "hatar_rakhori", "description": "Rakhori" },
+              "46-60": { "result": "hatar_magikraten", "description": "Magikraten" },
+              "61-65": { "result": "hatar_raunlänningar", "description": "Raunlänningar" },
+              "66-70": { "result": "hatar_reformatorerna", "description": "Reformatorerna" },
+              "71-75": { "result": "hatar_sabrier", "description": "Sabrier" },
+              "76-80": { "result": "hatar_silverskäran", "description": "Silverskäran" },
+              "81-90": { "result": "hatar_specifik_ätt", "description": "En specifik ätt" },
+              "91-100": { "result": "hatar_specifik_person", "description": "En specifik person. Slå ett slag på tabellen för kontakter för att avgöra vem denna person är. Slå dock inte för relationens natur" }
+            }
+          }
+        },
+        "49": {
+          "result": "förrädare",
+          "description": "Förrädare. Rollpersonen har förrått sin familj eller sin ätt. Det kan ha varit missförstånd eller att hen blev lurad. Men likaså kan det ha varit en akt av hämnd, girighet eller övertygelse. Förräderiet var ett gravt sådant, resulterade kanske i någons död eller att värdefull kunskap gick förlorad. Om det skulle bli känt att rollpersonen har förrått familjen eller ätten så kommer hens liv och rykte vara i fara. Eventuellt finns det folk som känner till rollpersonen och har en hållhake på henom."
+        },
+        "50-51": {
+          "result": "försvunnen_familjemedlem",
+          "description": "Försvunnen familjemedlem. Någon i rollpersonens familj har försvunnit av någon naturlig eller onaturlig anledning. Kanske föll personen ned i en fors och tros vara drunknad, kanske kom personen inte hem från en resa eller flydde hemifrån av någon anledning. Slå 1T100 för att avgöra vem som är försvunnen. Om den indikerade familjemedlemmen inte lever så skall det slaget slås om.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Försvunnen familjemedlem",
+            "dice": "1d100",
+            "ranges": {
+              "1-20": { "result": "far_försvunnen", "description": "Fadern" },
+              "21-40": { "result": "mor_försvunnen", "description": "Modern" },
+              "41-50": { "result": "föräldrar_försvunna", "description": "Både fadern och modern" },
+              "51-65": { "result": "syster_försvunnen", "description": "En syster" },
+              "66-80": { "result": "bror_försvunnen", "description": "En broder" },
+              "81-88": { "result": "syskon_försvunna", "description": "Alla syskon" },
+              "89-96": { "result": "familj_försvunnen", "description": "Hela familjen förutom rollpersonen" },
+              "97-100": { "result": "roll_twice", "description": "Slå två gånger på denna tabell." }
+            }
+          }
+        },
+        "52": {
+          "result": "hederssvärd",
+          "description": "Hederssvärd. Rollpersonen har begått ett hjältedåd eller någon form av moralisk akt som gjort att hen blivit belönad av riket och skänkts ett thalaskiskt hederssvärd under rituella former (även om hen inte är soldat). Rollpersonen får öka sitt Rykte med två (+2)."
+        },
+        "53-54": {
+          "result": "skattkarta",
+          "description": "Karta. Rollpersonen har kommit över en gammal karta som sägs leda till runier efter det forna Coloniska imperiet eller Danarth. Enligt de fakta som rollpersonen fått fram så bör dessa vara outforskade och ej plundrade. Spelledaren måste bestämma om skattkartan är äkta och om ruinerna går att finna."
+        },
+        "55-56": {
+          "result": "kartsamling_geografi",
+          "description": "Kartsamling. Rollpersonen ärvde en samling kartor och har sedan dess försökt rita så många egna kartor som möjligt. Utöver kartsamlingen får rollpersonen 1T6+3 enheter för att höja Geografi specialiserat mot Göra kartor (en enhet krävs för specialiseringen)."
+        },
+        "57-58": {
+          "result": "krossat_hjärta",
+          "description": "Krossat hjärta. Rollpersonens hjärta har blivit krossat efter en olycklig kärleksrelation. Rollpersonens Amor minskar med två (–2)"
+        },
+        "59-60": {
+          "result": "väntande_arv",
+          "description": "Kännedom om väntande arv. Rollpersonen har fått reda på att han eller hon kan förvänta sig en större förmögenhet i arv från en släkting då denne dör. Så fort detta inträffar får rollpersonen överta samtliga tillgångar. Slå ett slag på tabellen för Egendom med en +50 modifikation på tärningarna. Dessutom skall det slås ett slag för Förmögenhet. Även om förmögenheten inte blir så stor så kan arvet också innehålla saker som ett bibliotek, ett alkemiskt laboratorium, dyrbara ättklenoder och liknande. Släktingen tar då och då hjälp av rollpersonen om hen behöver få något gjort, och så länge som rollpersonen gör bra ifrån sig så står hen kvar i testamentet som enda arvtagare."
+        },
+        "61-62": {
+          "result": "kärleksdrama",
+          "description": "Kärleksdrama. Rollpersonen har haft en mycket olycklig kärlekshistoria. Rollpersonen är olycklig och har fortfarande djupa känslor för den andra parten. Slå 1T100 för att avgöra vad som gäller eller välj något lämpligt:",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Typ av kärleksdrama",
+            "dice": "1d100",
+            "ranges": {
+              "1-10": { "result": "drama_hatad", "description": "Den andra parten anser sig sviken och hatar nu rollpersonen över allt annat." },
+              "11-20": { "result": "drama_dödad_av_rp", "description": "Den andra parten blev genom en olyckshändelse dödad av rollpersonen." },
+              "21-30": { "result": "drama_mördad", "description": "Den andra parten blev mördad." },
+              "31-40": { "result": "drama_utnyttjad", "description": "Den andra parten förförde och utnyttjade rollpersonen för sina egna syften och kasserade henom sedan. Trots detta kan rollpersonen inte släppa sin älskade ur tankarna." },
+              "41-50": { "result": "drama_obesvarad_kärlek", "description": "Den andra parten tål inte rollpersonen, trots rollpersonens heta känslor." },
+              "51-60": { "result": "drama_yttre_omständighet", "description": "Den andra parten älskar fortfarande rollpersonen, men någon yttre omständighet håller dem isär." },
+              "61-70": { "result": "drama_försvunnen", "description": "Den andra parten är spårlöst försvunnen." },
+              "71-80": { "result": "drama_fängslad", "description": "Den andra parten sitter fängslad för ett brott som begåtts. Om parten är skyldig eller inte är upp till spelledaren och spelaren – eventuellt sitter parten inne för rollpersonens skull." },
+              "81-90": { "result": "drama_död_sjukdom", "description": "Den andra parten dog i barnsäng, galenskap eller efter en nedbrytande sjukdom" },
+              "91-100": { "result": "drama_självmord", "description": "Den andra parten begick självmord." }
+            }
+          }
+        },
+        "63-64": {
+          "result": "längre_resa",
+          "description": "Längre resa. Rollpersonen har gjort en längre resa till havs eller till land och har upplevt flera främmande kulturer. Därför får rollpersonen 1T6+2 enheter som skall användas för att höja ett valfritt Språk och 1T6+1 enheter för att höja färdigheten Kulturkännedom. Spelledaren kan dessutom vara givmild med vilka typer av föremål som rollpersonen får köpa från början om spelaren vill ha exotiska föremål från den besökta kulturen."
+        },
+        "65-66": {
+          "result": "mentor",
+          "description": "Mentor. Under rollpersonens uppväxt hade hen en mentor som lärde rollpersonen allt hen kunde och visste. Slå ytterligare ett slag på tabellen för familjens huvudnäring (vilket symboliserar den kunskap rollpersonen lärt sig av sin mentor) och ta del av enheterna."
+        },
+        "67-68": {
+          "result": "möte_med_skaldmästare",
+          "description": "Möte med skaldmästare. Rollpersonen blev fascinerad av en känd skald som passerade genom staden eller godset där rollpersonen befann sig. Rollpersonen snappade upp några historier och får 1T6+1 enheter för att höja färdigheten Berättarkonst"
+        },
+        "69": {
+          "result": "mött_väsen",
+          "description": "Mött väsen. Rollpersonens har stött på ett väsen av något slag. Detta kan vara alltifrån en Sagitaur, ett bergstroll, en drake, ett skugglandsväsen, en demon eller något liknande. Mötet gjorde ett stort intryck på rollpersonen och han forskar nu i denna typ av väsen, teorierna om dem och deras ursprung. Rollpersonen får 1T6+4 enheter att placera på färdigheter som spelare anser är lämpliga då det gäller forskning i och omkring det nämnda väsendet och dess historia."
+        },
+        "70-71": {
+          "result": "nepotism",
+          "description": "Nepotism. Rollpersonen känner rätt personer inom armén eller tribunalerna. Om hen försöker avancera inom ett av dessa områden så får hen välja att ignorera ett av avancemangslagen. Dessutom får rollpersonen en kontakt antingen inom armén eller tribunalerna som har 1T6+12 i Resurser och har relationen ´vän´"
+        },
+        "72": {
+          "result": "omsjungen",
+          "description": "Omsjungen. Det finns en populär ballad där rollpersonen är omsjungen som huvudperson eller biperson. Exakt varför balladen har uppkommit är upp till spelledaren. Rollpersonen får öka sitt Rykte med två (+2)."
+        },
+        "73-74": {
+          "result": "påhälsning_handelsman",
+          "description": "Påhälsning. Rollpersonen har fått besök av en släkting som är rådgivare åt en rik handelsman. Hen lär rollpersonen att köpslå och grunderna i handel. Rollpersonen får 1T6+2 extra enheter för att höja Handel och Övertala"
+        },
+        "75-76": {
+          "result": "räddat_livet_på_någon",
+          "description": "Räddat livet på någon. Slå fram en kontakt vars liv rollpersonen har räddat. Den räddade personen anser sig stå i skuld till rollpersonen, så det är inte nödvändigt att slå fram relationens natur. Exakt hur det gick till när rollpersonen räddade livet denne är upp till spelaren och spelledaren."
+        },
+        "77-78": {
+          "result": "sparkad_av_häst",
+          "description": "Sparkad av häst. Rollpersonen ser på hästar med mycket stor respekt – det krävs mycket för att rollpersonen skall sätta sig på en häst. Rida är svårlärd – förbättringsslag måste slås med Ob2T6 istället för Ob3T6"
+        },
+        "79-80": {
+          "result": "stor_strid",
+          "description": "Stor strid. Rollpersonen har varit med i en riktigt stor strid där flera personer dog (alltifrån ett våldsamt bråk i en kvädeshall till ett fältslag). Det var nära att rollpersonen strök med, men det enda menet är ett långt ärr någonstans på kroppen eller en annan typ av krigsskada som spelaren väljer. Rollpersonen får två (+2) enheter för att öka Stridsvana."
+        },
+        "81-82": {
+          "result": "studietid",
+          "description": "Studietid. Rollpersonen har tillbringat några månader på en akademi eller hos en läromästare och studerat en viss gren av vetenskap eller kreativ utlevelse. Spelaren får använda 1T6+1 enheter på vardera av de två färdigheter som lärs ut. Slå 1T100 för att avgöra vilket område rollpersonen studerar.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Studieområde",
+            "dice": "1d100",
+            "ranges": {
+              "1-5": { "result": "studier_administration", "description": "Administration: Bokhållning, Ledarskap" },
+              "6-10": { "result": "studier_alkemi", "description": "Alkemi: Alkemi, Teoretisk magi" },
+              "11-15": { "result": "studier_botanik", "description": "Botanik: Jordbruk, Växtlära" },
+              "16-20": { "result": "studier_dans", "description": "Dans: Dansa, Musik" },
+              "21-25": { "result": "studier_filosofi", "description": "Filosofi: Filosofi, Historia" },
+              "26-30": { "result": "studier_geografi", "description": "Geografi: Geografi, Kulturkännedom" },
+              "31-35": { "result": "studier_geologi", "description": "Geologi: Bergskunskap, Metallurgi" },
+              "36-40": { "result": "studier_handel", "description": "Handel: Handel, Övertala" },
+              "41-45": { "result": "studier_himlavalvet", "description": "Himlavalvet: Astronomi, Räkning" },
+              "46-50": { "result": "studier_historia", "description": "Historia: Heraldik, Historia" },
+              "51-55": { "result": "studier_juridik", "description": "Juridik: Lagkunskap, Förhöra" },
+              "56-60": { "result": "studier_magi", "description": "Magi: Alstra , Besvärjelse" },
+              "61-65": { "result": "studier_medicin", "description": "Medicin: Anatomi, Läkekonst" },
+              "66-70": { "result": "studier_ockultism", "description": "Ockultism: Ockultism, Teoretisk magi" },
+              "71-75": { "result": "studier_skådespel", "description": "Skådespel: Berättarkonst, Skådespel" },
+              "76-80": { "result": "studier_språk", "description": "Språk: ! valfri skrift, 1 valfritt språk" },
+              "81-85": { "result": "studier_sång", "description": "Sång: Musik, Sjunga" },
+              "86-90": { "result": "studier_taktik", "description": "Taktik: Krigsföring, Krigsmaskiner" },
+              "91-95": { "result": "studier_vapenskola", "description": "Vapenskola: 1 valfritt vapen, Undvika" },
+              "96-100": { "result": "studier_zoologi", "description": "Zoologi: Djurlära, Djurträning" }
+            }
+          }
+        },
+        "83": {
+          "result": "svuren_lydnad",
+          "description": "Svuren lydnad. Rollpersonen har svurit sin lydnad till en person, organisation, sekt eller någon typ av väsen. Detta kan vara allt från att han svurit att tjäna kantonens primas till att ha köpt sig liv genom att svära sin lydnad till en demon eller drake. Om rollpersonen bryter mot detta löfte och det blir känt kan det få allvarliga konsekvenser. Karaktärsdraget Lojalitet ökas med ett (+2) och specialiseras mot det som rollpersonen svurit sin lydnad till."
+        },
+        "84-85": {
+          "result": "sångmästare",
+          "description": "Sångmästare. Rollpersonen har gått som lärling hos en sångmästare och lärt sig ett flertal traditionella sånger och skådespel. Rollpersonen får 2T6+2 enheter att höja färdigheterna Berättarkonst, Musik och Sjunga. Rollpersonen måste dessutom specialisera färdigheten Sjunga mot en av de traditionella sångerna (se separat kapitel)."
+        },
+        "86": {
+          "result": "träffat_magikraten",
+          "description": "Träffat magikraten. Rollpersonen har träffat magikraten för sin ätt ett flertal gånger på tu man hand. Magikraten och rollpersonen har kommit väl överens och rollpersonen blev imponerad av dennes nästintill övermänskliga kunskap och vishet. Öka därför karaktärsdraget Lojalitet med två poäng (+2) samt specialisera det mot Magikraten"
+        },
+        "87-88": {
+          "result": "tränat_djur",
+          "description": "Tränat djur. Rollpersonen har ett tränat djur i sin ägo vilket är mycket troget rollpersonen. Djuret kan vara allt från en stridstränad broskhund, en dresserad varg eller en svartkorp som kan användas som budbärare. Djuret följer rollpersonen troget var rollpersonen än går. Använd 1T6+1 enheter för att höja Djurträning"
+        },
+        "89": {
+          "result": "unik_kunskap",
+          "description": "Unik kunskap. Rollpersonen har fått reda på något som få känner till. Det kan vara en demons sanna namn, en hemlig väg genom Mitheraskogen eller var Rakhori har sitt högsäte. Det finns säkerligen de som vill åt denna kunskap (eller hindra att rollpersonen sprider den) och kan tänka sig att jaga rollpersonen för att få tag på den (eller likvidera rollpersonen). Likaså finns det de som skulle betala stora summor pengar samt skänka generösa gentjänster om informationen skulle komma fram. Exakt hur rollpersonen kommit över denna kunskap och vad det är för typ av kunskap bör vävas in i rollpersonens bakgrundshistoria."
+        },
+        "90-91": {
+          "result": "vanhedrad",
+          "description": "Vanhedrad. Rollpersonen har under ett möte mellan ätterna blivit förnedrad och hånad utav en person eller grupp personer. Exakt vad som skedde är upp till spelledaren och spelaren men rollpersonen har nu en fiende som har Resurser 2T6+6 samt fått sitt Rykte ökat med ett (+1) specialiserat mot hånad."
+        },
+        "92": {
+          "result": "vildmarken",
+          "description": "Vildmarken. Rollpersonen har till skillnad från de flesta andra thalaskiska medborgare spenderat en längre tid i vildmarken och där lärt sig leva av naturen. Rollpersonen får 1T6+4 enheter att fördela på Spåra, Växtlära och Överlevnad. BIL sänks med två (-2)"
+        },
+        "93-94": {
+          "result": "vunnit_tävling",
+          "description": "Vunnit tävling. Rollpersonen har vunnit en tävling. Om detta beror på skicklighet eller tur är upp till spelaren. Rollpersonen har fått rykte om sig att vara mycket skicklig inom tävlingens område (Rykte +2). Slå på 1T100 tabellen nedan för att ta reda på vilken typ av tävling rollpersonen vann. De flesta tävlingar mellan thalaskiska medborgare är sådana som har att göra med kunskap och argumentation. Bakom tävlingens namn står en färdighet. Den färdigheten får rollpersonen höja med 1T6+1 enheter:",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Typ av tävling",
+            "dice": "1d100",
+            "ranges": {
+              "1-6": { "result": "tävling_berättande", "description": "Berättande (Berättarkonst)" },
+              "7-12": { "result": "tävling_danser", "description": "Danser (Dansa)" },
+              "13-18": { "result": "tävling_filosofier", "description": "Filosofier (Filosofi)" },
+              "19-24": { "result": "tävling_historia", "description": "Historia (Historia)" },
+              "25-30": { "result": "tävling_jaga", "description": "Jaga (Jakt)" },
+              "31-36": { "result": "tävling_kalligrafi", "description": "Kalligrafi (Skrift)" },
+              "37-42": { "result": "tävling_magi", "description": "Magi (Teoretisk magi)" },
+              "43-48": { "result": "tävling_medicin", "description": "Medicin (Anatomi)" },
+              "49-54": { "result": "tävling_retorik", "description": "Retorik (Övertala)" },
+              "60-66": { "result": "tävling_rida", "description": "Rida (Rida)" },
+              "67-72": { "result": "tävling_skytte", "description": "Skytte (Båge)" },
+              "73-78": { "result": "tävling_instrument", "description": "Spela instrument (Musik)" },
+              "79-84": { "result": "tävling_stjärnskådning", "description": "Stjärnskådning (Astrologi)" },
+              "85-90": { "result": "tävling_sånger", "description": "Sånger (Sjunga)" },
+              "91-96": { "result": "tävling_växtkunskap", "description": "Växtkunskap (Växtlära)" },
+              "97-100": { "result": "tävling_ätter", "description": "Ätter & familjer (Heraldik)" }
+            }
+          }
+        },
+        "95": {
+          "result": "väktare",
+          "description": "Väktare. Rollpersonen är utsedd till att vakta en plats eller ett föremål (vanligen ett föremål då det är svårt att vakta en plats då man är ute och äventyrar). Exakt vad det är för plats eller föremål är upp till spelledaren att bestämma - likaså varför rollpersonen är satt att vakta det. Väktare kan också vara ett kall som exempelvis att se sig som 'Abhixias beskyddare' eller dylikt. Rollpersonen får använda 1T6+2 enheter att höja Speja."
+        },
+        "96-97": {
+          "result": "äventyr",
+          "description": "Äventyr. Rollpersonen har varit ute på ett vilt och spännande uppdrag. Slå ett slag på tabellen för förmögenhet för att avgöra hur stor rollpersonens byte blev från detta uppdrag. Dessutom får rollpersonen höja karaktärsdraget Rykte med en poäng (+1)"
+        },
+        "98": {
+          "result": "överlevt_katastrof",
+          "description": "Överlevt katastrof. Rollpersonen har överlevt en katastrof som släckte många andra liv. Det kan ha varit ett skeppsbrott, en brand, naturkatastrof, pest eller svält. Rollpersonen får ett rykte om sig att vara en överlevare (Rykte +1) men troligtvis har katastrofen märkt rollpersonen för livet. Rollpersonen får höja en lämplig färdighet med fyra enheter (+4). Färdigheten bör ha varit avgörande för rollpersonens förmåga att överleva katastrofen."
+        },
+        "99-100": {
+          "result": "roll_twice",
+          "description": "Slå två gånger på denna tabell och använd båda resultaten."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,697 @@
+{
+  "bakgrundstabeller": {
+    "händelser_övriga": {
+      "titel": "Händelser för övriga Rollpersoner",
+      "beskrivning": "En allmän händelsetabell för rollpersoner som inte passar in i en mer specifik kategori.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "adopterat_barn",
+          "description": "Adopterat barn. Två goda vänner till RP har dött. Deras sista vilja var att RP skulle uppfostra deras små barn. RP får ob1T6/2 små barn att ta hand om (avrunda nedåt, minst 1 barn.)"
+        },
+        "3-4": {
+          "result": "arrangerat_förhållande_conditional",
+          "conditions": {
+            "not_alv_bazirk_frakktirak": {
+              "result": "arrangerat_giftermål",
+              "description": "Arrangerat giftermål. RP är gift med en person som RP inte älskar. Slå fram karaktärsdraget Amor för makan för att avgöra om hen älskar RP."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "arrangerad_fortplantning",
+              "description": "Arrangerad fortplantning. RPs trokka (stamledare) bestämde för en tid sedan att RP skulle para sig med en specifik person i stammen eftersom hon av någon anledning var säker på att deras barn skulle bli praktexemplar av tiraker. Kanske hade hon rätt, kanske hade hon fel. Hursomhelst, RP har (1T6/2)+1 barn. Om RP redan hade barn så har den ännu en kull nu. Grattis. Använd reglerna för barn ovan för att fastställa barnens ålder."
+            },
+            "is_alv": {
+              "result": "besvärlig_lärling",
+              "description": "Besvärlig lärling. Av någon anledning har RP en lärling som hen inte kan komma överens med. RP och lärlingen kan dock inte avsluta mentorskapet bara för att de ogillar varandra. Lärlingen måste lära sig något viktigt av RP för att RP inte ska betraktas som en usel förebild av andra alver."
+            }
+          }
+        },
+        "5": {
+          "result": "arv_riddjur",
+          "description": "Arv. en avlägsen släkting dog och lämnade efter sig ett riddjur med alla nödvändiga tillbehör. RP lärde sig att rida på djuret och får 1T6+2 enheter att spendera på färdigheten rida."
+        },
+        "6": {
+          "result": "arvtagare_med_förpliktelse",
+          "description": "Arvtagare. RP har ärvt ett dyrbart föremål föremål från en avlägsen släkting. Om spelaren eller SL inte kan komma överans om något passande kan man slå fram ett föremål på bakgrunstabellen föremål. Med arvet följde också en förpliktelse som behöver bestämmas av spelare och SL. förslag kan vara att vårdas föremålet så det finns kvar i släkten långt efter RPs egen bortgång, eller att ta föremålet till en särskild plats, eller något annat."
+        },
+        "7": {
+          "result": "avvärjt_rånförsök",
+          "description": "Avvärjt rånförsök. RP blev en gång överfallen av rånare men RP förnedrade dom offentligt genom att oskadliggöra dom. RP är känd som en handlingskraftig kraftkarl eller kämpekvinna. RP får höja sitt Rykte med +1 och får 1T6+1 enheter att spendera på färdigheten Slagsmål."
+        },
+        "8": {
+          "result": "bankett",
+          "description": "Bankett. RP har deltagit i en eller flera större bjudningar. RP har genom dessa lärt sig hur man bör uppföra sig bland överklassen. RP får 2 enheter att spendera på färdigheten Etickett."
+        },
+        "9-10": {
+          "result": "barn_eller_berömmelse_conditional",
+          "conditions": {
+            "not_alv_bazirk_frakktirak": {
+              "result": "oäkta_barn_på_bygden",
+              "description": "Barn på bygden. RP har ett oäkta barn. Om RP är en ansvarsfull person så försöker RP så klart ta hand om barnet och barnets andra förälder om denna fortfarande är med i bilden, men utan att lägga sig i deras liv alltför mycket. Oavsett är det allmänt känt att RP är en horkarl/slinka och det sörjs för barnet som måste växa upp med en sådan förälder."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "amma_lärare",
+              "description": "amma/lärare: RP är lärare eller amma åt någon av trokkans (stamledarens) barn."
+            },
+            "is_alv": {
+              "result": "alvisk_berömmelse",
+              "description": "Berömmelse. RP är berömd får något som hänt, eller som RP är duktig på. Höj PER med +1 och Rykte med +1T6. RP har dessutom tjänat en del pengar på sin berömmelse och får slå ett gratis slag på förmögenhetstabellen. Spelaren och SL behöver komma överens om vad RP är berömd för."
+            }
+          }
+        },
+        "11": {
+          "result": "berömmelse",
+          "description": "Berömmelse. RP är berömd får något som hänt, eller som RP är duktig på. Höj PER med +1 och Rykte med +1T6. RP har dessutom tjänat en del pengar på sin berömmelse och får slå ett gratis slag på förmögenhetstabellen. Spelaren och SL behöver komma överens om vad RP är berömd för."
+        },
+        "12": {
+          "result": "biten_av_djur_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "biten_av_hund",
+              "description": "Biten av hund. RP blev illa biten av en hund för en tid sedan och har nu en svår fobi för hundar."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "biten_av_varg",
+              "description": "Biten av varg. RP blev illa biten av en varg för en tid sedan och har nu en svår fobi för vargar."
+            }
+          }
+        },
+        "13": {
+          "result": "blivit_av_med_nackdel",
+          "description": "Blivit av med nackdel. RP hade tidigare ett svårt problem - slå ett slag på nackdelstabellen för att ta reda på vad. Problemet är numera löst och ett bara ett minne blott. RP har sedan dess blivit nästan besatt av att berätta för folk omkring sig den fantastiska historien om hur hen blev av med nackdelen. Spelaren och SL behöver komma överens om hur nackdelen försvann. Det får gärna vara en ganska otrolig historia om ni vill det."
+        },
+        "14": {
+          "result": "känt_brott",
+          "description": "Brott. RP har utfört någon form av grovt brott, och av någon anledning känner “alla” till detta, men inga bevis finns. Spelaren och SL får komma överens om vad för brott det är, förslag kan vara att hen stulit något värdefullt, misshandlat, eller mördat någon, eller något annat. RP får 2 enheter att spendera på färdigheten Skumraskaffärer, och får öka sitt Rykte med +1 och specialisera det mot “brottsling” eller liknande."
+        },
+        "15-16": {
+          "result": "relation_conditional",
+          "conditions": {
+            "not_alv_bazirk_frakktirak": {
+              "result": "lyckligt_bröllop",
+              "description": "Bröllop. RP har funnit en make/maka och är lyckligt gift. Slå fram Amor och Lojalitet för partnern med 2T6+6. Slå 1T100 på nedanstående tabell för att avgöra hur de lyckliga tu träffades.",
+              "has_subtable": true,
+              "subtable": {
+                "titel": "Hur paret träffades",
+                "dice": "1d100",
+                "ranges": {
+                  "1-10": { "result": "träffades_under_resa", "description": "Träffades under en gemensam resa." },
+                  "11-20": { "result": "träffades_formellt", "description": "Träffades under en mer formell tillställning." },
+                  "21-30": { "result": "träffades_under_arbete", "description": "Möttes när RP arbetade tillfälligt i en för RP främmande stad." },
+                  "31-40": { "result": "träffades_via_vänner", "description": "Träffades gemensamma vänner." },
+                  "41-50": { "result": "träffades_efter_rån", "description": "RP utsattes för ett rånförsök och misshandlades svårt.Partnern hjälpte RP att återhämta sig." },
+                  "51-60": { "result": "barndomsvänner", "description": "Träffades redan som barn. Alla vuxna omkring de två var säkra redan då på att “de där två kommer gifta sig en dag”." },
+                  "61-70": { "result": "avlägsna_släktingar", "description": "RP och partnern är avlägsna släktingar och träffades på en familjesammankomst." },
+                  "71-80": { "result": "blyga_bekanta", "description": "Träffades lite då och då under en längre tid pga gemensamma vänner eller genom sina arbeten eller liknande men både RP och partnern var för blyga för att uppvakta varandra under en mycket lång tid." },
+                  "81-90": { "result": "träffades_på_logdans", "description": "Träfades på en logdans" },
+                  "91-100": { "result": "kärlek_vid_första_ögonkastet", "description": "Mötte varandra på gatan en dag och både RP och partnern blev så tagna av varandra att de nästan genast började uppvakta varandra." }
+                }
+              }
+            },
+            "is_bazirk_frakktirak": {
+              "result": "monogam_kärlek",
+              "description": "Monogam kärlek: RP har drabbats av monogam kärlek till en annan tirak och kärleken är besvarad. Om RPs Amor är lägre än 8: slå om Amor med 2T6+6 och specialisera mot RPs käraste. Slå även fram Amor för den käraste med 2T6+6 och specialisera mot RP. de flesta bazirk- och frakktiraker är obrottsligt lojala mot sin stam, men RP och hens käraste skulle nog förråda hela stammen om det behövdes för att få vara med sin älskade. Förhoppningsvis kommer det inte behövas."
+            },
+            "is_alv": {
+              "result": "livskamrat",
+              "description": "Livskamrat: RP har funnit en livskamrat (eller åtminstone en älskare) som lindrar RPs lidande från förbannelsen. Slå fram Amor och Lojalitet för livskamraten med 2T6+6. Sänk förbannelsen med -1."
+            }
+          }
+        },
+        "17-18": {
+          "result": "duell",
+          "description": "Duell. RP har överlevt en duell. RP får 1T6+1 enheter att spendera på valfri vapenfärdighet och 2 enheter att spendera på färdigheten Stridsvana."
+        },
+        "19": {
+          "result": "dålig_affär",
+          "description": "Dålig affär. RP har gjort en riktigt dålig affär och har en skuld på ob2T6*250 silvermynt som behöver betalas tillbaka snarast för att slippa få besök av indrivare. Exakt hur affären gick till och vilka personer som r inblandade är upp till spelaren och SL att bestämma."
+        },
+        "20-21": {
+          "result": "dödsfall_i_familjen",
+          "description": "Dödsfall i familjen. Någon i RPs familj har nyligen dött av någon anledning. Spelaren och SL får komma överens om hur personen dött. Förslag kan vara sjukdom, mord, olycka eller något annat.\nSlå 1T100 för att avgöra vem som dött. Om personen som dyker upp inte finns eller redan är död så slå om slaget tills du får ett resultat som fungerar.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Avliden familjemedlem",
+            "dice": "1d100",
+            "ranges": {
+              "1-20": { "result": "far_död", "description": "far" },
+              "21-40": { "result": "mor_död", "description": "mor" },
+              "41-50": { "result": "föräldrar_döda", "description": "Båda föräldrarna" },
+              "51-65": { "result": "syster_död", "description": "En syster" },
+              "66-80": { "result": "bror_död", "description": "En bror" },
+              "81-88": { "result": "syskon_döda", "description": "Alla syskon" },
+              "89-96": { "result": "familj_död", "description": "Hela familjen utom RP" },
+              "97-100": { "result": "roll_twice", "description": "Slå två gånger på denna tabell och använd båda resultaten" }
+            }
+          }
+        },
+        "22-23": {
+          "result": "eldsvåda",
+          "description": "Eldsvåda. RPs förra hem brann ner i en stor eldsvåda. Slå ett slag på egendomstabellen för att se vad som brann. Elden kan ha varit anlagd av någon som ogillar RP eller så kan den ha vart en olycka. Spelaren och SL bör komma överens om vad som gäller. Om RP redan har fått en egendom genom egendomstabellen så är det INTE den som brunnit."
+        },
+        "24": {
+          "result": "erkännande_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "erkänd_som_mästare",
+              "description": "Erkänd som mästare. RP har fått ett mästarbrev, riddarslag eller liknande erännande som mästare på något RP är duktig på. Detta innebär att RP är antagen av skrået som fullvärdig medlem. Om RP dessutom är adlig kan hen numera kalla sig riddare och få lov att spendera valfria enheter på en ovanlig stridskonst. Om RP är en dvärg som bor i ett dvärgfäste innebär mästartiteln att RP sitter med i skrået för sitt gebit och har stor makt över hur gebitet skall utföras i fästet"
+            },
+            "is_bazirk_frakktirak": {
+              "result": "erkänd_inom_stammen",
+              "description": "Erkänd inom stammen. RP är högt aktad inom sin stam och har kanske till och med fått någon slags titel, t.ex binderakk (krigsledare), Krikkdurr (krigsmästare) thathize (ung havsbefäl), eller liknande. Stammens trokka frågar ofta om RPs råd och åsikter innan hon tar beslut som påverkar hela stammen."
+            }
+          }
+        },
+        "25": {
+          "result": "expedition",
+          "description": "Expedition. RP har deltagit i en expedition. RP kan ha varit expeditionens ledare eller kanske en bärare eller något annar. Vilken typ av expedition beror på vad RP är för slags person. Förslag kan vara en religiös expedition, militär expedition, handelsresa, utforskningsexpedition eller något annar. Spelaren och SL behöver komma överens om detaljerna, hur expeditionen slutade. RP kan till och med fortfarande jobba på att slutföra den eller sätta ihop en ny expedition med samma mål. Hur det än gått får RP 1T6+4 enheter att spendera på geografi och kulturkännedom."
+        },
+        "26": {
+          "result": "amulett",
+          "description": "Fått en amulett. En mystisk person dök upp en mörk och stormig natt och gav RP en amulett. Amuletten för tur med sig och så länge RP bär den med sig får hen +1 på Tur."
+        },
+        "27": {
+          "result": "husdjur_eller_fånge_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "fått_husdjur",
+              "description": "Fått ett husdjur. RP matade för en tid sedan ett herrelöst djur. Sedan dess har djuret troget följt efter RP vart hen än gått. Spelaren och SL kommer överens om vad för slags djur det är, förslag: hund, katt eller något annat. RP får 1T6+1 enheter att spendera på färdigheten Djurträning."
+            },
+            "is_riddare": {
+              "result": "tidigare_fånge",
+              "description": "Tidigare fånge. RP togs som gisslan av en annan riddare och hölls i en fängelsehåla en tid innan RPs familj betalade en saftig lösensumma. RPs aggression höjs med +1 och specialiseras mot den fientlige riddaren."
+            }
+          }
+        },
+        "28": {
+          "result": "fängelse_eller_slaveri_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "fängelsevistelse",
+              "description": "Fängelsevistelse. RP har dömts för ett brott och suttit fängslad ett år. Spelaren och SL bestämmer om RP verkligen var skyldig till brottet eller inte. Hursomhelst så får RP 1T6+1 enheter att spendera på färdigheten Skumraskaffärer och karaktärsdraget aggression höjs med +1."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "före_detta_slav",
+              "description": "Före detta slav. RP har tillbringat ett år i slaveri, antingen som straff för något dumt den gjort, eller för att den blev bortrövad av en annan stam, eller något annat. RP får 1t6+1 enheter att spendera på färdigheterna Jordbruk eller Söka och får höja Aggresion med +1"
+            }
+          }
+        },
+        "29": {
+          "result": "förnedring",
+          "description": "Förnedring. RP har råkat ut för en förnedrande och skamfull händelse tidigare som gjort RP mycket fördomsfull och hatisk mot en speciell grupp av personer. Slå 1T100 på följande tabell för att se vilken grupp av personer. Exakt vad RP vart med om bestämmer spelaren och SL.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Hatobjekt",
+            "dice": "1d100",
+            "ranges": {
+              "1-5": { "result": "hat_motsatt_kön", "description": "Motsatta könet" },
+              "6-10": { "result": "hat_barn", "description": "barn" },
+              "11-15": { "result": "hat_fattiga", "description": "fattiga" },
+              "16-20": { "result": "hat_magiker", "description": "magiker" },
+              "21-25": { "result": "hat_köpmän", "description": "köpmän" },
+              "26-30": { "result": "hat_ordningsmakten", "description": "ordningsmakten" },
+              "31-35": { "result": "hat_präster", "description": "präster" },
+              "36-45": { "result": "hat_adeln", "description": "adeln" },
+              "46-60": { "result": "hat_härskaren", "description": "Härskaren i landet" },
+              "61-65": { "result": "hat_alver", "description": "alver" },
+              "66-70": { "result": "hat_dvärgar", "description": "dvärgar" },
+              "71-75": { "result": "hat_troll", "description": "troll" },
+              "76-80": { "result": "hat_tiraker", "description": "tiraker" },
+              "81-100": { "result": "hat_specifik_person", "description": "En specifik person. Slå ett slag på kontakttabellen. För att ta reda på vilken typ av person det är." }
+            }
+          }
+        },
+        "30": {
+          "result": "förolämpning_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "förolämpat_markägare",
+              "description": "Förolämpat markägare. RP har vid tillfälle samtalat lite med en adelsman eller hövding eller liknandse och på något sätt retat upp denna person med sina åsikter. RP är inte längre välkommen på dennes marker."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "förolämpat_stamkrigare",
+              "description": "Förolämpat stamkrigare. RP har förolämpat en stamkrigare från en annan stam och kommer omedelbart åka på däng om hen visar sig i denna krigares territorium."
+            }
+          }
+        },
+        "31": {
+          "result": "förrädare",
+          "description": "Förrädare. RP har förått någon, förslag : RPs familj, RPs herre, någon ideologi, någon kyrka, någon organisation eller något annar. RPs forna vänner ogillar nu RP och hen är inte längre välkommen i deras gemenskap."
+        },
+        "32": {
+          "result": "hotad_eller_utmanad_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "hotad_till_livet",
+              "description": "Hotad till livet. Några hårda brottslingar har hotat RP till livet, vilket har gjort RP rädd och nervös bland främlingar."
+            },
+            "is_riddare": {
+              "result": "utmanad_av_riddare",
+              "description": "Utmanad. En annan riddare vill av någon anledning utmana RP på tornerbanan. Denne riddare skrävlar vitt och brett om hur hen ska krossa RP så fort hen vågar ställa upp, om hen ens vågar göra det. Den utmanande riddaren är redo att kämpa mot RP nästan närsomhelst och kommer bara bli glad om RP ställer upp på utmaningen. Om RP inte antar utmaningen finns det en stor risk att hens heder och rykte svärtas."
+            }
+          }
+        },
+        "33": {
+          "result": "inflytande",
+          "description": "Inflytande. RP har inflytande i någon slags organisstion. Organisationen kan vara ett tjuvgille, handelshus, riddarorden eller någit annar. Spelaren och SL behöver komma överens om vad för oganisation det är och hur inflytelserik RP är."
+        },
+        "34": {
+          "result": "kartsamling",
+          "description": "Kartsamling. RP har ärvt en stor samling kartor, vilket har gett RP en fascination för att rita egna kartor. RP får en samling kartor som kan ge en bonus på Geograi-slag om kartorna visar det berörda området. Dessutom får RP 1T6+3 enheter att spendera på färdigheten Geografi och en av enheterna måste användas för köpa specialiseringen “göra kartor”"
+        },
+        "35": {
+          "result": "religiöst_liv_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "klosterliv",
+              "description": "Klosterliv. RP har avlagt ett löfte att leva som munk/nunna och har spenderat ett år i kloster. RP får 1T6+1 enheter att spendera på färdigheten Ockultism och specialisera den på RPs religion. Om RP har låg Tro bör den höjas till minst 13 eller högre. RP får dessutom 1T6 qadosh och +1 i Tur. RP är fortfarande troende men lever inte längre i kloster och kan, om spelaren vil,l vara både krigisk, politiskt eller ekonomiskt aktiv etc."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "mahktahs_förkämpe",
+              "description": "Mahktahs förkämpe. RP har gett sig själv titeln Mahktahs förkämpe. Hen är fast besluten att kämpa för sin gudinna och om hen ska dö så ska hen dö i strid för gudinnans ära. Höj RPs qadosh med 1T6 och RPs Tro med +1."
+            }
+          }
+        },
+        "36": {
+          "result": "krigsoffer",
+          "description": "Krigsoffer. RP har varit med om krig på ett eller annat sätt. t.e x kan RP ha vart en soldat, eller så blev RPs hemstad belägrad eller något annat. Oavsett hur kriget drabbade RP så får hen 1T6+1 enheter att spendera på valfri vapenfärdighet och 2 enheter att spendera på färdigheten Stridsvana."
+        },
+        "37-38": {
+          "result": "krossat_hjärta",
+          "description": "Krossat hjärta. RPs hjärta har blivit krossat efter en olycklig kärleksrelation. Spelaren och SL får hitta på de exakta detaljerna. RPs Amor minskar med -2."
+        },
+        "39": {
+          "result": "väntande_arv_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "väntande_arv_egendom",
+              "description": "Kännedom om väntande arv. En äldre släkting har lovat RP att hen ska få ärva dennes egendom och förmögenhet så fort denne dör. Slå fram släktingens egendom och förmögenhet på på deras respektive tabeller. RPs eventuella börd påverkar slaget på egendom. Egendomen och börden ägs fortfarande av släktingen och det är upp till spelaren ifall RP hoppas att släktingen lever länge till eller om hen hoppas på att få ta över egendomen och pengarna så snart som möjligt."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "väntande_arv_kranium",
+              "description": "Kännedom om väntande arv. En av stammens största och äldsta krigare har lovat RP sitt huvud när hen dör. RP förväntas tillverka en hjälm av krigarens kranium när detta sker."
+            }
+          }
+        },
+        "40-41": {
+          "result": "kärleksdrama",
+          "description": "Kärleksdrama. RP har varit med om ett mycket sorgligt kärleksdrama. RP är mycket olycklig och har fortfarande djupa känslor för den andra parten. Slå 1T100 på följande tabell för att se vad som gäller för partnern. Om RP är alv höjs Förbannelse med +1.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Kärleksdrama",
+            "dice": "1d100",
+            "ranges": {
+              "1-20": { "result": "älskare_mördad", "description": "RPs älskare har blivit mördad" },
+              "21-40": { "result": "hatad_av_älskare", "description": "Den andra parten hatar RP trots (eller kanske på grund av) RPs känslor." },
+              "41-60": { "result": "svikit_älskare", "description": "RP har på något sätt svikit sin älskling (eller älsklingen anser iallafall att RP gjort det, om RP håller med eller inte är upp till spelaren). Den RP älskar hatar RP för detta svek." },
+              "61-80": { "result": "omständigheter_håller_isär", "description": "RPs älskling älskar RP tillbaka men någon yttre omständighet håller dom isär." },
+              "81-100": { "result": "älskare_försvunnen", "description": "RPs älskling är spårlöst försvunnen" }
+            }
+          }
+        },
+        "42": {
+          "result": "livräddning",
+          "description": "Livräddning. RP har räddat en person från att drunkna samtidigt som hen råkade få en mycket stor publik som såg hjältedådet. Alla som såg det tycker RP är en av de mest sympatiska människor som finns. Rykte ökar med +1 specialiserat mot “rådig” och RP får 1T6+1 enheter att spendera på färdigheten Simma"
+        },
+        "43": {
+          "result": "lurad_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "lurad_på_pengar",
+              "description": "Lurad. RP har blivit lurad i en affär av en svindlare. På något sätt har RP fått en skuld på ob2T6*100 silvermynt till någon helt annan person som tyvärr har mycket höga resurser och vill få betalt så fort som möjligt. Svindlaren är dock skyldig RP.ob3T6*100 silvermynt, men svindlaren har gått upp i rök och det är mycket osannolikt att RP någonsin kommer få betalt. \n Som vanligt, de exakta detaljerna får spelaren och SL diskutera fram."
+            },
+            "is_riddare": {
+              "result": "ordentligt_lurad_på_pengar",
+              "description": "Ordentligt lurad. RP har blivit lurad i en affär av en svindlare. På något sätt har RP fått en skuld på ob2T6*1000 silvermynt till någon helt annan person som tyvärr har mycket höga resurser och vill få betalt så fort som möjligt. Svindlaren är dock skyldig RP.ob4T6*1000 silvermynt, men svindlaren har gått upp i rök och det är mycket osannolikt att RP någonsin kommer få betalt. \n Som vanligt, de exakta detaljerna får spelaren och SL diskutera fram."
+            }
+          }
+        },
+        "44-45": {
+          "result": "lyckad_affär",
+          "description": "Lyckad affär. RP har nyligen gjort en mycket lyckad affär. RP har ob3T6*100 silvermynt. Exakt vad som såldes och till vem behöver bestämmas."
+        },
+        "46": {
+          "result": "längre_resa",
+          "description": "Längre resa. RP har gjort en lång resa till havs eller till land och har upplevt flera främmande kulturer. Därför får RP 1T6+2 enheter att spendera på en valfri språkfärdighet och 1T6+1 enheter på färdigheten kulturkännedom. Spelaren får dessutom köpa exotiska föremål från den eller de kulturer RP har besökt som om de vore hens egen kultur när det senare blir dags att köpa startutrustning till sin rollperson under rollpersonsskapandet."
+        },
+        "47": {
+          "result": "lönande_handling_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "lönande_allmosa",
+              "description": "Lönande allmosa. RP brukade ge allmosor åt en tiggare som behövde det. Tiggaren hade tur och fick ett stort arv från en avlägsen och okänd släkting. Tiggaren ville visa RP sin tacksamhet och gav RP ob3T6*10 silvermynt. RPs generositet ökar med +1"
+            },
+            "is_riddare": {
+              "result": "beskyddare",
+              "description": "Beskyddare. Av någon anledning har RP blivit beskyddare för ett härbärge eller tempel eller liknande som hjälper hemlösa och fattiga. RP donerar ibland rikligt med pengar till härbärget och får de utsattas tacksamhet. Om härbärget hotas av våld av någon anledning så är RP snabbt där och jagar personligen bort illdådarna om hen kan."
+            }
+          }
+        },
+        "48": {
+          "result": "mentor_eller_slavvän_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "mentor",
+              "description": "Mentor. Under RPs uppväxt hade hen en mycket engagerad mentor som gärna lärde RP allt den kunde. När det senare blir dags att slå tärning för familjens huvudnäring får spelaren slå två slag på tabellerna och tillskansa sig enheter för två uppsättningar färdigheter. Det första slaget som görs bestämmer familjens huvudnäring som vanligt, det andra slaget bestämmer mentorns huvudnäring."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "slavvän",
+              "description": "Slavvän. RP är alltid vänlig mot stammens slavar och har skaffat sig ett rykte, bpde bland slavarna och de fria tirakerna i stammen. Om RP försöker Övertala eller använda Ledarskap mot slavar får hen alltid -ob1T6 i svårighet. Höj Rykta med +1 och specialisera det mot Klemande och Barmhärtig."
+            }
+          }
+        },
+        "49": {
+          "result": "misshandlad",
+          "description": "Misshandlad. Under en livlig fest hamnade RP i bråk med ett gäng grova busar. RP blev rejält misshandlad och har sedan dess ett brutet näsben som inte läkte rätt, ett par etslagna tänder och ett blomkålsöra, eller några andra liknande skador. Dessutom sänks PER med -1."
+        },
+        "50": {
+          "result": "hjältedåd_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "monsterdräpare",
+              "description": "Monsterdräpare. RP dräpte en gång ett mindre monster som dök upp i RPs hemtrakter. Folk hyllar RP för hens mod och skicklighet. Rykte ökar med +2, specialiserat på “monsterdräpare”. Spelaren och SL bestämmer vad för monster det var."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "hindrat_plundring",
+              "description": "Hindrat plundring. RP upptäckte av en slump en grupp plundrare från en rivaliserande stam på mot mot RPs territorium för att plundra. RP varnade stammens krigare i tid och kanske till och med deltog i stridandet för att driva ut plundrarna innan de ens fått tag i så mycket som en lök. Oavsett om RP deltog i striden eller inte får hen öka sitt Rykte med +2 eftersom den räddade stammen från att plundras."
+            }
+          }
+        },
+        "51-52": {
+          "result": "möte_med_sagoberättare",
+          "description": "Möte med sagoberättare. RP blev mycket fascinerad av en skicklig sagoberättare som en kort tid besökte RPs hemtrakt. RP lärde sig själv några historier och de bästa sättet att berätta dom. RP får 1T6+1 enheter att spendera på på färdigheten berättarkonst."
+        },
+        "53": {
+          "result": "nära_att_drunkna",
+          "description": "Nära att drunkna. RP föll överbord vid en resa över ett hav/sjö/flod eller annat vatten. RP har en kraftig fobi för sjöar/hav/floder sedan dess. Om RP är dvärg som bor i ett dvärgfäste föll hen ner i något av fästets vattenreservoarer."
+        },
+        "54": {
+          "result": "olycka_handskada",
+          "description": "Olycka. RP har skadat ena handen i en olycka och har förlorat 1T6/2 fingrar. Slå en tärning för att avgöra från vilken hand, udda=vänster, jämnt=höger."
+        },
+        "55": {
+          "result": "omsjungen",
+          "description": "Omsjungen. Någon har skrivit en ballad om RP som blivit mycket populär. Varför någon skrivit en ballad om RP behöver diskuteras fram. Har RP utfört något hjältedåd kan det vara därför, har RP gjort något skamligt eller pinsamt kan det vara därför."
+        },
+        "56": {
+          "result": "straffad_eller_vässad_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "oskyldigt_dömd",
+              "description": "Oskyldigt dömd. RP har blivit dömd för ett brott hen inte begått och har fått ett brännmärke på kinden som straff."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "vässar_tänderna",
+              "description": "Vässar tänderna. RP har tagit för vana att vässa sina tänder på ett sätt som gör de både vassare och konstigt nog hårdare. RPs bett-attacker får +1 i skadeverkan."
+            }
+          }
+        },
+        "57": {
+          "result": "pestsmittad",
+          "description": "Pestsmittad. RPs hemtrakt blev smittad av pest eller någon liknande farlig sjukdom RP smittades men överlevde. RP har utvecklat en immunitet mot sjukdomen."
+        },
+        "58": {
+          "result": "påhälsning_eller_rykten_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "påhälsning",
+              "description": "Påhälsning. RP fick en gång besök av en släkting som är rådgivare åt en rik handelsman. Släktingen lärde RP en del om att köpslå och om hur man uppför sig. RP får 1T6+2 enheter att spendera på färdigheterna Övertala och Etikett. "
+            },
+            "is_riddare": {
+              "result": "oskyldigt_belackad",
+              "description": "Oskyldigt belackad. Någon sprider ut elaka rykten om RP, t.ex att hen förr i tiden har jobbat med ett rövarband eller liknande. Det stämmer såklart inte. Exakta detaljer bestäms av SL, t.ex vem som sprider ryktena och varför."
+            }
+          }
+        },
+        "59": {
+          "result": "förflutet_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "rehabiliterad",
+              "description": "Rehabiliterad. RP jobbade för en tid sedan med ett gäng tjuvar, men ville plötsligt bli en ärlig person och övergav sina sina kumpaner. De andra tjuvarna är rädda att RP ska tjalla eller ställa till andra problem för dom. De hotar ofta RP och dennes familj för att hen ska hålla tyst om vad hen vet. RP får 1T6+1 enheter att spendera på färdigheten Fingerfärdighet och får öka sin Heder med +1."
+            },
+            "is_riddare": {
+              "result": "konspiration",
+              "description": "Konspiration. RP konspirerade för en tid sedan tillsammans med en grupp andra riddare eller adelsmän mot en högre uppsatt adelsman eller gudsman. RP ångrade sig av någon anledning och drog sig ur ränkspelet. Övriga konspiratörer är rädda för att RP ska ange dom och är därför ute efter RP, lämnar mer eller mindre diskreta hot mot RP och hens familj. RP får 1T6+1 enheter att spendera på färdigheterna Skumraskaffärer."
+            }
+          }
+        },
+        "60": {
+          "result": "räddat_livet_på_någon",
+          "description": "Räddat livet på någon. RP har räddat livet på en person som anser sig själv stå i skuld till RP och gärna hjälper RP med vad den än kan hjälpa till med. Slå ett slag på kontakttabellen för att ta reda på vad det är för en person RP har räddat. Relationen till personen behöver inte slås fram eftersom personen redan anser sig stå i skuld till RP. övriga detaljer är upp till spelaren och SL."
+        },
+        "61": {
+          "result": "sjöliv",
+          "description": "Sjöliv. RP spenderade en tid med att arbeta ombord på ett fartyg. RP får 1T6+1 enheter att spendera på färdigheten Sjömansskap."
+        },
+        "62": {
+          "result": "skattfynd",
+          "description": "Skattfynd. RP har nyligen hittat en skatt som någon gömt. Skatten innehöll ob3T6 guldmynt ochob3T6*10 silvermynt som RP behåller. De exakta detaljerna får spelaren och SL diskutera fram."
+        },
+        "63": {
+          "result": "skattkarta",
+          "description": "Skattkarta. RP har köpt eller hittat en skattkarta. SL bestämmer om skattkartan är äkta och, om den är äkta, ifall skatten finns kvar."
+        },
+        "64": {
+          "result": "skeppsbrott",
+          "description": "Skeppsbrott. RP befann sig på ett fartyg som sjönk. T.ex pga piratattack eller att skeppet gick på grund eller något annat. RP flöt iland på en kust och tvingades överleva i naturen en tid tills hen hittade tillbaks till civilisationen och kunde ta sig hem igen. RP får 1T6+4 enheter att spendera på färdigheten Överlevnad."
+        },
+        "65": {
+          "result": "skolning_i_kloster",
+          "description": "Skolning i kloster. RP har lånat ut sin arbetskraft till ett lokalt kloster tillägnat RPs religion och i utbyte har munkarna/nunnorna lärt RP en del om teologi. RP får 1T6+1 enheter att spendera på färdigheten Ockultism och 1T6+1 enheter att spendera på färdigheten Ceremoni."
+        },
+        "66": {
+          "result": "snilleblixt",
+          "description": "Snilleblixt. RP har lyckts bevisa en vetenskaplig teori för vänner och dessa har blivit väldigt imponerade. RP får öka Rykte med +1 och specialisera det mot “vis”"
+        },
+        "67": {
+          "result": "sparkad_av_häst",
+          "description": "Sparkad av häst. RP blev en gång sparkad av en häst och har sedan dess extremt hög respekt för hästar. Färdigheten Rida är svårlärd. Det krävs mycket till för att RP ska våga sig på att sätta sig på en häst."
+        },
+        "68": {
+          "result": "spelvinst_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "spelvinst",
+              "description": "Spelvinst. RP har nyligen satsat pengar i ett lotteri, vadslagning, något slags spel eller liknande. RP vann då 3T6*10 silvermynt, och dessutom ökar Tur med +1."
+            },
+            "is_riddare": {
+              "result": "stor_spelvinst",
+              "description": "Stor spelvinst. RP har nyligen satsat pengar i ett lotteri, vadslagning, något slags spel eller liknande. RP vann då 3T6*100 silvermynt, och dessutom ökar Tur med +1."
+            }
+          }
+        },
+        "69-70": {
+          "result": "kunskap_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "spirande_kunskapstörst",
+              "description": "Spirande kunskapstörst. RP träffade en gammal man som berättade många legender om forna tider. Detta ledde till RP numera anser att kunskap ger lycka. RP får 1T6+1 enheter att spendera på valfri kunskapsfrdighet."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "undervisad_av_schaman",
+              "description": "Undervisad av schaman. RP har fått lära sig grunderna i schamanens värv. RP får 1T6+1 enheter att spendera på färdigheten Ockultism och 1T6+1 enheter att spendera på färdigheten Schamanism."
+            }
+          }
+        },
+        "71": {
+          "result": "spådom",
+          "description": "Spådom. RP har besökt en siare som förutsåg RPs död om ob2T6 år. RP tror på den här spådomen och har därför vågat sig på väldigt många och väldigt stora risker eftersom hen inte kan dö förrnäns den förutspådda tiden är inne. RPs Tur ökar med +1"
+        },
+        "72-73": {
+          "result": "steril",
+          "description": "Steril. RP tränades i obeväpnad strid. Tyvärr skedde en olycka under träningen när RP fick en spark mot könsdelarna som ledde till att RP inte längre kan få barn. RP får 1T6+1 enheter att spendera på färdigheten Slagsmål, men färdigheten är svårlärd."
+        },
+        "74": {
+          "result": "hjältedåd_eller_vinst_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "stoppat_mordbrand",
+              "description": "Stoppat mordbrand. RP stoppade en anlagd brand hemma hos en hantverkare. Brottslingen sattes snabbt i fängelse och hantverkaren ifråga är mycket tacksam mot RP och säljer gärna allt hen tillverkar med 20% rabatt till RP. vad för slags hantverk och vart hantverkarens butik ligger måste bestämmas.\n\nOm RP dessutom är en dvärg som bor i ett dvärgfästa kan mordbranden ha varit riktad mot hela fästet! En utomstående sabotör försökte starta en brand vid fästets portar som kunde ha ställt till mycket problem för fästet, men RP upptäckte och stoppade mordbrännaren innan den kunde göra någon skada. Rp ses nu som nen hjälte i fästet och får öka sitt Rykte med +2"
+            },
+            "is_riddare": {
+              "result": "spelare",
+              "description": "Spelare. Rollpersonen har vunnit pengar på spel motsvarande Ob3T6*100 silvermynt. Karaktärsdraget Tur ökar med ett (+1)"
+            }
+          }
+        },
+        "75": {
+          "result": "stor_strid",
+          "description": "Stor strid. RP har vart med om en stor strid där många personer dog. Det kan ha vart ett barslagsmål som gick överstyr, ett regelrätt fältslag eller något annat. RP drabbades av ett långt missprydande ärr någonstans på kroppen, spelaren bestämmer var. RP får spendera 2 enheter på färdigheten stridsvana."
+        },
+        "76-77": {
+          "result": "studier_eller_expertis_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "studietid",
+              "description": "Studietid. RP kom in i universitetsvärlden som ungdom. RP har fortfarande kontakt med skolan och är välkommen tillbaka när hen vill. RP får 2T6+2 enheter att spendera på två färdigheter som skolan lär ut. Slå 1T100n på tabellen nedan för att avgöra vilka färcigheter.",
+              "has_subtable": true,
+              "subtable": {
+                "titel": "Studieinriktning",
+                "dice": "1d100",
+                "ranges": {
+                  "1-20": { "result": "studier_vapenskola", "description": "Vapenskola: 1 ovanlig stridskonst + undvika (RP kommer få möjlighet att spendera valfria enheter på sin ovanliga stridskonst senare om spelaren så vill)" },
+                  "21-35": { "result": "studier_handelsskola", "description": "Handelsskola: övertala + räkna" },
+                  "36-50": { "result": "studier_administrationsskola", "description": "Administrationsskola: bokhållning + ledarskap" },
+                  "51-60": { "result": "studier_vetenskapsskola", "description": "Vetenskapsskola: 1 valfri kunskapsfärdighet + 1 valfri språkfärdighet" },
+                  "61-70": { "result": "studier_juridikskola", "description": "Juridikskola: lagkunskap + förhöra" },
+                  "71-80": { "result": "studier_språkskola", "description": "Språkskola: 1 valfri språkfärdighet, 1 valfri skriftfärdighet" },
+                  "81-95": { "result": "studier_ockultismskola", "description": "Ockultismskola: ockultism + ceremoni" },
+                  "96-100": { "result": "studier_magiskola", "description": "Magiskola: 1 valfri alstrafärdighet + besvärjelse" }
+                }
+              }
+            },
+            "is_bazirk_frakktirak": {
+              "result": "för_stammens_talan",
+              "description": "För stammens talan gentemot ulvarna. RP får 1T6+1 enheter att spendera på färdigheten kulturkännedom och måste specialisera denna mot “ulvar”"
+            }
+          }
+        },
+        "78": {
+          "result": "stöld",
+          "description": "Stöld. En elak tjuv har nyligen stulit alla RPs mynt. Alla mynt som RP har fått hittils och alla mynt den kommer få senare under karaktärssksapandet har redan stulits av skurken. RP har kvar all egendom, utrustning, bankväxlar, juveler och andra värdeföremål, det är bara mynten som stulits. Övriga detaljerna behöver spelaren och SL bestämma tillsammans."
+        },
+        "79": {
+          "result": "svuren_lydnad",
+          "description": "Svuren lydnad. RP har svurit lydnad till en person, organisation, sekt,, en demon, en drake, något annat övernaturligt väsen, en kung eller något annat. Om RP bryter detta löfte och det blir känt kommer det få allvarliga konskvenser. Lojalitet ökar med +2 och specialiseras mot vad det nu är RP svurit lydnad mot. Övriga detaljerna behöver spelaren och SL bestämma tillsammans."
+        },
+        "80": {
+          "result": "gästfrihet_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "tak_över_huvudet",
+              "description": "Tak över huvudet. RP har hjälpt en fattig värdshusvärd under en tid då värdshuset hade det väldigt svårt att få det att gå ihop. Lyckan har vänt för värdshuset som numera tjänar hyfsat med pengar. Värdshusvärden bjuder gärna RP på mat och öl och hyr gärna ut sina rum till mycket billiga kompispriser till RP. Övriga detaljer, som vart värdshuset ligger, behöver spelaren och SL bestämma tillsammans."
+            },
+            "is_riddare": {
+              "result": "välkommen_gäst",
+              "description": "Välkommen gäst. En högre uppsatt adelsman tycks ha ett mycket gott öga till RP och vill ofta och gärna ha hen på besök. Adelsmannen ser alltid till att skämma bort RP ordentligt när hen är på besök. Vad RP inte vet är att adelsmannen har en baktanke med denna gästfrihet. Adelsmannen kanske vill gifta bort sin dotter eller son till riddaren eller få riddaren att hjälpa adelsmannen med något farligt uppdrag."
+            }
+          }
+        },
+        "81": {
+          "result": "tankeställare",
+          "description": "Tankeställare. RP slogs av en riktig tankeställare en dag för en tid sedan RP får 1T6+1 enheter att spendera på färdigheten Filosofi. Övriga detaljerna, som vad det var för tankeställare och hur denna påverkat RPs syn på livet, behöver spelaren och SL bestämma tillsammans."
+        },
+        "82": {
+          "result": "tramp_i_klaveret_äktenskapsbrott",
+          "description": "Tramp i klaveret. RP har begått ett skamligt äktenskapsbrott, antingen mot sin egen make/maka om RP är gift, eller så har RP förfört en monogam gift person. RP blev hårt straffad med skamstock i en vecka och får öka sitt rykte med +1 specialiserat “horbock, “sköka” eller liknande."
+        },
+        "83": {
+          "result": "träffat_härskaren",
+          "description": "Träffat härskaren. RP har träffat härskaren i landet hen bor i. Härskaren var mycket trevlig, artig, vis och imponerande. RPs Lojalitet ökar med +1 och specialisera det mot “härskaren”. Övriga detaljerna behöver spelaren och SL bestämma tillsammans."
+        },
+        "84-85": {
+          "result": "tvångsrekryterad",
+          "description": "Tvångsrekryterad. RP blev tvångsrekryterad till någon armeenhet tidigare i sitt liv. RP får 2 enheter att spendera på färdigheten stridsvana och 1T6+2 enheter att spendera på färdigheten Marsch och 1 valfri vapenfärdighet. Övriga detaljerna behöver spelaren och SL bestämma tillsammans."
+        },
+        "86": {
+          "result": "kunskap_eller_olycka_conditional",
+          "conditions": {
+            "not_bazirk_frakktirak": {
+              "result": "unik_kunskap",
+              "description": "Unik kunskap. RP har fått veta något mycket hemligt. Det kan vara det sanna namnet på en demon, en hemlig väg genom Mitheraskogen, sanningen om en stor konspiration eller något annat. Det finns vissa personer som vill komma åt denna kunskap och gärna skulle jaga ner RP och slå kunskapen ur hen om de måste. Eller kanske en grupp personer som är livrädda för att RP ska sprida kunskapen och gärna vill döda RP för att hindra att hen pratar bredvid mun. exakta detaljer behöver spelaren och SL bestämma tillsammans."
+            },
+            "is_bazirk_frakktirak": {
+              "result": "tak_i_huvudet",
+              "description": "Tak i huvet. Under en svår storm tog RP skydd inne i ett hus, kanske sitt eget eller någon annans. Huset var tyvärr inte särskilt välbyggt så taket föll in, rakt i huvudet på RP. sedan dess känner sig RP obekväm inomhus och föredrar att sova utomhus eller i ett tält."
+            }
+          }
+        },
+        "87": {
+          "result": "uppenbarelse",
+          "description": "Uppenbarelse. RP har medverkat vid flera religiösa riter och studerat ämnet. Öka Tro med +2, öka qadosh med 1T6 och spendera 1T6+1 enheter på färdigheten Ceremoni."
+        },
+        "88-89": {
+          "result": "vanhedrad_conditional",
+          "conditions": {
+            "not_riddare_bazirk_frakktirak": {
+              "result": "vanhedrad_skampåle",
+              "description": "Vanhedrad. RP har hamnat i ett barslagsmål som slutade med att ordningsmakten tog hen och låste fast RP vid skampålen, där hen offentligt fick ta emot ob2T6 piskrapp. Och skämmas. Rykte ökar med +1 specialiserat på “bråkstake”."
+            },
+            "is_riddare": {
+              "result": "vanhedrad_hovet",
+              "description": "Tramp i klaveret. RP har skämt ut sig på något sätt inför hovet. De som vågar skrattar högt åt RP varje gång hen visar sig. De som inte vågar skratta så RP hör det skrattar ändå åt hen när hen inte kan höra. Alla sociala färdigheter vid hovet blir en nivå svårare (+ob1T6)"
+            },
+            "is_bazirk_frakktirak": {
+              "result": "rykte_infertil",
+              "description": "Infertil. Det ryktas att RP är infertil. Om det är sant eller inte är upp till spelaren och SL. oavsett sanningshalten i ryktet så vill RP hemskt gärna motbevisa ryktet. RPs ykte ökar med +1 specialiserat mot “infertil”"
+            }
+          }
+        },
+        "90": {
+          "result": "livsstil_conditional",
+          "conditions": {
+            "not_dvärg": {
+              "result": "vildmarkens_barn",
+              "description": "Vildmarkens barn. RP har levt större delen av sitt liv i vildmarken och trivs överlag bättre i obebodda områden än bland folk. RP får 2T6+6 enheter att spendera på färdighetena Jakt, Spåra och Överlevnad och BIL sänks med -2."
+            },
+            "is_dvärg": {
+              "result": "ny_skäggfrisyr",
+              "description": "Ny skäggfrisyr. RP har kommit på ett helt nytt och unikt sätt att bära sitt skägg som får hen att stå ut från mängden och lätt att komma ihåg."
+            }
+          }
+        },
+        "91-92": {
+          "result": "vildmarksliv",
+          "description": "Vildmarksliv. RP har levt en lång tid i vildmarken och lärt sig överleva där. RP får 1T6+1 enheter att spendera på färdigheten Spåra och 1T6+1 enheter att spendera på färdigheten Överlevnad."
+        },
+        "93": {
+          "result": "brott_conditional",
+          "conditions": {
+            "not_riddare": {
+              "result": "vittne",
+              "description": "Vittne. RP har bevittnat ett allvarligt brott. RP är nu jagad av en grupp som vill röja RP ur vägen så hen inte kan vittna mot de som begått brottet, och jagad av en annan grupp som vill att använda RPs vittnesuppgifter för att sätta dit brottslingarna. Övriga detaljer, som vad brottet var, vilka som begick det och varför, vilka som vill sätta dit brottslingarna samt hur det kommer sig att RP bevittnade brottet, behöver spelaren och SL bestämma tillsammans."
+            },
+            "is_riddare": {
+              "result": "vanhedrad_brott",
+              "description": "Vanhedrad. RP har begått ett vidrigt brott som blivit känt vid hovet. Brottet kan vara tempelplundring, våldtäkt, eller något annat. Pga sin ställning som riddare har RP undvikit straff, men hen är inte välkommen vid hovet eller vid tornerspel längre. RPs heder sänks med hälten (som minst 3) Exakta detaljer bestäms av spelaren och SL t.ex vad har RP gjort och varför?"
+            }
+          }
+        },
+        "94-95": {
+          "result": "vunnit_tävling",
+          "description": "Vunnit tävling. RP har vunnit en tävling, antingen genom skicklighet eller tur. RP får öka Rykte med +2 specialiserat mot något som passar för den vunna tävlingen. Slå 1T100 på följande tabell för att se vad för slags tävling det var. RP får dessutom 1T6+1 enheter att spendera på färdigheten som nämns i resultatet. (resultatet 55-59 står av någon anledning inte med i regelboken, troligen ett tryckfel. Slå om resultatet ifall detta dyker upp) Övriga detaljer, som vem som arrangerade tävlingen, behöver spelaren och SL bestämma tillsammans.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Typ av tävling",
+            "dice": "1d100",
+            "ranges": {
+              "1-6": { "result": "tävling_dans", "description": "danstävling (Dansa)" },
+              "7-12": { "result": "tävling_dryckes", "description": "dryckestävling (Supa)" },
+              "13-18": { "result": "tävling_kast", "description": "kasttävling (Kasta)" },
+              "19-24": { "result": "tävling_ryttar", "description": "ryttartävling (Rida)" },
+              "25-30": { "result": "tävling_musik", "description": "musiktävling (Musik)" },
+              "31-36": { "result": "tävling_skriva", "description": "skrivatävling (Valfri skriftfärdighet)" },
+              "37-42": { "result": "tävling_fiske", "description": "fisketävling (Fiske)" },
+              "43-48": { "result": "tävling_jakt", "description": "jakttävling (Jakt)" },
+              "49-54": { "result": "tävling_sång", "description": "sångtävling (Sjunga)" },
+              "60-66": { "result": "tävling_spel", "description": "speltävling (Spel & Dobbel)" },
+              "67-72": { "result": "tävling_bågskytte", "description": "bågskytte (Båge)" },
+              "73-78": { "result": "tävling_armborstskytte", "description": "Armborstskytte (Armborst)" },
+              "79-84": { "result": "tävling_spjutkastning", "description": "spjutkastning (Kastspjut)" },
+              "85-90": { "result": "tävling_yxkastning", "description": "yxkastning (Kastyxa)" },
+              "91-96": { "result": "tävling_knivkastning", "description": "Knivkastning (Kastkniv)" },
+              "97-100": { "result": "tävling_brottning", "description": "brottning (Slagsmål)" }
+            }
+          }
+        },
+        "96": {
+          "result": "väktare",
+          "description": "Väktare. RP har utsetts att vakta en plats eller föremål eller folk eller liknande. Vill man spela en “klassisk äventyrare i ett fantasy-rollspel” är det smart att välja ett litet föremål som är lätt att ta med sig, men en plats, exempelvis en särskild skog eller särskild stad , eller att skydda ett folk, t.ex Misslornas beskyddare, byn Vindtäppas folks beskyddare, fungerar för en RP som inte tänker resa så mycket. Exakta detaljer behöver spelaren och SL bestämma tillsammans."
+        },
+        "97": {
+          "result": "äventyr",
+          "description": "Äventyr. RP har vart ute på vilda och spännande äventyr. Slå ett slag på förmögenhetstabellen för att ta reda på hur mycket skatter RP har tagit med sig från detta äventyr. Öka Rykte med +1. Exakta detalj behöver spelaren och SL bestämma tillsammans."
+        },
+        "98": {
+          "result": "överlevt_katastrof",
+          "description": "Överlevt katastrof. RP hasr överlevt en katastrof som bragte många andra om livet. Exempel kan vara en stor brand, skeppsbrott, jordbävning, pest, svält eller något annat. RP får öka Rykte med +1 och specialisera det mot “överlevare”. Spelaren får välja ut en färdighet som var avgörande för RPs överlevnad i katastrofen och spendera 4 gratis enheter på denna."
+        },
+        "99-100": {
+          "result": "roll_twice",
+          "description": "Slå två gånger på denna tabell och använd båda resultaten"
+        }
+      }
+    }
+  }
+}

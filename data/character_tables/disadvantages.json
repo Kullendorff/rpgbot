@@ -1,22 +1,590 @@
 {
-    "1-5": "Alkoholist. RP har problem med alkohol och måste slå mot VIL för att motstå dryck.",
-    "6-10": "Blind. RP kan inte se alls. Alla handlingar som kräver syn blir mycket svårare.",
-    "11-15": "Döv. RP kan inte höra. Alla handlingar som kräver hörsel blir omöjliga.",
-    "16-20": "Enögd. RP har bara ett öga. Alla skjutfärdigheter blir en nivå svårare.",
-    "21-25": "Feg. RP är naturligt rädd och får svårare på alla modighetslag.",
-    "26-30": "Förföljd. Någon eller några jagar RP av okänd anledning.",
-    "31-35": "Galen. RP har en allvarlig psykisk störning som påverkar vardagen.",
-    "36-40": "Halt. En av RPs ben är skadat. Förflyttning sänks med -2.",
-    "41-45": "Illiterat. RP kan varken läsa eller skriva.",
-    "46-50": "Klen. RP är fysiskt svag. STY sänks med -2.",
-    "51-55": "Lättskrämd. RP skräms lätt och får svårare att hantera överraskningar.",
-    "56-60": "Märkt. RP har ett tydligt märke som gör honom/henne lätt att känna igen.",
-    "61-65": "Nattuggla. RP kan bara vara vaken på natten och sover på dagen.",
-    "66-70": "Paranoid. RP litar inte på någon och ser konspiationer överallt.",
-    "71-75": "Ryktesspridare. RP kan inte hålla tyst om hemligheter.",
-    "76-80": "Sjuklig. RP drabbas ofta av sjukdomar och läker långsamt.",
-    "81-85": "Stammande. RP har svårt att tala klart och tydligt.",
-    "86-90": "Supig. RP dricker för mycket och får ofta problem på grund av det.",
-    "91-95": "Våldssam. RP löser för ofta problem med våld.",
-    "96-100": "Fler nackdelar. Slå två gånger till på denna tabell och använd båda resultaten."
+  "bakgrundstabeller": {
+    "nackdelar": {
+      "titel": "Nackdelar",
+      "beskrivning": "Ger rollpersonen en nackdel, fobi, fiende eller annat negativt drag.",
+      "dice": "1d100",
+      "ranges": {
+        "1": {
+          "result": "albino",
+          "description": "Albino. RP har blek hy, kritvitt hår, och röda ögon. Ögonen och huden är extremt känsliga för starkt solljus. Vid krasftigt solsken får RP ob1T6 smärta per dygn om hen inte täcker huden med tjocka tyger eller liknande. Smärtan från solbränna läker inte föräns RP hållt sig borta från solljus i minst två dygn! Vid väldigt stark solljus får RP dessutom en nivå svårare (+ob1T6) på alla slag mot SYN och alla färdigheter som kräver skarpa ögon."
+        },
+        "2": {
+          "result": "begynnande_alkoholism",
+          "description": "Begynnande alkoholism. RP får 2T6+4 enheter att spendera på färdigheten Supa, som MÅSTE användas. Varje gång RP har möjlighet att dricka lite, t.ex om hen får syn på en taverna samtidigt som hen har några silver i fickan så måste RP MISSLYCKAS med ett slag mot Supa. ju mer som talar för att det är en dålig ide att ta sig en hutt, desto fler tärningar får spelaren slå. Om RP har gått om pengar och inte bråttom någonstans blir det ob1T6, om RP har bråttom, ont om pengar och vänner som tjatar på den om att inte dricka så mycket kanske RP får slå ob5T6 eller ob6T6."
+        },
+        "3": {
+          "result": "blodtörst",
+          "description": "Blodtörst. När RP hamnar i strid drabbas hen av våldsamt raseri som hen har svårt att kontrollera. Om det finns en möjlighet att dräpa en fiende i strid och RP inte vill göra det så måste hen klara ob3T6 mot VIL för att hindra sig själv från att göra just det."
+        },
+        "4": {
+          "result": "fysisk_åkomma_conditional",
+          "conditions": {
+            "is_alv": {
+              "result": "aktiv_hårväxt",
+              "description": "Aktiv hårväxt: RP har en extremt kraftig hårväxt över hela kroppen. RP ser ut mer som en apa än en alv. Många andra alver har svårt att inte visa någon slags avsmak för RPs lurviga utseende. Sänk PER med -1 och höj Förbannelse med +1."
+            },
+            "not_alv": {
+              "result": "blödarsjuk",
+              "description": "Blödarsjuk. RP blödningstakt läks med 1 poäng i timmen. Istället för 1 poäng per minut som är det normala. RP eller dennes vänner kan behöva ha med sig extra mycket bandage."
+            }
+          }
+        },
+        "5": {
+          "result": "personlig_börda_conditional",
+          "conditions": {
+            "not_tirak_dvärg": {
+              "result": "bunden_av_ed",
+              "description": "Bunden av ed. RP har svurit en ed som hen omöjligt kan tänka sig att bryta. RP kan göra vadsomhelst för att hålla sin ed, även om det skulle kosta hen livet. RPs heder höjs till 16 om den är lägre och specialiseras mot eden. Om RP skulle bryta sin ed av misstag skulle skammen vara så stor att den troligen inte skulle orka med att leva längre. De exakta detaljerna behöver bestämmas av spelaren och SL, t.ex vem har RP svurit eden till, varför, vad är eden?"
+            },
+            "is_tirak": {
+              "result": "okänd_mor",
+              "description": "Okänd mor. RP vet inte vem hens mor är. Hur detta kommer sig är upp till spelaren och SL att bestämma. RP kanske blev bortrövad som barn, modern kanske gav sig iväg när RP var mycket liten. Ovetskapen stör RP väldigt mycket och ett stort livsmål för RP är att ta reda på vem hens mor är, eller var."
+            },
+            "is_dvärg": {
+              "result": "okänt_födelsedatum",
+              "description": "Okänt födelsedatum. RP vet att hens födelsedatum är okänt. Hen har fått ett födelsedatum tilldelat av en av fästets arkivarier (eller något liknande om hen inte föddes i ett fäste) men ovetskapen om hens sanna födelsedatum stör RP oerhört mycket och ett av hens livsmål är att lista ut vilket som är hens äkta födelsedaturm"
+            }
+          }
+        },
+        "6": {
+          "result": "darrhänt",
+          "description": "Darrhänt. RP har en nivå svårare (+ob1T6) på alla färdigheter som kräver stadiga händer och precision t.ex bågskytte, fingerfärdighet, spela instrument m.m."
+        },
+        "7": {
+          "result": "dialekt",
+          "description": "Dialekt. RP har en grov dialekt och har svårt att göra sig förstådd när hen talar med folk som inte talar samma dialekt. (+ob1T6 i svårighet på alla kommunikationsfärdigheter)"
+        },
+        "8": {
+          "result": "disträ",
+          "description": "Disträ. RP är ofta mentalt frånvarande. Kanske pga dagdrömmande eller oförsiktighet. RP får en nivå svårare (+ob1T6) på alla slag mot SYN, Speja, HÖR, VIL. dessutom sänks Tur med -2"
+        },
+        "9": {
+          "result": "djurens_fiende",
+          "description": "Djurens fiende. Av någon anledning känner sig djur alltid hotade och otrygga så fort RP dyker upp. Djuren försöker fly från RP eller anfaller RP om de inte kan fly. RP kommer aldrig bli vän med ett djur. Att Rida någonstans är bara att glömma. RP kan åka vagn längst bak på en kärra som dras av djur så länge någon annan sköter djuret."
+        },
+        "10": {
+          "result": "drogmissbrukare",
+          "description": "Drogmissbrukare. RP är beroende av en vanebildande drog, förutom alkohol. Slå 1T100 på följande tabell för att avgöra hur starkt beroendet är. De exakta detaljerna behöver bestämmas av spelaren och SL, t.ex vad är det för drog, vilka är dess effekter, hur får RP oftast tag i den etc.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Beroendegrad",
+            "dice": "1d100",
+            "ranges": {
+              "1-25": {
+                "result": "lätt_beroende",
+                "description": "Lätt beroende. RP skulle kunna bryta beroendet med några månaders obehaglig abstinens som enda men."
+              },
+              "26-50": {
+                "result": "starkt_beroende",
+                "description": "Starkt beroende. RP skulle kunna bryta beroendet om hen lägger ner flera månader på att avvänja sig själv från sin vana. Det kommer kräva flera slag mot VIL under några månaders tid för att inte ge upp och ge sig ut för att skaffa mer av drogen och abstinensen kommer vara fysiskt plågsam, om än inte farlig."
+              },
+              "51-75": {
+                "result": "gravt_beroende",
+                "description": "Gravt beroende. RP skulle kunna bryta beroendet med hjälp från vänner. Det kommer krävas flera slag mot VIL under flera månaders tid, och några av dessa slag kommer automatiskt att misslyckas, och då kommer RPs vänner behöva tvinga den våldsamt skrikande och gråtande RP att hålla sig ifrån drogen."
+              },
+              "76-90": {
+                "result": "helt_beroende",
+                "description": "Helt beroende. RP kommer aldrig bli fri från sitt beroende. När abstinensen sätter in blir RP oftast en snörvlande och gråtande idiot som inte klarar av något själv om det inte är något som RP tror kan leda till att hen får drogen. RP kan ligga utslagen på marken men om den får ett löfte om mer drog i utbyte mot att mörda någon, och RP tror på detta, kommer RP förvandlas till en iskall mördare."
+              },
+              "91-100": {
+                "result": "extremt_beroende",
+                "description": "Extremt beroende. RP kommer dö om den inte får drogen. När abstinensen sätter in blir RP oftast en snörvlande och gråtande idiot som inte klarar av något själv om det inte är något som RP tror kan leda till att hen får drogen. RP kan ligga utslagen på marken men om den får ett löfte om mer drog i utbyte mot att mörda någon, och RP tror på detta, kommer RP förvandlas till en iskall mördare. Om RP inte får drogen kommer de sista stadierna av abstinensen döda RP."
+              }
+            }
+          }
+        },
+        "11": {
+          "result": "dråp",
+          "description": "Dråp. RP har av misstag råkat döda en bekant eller en vän. Händelsen har upprört RP mycket och gett hen dåligt rykte. +1 på Rykte med specialiseringen “vändräparen”. Det finns en grupp personer som vill hämnas på RP för olyckan som de inte förlåtit.\nDe exakta detaljerna behöver bestämmas av spelaren och SL. hur gick dråpet till, vem var RPs vän, vilka är det som vill hämnas, varför accepterar de inte att det var en olycka etc?"
+        },
+        "12": {
+          "result": "dyslektiker",
+          "description": "Dyslektiker. Alla skrift färdigheter är svårlärda för RP."
+        },
+        "13": {
+          "result": "dålig_lukt_conditional",
+          "conditions": {
+            "not_tirak": {
+              "result": "dålig_andedräkt",
+              "description": "Dålig andedräkt. RP har av någon anledning fruktansvärt dålig andedräkt. I situationer när det är viktigt att inte lukta illa, dvs de flesta sociala sammanhang, får RP en nivå svårare (+ob1T6) på alla sociala färdigheter. Andedräkten kan mildras korta perioder med starkt munvatten eller parfym, men någon permanent lösning verkar inte finnas."
+            },
+            "is_tirak": {
+              "result": "svag_kroppsodör",
+              "description": "Svag kroppspdör. RP luktar inte som en vanlig tirak. När andra tiraker hånar RP så de kallar hen för tuzalf (halvalven) för att hen luktar konstigt. Om RP försöker förföra en annan tirak får hen +ob2T6 i svårighetsökning."
+            }
+          }
+        },
+        "14": {
+          "result": "dålig_förlorare",
+          "description": "Dålig förlorare. Om RP deltar i en tävling, kamp eller liknande och förlorar denna behöver RP genast slå ett slag med ob3T6 för Aggression. Om det var en riktigt pinsam förlust kan slaget göras med ob2T6. Om slaget lyckas kan RP inte hålla sig från att skrika förolämpningar och okvädningsord mot personen som besegrat hen. Om slaget blir perfekt, eller om spelaren vill det, så kan RP inte hålla sig ifrån att anfalla personen som fick RP att förlora. Om slaget misslyckas eller fumlas kan RP hålla sin ilska inom sig om spelaren vill det."
+        },
+        "15": {
+          "result": "dålig_kondition",
+          "description": "Dålig kondition. RP har mycket dålig kondition. RP får en utmattningskolumn mindre än normalt. (utmattningskolumner beräknas senare i sektionen härledda värden)"
+        },
+        "16": {
+          "result": "dålig_lögnare",
+          "description": "Dålig lögnare. RP får två nivåer svårare (+ob2T6) varje gång hen medvetet försöker ljuga eller lura någon."
+        },
+        "17": {
+          "result": "dåligt_balanssinne",
+          "description": "Dåligt balanssinne. RP får två nivåer svårare (+ob2T6) på alla tärningsslag som berör att hålla balansen. Gå omkring på plan eller lagom lutande mark är inga problem, gå på lina, stå på något vingligt, stå på händer eller liknande är väldigt svårt."
+        },
+        "18": {
+          "result": "dålig_hälsa",
+          "description": "Dålig hälsa. RP har dåligt immunförsvar och är ofta förkyld eller har andra små-irriterande sjukdomar. När RP drabbas av allvarligare sjukdomar är alla TÅL-slag mot dessa en nivå svårare (+ob1T6)"
+        },
+        "19": {
+          "result": "dåligt_lokalsinne",
+          "description": "Dåligt lokalsinne. RP går ofta vilse och det är väldigt svårt för RP att hitta rätt. Färdigheten Geografi är svårlärd och alla slag mot denna frdighet blir en nivå svårare (+ob1T6). RP behöver slå ett slag mot PSY när den försöker hitta tillbaka till en plats hen vart på förut eller ta ut en riktning om det hen inte är på en plats hen knner MYCKET bra till."
+        },
+        "20": {
+          "result": "extremt_avundsjuk",
+          "description": "Extremt avundsjuk. Om RP träffar på personer som har något RP skulle vilja ha (en stilig partner, värdesaker, fina kläder, praktfulla vapen eller något annat) blir RP extremt kylig mot den personen pga sin svåra avundsjuka. Alla sociala färdigheter blir en nivå svårare mot en person RP blir avundsjuk på (+ob1T6)"
+        },
+        "21": {
+          "result": "social_osäkerhet_conditional",
+          "conditions": {
+            "not_tirak": {
+              "result": "extremt_blyg",
+              "description": "Extremt blyg. RP får kraftig tunghäfta och rejäla svettningar när någon som RP inte känner börjar tala med hen. Alla sociala färdigheter blir en nivå svårare (+ob1T6) mot en person som RP inte känner, förutom färdigheten Förföra som blir två nivåer svårare (+ob2T6)."
+            },
+            "is_tirak": {
+              "result": "efter_i_utvecklingen",
+              "description": "Efter i utvecklingen. RP har aldrig haft sex. Inte ovanligt bland manliga tiraker, men extremt ovanligt bland kvinnliga tiraker. Oavsett kön så skäms RP över att vara “oerfaren” och får +ob1T6 på alla kommunikationsfärdigheter när den talar med någon av det kön den attraheras av. om RPs amor är högre än 7 så får det sänkas till 7. Amor specialiseras mot “skam”."
+            }
+          }
+        },
+        "22": {
+          "result": "extremt_fördomsfull",
+          "description": "Extremt fördomsfull. RP hatar eller fruktar en speciell intelligent art. Hatet mot arten kan ta sig utryck på olika sätt när RP träffar en person av den arten t.ex okontrollerad vrede, panikartad skräck eller något annat. Slå 1T100 på följande tabell för att se vilken art RP hatar. Om resultatet blir samma art som RP är, slå om tärningen tills du får ett annat resultat. De exakta detaljerna behöver bestämmas av spelaren och SL",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Hatad art",
+            "dice": "1d100",
+            "ranges": {
+              "1-10": { "result": "hat_människor", "description": "människor" },
+              "11-20": { "result": "hat_alver", "description": "alver" },
+              "21-30": { "result": "hat_dvärgar", "description": "dvärgar" },
+              "31-40": { "result": "hat_ödlefolk", "description": "ödlefolk" },
+              "41-50": { "result": "hat_skuggfolk", "description": "skuggfolk" },
+              "51-60": { "result": "hat_kamorfer", "description": "kamorfer" },
+              "61-70": { "result": "hat_tiraker", "description": "tiraker" },
+              "71-80": { "result": "hat_vandöda", "description": "vandöda" },
+              "81-85": { "result": "hat_troll", "description": "troll" },
+              "86-90": { "result": "hat_vättar", "description": "vättar" },
+              "91-95": { "result": "hat_misslor", "description": "misslor" },
+              "96-100": { "result": "hat_drakar", "description": "drakar" }
+            }
+          }
+        },
+        "23": {
+          "result": "extremt_vidskeplig",
+          "description": "Extremt vidskeplig. RP tror på onda tecken och omen. RP beger sig väldigt ogrna ut i åskväder, besöker aldrig en gravpats på natten och blir mycket orolig om hen ser två två eller fler korpar på samma dag. RP får en nivå svårare (+ob1T6) på ALLA hanlingar om för många onda tecken visar sig på en och samma dag.\nDe exakta detaljerna behöver bestämmas av spelaren och SL. eller bestämmer SL detaljerna själv och ändrar lite på dom när hen tycker det passar."
+        },
+        "24": {
+          "result": "extremt_ädel_i_strid",
+          "description": "Extremt ädel i strid. RP kan aldrig tänka sig att anfalla någon bakifrån eller anfalla någon som är obeväpnad. RP låter alltid en fiende dra sitt vapen och göra sig redo innan hen anfaller. Om en fiende skulle tappa sitt vapen låter RP alltid fienden plocka upp det innan hen fortsätter striden. Att använda gifter eller andra fula tricks är helt otänkbart för RP. om RP skulle tvingas bryta mot någon av hedersreglerna ovan skulle hen drabbas av fruktansvärda samvetskval."
+        },
+        "25": {
+          "result": "fallandesjuka",
+          "description": "Fallandesjuka. RP lider av epilepsi, även känd som fallandesjuka. Utan förvarning kan RP drabbas kramper och ryckningar som får hen astt falla ihop och bli okontaktbar. Ibland orsakas anfallen av skarpa och skiftande ljussken. Vissa tror att fallandesjuka beror på att man blir besatt av demoner, vilket gör att “vanligt folk” undviker eller i värsta fall försöker döda den sjuke pga dens påstådda samröre med mörkrets makter. Om RP är extremt stressad, slarvar med mat och sömn under några dagars tid, eller utsätts för kraftiga, hetsiga och blinkande ljus s¨å kan SL bestämma att det är risk för ett anfall. Slå ob2T6 mot TÅL. om det misslyckas drabbas RP av ett anfall. Efter anfallet är RP mycket utmattad och behöver vila."
+        },
+        "26": {
+          "result": "fanatism",
+          "description": "Fanatism. RP är anhängare av någon extrem lära. Exempel kan vara en sekt, mindre religion, allmänt trångsynt syn på omvärlden, Dibukkulten (vars slutliga mål är allt livs utrotande), starkt rasistisk eller något annat. Fanatismen bör påverka RPs beteende mycket, men inte så mycket att hen blir ospelbar."
+        },
+        "27": {
+          "result": "feg",
+          "description": "Feg. RP är mycket rädd om sig själv. Om RP befinner sig i någon form av fara eller är hotad på något sätt behöver ob3T6 slås mot VIL för att RP inte ska försöka fly eller förråda sina vänner eller något annat typiskt fegt som kan rädda RP för tillfället."
+        },
+        "28": {
+          "result": "fel_plats_fel_tid",
+          "description": "Fel plats vid fel fel tid. RP hamnar av någon anledning väldigt ofta i jobbiga och farliga situationer. Tur sänks med -3"
+        },
+        "29": {
+          "result": "fet",
+          "description": "Fet. RPs vikt ökar med ob2T6+20 kilo och RPs utmattningskolumner minskar med 1."
+        },
+        "30": {
+          "result": "fläckad_själ",
+          "description": "Fläckad själ. RP lockar till sig allehanda obehagliga väsen, fredliga djur undviker RP, våldsamma djur kan vara överdrivet efterhängsna, oväder skapas ibland i RPs närhet och väldigt empatiska personer känner ofta obehag av RPs blotta närvaro."
+        },
+        "31": {
+          "result": "fobi",
+          "description": "Fobi. RP måste slå ett VIL-slag varje gång den konfronters med det som RP har fobi mot. Svårigheten är normalt ob3T6, men om skräckkällan är ovanligt mild kan det bli ob2T6, om skräckkällan är extremt närgången eller överväldigande kan det bli ob4T6 eller ob5T6. SL avgör från gång till gång. Lyckas slaget känner RP obehag men kan kontrollera sin rädsla. Misslyckat slag innebär att RP måste försöka fly eller åtminstone ta sig ifrån skräckkällan. Fumlat slag innebär att RP får panik eller blir katatonisk. Välj eller slå 1T100 på följande tabell för att avgöra vad RP har fobi mot.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Specifik fobi",
+            "dice": "1d100",
+            "ranges": {
+              "1-5": { "result": "arachnofobi", "description": "arachnofobi (spindlar)" },
+              "6-11": { "result": "akrofobi", "description": "akrofobi (höjdskräck)" },
+              "12-15": { "result": "agorafobi", "description": "agorafobi (Skräck för öppna ytor)" },
+              "16-20": { "result": "algofobi", "description": "algofobi (smärta)" },
+              "21-26": { "result": "astrofobi", "description": "astrofobi (Åska och blixtar)" },
+              "27-30": { "result": "demofobi", "description": "demofobi (folksamlingar)" },
+              "31-35": { "result": "entomofobi", "description": "entomofobi (insekter)" },
+              "36-39": { "result": "hemofobi", "description": "hemofobi (blod)" },
+              "40-45": { "result": "hydrofobi", "description": "hydrofobi (Sjöar, hav, floder, åar etc)" },
+              "46-49": { "result": "klaustrofobi", "description": "klaustrofobi (Trånga utrymmen)" },
+              "50-55": { "result": "magifobi", "description": "magifobi (magi)" },
+              "56-60": { "result": "nekrofobi", "description": "nekrofobi (Döda varelser)" },
+              "61-66": { "result": "ophidofobi", "description": "ophidofobi (ormar)" },
+              "67-70": { "result": "pyrofobi", "description": "pyrofobi (eld)" },
+              "71-76": { "result": "skotofobi", "description": "skotofobi (mörker)" },
+              "77-80": { "result": "taphofobi", "description": "taphofobi (gravar)" },
+              "81-87": { "result": "teratofobi", "description": "teratofobi (monster)" },
+              "88-93": { "result": "thanofobi", "description": "thanofobi (Sin egen död)" },
+              "94-97": { "result": "xenofobi", "description": "xenofobi (Främmande folkslag)" },
+              "98-100": { "result": "zoofobi", "description": "zoofobi (djur)" }
+            }
+          }
+        },
+        "32": {
+          "result": "fåfäng",
+          "description": "Fåfäng. RP tycker det är extremt viktigt att hen själv ser bra ut. RP spenderar mycket tid, möda och pengar på att skaffa stiliga kläder, ordna håret, sminket etc. finns det en spegel i närheten kommer hen bli tvungen att beundra sin egen spegelbild. RP är mycket lättpåverkad av smicker. Alla försök att Övertala RP blir två nivåer lättare (-ob2T6) om det är mer eller mindre baserat på smicker."
+        },
+        "33": {
+          "result": "förbannelse",
+          "description": "Förbannelse. Av någon anledning vilar en förbannelse över RP. varför är upp till spelaren och SL, förslagsvis kan förbannelsen gått i arv, eller så har RP begått en oförätt mot någon magikunnig som hämnats med förbannelsen eller något annat. Föbannelsen kan innebära lite vad som helst så länge det är hemskt för RP. exempel: alla RP blir kära i drabbas av ond bråd död, eller alla RP blir kär i kommer förr eller senare att hata RP, eller att alla rikedomar RP kommer över blir hen av med innan hen hinner njuta av dom, eller att det blir alltid dåligt väder vart hen än färdas, eller alla RPs värsta befarelser besannas (“tänk om det finns ett monster i den grottan” eller “hoppas jag inte blir anfallen av bovar när jag tar genvägen genom den här mörka gränden”) eller att alla skepp och båtar RP färdas med oundvikligen förliser, eller något annat. RPs Tur snks med -2. De exakta detaljerna bestäms av spelaren och SL."
+        },
+        "34": {
+          "result": "förträngning",
+          "description": "Förträngning. RP har vart med om något extremt obehagligt i sitt förflutna som hen har förträngt ur sitt minne. Om en liknande händelse uppstår eller om RP börjar gräva i sitt förflutna så kommer RP drabbas av svåra, skräckfyllda panikattacker. De exakta detaljerna bestäms av spelaren och SL, dvs vad RP råkat ut för och förträngt. Om ni vill kan SL bestämma detta själv och inte låta spelaren veta exakt vad det är RP förträngt."
+        },
+        "35": {
+          "result": "förtvinande_sjukdom",
+          "description": "Förtvinande sjukdom. RP led för en tid sedan av en förtvinande sjukdom som gjort att hens kroppsbyggnad förminskats. När du senare räknar ut RPs kroppsbyggnad får du ta resultatet i rutan över den du får av siffrorna, vilket också leder till att RP får färre skadekolumner. När du senare räknar ut RPs vikt får du sänka den med 10%."
+        },
+        "36": {
+          "result": "förvridet_utseende",
+          "description": "Förvridet utseende. RP har fått sitt utseende förvridet så hen ser omänsklig ut. (eller oalvisk, odvärgisk, omisslig, otirakisk…) de flesta tycker RP ser skrämmande ut. Hur RP blivit förvriden behöver SL och spelaren bestämma. Förslag: det kan bero på ett misslyckat magiskt experiment, en guds vrede, en demons påverkan eller något annat. Hur utseendet förändrats är också något som behöver bestämmas. Förslag: fjällig, kolsvart hud, kluven tunga, kritvit och iskall hud eller något annat. Hursomhelst är det väldigt svårt för RP i sociala sammanhang. SL får bestämma en passande svårighetsökning på alla sociala färdigheter."
+        },
+        "37": {
+          "result": "girig",
+          "description": "Girig. RP älskar sina materiella tillgångar mer än något annat och vill alltid ha mer. RP kommer göra allt för att öka sina rikedomar, även om det innebär några moraliska tveksamheter. RP måste lyckas med ett VIL-slag för att inte ta en chans att bli rikare om den erbjuds och spelaren inte vill detta. Om Generositet är högre än 8 får denna slås om med 1T6+2 och Heder sänks med -2 (men kan som lägst vara 3)"
+        },
+        "38": {
+          "result": "haltar",
+          "description": "Haltar. RPs förflyttning (som räknas ut senare) minskar med -2 (kan som sämst bli 1)"
+        },
+        "39": {
+          "result": "hämnd",
+          "description": "Hämnd. RP har utsatts för en hemsk oförätt i sitt förflutna som hen svurit att hämnas. Mycket av RPs tankar tas upp av hämnden och hen kommer inte få ro i sinnet förrän hämnden är utförd, om ens då. De exakta detaljerna bestäms av spelaren och SL. vem har utsatt RP? Vad har RP utsatts för? Hur vill RP helst hämnas?"
+        },
+        "40": {
+          "result": "härjad_av_demoner",
+          "description": "Härjad av demoner. RP är säker på att hen är ansatt av demoner. Vid vissa tillfällen kan RP höra deras röster viska, tala eller vråla åt RP. andra tillfällen kan RP bara känna av deras närvaro. Demonerna viskar ofta saker till RP, de kan förvrida RPs syn och försöka tvinga RP att göra saker. SL får avgöra om RP verkligen är härjad av demoner eller om det är någon slags sinnessjukdom."
+        },
+        "41": {
+          "result": "häxmärke",
+          "description": "Häxmärke. RP har ett stort födelsemärke på kroppen som många anser vara ett bevis på att RP är någon slags ond häxa eller liknande. Slå ett slag på träfftabellen i stridskapitlet för att ta reda på vart märket sitter."
+        },
+        "42": {
+          "result": "impotent",
+          "description": "Impotent. RP kan av en eller annan anledning inte ha sex."
+        },
+        "43": {
+          "result": "inlärningssvårigheter",
+          "description": "Inlärningssvårigheter. RP har svårt att lära sig fakta, teorier eller att memorera saker. ALLA kunskapsfärdigheter blir svårlärda."
+        },
+        "44": {
+          "result": "jagad",
+          "description": "Jagad. RP är jagad pga något RP gjort eller drabbats av i det förflutna. Exakt vad RP gjort eller vart med om och varför RP inte vill låta den som jagar RP få tag i hen behöver bestämmas av spelaren och SL. den som jagar RP har 3T6 resurser. Ett lågt värde visar på små resurser, kanske är det en enda person som ensam jagar RP. ett högt värde tyder på att det är en inflytelserik person eller en hel organisation som är ute efter RP och att de gärna använder sina stora resurser för att få tag i RP."
+        },
+        "45": {
+          "result": "klumpfot",
+          "description": "Klumpfot. RPs ena fot är missbildad och ser mer ut som en köttklump än en fot. RP har mycket tydliga problem att gå. RPs förflyttning (som räknas ut senare) halveras (kan som lägst bli 1)"
+        },
+        "46": {
+          "result": "klumpig",
+          "description": "Klumpig. RP är klumpig vilket innebär att alla rörelsefärdigheter är svårlärda."
+        },
+        "47": {
+          "result": "kortväxt",
+          "description": "Kortväxt. RP är mindre än de flesta. Längd minskas med 20% och vikt minskas med 10% (längd och vikt räknas ut senare)"
+        },
+        "48": {
+          "result": "krigsskada",
+          "description": "Krigsskada. RP har deltagit i ett våldsamt slag. Det kan ha vart ett regelrätt fältslag, eller ett ovanligt stort barslagsmål som spårade ur när vapen drogs eller något annat. De exakta detaljerna bestäms av spelaren och SL. RP blev iallafall allvarligt skadad och måste sänka TÅL och RÖR med -1 vardera. RP får två enheter att spendera på färdigheten Stridsvana."
+        },
+        "49": {
+          "result": "könssjukdom",
+          "description": "Könssjukdom. RP har en icke-dödlig, kronisk och mycket irriterande könssjukdom, t.ex blåskrev, som denne riskerar att föra vidare till alla hen har intimumgänge med."
+        },
+        "50": {
+          "result": "laglös",
+          "description": "Laglös. RP är efterlyst och har ett pris på sitt huvud. ob3T6*100 silvermynt till den första prisjägare som kan föra RP till den som utfäst belöningen. De exakta detaljerna bestäms av spelaren och SL, t.ex varför är RP efterlyst, har hen begått ett brott? vem har utfäst belöningen, en myndighet eller en privatperson? RP kan räkna med prisjägare efter sig, speciellt om belöningen är hög."
+        },
+        "51": {
+          "result": "liknar_brottsling",
+          "description": "Liknar brottsling. RP är mycket lik en ökänd bandit som härjar i området där RP befinner sig. Många tar fel på brottslingen och RP vilket i bästa fall leder till lustiga missföstånd, i värsta fall till att prisjägare eller ordningsmakt försöker fånga RP."
+        },
+        "52": {
+          "result": "låg_qadosh",
+          "description": "Låg qadosh. På grund av något otrevligt som hänt har RP förlorat 1T6 poäng qadosh. RP kan mycket väl ha negativ qadosh."
+        },
+        "53": {
+          "result": "mager",
+          "description": "Mager. RP är av någon anledning väldigt tunn. När kroppsbyggnaden räknas ut senare blir den ett steg lägre än det egentliga resultatet, vilket också påverkar skadekolumnerna. När vikten räknas ut senare får den sänkas med 25%."
+        },
+        "54": {
+          "result": "magisk_sensitivitet",
+          "description": "Magisk sensitivitet. RP är mycket känslig för ,agisk påverkan och all magi som riktas mot RP är två nivåer (-ob2T6) att väva. Detta gäller både magi med positiv effekt och negativ effekt. Men det gäller INTE magi som RP själv väver emot sig själv."
+        },
+        "55": {
+          "result": "mindervärdeskomplex",
+          "description": "Mindervärdeskomplex. RP har mycket dåligt självförtoende och underskattar ofta sig själv. När RP behöver utföra handlingar som kräver någon slags självsäkerhet kan det behövas ett VIL-slag för att RP ens ska våga försöka."
+        },
+        "56": {
+          "result": "misshandlad",
+          "description": "Misshandlad. RP blev en gång svårt misshandlad i ett slagsmål, förhör eller bestraffning. De exakta detaljerna bestäms av spelaren och SL. hursomhelst, misshandeln har lämnat flera missprydande och skrämmande ärr på RPs kropp och ansikte. TÅL och PER minskar med -2 vardera."
+        },
+        "57": {
+          "result": "mytoman",
+          "description": "Mytoman. RP har extremt svårt att hålla sig till sanningen och berättar ofta och gärna fantastiska berättelser om vad hen gjort, sett, hört talas om eller vart med om. RP blandar sina lögner med ett uns sanning om det behövs. RP kan normalt inte kontrollera sig själv, men om spelaren vill att RP ska hålla sig fullt ut till sanningen så behöver ett PSY-slag slås. RP får specialiseringen “ljuga” på färdigheten Övertala, och Rykte höjs med +1, specialiserat på “lögnare”. De som knner RP vet att hen är en obotlig lögnare."
+        },
+        "58": {
+          "result": "nymfoman",
+          "description": "Nymfoman. RP har alltid en stor längtan efter sex. RP är inte särskild nogräknad med vem eller vart sexet ska ske. Att förföra RP är långt ifrån svårt och de som försöker får två nivåer lättare (-ob2T6) på sina tärningsslag. RP är så gott som alltid på jakt efter nya sexuella eskapader och spelare bör försöka spela på detta. Om Amor är lägre än 13 får detta karaktärsdrag slås om men 1T6+12."
+        },
+        "59": {
+          "result": "obotlig_sjukdom",
+          "description": "Obotlig sjukdom. RP lider av en icke-smittsam, obotlig och dödlig sjukdom, t.ex kräftsot. De läkare RP besökt har konstaterat att RP sannolikt bara har ett fåtal år kvar och det finns ingen hjälp att få. Sjukdomen har ingen fysisk påverkan vid spelets början men kan få det senare. Dock har den sannolikt en psykisk påverkan då RP vet att hens dagar är räknade."
+        },
+        "60": {
+          "result": "oempatisk",
+          "description": "Oempatisk. RP har svårt att förstå och läsa av känslor och stämningar bland personer omkring sig, vilket leder till att hen ofta beter sig felaktigt eller okänsligt i sociala situationer. ALLA sociala färdigheter är svårlärda"
+        },
+        "61": {
+          "result": "olikfärgade_ögon",
+          "description": "Olikfärgade ögon. RP har två olika färger på sina ögon vilket tyvärr ses som ett ont omen i många länder. RP får en nivå svårare på alla färdighetsslag när på sociala färdigheter om personen RP talar med är vidskeplig."
+        },
+        "62": {
+          "result": "olyckskorp",
+          "description": "Olyckskorp. Om RP har ett värde på 8 eller högre i Tur får det slås om med 1T6+2."
+        },
+        "63": {
+          "result": "orolig_mage",
+          "description": "Orolig mage. RP har en väldigt orolig mage, vilket gör att RP ofta och vid olämpliga tillfällen behöver släppa väder, får sura uppstötningar, drabbas av magknip, måste utföra sina behov ovanligt ofta eller liknande problem. Speciellt om RP äter olämplig eller ovanlig mat som hens mage inte är van vid."
+        },
+        "64": {
+          "result": "ouppnåeligt_livsmål",
+          "description": "Ouppnåeligt livsmål. RP har ett så gott som fullständigt omöjligt livsmål, t.ex finna den ultimata kunskapen, bli härskare över Jargien, bli en gud eller något liknande. De exakta detaljerna bestäms av spelaren och SL. RPs beteende kommer ständigt färgas av livsmålet, oavsett hur stora och många hindren för målet är."
+        },
+        "65": {
+          "result": "paranoid",
+          "description": "Paranoid. RP är säker på att någon eller några är ute efter RP. hen misstänker allt som beter sig det minsta ovanligt. RP kan eventuellt ha en liten skara vänner som hen litar på i alla väder, förslagsvis de andra RPerna, men resten av världen vill hen säkert väldigt illa. RP får två enheter att spendera på färdigheten Speja, men i sociala sammanhang fungerar RP väldigt dåligt. De exakta detaljerna bestäms av spelaren och SL."
+        },
+        "66": {
+          "result": "skam_conditional",
+          "conditions": {
+            "not_tirak": {
+              "result": "rentvå_heder",
+              "description": "Rentvå heder. RP, eller möjligen någon i RPs familj har gjort något som befälckat dennes heder. Alternativt är RP oskyldig till dådet men av någon anledning har RP fått skulden för det och alla tror att RP är skyldig iallafall. Exempel på dåd som kan ha fläckat RPs heder kan vara förrderi, stöld, dråp, mordmassaker, praktiserande av förbjuden kunskap eller förbjuden magi. De exakta detaljerna bestäms av spelaren och SL. RP plågas svårt av sitt dåliga rykte och kommer göra nästan vad som helst för att göra bot och bättring eller rentvå sig själv/sin familj och återställa hedern. Det kommer vara mycket svårt. Observera att detta inte påverkar karaktärsdraget Heder, RP kan fortfsarande vara en hedersam person även om hens rykte gör gällande att hen inte är det."
+            },
+            "is_tirak": {
+              "result": "rymd_slav",
+              "description": "Slav. RP är en föredetta slav, som rymt från stammen som hållt hen som slav. Om RP är bazirk- eller frakktirak så kan det ha vart samma stam som RP föddes och växte upp i, eller så kan det vara någon annan stam som rövat bort hen. Oavsett så är stammen som höll RP som slav inte alls glada över att RP har rymt och kommer försöka döda hen samma sekund som de ser hen. Om RP är Marnakhtirak kan den ha blivit bortrövad av en bazirk- eller frakkstam, eller så kan den ha blivit förslavad av någon mänsklig slavhandlare."
+            }
+          }
+        },
+        "67": {
+          "result": "reumatism",
+          "description": "Reumatism. RP lider av ledgångsreumatism. Varje gång ett färdighetsslag eller attributslag som har med STYrka eller RÖRlighet fumlas behöver RP slå ett TÅLighetsslag med ob3T6. Om detta slag misslyckas drabbas RP av ob1T6 smärta. RP får dock en nivå lttare (-ob1T6) på alla slag mot väderkännedom pga hen kan känna stundande väderomslag i lederna."
+        },
+        "68": {
+          "result": "rädsla_för_det_mystiska",
+          "description": "Rädsla för det mystiska. RP är rädd för allt som är mystiskt eller övernaturligt. Alla Mystiska och Alstra färdigheter blir Svårlärda."
+        },
+        "69": {
+          "result": "saknar_en_hand",
+          "description": "Saknar en hand. Slå ett slag för vilken hand som förlorats, udda=höger hand, jämnt=vänster hand. Den hand som blir kvar blir automatiskt RPs vapenarm. Hur RP förlorat handen bestäms av spelaren och SL. missbildning vid födseln, olycka, stympad som straff för något, strid?"
+        },
+        "70": {
+          "result": "saknar_ett_öga",
+          "description": "Saknar ett öga. RP har bara ett öga. Slå ett tärningsslag för att avgöra vilket, udda=höger öga, jämnt=vänster öga. RP saknar djupseende och har väldigt svårt att bedöma avstånd. RP får en nivå svårare (+ob1T6) när hen försöker använda avståndsvapen eller Kasta något."
+        },
+        "71": {
+          "result": "sifferblind",
+          "description": "Sifferblind. RP lider av svår diskalkyli, vilket gör att hen inte ens kan föreställa sig matematiska problem eller formler. Med lite tur och djup koncentration kan RP räkna till tio utan att glömma bort något tal. Färdigheten Räkning kan aldrig få ett värde högre än 5."
+        },
+        "72": {
+          "result": "skakningar",
+          "description": "Skakningar. RP drabbas ibland av kraftiga spasmer. När RP är stressade situationer, t.ex i strid eller hetsiga gräl, behöver man slå ett slag mot PSY med ob2T6. Misslyckas slaget börjar RP darra och få spasmer vilket gör alla färdighetsslag en nivå svårare (+ob1T6). Spasmerna håller i sig tills RP hamnar i en lugnare situation och lyckats lugna ner sig några minuter."
+        },
+        "73": {
+          "result": "håravfall_conditional",
+          "conditions": {
+            "not_tirak": {
+              "result": "skallig",
+              "description": "Skallig. RP har en stor kal fläck på huvudet. Detta gäller även kvinnor, ungdomar och folkslag som normalt inte tappar håret som alver och misslor."
+            },
+            "is_tirak": {
+              "result": "delvis_klen_hårväxt",
+              "description": "Delvis klen hårväxt. RPs päls har fallit bort på en del fläckar på kroppen. Det ser ut som hen har skabb, men det är egentligen bara kala fläckar som inte smittar. RPs PER sänks med -1"
+            }
+          }
+        },
+        "74": {
+          "result": "skyldig_en_tjänst",
+          "description": "Skyldig en tjänst. En person har räddat RP ur en svår situation, kanske till och med räddat RPs liv. RP är skyldig denna person en stor tjänst. RPs Heder ökar med +2 och specialiseras mot att “hålla löftet om en tjänst mot <personen som räddat RP>”. De exakta detaljerna bestäms av spelaren och SL, som vem personen är, hur den räddat RP, och hur och tjänsten kommer inkrävas."
+        },
+        "75": {
+          "result": "skör_benstomme",
+          "description": "Skör benstomme. Av någon anledning har RP mycket skör benstomme vilket gör alla slag mot brytrisk en nivå svårare (+ob1T6). (brytrisk är en regel som ibland tillämpas när RP blir svårt skadad i strid eller andra situationer och riskerar att bryta ett ben i skelettet)"
+        },
+        "76": {
+          "result": "smittobärare",
+          "description": "Smittobärare. RP är av någon anledning kroniskt smittad av någon sjukdom. Sjukdomar finns beskrivna i sitt eget kapitel. SL väljer eller hittar på en ny sjukdom som RP bär på. RP är dock själv immun mot sjukdomen av någon anledning, men folk i hens närhet kan alltid drabbas. Smittorisken är alltid ob1T6 och alla TÅL-slag för att motstå sjukdomen blir en nivå lättare (-ob1T6). Förutom att RP är kronisk bärare av sjukdomen har hens Rykte ökat med +2 specialiserat mot “smittobärare”."
+        },
+        "77": {
+          "result": "smärtkänslig",
+          "description": "Smärtkänslig. RP har en kolumn mindre i skadesektionen för Smärta (som räknas ut senare, kom ihåg att smärt-sektionen skall ha en kolumn mindre än vad reglerna egentligen anger) RP kan som minst ha en kolumn och det går inte att sänka det lägre än 1."
+        },
+        "78": {
+          "result": "spelberoende",
+          "description": "Spelberoende. RP är gravt spelberoende och njuter alltför mycket av att riskera sina rikedomar på vadslagning, kortspel eller liknande. Det är som en drog för RP. varje gång det finns möjlighet att ägna sig åt något sådant och spelaren inte vill satt RP ska göra det måste ob3T6 slås mot VIL för att RP ska kunna motstå frestelsen."
+        },
+        "79": {
+          "result": "stammar",
+          "description": "Stammar. RP får en nivå svårare på alla kommunikationsfärdigheter som kräver verbal kommunikation pga sina svåra stamningar."
+        },
+        "80": {
+          "result": "stor_mage",
+          "description": "Stor mage. RP har en ovanligt stor mage. Minska RÖR med -1 och öka vikt med ob1T6+10 (vikt räknas ut senare, anteckna viktökningen nu och applicera den senare när det blir dags att räkna ut vikten."
+        },
+        "81": {
+          "result": "storhetsvansinne",
+          "description": "Storhetsvansinne. RP anser av någon anledning att hen själv är världens medelpunkt och har svårt att förstå varför inte alla andra ser detta också. RP tycker att kungar, gudar, drakar och allt annat i världen borde veta bättre än att trotsa hen. RP ser ner på så gott som allt i världen. RP har kanske lärt sig att det inte alltid är klokt att fullt ut visa sitt förakt för alla omkring sig, men tendenserna hen har att se ner på allt och alla brukar lysa igenom ganska snabbt ändå."
+        },
+        "82": {
+          "result": "stridsfruktan",
+          "description": "Stridsfruktan. RP känner ett starkt ogillande gentemot strid och vapen. ALLA vapenfärdigheter är svårlärda."
+        },
+        "83": {
+          "result": "svagt_språkcentra",
+          "description": "Svagt språkcentra. RP får spm bäst färdighetsvärde 10 i sitt eget modersmål. I alla andra språk får den som högst ha färdighetsvärde 5."
+        },
+        "84": {
+          "result": "svettningar",
+          "description": "Svettningar. RP svettas extremt mycket och luktar sällan gott, vilket tyvärr gör att personer gärna försöker undvika RP."
+        },
+        "85": {
+          "result": "svårlärd",
+          "description": "Svårlärd. Någon färdighet som är väsentlig för RP är svårlärd. För en magiker är kanske färdigheten djurskötsel inte så väsentlig, för en bonde är nog alstra-färdigheterna särskilt viktiga. Välj en färdighet som RP behöver vara duktig på som svårlärd."
+        },
+        "86": {
+          "result": "syndabock",
+          "description": "Syndabock, RP har fått skulden för ett nesligt brott eller hemsk händelse som hen är oskyldig till. De flesta runtomkring RP tror ändå att RP är skyldig och behandlar hen därefter. De exakta detaljerna bestäms av spelaren och SL, som vad har RP fått skulden för, vem satte dit RP, varör kan RP inte bevisa sin oskuld etc..."
+        },
+        "87": {
+          "result": "sävlig",
+          "description": "Sävlig. RP är långsam i tanke och handling när hen blir stressad. Om RP behöver agera eller besluta något snabbt får hen en nivå svårare (+ob1T6) på alla tärningsslag. I strider får RP en nivå svårare på alla tärningslag i den första rundan av striden. Den andra och följande rundor fungerar hen som vanligt."
+        },
+        "88": {
+          "result": "tappat_minnet",
+          "description": "Tappat minnet. RPs förflutna är höljt i dunkel. Vissa perioder kan RP få minnesglimtar av vad hen vart med om innan minnet försvann men inget sammanhängande. När det blir dags att slå fram kontakter senare i rollpersonsskapandet får RP bara hälften av kontakterna. Om spelaren och SL vill det så kan alla slag som tidigare gjorts på familjetabellen strykas eftersom RP inte kan minnas sin familj. Om ni inte vill detta kan familjen ha hittat RP efter att hen tappat minnet. Det är också möjligt att familjen RP tror är sin egen egentligen bara är en samling folk som ljuger för RP att de är hens familj, det vet inte RP!\n\nDen här nackdelen är ett utmärkt tillfälle för SL att väva in mystiska och obehagliga överaskningar från RPs förflutna.\n\nOm RP är en alv får den dock sänka Förbannelsen med -3."
+        },
+        "89": {
+          "result": "trasiga_tänder",
+          "description": "Trasiga tänder. RP har fått sina tänder förstörda, hur får spelaren och SL bestämma. Förslagsvis tandröta, slag mot munnen eller någon olycka. Det är mycket svårt för RP att äta fast föda."
+        },
+        "90": {
+          "result": "traumatisk_händelse",
+          "description": "Traumatisk händelse. RP har vart med om en svårt traumatisk händelse som hemsöker dens psyke fortfarande och antagligen kommer göra det tills RP dör. De exakta detaljerna bestäms av spelaren och SL, men förslagsvis har RP råkat ut för svår misshandel, tortyr, våldtäkt eller något annar hemskt. Varje gång RP hamnar i en situation som liknar den traumatiska händelsen måste hen klara ob3T6 mot VIL för att inte bryta ihop."
+        },
+        "91": {
+          "result": "tvångstanke",
+          "description": "Tvångstanke. RP lider av en tvångstanke som komplicerar hens vardag. De exakta detaljerna bestäms av spelaren och SL, förslag: behöver sätta eld på saker, måste tvätta sig extremt noggrant och extremt ofta, maniskt samla på någonting, alltid ha samma typ av kläder, överdrivna kostvanor eller något annat."
+        },
+        "92": {
+          "result": "tål_ej_alkohol",
+          "description": "Tål ej alkohol. RP har ett ovanligt dåligt ölsinne och alla slag för färdigheten Supa blir två nivåer svårare. (+ob2T6)"
+        },
+        "93": {
+          "result": "utslag",
+          "description": "Utslag. RP är översållad av fula och skrämmande utslag. De smittar inte, men när de syns tror de flesta att de smittar ändå. Alla kommunikationsfärdigheter blir en nivå svårare (+ob1T6) om utslagen syns."
+        },
+        "94": {
+          "result": "vanställt_ansikte",
+          "description": "Vanställt ansikte. RPs ansikte är förvridet och hen ser både korkad och skrämmande ut. De exakta detaljerna bestäms av spelaren och SL, t.ex, är vanställningen medfödd eller ett resultat av någon hemsk olycka? PER minskar med -3 (kan som sämst bli 1) pga omgivningens förutfattade meningar om personer med sådana ansikten."
+        },
+        "95": {
+          "result": "viskande_röst",
+          "description": "Viskande röst. RP har en skada på stämbanden som gör att hen inte kan höja rösten över viskningsnivå. Om det är tyst och lugnt omkring RP är det inte svårt att höra hen, men i stojiga och högljudda miljöer/tillfällen, som överfulla värdshus eller i strider, blir det nästan omöjligt att kommunicera för Rp."
+        },
+        "96": {
+          "result": "våghals",
+          "description": "Våghals. RP är nästan fullständigt orädd för faror. Spelaren förväntas spela sin RP som om den trodde att den var osårbar (även om RP blir sårad flera gånger). RP kan utan att tänka slänga sig själv in i livsfarliga situationer, är inte rädd för att förolämpa härskare och myndigheter, slåss gärna med hur många fiender som helst, ju fler desto bättre, och tackar aldrig nej till en utmaning eller vadslagning. Folk som känner RP blir lika förvånade varje gång de ser hen att hen inte dött ännu. En liten bonus är att RP får en nivå enklare (-ob1T6) på sitt VIL slag varje gång den utsätts för skräck."
+        },
+        "97": {
+          "result": "ärkefiende_conditional",
+          "description": "Ärkefiende. RP har en ärkefiende. Slå ett slag på kontakttabellen för att avgöra vilken slags person det är. Slå sedan 1T100 på någon av tabellerna nedan för att avgöra hur grav fiendeskapet är, en tabell för alver och en tabell för övriga.",
+          "conditions": {
+            "is_alv": {
+              "result": "ärkefiende_alv",
+              "description": "Alviska RPers fiendeskap",
+              "has_subtable": true,
+              "subtable": {
+                "titel": "Alviskt fiendeskap",
+                "dice": "1d100",
+                "ranges": {
+                  "1-50": {
+                    "result": "fiendeskap_förolämpning",
+                    "description": "RP har förolämpat någon. Det kan vara ett slags svartsjukedrama eller liknande. Fiendeskapet slutar oftast i hårda ord, dålig stämning och kanske något slagsmål då och då."
+                  },
+                  "51-90": {
+                    "result": "fiendeskap_dödshot",
+                    "description": "Fienden vill döda RP. dessutom har hen stora resurser (2T6+6) och använder gärna dom för att göra livet surt för RP eller leta upp hen om hen försöker gömma sig."
+                  },
+                  "91-100": {
+                    "result": "fiendeskap_krig",
+                    "description": "Krig. Fienden vill inte bara döda RP - fienden vill göra slut på RPs heder, familj, vänner, bekanta och, om möjligt, få hela RPs historia att raderas. Fienden har 2T6+6 resurser."
+                  }
+                }
+              }
+            },
+            "not_alv": {
+              "result": "ärkefiende_icke_alv",
+              "description": "Icke-alviska RPers fiendeskap",
+              "has_subtable": true,
+              "subtable": {
+                "titel": "Icke-alviskt fiendeskap",
+                "dice": "1d100",
+                "ranges": {
+                  "1-25": {
+                    "result": "fiendeskap_förolämpning",
+                    "description": "RP har förolämpat sin ärkefiende. Fienden vill mest ge RP stryk eller möjligen utmana RP på en duell, beroende på kultur och samhällsklass."
+                  },
+                  "26-60": {
+                    "result": "fiendeskap_dödshot_låga_resurser",
+                    "description": "Fienden vill döda RP och kommer att göra allt i sin makt för att lyckas med detta. Som tur är är fiendens makt inte jättestor, då den bara har 1T6+2 resurser."
+                  },
+                  "61-90": {
+                    "result": "fiendeskap_dödshot_höga_resurser",
+                    "description": "Fienden vill döda RP och kommer göra allt i sin makt för att hitta och döda RP. fienden har 2T6+6 resurser som bland annat innefattar inhyrda spioner och lönnmördare som aktivt söker efter RP."
+                  },
+                  "91-100": {
+                    "result": "fiendeskap_utrotning",
+                    "description": "Fienden vill inte bara döda RP utan vill dessutom mörda RPs familj, släkt, vänner och om möjligt alla som RP ens talat med. Om fienden får som den vill kommer det inte finnas en enda levande person som kan minnas RP. RP har gjort något så hemskt mot sin fiende att hämnden är det enda ärkefienden lever för. Fienden har 1T6+12 resurser."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "98": {
+          "result": "ärrad_kropp",
+          "description": "Ärras kropp. RP har skadats på något sätt som satt ob2T6 stora och fula ärr på kroppen, ihopsydda med ob1T6 stygn vardera. RP skäms för ärren och vill absolut inte visa sig utan kläder så att ärren syns. Ärren sitter på kroppsdelar som är lätta att skyla med kläder. Om RP talar med någon som kan se hens ärr får RP +ob1T6 på alla kommunikationsfärdigheter."
+        },
+        "99-100": {
+          "result": "roll_twice",
+          "description": "Slå två gånger till på den här tabellen och använd båda resultaten"
+        }
+      }
+    }
   }
+}

@@ -1,51 +1,203 @@
 {
-    "1-2": "Barnasinne. Barn och misslor känner sig trygga i RPs sällskap. RP har mycket lätt att kommunicera med barn.",
-    "3-4": "Bildad. Öka RPs bildning med +2.",
-    "5-6": "Bärsärk. RP kan när denne önskar hänge sig åt aggressionen som finns i den. När denne vill kan den gå in i ett raserianfall.",
-    "7-8": "Drömmare. RP har ett ovanligt aktivt och fantasfullt intellekt och kommer ofta på nymodigheter. RP får 2T6 enheter att spendera på mystiska färdigheter.",
-    "9-12": "Empatisk. RP har lätt att läsa av folks känslor och se vad de tycker och känner. Detta gör att RP enkelt kan genomskåda lögner.",
-    "13-14": "Etikett. RP vet hur man bör bete sig i samhällets högre klasser. RP får 1T6+4 enheter att spendera på färdigheten etikett.",
-    "15-16": "Extraordinär koncentrationsförmåga. Om RP koncentrerar sig på en tidsödande uppgift kan den bli klar på hälften av tiden som normalt krävs.",
-    "17-18": "Extraordinärt bildad. Slå om bildning med 2T6+9 tills du får ett värde som är högre än det värde du hade innan.",
-    "19-20": "Extraordinärt intelligent. Slå om psyke med 2T6+9 tills du får ett värde som är högre än det värde du hade innan.",
-    "21-22": "Extraordinärt viljestark. Slå om vilja med 2T6+9 tills du får ett värde som är högre än det värde du hade innan.",
-    "23-24": "Fotografiskt minne. RP kan komma ihåg allt hen läst eller sett i detalj under många år framöver.",
-    "25-26": "Förutseende. RP har ibland profetiska drömmar eller aningar om framtiden.",
-    "27-28": "Genialisk. RP är extremt intelligent. Höj PSY med +3.",
-    "29-30": "Gömd talang. RP har en dold begåvning inom ett specifikt område som spelaren får välja.",
-    "31-32": "Intuitiv. RP har mycket stark intuition och får ofta 'magkänsla' för rätt beslut.",
-    "33-34": "Karismatisk. RP har en naturlig förmåga att leda och inspirera andra. Höj PER med +2.",
-    "35-36": "Konstbegåvning. RP har exceptionell talang inom konst, musik eller annan kreativ verksamhet.",
-    "37-38": "Lugn. RP förblir alltid kylig och samlad, även under press. Alla slag mot panik blir två nivåer lättare.",
-    "39-40": "Magisk begåvning. RP har naturlig fallenhet för magi och får lättare att lära sig mystiska färdigheter.",
-    "41-42": "Människokännedom. RP har lätt att förstå andra människors motivation och beteenden.",
-    "43-44": "Naturlig ledare. RP får automatiskt respekt och förtroende från andra. Ledarskap är lättlärd.",
-    "45-46": "Observant. RP lägger märke till detaljer som andra missar. Färdigheten söka är lättlärd.",
-    "47-48": "Pedagogisk. RP har lätt att lära ut sina kunskaper till andra och är en naturlig lärare.",
-    "49-50": "Perfekt tidsuppfattning. RP vet alltid exakt vilken tid det är och hur lång tid som gått.",
-    "51-52": "Praktisk begåvning. RP har lätt för allt som kräver hantverk och praktiska färdigheter.",
-    "53-54": "Psykolog. RP förstår den mänskliga psyket djupt och kan lätt identifiera psykiska problem.",
-    "55-56": "Retorisk begåvning. RP är en naturlig talare och debattör. Övertala är lättlärd.",
-    "57-58": "Rättskänsla. RP har stark moral och ofelbar känsla för rätt och fel.",
-    "59-60": "Strategisk begåvning. RP tänker alltid flera steg framåt och är duktig på att planera.",
-    "61-62": "Själsstark. RP har exceptionell mental styrka och får aldrig panikattacker eller liknande.",
-    "63-64": "Samlingsförmåga. RP kan snabbt samla sina tankar och fokusera även i kaotiska situationer.",
-    "65-66": "Tålamod. RP har oändligt tålamod och ger aldrig upp, oavsett hur lång tid något tar.",
-    "67-68": "Djurförståelse. RP har naturlig förmåga att kommunicera med och förstå djur.",
-    "69-70": "Skuggornas vän. RP är duktig på färdigheterna Gömma och Smyga. RP får 2T6+4 enheter att spendera på dessa färdigheter och de är lättlärda.",
-    "71-72": "Snabblärd. RP är extra duktig på tre stycken kunskapsfärdigheter. Spelaren väljer vilka. RP får 2T6+4 enheter att spendera på dessa, och de är lättlärda.",
-    "73-74": "Social kameleont. RP har mycket lätt att passa in i så gott som alla delar av samhället. ALLA sociala färdigheter är lättlärda.",
-    "75-76": "Sover lätt. RP vaknar väldigt lätt. RP drabbas aldrig av negativa effekter från att vara nyvaken.",
-    "77-78": "Språköra. RP har lätt att lära sig språk. ALLA språkfärdigheter är lättlärda.",
-    "79-80": "Stark vilja. RP är väldigt viljestark när det gäller att uthärda psykiska påfrestningar och smärta.",
-    "81-82": "Stridens barn. RP är mycket skicklig på att förstå sig på vapen. ALLA vapenfärdigheter är lättlärda.",
-    "83-84": "Stridsvan. RP har av någon anledning väldigt lätt att analysera strider. RP får 2T6 enheter att spendera på färdigheten Stridsvana.",
-    "85-86": "Strålande ögon. RP har ett par väldigt vackra, gnistrande och hypnotiska ögon. Alla färdighetsslag mot övertala, förför och ledarskap slås med en tärning mindre om RP har ögonkontakt med sitt 'offer'.",
-    "87-88": "Sångfågel. RP får 1T6+2 enheter att spendera på färdigheten sjunga. Sjunga är också lättlärd.",
-    "89-90": "Uppmärksam. RP får höja Syn och Hörsel med +2 vardera.",
-    "91-92": "Vaksam. Höj Syn med +1. RP Får 2T6 enheter att spendera på färdigheterna Speja och Söka.",
-    "93-94": "Vetgirig. RP får 2T6 enheter att spendera på valfria kunskapsfärdigheter MEN dessa enheter får inte höja någon färdighet över 10.",
-    "95-96": "Viljestark. Höj Vilja med +2.",
-    "97-98": "Ödemarkens barn. RP klarar sig ofta väldigt bra i vildmarken. ALLA vildmarksfärdigheter är lättlärda.",
-    "99-100": "Fler egenskaper. Slå två gånger till på denna tabell och använd båda resultaten."
+  "bakgrundstabeller": {
+    "mentala_egenskaper": {
+      "titel": "Mentala egenskaper",
+      "beskrivning": "Resultat från huvudbakgrundstabellen. Ger rollpersonen en mental egenskap, förmåga eller bonus.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "barnasinne",
+          "description": "Barnasinne. Barn och misslor känner sig trygga i RPs sällskap. RP har mycket lätt att kommunicera med barn. Barn som träffar RP vill gärna ha denne som en lekkamrat och försöker ofta göra något för att få dennes uppmärksamhet."
+        },
+        "3-4": {
+          "result": "bildad",
+          "description": "Bildad. Öka RPs bildning med +2."
+        },
+        "5-6": {
+          "result": "bärsärk",
+          "description": "Bärsärk."
+        },
+        "7-8": {
+          "result": "drömmare",
+          "description": "Drömmare. RP har ett ovanligt aktivt och fantasifullt intellekt och kommer ofta på nymodigheter. RP får 2T6 enheter att spendera på mystiska färdigheter."
+        },
+        "9-12": {
+          "result": "empatisk",
+          "description": "Empatisk. RP har lätt att läsa av folks känslor och se vad de tycker och känner. Detta gör att RP enkelt kan genomskåda lögner. RP får en tärning lättare när den använder Psyke för att genomskåda lögner. Färdigheterna övertala och förföra blir lättlärda."
+        },
+        "13-14": {
+          "result": "etikett",
+          "description": "Etikett. RP vet hur man bör bete sig i samhällets högre klasser. RP får 1T6+4 enheter att spendera på färdigheten etikett, som också blir lättlärd. Höj RPs personlighet med +1."
+        },
+        "15-16": {
+          "result": "extraordinär_koncentrationsförmåga",
+          "description": "Extraordinär koncentrationsförmåga. Om RP koncentrerar sig på en tidsödande uppgift kan den bli klar på hälften av tiden som normalt krävs. RP får inte bli störd under tiden för då bryts koncentrationen."
+        },
+        "17-18": {
+          "result": "extraordinärt_bildad",
+          "description": "Extraordinärt bildad. Slå om bildning med 2T6+9 tills du får ett värde som är högre än det du hade innan. Detta är nu ditt värde i bildning."
+        },
+        "19-20": {
+          "result": "extraordinärt_intelligent",
+          "description": "Extraordinärt intelligent. Slå om psyke med 2T6+9 tills du får ett värde som är högre än det du hade innan. Detta är nu ditt värde i psyke."
+        },
+        "21-22": {
+          "result": "extraordinärt_viljestark",
+          "description": "Extraordinärt viljestark. Slå om vilja med 2T6+9 tills du får ett värde som är högre än det du hade innan. Detta är nu ditt värde i vilja."
+        },
+        "23-24": {
+          "result": "fotografiskt_minne",
+          "description": "Fotografiskt minne. RP kommer ihåg bilder. ALLA kunskapsfärdigheter blir lättlärda."
+        },
+        "25-26": {
+          "result": "genomträngande_blick",
+          "description": "Genomträngande blick. RP har en hård och genomträngande blick vilken kan ingjuta respekt och/eller fruktan. Färdigheterna förhöra och ledarskap slås med en tärning mindre varje gång de används och RP kan möta offrets blick."
+        },
+        "27-28": {
+          "result": "gott_lokalsinne",
+          "description": "Gott lokalsinne. RP har lätt att minnas vart saker och ting ligger i förhållande till varandra. RP får 2T6 enheter att spendera på färdigheterna Speja och Geografi."
+        },
+        "29-30": {
+          "result": "gott_rykte",
+          "description": "Gott rykte. RP är känd som en bra karl/redig kvinna som står för sitt ord och inte gör folk besvikna. Ryktet kanske är sant eller falskt, det är upp till spelaren och SL. man behöver bestämma varför ryktet uppstått. Höj karaktärsdraget Rykte med 1T6."
+        },
+        "31-32": {
+          "result": "hästarnas_herre",
+          "description": "Hästarnas Herre. Färdigheterna rida och djurträning slås alltid med en tärning lägre än normalt när de rör sig om en häst som ska ridas eller tränas. Färdigheterna är också lättlärda."
+        },
+        "33-34": {
+          "result": "hästarnas_vän",
+          "description": "Hästarnas vän. RP har mycket god hand med hästar och andra riddjur. RP får 1T6+2 enheter att spendera på färdigheten Rida."
+        },
+        "35-36": {
+          "result": "intelligent",
+          "description": "Intelligent. Öka RPs Psyke med +2."
+        },
+        "37-38": {
+          "result": "karismatisk",
+          "description": "Karismatisk. Rollpersonen har mycket stark utstrålning. RP får höja Personlighet med +2 och får 2T6+2 enheter att spendera på färdigheterna Övertala, Ledarskap och Förföra."
+        },
+        "39-40": {
+          "result": "konstnärligt_lagd",
+          "description": "Konstnärligt lagd. Spelaren får välja en konstnärlig och kreativ färdighet som RP är extra framstående i. Exempel kan vara spela instrument, dansa, berättarkonst, sjunga, någon hantverksfärdighet, eller något annat. När RP ägnar sig åt detta är alla färdighetsslag en tärning lättare. Färdigheten är också lättlärd."
+        },
+        "41-42": {
+          "result": "kroppskontroll",
+          "description": "Kroppskontroll. RP har mycket bra kontroll över sin egen kropp. ALLA rörelsefärdigheter är lättlärda."
+        },
+        "43-44": {
+          "result": "kulturkännare",
+          "description": "Kulturkännare. RP har stor kunskap om andra länder. Spelaren och SL måste bestämma varför, t.ex kan RP ha rest mycket eller studerat böcker om främmande kulturer. RP får 2T6+4 enheter att spendera på färdigheterna kulturkännedom, historia och geografi."
+        },
+        "45-46": {
+          "result": "kvicktänkt",
+          "description": "Kvicktänkt. RP är mycket snabbtänkt. Om RP befinner sig under tidspress blir färdigheterna berättarkonst, förhöra, förklädnad, skådespel och övertala en tärning lättare att använda."
+        },
+        "47-50": {
+          "result": "lättlärd",
+          "description": "Lättlärd. Spelaren får välja en valfri färdighet (utom stridsvana) som blir lättlärd."
+        },
+        "51-52": {
+          "result": "matematisk_begåvning",
+          "description": "Matematisk begåvning. RP är mycket skicklig på rkning och kan räkna ut väldigt komplicerade tal i huvudet om hen får lite tid och möjlighet att koncentrera sig. RP får 1T6+4 enheter att spendera på färdigheten Räkning. Räkning är också lättlärd."
+        },
+        "53-54": {
+          "result": "musikalisk",
+          "description": "Musikalisk. RP får 1T6+2 enheter att spendera på färdigheten musik."
+        },
+        "55-56": {
+          "result": "nattuggla",
+          "description": "Nattuggla. RP behöver av någon anledning inte så mycket sömn. RP återhämtar utmattning dubbelt så fort som normalt när den sover och behöver bara sova fyra timmar per dygn för att slippa drabbas av sömnbrist."
+        },
+        "57-58": {
+          "result": "ormtunga",
+          "description": "Ormtunga. RP är skicklig lögnare. RP får 2T6 enheter att spendera på fördigheten övertala och en av dessa enheter måste spenderas på specialiseringen “ljuga”."
+        },
+        "59-60": {
+          "result": "orädd",
+          "description": "Orädd. RP får en tärning lättare när tärningar behöver slås mot Psyke, Vilja eller Stridsvana för att se om RP vågar riskera sitt liv."
+        },
+        "61-62": {
+          "result": "pedagog",
+          "description": "Pedagog. RP har en naturlig förmåga att lära ut saker. RP får ob2T6 enheter för att höja färdigheten undervisning, som också är lättlärd."
+        },
+        "63-64": {
+          "result": "silvertunga",
+          "description": "Silvertunga. RP känner ofta på sig hur en person bör bli tilltalad för att bli vänligt inställd. RP får 2T6 enheter att spendera på färdigheterna etikett och diplomati. Dessutom höjs Personlighet med +1."
+        },
+        "65-66": {
+          "result": "självlärd",
+          "description": "Självlärd. RP har lärt sig en färdighet själv. Spelaren väljer vilken färdighet (inte stridsvana, men vilken annan färdighet som helst). RP får 2T6 enheter att spendera på den färdigheten. Färdigheten är också lättlärd."
+        },
+        "67-68": {
+          "result": "skicklig",
+          "description": "Skicklig. RP är väldigt skicklig på en speciell färdighet. spelaren väljer själv vilken. Denna färdighet kostar numera bara hälften så många enheter att höja."
+        },
+        "69-70": {
+          "result": "skuggornas_vän",
+          "description": "Skuggornas vän. RP är duktig på färdigheterna Gömma och Smyga. RP får 2T6+4 enheter att spendera på dessa färdigheter och de är lättlärda."
+        },
+        "71-72": {
+          "result": "snabblärd",
+          "description": "Snabblärd. RP är extra duktig på tre stycken kunskapsfärdigheter. Spelaren väljer vilka. RP får 2T6+4 enheter att spendera på dessa, och de är lättlärda."
+        },
+        "73-74": {
+          "result": "social_kameleont",
+          "description": "Social kameleont. RP har mycket lätt att passa in i så gott som alla delar av samhället. ALLA sociala färdigheter är lättlärda."
+        },
+        "75-76": {
+          "result": "sover_lätt",
+          "description": "Sover lätt. RP vaknar väldigt lätt. RP drabbas aldrig av negativa effekter från att vara nyvaken."
+        },
+        "77-78": {
+          "result": "språköra",
+          "description": "Språköra. RP har lätt att lära sig språk. ALLA språkfärdigheter är lättlärda."
+        },
+        "79-80": {
+          "result": "stark_vilja",
+          "description": "Stark vilja. RP är väldigt viljestark när det gäller att uthärda psykiska påfrestningar och smärta."
+        },
+        "81-82": {
+          "result": "stridens_barn",
+          "description": "Stridens barn. RP är mycket skicklig på att förstå sig på vapen. ALLA vapenfärdigheter är lättlärda."
+        },
+        "83-84": {
+          "result": "stridsvan",
+          "description": "Stridsvan. RP har av någon anledning väldigt lätt att analysera strider. RP får 2T6 enheter att spendera på färdigheten Stridsvana. Stridsvana är lättlärd."
+        },
+        "85-86": {
+          "result": "strålande_ögon",
+          "description": "Strålande ögon."
+        },
+        "87-88": {
+          "result": "sångfågel",
+          "description": "Sångfågel. RP får 1T6+2 enheter att spendera på färdigheten sjunga. Sjunga är också lättlärd."
+        },
+        "89-90": {
+          "result": "uppmärksam",
+          "description": "Uppmärksam. RP får höja Syn och Hörsel med +2 vardera."
+        },
+        "91-92": {
+          "result": "vaksam",
+          "description": "Vaksam. Höj Syn med +1. RP Får 2T6 enheter att spendera på färdigheterna Speja och Söka."
+        },
+        "93-94": {
+          "result": "vetgirig",
+          "description": "Vetgirig. RP får 2T6 enheter att spendera på valfria kunskapsfärdigheter MEN dessa enheter får inte höja någon färdighet över 10."
+        },
+        "95-96": {
+          "result": "viljestark",
+          "description": "Viljestark. Höj Vilja med +2."
+        },
+        "97-98": {
+          "result": "ödemarkens_barn",
+          "description": "Ödemarkens barn. RP klarar sig ofta väldigt bra i vildmarken. ALLA vildmarksfärdigheter är lättlärda."
+        },
+        "99-100": {
+          "result": "fler_egenskaper",
+          "description": "Fler egenskaper. Slå två gånger till på denna tabell och använd båda resultaten."
+        }
+      }
+    }
   }
+}

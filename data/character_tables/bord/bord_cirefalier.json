@@ -1,0 +1,31 @@
+{
+  "bakgrundstabeller": {
+    "börd_cirefalier": {
+      "titel": "Börd för cirefalier",
+      "beskrivning": "Titlar och börder för cirefalier.",
+      "dice": "1d100",
+      "ranges": {
+        "1-82": {
+          "result": "ziir",
+          "description": "Ziir. Ziir betyder ungefär “mästare” och personen som har denna titel är erkänd som mästare inom sitt gebit och åtnjuter stor respekt från andra inom samma yrke. Titeln sätts efter tilltalsnamnet och kombineras ofta med ordet för personens yrke. Exempel: Gheriz Casziir, som betyder ungefr Gheriz Handelsmästare. Titeln ziir är en stor hedersbetygelse och utdelas alltid av en furst av något slag. I vissa fall kan ziir-titeln vara familjegiltig, dvs hela personens familj anses vara mästare inom sitt gebit. Furstar kan ta ifrån en ziir dess titel om hen visar sig ovärdig, men detta är väldigt sällsynt."
+        },
+        "83-92": {
+          "result": "furst",
+          "description": "Furst. RP är, om hen är husfirst i sin familj, furst över en by någonstans inom de cirefaliska samväldet. Om RP inte är husfurst så är det husfursten i RPs familj som är furst. En krigisk RP kan, om spelaren vill, istället få titeln “stridsfurst” som motsvarar ungefär sergeant. En religiöst arbetande RP kan istället få titeln fauztzem, vilket betyder Handdomare inom Cirzatemplet. RPs rykte ökar med +8"
+        },
+        "93-97": {
+          "result": "markfurst",
+          "description": "Markfurst. RP är, om hen är husfirst i sin familj,markfurst över ett distrikt någonstans inom de cirefaliska samväldet. Om RP inte är husfurst så är det husfursten i RPs familj som är markfurst. Ett distrikt motsvarar ungefär ett grevskap och kan tas fram med hjälp av reglerna för förläningar i ett senare kapitel. En krigisk RP kan, om spelaren vill, istället få titeln “krigsfurst” som motsvarar ungefär kapten. En religiöst arbetande RP kan istället få titeln tzorza i det lokala Cirzatemplet. RPs rykte ökar med +15"
+        },
+        "98-99": {
+          "result": "kurfurst",
+          "description": "Kurfurst. RP är, om hen är husfirst i sin familj,kurfurst över en provins någonstans inom de cirefaliska samväldet. RP måste isåfall vara bosatt i provinsens största handelsstad. Om RP inte är husfurst så är det husfursten i RPs familj som är kurfurst. En provins motsvarar ungefär ett hertigdöme och kan tas fram med hjälp av reglerna för förläningar. En krigisk RP kan, om spelaren vill, istället få titeln “härfurst” som motsvarar ungefär general. En religiöst arbetande RP kan istället få titeln maliz, vilket motsvarar en primas inom Cirzatemplet. RPs Rykte ökar med +20"
+        },
+        "100": {
+          "result": "släkt_med_ärkefurst",
+          "description": "Ärkefurst. RP är INTE själv ärkefurst, men hen är släkt med ärkefursten. En religiöst arbetande RP kan istället få vara släkt med landets ciremaliz, vilket motsvarar en storprimas inom Cirzatemplet.RPs Rykte ökar med +25"
+        }
+      }
+    }
+  }
+}

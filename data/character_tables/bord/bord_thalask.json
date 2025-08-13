@@ -1,0 +1,27 @@
+{
+  "bakgrundstabeller": {
+    "börd_thalaskier": {
+      "titel": "Börd för Thalaskiska Medborgare",
+      "beskrivning": "Det är intressant att ta reda på hur inflytelserik och mäktig rollpersonens familj är. Spelledaren bör se till så att ju mer fördelar rollpersonen får av sin familjs status desto mer måste hen slita för att göra familjen nöjd. RP blir också ett större mål i det politiska maktspelet och får fler och fler fiender. Det bör poängteras att bara för att man kommer ifrån en familj med många mäktiga och högt uppsatta medlemmar så kan man inte automatiskt dra nytta av deras maktsfär utan man måste hålla en god relation till dem och hjälpa samt stödja dem.",
+      "status_regler": {
+        "använda_familjenamnet": "Rollpersonen kan använda sitt familjenamn vid tillfällen för att få sin vilja fram. Detta kan ge modifikationer till sociala färdigheter som Övertala, Förhöra, Ledarskap, Förföra och annat som Spelledaren kan finna lämpligt. Dessutom kommer både personer inom Rakhori, andra ätter och armén se till att inte stöta sig med rollpersonen och mindre förseelser kommer automatiskt bortses ifrån om dessa inte kan användas för att fälla rollpersonen eller dennes familj.",
+        "tjänster": "Rollpersonen kan be sin familj om en tjänst då och då. Ju större tjänst desto mer kräver dock familjen i motprestation. En liten tjänst kan vara allt från att ordna fram hemliga dokument, att få lättare antagningsprov till armén eller tribunalerna, bortse från mindre förbrytelser, likvidera personer av folket och liknande. Större tjänster kan endast de mäktigare familjerna tillhandahålla och dessa kräver en anledning för att utföra dem samt en motprestation. Större tjänster kan innebära att fångar släpps helt och hållet, förbjudna magiska skrifter kommer rollpersonen tillhanda, likvidera mindre viktiga medborgare, att rollpersonen automatiskt blir intagen på en särskild skola eller kommer in i tribunalerna. Väldiga tjänster bör man sällan be om och familjen kommer kräva en vettig förklaring och rollpersonen kommer troligtvis få arbeta hela sitt liv för familjen för att betala tillbaka tjänsten. Väldiga tjänster kan vara allt från att låta ättesoldater anfalla ett visst område, lönnmörda högt uppsatta personer inom tribunalerna, låta rollpersonen få tillträde till Thalamurs mest hemliga platser och liknande ting."
+      },
+      "dice": "1d100",
+      "ranges": {
+        "1-75": {
+          "result": "låg_status",
+          "description": "Låg status. Rollpersonens familj har ett inflytande i tribunalerna och kan dra i trådarna för att påverka det thalaskiska samhället. Någon inom familjen är säkerligen Primas och några är troligen lektorer. Rollpersonen kan använda familjenamnet för att öppna dörrar och få reda på information. Hen kan be sin familj om en liten tjänst då och då utan att det är att kräva för mycket. Om rollpersonen använder familjenamnet så kommer folk att dra öronen till sig och lyssna på rollpersonen men utöver det ger det inga modifikationer."
+        },
+        "76-95": {
+          "result": "hög_status",
+          "description": "Hög status. Rollpersonens familj har ett stort inflytande över tribunalerna och kanske även armén. En handfull medlemmar i familjen är Primaser och andra är lektorer. De kan dra i trådar för att påverka det thalaskiska samhället till familjen och rollpersonens fördel. Rollpersonen kan använda familjenamnet för att öppna dörrar, få fram information, rekvirera utrustning och liknande. Hen kan be familjen om mindre tjänster och även någon större tjänst då och då. Om rollpersonen använder familjenamnet så kan hen under vissa situationer få en nivå lättare (–Ob1T6) på lämpliga Sociala färdigheter."
+        },
+        "96-100": {
+          "result": "furstlig_status",
+          "description": "Furstlig status. Rollpersonens familj har ett mycket stort inflytande över det thalaskiska samhället, tribunalerna och armén. Ett flertal medlemmar är primaser och lektorer. Kanske är detta även magikratens ursprungsfamilj. Rollpersonen kan använda familjenamnet för att öppna dörrar, får fram information, ta ättens soldater i sin tjänst och liknande. Hen kan be familjen om ett flertal mindre tjänster, ibland större tjänster och om det skulle krisa väldiga tjänster. Om hen använder familjenamnet så kan hen under vissa situationer få två nivåer lättare (–Ob2T6) på lämpliga Sociala färdigheter."
+        }
+      }
+    }
+  }
+}

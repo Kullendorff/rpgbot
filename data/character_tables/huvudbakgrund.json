@@ -1,0 +1,51 @@
+{
+  "bakgrundstabeller": {
+    "huvudtabell": {
+      "titel": "Huvudbakgrundstabellen",
+      "beskrivning": "Slå på denna tabell för att avgöra vilken typ av bakgrundshändelse eller egenskap rollpersonen får. Resultatet pekar på en ny tabell att slå på.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "börd",
+          "description": "Bakgrundstabellen för börd"
+        },
+        "3-15": {
+          "result": "föremål_ägodelar",
+          "description": "Bakgrundstabellen för Föremål & ägodelar"
+        },
+        "16-20": {
+          "result": "förmögenhet",
+          "description": "Bakgrundstabellen för förmögenhet"
+        },
+        "21-25": {
+          "result": "egendom",
+          "description": "Bakgrundstabellen för egendom"
+        },
+        "26-45": {
+          "result": "mentala_egenskaper",
+          "description": "Bakgrundstabellen för Mentala egenskaper"
+        },
+        "46-65": {
+          "result": "fysiska_egenskaper",
+          "description": "Bakgrundstabellen för Fysiska egenskaper"
+        },
+        "66-67": {
+          "result": "övernaturliga_egenskaper",
+          "description": "Bakgrundstabellen för Övernaturliga egenskaper"
+        },
+        "68-92": {
+          "result": "händelser",
+          "description": "Bakgrundstabellen för händelser"
+        },
+        "93-94": {
+          "result": "extra_slag_familj",
+          "description": "Extra slag på Familjetabeller"
+        },
+        "95-100": {
+          "result": "nackdelar",
+          "description": "Bakgrundstabellen för nackdelar"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "bakgrundstabeller": {
+    "händelser_sunari": {
+      "titel": "Händelser för alver som växt upp i Sunariskogen",
+      "beskrivning": "Händelsetabell för alver från Sunariskogen. Följande modifikatorer appliceras på slaget baserat på alvens linje: Kiriya lägger till +0 på slaget. Thism, Henea och Pyar får lägga till +10 på slaget. Sanari får lägga till +20 på slaget.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "eviga_grönskans_dal",
+          "description": "RP och en vän vandrade planlöst genom skogen och hamnade av en slump i den omtalade “Eviga Grönskans Dal”. Där såg RP många fantastiska saker, bl.a enhörnigar. Sedan dess är RP välsignad med mer tur än innan. Höj Tur med +2 och sänk förbannelse med -1."
+        },
+        "3-4": {
+          "result": "sjungande_vattenfallet",
+          "description": "Du har träffat en skicklig bard för en tid sedan som berättade för dig om “Det Sjungande Vattenfallet”. Barden lärde dig många nya sånger och melodier, och väckte en lust hos dig att själv besöka Det Sjungande Vattenfallet. Du har sökt efter platsen på en lång och mödosam resa men kunde tyvärr aldrig hitta den, men du lärde dig en del om att klara sig ensam i vildmarken. Du får 1T6+1 enheter att spendera på Sjunga och 2 enheter att spendera på Överlevnad."
+        },
+        "5-6": {
+          "result": "jättebi_honung",
+          "description": "Din mentor lärde dig att utvinna honung ur jättebinas bon, och detta har du fortsatt med sedan dess. Du har dessutom lärt dig använda honungen till matlagning, bakning, ölbryggning och vinjäsning. Du får 1T6+4 enheter att spendera på Matlagning, Bryggare och Brännare. Du har så gott som alltid\nen burk eller näverask med honung med dig."
+        },
+        "7-8": {
+          "result": "svärdsdansare_vän",
+          "description": "Du har en vän som är svärdsdansare. Svärdsdansaren har lärt dig ett antal vackra stridstekniker som ser väldigt imponerande ut. Du får 1T6+1 enheter att spendera på en passande vapenfärdighet och 1T6+2 enheter att spendera på färdigheten Dans. dessutom får du svärdsdansaren som kontakt (vän), och vänskapen till denna sänker förbannelsen med -1."
+        },
+        "9-10": {
+          "result": "icke_alvisk_vän",
+          "description": "Du har lärt känna en person som inte är alv, utan istället är en människa, missla, dvärg (flämt) eller tirak (dubbelflämt). Denna har lärt dig om världen utanför Sunari. Du får 1T6+2 enheter att spendera på geografi och en passande språkfärdighet."
+        },
+        "11-12": {
+          "result": "vättegrottor_silverfynd",
+          "description": "Du besökte Klippskogen för en tid sedan. Där fann du en nedgång till Vättegrottorna som du valde att ge dig ned i. Där hittade du en samling silverföremål gömda, troligen från den gamla plundrade bosättningen Asklunden. Du har inte kunnat hitta någon ägare till silvret så du bestämde dig för att behålla dom. Dessa uppgår till ett värde av ob2T6*300 silvermynt."
+        },
+        "13-14": {
+          "result": "trädklättrare",
+          "description": "Som barn lärde du dig tidigt njutningen av att klättra i träd. Du trivdes då, och du trivs fortfarande, bättre uppe i trädkronorna än nere på marken. Du får 1T6+4 enheter att spendera på färdigheterna Klättra och Hoppa och förbannelsen sänks med -1."
+        },
+        "15-16": {
+          "result": "utforskat_människorike",
+          "description": "För en tid sedan lämnade du Sunari och utforskade något människorike i närheten, vilket var mycket lärorikt. Du får 1T6+4 enheter att spendera på Geografi, Kulturkännedom och ett valfritt människospråk."
+        },
+        "17-18": {
+          "result": "vunnit_tävling_vita_fjädrar",
+          "description": "Under högtiden “De vita fjädrarnas dag” ställde du upp i en tävling i något du är duktig på. Med en blandning av tur och skicklighet utklassade du alla andra i tävlingen så pass mycket att folk fortfarande pratar om din seger. Öka Rykte med +2 och placera 1T6+1 enheter på någon färdighet du använde under tävlingen. Vad det var för tävling får spelaren och SL komma överens om, men det är vanligt att alver tävlar inom Akrobatik, Dans, Kasta, Rida, Jakt, Sjunga, Båge eller liknande."
+        },
+        "19-20": {
+          "result": "försvunnen_släkting_vän",
+          "description": "En släkting eller nära vän till RP har försvunnit under mystiska omständigheter för en tid sedan. Det misstänks att släktingen/vännen kidnappats och sålts som slav i Västlanden. RP har frågat runt bland diverse pack, slödder och avskum i närmsta människostad och har hittat några ledtrådar till vad som hänt med släktingen/vännen. RP får ob1T6+2 enheter att spendera på en människospeåksfärdighet och färdigheten Skumraskaffärer. Dessutom får du två nya kontakter: din försvunna släkting/vän som har relationen nära vän, samt en slumpad person från kontakttabellen som du har en affärsmässig kontakt med som har hjälpt dig hitta spåren efter din vän."
+        },
+        "21-23": {
+          "result": "sorgens_väg",
+          "description": "Du har vandrat genom “Sorgens väg” för att hedra och minnas dina förfäder som kämpade i det “fjärde stora kriget”. De som kämpade i kriget drev in sina svärd i trädens stammar efter kriget. När du vandrade här fylldes du av insikter om lives förgänglighet och tidens obevekliga gång. Du får höja Psyke och Förbannelse med +1 vardera."
+        },
+        "24-26": {
+          "result": "anfall_urgröpta_trädet",
+          "description": "En gång övernattade du vid en bosättning när “Det urgröpta trädet”. Bosättningen blev anfallen av förvridna, skrämmande varelser, som troligen tillhör Skuggfolket. Du och de övriga i bosättningen lyckades efter hårda strider driva bort varelserna, men du fick en många fula ärr i striderna. Du får två enheter att spendera på färdigheten Stridsvana."
+        },
+        "27-29": {
+          "result": "komponerat_sång_brända_åsen",
+          "description": "Du har komponerat en sång som hyllar den förlorade staden “Brända åsen”. Om du sett staden själv eller bara hört berättelser om den är upp till spelaren och SL. Sången har spridit sig och blivit mycket populär bland Sunaris folk. Om folk känner igen dig eller får veta vem du är ber de dig ofta och gärna att sjunga sången för dom. Öka Rykte med +2. Du får 1T6+4 enheter att spendera på färdigheterna Sjunga och Musik."
+        },
+        "30": {
+          "result": "möte_med_drake",
+          "description": "Du klättrade på “Aralionberget” för en tid sedan men innan du kommit särskilt högt alls landade en snövit drake framför dig. Drakens blotta närvaro bländade ditt sinne och du kunde inte göra annat än att stå tyst och lyssna beundrande på drakens ord, som bryskt förklarade att du inte hade tillträde till berget och att du behövde vända om. Draken lämnade dig sedan med mäktiga vingslag som lyfte den upp i himlen.\n\nSedan dess har du vart fascinerad av drakar och lärt dig så mycket du kan om dessa. Du får 1T6+2 enheter att spendera på färdigheten Ockultism och måste specialisera denna färdighet mot “Drakar”."
+        },
+        "31-33": {
+          "result": "hemsökta_ruinerna",
+          "description": "När du var yngre ville du gärna visa dig modig. Någon utmanade dig att övernatta i de hemsökta ruinerna av “Gråtens stad”. Självklat ställde du upp på denna utmaning, men resten av livet har du ångrat dig. Större delen av natten har du förträngt, men du har några minnesfragment av obeskrivliga fasor och obegripliga skräckbilder som hemsöker dig på nätterna och antagligen kommer göra det resten av ditt liv. Du får 1T6+2 enheter att spendera på färdigheten Ockultism och du får sänka din Viljestyrka med -1."
+        },
+        "34-36": {
+          "result": "missprydande_ärr",
+          "description": "Du har varit med om en strid eller en jakt som inte gick så bra. Du har fått en stor mängd missprydande vita ärr på delar av kroppen som är svåra att dölja, t.ex ansiktet.. Även om ärren är ganska fula så kan krigiska personer, t.ex många Thism- eller Heneaalver, tycka att de är imponerande och intressanta och vill gärna höra berättelsen om hur du fick dem. Du får 2 enheter att spendera på färdigheten Berättarkonst och 2 enheter att spendera på Stridsvana."
+        },
+        "37-39": {
+          "result": "inåtvänd_släkting",
+          "description": "Du har en inåtvänd släkting som alla förväntar sig att du ska ta hand om. Den inåtvände kanske inte har några andra anförvanter kvar?\n\nHursomhelst har du en kontakt som är en inåtvänd släkting som du behöver ta hand om. Ibland kan släktingen dela med sig av visdomar från sitt långa liv, men oftast är hen tyst, tillbakadragen och i värsta fall okontaktbar."
+        },
+        "40-42": {
+          "result": "heavedrake_attack",
+          "description": "Du och en grupp vänner gav er av upp i “Kelenibergen” i hopp om att få se några vilda heavedrakar. Heavedrakarna fick tyvärr syn på er först. En av dina närmsta vänner blev anfallen och söndersliten av heavernas starka käftar. Du och dina andra vänner kom med nöd och näppe undan, men du saknar ännu din förlorade vän och kommer antagligen aldrig komma över händelsen. Du får 1T6+2 enheter att spendera på färdigheten Överlevnad och får öka förbannelse med +2."
+        },
+        "43-46": {
+          "result": "guide_genom_svarttörne",
+          "description": "Under en resa blev du och dina vänner tvungna att resa genom området “svarttörne”. Ni såg både hyggelmonster och andra hemskheter på vägen, men ni hade en mycket skicklig guide med er som förde er säkert genom området. Guiden imponerade på dig och du valde att lära dig lite av guidens kunskaper. Du får 1T6+1 enheter att spendera på färdigheten Överlevnad."
+        },
+        "47-49": {
+          "result": "förlorade_släktingar_vindens_kullar",
+          "description": "Du har förlorat flera släktingar som gav sig ut på en resa till “Vindens kullar”. Det sägs att dina släktingar blev dräpta av tiraker från “Svarta månens hord” du får öka Aggresion med +2 och specialisera det mot tiraker och du får höja Förbannelse med +2."
+        },
+        "50-52": {
+          "result": "alvgräs_beroende",
+          "description": "Du är beroende av en drog som kallas alvgräs. Drogen är en växt, vars blad man torkar och sedan röker i en pipa eller liknande. Spelaren avgör själv om hens RP är öppen med sitt beroende eller om hen försöker hålla det hemligt. Oavsett vilket har du så gott som alltid med dig en pung med torkade blad och du behöver röka några bloss varje dag. Sänk Aggression med -2 och öka färdigheten Växtlära med 1T6+1 enheter. Om du av någon anledning inte kan röka någon dag får du öka din Aggression med +4 tills du lyckats röka eller kommit över ditt beroende. Det tar cirka en månad att komma över beroendet."
+        },
+        "53-55": {
+          "result": "död_livskamrat",
+          "description": "Du har haft en livskamrat men hen har dött. Livskamraten brändes till aska och du spred själv ut denna aska i vinden och planterade vita skogstjärnor på platsen där bålet brann som en symbol för eran kärlek. Sänk Amor med -2 och öka Förbannelse med +4."
+        },
+        "56-57": {
+          "result": "räddat_trollunge",
+          "description": "På en skogsfärd träffade du en trollfamilj, vars minsta barn fallit ner i en klippskreva och kunde inte komma upp. Med en blandning av ditt intellekt, mod, tur och utrustning så lyckades du rädda trollungen. Trollen anser sig själva stå i tacksamhetsskuld till dig och har lovat att göra dig en stor tjänst närhelst du ber om det."
+        },
+        "58": {
+          "result": "möte_med_pawaghilir",
+          "description": "Det finns en fruktansvärd hydra i Sunariskogen som kallas “Pawaghilir”. Tyvärr har du själv träffat detta monster och tvingades kämpa för ditt liv för att undkomma den. Du klarade dig med nöd och näppe men fick en skada som aldrig kommer läka. Sänk Tålighet med -2, och höj färdigheten Stridsvana med 2 enheter."
+        },
+        "59-62": {
+          "result": "brutit_mot_alvisk_lag",
+          "description": "Du har brytit mot en av de fem alviska lagarna, och dessutom ertappats för brottet. Dina vänner har tagit avstånd från dig och de som känner till vad du gjort undviker dig. Öka Rykte med +2 specialiserat mot “Lagbrytare” och öka Förbannelse med +2. Du får 1T6+1 enheter att spendera på någon färdighet som kan kopplas till brottet."
+        },
+        "63-66": {
+          "result": "valdur_husdjur",
+          "description": "Du har en valdur, en hundliknande varelse som inte är helt ovanlig som husdjur bland Sunariskogens folk. Valduren har vuxit upp med dig och är numera din trogna vakthund och vän. Du får 1T6+1 enheter att spendera på färdigheten Djurträning, och valduren kan 1T6+1 trick."
+        },
+        "67-71": {
+          "result": "sagoberättare",
+          "description": "Vid högtiden “skymningstimmen” har du för vana att framföra några sagor, myter och legender, och du har blivit en mycket uppskattad sagoberättare. Du får 1T6+2 enheter att spendera på färdigheten Berättarkonst och får öka din Bildning med +2. Dessutom har du fått många beundrare och vänner som får dig att känna dig uppskattad så du får sänka Förbannelse med -1"
+        },
+        "72-75": {
+          "result": "mäktig_gåva",
+          "description": "Du har räddat livet och/eller hedern på någon som återgäldade din insats med en mäktig gåva. Välj något passande föremål, t.ex en Serinebåge från Vita Staden, ett mästersmitt Lyfalisvärd, ovanliga magiska skrifter eller något liknande."
+        },
+        "76-80": {
+          "result": "ensamstående_förälder",
+          "description": "Du har haft ett kort men passionerat förhållande som tog slut väldigt plötsligt och oönskat från ditt håll. Förhållandet resulterade i ett barn som är 2T6 år gammal och som du är ensam ansvarig för. Förbannelse ökar med +1."
+        },
+        "81-85": {
+          "result": "ärvt_kartsamling",
+          "description": "Du har ärvt en stor samling kartor som visar världen bortom Sunariskogen. Du får ob1T6+3 enheter att spendera på färdigheten Geografi."
+        },
+        "86-89": {
+          "result": "ättling_till_legend",
+          "description": "Du är ättling till en mytomspunnen och legendarisk alv. Varför din förfader var berömd får spelaren och SL komma överens om, kanske var förfadern mästare på sång, strid, magi eller något liknande och utförde hursomhelst något slags stordåd kopplat till vad den nu var skicklig på. Du får höja ditt rykte med +2 specialiserat mot “känd förfader”. Folk har i allmänhet mycket höga förväntningar på dig och förutsätter att du ska utföra någon form av stordåd någon gång under ditt liv."
+        },
+        "90-92": {
+          "result": "tvilling_conditional",
+          "description": "När du föddes föddes samtidigt en tvilling till dig, men tvillingen överlevde inte sin första dag.",
+          "conditions": {
+            "henea": {
+              "result": "tvilling_henea",
+              "description": "Din döda tvillings själ togs om hand av en skicklig schaman som lagrade själen i en fetish, vilket på sätt och vis gjort er kompletta igen. Du får öka Qadosh med +4. Dessutom äger du fetishen med din tvillings själ, som är en tredje rangens ande och kan användas till schamanism om du vill och kan, eller bara fungera som en prydnads- och minnessak om du hellre vill det."
+            },
+            "not_henea": {
+              "result": "tvilling_not_henea",
+              "description": "Din dödfödda tvilling anses vara ett fruktansvärt dåligt omen och i princip hela ditt liv har du förföljts av otur. Sänk Tur med -2. Det finns dock någon mystisk kraft som följer dig och verkar vilja dig väl, så du får höja qadosh med +4."
+            }
+          }
+        },
+        "93-95": {
+          "result": "krossat_hjärta_svalnade_känslor",
+          "description": "För en tid sedan träffade du en alv som du blev djupt förälskad i och du var säker på att detta var ditt livs stora kärlek och livskamrat. Men efter en tid svalnade dina känslor för personen och du kände så gott som ingenting när du såg på denne. Alven du haft förhållandet med blev helt förkrossad av dina svalnade känslor och blev närapå inåtvänd direkt, (även om hen fortfarande är ung!) Du skäms mycket över att du lät dina känslor rusa iväg med dig på det sättet och att du sårat din före detta. En del alver talar illa om dig för det du gjorde mot din före detta. Du har svurit att bli mer disciplinerad för att aldrig orsaka liknande lidande mot någon annan alv. Öka Psyke med +2 och Förbannelse med +1."
+        },
+        "96-100": {
+          "result": "fåfäng",
+          "description": "Du är mycket mån om ditt utseende. Du spenderar mycket tid på att välja kläder, lukta gott, vara ren och se så bra ut som det alls är möjligt. Du får öka Personlighet med +2 och får 3 extra A-val som måste spenderas på kläder. Du är dock en smula fåfäng och alla slag för att motstå färdigheten Övertala är +ob1T6 svårare för dig om någon försöker Övertala dig med smicker."
+        },
+        "101": {
+          "result": "ättling_från_törnesorgen",
+          "description": "Under det “femte stora kriget” belägrades staden “Törnesorgen” av dvärgiska krigare. Dvärgarna kämpade obevekligt mot alverna och det visade sig efter någon tid att det inte fanns något hopp för de alviska krigarna. Som en sista motståndshandling valde både krigare och övriga invånare i staden att göra slut på sina egna liv för att åtminstone inte ge dvärgarna nöjet av en total seger.\n\nDu är ättling till en av krigarna som kämpade för att skydda Törnesorgen. Du är mycket imponerad av dina förfäders mod samtidigt som du sörjer deras tragiska slut. Öka Viljestyrka med +2 och Förbannelse med +2."
+        },
+        "102": {
+          "result": "förhållande_med_kurtisan",
+          "description": "Du har haft ett förhållande med en kurtisan som lärt dig många njutbara ting. Du får 1T6+1 enheter att spendera på färdigheten Förföra. Du får sänka Förbannelse med -1. Och dessutom har du en liten burk med Girjiextrakt som kurtisanen gav dig som avskedsgåva."
+        },
+        "103": {
+          "result": "besökt_svarta_tornen",
+          "description": "Du har besökt “Svarta Tornen”. Du kan ha vart där för att söka kunskap eller för att kämpa mot den hord av kuradier som bor där. Beroende på varför du var där får du placera 1T6+2 enheter på färdigheterna Historia och Ockultism ELLER på färdigheterna Båge & Smyga."
+        },
+        "104": {
+          "result": "dödat_soltrana",
+          "description": "En dag övade du bågskytte och sköt av misstag ihjäl en soltrana, vilket sägs bringa mycket otur. Du får sänka Tur med -2, men du får 2 enheter att spendera på Båge."
+        },
+        "105": {
+          "result": "hjälte_mot_tiraker",
+          "description": "När du besökte en släkting i en bosättning utanför de större Sunariska städerna blev denne anfallen av tiraker från “Den svarta månens hord”. Som tur var var du där och kämpade mot tirakerna och lyckades med din skicklighet (eller tur) dräpa flera fruktade tirakkrigare. Du är nu känd som en hjälte. Öka ditt Rykte med +2 och din Stridsvana med 2 enheter. Dessutom får du 1T6+2 enheter att spendera på valfri vapenfärdighet eller alstrafärdighet eller Besvärjelse."
+        },
+        "106": {
+          "result": "rykte_om_halvblod",
+          "description": "Det ryktas om att du är halvblod. Spelaren och SL får komma överens om ryktet är sant eller inte. Många i din stam tycker illa om halvblod och behandlar dig med mycket ogillande. Du får +ob1T6 i svårighet på alla sociala färdigheter mot andra alver som bryr sig om sådant, dvs de flesta. Öka Förbannelse med +2. Att du är så pass utstött har dock gjort dig väldigt envis och beslutsam. Öka Viljestyrka med +2."
+        },
+        "107": {
+          "result": "renblodig_överlägsenhet",
+          "description": "Du är av rent och friskt blod som uppenbarligen gör dig överlägsen alla andra personer med halvblod och liknande “lägre stående folkslag”, dvs alla som inte är alver, och kanske till och med en del som är alver med lägre “rang” än dig själv.\n\n(åtminstone tror du detta, om du är renblodig eller inte är upp till spelaren och SL att komma överens om, och din överlägsenhet är såklart bara en fördom som du av någon anledning tror på med stark övertygelse.)\n\nDu har svårt att lita på personer med halvblod och personer av “lägre stående folkslag” och har mycket svårt att inte yttra mer eller mindre nedsättande kommentarer om dessa.\n\nI sociala situationer får du +ob1T6 på alla svårigheter för sociala färdigheter när du försöker umgås med halvblod eller “lägre stående folk”. Du får dock 2 enheter att spendera på färdigheten Övertala och måste specialisera denna mot “dolda förolämpningar”."
+        },
+        "108": {
+          "result": "dinerat_med_liljans_råd",
+          "description": "I din ungdom såg din mentor till att du fick träffa och dinera med “Liljans Råd”. under denna måltid insåg du vikten av Etikett och att kunna föra sig i samhällets övre kretsar. Du får 1T6+2 enheter att spendera på färdigheten Etikett och får höja din Lojalitet med +2 samt specialisera Lojalitet mot “Liljans Råd”."
+        },
+        "109": {
+          "result": "vunnit_duell",
+          "description": "Du har blivit utmanad på en duell. Om duellen utkämpades med vapen, magi eller retorik är upp till spelaren och SL. Du segrade i hursomhelst i duellen och får 1T6+1 enheter att spenderra på valfri färdighet som användes i duellen."
+        },
+        "110": {
+          "result": "kiriya_tjänare",
+          "description": "En fattig Kiriyaalv har trätt i tjänst hos dig för att återgälda en skuld. Tjänaren är i praktiken livegen. Övriga detaljer är upp till spelaren och SL att avgöra, t.ex, vem är tjänaren, hur kom den i skuld till dig, hur ser eran relation ut, osv."
+        },
+        "111": {
+          "result": "studerat_spegelsjön",
+          "description": "Du följde med din Mentor till “Spegelsjön” i din ungdom och tillsammans studerade ni sjöns mysterier. Du fick en del insikter i magins mysterier. Du får 1T6+2 enheter att spendera på magiförnimmelse och du får öka din Bildning med +2."
+        },
+        "112": {
+          "result": "medlat_mellan_linjer",
+          "description": "Du blev satt att medla mellan medlemmar av två andra linjer. Slå två gånger på tabellen för Sanaris linjer för att avgöra vilka, slå om ifall du får din egen linje eller samma linje två gånger. Du hade läst på ordentligt om de gamla lagarna innan medlingen och båda linjerna blev mycket nöjda med utgången. Öka ditt Rykte med +2 och Bildning med +2. Dessutom får du 1T6+4 enheter att spendera på färdigheterna Lagkunskap och Övertala."
+        },
+        "113": {
+          "result": "thelatin_husdjur",
+          "description": "Du har en thelatin som husdjur. En thelatin är en uggleliknande fågel. Thelatinen kan bära små brev med bud åt dig till olika personer och den kan varna dig om någon närmar sig dig. Du får 1T6+1 enheter att spendera på Djurträning."
+        },
+        "114": {
+          "result": "försvunnen_vän_sanari",
+          "description": "En av dina närmsta vänner har försvunnit spårlöst. Strax innan försvinnandet fick du veta av vännen att hen upptäckt chockerande hemligheter i Sanaris innersta krets, men att hen behövde undersöka saken noggrannare innan hen vågade säga mer. Du tror inte att försvinnandet är en slump och är nu väldigt vaksam och misstänksam mot Sanaris innersta krets. Du får 1T6+2 enheter att spendera på färdigheten Speja och du får öka Förbannelse med +2."
+        },
+        "115": {
+          "result": "studier_i_bibliotek",
+          "description": "Du har spenderat många timmar i familjens bibliotek. Du får öka din Bildning med +2 och du får 1T6+4 enheter att spendera på valfria kunskapsfärdigheter."
+        },
+        "116": {
+          "result": "politisk_fiende",
+          "description": "Du dras oftas in i mer eller mindre hätska diskussioner om Sanarisk politik. I en sådan debatt lyckades du fullständigt förnedra din motståndare som nu ser dig som din fiende. Skriv upp personen på kontakter med relationen fiende. Slå ett slag på tabellen för sanariska linjer för att avgöra vilken linje din fiende kommer ifrån. Du får 1T6+2 enheter på färdigheten Övertala och du får öka Personlighet med +2."
+        },
+        "117": {
+          "result": "magisk_influx",
+          "description": "Du följde med en expedition till en mystisk och magisk plats. Där drabbades du av en magisk inlux och sedan dess har du drabbats av en mindre verklighetsabnorm förändring. Spelaren och SL får komma överens om vilken aspekt det var och hur de artar sig. Minska qadosh med -5. Du får 1T6+4 enheter att spendera på mysftiska- eller alstrafärdigheter."
+        },
+        "118": {
+          "result": "överlevt_giftmord",
+          "description": "Någon har försökt giftmörda dig. Vem, varför och exakt hur detta gått till är upp till spelaren och SL att hitta på. Ända sedan mordförsöket har du lidit av darrningar, ryckningar och muskelstelhet. Minska Rörlighet med -2. Du får dock -ob1T6 i svårighet på alla motståndsslag mot gifter under resten av ditt liv. Dessutom har du valt att lära dig mer om gifter. Du får 1T6+2 enheter att spendera på färdigheten Växtlära och måste specialisera den mot “giftiga växter”."
+        },
+        "119": {
+          "result": "främmande_kontakt",
+          "description": "Du har genom dina studier, forskning och expeditioner lärt känna en person från en främmande kultur. Slå ett slag på kontakttabellen för att avgöra vad för slags person det är. Relationen är “affärsmässig”. Dessutom får du 1T6+1 enheter att spendera på färdigheten Kulturkännedom."
+        },
+        "120": {
+          "result": "albino",
+          "description": "Din far och mor var lite väl nära släkt med varandra. Du föddes som albino, vit som nyfallen snö i huden och är extremt känslig för solljus och får ob1T6 smärta varje timme du befinner dig i direkt solljus. Du kan klä dig i tjocka och heltäckande kläder för att undvika att solens strålar träffar dig direkt. Alver tycker oftast att din snövita hud är väldigt vacker och attraktiv och får -ob1T6 i svårighet på alla färdighetsslag mot Förföra mot andra alver. Dessutom är din hud väldigt attraktiv för cirefaliska människor, så svårighetssänkningen på Förföra gäller även mot cirefalier om du nu vill förföra en sådan."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "bakgrundstabeller": {
+    "börd_asharier": {
+      "titel": "Börd för asharier",
+      "beskrivning": "Ashariska ämbeten (som motsvarar börd i feodala riken)",
+      "dice": "1d100",
+      "ranges": {
+        "1-50": {
+          "result": "släkt_lägre_ämbete",
+          "description": "Någon i RPs släkt, men inte i hens närmaste familj, äger ett lägre ämbete, exempelvis lagmansämbetet."
+        },
+        "51-89": {
+          "result": "familj_lägre_ämbete",
+          "description": "RP eller någon i RPs närmsta familj äger ett lägre ämbete, exempelvis lagmansämbetet. RP måste klara kvalificeringskraven för att få äga denna titel."
+        },
+        "90-94": {
+          "result": "släkt_högre_ämbete",
+          "description": "Någon i RPs släkt, men inte i hens närmsta familj, äger ett högre ämbete, exempelvis rådsmansämbetet."
+        },
+        "95-96": {
+          "result": "familj_högre_ämbete",
+          "description": "RP eller någon i RPs närmsta familj äger ett högre ämbete, exempelvis rådsmansämbetet. RP måste klara kvalificeringskraven för att få äga denna titel."
+        },
+        "97-98": {
+          "result": "familj_stormannatitel",
+          "description": "RP eller någon i RPs närmaste familj äger en stormannatitel. Öka RPs Rykte med +12"
+        },
+        "99": {
+          "result": "släkt_frijarl",
+          "description": "Någon i RPs släkt, men inte i hens närmsta familj, är frijarl."
+        },
+        "100": {
+          "result": "familj_frijarl",
+          "description": "Någon i RPs närmsta familj, men inte RP själv är frijarl"
+        }
+      }
+    }
+  }
+}

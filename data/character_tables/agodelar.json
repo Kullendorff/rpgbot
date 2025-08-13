@@ -1,0 +1,285 @@
+{
+  "bakgrundstabeller": {
+    "föremål_ägodelar": {
+      "titel": "Föremål & Ägodelar",
+      "beskrivning": "Ger rollpersonen ett eller flera speciella föremål eller ägodelar baserat på slag och ibland rollpersonens kultur/folk.",
+      "dice": "1d100",
+      "ranges": {
+        "1-3": {
+          "result": "välgjort_avståndsvapen",
+          "description": "Avståndsvapen från RPs egen kultur. (en människa bör inte få en alvisk båge, en tirak bör inte få ett dvärgiskt armborst, etc) så länge det är ett avståndsvapen från RPs egen kultur får spelaren välja fritt bland avståndsvapnen. Just det här specifika vapnet är ovanligt välgjort, om det är en båge eller armborst kanske strängen är spänd extra hårt. Hursomhelst, vapnets fyra räckvidder ökar var och en med 20% (*1,2) och skadan ökas med +2/+1/+1/+1. STYK ökar tyvärr också med +2."
+        },
+        "4-5": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_marnakhtirak_missla": {
+              "result": "böcker_skriftrullar",
+              "description": "Böcker/skriftrullar. Rollpersonen äger ob1T6 böcker eller skriftrullar i varierande ämnen. Varje bok kan användas för att förbättra en färdighet - spelledaren bestämmer vilka. Böckerns språk är något som RP behärskar. Läsbarheten för varje bok är normal (ob3T6) varje bok har ett förkunskapskrav på ob1T6+4. Kunskapsinnehållet är 1T6 högre än förkunskapskravet."
+            },
+            "bazirk_frakktirak": {
+              "result": "gurd_slav",
+              "description": "En lydig och lojal gurd-slav"
+            },
+            "dvärg": {
+              "result": "goda_dvärgverktyg",
+              "description": "En uppsättning goda dvärgverktyg som gör det -ob1T6 lättare att utföra ett valfritt hantverk."
+            }
+          }
+        },
+        "6-8": {
+          "result": "exklusiva_kläder",
+          "description": "Exklusiva kläder. RP äger ett par riktigt exklusiva klädesplagg som krävt åtskilliga timmars sömnadsarbete för att färdigställa. Exakt hur RP fått tag i dessa behöver spelaren och SL komma överens om. Kläderna får RP att se mycket imponerande ut."
+        },
+        "9-11": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "alv": {
+              "result": "parfym",
+              "description": "parfym. RP äger ob1T6 doser parfym. Om RP använder parfymen sänks svårigheterna för färdigheterna Diplomati, Etikett, Förföra och Övertala med -ob1T6"
+            },
+            "not_alv": {
+              "result": "gift",
+              "description": "Gift. RP har kommit över 1T6+2 doser gift. Vilken typ av gift och hur RP fått tag i giftet behöver bestämmas av spelaren och SL."
+            }
+          }
+        },
+        "12-14": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_zoloddvärg_tirak_missla": {
+              "result": "gömställe",
+              "description": "Gömställe. RP har ett hemligt gömställe som bara RP känner till och som är mycket svårt att hitta. Spelaren och SL behöver bestämma vad och vart detta gömställe är. Förslag kan vara en grotta i bergen, en gammal ruin, en bortglömd katakomb under staden, eller något annar. Vad och vart det än är så är det nästan helt säkert att gömma utrustning där."
+            },
+            "ghor_roghan_drezindvärg": {
+              "result": "reserverad_lagerplats",
+              "description": "En reserverad lagerplats i anslutning till en hantverkssal eller ytterportarna på fästet. RP kan förvara vad som helst här utan att oroa sig för att någon snokar, men rummet är litet: 4 kvadratmeter och två meter högt."
+            }
+          }
+        },
+        "15-17": {
+          "result": "hund",
+          "description": "Hund. RP äger en hund som är skicklig både som jakthund och vakthund. Hunden kan ob1T6 olika trick"
+        },
+        "18-19": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_tirak_missla": {
+              "result": "jaktfågel",
+              "description": "Jaktfågel. RP äger en jaktfågel, t.ex en falk eller en hök. Den kan hjälpa till vid jakt och kan dessutom ob1T6 olika trick."
+            },
+            "dvärg": {
+              "result": "hantverksbod",
+              "description": "En hantverksbod i en hantverkssal (om RP bor i ett dvärgfäste, annars kan boden vara lite vartsomhelst), inredd så att RP har allt hen behöver för att utföra ett hantverk, eller något annat om RP inte vill hantverka."
+            }
+          }
+        },
+        "20-23": {
+          "result": "kartsamling",
+          "description": "Kartsamling. RP har ob1T6 olika kartor. Spelaren och SL kommer överens om vad kartorna visar. Det kan vara hemtrakter eller fjärran delar av världen."
+        },
+        "24-27": {
+          "result": "kvalitetsstål_vapen",
+          "description": "Kvalitetsstål ( från RPs egen kultur. En människa bör inte få en alvisk båge, en tirak bör inte få ett dvärgiskt armborst, etc). RP har ett välsmitt vapen i stål av högsta kvalite. Huggskadan för vapnet ökar med +1, BRYT ökan med 20%(*1,2)."
+        },
+        "28-30": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_tirak_missla": {
+              "result": "låsdyrkar",
+              "description": "Låsdyrkar. RP har en sats med välsmidda dyrkar vilket gör det en tärning lättare att dyrka upp lås."
+            },
+            "dvärg": {
+              "result": "introduktionsbrev",
+              "description": "Ett introduktionsbrev från en inflytelserik släkting eller vän. Detta brev kan användas för att få kontakt med viktiga dvärgar eller andra personer som kan bli imponerade av personen som skrivit brevet. Färdigheten Övertala blir -ob1T6 lättare när brevet används i kontakter med en sådan person."
+            },
+            "alv": {
+              "result": "kvalitetsverktyg",
+              "description": "Kvalitetsverktyg. RP har verktyg av högsta kvalite som kan användas till något hantverk. Exakt vilket hantverk bestäms av spelaren. När verktygen används till hantverket sänks svårighetsslaget med -ob1T6"
+            }
+          }
+        },
+        "31-34": {
+          "result": "lätt_närstridsvapen",
+          "description": "Lätt närstridsvapen (från RPs egen kultur. (en människa bör inte få en alvisk båge, en tirak bör inte få ett dvärgiskt armborst, etc). Vapnet modifieras enligt följande: Hugg-2, Kross-3, Stick-1, bryt-2, STYK-1, SI+0/+1, Vikt *0,8"
+        },
+        "35-39": {
+          "result": "lätt_sköld",
+          "description": "Lätt sköld. (från RPs egen kultur. (en människa bör inte få en alvisk båge, en tirak bör inte få ett dvärgiskt armborst, etc). RP har en extra lätt och smidig sköld av valfri typ, så länge den kommer från RPs egen kultur. Skölden modifieras enligt följande: bryt-2, vikt *0,8"
+        },
+        "40-42": {
+          "result": "musikinstrument",
+          "description": "Musikinstrument. RP har ett vackert och välbyggt musikinstrument i sin ägo. Instrumentet är så välbyggt att det blir en tärning lättare att spela på det än andra instrument."
+        },
+        "43-47": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_dvärg_missla": {
+              "result": "kraftig_rustningsdel",
+              "description": "Rustning. En valfri rustningsdel av extra kraftigt material. Väljer man arm- eller benrustning får man ett par, så man kan skydda båda armarna/benen. Pansarvärdena ökar med +1 vardera, vikten ökar med 20%(*1,2). Om rustningen är av metall är den dessutom förtennad vilket hindrar rost."
+            },
+            "tirak": {
+              "result": "ceremonirustning",
+              "description": "Ceremonirustning. 1 hjälm gjort av skallbenet från en större tirak/trukh eller något slags stort djur eller monster, 1 björnpäls och 1 harnesk av trä eller läder."
+            }
+          }
+        },
+        "48-51": {
+          "result": "seghärdat_närstridsvapen",
+          "description": "Seghärdat närstridsvapen (från RPs egen kultur. (en människa bör inte få en alvisk båge, en tirak bör inte få ett dvärgiskt armborst, etc). vapnet s klinga är seghärdat och svårt att förstöra. Modifiera BRYT+2"
+        },
+        "52-55": {
+          "result": "skarpt_närstridsvapen",
+          "description": "Skarpt närstridsvapen (från RPs egen kultur. (en människa bör inte få en alvisk båge, en tirak bör inte få ett dvärgiskt armborst, etc). Vapnets egg är väldigt vasst vilket kan orsaka mer skada, men gör vapnet skörare och lättare att förstöra. Modifiera hugg+2, stick+1,Bryt-2"
+        },
+        "56-58": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_dvärg_missla": {
+              "result": "slav_eller_tjänare",
+              "description": "Slav eller tjänare. RP har en slav, om slaveri är tillåtet i RPs kultur. Är slaveri förbjudet så har RP en lojal tjänare istället. Spelaren och SL behöver bestämma varför RP har en sådan. Förslag kan vara att RP räddat personens liv och denne betalar tillbaka sin livsskuld genom att tjäna RP, eller om det är en slav att RP helt enkelt köpt slaven."
+            },
+            "tirak": {
+              "result": "gurderslavar",
+              "description": "(1T6/2)+1 gurderslavar"
+            },
+            "alv": {
+              "result": "lärling",
+              "description": "Lärling. RP är mentor till en yngre alv och förväntas lära denne något viktigt om hur man klarar sig i livet. Lärlingen ser upp till RP och följer denne i vått och torrt."
+            }
+          }
+        },
+        "59": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_missla": {
+              "result": "släktjuveler",
+              "description": "Släktjuveler. RP äger en samling dyra släktjuveler. Juvelerna har ett högt emotionellt värde för RP och RP kommer inte vilja göra sig av med dom om det inte är en absolut sista utväg. Juvelerna kan vara i form av amuletter, armband, halsband, ringar eller något annat. De är tillsammans värda ob3T6*1000 silver."
+            },
+            "tirak": {
+              "result": "opal",
+              "description": "En opal (1T6 karat)"
+            },
+            "dvärg": {
+              "result": "begravningsvapen",
+              "description": "Ett begravningsvapen. Syftet med ett begravningsvapen är att när RP en dag dör ska hen begravas med sitt begravningsvapen. RP kan inte tänka sig att använda vapnet till något annat, men vapnet har ändå +2 i huggskada och +2 i brytvärde."
+            },
+            "alv": {
+              "result": "släktvapen",
+              "description": "Släktvapen. RP äger ett legendariskt vapen som gått i arv i generationer. Vapnet är berömt för det använts i något viktigt historiskt sammanhang, och de som känner igen vapnet kommer se RP som en mycket respektingivande person. Vapnet är inte nödvändigtvis bättre eller sämre än andra vapen av samma typ, men det har ett unikt utseende. Detaljerna kring vapnets historia bestäms av spelaren och SL"
+            }
+          }
+        },
+        "60-65": {
+          "result": "snabbt_riddjur",
+          "description": "Snabbt riddjur. Ett snabbt och intelligent riddjur - t.ex en häst eller kamel. Modifiera Riddjurets förflyttning +2. Det kan dessutom ob1T6 trick."
+        },
+        "66-69": {
+          "result": "starkt_dragdjur",
+          "description": "Starkt dragdjur. Ett starkt dragdjur eller packdjur t.ex åsna, oxe, buffel eller liknande. Modifiera djurets bärförmåga med 50% (*1,5)"
+        },
+        "70-73": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_tirak_missla": {
+              "result": "stridshäst",
+              "description": "Stridshäst. En stor och vältränad stridshäst. Modifiera hästens bärförmåga med 50% (*1,5). Hästen kan också ob1T6 olika trick"
+            },
+            "dvärg": {
+              "result": "tackjärn_eller_dvärgakol",
+              "description": "100 kilo tackjärn eller 200 kilo dvärgakol."
+            }
+          }
+        },
+        "74-76": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_dvärg_missla": {
+              "result": "talande_fågel",
+              "description": "Talande fågel. RP äger en ovanlig talande fågel. Fågeln är mycket tillgiven. Förutom att den kan härma ord och fraser kan den ob1T6 trick till."
+            },
+            "tirak": {
+              "result": "schamanism_fetish",
+              "description": "En fetish som kan användas till schamanism."
+            }
+          }
+        },
+        "77-79": {
+          "result": "tubkikare",
+          "description": "Tubkikare. RP äger en hopfällbar kikare som kan användas på mycket långa avstånd."
+        },
+        "80-84": {
+          "result": "tung_sköld",
+          "description": "Tung sköld. En extra stark sköld av valfri typ. Modifiera skölden enligt följande: bryt+2, vikt*1,2"
+        },
+        "85": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "alv": {
+              "result": "heave",
+              "description": "Heave. RP har fått en Heave präglad på sig. Heave kallas ibland kärleksfullt för “dumdrakar” då de fysiskt liknar de mäktiga drakarna, men de saknar högre intelligens och är egentligen simpla djur. Heave lyder enbart RP"
+            },
+            "not_alv": {
+              "result": "udda_riddjur",
+              "description": "Udda riddjur. RP äger ett udda och ovanligt riddjur. SL och Spelaren bör komma överens om vad för djur det är. Tänk på att det är bra att ha ett djur man kan ha i städer. Exempel på udda riddjur: draghar, elefant, heavedrake, horndrake, murvelbest, seian eller något annar."
+            }
+          }
+        },
+        "86": {
+          "result": "unikt_föremål",
+          "description": "Unikt föremål. RP har kommit över ett unikt och mycket eftertraktat föremål. Det kan vara en konstpjäs, ett vackert smycke, ett berömt vapen, en legendarisk stridshäst, en urgammal bok eller något annat. Hur RP fått tag i föremålet får bestämmas av spelaren och SL. Det finns sannolikt många personer som gärna skulle stjäla föremålet eller betala för det."
+        },
+        "87-91": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_dvärg_äkta_tirak_trukh_missla": {
+              "result": "uthålligt_riddjur_häst_kamel",
+              "description": "Uthålligt riddjur. T.ex en häst eller kamel. Djuret får en poäng mindre långtidsutmattning än normalt vid resor."
+            },
+            "gurd": {
+              "result": "uthålligt_riddjur_ulv",
+              "description": "Uthålligt riddjur. T.ex en ulv. Djuret får en poäng mindre långtidsutmattning än normalt vid resor."
+            }
+          }
+        },
+        "92-94": {
+          "result": "välbalanserat_vapen",
+          "description": "Välbalanserat vapen. (från RPs egen kultur. (en människa bör inte få en alvisk båge, en tirak bör inte få ett dvärgiskt armborst, etc). RP har ett välbalanserat närstridsvapen som är smidigt att använda, men något skörare än liknande vapen. Modifiera enligt följande: SI +0/+1, Hugg-1, bryt-1"
+        },
+        "95": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_dvärg_missla": {
+              "result": "mangenatlegerat_dvärgastål_vapen",
+              "description": "Välsmitt vapen. RP äger ett enhandsvapen smitt av mangenatlegerat dvärgastål. Modifiera vapnet enligt följande: hugg+2, styk+2, bryt*1,4, vikt*1,1"
+            },
+            "tirak": {
+              "result": "erövrat_alv_dvärga_vapen",
+              "description": "Ett valfritt alv- eller dvärgavapen som RP erövrat från en fallen fiende, stulit eller skaffat på något annat sätt."
+            }
+          }
+        },
+        "96-98": {
+          "result": "conditional_by_race",
+          "conditions": {
+            "människa_alv_missla": {
+              "result": "örter",
+              "description": "Örter. RP äger 1T6+2 doser av någon ört. Spelaren och SL får komma överens om vad örterna är bra för, samt hur RP fått tag i dem."
+            },
+            "tirak": {
+              "result": "tunna_plammbrännvin",
+              "description": "En tunna plammbrännvin"
+            },
+            "dvärg": {
+              "result": "tunna_kvasr",
+              "description": "En tunna kvasr (dvärgaöl)"
+            }
+          }
+        },
+        "99-100": {
+          "result": "roll_twice",
+          "description": "RP äger många saker. Slå två gånger till på denna tabellen och använd båda resultaten"
+        }
+      }
+    }
+  }
+}

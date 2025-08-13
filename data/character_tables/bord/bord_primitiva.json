@@ -1,0 +1,40 @@
+{
+  "bakgrundstabeller": {
+    "börd_primitiv": {
+      "titel": "Börd för primitiva kulturer",
+      "beskrivning": "Primitiva börder",
+      "dice": "1d100",
+      "ranges": {
+        "1-50": {
+          "result": "storfamilj_överhuvud",
+          "description": "Familjeöverhuvud för en storfamilj. Rollpersonens familj är den som styr över den storfamilj som RP ingår i. Med familj avses RPs föräldrar, syskon, maka och barn. Med storfamilj avses alla farföräldrar, morföräldrar, farbröder, morbröder, fastrar, mostrar och deras familjer. För att alla dessa personer skall räknas som en storfamilj behöver de bo nära varandra."
+        },
+        "51-80": {
+          "result": "stamhövding",
+          "description": "Stamhövding. Rollpersonens familj (RPs föräldrar, syskon, maka och barn) är den som styr över den stam som RP ingår i. Med stam avses en ännu större del av släkten som alla har en och samma stamfader. Exakt hur stor en stam är kan variera, men det krävs ofta att en släkting bor i samma område som RPs familj för att räknas som en del av stammen."
+        },
+        "81-96": {
+          "result": "klanhövding",
+          "description": "Klanhövding. RPs familj (RPs föräldrar, syskon, maka och barn) är den högsta familjen inom den klan som RP ingår i. En klan omfattar alla släktingr som kan spåra sin härkomst till en och samma anfader. Exakt hur stor en klan är kan variera, framförallt baserat på hur gammal klanen är. Skillnaden mellan stam och klan i det här fallet är att stammens medlemmar är bosatta på samma plats, medans klanens medlemmar kan vara bosatta på olika håll. Detta innebär att en klan är minst lika stor som stammen men oftast är större."
+        },
+        "97-98": {
+          "result": "ledare_över_klaner",
+          "description": "Ledare. RPs familj (RPs föräldrar, syskon, maka och barn) är ledare för 1T6+1 klaner. Familjens överhuvud är dessutom klanhövding för RPs klan."
+        },
+        "99-100": {
+          "result": "conditional_ruler_status",
+          "conditions": {
+            "not_same_folk": {
+              "result": "reroll_le_98",
+              "description": "Om RP INTE är av samma folkslag som härskaren i riket får spelaren slå om slaget på börd tills hen får 98 eller lägre resultat."
+            },
+            "same_folk": {
+              "result": "härskare",
+              "description": "Härskare. RPs familj (RPs föräldrar, syskon, maka och barn) är den högsta inom hela RPs folk. Familjeöverhuvudet är hela folkets härskare och dessutom klanhövding för den klan RP är medlem i"
+            }
+          }
+        }
+      }
+    }
+  }
+}

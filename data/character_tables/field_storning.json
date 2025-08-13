@@ -1,0 +1,186 @@
+{
+  "störningar_cirefalier": {
+    "antal_störningar": {
+      "titel": "Antal störningar",
+      "beskrivning": "Slå på denna tabell för att avgöra hur många gånger du ska slå på tabellen för cirefaliernas bio/psykotropiska störningar.",
+      "dice": "1d100",
+      "ranges": {
+        "1-72": {
+          "result": "ingen_störning",
+          "description": "Ingen störning"
+        },
+        "73-82": {
+          "result": "en_störning",
+          "description": "1 slag på tabellen för cirefaliernas bio/psykotropiska störningar"
+        },
+        "83-94": {
+          "result": "två_störningar",
+          "description": "2 slag på tabellen för cirefaliernas bio/psykotropiska störningar"
+        },
+        "95-98": {
+          "result": "tre_störningar",
+          "description": "3 slag på tabellen för cirefaliernas bio/psykotropiska störningar"
+        },
+        "99-100": {
+          "result": "roll_twice",
+          "description": "Slå två gånger till på denna tabell och lägg ihop resultaten."
+        }
+      }
+    },
+    "störning": {
+      "titel": "Cirefaliernas bio/psykotropiska störningar",
+      "beskrivning": "Denna tabell listar olika medfödda störningar som kan drabba en cirefalier.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "aktiv_hårväxt",
+          "description": "Aktiv hårväxt."
+        },
+        "3-6": {
+          "result": "albino",
+          "description": "Albino. RP har skär eller vit hud, kritvitt hår och röda ögon. Både ögonen och huden är känsliga för starkt solljus. Blir huden solbränd ökar smärta med en tärning (+ob1T6) poäng per dag som RP exponeras - denna smärta försvinner inte förrän RP har fått vila i skydd från solen under minst två dygn. Vid starkt solljus så får RP dessutom en nivå svårare (+ob1T6) på alla slag där synen används. Enligt Cirzatemplet är albinos välsignade av Cirza, så om RP vill välja yrket “troende” nu när hen är albino kommer framgångsnivån räknas som framgångsrik oavsett hur många framgångsslag som lyckas eller misslyckas."
+        },
+        "7-9": {
+          "result": "blodfattig",
+          "description": "Blodfattig. RP har ett svagt och tunt blod i sin kropp. Minska antalet kolumner för blodförlust i skadesektionen med två (-2). RP kan som minst ha en kolumn."
+        },
+        "10-11": {
+          "result": "blåsor",
+          "description": "Blåsor. Under RPs hud finns det konstiga och osmakliga blåsor. Dessa förekommer främst i ansiktet, på händerna och ryggen. PER minskar med -2."
+        },
+        "12-14": {
+          "result": "blödarsjuk",
+          "description": "Blödarsjuk. RP slutar inte blöda av sig själv i normal takt. Det tar en timme för varje poäng blödningstakt att läka."
+        },
+        "15-16": {
+          "result": "bräcklig",
+          "description": "Bräcklig. RPs kropp är svag och ömtålig. Minska antalet kolumner för Trauma och Smärta med -1 vardera. RP har dock minst 1 kolumn kvar."
+        },
+        "17": {
+          "result": "darrhänt",
+          "description": "Darrhänt. RP får en nivå svårare (+ob1T6) på alla handlingar som involverar precision, t.ex bågskytte, fingerfärdighet eller spela musikinstrument."
+        },
+        "18-22": {
+          "result": "dålig_hörsel",
+          "description": "Dålig hörsel. RP har nedsatt hörsel. Minska HÖR med -2. Detta är utöver den hörselnedsättning alla cirefalier lider av."
+        },
+        "23-26": {
+          "result": "dålig_syn",
+          "description": "Dålig syn. RP har nedsatt syn. Sänk SYN med -2."
+        },
+        "27-29": {
+          "result": "dåligt_läkekött",
+          "description": "Dåligt läkekött. Alla läkeperioder dubblas för RP. Dock inte utmattninghsåterhämtning, den återhämtas lika snabbt som normalt."
+        },
+        "30": {
+          "result": "fet",
+          "description": "Fet. när du senare räknar ut RPs vikt så ökar den med (ob2T6+20) kg. När utmattningskolumner räknas ut senare får RP bara hälften av kolumnerna. (lägsta möjliga mängd utmattningskolumner är 1)"
+        },
+        "31-32": {
+          "result": "fettansamlingar",
+          "description": "Fettansamlingar. RPs kropp är oproportionerlig och har stora fettreserver i muskulaturen. PER och RÖR minskar med -1 vardera. RP får två enheter att spendera på färdigheten Simma (läs om hur enheter fungerar längre ner i detta kapitel).när du senare räknar ut RPs vikt får du öka denna med 10% (*1,1). RP flyter dessutom automatiskt på vattenytor!"
+        },
+        "33": {
+          "result": "fula_tänder",
+          "description": "Fula tänder. RPs garnityr är extremt motbjudande på nåt sätt, t.ex tänder som växer åt alla möjliga, konstiga håll, tänder som är orimligt stora eller orimligt små eller något annat som ser konstigt ut. PER minskar med -1."
+        },
+        "34-36": {
+          "result": "insjunkna_ögon",
+          "description": "Insjunkna ögon. RPs ögon sitter extremt djupt in i ögonhålorna vilket ger ett sjukt och utmärglat utseende. PER och SYN minskar med -1 vardera."
+        },
+        "37-42": {
+          "result": "klent_intellekt",
+          "description": "Klent intellekt. RP är svagt begåvad. Halvera RPs PSY och minska VIL och BIL med -1 vardera. RP får dock öka STY och TÅL med +1 vardera."
+        },
+        "43": {
+          "result": "klumpfot",
+          "description": "Klumpfot. RPs ena fot liknar mer en klump än en fot. RP har uppenbara problem med att gå. När du senare räknar ut RPs förflyttning halveras den. (som lägst kan den bli 1)"
+        },
+        "44-45": {
+          "result": "kort",
+          "description": "Kort. RP är mycket kort för sin kroppsbyggnad. När du senare räknar ut längd och vikt för din RP får du minska längden med en fjärdedel (*0,75) och och minska vikten med 10% (*0,9)"
+        },
+        "46": {
+          "result": "korta_ben",
+          "description": "Korta ben. RP har korta och krumma ben. När du senare räknar ut förflyttning minskar den med -1. (som lägst kan förflyttning vara 1)"
+        },
+        "47-48": {
+          "result": "lång",
+          "description": "Lång. RP är ovanligt lång för sin kroppsbyggnad. Öka längden med 10% (*1,1)och vikten med 10% (*1,1)"
+        },
+        "49-51": {
+          "result": "mager",
+          "description": "Mager. RP väger för lite och har svårt att öka i vikt. STY minskar med -2. Minska vikten med en fjärdedel (*0,75). Kroppsbyggnaden minskar med ett steg i tabellen för kroppsbyggnad, och detta påverkar även RPs skadekolumner."
+        },
+        "52-57": {
+          "result": "missfärgad_hud",
+          "description": "Missfärgad hud. RPs hud är bitvis skrovlig, har en gråaktig färg, konstiga mjölkvita fläckar, kolsvarta områden, eller något liknande. PER minskar med -1."
+        },
+        "58-59": {
+          "result": "rörlig",
+          "description": "Rörlig. RPs kropp är smidig och böjlig som få. Öka RÖR med +3 men sänk STY och TÅL med -1 vardera."
+        },
+        "60": {
+          "result": "sifferblind",
+          "description": "Sifferblind. RP saknar förmågan att föreställa sig matematiska problem. Med lite tur kan hen räkna från 1 till 10 utan att glömma bort någon siffra. Färdigheten Räkning kan aldrig få ett värde högre än 5."
+        },
+        "61": {
+          "result": "skakningar",
+          "description": "Skakningar. RP drabbas ibland av kraftiga spasmer. Under stressiga situationer, t.ex strider eller hätska argumentationer måste man slå ob2T6 mot PSY för att RP inte ska få ett spasmanfall. Ett spasmanfall gör färdighetsslag en nivåer svårare (+ob1T6) under ob2T6 minuter."
+        },
+        "62-63": {
+          "result": "slapp_ansiktsmuskulatur",
+          "description": "Slapp ansiktsmuskulatur. RP har svårt att hålla ögonlocken mer än halvöppna eller hålla munnen helt stängd. Dessutom ser det ut som RPs ansikte sjunker neråt vilket ger ett sjukligt intryck. PER minskar med -1."
+        },
+        "64-66": {
+          "result": "smart_men_svag",
+          "description": "Smart men svag. RPs sinne är skarpt som ett svärd men RPs fysik är bräcklig. STY och TÅL minskar med -2 vardera och PSY ökar med +2."
+        },
+        "67": {
+          "result": "smärtimmun",
+          "description": "Smärtimmun. RP känner inte smärta lika starkt som vanligt folk. Alla svårigheter för att tåla chockslag och alla svårigheter på grund av smärta blir en nivå enklare (-ob1T6). RPs rörlighet minska dock med -2 eftersom hen inte kan känna sin egen kropp lika väl som vanligt folk."
+        },
+        "68-69": {
+          "result": "smärtkänslig",
+          "description": "Smärtkänslig. RP är mycket känslig för smärta och får därför en kolumn mindre i smärta i skadekolumnerna. (lägsta mjliga kolumner är 1)"
+        },
+        "70-74": {
+          "result": "stark_men_trög",
+          "description": "Stark men trög. RP är stark som en häst! Tyvärr också intelligent som en häst. STY ökar med +3 men PSY, VIL och BIL sänks med -2 vardera. Många listiga skurkar kan säkert utnyttja RP och lura den att göra mer eller mindre olagliga tjänster åt dom."
+        },
+        "75-80": {
+          "result": "steril",
+          "description": "Steril. RP saknar förmågan att reproducera sig. Hen kan ha sex, men kan inte bli/göra någon gravid. Detta är en mycket allvarlig brist hos en person i de högre cirefaliska samhällsklasserna där giftermål mellan, eller inom, familjer och deras avkomma är extremt viktig för den framtida utvecklingen."
+        },
+        "81-84": {
+          "result": "störd",
+          "description": "Störd. RP lider av någon psykisk sjukdom t.ex empatistörd, neurotisk, psykotisk eller liknande, som ger RP tvångstankar, manier och svårigheter att relatera till andra personer. Spelaren och SL bör komma överens om en lämplig psykisk sjukdom som inte gör RP ospelbar."
+        },
+        "85": {
+          "result": "svaga_händer",
+          "description": "Svaga händer. RP har ett svagt grepp i sina händer. Alla STYK ökar med +2. I andra situationer kan det här svaga greppet också ställa till det för RP, t.ex om RP försöker hålla sig fast i ett rep eller liknande. Svårigheten bör ökas med +ob1T6 i situationer där RP behöver hålla hårt i något. När RP skakar hand med någon känns hens handslag väldigt slappt och svagt vilket är föga imponerande på nästan någon alls."
+        },
+        "86": {
+          "result": "svagt_språkcentra",
+          "description": "Svagt språkcentra. RP kan som bäst ha färdighetsvärde 10 i sitt eget modersmål och färdighetsvärde 5 i något annat språk."
+        },
+        "87-89": {
+          "result": "udda_huvudform",
+          "description": "Udda huvudform. RPs huvud ser konstigt ut. Det kan vara för stort för hens kropp, svullet, assymetriskt, klotformat, extremt avlångt, buckligt eller något annat ovanligt. PER minskar med -1"
+        },
+        "90-94": {
+          "result": "usel_hörsel",
+          "description": "Usel hörsel. RP hör väldigt dåligt. Vad RP än har i HÖR just nu blir halverat. (som minst 1)"
+        },
+        "95-99": {
+          "result": "usel_syn",
+          "description": "Usel syn. RP ser väldigt dåligt. Vad RP än har i SYN just nu blir halverat. (som minst 1)"
+        },
+        "100": {
+          "result": "utslag",
+          "description": "Utslag. RP är översållad av röda och variga utslag. De är varken farliga eller smittsamma, men de ser äckliga ut och väcker obehag hos andra personer som ser dem. Om RP inte döljer utslagen får hen +ob1T6 på alla kommunikationsfärdigheter."
+        }
+      }
+    }
+  }
+}

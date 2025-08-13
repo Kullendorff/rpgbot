@@ -1,0 +1,34 @@
+{
+  "bakgrundstabeller": {
+    "börd_civiliserad_övriga": {
+      "titel": "Börd för övriga civiliserade kulturer",
+      "beskrivning": "En RP som får slå ett slag på denna tabell kommer få en adelstitel. Om RP dessutom får händelsen “24 - erkänd som mästare från händelsetabellen, så kommer hen få möjligheten att spendera valfria färdigheter på en ovanlig stridskonst.",
+      "dice": "1d100",
+      "ranges": {
+        "1-10": {
+          "result": "degraderad_lågadlig",
+          "description": "RP har en lågadlig titel, t.ex baron, markis eller friherre. En gång i tiden hade familjen eller RP själv en högre titel, men familjen har blivit degraderad. Spelaren och spelledaren behöver komma överens om varför detta har hänt. Rollpersonens rykte ökar med +8"
+        },
+        "11-20": {
+          "result": "ärvd_lågadlig_ej_huvudarvinge",
+          "description": "Ärvd lågadlig titel, t.ex baron, markis, friherre eller motsvarande. RPs far eller mor är högadlig, men denna titel skall ärvas eller har redan ärvts av någon annan person, t.ex någon av RPs syskon, kusiner eller någon annan. RPs rykte ökar med +8"
+        },
+        "21-50": {
+          "result": "tilldelad_lågadlig",
+          "description": "Tilldelad lågadlig titel t.ex baron, markis, friherre eller motsvarande. Spelaren och spelledaren måste bestämma vad RP gjort för att förtjäna denna titel. RPs rykte ökar med +12"
+        },
+        "51-89": {
+          "result": "ärvd_lågadlig",
+          "description": "Ärvd lågadlig titel t.ex baron, markis, friherre eller motsvarande. RP har ärvt titeln av någon av sina föräldrar, som i sin tur har ärvt titeln av sin förälder. RP Rykte ökar med +12."
+        },
+        "90-92": {
+          "result": "ärvd_högadlig",
+          "description": "Ärvd högadlig titel t.ex greve, jarl eller motsvarande. RPs Rykte ökar med +15"
+        },
+        "93": {
+          "result": "tilldelad_högadlig",
+          "description": "Tilldelad högadlig titel t.ex greve, jarl, eller motsvarande. Spelaren och spelledare måste bestämma varför RP fått titeln tilldelad. RPs Rykte ökar med +15"
+        },
+        "94": {
+          "result": "tilldelad_högadlig_utan_kunglig_släkt",
+          "description": "Tilldelad högadlig titel utan släktskap med kungaf

@@ -1,0 +1,71 @@
+{
+  "familj_huvudnäring": {
+    "adlig_civiliserad": {
+      "titel": "Adlig familj från civiliserad kultur",
+      "beskrivning": "Är RPs familj adlig och/eller riddare skall denna tabell användas för att avgöra familjens huvudnäring. Det spelar ingen roll om familjen bor på landet, i en stad eller vid kusten, men familjen måste vara från en Civiliserad kultur. Är familjen från en primitiv kultur skall istället tabellen för hövdingafamilj från primitiv kultur användas. Thalaskiska medborgare motsvarar adel i feodala riken så de använder också denna tabell. Vissa Sanarialver kan anvnda denna tabell, eller tabellen för civiliserade familjer i en inlandsstad.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-7": {
+          "profession": "Affärsman",
+          "skills": ["bokhållning", "räkning", "värdera", "övertala"]
+        },
+        "8-20": {
+          "profession": "Aristokrat",
+          "skills": ["diplomati", "etickett", "kulturkännedom", "övertala"]
+        },
+        "21-22": {
+          "profession": "Forskare",
+          "skills": ["bibliotekskunskap", "1 valfri kunskapsfärdighet", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"]
+        },
+        "23-32": {
+          "profession": "Lagman",
+          "skills": ["förhöra", "lagkunskap", "övertala", "1 valfri skriftfärdighet"]
+        },
+        "33-37": {
+          "profession": "Magiker",
+          "skills": ["1 valfri alstrafärdighet", "besvärjelse", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"]
+        },
+        "38-42": {
+          "profession": "Medikus",
+          "skills": ["alkemi", "läkekonst", "växtlära", "1 valfri skriftfärdighet"]
+        },
+        "43-50": {
+          "profession": "Mystiker",
+          "skills": ["astrologi", "ockultism", "teoretisk magi", "1 valfri skriftfärdighet"]
+        },
+        "51-62": {
+          "profession": "Officer",
+          "skills": ["ledarskap", "krigsföring", "rida", "1 valfri vapenfärdighet"]
+        },
+        "63-65": {
+          "profession": "Präst",
+          "skills": ["ceremoni", "övertala", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Är RP en Thalaskisk Medborgare får resultatet slås om tills du fåer ett annat resultat."
+        },
+        "66-72": {
+          "profession": "Riddare",
+          "skills": ["etickett", "heraldik", "rida", "1 valfri vapenfärdighet"],
+          "special_rule": "Dessutom får RP +8 rykte för sin berömda förälder, om hen inte redan har en börd med högre ryktesbonus."
+        },
+        "73-77": {
+          "profession": "Rumlare",
+          "skills": ["dansa", "förföra", "spel&dobbel", "supa"]
+        },
+        "78-80": {
+          "profession": "Utforskare",
+          "skills": ["geografi", "historia", "överlevnad", "1 valfri språkfärdighet"]
+        },
+        "81-90": {
+          "profession": "Vapenmästare",
+          "skills": ["undervisning", "undvika", "1 valfri vapenfärdighet", "1 valfri ovanlig stridskonst"],
+          "special_rule": "(RP kommer senare få spendera sina valfria färdigheter på sin ovanliga stridskonst om spelaren så vill)"
+        },
+        "91-100": {
+          "profession": "Ämbetsman",
+          "skills": ["bokhållning", "lagkunskap", "övertala", "1 valfri skriftfärdighet"]
+        }
+      }
+    }
+  }
+}

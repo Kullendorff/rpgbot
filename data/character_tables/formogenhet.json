@@ -1,0 +1,43 @@
+{
+  "bakgrundstabeller": {
+    "förmögenhet": {
+      "titel": "Förmögenhet",
+      "beskrivning": "Avgör rollpersonens startkapital.",
+      "dice": "1d100",
+      "ranges": {
+        "1-5": {
+          "result": "förmögenhet_1",
+          "description": "ob3T6 silver"
+        },
+        "6-10": {
+          "result": "förmögenhet_2",
+          "description": "ob3T6*2 silver"
+        },
+        "11-30": {
+          "result": "förmögenhet_3",
+          "description": "ob3T6*10 silver"
+        },
+        "31-60": {
+          "result": "förmögenhet_4",
+          "description": "ob3T6*20 silver"
+        },
+        "61-90": {
+          "result": "förmögenhet_5",
+          "description": "(ob3T6*100 silver) + (ob2T6*10 guldmynt)"
+        },
+        "91-97": {
+          "result": "förmögenhet_6",
+          "description": "(ob4T6*100 silver) + (ob2T6*100 guldmynt)"
+        },
+        "98-99": {
+          "result": "förmögenhet_7",
+          "description": "(ob5T6*100 silver) + (ob3T6*100 guldmynt) + bankväxlar värda (ob3T6*1000 silver)"
+        },
+        "100": {
+          "result": "förmögenhet_8",
+          "description": "(ob5T6*200 silver) + (ob4T6*100 guldmynt) + bankväxlar värda (ob3T6*10000 silver)"
+        }
+      }
+    }
+  }
+}

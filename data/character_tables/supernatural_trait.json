@@ -1,0 +1,373 @@
+{
+  "bakgrundstabeller": {
+    "övernaturliga_egenskaper": {
+      "titel": "Övernaturlig egenskap",
+      "beskrivning": "Ger rollpersonen en övernaturlig egenskap, förmåga eller bonus.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "andesyn",
+          "description": "Andesyn. RP har en naturlig förmåga att knna närvaron av andar och har dessutom en medfödd begåvning för att hitta rätt på andeplanet (ifall RP nu skulle hamna där). RP får 1T6+1 enheter att spendera på färdigheten andfeförnimmese."
+        },
+        "3": {
+          "result": "andra_chans",
+          "description": "Andra chans. En gång per spelmöte får spelaren välja att slå om ett tärningslag efter att resultatet redan visats. Om ett slag slås om måste det nya resultatet användas."
+        },
+        "4-5": {
+          "result": "ockult_bibliotek",
+          "description": "Bibliotek. RP har en samling ockulta böcker eller skriftrullar. Samlingen är ob1T6 skrifter. SL avgör vilka titlar RP äger vilket skick de är i, vad de har för förkunskapskrav, läsbarhet, kunskapsinnehåll och värde. Det bör handla om någon mystisk färdighet, någon alstra färdighet, eller kanske besvärjelser eller liknande."
+        },
+        "6": {
+          "result": "ceremoniell_förmåga",
+          "description": "Ceremoniell förmåga. RP har en ovanligt hög talang för att leda och memorera ceremonier. RP får 1T6+1 enheter att spendera på färdigheten ceremoni ."
+        },
+        "7": {
+          "result": "demonhybrid",
+          "description": "Demonhybrid. En av rollpersonens föräldrar var en demon vilket innebär att RP inte riktigt är som alla andra. RP har något diskret utseendeförändring som påminner om RPs demoniska förälder, tillexempel ögon som byter färg beroende på humör, onaturliga hudfärger, horn eller andra utväxter på kroppen. RP får möjlighet att alstra magiaspekten daimotropi (som bör skrivas till som en färdighet under alstra-färdigheterna) samt någon slags demonisk förmåga."
+        },
+        "8": {
+          "result": "demonisk_pakt",
+          "description": "Demonisk pakt. RP har ingått en pakt med en demon. RP har lovat demonen sin själ när hen dör samt att utföra någon slags handling åt demonen medans RP fortfarande är i livet. Demonen har i sin tur lovat RP något i utbyte. Exakt hur pakten slöts, vad RP ska göra och vad demonen gett RP behöver bestämmas av spelaren och SL. exempelvis kan RP ha fått några demoniska förmågor."
+        },
+        "9-10": {
+          "result": "djurvän",
+          "description": "Djurvän. Djur tycker om RP. alla slag för att hantera eller träna djur r en nivå lättare (-ob1T6). Vilda djur och många monster drar sig för att anfalla RP. om ett djur slår ett aggresionsslag pga RP får djuret två nivåer svårare (+ob2T6)"
+        },
+        "11": {
+          "result": "drömtydare",
+          "description": "Drömtydare. RP har en naturlig förmåga att tyda drömmar. Genom att lyckas med ett PSY-slag kan denne tolka en dröm. svårigeten beror på hur tydligt drömmen beskrivs, eller koms ihåg om det är RPs egna drömmar som tyds. Ett klart minne ger svårigheten ob3T6, ett otydligt minne kan ge svårigheten ob5T6. Lyckas man tyda en dröm är det inte säkert att den slår in. ödet förändras hela tiden."
+        },
+        "12": {
+          "result": "drömvandrare",
+          "description": "Drömvandrare. RP har mycket kraftfull kontroll över sitt drömjag och sina drömmar. Den här förmågan gör det möjligt för RP att kontakta personer hen känner i deras drömmar oavsett vart i Mundana de befinner sig. Personen som blir kontaktad på det här sättet minns dock kontakten som en dröm. Det kan kännas väldigt surrealistiskt, svårt att minnas och i värsta fall tar personen inte kontakten på allvar utan avfärdar det som en helt vanlig dröm."
+        },
+        "13": {
+          "result": "elementarvän",
+          "description": "Elementarvän. RPs själ är nära bunden ett element. Spelaren väljer eller slumpar mellan eld, vatten, vind eller jord. Detta element är nära knutet till RP som inte tar lika mycket skada från elementet som vanliga personer. Förslag: Eld bränner inte RP, vatten fylls av strömmar som hindrar RP från att sjunka eller för hen mot land, vinden blåser inte omkull RP, jordbävningar och kvicksand drabbar inte RP. de exakta effekterna får SL bestämma från tillfälle till tillfälle. Element är nyckfulla och kan fungera olika varje gång om SL vill det. Om RP är magiuker är kroppslig alstring av det element som är knutet till RP en nivå lättare (-ob1T6) och har inga negativa effekter på magikerns kropp. RP kan bara vara knuten till ETT element. Elementarvarelser av det aktuella elementat vare sig vill eller kan anfalla RP. \nVapen och magi assoscierat till elementet gör dock full skada på RP."
+        },
+        "14-15": {
+          "result": "elementtålig",
+          "description": "Elementtålig. Hetta och köld berör RP mindre än vanliga personer. Alla TÅL-slag för att motstå hetta eller köld r två nivåer enklare (-ob2T6)"
+        },
+        "16-17": {
+          "result": "familiarus",
+          "description": "Familiarus. RP har ett husdjur som är besjälat med en bunden ande från en avlägsen släkting. Familiaren innehåller en normal förfadersande och själva djuret är något litet, vanligt husdjur, t.ex hund, katt eller liknande. Familiarer är framförallt användbara för en person att ta sig in i andeplanet, så det är fulltb möjligt att RP inte kan använda sin familiarus till vad den är avsedd för om hen inte är någon slags andebesvärjare. Isåfall kan RP kanske försöka lära sig det och om den inte vill det eller inte kan lära sig det så har den iallafall en mycket hängiven och intelligent familiarus. Mer information om Schamanism finns i ett senare kapitel. Självklart behöver Spelaren och SL komma överens om hur RP kommit över sin familiarus."
+        },
+        "18-19": {
+          "result": "fetish",
+          "description": "Fetish. RP har ett föremål som är besjälat med en bunden ande från en avlägsen släkting. Fetishen innehåller en normal förfadersande och själva föremålet är något medellitet, föremål, till exempel en liten statyett eller en besmyckad köpp eller liknande. Fetisher är framförallt användbara för en person att ta sig in i andeplanet, så det är fullt möjligt att RP inte kan använda sin fetish till vad den är avsedd för om hen inte är någon slags andebesvärjare. Isåfall kan RP kanske försöka lära sig det och om den inte vill det eller inte kan lära sig det så har den iallafall en mycket mycket stiligt och intressant föremål i sin ägo. Mer information om Schamanism finns i ett senare kapitel. Självklart behöver Spelaren och SL komma överens om hur RP kommit över sin fetish."
+        },
+        "20-21": {
+          "result": "fokus",
+          "description": "Fokus. RP äger en fokus. En fokus är magisk artefakt som kan väva en besvärjelse. RP måste själv alstra och eventuellt transformera filamenten som besvärjelsen behöver, men fokusen kan sköta besvärjandet när den väl matats med filament. Istället för att slå mot sin egen färdighetschans i färdigheten besvärjelse så slår man mot fokusens färdighetschans, som är lika med 1T6+14. Fokusen kan bara väva en enda besvärjelse, med en magnitud på 1T6/2. Spelaren och SL behöver komma överens om hur RP kommit över fokusen, vilken besvärjelse den kan väva, och hur den ser ut, t.ex en stav eller en ring eller liknande."
+        },
+        "22": {
+          "result": "formelminne",
+          "description": "Formelminne. RP kan memorera ovanligt många besvärjelser. Maximala antalet magnituder RP kan memorera är ((PSY*2)+(Färdighetschansen i besvärjelse)). Vanliga personer kan memorera PSY+(Färdighetschansen i besvärjelse))."
+        },
+        "23": {
+          "result": "formelsamling",
+          "description": "Formelsamling. RP har kommit öve ren gammal formelsamling med nedskrivna besvärjelser. I samlingen finns besvärjelser som motsvarar 3T6 magnituder. Spelare och SL kommer överens om exakt vilka besvärjelser som finns. RP har inte memorerat besvärjelserna"
+        },
+        "24": {
+          "result": "förfadersande",
+          "description": "Förfadersande. Oavsett vilken kultur RP kommer ifrån så har hen av någon anledning en förfadersande som vakar över hen. RP vet om detta och har tagit sig tid att studera lite schamanism. RP får 1T6+1 enheter att spendera på färdigheten shamanism. Öka Tur med +2."
+        },
+        "25": {
+          "result": "förståelse_för_det_magiska",
+          "description": "Förståelse för det magiska. Fördigheterna besvärjelse, Transformering samt ALLA alstrafärdigheter är lättlärda. Qadosh sänks med 1T6 (det går att ha negativ qadosh)"
+        },
+        "26": {
+          "result": "förtrollande_röst",
+          "description": "Förtrollande röst. RPs röst kan förvrida det starkaste sinne. Alla färdighetsslag för berättarkonst, övertala, förföra, och förhöra blir en nivå lättare (-ob1T6)"
+        },
+        "27": {
+          "result": "godartad_qadosh",
+          "description": "Godartad qadosh. Rollpersonens skenbara ålder påverkas inte av negativ qadosh. RPs gräns för att börja slå på åldringstabellen höjs med ob2T6+2 år."
+        },
+        "28": {
+          "result": "gudarnas_gunstling",
+          "description": "Gudarnas gunstling. Om rollpersonen är troende och ber om gudomlig intervention så är svårigheten för slaget en nivå lättare (-ob1T6). Dessutom får RP höja Tur med +3."
+        },
+        "29": {
+          "result": "helande_händer",
+          "description": "Helande händer. RP kan hela genom handpåläggning. Håller RP sina händer mot en annan persons sår eller skador i tio rundor (40 sekunder) helas ob1T6 poäng trauma. Personen som ska helas måste vara vid medvetande, RP kan inte hela sig själv och RP kan bara göra detta max en gång per dygn. \nSpelaren bör fundera hur denna förmåga har påverkat RPs liv hittils.,"
+        },
+        "30-31": {
+          "result": "helig",
+          "description": "Helig. RP börjar spelet med 1T6+2 qadosh. Qadosh är enkelt utryckt ett mått på hur viktig personen är för sin gud/sina gudar. Tur ökar med +2"
+        },
+        "32": {
+          "result": "hypnotisk_blick",
+          "description": "Hypnotisk blick. Om RP har ögonkontakt med en person kan RP få personen att hamna i ett tranceliknande tillstånd där personen inte kan skrika, tala, eller röra sig. Det krävs att RP har ögonkontakt med sitt offer, att RP aktivt försöker hypnotisera personen, och att RPs VIL besegrar offrets VIL i ett aktivt motståndsslag. Trancen bryts samma ögonblick som ögonkontakten bryts, t.ex om RP tittar bort eller knuffas, eller om något kommer emellan RP och offret."
+        },
+        "33-34": {
+          "result": "kongelat",
+          "description": "Kongelat. RP äger ob1T6 kongelerade filament. Spelaren väljer vilken aspekt det rör sig om."
+        },
+        "35": {
+          "result": "kontakt_med_andarna",
+          "description": "Kontakt med andarna. RP har en medfödd förmåga att få kontakt med andarna. RP får 1T6+1 enheter att spendera på Schamanism."
+        },
+        "36": {
+          "result": "kraft_från_väven",
+          "description": "Kraft från väven. RP hålls av någon anledning vid liv av den magiska vävens energier. Vilket innebär att RP inte behöver äta eller dricka för att få näring, hen får näring från magiska väven. Det finns ett fåtal magidöda områden i Mundana där denna förmåga inte fungerar och där behöver RP äta och dricka om hen får för sig att ta sig dit. RP KAN äta och dricka för att det är trevligt och för att passa in i samhället, men klarar sig bra utan.\nSpelaren bör fundera på hur detta kan ha påverkat RPs liv."
+        },
+        "37-38": {
+          "result": "kristall",
+          "description": "Kristall. RP äger en kristall som är en magisk artefakt som man kan lagra filament i. Spelaren väljer vilken typ av filament som finns lagrade och kan lagras i artefakten. Kristallen ger den som aktiverar den 1T6/2 filament, och den kan laddas med samma värde *10 filament som mest. När kristallen är tömd behöver den laddas på alkemisk väg."
+        },
+        "39": {
+          "result": "kännare",
+          "description": "Kännare. RP har en nästan skrämmande förmåga att uppskatta ett föremåls värde och kvalite. RP kan använda PSY istället för färdigheten värdera när hen ska värdera ett föremål ur den kategori hen är kännare av. RP är kännare av något av följande kategorier:",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Kategori av föremål",
+            "dice": "1d100",
+            "ranges": {
+              "1-20": {
+                "result": "vapen_rustningar",
+                "description": "Vapen & rustningar"
+              },
+              "21-40": {
+                "result": "kläder_skor",
+                "description": "Kläder & skor"
+              },
+              "41-60": {
+                "result": "smycken_juveler",
+                "description": "Smycken & juveler"
+              },
+              "61-80": {
+                "result": "boskap_husdjur_riddjur",
+                "description": "Boskap, husdjur & riddjur"
+              },
+              "81-100": {
+                "result": "mineraler_metaller",
+                "description": "Mineraler & metaller"
+              }
+            }
+          }
+        },
+        "40-41": {
+          "result": "litet_laboratorium",
+          "description": "Litet laboratorium. RP har ett litet laboratorium med de enklaste alkemiska apparaterna och en mindre uppsttning metaller, vätskor och pulver. Laboratoriet ryms i en stor kista."
+        },
+        "42": {
+          "result": "magikännare",
+          "description": "Magikännare. RP har en naturlig förmåga att känna om saker och ting är magiska. RP får 1T6+1 enheter att spendera på färdigheten magiförnimmelse."
+        },
+        "43-44": {
+          "result": "magisk_affinitet",
+          "description": "Magisk affinitet. RP har en naturlig begåvning för att alstra kraft ifrån en specifik kraftkälla. RP får 1T6+1 enheter att spendera på någon av följande alstra-färdigheter och färdigheten är dessutom lättlärd.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Alstra-färdighet",
+            "dice": "1d100",
+            "ranges": {
+              "1-5": {
+                "result": "kronotropi",
+                "description": "kronotropi"
+              },
+              "6-10": {
+                "result": "nomotropi",
+                "description": "nomotropi"
+              },
+              "11-15": {
+                "result": "ataxatropi",
+                "description": "ataxatropi"
+              },
+              "16-20": {
+                "result": "termotropi",
+                "description": "termotropi"
+              },
+              "21-25": {
+                "result": "kryotropi",
+                "description": "kryotropi"
+              },
+              "26-30": {
+                "result": "fototropi",
+                "description": "fototropi"
+              },
+              "31-35": {
+                "result": "skototropi",
+                "description": "skototropi"
+              },
+              "36-43": {
+                "result": "psykotropi",
+                "description": "psykotropi"
+              },
+              "44-50": {
+                "result": "biotropi",
+                "description": "biotropi"
+              },
+              "51-55": {
+                "result": "nekrotropi",
+                "description": "nekrotropi"
+              },
+              "56-70": {
+                "result": "heliotropi",
+                "description": "heliotropi"
+              },
+              "71-75": {
+                "result": "selenotropi",
+                "description": "selenotropi"
+              },
+              "76-80": {
+                "result": "astrotropi",
+                "description": "astrotropi"
+              },
+              "81-85": {
+                "result": "pyrotropi",
+                "description": "pyrotropi"
+              },
+              "86-90": {
+                "result": "geotropi",
+                "description": "geotropi"
+              },
+              "91-95": {
+                "result": "hydrotropi",
+                "description": "hydrotropi"
+              },
+              "96-100": {
+                "result": "pneumotropi",
+                "description": "pneumotropi"
+              }
+            }
+          }
+        },
+        "45": {
+          "result": "magisk_förmåga",
+          "description": "Magisk förmåga. RP har en eller flera magiska förmågor som motsvarar en eller flera besvärjelser (som det går att läsa om i magi-kapitlet) av en total magnitud på ((1T6/2)+2). RP kan aktivera förmågorna genom att slå ett tärningsslag mot PSY med lika många tärningar som förmågans magnitud."
+        },
+        "46": {
+          "result": "magisk_instabilitet",
+          "description": "Magisk instabilitet. En magisk aspekt ger sig enkelt till känna runt RP. denna aspekt är alltid en nivå enklare (-ob1T6) att alstra för RP MEN gör så att de verklighetsabnorma förändringarna alltid visar sig som en nivå värre än normalt för just denna aspekt. (alltid minst som svag effekt vilket gäller även om RP har positiv qadosh) det finns mer information om detta i SLs kapitel om magi."
+        },
+        "47": {
+          "result": "magisk_motståndskraft",
+          "description": "Magisk motståndskraft. All magi med en magnitud på 4 eller lägre har ingen effekt på RP. Positivt eftersom fientliga besvärjelser på låga magnituder inte kan påverka RP. Negativt eftersom helande och andra positiva besvärjelser inte heller kan påverka RP på låga magnituder."
+        },
+        "48-49": {
+          "result": "medelstort_laboratorium",
+          "description": "Medelstort laboratorium. RP äger ett medelstort laboratorium för alkemi, som innehåller all nödvändig utrustning MEN inga assistenter. Laboratoriet tar upp ett rum på ca 10 kvm."
+        },
+        "50-51": {
+          "result": "medfött_ritualminne",
+          "description": "Medfött ritualminne. RP är ovanligt skicklig på att memorera ritualer. RP får 1T6+1 enheter att spendera på färdigheten ritual."
+        },
+        "52-53": {
+          "result": "mental_motståndskraft",
+          "description": "Mental motståndskraft. Alla tärningsslag där RP skall stå emot en magisk effekt är en nivå enklare (-ob1T6) än normalt.\nDet är bara vissa specifika besvärjelser, ritualer och ceremonier som går att motstå - se beskrivningen för den aktuelle formeln."
+        },
+        "54": {
+          "result": "mystiska_tecken",
+          "description": "Mystiska tecken. RP har underliga symboler och tecken på sin kropp. De kan ha vart där sedan födseln, eller så har de växt fram med åren eller skapats av en övernaturlig händelse.\nSymbolerna ger RP en fysisk, en mental och en övernaturlig förmåga som kan väljas eller slumpas fram. När förmågorna används reagerer tecknen på något sätt t.ex de kanske lyser eller blöder."
+        },
+        "55-56": {
+          "result": "mörkersyn",
+          "description": "Mörkersyn. RP kan se i totalt mörker pga ögonen skapar sitt eget ljus."
+        },
+        "57-58": {
+          "result": "naturlig_magiteoretiker",
+          "description": "Naturlig magiteoretiker. RP har mycket lätt att förstå hur magi fungerar. RP får 2T6+2 enheter att spendera på färdigheten teoretisk magi, som också blir lättlärd."
+        },
+        "59-60": {
+          "result": "ockult_upplevelse",
+          "description": "Ockult upplevelse. RP har drabbats av an underlig händelse som har dsamband med trolldom eller magi. Detta har stärkt RPs försvar mot magi. Alla slag för att motstå magiska effekter blir en nivå lättare (-ob1T6) när det r möjligt att motstå dem."
+        },
+        "61": {
+          "result": "odödlig",
+          "description": "Odödlig. Rollpersonen åldras inte, men kan dödas av skador eller sjukdomar. När RP blir 35 skenbara år slutar den skenbara åldern att öka, och RP slipper alla slag på åldringstabellen. Däremot måste RP klara ett slag med ob3T6 mot PSY varje år, annars sänks RPs lojalitet med 1. Lojalitet kan aldrig bli lägre än 3. När lojalitet blir 7 eller lägre kommer RP få specialiseringen egoistisk. RP kommer aldrig få lov att höja lojalitet igen."
+        },
+        "62-63": {
+          "result": "omvandlare",
+          "description": "Omvandlare. RP är en naturbegåvning på att transformera en typ av magisk kraft till en annan. RP får 1T6+1 enheter att spendera på färdigheten transformera, som också blir lättlärd."
+        },
+        "64-65": {
+          "result": "reinkarnation",
+          "description": "Reinkarnation. RP kan uppleva tidigare liv genom meditation eller stark psykisk påverkan. RP kan uppleva minnen från tidigare liv, men får inga färdigheter eller kunskaper från dom. SL bör skapa de upplevelser RP minns under spelets gång."
+        },
+        "66-67": {
+          "result": "religiös_upplevelse",
+          "description": "Religiös upplevelse. RP har haft en stark religiös upplevelse. Spelaren måste bestämma vilken gud eller religion det rör sig om. RP måste höja karaktärsdraget Tro till 16 om det inte redan är 16 eller högre, med specialisering mot den aktuella reiligionen. RP får dessutom 1T6 qadosh. Mer om qadosh kan man läsa i kapitlet om religion."
+        },
+        "68": {
+          "result": "repellera_vandöd",
+          "description": "Repellera vandöd. RP omges av en kraftfull aura som hindrar vandöda från att närma sig eller anfalla RP. auran har en magnitud på 1T6+1. Endast vandöda med en rang som överstiger aurans magnitud kan närma sig RP."
+        },
+        "69-70": {
+          "result": "ritualsamling",
+          "description": "Ritualsamling. RP har kommit över en samling nedskrivna ritualer. I dsamlingen finns ritualer som motsvarar 3T6 magnituder. SL bestämmer exakt vilka ritualer som ingår. För att använda ritualerna behöver RP memorera dom och kunna de nödvändiga färdigheterna."
+        },
+        "71-72": {
+          "result": "sanndrömmare",
+          "description": "Sanndrmmare. RP drömmer ofta drömmar som senare blir verklighet. Drömmarna handlar ibland om viktiga händelser, naturkatastrofer, segrar, blodiga dåd, till mindre händelser som endast berör RP. om RP gör eller redan har gjort detta känt för sin omgivning betrasktas hen antagligen som en vördad siare, eller en avskyvärd häxa, beroende på vart hen bor. Drömmarna kan innehålla järtecken som kan tydas med färdigheten spådom, men exakt hur sanndrömmarna funkar är upp till SL."
+        },
+        "73-74": {
+          "result": "siare",
+          "description": "Siare. RP kan tolka järtecken och på så sätt se in i framtida händelser. RP får får 1T6+1 enheter att spendera på färdigheten spådom. Och får dessutom höjs Tur med +1"
+        },
+        "75-76": {
+          "result": "skugglandsaffinitet",
+          "description": "Skugglandsaffinitet. RP kan då och då se in i skugglandet. RP kan se väsen stigar och naturformationer som vanliga personer inte kan se. Det är också enkelt för RP att ta sig in i skugglandet om hen nu skulle vilja det. Det är INTE enklare att ta sig ut ur skugglandet. Folk tenderar att betrakta RP med stor misstänksamhet om hen berättar om vad hen ser eller upplever. Denna förmåga märks oftast bara när RP befinner sig långt ifrån civiliserade trakter."
+        },
+        "77": {
+          "result": "skugglandsblod",
+          "description": "Skugglandsblod. RP har blod från skugglandet i sina ådror. Detta har gett RP ett lätt övernaturligt utseende och kanske ett par magiska förmågor. RP kommer att tas emot annorlunda av skugglandets varelser om hen beger sig dit. Exakta effekter för personer med skugglandsblod bestäms av SL."
+        },
+        "78-79": {
+          "result": "slagruta",
+          "description": "Slagruta. RP kan gå med en slagruta och hitta vattenfyndigheter djupt under marken. RP kan också känna av högmagiska platser eller kraftnoder. Vid väldigt kraftiga noder eller jättestora vattenfyndigheter behöver RP inte ens använda en slagruta, hen känner av fyndigheten ändå. RP får 1T6+2 enheter att spendera på färdigheten magiförnimmelse"
+        },
+        "80-81": {
+          "result": "snabb_vävare",
+          "description": "Snabb vävare. RP kan väva besvärjelser vldigt snabbt. Alla slag för magiskt initiativ blir en nivå lättare (-ob1T6)"
+        },
+        "82-83": {
+          "result": "stillande_blick",
+          "description": "Stllande blick. RP kan lindra smärta med hjälp av sin blick. Om RP har ögonkontakt med en annan person i 2 rundor så läks ob2T6 poäng smärta på den andra personen (om RP vill det) RP kan bara använda denna förmåga en gång per dygn, och aldrig på sig själv."
+        },
+        "84-85": {
+          "result": "synsk",
+          "description": "Synsk. RP har förmågan att då och då få “minnesbilder” från händelser som nnu inte har hänt. Det händer ganska sällan och bara när SL tycker det är lämpligt. Exakt hur synskheten artar sig är upp till SL. kanske sker minnesbilderna när RP vidrör något relevant föremål, ser en reflektion, mediterar eller bara händer helt slumpmässigt utan förvarning?"
+        },
+        "86-87": {
+          "result": "tala_med_djur",
+          "description": "Tala med djur. RP kan av någon anledning tala med djur, på djurens egna språk, dvs olika djurläten, kroppspråk och gester. Varje djurart har ett eget språk, och varje djurspråk behöver läras som vilket språk som helst. Samma djurart kan dessutom ha olika språk i olika delar av världen. Spelaren väljer vilka djur RP kan tala med och får skriva upp detta djurs språk under språkfärdigheter på rollformuläret som räknas som ett extra modersmål för RP.\n\nÄven fast RP kan förstå och göra sig förstådd på djurens språk så är de föesta djur väldigt begränsade i sitt intellekt. De har ofta svårt att förstå även de enklaste frågor. Många djur har svårt att ens föreställa sig abstrakta koncept. Många djur kan dessutom helt enkelt vara ointresserade av att tala med RP och väljer att ignorera RP om hen börjar prata med dom."
+        },
+        "88": {
+          "result": "utvald",
+          "description": "Utvald. RP är utvald av ett högre väsen att uträtta något viktigt på Mundana. SL väljer vad det är RP måste utföra, oftast något, stort omvälvande och svårt, och vilket väsen det är som valt RP, t.ex en gud eller en demon. Det är inte säkert att RP själv vet om att den är utvald. SL behöver fundera ut exakt vad som gäller. Oavsett om RP känner till sitt öde, vad det är för väsen som valt ut hen osv, så bör väsendet försöka hjälpa RP genom att ge den onaturliga fördelar. Exakt hur detta fungerar är upp till SL, några förslag kan vara ökad qadosh, någon slags mystisk förmåga, ökade attribut eller någon form av övernaturlig kontakt."
+        },
+        "89": {
+          "result": "varsel",
+          "description": "Varsel. Rp har förmågan att ibland inse att något är på tok. SL ska slå ob3T6 mot RPs PSY för att se om RP får en föraning om att något är fel och att hen behöver bege sig till någon specifik plats för att hjälpa till. SL bör slå detta slag dolt, och SL bör också slå några slag på måfå ibland för att spelaren inte ska bli misstänksam när SL plösligt slår ett tärningslag apropå ingenting."
+        },
+        "90-91": {
+          "result": "vildbrukare",
+          "description": "Vildbrukare. RP har en nivå lättare (-ob1T6) att använda improviserade magi (icke-formaliserade besvärjelser) och en nivå svårare (+ob1T6) att bruka formaliserade besvärjelser."
+        },
+        "92-93": {
+          "result": "vortex",
+          "description": "Vortex. RP äger en vortex. En vortex är en magisk artefakt som kan användas för att transformera filament. RP måste själv alstra och ta hand om filamenten när de väl är transformerade. Artefakten har en färdighetschans på 14+1T6 och kan transfomera 1T6/2+2 filament samtidigt. Spelare väljer vilka filament vortexen kan transformera från och till."
+        },
+        "94-95": {
+          "result": "vävare",
+          "description": "Vävare. RP har en naturbegåvning för att väva magiska effekter. RP får 1T6+1 enheter att spendera på färdigheten besvärjelse, och färdigheten är dessutom lättlärd."
+        },
+        "96": {
+          "result": "övernaturligt_attribut",
+          "description": "Övernaturligt attribut. RP har ett attribut som är högre än vad som normalt är maximalt för den art/ras/folk/stan/klan/ätt den är. RP får höja sitt högsta attribut med 1T6+1. Om attributet inte blir högre än maxvärdet för det folk hen är får den isåfall fortsätta höja attributen får den höja attributet till ett högre än vad som är max. RP har fått mycket uppmärksamhet för sin ovanliga talang och folk tror ofta att talangen beror på någon övernaturlig inblandning, t.ex en guds eller en demons inblandning. RP får höja sitt rykte specialiserat mot något i stil med “gudagåva” eller “samröre med mörka makter”.\nHur RP fått detta övernaturliga attribut kan mycket väl ha att göra med gudomlig eller demonisk inblandning, men det kan lika gärna vara helt okänt för RP varför den har ett så överdrivet attribut."
+        },
+        "97-98": {
+          "result": "övernaturlig_empati",
+          "description": "Övernaturlig empati. RP kan känna på ett föremål och få minnesglimtar och känningar om vem som tidigare ägt föremålet och/eller vad det använts till. Dessa minnesbilder r ofta surrealistiska och svårtolkade då RP mest upplever känslor och sinnesstämningar från tidigare ägare. RP får slå ett slag mot PSY med svårigheten baserad på hur starka känslor förra ägaren hade och hur lång tid som gått sedan någon annan ägde föremålet. Ett föremål som använts till tortyr, mord eller annat hemskt kan lämna skrämmande och obehagliga spår, vilket gör att RP kan bli tvungen att klara ett VIL-slag med varierande svårighet för att inte äcklas/chockas så mycket att hen tappar medvetandet en kort stund."
+        },
+        "99-100": {
+          "result": "fler_förmågor",
+          "description": "Fler förmågor. Slå två gånger till på denna tabell och använd båda resultaten."
+        }
+      }
+    }
+  }
+}

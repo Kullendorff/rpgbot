@@ -1,0 +1,1170 @@
+{
+  "hemortstabeller": {
+    "hemort": {
+      "titel": "Slumpmässig Hemort och Folkslag",
+      "beskrivning": "Slå 1T100 för att bestämma land/hemort. Slå sedan på landets undertabell för att avgöra folkslag.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "alarinn",
+          "description": "Alarinn",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Alarinn",
+            "dice": "1d100",
+            "ranges": {
+              "1-90": { "result": "learam", "description": "Léaram" },
+              "91-95": { "result": "tokon", "description": "Tokon" },
+              "96-98": {
+                "result": "tirak",
+                "description": "Tiraker",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-70": { "result": "frakk", "description": "Frakk" },
+                    "71-90": { "result": "marnakh", "description": "Marnakh" },
+                    "91-100": { "result": "bazirk", "description": "Bazirk" }
+                  }
+                }
+              },
+              "99": { "result": "pyaralver", "description": "Pyaralver" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "3-4": {
+          "result": "asharien",
+          "description": "Asharien",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Asharien",
+            "dice": "1d100",
+            "ranges": {
+              "1-64": { "result": "asharier_vanar", "description": "Asharier (vanar)" },
+              "65-66": { "result": "aus_vanar", "description": "Aus (vanar)" },
+              "67-77": {
+                "result": "alv",
+                "description": "Alv",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Alv-linje",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": { "result": "pyar", "description": "Pyar" },
+                    "81-90": { "result": "kirya", "description": "Kirya" },
+                    "91-94": { "result": "thism", "description": "Thism" },
+                    "95-97": { "result": "sanari", "description": "Sanari" },
+                    "98-99": { "result": "learam", "description": "Learam" },
+                    "100": { "result": "henea", "description": "Henea" }
+                  }
+                }
+              },
+              "78-79": { "result": "missla", "description": "Missla" },
+              "80-87": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-90": { "result": "zolod", "description": "Zolod" },
+                    "91-94": { "result": "ghor", "description": "Ghor" },
+                    "95-98": { "result": "roghan", "description": "Roghan" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "88-94": {
+                "result": "tirak",
+                "description": "Tirak",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-90": {
+                      "result": "marnakh",
+                      "description": "Marnakh",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "91-98": {
+                      "result": "frakk",
+                      "description": "Frakk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "99-100": {
+                      "result": "bazirk",
+                      "description": "Bazirk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "95-97": { "result": "jargier_vanar", "description": "Jargier (vanar)" },
+              "98-99": { "result": "sabrier_vanar", "description": "Sabrier (vanar)" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "5-6": {
+          "result": "cirefaliska_samväldet",
+          "description": "Cirefaliska Samväldet",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Cirefaliska Samväldet",
+            "dice": "1d100",
+            "ranges": {
+              "1-93": { "result": "cirefalier", "description": "Cirefalier" },
+              "94-97": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-90": { "result": "zolod", "description": "Zolod" },
+                    "91-94": { "result": "roghan", "description": "Roghan" },
+                    "95-98": { "result": "ghor", "description": "Ghor" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "98": {
+                "result": "alv",
+                "description": "Alv",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Alv-linje",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": { "result": "pyar", "description": "Pyar" },
+                    "81-85": { "result": "kirya", "description": "Kirya" },
+                    "86-94": { "result": "thism", "description": "Thism" },
+                    "95-97": { "result": "sanari", "description": "Sanari" },
+                    "98-100": { "result": "learam", "description": "Learam" }
+                  }
+                }
+              },
+              "99-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "7-8": {
+          "result": "colonan",
+          "description": "Colonan",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Colonan",
+            "dice": "1d100",
+            "ranges": {
+              "1-45": { "result": "perenner_vanar", "description": "Perenner (vanar)" },
+              "46-80": { "result": "neromenzer_vanar", "description": "Neromenzer (vanar)" },
+              "81-90": { "result": "tokon_vanar", "description": "Tokon (vanar)" },
+              "91-97": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-50": { "result": "ghor", "description": "Ghor" },
+                    "51-95": { "result": "zolod", "description": "Zolod" },
+                    "96-98": { "result": "roghan", "description": "Roghan" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "98-99": { "result": "conrier_vanar", "description": "Conrier (vanar)" },
+              "100": { "result": "annat_folkslag", "description": "Någon annat folkslag" }
+            }
+          }
+        },
+        "9-10": {
+          "result": "consaber",
+          "description": "Consaber",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Consaber",
+            "dice": "1d100",
+            "ranges": {
+              "1-45": { "result": "perenn_vanar", "description": "Perenn (vanar)" },
+              "46-77": { "result": "conrier_vanar", "description": "Conrier (vanar)" },
+              "78-90": { "result": "tokon_vanar", "description": "Tokon (vanar)" },
+              "91-93": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-50": { "result": "ghor", "description": "Ghor" },
+                    "51-95": { "result": "zolod", "description": "Zolod" },
+                    "96-98": { "result": "roghan", "description": "Roghan" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "94-95": { "result": "missla", "description": "Missla" },
+              "96-97": {
+                "result": "alv",
+                "description": "Alv",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Alv-linje",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-50": { "result": "learam", "description": "Learam" },
+                    "51-80": { "result": "pyar", "description": "Pyar" },
+                    "81-90": { "result": "thism", "description": "Thism" },
+                    "91-97": { "result": "kirya", "description": "Kirya" },
+                    "98-99": { "result": "sanari", "description": "Sanari" },
+                    "100": { "result": "henea", "description": "Henea" }
+                  }
+                }
+              },
+              "98-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "11-12": {
+          "result": "damarien",
+          "description": "Damarien",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Damarien",
+            "dice": "1d100",
+            "ranges": {
+              "1-83": { "result": "damar_vanar", "description": "Damar (vanar)" },
+              "84-95": { "result": "jargier_vanar", "description": "Jargier (vanar)" },
+              "96-98": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-90": { "result": "zolod", "description": "Zolod" },
+                    "91-94": { "result": "roghan", "description": "Roghan" },
+                    "95-98": { "result": "ghor", "description": "Ghor" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "99": { "result": "thism", "description": "Thism" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "13-14": {
+          "result": "dhurkoor",
+          "description": "Dhurkoor",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Dhurkoor",
+            "dice": "1d100",
+            "ranges": {
+              "1-20": { "result": "darken", "description": "Darken" },
+              "21-33": {
+                "result": "tirak",
+                "description": "Tirak",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-70": {
+                      "result": "bazirk",
+                      "description": "Bazirk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "71-85": {
+                      "result": "marnakh",
+                      "description": "Marnakh",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "86-100": {
+                      "result": "frakk",
+                      "description": "Frakk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "34-47": { "result": "cirefalier", "description": "Cirefalier" },
+              "48-58": { "result": "sabrier_vanar", "description": "Sabrier (vanar)" },
+              "59-69": { "result": "zhan", "description": "Zhan" },
+              "70-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "15-16": {
+          "result": "drunok",
+          "description": "Drunok",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Drunok",
+            "dice": "1d100",
+            "ranges": {
+              "1-58": { "result": "drunok_vanar", "description": "Drunok (vanar)" },
+              "59-81": { "result": "jargier_vanar", "description": "Jargier (vanar)" },
+              "82-93": { "result": "taup", "description": "Taup" },
+              "94-99": { "result": "pyar", "description": "Pyar" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "17-18": {
+          "result": "ebhron",
+          "description": "Ebhron",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Ebhron",
+            "dice": "1d100",
+            "ranges": {
+              "1-29": { "result": "ebhronit_vanar", "description": "Ebhronit (vanar)" },
+              "30-55": { "result": "raun", "description": "Raun" },
+              "56-72": { "result": "darken", "description": "Darken" },
+              "73-87": { "result": "taup", "description": "Taup" },
+              "88-92": { "result": "annat_människofolk", "description": "Något annat människofolk" },
+              "93-96": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": { "result": "zolod", "description": "Zolod" },
+                    "81-90": { "result": "drezin", "description": "Drezin" },
+                    "91-95": { "result": "ghor", "description": "Ghor" },
+                    "96-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "97-98": {
+                "result": "alv",
+                "description": "Alv",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Alv-linje",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": { "result": "pyar", "description": "Pyar" },
+                    "81-90": { "result": "learam", "description": "Learam" },
+                    "91-94": { "result": "kiriya", "description": "Kiriya" },
+                    "95-97": { "result": "thism", "description": "Thism" },
+                    "98-99": { "result": "sanari", "description": "Sanari" },
+                    "100": { "result": "henea", "description": "Henea" }
+                  }
+                }
+              },
+              "99-100": {
+                "result": "tirak",
+                "description": "Tirak",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-70": {
+                      "result": "bazirk",
+                      "description": "Bazirk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "71-85": {
+                      "result": "marnakh",
+                      "description": "Marnakh",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "86-100": {
+                      "result": "frakk",
+                      "description": "Frakk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "19-20": {
+          "result": "eumo",
+          "description": "Eumo",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Eumo",
+            "dice": "1d100",
+            "ranges": {
+              "1-47": { "result": "tosh", "description": "Tosh" },
+              "48-80": { "result": "darken", "description": "Darken" },
+              "81-96": { "result": "zhan", "description": "Zhan" },
+              "97-99": { "result": "vanar", "description": "Vanar" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "21-22": {
+          "result": "eyrenskogarna",
+          "description": "Eyrenskogarna",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Eyrenskogarna",
+            "dice": "1d100",
+            "ranges": {
+              "1-90": { "result": "eyren", "description": "Eyren" },
+              "91-96": { "result": "missla", "description": "Missla" },
+              "97-99": { "result": "raun", "description": "Raun" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "23-24": {
+          "result": "forion",
+          "description": "Forion",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Forion",
+            "dice": "1d100",
+            "ranges": {
+              "1-82": { "result": "forian_darken", "description": "Forian (darken)" },
+              "83-92": { "result": "pyar", "description": "Pyar" },
+              "93-94": { "result": "tosh", "description": "Tosh" },
+              "95-96": { "result": "cirefalier", "description": "Cirefalier" },
+              "97": { "result": "övärldare", "description": "Övärldare" },
+              "98-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "25-26": {
+          "result": "jargiska_kejsardömet",
+          "description": "Jargiska Kejsardömet",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Jargiska Kejsardömet",
+            "dice": "1d100",
+            "ranges": {
+              "1-96": { "result": "jargier_vanar", "description": "Jargier (vanar)" },
+              "97-98": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": { "result": "zolod", "description": "Zolod" },
+                    "81-90": { "result": "ghor", "description": "Ghor" },
+                    "91-98": { "result": "roghan", "description": "Roghan" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "99": {
+                "result": "alv",
+                "description": "Alv",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Alv-linje",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-75": { "result": "thism", "description": "Thism" },
+                    "76-100": { "result": "kiriya", "description": "Kiriya" }
+                  }
+                }
+              },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "27-28": {
+          "result": "kamor",
+          "description": "Kamor",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Kamor",
+            "dice": "1d100",
+            "ranges": {
+              "1-80": { "result": "kamorian", "description": "Kamorian" },
+              "81-90": { "result": "henea", "description": "Henea (Falkens Flock)" },
+              "91-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "29-30": {
+          "result": "khazimbergen_khrunbergen_tarmassivet",
+          "description": "Khazimbergen, Khrunbergen, Tarmassivet.",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Bergen",
+            "dice": "1d100",
+            "ranges": {
+              "1-50": { "result": "ghor", "description": "Ghor" },
+              "51-100": { "result": "frakk", "description": "Frakk" }
+            }
+          }
+        },
+        "31-32": {
+          "result": "kinanean_oro",
+          "description": "Kinane’an Oro",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Kinane’an Oro",
+            "dice": "1d100",
+            "ranges": {
+              "1-99": { "result": "sanari", "description": "Sanari" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "33-34": {
+          "result": "kragg_bergen",
+          "description": "Kragg-Bergen",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Kragg-Bergen",
+            "dice": "1d100",
+            "ranges": {
+              "1-90": { "result": "kragg", "description": "Kragg" },
+              "91-96": { "result": "missla", "description": "Missla" },
+              "97-99": { "result": "raun", "description": "Raun" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "35-36": {
+          "result": "kryddöarna",
+          "description": "Kryddöarna",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag på Kryddöarna",
+            "dice": "1d100",
+            "ranges": {
+              "1-42": { "result": "darken", "description": "Darken" },
+              "43-63": { "result": "pyar", "description": "Pyar" },
+              "64-83": { "result": "zhan", "description": "Zhan" },
+              "84-91": { "result": "cirefalier", "description": "Cirefalier" },
+              "92-96": { "result": "sabrier", "description": "Sabrier" },
+              "97-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "37-38": {
+          "result": "lalasta",
+          "description": "Lalasta",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Lalasta",
+            "dice": "1d100",
+            "ranges": {
+              "1-98": { "result": "lalaster_vanar", "description": "Lalaster (vanar)" },
+              "99-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "39-40": {
+          "result": "maazenträsket",
+          "description": "Maazenträsket",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Maazenträsket",
+            "dice": "1d100",
+            "ranges": {
+              "1-90": { "result": "adasier", "description": "Adasier" },
+              "91-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "41-42": {
+          "result": "menon_aun",
+          "description": "Menon-Aun",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Menon-Aun",
+            "dice": "1d100",
+            "ranges": {
+              "1-93": { "result": "aunurier", "description": "Aunurier" },
+              "94-98": { "result": "zhan", "description": "Zhan" },
+              "99-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "43-44": {
+          "result": "miam",
+          "description": "Miam",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Miam",
+            "dice": "1d100",
+            "ranges": {
+              "1-80": { "result": "zhan", "description": "zhan" },
+              "81-99": { "result": "aunurier", "description": "Aunurier" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "45-46": {
+          "result": "mio_enara",
+          "description": "Mio-Enara",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Mio-Enara",
+            "dice": "1d100",
+            "ranges": {
+              "1-43": { "result": "darken", "description": "Darken" },
+              "44-99": { "result": "tosh", "description": "Tosh" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "47-48": {
+          "result": "momolan",
+          "description": "Momolan",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Momolan",
+            "dice": "1d100",
+            "ranges": {
+              "1-69": { "result": "zhan", "description": "Zhan" },
+              "70-90": { "result": "darken", "description": "Darken" },
+              "91-99": {
+                "result": "tirak",
+                "description": "Tirak",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-70": {
+                      "result": "frakk",
+                      "description": "Frakk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "71-85": {
+                      "result": "bazirk",
+                      "description": "Bazirk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "86-100": {
+                      "result": "marnakh",
+                      "description": "Marnakh",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "49-50": {
+          "result": "muhad",
+          "description": "Muhad",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Muhad",
+            "dice": "1d100",
+            "ranges": {
+              "1-86": { "result": "zhan", "description": "Zhan" },
+              "87-95": { "result": "darken", "description": "Darken" },
+              "96-98": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": { "result": "zolod", "description": "Zolod" },
+                    "81-90": { "result": "ghor", "description": "Ghor" },
+                    "91-98": { "result": "roghan", "description": "Roghan" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "99-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "51-52": {
+          "result": "pereine",
+          "description": "Pereine",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Pereine",
+            "dice": "1d100",
+            "ranges": {
+              "1-44": { "result": "neromenzer_vanar", "description": "Neromenzer (vanar)" },
+              "45-84": { "result": "perenn_vanar", "description": "Perenn (vanar)" },
+              "85-96": { "result": "sanari", "description": "Sanari" },
+              "97-99": { "result": "conrier", "description": "Conrier" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslsag" }
+            }
+          }
+        },
+        "53-54": {
+          "result": "soldarn",
+          "description": "Soldarn",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Soldarn",
+            "dice": "1d100",
+            "ranges": {
+              "1-64": { "result": "soldier_vanar", "description": "Soldier (vanar)" },
+              "65-74": { "result": "cirefalier", "description": "Cirefalier" },
+              "75-83": {
+                "result": "dvärg",
+                "description": "Dvärg",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Dvärg-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-85": { "result": "zolod", "description": "Zolod" },
+                    "86-93": { "result": "ghor", "description": "Ghor" },
+                    "94-98": { "result": "roghan", "description": "Roghan" },
+                    "99-100": { "result": "drezin", "description": "Drezin" }
+                  }
+                }
+              },
+              "84-91": {
+                "result": "alv",
+                "description": "Alv",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Alv-linje",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": { "result": "pyar", "description": "Pyar" },
+                    "81-85": { "result": "kiriya", "description": "Kiriya" },
+                    "86-90": { "result": "thism", "description": "Thism" },
+                    "91-95": { "result": "sanari", "description": "Sanari" },
+                    "96-98": { "result": "henea", "description": "Henea" },
+                    "99-100": { "result": "learam", "description": "Learam" }
+                  }
+                }
+              },
+              "92-94": {
+                "result": "tirak",
+                "description": "tirak",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-80": {
+                      "result": "marnakh",
+                      "description": "Marnakh",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "81-95": {
+                      "result": "bazirk",
+                      "description": "Bazirk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "96-100": {
+                      "result": "frakk",
+                      "description": "Frakk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "95-97": { "result": "missla", "description": "missla" },
+              "98-100": { "result": "annat_folkslag", "description": "något annat folkslag" }
+            }
+          }
+        },
+        "55-56": {
+          "result": "sinadera",
+          "description": "Sinadera",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Sinadera",
+            "dice": "1d100",
+            "ranges": {
+              "1-99": { "result": "bazirk", "description": "Bazirk" },
+              "100": { "result": "annat_folkslag", "description": "Något annat fokslag" }
+            }
+          }
+        },
+        "57-58": {
+          "result": "stora_arkipelagen",
+          "description": "Stora Arkipelagen",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Stora Arkipelagen",
+            "dice": "1d100",
+            "ranges": {
+              "1-34": { "result": "oritonskt_ursprung", "description": "Oritonskt ursprung" },
+              "35-56": { "result": "lokala_öbor", "description": "Ursprungliga Lokala Öbor" },
+              "57-73": { "result": "lohemskt_ursprung", "description": "Lohemskt ursprung" },
+              "74-87": { "result": "forioner", "description": "Forioner" },
+              "88-95": {
+                "result": "tirak",
+                "description": "Tirak",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-90": {
+                      "result": "bazirk",
+                      "description": "Bazirk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "91-99": {
+                      "result": "marnakh",
+                      "description": "Marnakh",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "100": {
+                      "result": "frakk",
+                      "description": "Frakk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "96-97": { "result": "cirefalier", "description": "Cirefalier" },
+              "98-99": { "result": "sabrier", "description": "Sabrier" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "59-60": {
+          "result": "sunariskogen",
+          "description": "Sunariskogen",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Sunariskogen",
+            "dice": "1d100",
+            "ranges": {
+              "1-50": { "result": "kiriya", "description": "Kiriya" },
+              "51-80": { "result": "thism", "description": "Thism" },
+              "81-90": { "result": "sanari", "description": "Sanari" },
+              "91-97": { "result": "henea", "description": "Henea" },
+              "98-99": { "result": "pyar", "description": "Pyar" },
+              "100": { "result": "annat_folkslag", "description": "Något annat Folkslag" }
+            }
+          }
+        },
+        "61-62": {
+          "result": "takalorr",
+          "description": "Takalorr",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Takalorr",
+            "dice": "1d100",
+            "ranges": {
+              "1-94": {
+                "result": "tirak",
+                "description": "Tirak",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Tirak-stam",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-90": {
+                      "result": "bazirk",
+                      "description": "Bazirk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "91-95": {
+                      "result": "marnakh",
+                      "description": "Marnakh",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    },
+                    "96-100": {
+                      "result": "frakk",
+                      "description": "Frakk",
+                      "has_subtable": true,
+                      "subtable": {
+                        "titel": "Tirak-kast",
+                        "dice": "1d100",
+                        "ranges": {
+                          "1-50": { "result": "äkta_tirak", "description": "Äkta Tirak" },
+                          "51-75": { "result": "gurd", "description": "Gurd" },
+                          "76-100": { "result": "truhk", "description": "Truhk" }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "95-96": { "result": "asharier_vanar", "description": "Asharier (vanar)" },
+              "97": { "result": "jargier_vanar", "description": "Jargier (vanar)" },
+              "98-99": { "result": "henea", "description": "Henea" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "63-64": {
+          "result": "tarhai",
+          "description": "Tarhai",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Tarhai",
+            "dice": "1d100",
+            "ranges": {
+              "1-99": { "result": "tarhaier_zhan", "description": "Tarhaier (Zhan)" },
+              "100": { "result": "annat_folkslag", "description": "något annat folkslag" }
+            }
+          }
+        },
+        "65-66": {
+          "result": "terne",
+          "description": "Terne",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Terne",
+            "dice": "1d100",
+            "ranges": {
+              "1-99": { "result": "ternier_vanar", "description": "Ternier (vanar)" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "67-68": {
+          "result": "thalamur",
+          "description": "Thalamur",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Thalamur",
+            "dice": "1d100",
+            "ranges": {
+              "1-95": { "result": "neromenzer_vanar", "description": "Neromenzer (vanar)" },
+              "96-100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "69-70": {
+          "result": "västmark",
+          "description": "Västmark",
+          "has_subtable": true,
+          "subtable": {
+            "titel": "Folkslag i Västmark",
+            "dice": "1d100",
+            "ranges": {
+              "1-67": { "result": "västmarkare_vanarer", "description": "Västmarkare (vanarer)" },
+              "68-80": { "result": "marnakh", "description": "Marnakh" },
+              "81-90": { "result": "bazirk", "description": "Bazirk" },
+              "91-93": {
+                "result": "alv",
+                "description": "Alv",
+                "has_subtable": true,
+                "subtable": {
+                  "titel": "Alv-linje",
+                  "dice": "1d100",
+                  "ranges": {
+                    "1-90": { "result": "pyar", "description": "Pyar" },
+                    "91-92": { "result": "kiriya", "description": "Kiriya" },
+                    "93-94": { "result": "thism", "description": "Thism" },
+                    "95-96": { "result": "sanari", "description": "Sanari" },
+                    "97-98": { "result": "learam", "description": "Learam" },
+                    "99-100": { "result": "henea", "description": "Henea" }
+                  }
+                }
+              },
+              "94-96": { "result": "zolod", "description": "Zolod" },
+              "97": { "result": "ghor", "description": "Ghor" },
+              "98": { "result": "jargier_vanar", "description": "Jargier (vanar)" },
+              "99": { "result": "cirefalier", "description": "Cirefalier" },
+              "100": { "result": "annat_folkslag", "description": "Något annat folkslag" }
+            }
+          }
+        },
+        "71-100": {
+          "result": "roll_again",
+          "description": "Slå om"
+        }
+      }
+    }
+  }
+}

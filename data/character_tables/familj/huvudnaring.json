@@ -1,0 +1,486 @@
+{
+  "familj_huvudnäring": {
+    "adlig_civiliserad": {
+      "titel": "Adlig familj från civiliserad kultur",
+      "beskrivning": "Är RPs familj adlig och/eller riddare skall denna tabell användas för att avgöra familjens huvudnäring. Det spelar ingen roll om familjen bor på landet, i en stad eller vid kusten, men familjen måste vara från en Civiliserad kultur. Är familjen från en primitiv kultur skall istället tabellen för hövdingafamilj från primitiv kultur användas. Thalaskiska medborgare motsvarar adel i feodala riken så de använder också denna tabell. Vissa Sanarialver kan anvnda denna tabell, eller tabellen för civiliserade familjer i en inlandsstad.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-7": {
+          "profession": "Affärsman",
+          "skills": ["bokhållning", "räkning", "värdera", "övertala"]
+        },
+        "8-20": {
+          "profession": "Aristokrat",
+          "skills": ["diplomati", "etickett", "kulturkännedom", "övertala"]
+        },
+        "21-22": {
+          "profession": "Forskare",
+          "skills": ["bibliotekskunskap", "1 valfri kunskapsfärdighet", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"]
+        },
+        "23-32": {
+          "profession": "Lagman",
+          "skills": ["förhöra", "lagkunskap", "övertala", "1 valfri skriftfärdighet"]
+        },
+        "33-37": {
+          "profession": "Magiker",
+          "skills": ["1 valfri alstrafärdighet", "besvärjelse", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"]
+        },
+        "38-42": {
+          "profession": "Medikus",
+          "skills": ["alkemi", "läkekonst", "växtlära", "1 valfri skriftfärdighet"]
+        },
+        "43-50": {
+          "profession": "Mystiker",
+          "skills": ["astrologi", "ockultism", "teoretisk magi", "1 valfri skriftfärdighet"]
+        },
+        "51-62": {
+          "profession": "Officer",
+          "skills": ["ledarskap", "krigsföring", "rida", "1 valfri vapenfärdighet"]
+        },
+        "63-65": {
+          "profession": "Präst",
+          "skills": ["ceremoni", "övertala", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Är RP en Thalaskisk Medborgare får resultatet slås om tills du fåer ett annat resultat."
+        },
+        "66-72": {
+          "profession": "Riddare",
+          "skills": ["etickett", "heraldik", "rida", "1 valfri vapenfärdighet"],
+          "special_rule": "Dessutom får RP +8 rykte för sin berömda förälder, om hen inte redan har en börd med högre ryktesbonus."
+        },
+        "73-77": {
+          "profession": "Rumlare",
+          "skills": ["dansa", "förföra", "spel&dobbel", "supa"]
+        },
+        "78-80": {
+          "profession": "Utforskare",
+          "skills": ["geografi", "historia", "överlevnad", "1 valfri språkfärdighet"]
+        },
+        "81-90": {
+          "profession": "Vapenmästare",
+          "skills": ["undervisning", "undvika", "1 valfri vapenfärdighet", "1 valfri ovanlig stridskonst"],
+          "special_rule": "(RP kommer senare få spendera sina valfria färdigheter på sin ovanliga stridskonst om spelaren så vill)"
+        },
+        "91-100": {
+          "profession": "Ämbetsman",
+          "skills": ["bokhållning", "lagkunskap", "övertala", "1 valfri skriftfärdighet"]
+        }
+      }
+    },
+    "civiliserad_landsbygd": {
+      "titel": "Familj från en civiliserad kultur på landsbygden",
+      "beskrivning": "Denna tabell är för civiliserade familjer bosatta i en liten by eller på landsbygden. Thalasker av folket t.ex använder denna tabell om de bor på landsbygden. Thism- eller Kirya-alver kan använda denna tabell om de bor lantligt. RP får ob1T6+1 enheter att spendera på var och en av dessa fyra färdigheter.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-19": {
+          "profession": "bonde",
+          "skills": ["boskapsskötsel", "jordbruk", "väderkännedom", "växtlära"]
+        },
+        "20-29": {
+          "profession": "boskapsskötare",
+          "skills": ["boskapsskötsel", "djurlära", "rida", "spåra"]
+        },
+        "30-41": {
+          "profession": "daglönare",
+          "skills": ["jordbruk", "boskapsskötsel", "matlagning", "supa"]
+        },
+        "42-45": {
+          "profession": "gårdfarihandlare",
+          "skills": ["räkna", "skumraskaffärer", "värdera", "övertala"]
+        },
+        "46-48": {
+          "profession": "gästgivare",
+          "skills": ["berättarkonst", "matlagning", "spel&dobbel", "supa"]
+        },
+        "49-54": {
+          "profession": "hantverkare",
+          "skills": ["räkning", "värdera", "övertala", "1 valfri hantverksfärdighet"]
+        },
+        "55-58": {
+          "profession": "helare",
+          "skills": ["läkekonst", "växtlära", "alkemi", "övertala"]
+        },
+        "59-67": {
+          "profession": "jägare",
+          "skills": ["båge", "djurlära", "jakt", "spåra"]
+        },
+        "68-74": {
+          "profession": "krigare",
+          "skills": ["krigsföring", "marsch", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "75-77": {
+          "profession": "Magiker",
+          "skills": ["1 valfri alstrafärdighet", "besvärjelse", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Thalasker av folket får slå om tills de får ett annat resultat."
+        },
+        "78-80": {
+          "profession": "Präst",
+          "skills": ["ceremoni", "övertala", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Thalasker av folket får slå om tills de får ett annat resultat."
+        },
+        "81-87": {
+          "profession": "skogshuggare",
+          "skills": ["köra vagn", "spåra", "yxa", "överlevnad"]
+        },
+        "88-90": {
+          "profession": "Stråtrövare",
+          "skills": ["skumraskaffärer", "speja", "överlevnad", "1 valfri vapenfärdighet"],
+          "special_rule": "(Cirefalier är sällan kriminella. Om RP är cirefalier slås detta slag om. Om resultaten tjuv eller stråtrövare dyker upp igen så behåll resultatet denna gång)"
+        },
+        "91-93": {
+          "profession": "Tjuv",
+          "skills": ["fingerfärdighet", "låsdyrkning", "smyga", "övertala"],
+          "special_rule": "(Cirefalier är sällan kriminella. Om RP är cirefalier slås detta slag om. Om resultaten tjuv eller stråtrövare dyker upp igen så behåll resultatet denna gång)"
+        },
+        "94-100": {
+          "profession": "vägvisare",
+          "skills": ["geografi", "speja", "spåra", "överlevnad"]
+        }
+      }
+    },
+    "civiliserad_inlandsstad": {
+      "titel": "Civiliserad familj bosatt i en inlandstad",
+      "beskrivning": "Om familjen är civiliserad och bor i en stad långt ifrån en sjö, ett hav eller en flod skall denna tabell användas. Thalasker av folket t.ex använder denna tabell om de bor i en inlandsstad. Vissa Sanarialver använder denna tabell eller tabellen för adliga familjer. Thism- eller Kirya-alver kan använda denna tabell om de bor i en stad. RP får ob1T6+1 enheter att spendera på var och en av dessa fyra färdigheter.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-9": {
+          "profession": "handelsman",
+          "skills": ["handel", "räkning", "värdera", "övertala"]
+        },
+        "10-21": {
+          "profession": "hantverkare",
+          "skills": ["räkning", "värdera", "övertala", "1 valfri hantverksfärdighet"]
+        },
+        "22-28": {
+          "profession": "helare",
+          "skills": ["läkekonst", "växtlära", "alkemi", "övertala"]
+        },
+        "29-34": {
+          "profession": "legoknekt",
+          "skills": ["marsh", "överlevnad", "övertala", "1 valfr vapenfärdighet"]
+        },
+        "35-37": {
+          "profession": "livvakt",
+          "skills": ["rida", "speja", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "38-43": {
+          "profession": "Magiker",
+          "skills": ["1 valfri alstrafärdighet", "besvärjelse", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Thalasker av folket får slå om tills de får ett annat resultat."
+        },
+        "44-46": {
+          "profession": "penningutlånare",
+          "skills": ["bokhållning", "räkna", "värdera", "skumraskaffärer"]
+        },
+        "47-50": {
+          "profession": "prisjägare",
+          "skills": ["förhöra", "rida", "spåra", "1 valfr vapenfärdighet"]
+        },
+        "51-56": {
+          "profession": "Präst",
+          "skills": ["ceremoni", "ockultism", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Thalasker av folket får slå om tills de får ett annat resultat."
+        },
+        "57-68": {
+          "profession": "soldat",
+          "skills": ["ledarskap", "marsch", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "69-75": {
+          "profession": "skojare",
+          "skills": ["fingerfärdighet", "skumraskaffärer", "spel&dobbel", "övertala"]
+        },
+        "76-81": {
+          "profession": "stadsvakt",
+          "skills": ["förhöra", "speja", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "82-87": {
+          "profession": "Tjuv",
+          "skills": ["fingerfärdighet", "låsdyrkning", "skumraskaffärer", "smyga"],
+          "special_rule": "(Cirefalier är sällan kriminella. Om RP är cirefalier slås detta slag om. Om resultaten tjuv eller stråtrövare dyker upp igen så behåll resultatet denna gång)"
+        },
+        "88-93": {
+          "profession": "tjänsteman",
+          "skills": ["bokhållning", "lagkunskap", "övertala", "1 valfri skriftfärdighet"]
+        },
+        "94-96": {
+          "profession": "underhållare",
+          "skills": ["akrobatik", "gyckla", "musik", "sjunga"]
+        },
+        "97-100": {
+          "profession": "värdshusvärd",
+          "skills": ["berättarkonst", "matlagning", "spel&dobbel", "supa"]
+        }
+      }
+    },
+    "civiliserad_hamnstad": {
+      "titel": "Familj från en civiliserad kultur i en hamnstad",
+      "beskrivning": "Denna tabell är för civiliserade familjer som bor i en hamnstad, alltså en stad i närheten av ett hav, en sjö, eller en större flod. Thalasker av folket t.ex använder denna tabell om de bor i en hamnstad. RP får ob1T6+1 enheter att spendera på var och en av dessa fyra färdigheter.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-10": {
+          "profession": "fiskare",
+          "skills": ["fiske", "väderkännedom", "simma", "sjömansskap"]
+        },
+        "11-15": {
+          "profession": "hamnarbetare",
+          "skills": ["simma", "skumraskaffärer", "spel&dobbel", "1 valfri språkfärdighet"]
+        },
+        "16-22": {
+          "profession": "handelsman",
+          "skills": ["handel", "räkning", "värdera", "övertala"]
+        },
+        "23-27": {
+          "profession": "hantverkare",
+          "skills": ["räkning", "värdera", "övertala", "1 valfr hantverksfärdighet"]
+        },
+        "28-30": {
+          "profession": "helare",
+          "skills": ["alkemi", "läkekonst", "växtlära", "övertala"]
+        },
+        "31-35": {
+          "profession": "legoknekt",
+          "skills": ["marsch", "överlevnad", "övertala", "1 valfri vapenfärdighet"]
+        },
+        "36-40": {
+          "profession": "livvakt",
+          "skills": ["förhöra", "speja", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "41-42": {
+          "profession": "Magiker",
+          "skills": ["1 valfri alstrafärdighet", "besvärjelse", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Thalasker av folket får slå om tills de får ett annat resultat."
+        },
+        "43-47": {
+          "profession": "marinsoldat",
+          "skills": ["simma", "sjömanskap", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "48-50": {
+          "profession": "penningutlånare",
+          "skills": ["bokhållning", "räkna", "värdera", "skumraskaffärer"]
+        },
+        "51-55": {
+          "profession": "pirat",
+          "skills": ["simma", "sjömansskap", "skumraskaffärer", "1 valfri vapenfärdighet"]
+        },
+        "56-57": {
+          "profession": "prisjägare",
+          "skills": ["förhöra", "rida", "spåra", "1 valfri vapenfärdighet"]
+        },
+        "58-60": {
+          "profession": "Präst",
+          "skills": ["ceremoni", "övertala", "1 valfri skriftfärdighet", "1 valfri språkfärdighet"],
+          "special_rule": "Thalasker av folket får slå om tills de får ett annat resultat."
+        },
+        "61-70": {
+          "profession": "sjöman",
+          "skills": ["navigation", "sjömansskap", "speja", "väderkännedom"]
+        },
+        "71-75": {
+          "profession": "smugglare",
+          "skills": ["sjömansskap", "skumraskaffärer", "värdera", "övertala"]
+        },
+        "76-80": {
+          "profession": "stadsvakt",
+          "skills": ["förhöra", "speja", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "81-90": {
+          "profession": "stadsvakt",
+          "skills": ["förhöra", "speja", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "91-95": {
+          "profession": "Tjuv",
+          "skills": ["fingerfärdighet", "låsdyrkning", "skumraskaffärer", "smyga"],
+          "special_rule": "(Cirefalier är sällan kriminella. Om RP är cirefalier slås detta slag om. Om resultaten tjuv eller stråtrövare dyker upp igen så behåll resultatet denna gång)"
+        },
+        "96-97": {
+          "profession": "underhållare",
+          "skills": ["akrobatik", "gyckla", "musik", "sjunga"]
+        },
+        "98-100": {
+          "profession": "värdshusvärd",
+          "skills": ["berättarkonst", "matlagning", "spel&dobbel", "supa"]
+        }
+      }
+    },
+    "primitiv_hövdingafamilj": {
+      "titel": "Hövdingafamilj från en primitiv kultur",
+      "beskrivning": "Om familjen lever i en primitiv kultur och någon familjemedlem är hövding, ledare eller härskare skall denna tabell användas. Exempelvis Learam-alver med hövdingafamilj bör slå på denna tabell. RP får ob1T6+1 enheter att spendera på var och en av dessa fyra färdigheter.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-7": {
+          "profession": "handelsman",
+          "skills": ["förhöra", "räkning", "värdera", "övertala"]
+        },
+        "8-15": {
+          "profession": "jägare",
+          "skills": ["djurlära", "jakt", "spåra", "1 valfri vapenfärdighet"]
+        },
+        "16-22": {
+          "profession": "härförare",
+          "skills": ["ledarskap", "krigsföring", "rida", "1 valfri vapenfärdighet"]
+        },
+        "23-40": {
+          "profession": "krigare",
+          "skills": ["krigsföring", "ledarskap", "rida", "1 valfri vapenfärdighet"]
+        },
+        "41-50": {
+          "profession": "rättskipare",
+          "skills": ["berättarkonst", "förhöra", "lagkunskap", "övertala"]
+        },
+        "51-57": {
+          "profession": "magiker",
+          "skills": ["1 valfri alstrafärdighet", "besvärjelse", "1 valfri skriftfrdighet", "1 valfri språkfärdighet"]
+        },
+        "58-62": {
+          "profession": "prisjägare",
+          "skills": ["förhöra", "rida", "spåra", "1 valfri vapenfärdighet"]
+        },
+        "63-72": {
+          "profession": "präst",
+          "skills": ["ceremoni", "ockultism", "övertala", "1 valfri språkfärdighet"]
+        },
+        "73-83": {
+          "profession": "rådsmedlem",
+          "skills": ["lagkunskap", "ledarskap", "övertala", "1 valfri språkfärdighet"]
+        },
+        "84-89": {
+          "profession": "schaman/druid",
+          "skills": ["andeförnimmelse", "historia", "schamanism", "sjunga"]
+        },
+        "90-100": {
+          "profession": "vapenmästare",
+          "skills": ["undervisning", "undvika", "1 valfri vapenfärdighet", "1 valfri ovanlig stridskonst"],
+          "special_rule": "(RP kommer senare få spendera sina valfria färdigheter på sin ovanliga stridskonst om spelaren så vill)"
+        }
+      }
+    },
+    "primitiv_inland": {
+      "titel": "Familj från en primitiv kultur boendes i inlandet",
+      "beskrivning": "Om familjen är från en primitiv kultur bosatt i inlandet, långt ifrån hav, sjöar eller stor floder, så är det denna tabell som ska användas. Exempelvis Henea-alver bör använda denna tabell.Även Learam-alver som bor i inlandet bör också använda denna tabell. RP får ob1T6+1 enheter att spendera på var och en av dessa fyra färdigheter.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-15": {
+          "profession": "boskapsskötare",
+          "skills": ["boskapsskötsel", "djurlära", "rida", "spåra"]
+        },
+        "16-22": {
+          "profession": "hantverkare",
+          "skills": ["räkning", "värdera", "övertala", "1 valfri hantverksfärdighet"]
+        },
+        "23-27": {
+          "profession": "helare",
+          "skills": ["läkekonst", "växtlära", "alkemi", "övertala"]
+        },
+        "28-37": {
+          "profession": "jordbrukare",
+          "skills": ["boskapsskötsel", "jordbruk", "väderkännedom", "växtlära"]
+        },
+        "38-50": {
+          "profession": "jägare",
+          "skills": ["båge", "djurlära", "jakt", "spåra"]
+        },
+        "51-60": {
+          "profession": "krigare",
+          "skills": ["krigsföring", "marsch", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "61-65": {
+          "profession": "livvakt",
+          "skills": ["rida", "speja", "öbverlevnad", "1 valfri vapenfärdighet"]
+        },
+        "66-70": {
+          "profession": "härjare",
+          "skills": ["krigsföring", "speja", "överlevnad", "1 valfri vapenfärdighet"]
+        },
+        "71-75": {
+          "profession": "schaman",
+          "skills": ["andeförnimmelse", "historia", "schamanism", "sjunga"]
+        },
+        "76-82": {
+          "profession": "skogshuggare",
+          "skills": ["spåra", "växtlära", "yxa", "överlevnad"]
+        },
+        "83-87": {
+          "profession": "stråtrövare",
+          "skills": ["skumraskaffärer", "speja", "överlevnad", "1 valfri vapenfrdighet"]
+        },
+        "88-92": {
+          "profession": "tjuv",
+          "skills": ["fingerfärdighet", "skumraskaffärer", "smyga", "speja"]
+        },
+        "93-95": {
+          "profession": "skald",
+          "skills": ["berättarkonst", "historia", "sång", "1 valfri språkfärdighet"]
+        },
+        "96-100": {
+          "profession": "vägvisare",
+          "skills": ["geografi", "speja", "spåra", "överlevnad"]
+        }
+      }
+    },
+    "primitiv_kust": {
+      "titel": "Familj från en primitiv familj bosatt vid kusten",
+      "beskrivning": "Om familjen bor i en primitiv kultur och är bosatt vid ett hav, sjö, eller stor flod ska denna tabell användas. Exempelvis Learam-alver som bor vid kusten bör slå på denna tabell. RP får ob1T6+1 enheter att spendera på var och en av dessa fyra färdigheter.",
+      "dice": "1d100",
+      "skill_bonus": "1d6+1",
+      "ranges": {
+        "1-13": {
+          "profession": "boskapsskötare",
+          "skills": ["boskapsskötsel", "djurlära", "rida", "spåra"]
+        },
+        "14-27": {
+          "profession": "fiskare",
+          "skills": ["fiske", "väderkännedom", "simma", "sjömansskap"]
+        },
+        "28-34": {
+          "profession": "hantverkare",
+          "skills": ["räkning", "värdera", "övertala", "1 valfri hantverksfärdighet"]
+        },
+        "35-41": {
+          "profession": "helare",
+          "skills": ["läkekonst", "växtlära", "alkemi", "övertala"]
+        },
+        "42-48": {
+          "profession": "jordbrukare",
+          "skills": ["boskapsskötsel", "jordbruk", "väderkännedom", "växtlära"]
+        },
+        "49-58": {
+          "profession": "jägare",
+          "skills": ["båge", "djurlära", "jakt", "spåra"]
+        },
+        "59-65": {
+          "profession": "krigare",
+          "skills": ["krigsföring", "marsch", "undvika", "1 valfri vapenfärdighet"]
+        },
+        "66-68": {
+          "profession": "livvakt",
+          "skills": ["simma", "speja", "överlevnad", "1 valfri vapenfärdighet"]
+        },
+        "69-75": {
+          "profession": "pirat",
+          "skills": ["simma", "sjömansskap", "skumraskaffärer", "1 valfri vapenfärdighet"]
+        },
+        "76-79": {
+          "profession": "sjöman",
+          "skills": ["speja", "sjömansskap", "väderkännedom", "simma"]
+        },
+        "80-82": {
+          "profession": "skald",
+          "skills": ["berättarkonst", "historia", "sjunga", "1 valfri språkfärdighet"]
+        },
+        "83-89": {
+          "profession": "tjuv",
+          "skills": ["fingerfärdighet", "skumraskaffärer", "smyga", "speja"]
+        },
+        "90-100": {
+          "profession": "vrakplundrare",
+          "skills": ["simma", "speja", "väderkännedom", "1 valfri vapenfärdighet"]
+        }
+      }
+    }
+  }
+}

@@ -1,47 +1,191 @@
 {
-    "1-2": "Alkoholresistent. RP blir sällan berusad, oavsett hur mycket den dricker. Tärningsslag för färdigheten supa blir två tärningar lättare.",
-    "3-4": "Ambidextriös. RP kan använda båda händerna samtidigt och lika bra. RP drabbas aldrig av ökade svårigheter för att den använder 'fel' hand. RP kan använda en extra handling per runda i strid om RP använder två vapen eller ett vapen och en sköld utan svårighetssökning.",
-    "5-7": "Armstyrka. När RP behöver armstyrka för att exempelvis lyfta något tungt blir svårighetsslagen en tärning lättare.",
-    "8": "Blixtrande reflexer. VINIT-slag blir en tärning lättare när närstrid öppnas.",
-    "9-10": "Chockresistent. Alla chockslag blir en tärning lättare.",
-    "11-13": "Dubbelhänt. RP kan använda båda händerna lika bra, men inte samtidigt. RP får ingen svårighetsökning för att använda 'fel' hand.",
-    "14-16": "Extraordinärt bra utstrålning. Slå om PER med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i PER.",
-    "17-19": "Extraordinärt smidig. Slå om RÖR med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i RÖR.",
-    "20-22": "Extraordinärt stark. Slå om STY med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i STY.",
-    "23-25": "Extraordinärt tålig. Slå om TÅL med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i TÅL.",
-    "26-27": "Fingerfärdig. RP får en nivå (-ob1T6) enklare på slag som kräver koordination och fingerfärdighet, t.ex låsdyrkning eller fickstölder.",
-    "28-30": "Frisk. RP drabbas aldrig av lättare sjukdomar som förkylning och liknande. Gentemot farligare sjukdomar har hen två nivåer lättare (-ob2T6) på alla TÅL-slag mot smitta och förlopp.",
-    "31-33": "Friskt blod. RP får en extra kolumn på blodförlust i skadesektionen.",
-    "34-35": "Gifttålig. RP får en nivå enklare (-ob1T6) på alla TÅL-slag då RP råkar ut för förgiftningar.",
-    "36-38": "Hårdhudad. RP är väldigt skadetålig. Skadeverkan mot henom sänks med (hugg 1, Kross 3, stick 1) som om hens hud var en rustning.",
-    "39-40": "Ignorerar smärta. Svårighetsökningen från Smärta minskar med en nivå (-ob1T6).",
-    "41-42": "Kraftigt byggd. Öka kroppsbyggnaden en nivå. Detta påverkar även skadekolumnerna.",
-    "43-44": "Lungstark. RP får en nivå lättare (-ob1T6) på alla slag för att hålla andan.",
-    "45-46": "Läkekött. RP läker trauma och smärta dubbelt så fort som normalt.",
-    "47-48": "Motståndskraftig. RP får en extra kolumn i sektionerna för trauma, smärta, blodförlust och utmattning.",
-    "49-50": "Nattseende. RP kan se lika bra i dåligt ljus som i dagsljus. RP kan INTE se i totalt mörker, men finns det något stjärnljus eller liknande så får RP aldrig några negativa modifikationer för dåligt ljus.",
-    "51-53": "Outslitlig. RP får två extra kolumner i utmattningssektionen.",
-    "54-55": "Packåsna. RP kan bära väldigt mycket utrustning utan att bli utmattad. Bärförmågan beräknas (STY+TÅL) istället för det normala ((STY+TÅL)/2).",
-    "56-57": "Perfekt hörsel. RP får en nivå (-ob1T6) på alla slag mot HÖR och alla färdigheter och handlingar som handlar om hörsel.",
-    "58-59": "Råstark. RP vet hur man gör så mycket skada som möjligt när hen slåss. Öka alla grundskador en nivå i tabellerna för grundskada.",
-    "60-61": "Rörlig. RP är väldigt vig och rörlig. RP får 3T6+1 enheter att spendera på färdigheterna fingerfärdighet, smyga, hoppa, klättra och akrobatik.",
-    "62-63": "Seglivad. RP får en nivå (-ob1T6) på alla dödsslag.",
-    "64-65": "Skadetålig. RP får en extra kolumn på trauma i skadesektionen.",
-    "66-67": "Skarpögd. RP får en nivå enklare (-ob1T6) på alla slag mot SYN och färdigheten speja.",
-    "68-70": "Smidig. Öka RÖR med +2.",
-    "71-72": "Smärttålig. RP får en extra kolumn på smärta i skadesektionen.",
-    "73-74": "Snabb. Öka förflyttning med +2.",
-    "75-76": "Spänstig. RP får 2T6 enheter för att höja färdigheterna hoppa och klättra.",
-    "77-79": "Stark. Höj STY med +2.",
-    "80": "Storvuxen. RP är väldigt stor. Öka RPs längd med 20% (*1,2) och vikt ökar med 10% (*1,1). RP får öka STY och TÅL +2 vardera. RP får en extra kolumn på trauma, smärta och blodförlust. RÖR sänks med -2.",
-    "81-82": "Speciella drag. RP har väldigt utmärkande utseende, de flesta tycker RP är vacker. RP är lätt att känna igen och komma ihåg. Höj PER med +1.",
-    "83-84": "Känsligt luktsinne. RP har ett så känsligt luktsinne att det räknas som ett primärt attribut. Slå fram värdet i attributet lukt med 3T6.",
-    "85-86": "Lättfotad. RP har alltid en nivå lättare (-ob1T6) på färdigheten smyga. Det är också en nivå svårare (+ob1T6) att spåra RP om denna gått till fots.",
-    "87-88": "Stålnäve. RP gör ob1T6 extra i skada när hen slåss med nävarna.",
-    "89-90": "Tålig. Höj TÅL med +2.",
-    "91-92": "Ungdomlig. RP ser 10-15 år yngre ut än vad hen egentligen är.",
-    "93-94": "Uthållig. RP får två extra kolumner i utmattningssektionen.",
-    "95-96": "Vacker. Höj PER med +2.",
-    "97-98": "Vig. Höj RÖR med +2.",
-    "99-100": "Fler egenskaper. Slå två gånger till på denna tabell och använd båda resultaten."
+  "bakgrundstabeller": {
+    "fysiska_egenskaper": {
+      "titel": "Fysiska egenskaper",
+      "beskrivning": "Ger rollpersonen en fysisk egenskap, förmåga eller bonus.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "alkoholresistent",
+          "description": "Alkoholresistent. RP blir sällan berusad, oavsett hur mycket den dricker. Tärningsslag för färdigheten supa blir två tärningar lättare."
+        },
+        "3-4": {
+          "result": "ambidextriös",
+          "description": "Ambidextriös. RP kan använda båda händerna samtidigt och lika bra. RP drabbas aldrig av ökade svårigheter för att den använder “fel” hand. RP kan använda en extra handling per runda i strid om RP använder två vapen eller ett vapen och en sköld utan svårighetssökning."
+        },
+        "5-7": {
+          "result": "armstyrka",
+          "description": "Armstyrka. När RP behöver armstyrka för att exempelvis lyfta något tungt blir svårighetsslagen en tärning lättare."
+        },
+        "8": {
+          "result": "blixtrande_reflexer",
+          "description": "Blixtrande reflexer. VINIT-slag blir en tärning lättare när närstrid öppnas."
+        },
+        "9-10": {
+          "result": "chockresistent",
+          "description": "Chockresistent. Alla chockslag blir en tärning lättare."
+        },
+        "11-13": {
+          "result": "dubbelhänt",
+          "description": "Dubbelhänt. RP kan använda båda händerna lika bra, men inte samtidigt. RP får ingen svårighetsökning för att använda “fel” hand."
+        },
+        "14-16": {
+          "result": "extraordinärt_bra_utstrålning",
+          "description": "Extraordinärt bra utstrålning. Slå om PER med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i PER."
+        },
+        "17-19": {
+          "result": "extraordinärt_smidig",
+          "description": "Extraordinärt smidig. Slå om RÖR med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i RÖR."
+        },
+        "20-22": {
+          "result": "extraordinärt_stark",
+          "description": "Extraordinärt stark. Slå om STY med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i STY.."
+        },
+        "23-25": {
+          "result": "extraordinärt_tålig",
+          "description": "Extraordinärt tålig. Slå om TÅL med 2T6+9 tills du får ett värde som är högre än det värde du har nu. Detta är nu ditt värde i TÅL."
+        },
+        "26-27": {
+          "result": "fingerfärdig",
+          "description": "Fingerfärdig. RP får en nivå (-ob1T6) enklare på enklare som kräver koordination och fingerfärdighet, t.ex låsdyrkning eller fickstölder."
+        },
+        "28-30": {
+          "result": "frisk",
+          "description": "Frisk. RP drabbas aldrig av lättare sjukdomar som förkylning och liknande. Gentemot farligare sjukdomar har hen två nivåer lättare (-ob2T6) på alla TÅL-slag mot smitta och förlopp. Regler för sjukdomar finns senare i texten."
+        },
+        "31-33": {
+          "result": "friskt_blod",
+          "description": "Friskt blod. RP får en extra kolumn på blodförlust i skadesektionen."
+        },
+        "34-35": {
+          "result": "gifttålig",
+          "description": "Gifttålig. RP får en nivå enklare (-ob1T6) på alla TÅL-slag då RP råkar ut för förgiftningar."
+        },
+        "36-38": {
+          "result": "hårdhudad",
+          "description": "Hårdhudad. RP är väldigt skadetålig. Skadeverkan mot henom sänks med (hugg 1, Kross 3, stick 1) som om hens hud var en rustning."
+        },
+        "39-40": {
+          "result": "ignorerar_smärta",
+          "description": "Ignorerar smärta. Svårighetsökningen från Smärta minskar med en nivå (-ob1T6)"
+        },
+        "41-42": {
+          "result": "kraftigt_byggd",
+          "description": "Kraftigt byggd. Öka kroppsbyggnaden en nivå. Detta påverkar även skadekolumnerna."
+        },
+        "43-44": {
+          "result": "lungstark",
+          "description": "Lungstark. RP får en nivå lättare (-ob1T6) på alla slag för att hålla andan."
+        },
+        "45-46": {
+          "result": "läkekött",
+          "description": "Läkekött. RP läker trauma och smärta dubbelt så fort som normalt."
+        },
+        "47-48": {
+          "result": "motståndskraftig",
+          "description": "Motståndskraftig. RP får en extra kolumn i sektionerna för trauma, smärta, blodförlust och utmattning."
+        },
+        "49-50": {
+          "result": "nattseende",
+          "description": "Nattseende. RP kan se lika bra i dåligt ljus som i dagsljus. RP kan INTE se i totalt mörker, men finns det något stjärnljus eller liknande så får RP aldrig några negativa modifikationer för dåligt ljus."
+        },
+        "51-53": {
+          "result": "outslitlig",
+          "description": "Outslitlig. RP får två extra kolumner i utmattningssektionen."
+        },
+        "54-55": {
+          "result": "packåsna",
+          "description": "Packåsna. RP kan bära väldigt mycket utrustning utan att bli utmattad. Bärförmågan beräknas (STY+TÅL) istället för det normala ((STY+TÅL)/2)"
+        },
+        "56-57": {
+          "result": "perfekt_hörsel",
+          "description": "Perfekt hörsel. RP får en nivå (-ob1T6) på alla slag mot HÖR och alla färdigheter och handlingar som handlar om hörsel."
+        },
+        "58-59": {
+          "result": "råstark",
+          "description": "Råstark. RP vet hur man gör så mycket skada som möjligt när hen slåss. Öka alla grundskador en nivå i tabellerna för grundskada."
+        },
+        "60-61": {
+          "result": "rörlig",
+          "description": "Rörlig. RP är väldigt vig och rörlig. RP får 3T6+1 enheter att spendera på färdigheterna fingerfärdighet, smyga, hoppa, klättra och akrobatik"
+        },
+        "62-63": {
+          "result": "seglivad",
+          "description": "Seglivad. RP får en nivå (-ob1T6) på alla dödsslag."
+        },
+        "64-65": {
+          "result": "skadetålig",
+          "description": "Skadetålig. RP får en extra kolumn på trauma i skadesektionen."
+        },
+        "66-67": {
+          "result": "skarpögd",
+          "description": "Skarpögd. RP får en nivå enklare (-ob1T6) på alla slag mot SYN och färdigheten speja."
+        },
+        "68-70": {
+          "result": "smidig",
+          "description": "Smidig. Öka RÖR med +2"
+        },
+        "71-72": {
+          "result": "smärttålig",
+          "description": "Smärttålig. RP får en extra kolumn på smärta i skadesektionen."
+        },
+        "73-74": {
+          "result": "snabb",
+          "description": "Snabb. Öka förflyttning med +2"
+        },
+        "75-76": {
+          "result": "spänstig",
+          "description": "Spänstig. RP får 2T6 enheter för att höja färdigheterna hoppa och klättra."
+        },
+        "77-79": {
+          "result": "stark",
+          "description": "Stark. Höj STY med +2"
+        },
+        "80": {
+          "result": "storvuxen",
+          "description": "Storvuxen. RP är väldigt stor. Öka RPs längd med 20% (*1,2) och vikt ökar med 10% (*1,1). RP får öka STY och TÅL +2 vardera. RP får en extra kolumn på trauma, smärta och blodförlust. RÖR sänks med -2"
+        },
+        "81-82": {
+          "result": "speciella_drag",
+          "description": "Speciella drag. RP har väldigt utmärkande utseende, de flesta tycker RP är vacker. RP är lätt att känna igen och komma ihåg. Höj PER med +1"
+        },
+        "83-84": {
+          "result": "känsligt_luktsinne",
+          "description": "Känsligt luktsinne. RP har ett så känsligt luktsinne att det räknas som ett primärt attribut. Slå fram värdet i attributet lukt med 3T6"
+        },
+        "85-86": {
+          "result": "lättfotad",
+          "description": "Lättfotad. RP har alltid en nivå lättare (-ob1T6) på färdigheten smyga. Det är också en nivå svårare (+ob1T6) om denna gått till fots."
+        },
+        "87-88": {
+          "result": "stålnäve",
+          "description": "Stålnäve. RP gör ob1T6 extra i skada när hen slåss med nävarna."
+        },
+        "89-90": {
+          "result": "tålig",
+          "description": "Tålig. Höj TÅL med +2"
+        },
+        "91-92": {
+          "result": "ungdomlig",
+          "description": "Ungdomlig. RP börjar slå på åldringstabellen först när hen blir 45 skenbara år gammal. (normalt börjar man slå vid 35 års ålder)"
+        },
+        "93-94": {
+          "result": "vacker_kropp",
+          "description": "Vacker kropp. RP har en snygg, välproportionerad kropp. RP får 1T6+1 enheter att spendera på fördigheten förföra."
+        },
+        "95-96": {
+          "result": "vacker",
+          "description": "Vacker. Höj PER med +2"
+        },
+        "97-98": {
+          "result": "vandrare",
+          "description": "Vandrare. RP får bara hälften så många kryss långtidsutmattning när hen går långa sträckor. Alla slag mot färdigheten marsch blir en nivå lättare (-ob1T6). Färdigheten marsh är lättlärd."
+        },
+        "99-100": {
+          "result": "fler_egenskaper",
+          "description": "Fler egenskaper. Slå två gånger till på denna tabell och använd båda resultaten."
+        }
+      }
+    }
   }
+}

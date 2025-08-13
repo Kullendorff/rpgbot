@@ -1,0 +1,291 @@
+{
+  "kulturella_tabeller": {
+    "egenheter_missla": {
+      "titel": "Egenheter för Misslor",
+      "beskrivning": "En tabell över säregna egenheter och personlighetsdrag för Misslor.",
+      "dice": "1d100",
+      "ranges": {
+        "1": {
+          "result": "akrobatisk",
+          "description": "Akrobatisk. RP är väldigt smidig och rörlig. Klarar lätt av att hoppa volter, hjula och göra andra tricks som folk häpnar över. Öka RÖR med +2 och spendera 1T6+3 enheter på färdigheten akrobatik. Akrobatik är också lättlärd. En nackdel är att RP gärna vill försöka impinera på folk med tricks som inte alltid är helt säkra att utföra, tillexempel hoppa mellan hustak eller kullerbytta under en skenande tjur. RP får en kick av att utstta sig själv för fara när andra kan se den."
+        },
+        "2": {
+          "result": "argbigga",
+          "description": "Argbigga. Misslan har ovanligt lätt för att tappa humöret och bli fly förbannad på allt möjligt. Spelaren väljer hur detta yttrar sig, förslagsvis så sliter RP i sitt eget hår, hoppar och stampar i marken, skriker åt folk eller saker den blir arg på eller liknande. Öka aggression med +2. RP får dessutom en extra utmattningskolumn eftersom hen lärt sig att vara arg lååååånga stunder."
+        },
+        "3-4": {
+          "result": "blyg",
+          "description": "Blyg. RP är ovanligt blyg och tycker inte alls om att få uppmärksamhet. RP rodnar ofta, stammar eller får en darrig röst varje gång den talar med någon den inte känner bra. Alla sociala färdigheter blir en nivå svårare (+ob1T6) om RP talar med någon den inte känner väldigt bra och RP har också lärt sig att lyssna noggrannare än de flesta vilket ger en bonus på +2 till HÖR"
+        },
+        "5-6": {
+          "result": "bryggare",
+          "description": "Bryggare. RP är väldigt intresserad av öl och andra typer av alkoholhaltiga drycker. RP får 2T6+2 enheter att spendera på färdigheten bryggare och 2 enheter att spendera på färdigheten Supa. RP är känd för att brygga mycket goda drycker, och vill så gott som alltid smaka på nya öler, viner, mjöd, sprit och annat gott som man blir lite skönt snurrig i huvudet av."
+        },
+        "7": {
+          "result": "bråkstake",
+          "description": "Bråkstake. RP har alltid varit bråkig och våldsam och har alltid haft lätt att ta till nävarna för att få som hen vill. Många andra misslor föraktar öppet RP för detta och RP har ofta fått höra att byn/staden skulle vara en bättre plats om RP bara kunde försvinna. Öka aggresion med +2 och spendera 1T6+3 enheter på slagsmål och +2 enheter på stridsvana."
+        },
+        "8-9": {
+          "result": "busig",
+          "description": "Busig. RP älskar att skoja och retas med folk. Som barn brukade RP bygga fällor för sina föräldrar och syskon eller försätta dom i pinsamma situationer, och detta glädjämne har hängt med misslan upp i vuxen ålder (om misslan nu är vuxen). På ett vänskapligt sätt förstås, busen är alltid menade att få bus-offret och alla andra att skratta. Ibland går busen överstyr och bus-offret känner sig kränkt och blir ledsen av RPs upptåg, men normalt har RP ganska bra koll på vart gränserna går för olika personer. RP får 2T6+2 enheter att spendera färdigheterna Smyga och Gömma."
+        },
+        "10": {
+          "result": "butter",
+          "description": "Butter. Misslor är berömda för sina skojiga och glada sinnelag. RP skiljer sig helt från denna stereotyp och är istället en surpuppa av rang. Man hittar ofta RP sittandes för sig själv och om hen pratar med någon är det oftast för att förklara varför” allt var bättre förr”, “dagens ungdom går inte att lita på”, “snart går det utför igen” eller liknande. När något går illa för någon i närheten av RP hver RP oftast ur sig “vad var det jag sa” eller “jag visste att det där skulle hända” istället för tröst och uppmuntran. RP får +2 i VIL pga sin envishet."
+        },
+        "11-12": {
+          "result": "danstokig",
+          "description": "Danstokig. RP älskar att dansa. Närhelst RP hör musik så slänger den sig genast upp på ett dansgolv, eller ett bord, eller vadsomhelst det går att dansa på. Om RP inte fått dansa på länge kan den få för sig att dansa till vilket ljud som helst t.ex en hästs taktfasta trampande eller vindens susande. Spelas det musik någonstans r det nästan omöjligt att få RP därifrån. RP får 2T6+2 enheter att spendera på färdigheten Dansa och en extra utmattningskolumn."
+        },
+        "13": {
+          "result": "disträ",
+          "description": "Disträ. Misslan blir mycket lätt distraherad av nästan vad som helst. Enkla trolleritrick, spännande samtal, vackra soluppgångar, allmän uppståndelse och liknande kan lätt få misslan att tappa koncentrationen, glömma bort vad den höll på med, och istället börja fokusera på det nya “intressanta” som händer. Detta gör alla slag SYN, HÖR, Speja, Spåra och Söka blir en nivå svårare (+ob1T6) för att misslan så lätt hör eller ser något annat som den börjar tänka på istället. Allt stirrande har dock lrt misslan en del saker, så den får välja en valfr färdighet som Lättlärd (inte Stridsvana)"
+        },
+        "14-15": {
+          "result": "djurtokig",
+          "description": "Djurtokig. Misslan älskar djur, och djur älskar (nästan alltid) misslan. Ilskna vakthundar lugnar sig och slickar misslan i ansiktet istället för att skrämma bort den, stridshästar slänger hellre av sina ryttare än att trampa ner misslan (som de gör med andra fiender), småfåglar seglar ner från träden för att få chansen att sitta på misslans axlar eller händer och hälsa på den. Alla slag för Djurträning blir två nivåer lättare (-ob2T6) och alla djur har två nivåer svårare (+ob2T6) på sina Aggresionsslag mot misslan. Misslan har också ett tamt, intelligent och mycket troget husdjur som följer misslan överaltt. Djuret kan vara ponny, varg, räv, korp, hare, falk eller liknande."
+        },
+        "16-17": {
+          "result": "drickare",
+          "description": "Drickare. Misslan dricker ofta, mycket och gärna sprit, öl, vin eller annat med alkohol. Många års supande har gjort misslan ovanligt motståndskraftig mot alkohol. Spendera 2T6+2 enheter på färdigheten Supa, och alla färdighetsslag mot Supa blir en nivå lättare (-ob1T6)."
+        },
+        "18": {
+          "result": "drogare",
+          "description": "Drogare. Misslan är beroende av roliga svampar eller konstiga örter eller något liknande. När misslan är hög är den glad, nöjd och uppåt, men när ruset släpper blir den både inåt, utåt, framåt, bakåt och nedåt. Misslan måste klara ob3T6 mot VIL varje dag för kunna stå emot frestelsen att använda drogen. Misslan får också 2T6+2 enheter att spendera på växtlära och skumraskaffärer. Misslan startar spelet med ob2T6 doser av den drog den är beroende av. Vad misslan är beroende av för drog bestämmer spelare och SL tillsammans, förslagsvis alvgräs, mudelört eller liknande"
+        },
+        "19": {
+          "result": "duckare",
+          "description": "Duckare. Misslan är kvick och skicklig på att kasta sig själv ur faror istället för att möta dom rakt på. Spendera 1T6+3 enheter på färdigheten Undvika. Undvika är lättlärd. RÖR ökar med +1, STY minskar med -1"
+        },
+        "20-21": {
+          "result": "feg",
+          "description": "Feg. misslan är väldigt feg och rädd för konflikter, både fysiska och sociala konflikter. RP måste lyckas med ob3T6 mot VIL för att inte fly när en strid eller gräl börjar. Misslan är mycket uppmärksam mot faror och får höja SYN och HÖR med +1 vardera."
+        },
+        "22-23": {
+          "result": "fnittrare",
+          "description": "Fnittrare. Misslan har väldigt svårt att hålla sig för skratt när någon annan snubblar, gör sig illa eller skämmer ut sig. Misslan fnittrar eller skrattar rakt ut. Misslan får höja Tur med +4, men alla som befinner sig i misslans närhet -2 på Tur vilket ofta leder in dom i små missöden och olyckor."
+        },
+        "24": {
+          "result": "fåfäng",
+          "description": "Fåfäng. Misslan är väldigt noga med sitt utseende och spenderar mycket tid och möda på att se så stilig ut som möjligt. RP får fyra uppsättningar stiliga vardagskläder och 3 uppsättningar extra tjusiga finkläder. RP får höja PER med +1"
+        },
+        "25": {
+          "result": "förvrängare",
+          "description": "Förvrängare. Misslan har en mycket ovanlig förmåga att förvränga eller överdriva sina egna minnesbilder. Detta gör att misslan när misslan delar minnen med en annan missla så kan den visa minnen av saker som egentligen inte hänt och misslan den delar sina minnen med kan inte veta om det den ser är sant eller falskt. Egenheten är som sagt mycket ovanlig och de som kan göra detta anses ofta vara illvillga misslor som gör detta för att sprida lögner och ovänskap."
+        },
+        "26": {
+          "result": "galen",
+          "description": "Galen. Misslan lider av någon slags galenskap. Exakta detaljer bestäms av spelaren och SL, några förslag på galenskaper kan vara att misslan har en extrem fobi för kaniner, att misslan inte kan låta bli att svära och säga fula ord till allt och alla, att misslan måste gå tre varv runt ett hus innan hen känner sig bekväm med att gå in, eller något annat. Galenskapen är jobbig både för misslan själv och för personer i hens närhet. Galenskapen har på något sätt gett misslan förmågan att uppfatta tecken och symboler som kan förutsäga framtiden så RP får spendera 1T6+3 enheter på färdigheten spådom."
+        },
+        "27": {
+          "result": "illvillig",
+          "description": "Illvillig. Misslan njuter av att skapa ofog och missämja. Spelaren bestämmer om misslan lyckats dölja detta eller om det är allmänt känt att RP är en elaking som inte går att lita på. Sänk Heder med -2. Spendera 1T6+3 enheter på en färdighet som RP använder för sina illdåd."
+        },
+        "28-29": {
+          "result": "kelig",
+          "description": "Kelig. Misslan älskar att kramas och kela med folk och tycker fysisk närhet är det bästa som finns. Det krävs inte mycket för att misslan sks vilja sitta i knät, hålla handen, stryka över håret eller något liknande på en ny vän och på en gammal vän krävs det i princip ingenting för att misslan ska vilja gosa med den. RP har sällan några romantiska eller sexuella intentioner med sitt kelande, men det händer att det hettar till iallafall. Öka Amor med +2. Misslan har också lärt sig massera folk så bra att 1T6 poäng långtidsutmattning försvinner från personen hen masserar en stund. Denna förmåga fungerar bara en gång per dag."
+        },
+        "30-31": {
+          "result": "klen",
+          "description": "Klen. misslan har alltid varit ganska svag i sina muskler. När du senare räknar ut RPs grunskada får du ett resultat sämre än du egentligen skulle ha baserat på din STY och RÖR. Misslan är mycket medveten om att den inte är särskilt stark och har istället lärt sig att förlita sig på sin RÖR som du får öka med +1."
+        },
+        "32": {
+          "result": "klumpig",
+          "description": "Klumpig. Misslan är så klumpig att den ofta tappar saker den har i händerna och faller omkull och slår sig själv titt som tätt. RP får sänka Tur med -2 och alla slag mot Smyga och andra Rörelsefärdigheter där hen måste vara försiktig eller inte tappa något blir +ob1T6 svårare. Misslan har härdats av alla olyckor den drabbats av och får höja TÅL med +2 och öka Skadekolumnerna för Smärta med +1."
+        },
+        "33-34": {
+          "result": "klåfingrig",
+          "description": "Klåfingrig. Misslan har väldigt svårt att hålla fingrarna i styr och plockar ofta på sig prylar som tillhör andra personer. Pajer, halsdukar, silverbägare och liknande saker försvinner ofta spårlöst när RP är i närheten. RP får 1T6+3 enheter att spendera på Fingerfärdighet. Spelaren måste också välja en speciell typ av föremål som RP har extra svårt att motstå. När RP ser en möjlighet att stjäla ett sådant föremål måste hen klara av ob4T6 mot VIL för att inte försöka sno föremålet, hur hopplöst det än verkar. Spelaren får självmant välja att misslyckas med slaget om hen vill att RP ska sno föremålet."
+        },
+        "35-36": {
+          "result": "kunnig",
+          "description": "Kunnig. Misslan är mycket beläst och älskar att lära sig nya saker. Finns det en chans att läsa en ny faktabok eller prata en stund med en bildad person så vill RP alltid ta chansen. Många andra misslor ser RP som lite konstig som bryr sig så mycket om vad som händer i främmande länder eller vad RP nu intresserar sig av för tillfället, men kommer gärna till RP iallafall med frågor om lite vadsomhelst - historiska händelser, pajrecept, relationsproblem eller något annat. RP får höja BIL med +2 och 2T6+4 enheter att spendera på valfria kunskapsfärdigheter."
+        },
+        "37": {
+          "result": "kurvig",
+          "description": "Kurvig. Misslan har en väldigt attraktiv och sexig kropp, och är dessutom väldigt medveten om detta vilket gör att hen gärna visar upp sig själv på ett ganska “skrytsamt” sätt. En manlig RP kanske tar av sig på överkroppen så fort det finns minsta ursäkt att göra det (oj så varmt det var idag, bäst jag tar av mig den här tunikan). En kvinnlig RP klär sig kanske i extremt åtsittande klänningar som framhäver kurvorna lite extra. Vissa blir provocerade av det här beteendet och vill att RP ska visa lite “blygsamhet”, men oftast får hen bara gillande och uppskattande blickar. Öka PER med +1 och spendera 1T6+3 enheter på förföra."
+        },
+        "38": {
+          "result": "kvick",
+          "description": "Kvick. Misslan är kvick, både i tanken och kroppen och har blixtsnabba reflexer. Ibland reagerar RP innan den tänker vilket kan leda till pinsamheter. Öka RPs RÖR med +2, sänk RPs PSY med -2 och varje gång RP är med om att öppna en strid får den -ob1T6 på Vinit."
+        },
+        "39": {
+          "result": "kämpe",
+          "description": "Kämpe. Misslan har en eller flera gånger varit tvungen att strida för sitt liv, sin familj eller sitt folk. RP får 1T6+2 enheter att spendera på valfri vapenfärdighet och 2 enheter att spendera på stridsvana. Tyvärr har RP blivit illa skadad i någon strid vilket har sänkt TÅL med -1 permanent."
+        },
+        "40": {
+          "result": "listig",
+          "description": "Listig. Misslan är väldigt listig och kan planera alla möjliga sorters komplicerade planer som involverar flera personers samarbete. Palla äpplen från surgubben i byn, lura in sig till kungens privata kammare förklädd till narr, smyga sig in i en trollgrotta för att stjäla deras skatter och liknande planer. Många ser RP som väldigt smart och kan komma på lösningar på det mest omöjliga problem. RP får höja PSY med +2 och får 1T6+1 enheter att spendera på färdigheten Ledarskap."
+        },
+        "41-42": {
+          "result": "lugn",
+          "description": "Lugn. Misslan är ovanligt tålmodig och funderar gärna både en och två gånger extra innan den talar eller gör nånting. Många andra ser på RP som lite sävlig och långsam när hen egentligen bara är väldigt fundersam. RP får höja VIL med +2 och får en nivå svårare (+ob1T6) på färdigheten Övertala om situationen är stressad eller om det gäller att vara kvick och snabbtänkt med sina argument."
+        },
+        "43": {
+          "result": "lurig",
+          "description": "Lurig. Misslor är kända för att vara hederliga och nästan oförmögna att ljuga eller luras. Detta gäller inte den här RPn. RP är mästare på att bluffa, luras och hitta på lögner. Ibland för att själv kunna tjäna något på det, ibland bara för att det är så roligt att se de lurades förvirrade blickar. RP får 1T6+3 enheter att spendera på färdigheten Övertala och måste specialisera den mot Lura. RPs Heder sänks med -2."
+        },
+        "44-45": {
+          "result": "lyckosam",
+          "description": "Lyckosam. Misslan har mycket tur. Situationer som kan te sig direkt livsfarliga vänder ofta helt oförklarligt till RPs fördel. En gång per spelmöte får spelaren slå om ett misslyckat eller fumlat tärningsslag en gång. Det nya resultatet måste accepteras, även om det är ett sämre resultat."
+        },
+        "46": {
+          "result": "magisuktande",
+          "description": "Magisuktande. Misslan har sedan barnsben drömt om att bli magiker. Storögt lyssnade den på långlingarnas berättelser om besvärjare, magiker och liknande samtidigt som andra misslor varnat och förmanat RP från att lära sig dessa onda konster. RP har studerat magi i smyg och får öka BIL med +1 och 2T6+2 enheter att spendera på valfria mystiska- och alstrafärdigheter."
+        },
+        "47-48": {
+          "result": "matglad",
+          "description": "Matglad. Misslan älskar alla typer av mat. RP vill gärna testa nya maträtter så ofta det alls är möjligt och har dessutom utmärkt smak- och luktsinne. RP kan hitta stadens bästa taverna bara med hjälp av sin näsa. Misslor har som bekant ett extra attribut som heter LUK, och detta attribut får ökas med +2, 2T6+2 enheter att spendera på färdigheten Matlagning och 1T6+2 kg högre kroppsvikt"
+        },
+        "49": {
+          "result": "modig",
+          "description": "Modig. Misslan är ovanligt modig och skräms inte av vare sig faror, monster eller skurkar. Modig som en riddare (eller dum som en tok) möter RP alla utmaningar som hamnar i hens väg. Alla slag mot PSY eller VIL som har med skräck, moral, panik eller liknande att göra blir -ob1T6 lättare, och RP får höja VIL med +1. RP kan dock inte neka utmaningar och känner ett trängande behov av att visa sig tuff och modig när helst tillfälle ges."
+        },
+        "50": {
+          "result": "muntergök",
+          "description": "Muntergök. Misslan är så gott som alltid glad, vaknar med ett skratt, somnar med ett leende. Fåglar kvittrar och barn slutar gråta när RP kommer gående med sin glada uppsyn. Vissa tycker RPs förmåga att alltid se det positiva i alla situationer är lite motbjudande, men de allra flesta tycker det är trevligt. Om RP får en nivå lättare (-ob1T6) på färdigheterna Diplomati, Etikett och Övertala om situationen hjälps av att RP är glad, vilket de flesta situationer gör utom de allra mest allvarliga."
+        },
+        "51-52": {
+          "result": "musiköra",
+          "description": "Musiköra. Misslan har musik i blodet och kan få fram dessa genom de flesta musikinstrument. RP får ofta uppdraget att spela på fester så övriga gäster kan dansa och njuta av musiken. RP får 2T6+2 enheter att spendera på färdigheten Musik, färdigheten är Lättlärd och RP får också ett valfritt musikinstrument som startutrustning."
+        },
+        "53": {
+          "result": "människokännare",
+          "description": "Människokännare. Misslan har lärt sig att människor och andra långlingar fungerar. De använder ironi, ljuger, har konstigt kroppspråk osv. Detta gör att RP, till skillnad från vanliga misslor, INTE får två nivåer svårare att upptäcka lögner och ironi och förstår lttare långlingars humor."
+        },
+        "54": {
+          "result": "nervös",
+          "description": "Nervös. Misslan är alltid nervös, orolig och rädd för någonting, alltid på helspänn. RP utropar ofta saker som “OJOJOJ” eller “KÄRA NÅN!” när något oväntat eller plötsligt händer. Alla slag mot VIL eller PSY som har med skräck, panik eller liknande blir en nivå svårare (+ob1T6). RP sover väldigt lätt och vaknar snabbt, så RP slipper alla negativa effekter av att vara nyvaken."
+        },
+        "55-56": {
+          "result": "nyfiken",
+          "description": "Nyfiken. Misslan är extremt nyfiken och kan inte hålla sig ifrån att snoka reda på saker som andra försöker hålla hemliga. Går det skvaller om någon i RPs närhet bara måste RP få veta på vad det är. Har någon en hemlighet måste RP försöka lista ut vad det är.RP känner ständigt ett stort behov av att veta vad folk gör, vad de tycker och vad de tänker. RP hamnar ofta i trubbel när hen försöker smyga sig efter skumma personer, läser brev till andra personer eller öppnar den där förbjudna dörren i källaren som aldrig får öppnas eller liknande. RP får höja både SYN och HÖR med +1 och får spendera 2T6 enheter på färdigheterna Speja och Söka."
+        },
+        "57": {
+          "result": "pilsk",
+          "description": "Pilsk. Många misslor är lite blyga och pryda när det kommer till köttslig njutning. RP är det dock inte. RP är fylld av sexuell åtrå och kärleksrus, det krävs inte mycket för att RP ska vilja kyssas, smeka av någon dens kläder, eller dela sina mest osedliga minnen med någon ny bekantskap. Eller någon gammal bekantskap heller för den delen. RP får +2 Amor, +1 PER och 1T6+1 enheter att spendera på färdigheten Förföra."
+        },
+        "58-59": {
+          "result": "samlare",
+          "description": "Samlare. Misslan har samlat på sig massor av saker av olika kvalite och ursprung. RPs hem är överfullt av av prylar, skåpen går inte att stänga, det ligger prylar i travar och högar lite överallt, RPs fickor, väskor etc är normalt överfulla. Alla saker gör RP relativt förmögen, men RP har väldigt svårt att skiljas från sina saker. Samlingens värde kan räknas till ob2T6+2 föremål av bytesgrupp 7. RP får 2T6+2 enheter att spendera på färdigheterna Värdera och Köpslå och två enheter måste användas för att köpa specialiseringen “köpslå” till Övertala och en specifik varutyp till Värdera som blir RPs favoritsamlarobjekt."
+        },
+        "60": {
+          "result": "savdrickare",
+          "description": "Savdrickare. Misslan är vegetarian och vägrar döda eller äta djur. RP har ersatt kött i sin kost med sav från olika träd som den dricker stora mängder av. RPs ovanliga diet har gjort den klartänkt men lite klen. RP får +1 PSY, och när kroppsbyggnad räknas ut senare får RP ett resultat sämre än vad den hade fått om den räknat ut sin kroppsbyggnad normalt (som sämst: klen)"
+        },
+        "61-62": {
+          "result": "skrytare",
+          "description": "Skrytare. Misslan överdriver ofta när den berättar något. Varje gång RP berttar en historia blir historian mer och mer osannolik. Efter några återberättningar återstår kanske bara ett litet korn av sanning. Andra misslor kan som bekant dela minnen med varandra så RP berättar helst sina berättelser för långlingar. RP får 1T6+1 enheter att spendera på färdigheten Berättarkonst ovh en enhet måste användas till specialiseringen “skryt”. RP får dessutom 1T6+1 enheter att spendera på färdigheten Övertala för att övertyga folk att det den just berättat faktiskt är sant."
+        },
+        "63": {
+          "result": "skuggfolkig",
+          "description": "Skuggfolkig. Misslan har en onaturlig koppling till Skugglandet och folk hävdar att RP har skuggfolksblod i sina ådror. RP kan då och då se in i Skugglandet och har även lättare att hitta stigar dit. Möter RP skuggfolk tenderar dessa att vara nyfikna och vänliga mot RPn. åtminstone så vänliga de kan vara. RP får alltid -ob1T6 att orientera sig i vildmark och djupa skogar. RPn har dessutom något övernaturligt och älvlikt i sitt utseende. T.ex guldskimrande hår, kattögon, vassa tänder, en svans eller något liknande. Detta drag är ofta skrämmande för andra personer som inte känner RP, men de ger ändå RP +1 i PER."
+        },
+        "64": {
+          "result": "skummis",
+          "description": "Skummis. Misslan är en skummis och håller på med skumma saker. Som ungdom kanske den stal och delade ut öl till yngre misslor i utbyte mot småsaker den ville ha ifrån dom och har senare fortsatt med mörkare och mörkare skumheter. RP har nu koll på hur man letar fram olika förnjudna saker och hur man hittar andra skummisar i långlingarnas städer. RP får 2T6 enheter att spendera på Skumraskaffärer och får dessutom en yrkesmässig kontakt med en “skojare”."
+        },
+        "65-66": {
+          "result": "smygig",
+          "description": "Smygig. Misslan vet att det mesta i världen är större och farligare än den själv. När fara hotar trippar RP på tå. RP får öka RÖR med +1 och får 2T6+2 enheter att spendera på färdigheterna Smyga och Gömma."
+        },
+        "67-68": {
+          "result": "snabber",
+          "description": "Snabber. Misslan är mycket snabb i benen och kan springa lika fort som många långlingar. RP får öka RÖR med +1 och Förf med +2"
+        },
+        "69-70": {
+          "result": "snarkare",
+          "description": "Snarkare. Misslan snarkar ljudligt så fort denne somnar och folk som inte härdats mot snarkande måste stoppa bomull i öronen för att kunna sova en blund i närheten. RP sover dessutom extremt djupt och är svår att väcka. RP behöver dock bara hälften så mycket sömn som “vanliga” personer."
+        },
+        "71": {
+          "result": "sniffare",
+          "description": "Sniffare. Misslan har ett väl utvecklat luktsinne, ävenjämflrt med andra misslor. RP får höja LUK med +2 och får såendera 1T6+3 enheter på färdigheten Spåra. RP kan spåra folk, djur eller något annat efter deras lukt som en spårhund. RP måste hålla näsan mot marken när den gör det och kan se lite lustig ut."
+        },
+        "72": {
+          "result": "sniken",
+          "description": "Sniken. Misslan är ovanligt egennyttig och vill ytterst sällan dela med sig av vad den äger och har. RP bjuder aldrig på mat, dryck, godsaker eller liknande och prutar alltid hårt innan den byter till sig eller köper något. Är RPs generositet över 8 får denna slås om med 1T6+2. RP får 2T6 enheter att spendera på färdigheten Övertala och måste använda en för att specialisera sig mot “Köpslå”. RP har också samlat på sig en förmögenhet i tillgångar värd ob2T6 föremål av bytesgrupp 5."
+        },
+        "73": {
+          "result": "snällstark",
+          "description": "Snällstark. Misslan är väldigt stark och har sedan barnsben fått lära sig att den som är stark måste vara snäll. Styggingar ska man försöka tala med, inte slå. RP får öka STY med +2, Heder med +2, sänka Aggresion med -3, och 2T6 enheter att spendera på färdigheten Övertala varav en enhet måste användas för att skaffa specialiseringen “Lugna”."
+        },
+        "74-75": {
+          "result": "språklig",
+          "description": "Språklig. Misslan har lärt sig vikten av att kunna tala flera språk. RP har dessutom en ovanlig fallenhet för att lära sig just språk så alla språkfärdigheter är Lättlärda. RP får också 2T6+2 enheter att spendera på valfria språkfärdigheter."
+        },
+        "76-77": {
+          "result": "storfiskare",
+          "description": "Storfiskare. Misslan älskar att fiska och försöker göra det så ofta det är möjligt. Vartän RP går har den alltid med sig krokar, rev, och kniv för att skära till ett spö eller rensa fisk med. Om någon nämner något om ett fiskevatten RP inte prövat förut vill RP så fort som möjligt ge sig dit för att pröva lyckan. RP får 1T6+3 enheter att spendera på färdigheten Fiske och 2 enheter att spendera på färdigheten Matlagning, varav den ena enheten måste spenderas på specialiseringen “Fiskrätter”."
+        },
+        "78": {
+          "result": "storögd",
+          "description": "Storögd. Misslan har större ögon än de flesta. Vilket både är vackert och praktiskt. RP får höja SYN och PER med +1 vardera."
+        },
+        "79": {
+          "result": "stygg",
+          "description": "Stygg. Misslan har alltid tyckt om att vara lite stygg och utföra hyss och bus som är mer elaka än roliga. Som barn fick RP ofta stryk och husarrest för sina elaka påhitt tills hen lovade att vara snäll. Och även om RP lovade det flera gånger så har den fortfarande inte riktigt blivit det, även om hen numera oftast riktar sina elakheter mot de som förtjänar det. RP får sänka Heder med -2 och höja VIL och TÅL med +1 vardera."
+        },
+        "80-81": {
+          "result": "svampslukare",
+          "description": "Svampslukare. Misslan älskar att äta svamp, råa, stekta, flamberade, grillade, kokta etc. RP har råkat äta en del giftiga svampar vilket har gett RP lite högre tålighet mot gifter, så RP får alltid -ob2T6 på alla TÅL-slag mot matgifter. RP får 2T6+2 enheter att dela upp på färdigheterna Växtlära och Matlagning, 2 av enheterna måste användas för att specialisera färdigheterna mot “Svampar”."
+        },
+        "82-83": {
+          "result": "söt",
+          "description": "Söt. misslan är oerhört söt och gullig. Rosiga kinder, tindrande ögon, vackert hår, felfritt leende eller liknande. Så gott som alla som ser RP blir betagna av hur söt den är. Andra misslor vill ofta dansa med den på fester. Troll vill gärna ha den som efterrätt till sina barn. RP får höja PER med +2"
+        },
+        "84": {
+          "result": "taktlös",
+          "description": "Taktlös. Misslan säger nästan alltid fel saker vid fel tillfälle och verkar inte kunna lära sig hur man uppför sig. Om RP pratar illa om någon är det oftast med den personen i rummet, om någon skämtar så skrattar RP på fel tillfälle, om någon artigt nickar åt RP i en folksamling tror RP att det är en sexuell invit. RPs familj tycker att RP är så pinsam att de försöker hålla hen borta från bröllop, begravningar och liknande eftersom alla vet att RP kommer skämma ut sig. RP har istället fokuserat på att bli duktig på något annat ämne än de sociala. RP får öka ett valfritt attribut (utom PER) med +1 och får 1T6+2 enheter att spendera på valfria färdigheter (utom sociala färdigheter eller Stridsvana)"
+        },
+        "85": {
+          "result": "tjockis",
+          "description": "Tjockis. Misslans största passion här i livet är fet och god mat, godsaker och att lata sig. RP är lätt att lura eller manipulera om man erbjuder den något gott. Om någon erbjuder RP mat, godsaker eller liknande och spelaren inte vill att RP ska ta emot gåvan måste RP klara ob4T6 mot VIL för att motstå frestelsen. När det senare blir dags att fastställa RPs kroppsbyggnad får du ett resultat högre än det som ges av tabellen. När vikten räknas ut får RP 1T6+10 extra kilon"
+        },
+        "86": {
+          "result": "tjuvig",
+          "description": "Tjuvig. När misslan var barn var den inte sen med att börja palla äpplen från sina grannar. Sen började den stjäla pajer och godsaker från grannar och släktingar och numera stjäl den nästan allt den kan tänkas behöva från någon annan. RP har också lärt sig att dyrka lås eftersom de mest värdefulla skatterna normalt finns gömda bakom sådana. RP får 2T6+2 enheter att spendera på färdigheterna Fingerfärdighet och Låsdyrkning"
+        },
+        "87": {
+          "result": "tokrolig",
+          "description": "Tokrolig. Misslan har lite galen humor och tycker om att dela med sig av denna i form av roliga historier och skämt. RP kan fler roliga historier än den kan räkna till, alltifrån sedliga historier till såpass snuskiga fånigheter att andra misslor blir högröda i ansiktet och knappt vågar titta någon i ögonen efter att ha hört dom. RP är bra på att berätta historierna ocjså. RP får 1T6+3 enheter att spendera på färdigheten Berättarkonst och när RP försöker berätta en rolig eller snuskig historia får den -ob1T6 på slaget."
+        },
+        "88-89": {
+          "result": "trallare",
+          "description": "Trallare. Misslan sjunger ofta, länge och gärna och har dessutom en mycket vacker röst. RP sjunger nästan alltid, när den arbetar med något, när den är ute och går eller närsomhelst annars då det inte vore helt dumdristigt att brista ut i sång (om man smyger efter ett bytesdjur på en jakt eller liknande) RP får 2T6+2 enheter att spendera på färdigheten Sjunga och färdigheten Sjunga blir också Lättlärd."
+        },
+        "90": {
+          "result": "träffsäker",
+          "description": "Träffsäker. Misslan har ett ovanligt bra ögonmått och träffar nästan alltid vad den siktar på. RP får 2T6+2 enheter att spendera på färdigheterna Kasta och Slunga och dessa färdigheter blir också Lättlärda."
+        },
+        "91": {
+          "result": "trög",
+          "description": "Trög. Misslan är inte den skarpaste kniven i lådan. Hissen går inte ända upp. Hen har inte alla hästar hemma. RP har väldigt svårt att lära sig teoretiska färdigheter. Skämt som andra fattar direkt kan RP stå och grubbla över långt efter att alla andra slutat skratta. RP får sänka BIL med -3 och PSY med -2 och alla kunskapsfärdigheter blir Svårlärda. RP bestämde sig för länge sedan att hen skulle bli duktig på något annat istället. RP får välja fyra andra valfria färdigheter som blir Lättlärda (inte Stridsvana, inga kunskapsfärdigheter och max 1 vapenfärdighet). Dessutom får RP 3T6+4 enheter att spendera på dessa 4 färdigheter."
+        },
+        "92": {
+          "result": "trött",
+          "description": "Trött. Misslan har problem med sina energinivåer vilket leder till RP så gott som alltid är trött. RP kan somna lite vartsomhelst om den får någon minut att koppla av och dessutom är den svårväckt om man inte skakar om den ordentligt. Alla stillasittande arbeten t.ex att vara vakt är extremt svårt för RP att utföra. Svårigheten att hålla sig vaken ökar alltid med +ob2T6. När RP sover återhämtas Långtidsutmattning och Smärta dubbelt så fort som för vanligt folk. RPs drömmar har dessutom gett den ett intresse för det mystiska och RP har skaffat sig 1T6+2 enheter att spendera på Mystiska eller Alstrafärdigheter."
+        },
+        "93": {
+          "result": "utböling",
+          "description": "Utböling. Misslan har av någon anledning aldrig känt att den passar in eller trivs tillsammans med andra misslor. Misslan har heller aldrig märkt av att långlingar skulle vara så farliga eller konstiga som andra misslor påstår. RP har lämnat misslebyn bakom sig, eller planerar att göra det för att istället försöka leva bland långlingarna. RP får 2T6+2 enheter att spendera på Kulturkännedom och 1 valfri språkfärdighet."
+        },
+        "94-95": {
+          "result": "vattendjur",
+          "description": "Vattendjur. Misslan älskar att bada och simma. Om RP går förbi en vattensamling och vädret är någorlunda hyfsat kommer RP vilja kasta av sig så mycket kläder sedlighdeten tillåter och hoppa i. Om den inte fått simma utomhus på länge drar den fram en stor balja hemma eller ute på gårdenm som den fyller med vatten och väldiftande örter eller oljor och myser loss i den. RP får 1T6+3 enheter att spendera på färdigheten Simma."
+        },
+        "96": {
+          "result": "vilsen",
+          "description": "Vilsen. Misslan har rikets sämsta lokalsinne. RP försvinner ofta när den är på nya platser. RP vågar sällan ge sig ut på resor själv eftersom den vet att den kommer komma fel. RPs reskamrater år försöka hålla RP under uppsikt så mycket det går och i värsta faöö binda fast ett rep i RPs bälte eller liknande. Varje gång RP befinner sig på en ny eller obekant plats måste den klara ob4T6 mot PSY för att inte omedelbart virra bort sig. RP har dock lärt sig att ta hand om sig själv och får 1T6+3 enheter att spendera på färdigheten Överlevnad. RP får dessutom en extra kontakt som den träffat någon gång när den var ute och desperat försökte lista ut vart den var."
+        },
+        "97-98": {
+          "result": "vårdare",
+          "description": "Vårdare. Misslan ser det som sitt kall att ta hand om de som har det svårt och hjälpa de som är skadade. När RP ser någon som skadats hjlper den gärna till och lindar på förband, spjälkar ben, suger gift ur sår eller vad som nu kan tänkas behövas. RP får 1t6+3 enheter att spendera på färdigheten Läkekonst och får höja Generositet med +2."
+        },
+        "99-100": {
+          "result": "äggslukare",
+          "description": "Äggslukare. Misslan älskar att äta ägg, kokta, stekta, råa eller tillagade på något annat sätt. RP klättrar gärna upp i träd eller andra ställen som fåglar bygger bon i och plundrar bona på ägg. RP får 1T6+2 enheter att spendera på färdigheten Klättra. Dessutom 1T6+2 enheter att spendera på färdigheterna Matlagning, som måste speciasliseras mot “äggrätter” och Djurlära, som måste specialiseras mot “Fåglar”."
+        }
+      }
+    }
+  }
+}

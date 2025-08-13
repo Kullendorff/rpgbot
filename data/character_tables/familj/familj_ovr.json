@@ -1,0 +1,148 @@
+{
+  "familjetabeller": {
+    "övriga": {
+      "titel": "Familjetabell för övriga",
+      "dice": "1d100",
+      "ranges": {
+        "1-25": {
+          "result": "normal_family",
+          "description": "Familjen är inte så speciell"
+        },
+        "26-29": {
+          "result": "adopted",
+          "description": "Rollpersonen är inte född inom sin familj utan är adopterad.",
+          "has_subtable": true,
+          "subtable": {
+            "dice": "1d100",
+            "ranges": {
+              "1-20": {
+                "result": "biological_parents_dead_sold",
+                "description": "Rollpersonens biologiska föräldrar är döda och rollpersonen såldes billigt till den nuvarande familjen"
+              },
+              "21-50": {
+                "result": "family_knew_biological_parents",
+                "description": "Rollpersonens nuvarande familj kände de biologiska föräldrarna. När dessa dog tog den nuvarande familjen hand om rollpersonen"
+              },
+              "51-70": {
+                "result": "kidnapped_by_current_family",
+                "description": "Den nuvarande familjen rövade bort rollpersonen när den var liten. Rollpersonen kommer antagligen aldrig få veta vem dens biologiska familj är."
+              },
+              "71-100": {
+                "result": "found_abandoned",
+                "description": "Rollpersonen hittades övergiven i en liten korg utanför sin nuvarande familjs hem. Enda ledtråden till rollpersonens biologiska familj är ett vackert tygstycke eller liknande."
+              }
+            }
+          }
+        },
+        "30-32": {
+          "result": "blood_feud",
+          "description": "Rollpersonens familj ligger i en djupt allvarlig blodsfejd med en annan familj. Beroende på familjens sociala ställning kan det handla allt från slagsmål på logdansen till en vendetta där lönnmord och hämndaktioner blivit en del av vardagen"
+        },
+        "33-34": {
+          "result": "missing_relative",
+          "description": "Rollpersonen har ett syskon (eller kusin, eller annan släkting) som varit försvunnen under en lång tid. Det ryktas att syskonet sitter oskyldigt fängslad i ett främmande land. Alla i familjen sörjer det förlorade syskonet djupt och det skulle bli en enorm glädjefest om denne återvände."
+        },
+        "35-37": {
+          "result": "deeply_religious",
+          "description": "Alla i familjen är djupt religiösa. Att inte lyda religionens ord och lagar ses som kätteri. Spelaren får välja om RP delar denna djupa tro eller om RP kanske brutit med familjen pga detta."
+        },
+        "38": {
+          "result": "inherited_task",
+          "description": "Familjen har en viktig uppgift som gått i arv under en mycket lång tid. Det kan vara allt från att se efter baronens ägor, vårda de sjuka eller vakta något slags föremål som lämnats i deras vård. Det förväntas att RP ska ta över denna uppgift när dennes föräldrar (eller syskon, eller andra släktingar) inte längre klarar av det. Spelaren och spelledaren får komma överens om exakt vilken typ av uppgift det är."
+        },
+        "39-40": {
+          "result": "black_sheep",
+          "description": "RP är familjens svarta får. RP är inte lika högt ansedd som resten av familjen. Som det svarta fåret blir allt rollpersonen gör på något sätt fel i sin familjs ögon. Rollpersonen passar inte in med sina släktingar"
+        },
+        "41-45": {
+          "result": "very_poor",
+          "description": "Rollpersonens familj är mycket fattig. Ingen i familjen har särskilt mycket pengar och så fort någon kommer över lite slantar går dessa oftast åt till att betala skulder. Rollpersonen kommer ha fullt upp med att hjälpa sin fattiga familj."
+        },
+        "46": {
+          "result": "half_blood",
+          "description": "Rollpersonens familj är halvblod till något annat folk i Mundana, ett folk som är ovanligt i trakten där familjen bor, och som får alla i familjen att ha något utseende som står ut från mängden i trakten där de bor. Familjen får stå ut med en del fördomar från sina grannar."
+        },
+        "47-48": {
+          "result": "hated_by_family",
+          "description": "Familjen hatar rollpersonen av någon anledning. Fadern har hotat att mörda rollpersonen, modern vägrar tala med den, systrarna förbannar rollpersonen, bröderna har ofta gett rollpersonen stryk."
+        },
+        "49-50": {
+          "result": "secret_society",
+          "description": "Rollpersonens föräldrar och kanske något syskon tillhör ett hemligt sällskap."
+        },
+        "51-52": {
+          "result": "disliked_by_parents_liked_by_siblings",
+          "description": "Rollpersonen är illa omtyckt av föräldrarna, men syskonen tycker om rollpersonen."
+        },
+        "53": {
+          "result": "two_professions",
+          "description": "RPs familj har två huvudnäringar. Spelaren får slå två gånger på tabellen och rollpersonen får fördelarna från bägge näringarna."
+        },
+        "54-55": {
+          "result": "immigrant_parents",
+          "description": "RPs föräldrar är invandrare från ett annat land."
+        },
+        "56-57": {
+          "result": "criminal_family",
+          "description": "RPs familj är kriminell. En eller flera av rollpersonens släktingar sitter eller har suttit i fängelse."
+        },
+        "58": {
+          "result": "unknown_past",
+          "description": "Rollpersonen har ett okänt förflutet."
+        },
+        "59-61": {
+          "result": "hated_by_some_liked_by_others",
+          "description": "RP är hatad av en eller flera familjemedlemmar, men ganska väl omtyckt av de övriga."
+        },
+        "62-63": {
+          "result": "famous_family_member",
+          "description": "Familjen är mycket omtalad pga en familjemedlem är väldigt känd."
+        },
+        "64": {
+          "result": "cursed_family",
+          "description": "Det sägs att familjen har en förbannelse kastad över sig."
+        },
+        "65-69": {
+          "result": "friends_with_other_species",
+          "description": "Rollpersonens familj har av någon anledning mycket lätt att bli vänner med individer från en annan art."
+        },
+        "70-74": {
+          "result": "very_rich",
+          "description": "Familjen är mycket rik."
+        },
+        "75-78": {
+          "result": "scandalous_family",
+          "description": "Familjen är skandalomsusad."
+        },
+        "79-83": {
+          "result": "large_debts",
+          "description": "Familjen har stora skulder."
+        },
+        "84-87": {
+          "result": "very_odd",
+          "description": "Familjen är mycket udda på något sätt."
+        },
+        "88-91": {
+          "result": "widespread_kin",
+          "description": "Släkten är utbredd över ett stort område."
+        },
+        "92-93": {
+          "result": "parents_favorite",
+          "description": "RPs föräldrar älskar RP så mycket att de inte har tid att tänka på RPs syskon."
+        },
+        "94-95": {
+          "result": "family_favorite",
+          "description": "RPs hela familj älskar RP så mycket att inte mycket annat är viktigt för dom."
+        },
+        "96-99": {
+          "result": "famous_adventurers",
+          "description": "Flera ur rollpersonens familj är eller har varit berömda äventyrare."
+        },
+        "100": {
+          "result": "roll_twice",
+          "description": "Slå två gånger till på denna tabell."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "ättetabeller": {
+    "abhixia": {
+      "titel": "Ättetabell: Abhixia",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Abhixia kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "den_stora_vandringen",
+          "description": "Den stora vandringen. Rollpersonen följer med medlemmar från ätten när de beger sig ut på 'Den stora vandringen'. Rollpersonen har en egen stor luxuös vagn inredd med sovslaf, skåp, fällar och en kamin. Dessutom har rollpersonen två (2) extra kontakter runtom riket."
+        },
+        "2": {
+          "result": "gierasherna_medlem",
+          "description": "Gierasherna. Rollpersonen är en medlem av Gierasherna och strävar efter fysisk fulländning. Experimenten har lämnat spår på rollpersonens kropp, huden har blivit svagt genomskinlig på sina ställen, blodådrorna allt tydligare och rollpersonen omges av en unken lukt om hen inte döljer den med diverse parfymer och oljor. Än så länge går de fysiska förändringarna att dölja så länge som det inte blir allt för noga skärskådningar av rollpersonen. Rollpersonen får TÅL+3 och STY+2."
+        },
+        "3": {
+          "result": "hämnare",
+          "description": "Hämnare. Rollpersonen är jagad av en person från folket som hävdar att rollpersonen använt denne till medicinska och alkemiska experiment - om det är så eller att personen endast tagit miste mellan rollpersonen och någon annan från ätten Abhixia är upp till spelaren. Hämnaren är kraftigt förvriden men har blivit starkare och tåligare och har en skrämmande förmåga att komma undan. Han väntar på rätt tillfälle för att komma åt rollpersonen och antingen tortera honom till döds eller bara döda honom rakt av."
+        },
+        "4": {
+          "result": "kongelerade_filament",
+          "description": "Kongelerade filament. Rollpersonen har Ob2T6 kongelerade filament av valfri typ som kan användas av en magikunnig person eller fungera som valuta i byteshandel."
+        },
+        "5": {
+          "result": "magiskt_föremål",
+          "description": "Magiskt föremål. Rollpersonen äger ett magiskt föremål tillverkat genom alkemi. Föremålet är gjort för att passa rollpersonen. Spelaren samt spelledaren får diskutera fram exakt vilken typ av föremål det är."
+        },
+        "6": {
+          "result": "mutad_av_alean",
+          "description": "Mutad av Alean. När Alean mutade sig till platsen som magikrat så var rollpersonens familj (eller rollpersonen) en av de som blev skänkt alviska gåvor. Exakt vad gåvan är kan variera men den har alviskt ursprung och kan vara allt från ett vapen, ett värdefullt smycke till en formelsamling"
+        },
+        "7": {
+          "result": "skadad_i_laboratoriet",
+          "description": "Skadad i laboratoriet. Rollpersonen har blivit skadad i ett laboratorium då ett alkemiskt experiment gick fel. Även om rollpersonen inte sysslar med alkemi så kan han ha befunnit sig i ett av ättens laboratorium. Skadan kan vara utav en brand, syra som sprutade eller en giftig gas som spred sig. Rollpersonens kropp har blivit vanställd på ett område, slå ett slag på träfftabellen för att se vart. Dessutom så har inte Rollpersonens kropp återhämtat sig helt från det misslyckade experimentet och har TÅL–2."
+        },
+        "8": {
+          "result": "torn",
+          "description": "Torn. Rollpersonen har fått ett mindre fyrkantigt stentorn i sin ägo. Torntypen är vanlig hos ätten Abhixia och är konstruerad utav en av deras historiskt mest kända arkitekter. Exakt var i riket tornet är beläget är upp till spelledaren."
+        },
+        "9": {
+          "result": "vholsaka_mineralen",
+          "description": "Vholsaka–mineralen. Rollpersonen har kommit över en större mängd av den gulbruna, sträva, mineralen och kan antingen använda den till experiment, studera den eller sälja den för stora pengar (den är minst värd Ob3T6x1000 silver om den skulle säljas till Gierasherna). Om rollpersonen har mineralen i sin råa form och arbetar med den utan skyddshandskar kan han komma att få hallucinationer och mutationer."
+        },
+        "10": {
+          "result": "växtlära",
+          "description": "Växtlära. Rollpersonen har en stor samling gifter och droger till sitt förfogande (Ob3T6 doser). Han får dessutom 1T6+2 enheter att höja färdigheter Växtlära. Spelaren bör få välja relativt fritt men spelledaren har självklart vetorätt om det är något som inte passar."
+        }
+      }
+    },
+    "arginakus": {
+      "titel": "Ättetabell: Arginakus",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Arginakus kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "anklagad_för_stöld",
+          "description": "Anklagad för stöld. Rollpersonen är anklagad för att ha stulit värdefulla skrifter från en lektor inom ätten – inga bevis har gått att finna men ryktet går och få litar nu på rollpersonen. Om rollpersonen stal skrifterna eller om hen blev ditsatt är upp till spelaren och spelledaren. Rollpersonens rykte ökar med två (+2) specialiserat mot 'tjuv'"
+        },
+        "2": {
+          "result": "besökt_högmagisk_plats",
+          "description": "Besökt högmagisk plats. Rollpersonen besökte en högmagisk plats men något gick fel. De magiska urladdningarna slet i rollpersonens själ och filamenten slingrade sig runt henom. Rollpersonen lider nu av en 'stor' verklighetsabnorm förändring av en aspekt som spelledaren väljer. Se sidan magikapitlet för information om de verklighetsabnorma förändringarna."
+        },
+        "3": {
+          "result": "extra_studietid",
+          "description": "Extra studietid. Rollpersonen har fått tid att studera på en av ättens skolor eller under en av deras skickligaste Lektorer. Placera 1T6+4 enheter på valfria Kunskapsfärdigheter eller Mystiska färdigheter."
+        },
+        "4": {
+          "result": "kalligrafi",
+          "description": "Kalligrafi. Rollpersonen har tränat länge under de kalligrafiska mästarna för att bemästra skönskriftens nobla konst. Han är nu kunnig att skapa vackra slingrande anfanger, klassiska sigill och symboler som kan dölja många undermeningar. Rollpersonerna har fortfarande långt kvar till mästarnas klass men har en god grund att stå på. Rollpersonen får 1T6+4 enheter att placera på Hantverksfärdigheten: Kalligrafi"
+        },
+        "5": {
+          "result": "komplott_mot_magikraten",
+          "description": "Komplott mot magikraten. Rollpersonen har blivit medveten om en mindre grupp personer inom ätten som forskar i magikrat Jualla Bizar Alayas förflutna och giftmordet mot hennes familj för mer än 50 år sedan. Dessa menar att något inte står rätt till och att den familj som var anklagad för dådet var oskyldig. Rollpersonen har inga bevis mot personerna om han skulle vilja peka ut dem för magikraten men inom ‘ ätten vet man att Jualla blir ytterst upprörd när någon börjar rota i hennes förflutna."
+        },
+        "6": {
+          "result": "raunslätterna",
+          "description": "Raunslätterna. Rollpersonen har begivit sig på en lång resa till de nordliga raunslätterna och där studerat gamla coloniska lämningar och även haft samröre med det raunländska ryttarfolket. Rollpersonen får 1T6+3 enheter att placera på Kulturkännedom och Geografi. Eventuellt kan spelledaren låta rollpersonen ha kommit över föremål från den raunländska kulturen"
+        },
+        "7": {
+          "result": "resa_in_i_skugglandet",
+          "description": "Resa in i skugglandet. Rollpersonen har deltagit på en av ättens expeditioner in i det gäckande skugglandet. Rollpersonen har nu bättre insikt i hur skugglandet fungerar än de flesta andra och kan i vildmarken ana när gränserna mellan de båda världarna är svaga."
+        },
+        "8": {
+          "result": "språkforskare",
+          "description": "Språkforskare. Rollpersonen har studerat ett främmande språk som finns utanför Thalamurs gränser, exempelvis Sabriska eller Ashariska. Rollpersonen får 1T6+3 enheter att höja 1 skriftfärdighet och 1 språkfärdighet."
+        },
+        "9": {
+          "result": "trollsmide",
+          "description": "Trollsmide. Rollpersonen har i sin ägo ett föremål som är smitt av de numer utdöda bergstrollen (utdöda i alla fall i Thalamur). Smidet är vackert och övernaturligt till sitt utseende och uppenbart inte mänskligt. Exakt vilken typ av föremål det rör sig om är upp till spelaren och spelledaren men det kan vara alltifrån ett spådomsobjekt såsom en spegel till ett vapen eller en rustning. Ett vapen av bergstrollsmide gör +Ob1T6 i skada och har Bryt x1,5. En rustning smidd av bergstroll skyddar +2 på både Hugg, Kross och Stick."
+        },
+        "10": {
+          "result": "ärorik_ansiktsmask",
+          "description": "Ärorik ansiktsmask. Rollpersonen har fått ärva en vacker ansiktsmask av brons vilken traditionellt ättens medlemmar bär på sig när de rör sig i offentliga sammanhang. Masken är ett konststycke i sig och har många utsökta detaljer och eventuellt även inlägg av ädelmetaller. Exakt hur masken är formad är upp till spelaren men den är mycket karaktäristisk och dyrbar."
+        }
+      }
+    },
+    "cartika": {
+      "titel": "Ättetabell: Cartika",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Cartika kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "artefakt_från_danarth",
+          "description": "Artefakt från Danarth. Rollpersonen har kommit över en urgammal artefakt från Danarths tid. Exakt vad det rör sig om är upp till Spelaren och Spelledaren men det är ett föremål av historisk betydelse om även det kanske inte är så värdefullt i sig. Det kan vara allt från en offerkalk, en silvermedaljong, ett underligt vapen eller stentavlor med danarthisk skrift."
+        },
+        "2": {
+          "result": "byråkratisk_skicklighet",
+          "description": "Byråkratisk skicklighet. Rollpersonen följer ättens stolta historia och har studerat byråkratin och rikets lagar. Rollpersonen får 1T6+4 enheter att fördela på Bibliotekkunskap, Bokhållning och Lagkunskap."
+        },
+        "3": {
+          "result": "fruktan",
+          "description": "Fruktan. Antingen är det Rollpersonens handlingar eller så är det ett rykte som spridits men vanligt folk fruktar henom. Det berättas sagor om att du äter barn, skändar gravar, har samröre med demoner och dödar urskillningslöst. Öka rykte med +2 med specialisering mot 'Fruktad'. I vissa sociala situationer när hen har att göra med folket får rollpersonen en nivå svårare (+Ob1T6) på alla slag. När det är situationer där hen hotar, skrämmer eller beordrar folket är svårighetsgraden en nivå enklare (–Ob1T6)."
+        },
+        "4": {
+          "result": "kannibal",
+          "description": "Kannibal. Rollpersonen har studerat gamla danarthiska skrifter och läst om den rituella kannibalismen som skedde och gav styrka och kunskap till dem som brukade den. Hen blev mer och mer fascinerad och till slut kunde hen inte stå emot utan började praktisera sitt mörka värv. Får rollpersonen en chans att äta människokött utan att bli påkommen så måste hen slå ett normalt slag (Ob3T6) mot VIL för att motstå sina lustar (om spelaren vill). Har det gått längre än en månads tid sedan hen åt människokött senast är slaget mycket svårt (Ob5T6)."
+        },
+        "5": {
+          "result": "kontakt_inom_rakhori",
+          "description": "Kontakt inom Rakhori. Rollpersonen har en kontakt inom Rakhori som är skyldig rollpersonen en tjänst. Kontakten är en Arbach och verkar öppet i det thalaskiska samhället. Hen tar dock gärna emot tips från rollpersonen om denna känner till lagbrytare av olika slag och dessutom kan hen ordna fram diverse information så länge som det sköts på ett bra sätt."
+        },
+        "6": {
+          "result": "militär_tradition",
+          "description": "Militär tradition. Rollpersonens familj bär på en stolt militär tradition med många kända befälhavare som har skyddat riket mot inkräktare. Även om kunskap värderas som det högsta så är det även viktigt att kunna använda militär styrka för att bevara makten. Rollpersonen har tränats i taktik och strategi eller själv forskat sig till det i gamla böcker. Använd 1T6+3 enheter för att höja Krigsföring och Krigsmaskiner."
+        },
+        "7": {
+          "result": "rikt_giftemål",
+          "description": "Rikt giftemål. Rollpersonen är numera gift och hade turen att få en maka eller make med stora ekonomiska tillgångar. Rollpersonen har Ob2T6x1000 silver extra från start."
+        },
+        "8": {
+          "result": "svurit_lydnad_sanguis",
+          "description": "Svurit lydnad. Rollpersonen har mött Sanguis thal Qatada och svurit honom sin lydnad. Magikraten har med sin skickliga retorik förklarat för Rollpersonen vad som behövs för att göra Thalamur till ett starkt och mäktigt rike och övertygelsen finns nu i rollpersonens hjärta. Lojaliteten till magikrat Sanguis thal Qatada slås med 1T6+12."
+        },
+        "9": {
+          "result": "symboler",
+          "description": "Symboler. Rollpersonen följer den gamla traditionen och ristar in symboler i sin kropp för att uthärda smärtan och stärka sitt sinne. Rollpersonen är antingen väldigt fanatiskt, mentalt disciplinerad eller har börjat gilla känslan, för hela kroppen, samt ansiktet, är nu täckt med dessa inristningar, eventuellt ifyllda med svart kalisrot. Rollpersonen får en extra kolumn Smärta och +1 i VIL på grund av sina makabra mentala övningar"
+        },
+        "10": {
+          "result": "våldsam_konflikt_abhixia",
+          "description": "Våldsam konflikt. Rollpersonen har fått fiender i ätten Abhixia och blev utsatt för ett lönnmordförsök, det misslyckades, men en av rollpersonens vänner eller tjänare avled istället. Exakt vilka det är som gjort detta inom Abhixia är upp till Spelledaren och även om rollpersonen inte har några bevis så har hen sina aningar."
+        }
+      }
+    },
+    "harim": {
+      "titel": "Ättetabell: Harim",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Harim kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "blodtörst",
+          "description": "Blodtörst. Under strid så sköljer en våg av blodtörst över rollpersonen och hen blir uppfylld utav stridens intensitet och raseri. Detta gör att hen har mycket svårt att hejda sin hand från att döda en motståndare om hen har chansen. Vid de tillfällen då rollpersonen vill hejda sig från att släcka en motståndares liv så måste hen lyckas med ett svårt slag (Ob4T6) mot VIL – om inte så anfaller hen för att döda. Denna blodiga vildsinthet är något av ett släktdrag inom ätten Harim och betydligt mer vanlig än vad man kan tro."
+        },
+        "2": {
+          "result": "expedition_till_colonan",
+          "description": "Expedition till Colonan. Rollpersonen har deltagit i en expedition in i Colonan för att återhämta gamla ättklenoder, gräva upp skatter som inte hanns att ta med när provinsen gjorde uppror, kartlägga bergspass, skövla, bränna, plundra, ta fångar eller liknande. Under denna expedition blev rollpersonen fångad och torterad av coloniska soldater. Rollpersonen lyckades dock fly men hyser nu ett brinnande hat gentemot Colonans befolkning. Höj Aggression med två (+2). På grund av den grava tortyren så sänks Rollpersonens TÅL med ett (–1)."
+        },
+        "3": {
+          "result": "livgarde",
+          "description": "Livgarde. Rollpersonen har en samling på 1T6+1 soldater som lyder under ätten Harim som sitt personliga livgarde. Rollpersonen behöver naturligtvis inte alltid resa omkring med sitt livgarde men kan kalla på dem om det behövs. Exakt varför rollpersonen fått ett livgarde är upp till spelaren och spelledaren. Kanske är det någon äldre släkting som fruktar för rollpersonens liv eller så har rollpersonen lyckats förhandla till sig ett. Personerna som ingår i livgardet och deras relation till rollpersonen och varandra är upp till spelledaren och spelaren att besluta om."
+        },
+        "4": {
+          "result": "magikratens_tal",
+          "description": "Magikratens tal. Magikrat Reubin Xirhamir Jesbin har under ett ättemöte hållit ett brinnande tal om ätten Harim och dess forna stolthet. Detta tal berörde rollpersonen djupt och rollpersonens Lojalitet gentemot ätten ökas med två (+2)."
+        },
+        "5": {
+          "result": "rasism",
+          "description": "Rasism. Rollpersonen har växt upp i en mycket rasistisk miljö och känner ett brinnande hat och förakt gentemot alla folk som inte är neromenzer (dvs thalaskiska medborgare), och i synnerhet gentemot perenner (folket utanför ätterna i Thalamur) och dvärgar. I sociala sammanhang då rollpersonen tvingas att umgås med individer av dessa folkslag så har hen en nivå svårare (+Ob1T6) på de flesta sociala färdigheter. Denna händelse fungerar endast om rollpersonen är av det neromenziska folkslaget – om inte så får hen slå om."
+        },
+        "6": {
+          "result": "seianhäst",
+          "description": "Seianhäst. Rollpersonerna har lyckats tämja en av de dödliga seianhästarna (se monsterkapitlet) eller på annat sätt kommit över den. Som riddjur är hästen mycket effektiv då den kan ta sig fram i det kuperade thalaskiska landskapet på områden där vanliga hästar inte kommer fram eller måste resa ytterst långsamt. Dock så är den ett vildsint rovdjur och är svår att hålla med andra hästar då den ser dem som bytesdjur. Höj dessutom Djurträning med 1T6+2 enheter."
+        },
+        "7": {
+          "result": "slavhandlare",
+          "description": "Slavhandlare. Rollpersonen har kontakter med cirefaliska slavhandlare och har tjänat pengar på att sälja krigsfångar, perenner och annat avskum. Rollpersonerna börjar spelet med Ob6T6x100 silver extra och kan även ta hjälp av sina cirefaliska kontakter om det gäller transporter över havet eller liknande."
+        },
+        "8": {
+          "result": "stridsvana",
+          "description": "Stridsvana. Rollpersonen har varit med om en del konflikter och stridigheter och får därför 1T6+2 enheter att höja Stridsvana."
+        },
+        "9": {
+          "result": "uppror",
+          "description": "Uppror. Rollpersonen har blivit utsänd av sin familj att stävja uppror med hjälp av en mindre trupp av ättens soldater. Rollpersonen får 1T6+4 enheter att fördela på Krigsföring och Ledarskap"
+        },
+        "10": {
+          "result": "vapenkonst",
+          "description": "Vapenkonst. Rollpersonen har blivit upplärd utav en av de skickligaste kämparna inom ätten och tränat på att bruka ett vapen med största möjliga effektivitet. Rollpersonen får 1T6+3 enheter att höja valfri vapenfärdighet, eller stridskonst. Dessutom får hen ett ättevapen av kvalitetsstål specialsmitt just för henom."
+        }
+      }
+    },
+    "kobinku": {
+      "titel": "Ättetabell: Kobinku",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Kobinku kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "colonisk_bosättning",
+          "description": "Colonisk bosättning. Rollpersonen har varit på en expedition högt upp i det Ikamriska bergsmassivet och där undersökt en gammal colonisk bosättning. Rollpersonen får 1T6+3 enheter att höja färdigheten Historia."
+        },
+        "2": {
+          "result": "fiende_inom_ätten",
+          "description": "Fiende inom ätten. Rollpersonen har skaffat sig en ärkefiende inom ätten vilken gör allt för att försvåra och sabotera för rollpersonen. Fienden attackerar inte rollpersonen direkt men om hen skulle få chansen att se till så att rollpersonen försvinner skulle hen inte tveka att ta den. Exakt hur fiendskapen uppstod är upp till spelaren och spelledaren att diskutera fram. Slå fram fiendens resurser med 1T6+12 och Spelledaren väljer även vilket sysselsättning fienden har"
+        },
+        "3": {
+          "result": "fruktad_släkting",
+          "description": "Fruktad släkting. Rollpersonen har en mycket fruktad släkting som är känd för att vara hänsynslös och livsfarlig. Släktingen tros ligga bakom ett flertal lönnmord och alla som ställt sig i släktingens väg har blivit kuvade, besegrade, förnedrade eller försvunnit. Rollpersonen jämställs ofta med släktingen och många fruktar för att gå emot henom. Däremot så har de svårt att lita på henom då de tror att hen när som helst kan vända kappan efter vinden. I sociala situationer när släktskapen är relevant får rollpersonen en nivå svårare (+Ob1T6) på alla slag mot sociala färdigheter. Situationer där hen hotar, skrämmer eller beordrar personer kan svårighetsgraden en nivå enklare (–Ob1T6). Om rollpersonen inte lever upp till detta rykte så kan modifikationerna komma att försvinna tillsammans med ryktet."
+        },
+        "4": {
+          "result": "gifttålig",
+          "description": "Gifttålig. Rollpersonen känner till de faror som finns i det thalaskiska maktspelet och vet även att förgiftning är ett vanligt sätt att slå ut sina motståndare. Rollpersonen har därför sedan unga år inmundigat olika typer av gift i små doser för att stärka kroppens försvar mot detta. Rollpersonen får därför en nivå enklare (–Ob1T6) på alla slag mot TÅL när det har med gift att göra"
+        },
+        "5": {
+          "result": "lönnmördare_kontakt",
+          "description": "Lönnmördare. Rollpersonen har kontakt med en fruktad och skicklig lönnmördare som släckt flera liv i familjens tjänst. Rollpersonen har hjälpt lönnmördaren vid ett flertal tillfällen och denne är nu skyldig rollpersonen en tjänst. Anteckna kontakten 'Lönnmördare' med 1T6+12 Resurser och relationen 'Skyldig tjänst'."
+        },
+        "6": {
+          "result": "mördare",
+          "description": "Mördare. Rollpersonen har av en eller annan anledning låtit mörda en Medborgare. Den exakta situationen som ledde fram till detta är upp till spelledaren och spelaren. Den mördade medborgarens familj och vänner försöker finna vem mördaren är och rollpersonen kan aldrig känna sig säker."
+        },
+        "7": {
+          "result": "ritualen",
+          "description": "Ritualen. Rollpersonen har deltagit i en av ritualerna i ättegodset i khorskogen och där studerat den svarta mystiken. Något gick dock fel under ritualen och rollpersonen blev överhöljd av syner och intryck vilket för evigt har förvridit hens sinne. Rollpersonen får en fobi, se Magikapitlet för inspiration. Dessutom får rollpersonen ibland syner och minnesglimtar när hen minst anar det vilket gör att hen kan ha svårt att skilja på verklighet och fantasi"
+        },
+        "8": {
+          "result": "spådom",
+          "description": "Spådom. Efter ett flertal spådomsriter har rollpersonen fått en begränsad insikt i tidens lopp vilket gjort att hen kan förutse saker precis innan de inträffar. Detta symboliseras med att rollpersonen får +3 i Tur. Dessutom får rollpersonen 1T6+2 enheter att höja färdigheten Spådom."
+        },
+        "9": {
+          "result": "styrd_av_fruktan",
+          "description": "Styrd av fruktan. Rollpersonen har fått utföra ett flertal uppgifter för ättens magikrat Matron Liselle. Detta kan röra sig om allt från att leverera meddelanden till att spionera på andra ätter eller medlemmar inom den egna ätten. Matron Liselle tolererar inte misslyckanden och rollpersonen vet att om hen skulle misslyckas med en av sina uppgifter så skulle hela hens politiska karriär kunna vara över eller att hens liv skulle kunna vara i fara. Den ständiga pressen har tärt på rollpersonens vilja vilket gör att VIL sänks med ett (–1). Däremot har rollpersonen en stor tjänst att utkräva för alla de uppgifter han utfört åt magikraten."
+        },
+        "10": {
+          "result": "utpressad_kontakt",
+          "description": "Utpressad kontakt. Rollpersonen har en hållhake på en person som har en hög nivå i den thalaskiska politiken. Detta kan vara en lektor eller kanske till och med en primas. Rollpersonen kan använda denna hållhake för att kräva denne på en stor tjänst. Exakt vilken hållhaken är får spelledaren och spelaren diskutera fram."
+        }
+      }
+    },
+    "myrdinor": {
+      "titel": "Ättetabell: Myrdinor",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Myrdinor kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "dresserad_ferfak",
+          "description": "Dresserad Ferfak. Rollpersonen har likt ättens magikrat lyckats dressera en Ferfak (se Monsterkapitlet) och har nu den likt ett troget husdjur. Ferfaken är relativt intelligent för att vara ett djur och kan fungera som 'vakthund' och liknande och eventuellt flyga med meddelanden till en särskild plats. Rollpersonen får 1T6+2 enheter att höja djurträning och ett av dessa poäng måste specialiseras mot 'Ferfak'"
+        },
+        "2": {
+          "result": "familjeliv",
+          "description": "Familjeliv. Rollpersonen har träffat och förälskat sig i en person av folket och har ett hemligt liv med denna. Rollpersonen besöker nattetid sin älskade och är borta i flera dagar i sträck för att spendera tid med denna i all enkelhet. Det är inte otroligt att de har barn ihop. Rollpersonen gör sitt bästa för att bevara denna hemlighet kanske för att det inte skulle accepteras av familjen, att personen av folket inte vill bli tagen som konkubin eller att rollpersonen vill hålla personen undan det politiska maktspelet."
+        },
+        "3": {
+          "result": "fördummad",
+          "description": "Fördummad. Rollpersonen har gjort ett dumt eller illa genomtänkt uttalande som dröjt sig kvar i folks sinnen och rollpersonen har fått ett rykte om sig att vara obildad och dum. Har rollpersonen fiender eller rivaler så använder de detta uttalande till sin fördel och rollpersonen kan ibland höra hur folk skrattar bakom ryggen på honom. Rollpersonen får höja sitt rykte med två (+2) och specialisera det mot 'obildad'"
+        },
+        "4": {
+          "result": "konflikt_med_harim",
+          "description": "Konflikt med Harim. Rollpersonen har hamnat i konflikt med medlemmar från ätten Harim och dessa har smutskastat och falskeligen anklagat rollpersonen för diverse brott. Personerna inom Harim vill av någon anledning röja rollpersonen ur vägen, exakt varför är upp till spelaren och spelledaren. Kanske är det en fråga om hämnd, svartsjuka eller ett gräl som blommat upp till stora proportioner. Rollpersonen kommer ha mycket svårare på allt socialt samspel med ätten Harim och kan räkna med en (+Ob1T6) till två (+Ob2T6) nivåer svårare i de flesta sociala situationer som berör ätten. Om konflikten skulle lösas på ett fredligt sätt skulle dessa modifikationer försvinna."
+        },
+        "5": {
+          "result": "lojalitet_thalamur",
+          "description": "Lojalitet. Rollpersonen har blivit indoktrinerad med en stark lojalitet gentemot det thalasiska riket och brinner för dess fortlevnad och styrka. Hen inser att alla som lever i Thalamur endast är en del i en ärorik historia och att individen måste offras för rikets fortlevnad. Rollpersonen kan bli ytterst provocerad om någon talar illa om riket och måste slå ett normalsvårt slag (Ob3T6) mot VIL för att inte tillrättavisa personen. Rollpersonens lojalitet slås med 1T6+12 och specialiseras mot 'Thalamur'. Att dö för att bevara de thalaskiska idealen är inget som rollpersonen fruktar."
+        },
+        "6": {
+          "result": "ceremoniell_rustning",
+          "description": "Rustning. Rollpersonen har blivit skänkt en ceremoniell stridsrustning i metall som är framställd utav en av ättens främsta rustningssmeder. Varför rustningen blivit skänkt till rollpersonen kan variera, kanske är det tacken för ett väl utfört uppdrag, en bröllopsgåva eller ett arv. Rustningens exakta utseende är upp till rollpersonen men den särskiljer sig med sina smakfulla utfyllningar och det är inte otroligt att den går i ättens färger (svart och silver). Förutom sitt smakfulla utseende har den samma värden som en vanlig rustning av samma typ."
+        },
+        "7": {
+          "result": "soldater",
+          "description": "Soldater. Rollpersonen känner en grupp på 1T6+4 soldater inom armén som ser upp till henom. Dessa tvekar inte att hjälpa rollpersonen om hen kallar på dem och kan fungera både som livgarde och slagstyrka. Hur det kommer sig att rollpersonen kom att få en sådan god kontakt med soldaterna är upp till spelaren och spelledaren."
+        },
+        "8": {
+          "result": "stridsvana",
+          "description": "Stridsvana. Rollpersonen har varit med om en konflikter och stridigheter och får därför 1T6+1 enheter att höja Stridsvana"
+        },
+        "9": {
+          "result": "taktiker",
+          "description": "Taktiker. Rollpersonen har fått studera de främsta generalerna och deras taktiska metoder samt studerat den nya armén och dess taktiska fördelar. Allt från regelrätta fältslag, logistik, belägringar och försvarsstrid ingår i dessa kunskaper och rolpersonen får 1T6+3 enheter att höja Krigsföring samt två (+2) enheter att placera på Krigsmaskiner."
+        },
+        "10": {
+          "result": "vapenkonst",
+          "description": "Vapenkonst. Rollpersonen har blivit upplärd utav en av de skickligaste kämparna inom ätten och tränat på att bruka ett vapen med största möjliga effektivitet. Rollpersonen får 1T6+3 enheter att höja valfri vapenfärdighet, eller stridskonst. Dessutom får han ett ättevapen av kvalitetsstål specialsmitt just för henom"
+        }
+      }
+    },
+    "sala": {
+      "titel": "Ättetabell: Sala",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Sala kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "attackerad",
+          "description": "Attackerad. Rollpersonen blev misstagen för att vara en av reformatorerna (om hen är en av reformatorerna så var attacken inget misstag) utav en okänd individ och denne attackerade rollpersonen. Attacken skedde oväntat och rollpersonen hann aldrig uppfatta vem som anföll henom, den som attackerade gjorde det dock med magi och detta tyder på att det var en medborgare. Rollpersonen överlevde dock men blev svårt skadad och har ännu inte återhämtat sig. TÅL och STY sänks med ett (–1) vardera. Rollpersonen har eventuellt en ledtråd till vem attackeraren kan vara, ett vittne, en minnesbild, ett föremål eller liknande."
+        },
+        "2": {
+          "result": "blodsforskare",
+          "description": "Blodsforskare. Rollpersonen har forskat i blodets hemligheter och den tro som finns inom ätten att blodet påverkar landet. Ett flertal experiment har gjorts för att visa på om en hatisk persons blod besudlar naturen och riket medan en lycklig person gör naturen lycklig och grönskande. Under en av dessa forskningsexpeditioner tömde rollpersonen en fånge på blod (en person som ändå skulle avrättas) men det visade sig sedan att hen var oskyldig. Förutom eventuella samvetskval som rollpersonen fått så har folket i rollpersonens hemtrakter fått höra historien och i deras munnar så beskrivs hen som sadistisk, hänsynslös och blodtörstig"
+        },
+        "3": {
+          "result": "gods",
+          "description": "Gods. Rollpersonen har en större byggnad till sitt förfogande antingen i en stad eller på landsbygden. Godset är mycket ståtligt och rollpersonen har mest troligt ärvt det efter någon rik släkting eller fått det som belöning."
+        },
+        "4": {
+          "result": "handelsman",
+          "description": "Handelsman. Rollpersonen har studerat handeln i riket och de metoder man gör för att finna lämpliga handelsvaror samt köpa och sälja dessa. Rollpersonen får placera 1T6+4 enheter på färdigheterna Handel, Räkning och Övertala"
+        },
+        "5": {
+          "result": "hemlig_identitet",
+          "description": "Hemlig identitet. Rollpersonen har en hemlig identitet vilket gör att hen kan röra sig bland folket obemärkt. Detta gör att rollpersonen kan snappa upp rykten hos folket som sällan når medborgarnas öron. I sin garderob har rollpersonen ett stort antal klädedräkter och smink vilket hjälper henom att anta olika roller. Rollpersonen får 1T6+3 enheter att placera på Förklädnad och Skådespel."
+        },
+        "6": {
+          "result": "hållhake_på_magikraten",
+          "description": "Hållhake på magikraten. Rollpersonen har hört talas om, eller på annat sätt snappat upp, att magikrat Catzoran do Thukor har ett förhållande med en cirefalisk kurfurstinna. Rollpersonen har inga bevis men om sådana skulle kunna ordnas så skulle rollpersonen kunna få en hållhake på magikrat Catzoran do Thukor."
+        },
+        "7": {
+          "result": "inkomst",
+          "description": "Inkomst. Rollpersonen har en stadig inkomst varje månad, detta kan vara genom ett arv eller genom en lyckad affärsverksamhet som rollpersonen driver. Rollpersonen får Ob2T6x100 silver varje månad och har en sparad förmögenhet på Ob4T6x100 silver."
+        },
+        "8": {
+          "result": "språkforskare",
+          "description": "Språkforskare. Rollpersonen har studerat ett språk från utlandet, exempelvis jargiska eller sabriska. Rollpersonen får 1T6+3 enheter att placera på 1 språkfrdighet och 1 skriftfärdighet"
+        },
+        "9": {
+          "result": "staty",
+          "description": "Staty. Rollpersonen har stått modell för en staty som numer är rest i en av Thalamurs större städer. Statyn är mycket magnifik och på statyns bas så finns en hyllningsdikt till rollpersonen. Hur det kommer sig att rollpersonen fick en staty är upp till spelaren och spelledaren men exempelvis kan det vara som tack för ett utfört uppdrag, en födelsedagspresent eller bröllopsgåva eller kanske var rollpersonen stenhuggarens musa. Rollpersonen får höja sitt rykte med ett (+1)."
+        },
+        "10": {
+          "result": "älskare",
+          "description": "Älskare. Rollpersonen är en älskare till en högre uppsatt person i det thalaskiska samhället. Vem det är och hur länge förhållandet varat är upp till spelledaren och spelaren men det finns en passion mellan dem. Den högre uppsatta personen är dock gift och skulle affären komma ut så skulle denne och rollpersonen hamna i trångmål. Med tanke på personens makt så kan rollpersonen be om en liten tjänst då och då"
+        }
+      }
+    },
+    "vaganda": {
+      "titel": "Ättetabell: Vaganda",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Vaganda kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "bunden_av_ed",
+          "description": "Bunden av ed. Rollpersonen har svurit en ed till magikrat Im-Berefel Ra'Drach do Kampa, en ed som inte får brytas. Om rollpersonen skulle bryta eden och detta skulle komma ut så skulle hen ses som en edsbrytare och få skulle kunna lita på henom. Im-Berefel ger ibland rollpersonen mindre uppdrag via sina språkrör och rollpersonen har order om att meddela honom allt som händer i sin och sina vänners närhet."
+        },
+        "2": {
+          "result": "förbjuden_magi",
+          "description": "Förbjuden magi. Rollpersonen har inte kunnat hålla sig från att börja forska i de förbjudna magivägarna. Kanske har hen börjat studera nekromanti utan statens kännedom (eller förbjudna delar inom nekromantin) eller börjat lära sig ritualer för att nedkalla demoner. Rollpersonen har kommit över skrifter om denna förbjudna typ av magi och i dessa finns det ett flertal ritualer och alkemiska processer som hen kan lära sig. Rollpersonen får 1T6+3 enheter för att höja Teoretisk magi. Om rollpersonen gör en magiker får han dessutom 1T6+4 magnituder som är knutna till demonologi eller nekromanti."
+        },
+        "3": {
+          "result": "galenskap",
+          "description": "Galenskap. Rollpersonen har upplevt något skrämmande och fasansfullt som för evigt etsat sig fast vid hens själ. Hen beter sig ibland lite underligt och får ibland anfall då minnesbilder målas upp för hens sinnen. Under dessa anfall måste hen lyckas med ett mycket svårt slag mot VIL (Ob5T6) för att fungera normalt. Det är möjligt att hen inte själv minns vad hen fruktar och att upplevelsen var så kraftfull att hen förträngt alltihop. Kanske var det ett möte med en demon, forskning om den mörka skogens ande eller en brutal akt hen själv utförde då hen var besatt. Exakt hur denna galenskap uppvisar sig får spelaren och spelledaren diskutera fram – huvudsaken är att karaktären skall vara spelbar."
+        },
+        "4": {
+          "result": "gravplundrare",
+          "description": "Gravplundrare. Rollpersonen har i sin jakt på kunskap sjunkit så lågt att hen har plundrat ett gammalt gravvalv tillhörande en av ätterna. Där hittade hen förvisso gamla stentavlor med information som hen letade efter men en ande hemsöker nu rollpersonen och plågar henom i hens drömmar. På särskilda platser kan anden uppenbara sig i reflektioner och spegelbilder och det har även hänt att andra sett snabba glimtar av den. Rollpersonen får 1T6+1 enheter för att höja ockultism samt 1T6+3 enheter för att höja valfria mystiska färdigheter."
+        },
+        "5": {
+          "result": "mindre_bibliotek",
+          "description": "Mindre bibliotek. Rollpersonen har ett mindre bibliotek i sin ägo och hen har spenderat en längre tid att studera böckerna. Rollpersonen får höja sin BIL med två (+2) och placera 1T6+2 enheter på valfria kunskapsfärdigheter."
+        },
+        "6": {
+          "result": "morbid",
+          "description": "Morbid. Rollpersonen har läst många gamla verk som författats av personer inom ätten och blivit fascinerand av döden. Får hen en chans att bevittna en avrättning eller studera nyligt döda personer så kommer hen ta den. För att motstå frestelsen så måste rollpersonen lyckas med ett svårt slag (Ob4T6) mot VIL. Det finns till och med en risk att rollpersonen blir så besatt hen själv börjar döda folk för att uppleva dödsögonblicket på riktigt nära håll. Eller att hen bedriver akter där hen själv kan närma sig döden – såsom att hen kväver sig själv eller tömmer sig på blod."
+        },
+        "7": {
+          "result": "studier_av_andeplanet",
+          "description": "Studier av andeplanet. Rollpersonen har forskat om andeplanet och lärt sig färdigheten Andeförnimmelse och kan nu känna av spöken, andar och demoner som finns i närheten. Rollpersonen får 1T6+3 enheter att placera på färdigheten Andeförnimmelse."
+        },
+        "8": {
+          "result": "talar_i_tungor",
+          "description": "Talar i tungor. Rollpersonen faller ibland ihop i konvulsioner samtidigt som kraftfulla visioner spelas upp i hens sinne. Under denna tid så talar hen i tungor och yttrar saker på äldre danarthiska. Någon eller något tycks tala genom henom. Vad detta väsen är för något är upp till spelledaren"
+        },
+        "9": {
+          "result": "udda_experiment",
+          "description": "Udda experiment. Rollpersonen har deltagit i ett annorlunda experiment och detta påverkade rollpersonens kropp och själ. Spelaren får slå ett slag på tabellen för Övernaturliga egenskaper för att se vilken effekt kraften hade. Slag som inte passar slås om och i slutändan ligger det på spelledaren att välja vad som är lämpligt."
+        },
+        "10": {
+          "result": "viljestyrka",
+          "description": "Viljestyrka. Rollpersonen är en forskare i det okända och övernaturliga och dessa ting skrämmer henom föga, snarare finnar hen dem intressanta och förunderliga. Vid tillfällen då rollpersonen måste slå slag mot sin VIL och det har med det övernaturliga att göra så är dessa slag en nivå lättare (–Ob1T6)."
+        }
+      }
+    },
+    "zadhaz": {
+      "titel": "Ättetabell: Zadhaz",
+      "beskrivning": "Om RP är en Thalaskisk Medborgare av ätten Zadhaz kan hen få slå ett av sina Händelseslag på följande tabell.",
+      "dice": "1d10",
+      "ranges": {
+        "1": {
+          "result": "dekadansens_filosofi",
+          "description": "Dekadansens filosofi. Rollpersonen har studerat filosofen Derfel Khanir Rhadals verk om den totala utlevelsen och mer och mer tagit efter den filosofin. Rollpersonen hänger sig åt allehanda lustar, droger, eskapader och är inte rädd att prova något nytt då detta är vägen till upplysning. Hur intresserad rollpersonen verkligen är av filosofin är upp till spelaren, kanske är hen endast en livsnjutare som ser filosofin som en ursäkt eller så hoppas han verkligen på att nå upplysning i dekadansens gränstrakter. Rollpersonen får 1T6+4 enheter att placera på Supa och Förföra. För mer information om filosofin se sidan 61 i Thalamur"
+        },
+        "2": {
+          "result": "dödsdansare",
+          "description": "Dödsdansare. Rollpersonen har blivit tränad av en dansmästare i den fruktade dödsdansen. Hen har lärt sig att svinga dubbla klingor i virvlande dansrörelser samtidigt som historiska slag utkämpas och en berättelse formas av hens kropp. Rollpersonen får 1T6+4 enheter att placera på färdigheten Dansa och om spelledaren tillåter på stridskonsten 'Thalaskisk dödsdans'"
+        },
+        "3": {
+          "result": "förförare",
+          "description": "Förförare. Rollpersonen har insett erotikens makt och kan använda många knep för att få personer av valdritt kön på sin sida och ned i sin säng. Rollpersonen får 1T6+3 enheter att höja färdigheten Förföra"
+        },
+        "4": {
+          "result": "förförd_av_lmeas",
+          "description": "Förförd av L'meas. Rollpersonen (man som kvinna) har blivit helt förhäxad av magikrat Igar Augus undersköna konkubin L'meas. Förälskelsen och åtrån brinner hett i rollpersonens hjärta och var blick som L'mes skänker är en njutning i sig. L'meas ber ibland rollpersonen om hjälp och i utbyte skänker hon henom en smekning, en kyss på kinden eller ord av tack och detta ser rollpersonen som belöning nog. Rollpersonen får slå sin Amor riktad mot L'meas med 1T6+12 och specialisera som 'Förälskad'"
+        },
+        "5": {
+          "result": "magikratens_förändring",
+          "description": "Magikratens förändring. Rollpersonen har flera gånger varit nära ättens magikrat Igar Augus och misstänker att något inte står rätt till. Ibland så är han klar och lycklig, ibland faller han in i djupa tankar och ångest. Någon yttre makt tycks plåga honom, något som inte ens hans konkubin L'meas tycks kunna trösta honom ifrån. Rollpersonen har under sina samtal med Igar funnit att han är en sympatisk person. Rollpersonens Lojalitet till magikraten höjs med två (+2)."
+        },
+        "6": {
+          "result": "poet",
+          "description": "Poet. Rollpersonen är känd som en stor poet och har publicerat ett flertal poetiska skrifter som spridit sig runt riket. Rollpersonen bes ofta recitera sina verk och har ett flertal beundrare. Rollpersonen får höja sitt rykte med två (+2) specialiserat mot 'poet'. Dessutom får rollpersonen använda 1T6+3 enheter för att höja Berättarkonst."
+        },
+        "7": {
+          "result": "silverskäran",
+          "description": "Silverskäran. Rollpersonen är medlem i den dekadenta sammanslutningen som omnämns som Silverskäran. Hen deltager i luxuösa middagar, erotiska maskerader och perversa utsvävningar. Exakt hur rollpersonen trivs i sin roll är upp till spelaren och spelledaren, kanske njuter hen fullt ut av frigörelsen eller så försöker hen hålla sig från den men blir ständigt lockad av det som erbjuds. Personer från den inre och hemliga cirkeln har börjat uppskatta rollpersonens förmåga och ger henom ibland enklare uppdrag att utföra."
+        },
+        "8": {
+          "result": "skandal",
+          "description": "Skandal. Rollpersonen har varit med om en skandal som befläckat hens namn. Kanske är det en historia av passion, feghet, utklassning eller något liknande men rollpersonen betraktas som en misslyckad usling. Vad värre är att det finns en medlem inom den egna ätten som eldar på dessa rykten gentemot rollpersonen och kanske är denna person även den som ligger bakom skandalen. Rollpersonen får sitt rykte höjt med två (+2) och har till dess att skandalen svalnat en nivå svårare (+Ob1T6) på alla sociala situationer"
+        },
+        "9": {
+          "result": "skepp",
+          "description": "Skepp. Rollpersonen har kommit över ett mindre skepp med besättning och dessa kan hen använda för att antingen transportera handelsvaror, kanske hyra ut tjänsterna till ett handelshus, eller färdas med över Mundanas hav. Exakt hur hen kom över skeppet är upp till spelaren och spelledaren"
+        },
+        "10": {
+          "result": "sångmästare",
+          "description": "Sångmästare. Rollpersonen har blivit undervisad av någon av rikets främsta sångmästare och lärt sig ett flertal sånger och sångtyper. Sånger som berättar om det heroiskt förflutna, sorgsna elegier och eldiga kampsånger. Rollpersonen får 1T6+4 enheter att placera på färdigheten sjunga"
+        }
+      }
+    }
+  }
+}

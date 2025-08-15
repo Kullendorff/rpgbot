@@ -1,0 +1,686 @@
+# Claude Code Fix - Hemland vs Folkslag Separation
+
+## 🐛 Problem som behöver fixas:
+
+1. **Steg 2 (Hemland)** visar felaktigt folkslag istället för länder
+2. **Användarinput:** Ska acceptera både nummer (`!chargen 15`) och namn (`!chargen soldarn`)
+3. **Datakällor blandas ihop:** Hemland vs Folkslag läses från fel mappar
+
+## 📁 Korrekt Filstruktur:
+
+```
+data/character_tables/
+├── landerhemort/          # <-- HEMLAND (Steg 2)
+│   ├── Alarinn.txt
+│   ├── Soldarn.txt
+│   ├── Muhad.txt
+│   └── ... (37 filer totalt)
+│
+├── folkslag/              # <-- FOLKSLAG (Steg 3)
+│   ├── humans/            # Undermappar för olika folkslag
+│   │   ├── vanarer.txt
+│   │   ├── cirefalier.txt
+│   │   └── ...
+│   ├── alver/             # (kommer senare)
+│   │   ├── sanari.txt
+│   │   ├── thism.txt
+│   │   └── ...
+│   ├── dvärgar/           # (kommer senare)
+│   │   └── ...
+│   └── attribute_modifiers.json  # Attributmodifierare
+│
+└── [andra tabeller]
+```
+
+**VIKTIGT:** Folkslag har submappar (humans/, alver/, dvärgar/) medan landerhemort/ har direkta .txt-filer.
+
+## 🔧 Fixes som behövs:
+
+### 1. Skapa Hemlands-loader
+
+**Fil:** `src/interactive_chargen.py`
+
+```python
+def load_homelands(self) -> List[Dict[str, str]]:
+    """Laddar alla länder från landerhemort/ mappen"""
+    homelands = []
+    homeland_dir = self.data_dir / 'landerhemort'
+    
+    if not homeland_dir.exists():
+        print(f"Varning: Kan inte hitta {homeland_dir}")
+        return []
+    
+    # Läs alla .txt filer i landerhemort/
+    for txt_file in sorted(homeland_dir.glob("*.txt")):
+        try:
+            with open(txt_file, 'r', encoding='utf-8') as f:
+                content = f.read().strip()
+                
+            land_name = txt_file.stem  # Filnamn utan .txt
+            
+            # Extrahera första raden som titel (om möjligt)
+            lines = content.split('\n')
+            title = lines[0] if lines else land_name
+            
+            homelands.append({
+                'name': land_name,
+                'title': title,
+                'description': content
+            })
+            
+        except Exception as e:
+            print(f"Fel vid laddning av {txt_file}: {e}")
+    
+    return homelands
+
+def __init__(self):
+    # Befintlig init...
+    self.homelands = self.load_homelands()  # <-- Lägg till denna
+```
+
+### 2. Fixa step_homeland implementation
+
+```python
+async def step_homeland(self, ctx, session):
+    """Steg 2: Välj hemland (INTE folkslag!)"""
+    
+    if not self.homelands:
+        await ctx.send("❌ Fel: Inga hemländer kunde laddas.")
+        return
+    
+    # Visa lista över länder (INTE folkslag)
+    embed = discord.Embed(
+        title="🏰 Steg 2/33: Hemland",
+        description="Välj rollpersonens hemland:",
+        color=0x00ff00
+    )
+    
+    # Visa första 20 länder i huvudlistan
+    land_list = []
+    for i, homeland in enumerate(self.homelands[:20], 1):
+        land_list.append(f"{i}. {homeland['title']}")
+    
+    embed.add_field(
+        name="Tillgängliga länder (1-20):",
+        value="\\n".join(land_list),
+        inline=False
+    )
+    
+    if len(self.homelands) > 20:
+        embed.add_field(
+            name=f"Fler länder (21-{len(self.homelands)}):",
+            value=f"Skriv `!chargen lista` för alla {len(self.homelands)} länder",
+            inline=False
+        )
+    
+    embed.add_field(
+        name="Kommandon:",
+        value="`!chargen [nummer]` - Välj med nummer (t.ex. !chargen 15)\\n`!chargen [namn]` - Välj med namn (t.ex. !chargen soldarn)\\n`!chargen lista` - Visa alla länder",
+        inline=False
+    )
+    
+    await ctx.send(embed=embed)
+
+async def handle_homeland_input(self, ctx, session, user_input: str):
+    """Hanterar användarinput för hemlandsval"""
+    
+    user_input = user_input.strip()
+    selected_homeland = None
+    
+    # Försök tolka som nummer först
+    if user_input.isdigit():
+        index = int(user_input) - 1  # Convert to 0-based index
+        if 0 <= index < len(self.homelands):
+            selected_homeland = self.homelands[index]
+        else:
+            await ctx.send(f"❌ Ogiltigt nummer. Välj mellan 1-{len(self.homelands)}")
+            return
+    
+    # Annars försök matcha namn (case-insensitive)
+    else:
+        user_input_lower = user_input.lower()
+        for homeland in self.homelands:
+            if (homeland['name'].lower() == user_input_lower or 
+                homeland['title'].lower() == user_input_lower):
+                selected_homeland = homeland
+                break
+        
+        if not selected_homeland:
+            await ctx.send(f"❌ Kunde inte hitta landet '{user_input}'. Skriv `!chargen lista` för alla länder.")
+            return
+    
+    # Visa valt land med FULL beskrivning från .txt-filen
+    description = selected_homeland['description']
+    
+    # Dela upp långa beskrivningar i chunks för Discord
+    max_desc_length = 1800  # Lämna utrymme för titel och footer
+    
+    if len(description) <= max_desc_length:
+        # Kort beskrivning - visa allt i en embed
+        embed = discord.Embed(
+            title=f"🏰 Valt hemland: {selected_homeland['title']}",
+            description=description,
+            color=0x00ff00
+        )
+        embed.set_footer(text="Skriv: !chargen behåll eller !chargen nej")
+        await ctx.send(embed=embed)
+    else:
+        # Lång beskrivning - dela upp i flera meddelanden
+        embed = discord.Embed(
+            title=f"🏰 Valt hemland: {selected_homeland['title']}",
+            description="**Beskrivning:**",
+            color=0x00ff00
+        )
+        await ctx.send(embed=embed)
+        
+        # Skicka beskrivningen i chunks
+        chunks = [description[i:i + max_desc_length] 
+                 for i in range(0, len(description), max_desc_length)]
+        
+        for i, chunk in enumerate(chunks):
+            if i == len(chunks) - 1:  # Sista chunken
+                embed = discord.Embed(description=chunk, color=0x00ff00)
+                embed.set_footer(text="Skriv: !chargen behåll eller !chargen nej")
+                await ctx.send(embed=embed)
+            else:
+                await ctx.send(f"```{chunk}```")  # Använd code block för långa texter
+    
+    # Spara temporärt och vänta på bekräftelse
+    session.temp_data = {'hemland': selected_homeland}
+
+async def show_all_homelands(self, ctx, session):
+    """Visar alla länder i numrerad lista"""
+    
+    if not self.homelands:
+        await ctx.send("❌ Inga länder tillgängliga.")
+        return
+    
+    # Dela upp i chunks för att inte överskrida Discord-gränser
+    chunk_size = 20
+    chunks = [self.homelands[i:i + chunk_size] 
+              for i in range(0, len(self.homelands), chunk_size)]
+    
+    for chunk_num, chunk in enumerate(chunks, 1):
+        embed = discord.Embed(
+            title=f"🏰 Tillgängliga länder (Del {chunk_num}/{len(chunks)})",
+            color=0x00ff00
+        )
+        
+        land_list = []
+        start_num = (chunk_num - 1) * chunk_size + 1
+        
+        for i, homeland in enumerate(chunk, start_num):
+            land_list.append(f"{i}. {homeland['title']}")
+        
+        embed.add_field(
+            name=f"Länder {start_num}-{start_num + len(chunk) - 1}:",
+            value="\\n".join(land_list),
+            inline=False
+        )
+        
+        if chunk_num == len(chunks):
+            embed.set_footer(text="Skriv: !chargen [nummer] eller !chargen [namn]")
+        
+        await ctx.send(embed=embed)
+```
+
+### 8. Uppdatera Bekräfta/Avvisa för Komplett Familj
+
+```python
+async def confirm_current_choice(self, ctx, session):
+    """Bekräftar det nuvarande valet och går vidare"""
+    
+    if not session.temp_data:
+        await ctx.send("❌ Inget val att bekräfta.")
+        return
+    
+    current_step = session.current_step
+    step_info = self.steps[current_step - 1]
+    
+    if step_info['name'] == 'hemland' and 'hemland' in session.temp_data:
+        selected_homeland = session.temp_data['hemland']
+        session.data['hemland'] = selected_homeland['name']
+        session.data['hemland_title'] = selected_homeland['title']
+        
+        await ctx.send(f"✅ Hemland bekräftat: **{selected_homeland['title']}**")
+        
+    elif step_info['name'] == 'folkslag' and 'folkslag' in session.temp_data:
+        selected_folkslag = session.temp_data['folkslag']
+        session.data['folkslag'] = selected_folkslag['name']
+        session.data['folkslag_title'] = selected_folkslag['title']
+        session.data['folkslag_category'] = selected_folkslag['category']
+        
+        # Uppdatera context för TableProcessor
+        session.update_context()
+        
+        await ctx.send(f"✅ Folkslag bekräftat: **{selected_folkslag['title']}**")
+    
+    elif step_info['name'] == 'komplett_familjebakgrund' and 'awaiting_family_confirmation' in session.temp_data:
+        # Bekräfta HELA familjebakgrunden
+        if 'komplett_familjebakgrund' in session.data:
+            await ctx.send("✅ **Komplett familjebakgrund bekräftad!**")
+            
+            # Extrahera och applicera alla benefits automatiskt
+            self._apply_family_benefits(session)
+            
+        else:
+            await ctx.send("❌ Ingen familjebakgrund att bekräfta.")
+            return
+    
+    # Rensa temp data och gå till nästa steg
+    session.temp_data = {}
+    await self.next_step(ctx, session)
+
+def _apply_family_benefits(self, session):
+    """Applicerar alla färdighetsbonus och attributeffekter från familjebakgrunden"""
+    
+    family_data = session.data.get('komplett_familjebakgrund', {})
+    
+    # Initiera tracking för benefits
+    if 'färdigheter' not in session.data:
+        session.data['färdigheter'] = {}
+    if 'attribut_bonusar' not in session.data:
+        session.data['attribut_bonusar'] = {}
+    
+    # 1. PROFESSION BENEFITS
+    profession_benefits = family_data.get('profession', {}).get('benefits', [])
+    for benefit in profession_benefits:
+        self._apply_single_benefit(session, benefit, "Huvudnäring")
+    
+    # 2. FAMILY SPECIAL BENEFITS  
+    special_benefits = family_data.get('special', {}).get('benefits', [])
+    for benefit in special_benefits:
+        self._apply_single_benefit(session, benefit, "Familjespecialitet")
+    
+    # 3. RACE-SPECIFIC BENEFITS
+    race_specific = family_data.get('race_specific', {})
+    
+    # Alv-hushåll färdigheter
+    if 'household' in race_specific:
+        household_skills = race_specific['household'].get('skills', [])
+        for skill in household_skills:
+            bonus = random.randint(1, 6) + 1  # ob1T6+1
+            current = session.data['färdigheter'].get(skill, 0)
+            session.data['färdigheter'][skill] = current + bonus
+    
+    # Alv-mentor färdigheter
+    if 'mentor' in race_specific:
+        mentor_skills = race_specific['mentor'].get('skills', [])
+        for skill in mentor_skills:
+            bonus = random.randint(1, 6) + 4  # 1T6+4
+            current = session.data['färdigheter'].get(skill, 0)
+            session.data['färdigheter'][skill] = current + bonus
+    
+    # Dvärg-samhällsklass attribut
+    if 'attribute_effects' in race_specific:
+        for attr, modifier in race_specific['attribute_effects'].items():
+            current = session.data['attribut_bonusar'].get(attr, 0)
+            session.data['attribut_bonusar'][attr] = current + modifier
+
+def _apply_single_benefit(self, session, benefit, source: str):
+    """Applicerar en enskild benefit från familjebakgrunden"""
+    
+    if benefit.benefit_type == 'skill':
+        dice_value = self._roll_dice_string(benefit.value)
+        current = session.data['färdigheter'].get(benefit.target, 0)
+        session.data['färdigheter'][benefit.target] = current + dice_value
+        
+    elif benefit.benefit_type == 'attribute':
+        modifier = int(benefit.value.replace('+', '').replace('-', ''))
+        if '-' in benefit.value:
+            modifier = -modifier
+        current = session.data['attribut_bonusar'].get(benefit.target, 0)
+        session.data['attribut_bonusar'][benefit.target] = current + modifier
+
+def _roll_dice_string(self, dice_str: str) -> int:
+    """Enkelt tärningsslag för benefit-beräkning"""
+    try:
+        if 't6' in dice_str.lower():
+            return self.table_processor._roll_eon_dice(dice_str)
+        else:
+            # Fallback för enkla värden
+            if '+' in dice_str:
+                return int(dice_str.replace('+', ''))
+            return int(dice_str)
+    except:
+        return 1  # Säker fallback
+```
+
+### 4. Skapa Folkslag-loader (för Steg 3)
+
+```python
+def load_folkslag(self) -> Dict[str, List[Dict[str, str]]]:
+    """Laddar alla folkslag från folkslag/ undermappar"""
+    folkslag_data = {}
+    folkslag_dir = self.data_dir / 'folkslag'
+    
+    if not folkslag_dir.exists():
+        print(f"Varning: Kan inte hitta {folkslag_dir}")
+        return {}
+    
+    # Gå igenom alla undermappar (humans/, alver/, dvärgar/)
+    for subfolder in folkslag_dir.iterdir():
+        if subfolder.is_dir():
+            category_name = subfolder.name
+            folkslag_data[category_name] = []
+            
+            # Läs alla .txt filer i undermappen
+            for txt_file in sorted(subfolder.glob("*.txt")):
+                try:
+                    with open(txt_file, 'r', encoding='utf-8') as f:
+                        content = f.read().strip()
+                    
+                    folkslag_name = txt_file.stem
+                    
+                    # Extrahera första raden som titel
+                    lines = content.split('\n')
+                    title = lines[0] if lines else folkslag_name
+                    
+                    folkslag_data[category_name].append({
+                        'name': folkslag_name,
+                        'title': title,
+                        'description': content,
+                        'category': category_name
+                    })
+                    
+                except Exception as e:
+                    print(f"Fel vid laddning av {txt_file}: {e}")
+    
+    return folkslag_data
+
+def __init__(self):
+    # Befintlig init...
+    self.homelands = self.load_homelands()
+    self.folkslag_data = self.load_folkslag()  # <-- Lägg till denna
+```
+
+### 5. Separera Folkslag-hantering (Steg 3)
+
+```python
+async def step_race(self, ctx, session):
+    """Steg 3: Välj folkslag (EFTER hemland)"""
+    
+    if not self.folkslag_data:
+        await ctx.send("❌ Fel: Inga folkslag kunde laddas.")
+        return
+    
+    embed = discord.Embed(
+        title="🏛️ Steg 3/33: Folkslag",
+        description="Välj rollpersonens folkslag:",
+        color=0x00ff00
+    )
+    
+    # Visa folkslag organiserat per kategori
+    all_folkslag = []
+    counter = 1
+    
+    for category, folkslag_list in self.folkslag_data.items():
+        if folkslag_list:  # Om kategorin har folkslag
+            category_text = []
+            for folkslag in folkslag_list:
+                category_text.append(f"{counter}. {folkslag['title']}")
+                all_folkslag.append(folkslag)
+                counter += 1
+            
+            embed.add_field(
+                name=f"📁 {category.title()}:",
+                value="\\n".join(category_text),
+                inline=False
+            )
+    
+    embed.add_field(
+        name="Kommandon:",
+        value="`!chargen [nummer]` - Välj med nummer\\n`!chargen [namn]` - Välj med namn\\n`!chargen lista` - Visa alla folkslag",
+        inline=False
+    )
+    
+    # Spara all_folkslag för senare användning
+    session.temp_data = {'all_folkslag': all_folkslag}
+    
+    await ctx.send(embed=embed)
+
+async def handle_folkslag_input(self, ctx, session, action: str):
+    """Hanterar input för folkslag (steg 3)"""
+    
+    all_folkslag = session.temp_data.get('all_folkslag', [])
+    if not all_folkslag:
+        await ctx.send("❌ Fel: Ingen folkslag-data tillgänglig.")
+        return
+    
+    user_input = action.strip()
+    selected_folkslag = None
+    
+    # Försök tolka som nummer först
+    if user_input.isdigit():
+        index = int(user_input) - 1
+        if 0 <= index < len(all_folkslag):
+            selected_folkslag = all_folkslag[index]
+        else:
+            await ctx.send(f"❌ Ogiltigt nummer. Välj mellan 1-{len(all_folkslag)}")
+            return
+    
+    # Annars försök matcha namn
+    else:
+        user_input_lower = user_input.lower()
+        for folkslag in all_folkslag:
+            if (folkslag['name'].lower() == user_input_lower or 
+                folkslag['title'].lower() == user_input_lower):
+                selected_folkslag = folkslag
+                break
+        
+        if not selected_folkslag:
+            await ctx.send(f"❌ Kunde inte hitta folkslaget '{user_input}'. Skriv `!chargen lista` för alla folkslag.")
+            return
+    
+    # Visa valt folkslag med FULL beskrivning från .txt-filen
+    description = selected_folkslag['description']
+    
+    # Skapa huvudembed med titel
+    embed = discord.Embed(
+        title=f"🏛️ Valt folkslag: {selected_folkslag['title']}",
+        color=0x00ff00
+    )
+    
+    # Lägg till attributmodifierare från attribute_modifiers.json
+    modifiers = self._get_race_modifiers(selected_folkslag['name'])
+    if modifiers:
+        mod_text = "\\n".join(f"**{attr}:** {'+' if mod >= 0 else ''}{mod}" 
+                            for attr, mod in modifiers.items())
+        embed.add_field(name="Attributmodifierare:", value=mod_text, inline=False)
+    
+    # Hantera beskrivning (kan vara lång)
+    max_desc_length = 1500  # Mindre plats pga attributmodifierare
+    
+    if len(description) <= max_desc_length:
+        # Kort beskrivning - lägg till i samma embed
+        embed.description = description
+        embed.set_footer(text="Skriv: !chargen behåll eller !chargen nej")
+        await ctx.send(embed=embed)
+    else:
+        # Lång beskrivning - skicka separat
+        embed.add_field(name="Beskrivning:", value="Se nedan ↓", inline=False)
+        embed.set_footer(text="Skriv: !chargen behåll eller !chargen nej")
+        await ctx.send(embed=embed)
+        
+        # Skicka beskrivningen i chunks
+        chunks = [description[i:i + 1800] 
+                 for i in range(0, len(description), 1800)]
+        
+        for chunk in chunks:
+            await ctx.send(f"```{chunk}```")
+    
+    # Spara temporärt och vänta på bekräftelse
+    session.temp_data = {'folkslag': selected_folkslag}
+
+def _get_race_modifiers(self, race_name: str) -> Dict[str, int]:
+    """Hämtar attributmodifierare för ett folkslag"""
+    # Återanvänd logik från character_creation.py
+    # för att läsa attribute_modifiers.json
+    pass  # Implementera detta
+```
+
+## ✅ Test-scenarios:
+
+### Scenario 1: Hemlandsval med nummer
+```
+Bot: "Steg 2/33: Hemland - Välj land:"
+Bot: "1. Alarinn  2. Asharien  3. Soldarn..."
+User: "!chargen 15"
+Bot: "🏰 Valt hemland: Soldarn" + [beskrivning från Soldarn.txt]
+```
+
+### Scenario 2: Hemlandsval med namn  
+```
+User: "!chargen soldarn"
+Bot: "🏰 Valt hemland: Soldarn" + [beskrivning från Soldarn.txt]
+```
+
+### Scenario 3: Lista alla länder
+```
+User: "!chargen lista" 
+Bot: "🏰 Tillgängliga länder (Del 1/2)"
+Bot: "1. Alarinn  2. Asharien ... 20. [Land 20]"
+Bot: "🏰 Tillgängliga länder (Del 2/2)"  
+Bot: "21. [Land 21] ... 37. [Sista landet]"
+```
+
+### Scenario 4: Felhantering
+```
+User: "!chargen 99"
+Bot: "❌ Ogiltigt nummer. Välj mellan 1-37"
+
+User: "!chargen blahblah"  
+Bot: "❌ Kunde inte hitta landet 'blahblah'. Skriv !chargen lista för alla länder."
+```
+
+### Scenario 6: Beskrivning + Bekräfta/Avvisa
+```
+User: "!chargen soldarn"
+Bot: "🏰 Valt hemland: Soldarn"
+Bot: [FULL beskrivning från Soldarn.txt - kan vara flera meddelanden]
+Bot: "Skriv: !chargen behåll eller !chargen nej"
+
+User: "!chargen behåll"
+Bot: "✅ Hemland bekräftat: Soldarn"
+Bot: "🏛️ Steg 3/32: Folkslag" (nästa steg)
+
+User: "!chargen nej" (alternativt)
+Bot: "❌ Val avvisat. Välj igen:"
+Bot: [Visar hemlandslistan igen]
+```
+
+### Scenario 7: Lång beskrivning (chunked)
+```
+User: "!chargen vanarer"
+Bot: "🏛️ Valt folkslag: Vanarer"
+Bot: "Attributmodifierare: STY: +1, TÅL: +2..."
+Bot: "Beskrivning: Se nedan ↓"
+Bot: ```[Första delen av vanarer.txt]```
+Bot: ```[Andra delen av vanarer.txt]```
+Bot: "Skriv: !chargen behåll eller !chargen nej"
+```
+
+### Scenario 8: Komplett Familjebakgrund (Automatisk)
+```
+Bot: "👨‍👩‍👧‍👦 Steg 9/32: Komplett Familjebakgrund"
+Bot: "Genererar automatiskt HELA familjebakgrunden..."
+
+Bot: "👨‍👩‍👧‍👦 Komplett Familjebakgrund"
+Bot: "🎂 Födelse: född i mars, avtagandevecka, mittdag"
+Bot: "👥 Syskon: 2 äldre systrar, 2 äldre bröder"  [← FIX STAVNING]
+Bot: "👨‍👩‍👧‍👦 Föräldrar: båda lever (far 51 år, mor 51 år)"
+Bot: "💼 Huvudnäring: Familjen är jordbrukare"
+Bot: "🏠 Familjen: Familjen är mycket fattig"
+Bot: "🏛️ Hushåll: Catharion - Etikett, Bokhållning"  [← Om alv]
+Bot: "🧙‍♂️ Mentor: Allvarlig personlighet"         [← Om alv]
+Bot: "⚒️ Samhällsklass: Grävare - STY+1, PER-1"    [← Om dvärg]
+Bot: "Skriv: !chargen behåll eller !chargen nej"
+
+User: "!chargen behåll"
+Bot: "✅ Komplett familjebakgrund bekräftad!"
+Bot: "🔢 Steg 10/32: Bakgrundslag antal" (nästa steg)
+```
+
+### Scenario 9: Stavfel fixat
+```
+Före: "2 äldre systar, 1 yngre brorar"  ❌
+Efter: "2 äldre systrar, 1 yngre bröder" ✅
+``` steg)
+
+User: "!chargen nej" (alternativt)
+Bot: "❌ Val avvisat. Välj igen:"
+Bot: [Visar hemlandslistan igen]
+```
+
+### Scenario 7: Lång beskrivning (chunked)
+```
+User: "!chargen vanarer"
+Bot: "🏛️ Valt folkslag: Vanarer"
+Bot: "Attributmodifierare: STY: +1, TÅL: +2..."
+Bot: "Beskrivning: Se nedan ↓"
+Bot: ```[Första delen av vanarer.txt]```
+Bot: ```[Andra delen av vanarer.txt]```
+Bot: "Skriv: !chargen behåll eller !chargen nej"
+```
+
+## 🎯 Kritiska förändringar:
+
+1. **Datakälla:** `landerhemort/*.txt` för hemland (INTE folkslag/)
+2. **Input-parsing:** Både nummer och namn fungerar  
+3. **Användarupplevelse:** Tydlig separation mellan länder och folkslag
+4. **Error handling:** Tydliga felmeddelanden och alternativ
+
+## 📋 Testplan:
+
+1. **Hemland (Steg 2):**
+   - Verifiera att alla 37 .txt-filer laddas från `landerhemort/`
+   - Testa nummervalet: `!chargen 1`, `!chargen 15`, `!chargen 37`
+   - Testa namnval: `!chargen soldarn`, `!chargen muhad`
+   - Testa lista: `!chargen lista` visar alla länder i chunks
+   - Testa fullständiga beskrivningar visas från .txt-filerna
+
+2. **Folkslag (Steg 3):**
+   - Verifiera att `folkslag/humans/*.txt` laddas korrekt
+   - Testa nummervalet för folkslag: `!chargen 1`, `!chargen 2`
+   - Testa namnval: `!chargen vanarer`, `!chargen cirefalier`
+   - Verifiera att attributmodifierare visas från `attribute_modifiers.json`
+   - Testa fullständiga beskrivningar från folkslag .txt-filer
+
+3. **Komplett Familjebakgrund (Steg 9):**
+   - Testa automatisk generation för människor (grundläggande)
+   - Testa alv-specifik: hushåll + mentor + färdighetsbonus
+   - Testa dvärg-specifik: samhällsklass + attributeffekter
+   - Verifiera stavning: "systrar" och "bröder" (inte "systar"/"brorar")
+   - Testa familjens huvudnäring baserat på hemland/kultur
+   - Testa komplett bekräfta/avvisa funktionalitet
+
+4. **Benefits Tracking:**
+   - Verifiera att färdighetsbonus från hushåll appliceras
+   - Verifiera att mentors färdigheter (1T6+4) appliceras
+   - Verifiera att dvärg-attributeffekter appliceras
+   - Kontrollera att alla benefits sparas i session
+
+5. **Felhantering:**
+   - `!chargen 99` (för både hemland och folkslag)
+   - `!chargen blahblah` (ogiltiga namn)
+   - Saknade tabeller (graceful fallbacks)
+
+6. **Steg-progression:**
+   - Hemland (steg 2) → Folkslag (steg 3) → ... → Komplett Familj (steg 9) → Bakgrund (steg 10+)
+   - Data sparas korrekt i session
+   - Context uppdateras för TableProcessor
+
+**KRITISK: Testa stavfixar för syskon!**
+
+---
+
+**VIKTIGT:** Efter denna fix ska:
+1. **Steg 2 (Hemland):** Visa länder → fullständig beskrivning från .txt → bekräfta/avvisa
+2. **Steg 3 (Folkslag):** Visa folkslag → fullständig beskrivning från .txt + attributmodifierare → bekräfta/avvisa  
+3. **Steg 9 (Komplett Familj):** Automatisk storgenerering av ALLT familjematerial → bekräfta/avvisa
+4. **Stavfel fixade:** "systrar" och "bröder" (inte "systar"/"brorar")
+5. **Folkslag-specifikt:** Alver får hushåll+mentor, dvärgar får samhällsklass
+6. **Tabellintegration:** Huvudnäring, familjetabeller, alv-tabeller, dvärg-tabeller
+7. **Benefits tracking:** Alla färdigheter och attributeffekter spåras automatiskt
+8. **32 steg totalt:** Religion borttaget, steg 9-11 slagna ihop
+9. **Inga fler förväxlingar:** Hemland och folkslag helt separerade

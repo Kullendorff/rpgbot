@@ -31,4 +31,13 @@
         },
         "94": {
           "result": "tilldelad_högadlig_utan_kunglig_släkt",
-          "description": "Tilldelad högadlig titel utan släktskap med kungaf
+          "description": "Tilldelad högadlig titel utan släktskap med kungafamiljen. RPs Rykte ökar med +15"
+        },
+        "95-100": {
+          "result": "kunglig_släkt",
+          "description": "RP tillhör kungafamiljen eller är nära släkt. RPs Rykte ökar med +20"
+        }
+      }
+    }
+  }
+}

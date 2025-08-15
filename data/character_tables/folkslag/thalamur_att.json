@@ -1,0 +1,186 @@
+{
+  "thalamuriska_atter": {
+    "abhixia": {
+      "titel": "Abhixia",
+      "beskrivning": "Medlemmarna är kända för sina goda kunskaper i alkemi och pyrotropi. De styrde tidigare över provinsen Pereine, men förlorade både denna och mycket annat när Pereine gjorde uppror och utropade sig självt till ett eget rike. Medlemmarna är mycket hemlighetsfulla och intrigerar mycket både inom och utom sin ätt.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "föremål",
+          "övernaturliga egenskaper"
+        ],
+        "lattlarda_fardigheter": [
+          "anatomi",
+          "djurlära",
+          "läkekonst",
+          "magiförnimmelse",
+          "växtlära",
+          "1 valfri skriftfärdighet"
+        ],
+        "extra_kontakter": 1
+      }
+    },
+    "arginakus": {
+      "titel": "Arginakus",
+      "beskrivning": "Kända för att vara nytänkande forskare, skickliga magiker och hängivna upptcksresande. Kunskap går före makt.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "egendom",
+          "mentala egenskaper"
+        ],
+        "lattlarda_fardigheter": [
+          "bibliotekskunskap",
+          "filosofi",
+          "historia",
+          "kulturkännedom",
+          "teoretisk magi",
+          "1 valfri hantverksfärdighet",
+          "kalligrafi",
+          "1 valfri skriftfärdighet"
+        ],
+        "extra_kontakter": 1
+      }
+    },
+    "cartika": {
+      "titel": "Cartika",
+      "beskrivning": "Den äldsta ätten ägnar stor tid åt att studera historien för att lära sig om framtiden. De är skickliga administratörer som bevarar rikets traditioner, uråldriga lagar och myter.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "egendom",
+          "föremål",
+          "mentala egenskaper",
+          "fysiska egenskaper"
+        ],
+        "special_regel": "Om 'fysiska egenskaper' väljs måste resultatet 'ignorerar smärta (39-40)' väljas eftersom Cartikaner ibland utför riter som går ut på att skära in vackra mönster i sin hud för att uppnå mental kontroll.",
+        "lattlarda_fardigheter": [
+          "bibliotekskunskap",
+          "bokhållning",
+          "geografi",
+          "historia",
+          "lagkunskap",
+          "ledarskap"
+        ],
+        "extra_kontakter": 1
+      }
+    },
+    "harim": {
+      "titel": "Harim",
+      "beskrivning": "Den näst minsta ätten. Hade tidigare stort inflytande över Thalamurs krigsmakt. Ätten medlemmar är kända (eller ökända) för att styra folket med järnhand och det sägs att de ofta ägnar sig olagliga och omoraliska affärer. Tidigare styrde de över provinsen Colonan (som har samma namn som det forna imperiet Colonan men är något helt annat).",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "föremål",
+          "fysiska egenskaper"
+        ],
+        "lattlarda_fardigheter": [
+          "bokhållning",
+          "förhöra",
+          "krigsföring",
+          "krigsmaskiner",
+          "ledarskap",
+          "skumraskaffärer"
+        ]
+      }
+    },
+    "kobinku": {
+      "titel": "Kobinku",
+      "beskrivning": "Denna ätts medlemmar är ökända för att ta till vilka metoder som helst för att få sin vilja fram. Många medlemmar sägs ägna sig åt mystik, svartkonst, spiritism, astronomi och spådomskonst.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "föremål",
+          "övernaturliga egenskaper"
+        ],
+        "lattlarda_fardigheter": [
+          "astrologi",
+          "bibliotekskunskap",
+          "bokhållning",
+          "ockultism",
+          "spådom",
+          "teoretisk magi"
+        ]
+      }
+    },
+    "myrdinor": {
+      "titel": "Myrdinor",
+      "beskrivning": "En ätt som står nära folket och har det största ansvaret för Thalamurs nya arme. De flesta medlemmarna är krigare, taktiker eller krigsmagiker. Ätten är kända för sin stora lojalitet mot Thalamur.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "föremål",
+          "fysiska egenskaper"
+        ],
+        "lattlarda_fardigheter": [
+          "anatomi",
+          "krigsföring",
+          "krigsmaskiner",
+          "ledarskap",
+          "läkekonst",
+          "rida"
+        ]
+      }
+    },
+    "sala": {
+      "titel": "Sala",
+      "beskrivning": "Medlemmarna i den rikaste ätten är kända för sitt goda affärssinne och stora politiska förmåga. Det är ofta öppna för förändringar. Man finner de oftast på den bördiga Ragashslätten.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "föremål",
+          "egendom"
+        ],
+        "lattlarda_fardigheter": [
+          "bokhållning",
+          "handel",
+          "heraldik",
+          "jordbruk",
+          "diplomati",
+          "etikett"
+        ],
+        "extra_kontakter": 2
+      }
+    },
+    "vaganda": {
+      "titel": "Vaganda",
+      "beskrivning": "Vagandas medlemmar ser normalt kunskap som människans högsta mål. De bedriver en kamp mot all form av gudadyrkan och religion. De kämpar för att bevara Thalamurs traditioner. De följer också en uråldrig profetia som skall leda till att den mäktiga Kejsarstaven, som vart fursvunnen sedan länge, åter skall hittas.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "egendom",
+          "övernaturliga egenskaper"
+        ],
+        "lattlarda_fardigheter": [
+          "anatomi",
+          "bibliotekskunskap",
+
+          "historia",
+          "1 valfri hantverksfärdighet",
+          "ockultism",
+          "växtlära"
+        ]
+      }
+    },
+    "zadhaz": {
+      "titel": "Zadhaz",
+      "beskrivning": "Ättens medlemmar är kända för att vara skickliga diplomater, konstnärer och skalder. De är också dugliga magiker. Deras högsäte finns i An-Thalamur. Ätten tror på att människors kreativitet är Mundanas största skaparkraft.",
+      "bonusar": {
+        "placera_slag": [
+          "förmögenhet",
+          "egendom",
+          "mentala egenskaper"
+        ],
+        "lattlarda_fardigheter": [
+          "berättarkonst",
+          "dansa",
+          "etikett",
+          "förföra",
+          "musik",
+          "sjunga"
+        ],
+        "extra_kontakter": 1
+      }
+    }
+  }
+}

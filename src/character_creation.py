@@ -9,6 +9,8 @@ import random
 import discord
 from typing import Dict, List, Optional, Tuple, Any
 from discord.ext import commands
+from automatic_background import AutomaticBackgroundGenerator
+from interactive_chargen import InteractiveCharacterCreator
 
 class CharacterCreator:
     """Huvudklass för rollpersonsskapande funktionalitet"""
@@ -185,6 +187,8 @@ def register_commands(bot, roll_tracker, color_handler):
     """Registrerar rollpersonsskapande-kommandon till boten"""
     
     creator = CharacterCreator()
+    bg_generator = AutomaticBackgroundGenerator()
+    chargen = InteractiveCharacterCreator()
     
     @bot.command(name='attribut')
     async def attribut_command(ctx: commands.Context, method: str = "3d6"):
@@ -319,4 +323,179 @@ def register_commands(bot, roll_tracker, color_handler):
         
         await ctx.send(embed=embed)
     
-    print("Rollpersonsskapande-kommandon har registrerats (attribut, folkslag, egenskap, npc, bakgrund).")
+    @bot.command(name='familjebakgrund')
+    async def familjebakgrund_command(ctx: commands.Context, folkslag: str, ålder: int):
+        """Genererar automatiskt komplett familjebakgrund för en rollperson"""
+        if ålder < 1 or ålder > 200:
+            await ctx.send("Ålder måste vara mellan 1 och 200 år.")
+            return
+        
+        try:
+            # Generera bakgrund
+            background = bg_generator.generate_complete_background(folkslag, ålder)
+            summary = bg_generator.format_background_summary(background)
+            
+            color = color_handler.get_user_color(ctx.author.id)
+            embed = discord.Embed(
+                title=f"👨‍👩‍👧‍👦 Familjebakgrund - {folkslag.capitalize()}, {ålder} år",
+                description=summary,
+                color=color
+            )
+            embed.set_footer(text=f"Genererad av {ctx.author.display_name}")
+            
+            await ctx.send(embed=embed)
+                
+        except Exception as e:
+            await ctx.send(f"Ett fel uppstod vid generering av familjebakgrund: {str(e)}")
+            print(f"Familjebakgrund fel: {e}")  # För debugging
+    
+    @bot.command(name='chargen')
+    async def chargen_command(ctx: commands.Context, action: str = None, *args):
+        """Huvudkommando för interaktivt karaktärsskapande"""
+        
+        if action == "start":
+            # Starta ny session
+            session = chargen.start_session(str(ctx.author.id))
+            await chargen.show_current_step(ctx, session)
+        
+        elif action == "status":
+            # Visa nuvarande progress
+            session = chargen.get_session(str(ctx.author.id))
+            if session:
+                await chargen.show_status(ctx, session)
+            else:
+                await ctx.send("Du har ingen aktiv karaktärsskapande-session. Använd `!chargen start`")
+        
+        elif action == "step":
+            # Gå till nästa steg
+            session = chargen.get_session(str(ctx.author.id))
+            if session:
+                if chargen.next_step(session):
+                    await chargen.show_current_step(ctx, session)
+                else:
+                    await ctx.send("Du har redan nått det sista steget!")
+            else:
+                await ctx.send("Ingen aktiv session. Använd `!chargen start`")
+        
+        elif action == "back":
+            # Gå tillbaka ett steg
+            session = chargen.get_session(str(ctx.author.id))
+            if session:
+                if chargen.previous_step(session):
+                    await chargen.show_current_step(ctx, session)
+                else:
+                    await ctx.send("Du är redan på det första steget!")
+            else:
+                await ctx.send("Ingen aktiv session. Använd `!chargen start`")
+        
+        elif action == "abort":
+            # Avbryt session
+            if chargen.end_session(str(ctx.author.id)):
+                await ctx.send("✅ Karaktärsskapande avbrutet.")
+            else:
+                await ctx.send("Du har ingen aktiv session att avbryta.")
+        
+        elif action in ["fortsätt", "behåll"]:
+            # Bekräfta temporär data (generell logik)
+            session = chargen.get_session(str(ctx.author.id))
+            if session:
+                step_info = chargen.get_current_step_info(session)
+                
+                # För bakgrundshändelser - använd alltid step-specific hantering 
+                if step_info and step_info['name'] == 'bakgrundshändelser':
+                    await chargen.handle_step_input(ctx, session, action, *args)
+                elif session.temp_data:
+                    await chargen.confirm_current_choice(ctx, session)
+                else:
+                    # Om ingen temporär data, kolla om steget har specifik hantering
+                    if step_info and hasattr(chargen, f"handle_{step_info['name']}_input"):
+                        await chargen.handle_step_input(ctx, session, action, *args)
+                    else:
+                        await ctx.send("Ingen temporär data att bekräfta.")
+            else:
+                await ctx.send("Ingen aktiv session. Använd `!chargen start` för att börja skapa en rollperson.")
+        
+        elif action == "ändra":
+            # Rensa temporär data och visa steget igen
+            session = chargen.get_session(str(ctx.author.id))
+            if session and session.temp_data:
+                session.temp_data.clear()
+                chargen.save_session(session)
+                await ctx.send("🔄 Data rensad. Genererar nytt...")
+                await chargen.show_current_step(ctx, session)
+            else:
+                await ctx.send("Ingen temporär data att ändra.")
+        
+        elif action == "help":
+            # Visa hjälp
+            embed = discord.Embed(
+                title="🎲 Chargen - Interaktivt Karaktärsskapande",
+                description="Kommandon för 33-stegs EON karaktärsskapande",
+                color=0x0099ff
+            )
+            embed.add_field(
+                name="📋 Grundkommandon",
+                value="`!chargen start` - Starta ny rollperson\n"
+                      "`!chargen status` - Visa progress\n"
+                      "`!chargen step` - Nästa steg\n"
+                      "`!chargen back` - Föregående steg\n"
+                      "`!chargen abort` - Avbryt session",
+                inline=False
+            )
+            embed.add_field(
+                name="✅ Bekräftelse",
+                value="`!chargen fortsätt` - Bekräfta val\n"
+                      "`!chargen ändra` - Generera nytt",
+                inline=False
+            )
+            embed.add_field(
+                name="📝 Input",
+                value="I de flesta steg skriver du bara: `!chargen [ditt val]`\n"
+                      "Exempel: `!chargen kvinna`, `!chargen vanarer`, `!chargen 25`",
+                inline=False
+            )
+            await ctx.send(embed=embed)
+        
+        elif action is None:
+            # Visa huvudmeny
+            embed = discord.Embed(
+                title="🎲 EON Diceroller - Karaktärsskapande",
+                description="Välkommen till det interaktiva karaktärsskapande-systemet!",
+                color=0x00ff00
+            )
+            embed.add_field(
+                name="🚀 Kom igång",
+                value="`!chargen start` - Starta 33-stegs karaktärsskapande\n"
+                      "`!chargen help` - Visa alla kommandon",
+                inline=False
+            )
+            embed.add_field(
+                name="🔧 Snabbkommandon",
+                value="`!attribut` - Generera attribut\n"
+                      "`!folkslag` - Lista folkslag\n"
+                      "`!familjebakgrund [folkslag] [ålder]` - Snabb familjebakgrund",
+                inline=False
+            )
+            
+            # Visa aktiv session om den finns
+            session = chargen.get_session(str(ctx.author.id))
+            if session:
+                step_info = chargen.get_current_step_info(session)
+                embed.add_field(
+                    name="📊 Din aktiva session",
+                    value=f"Steg {session.current_step}/33: {step_info['title'] if step_info else 'Okänt'}\n"
+                          "`!chargen status` för detaljer",
+                    inline=False
+                )
+            
+            await ctx.send(embed=embed)
+        
+        else:
+            # Tolka som input för nuvarande steg
+            session = chargen.get_session(str(ctx.author.id))
+            if session:
+                await chargen.handle_step_input(ctx, session, action, *args)
+            else:
+                await ctx.send("Ingen aktiv session. Använd `!chargen start` för att börja skapa en rollperson.")
+
+    print("Rollpersonsskapande-kommandon har registrerats (attribut, folkslag, egenskap, npc, bakgrund, familjebakgrund, chargen).")

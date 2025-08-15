@@ -1,0 +1,172 @@
+{
+  "familjetabeller": {
+    "thalasker_medborgare": {
+      "titel": "En Thalaskisk Medborgares Familj",
+      "beskrivning": "Denna tabell skall endast användas om RP är en Medborgare i riket Thalamur. Medborgare är endast den styrande överklassen i riket, motsvaras ungefär av Adeln i feodala riken. De flesta som bor i Thalamur räknas som “Folket” och inte som “Medborgare”, men de rekommenderas att en spelare som vill spela Thalaskier är en Medborgare.\n\nDet Thalaskiska medborgarna lever ofta ett ganska underligt liv, både jämfört med överklassen från andra riken, men också jämfört med Folket i deras eget land.",
+      "dice": "1d100",
+      "ranges": {
+        "1-20": {
+          "result": "inte_sa_speciell",
+          "description": "Familjen är inte så speciell"
+        },
+        "21-23": {
+          "result": "stora_skulder",
+          "description": "Familjen har stora skulder som föräldrarna inte har råd att betala. De lånar pengar så länge av andra familjer inom ätten men i slutändan måste allt betalas tillbaka. Dessutom kan skulderna locka till sig utpressare och personer med krav på pengar eller tjänster."
+        },
+        "24-26": {
+          "result": "omtalad_familj_kand_medlem",
+          "description": "Familjen är mycket omtalad då en av medlemmarna är mycket känd. Spelledaren avgör vem i familjen som är berömd och varför"
+        },
+        "27-29": {
+          "result": "mycket_rik",
+          "description": "Familjen är mycket rik. Slå ett gratis slag på tabellen för Förmögenhet och ett på Egendom. Observera att det är familjen som äger egendomen, men rollpersonen äger den framslagna förmögenheten",
+          "special_rule": "roll_on_formogenhet_and_egendom_tables"
+        },
+        "30-32": {
+          "result": "skandalomsusad",
+          "description": "Familjen är skandalomsusad. En eller flera ur rollpersonens familj är mycket omtalade på ett negativt sätt. Familjenamnet kräver förmodligen rentvagning."
+        },
+        "33-34": {
+          "result": "aventyrliga_slaktingar",
+          "description": "Flera ur rollpersonens familj är eller har varit äventyrare. Fabulera ihop en kortfattad historia om rollpersonens äventyrliga släktingar - kom ihåg att det är släktingarna som har äventyrat och inte rollpersonen. Spelledaren har naturligtvis vetorätt som vanligt"
+        },
+        "35-37": {
+          "result": "hemliga_allvetandets_brodraskap",
+          "description": "Flertalet medlemmar i familjen som rollpersonen är uppväxt i är hemliga medlemmar av Allvetandets brödraskap och utför religiösa ceremonier till gudarnas ära samt strävar efter att nå fulländning. Om detta skulle komma ut skulle det bli skandal, familjens medlemmar fängslade och avrättade och rollpersonen (även om hen inte deltog i ceremonierna) skulle vara under Rakhoris uppsikt och bli misstrodd i politiska sammanhang."
+        },
+        "38-39": {
+          "result": "medlemmar_av_de_urgamla",
+          "description": "Inom rollpersonens familj finns det de som är medlemmar av sekten ´De urgamla´. Detta är en väl bevarad hemlighet och om rollpersonen vet om det så ser de till att hen håller tyst om det."
+        },
+        "40-42": {
+          "result": "forsvunnet_syskon",
+          "description": "Rollpersonen har ett syskon (eller en kusin) som har varit försvunnen sedan Colonan och Pereine gjorde uppror gentemot staten. Det ryktas att personen sitter fängslad i Consaber."
+        },
+        "43-45": {
+          "result": "svarta_faret",
+          "description": "Rollpersonen är familjens svarta får. Rollpersonen är antagligen inte alls lika högt ansedd som den övriga familjen. Som familjens svarta får gör rollpersonen allt annorlunda och 'fel'. Rollpersonen passar helt enkelt inte in bland sina släktingar."
+        },
+        "46-48": {
+          "result": "hatad_av_vissa",
+          "description": "Rollpersonen är hatad av en eller flera medlemmar av familjen, men ganska väl omtyckt av de övriga familjemedlemmarna. Spelledaren och spelaren bestämmer hur allvarlig konflikten i familjen är.\nSlå 1T100 för att avgöra vem det är som tycker illa om rollpersonen. Om rollpersonen inte har en släkting av den indikerade typen så måste man slå om. Spelledaren och spelaren bestämmer varför rollpersonen är hatad.",
+          "has_subtable": true,
+          "subtable": {
+            "dice": "1d100",
+            "ranges": {
+              "1-10": { "result": "fader_hatar", "description": "Fadern hatar rollpersonen." },
+              "11-20": { "result": "moder_hatar", "description": "Modern hatar rollpersonen." },
+              "21-27": { "result": "bada_foraldrar_hatar", "description": "Fadern och modern hatar rollpersonen." },
+              "28-37": { "result": "syster_hatar", "description": "En syster hatar rollpersonen." },
+              "38-47": { "result": "bror_hatar", "description": "En bror hatar rollpersonen." },
+              "48-54": { "result": "alla_syskon_hatar", "description": "Alla syskon hatar rollpersonen." },
+              "55-61": { "result": "farforaldrar_hatar", "description": "Farföräldrarna hatar rollpersonen." },
+              "62-68": { "result": "morforaldrar_hatar", "description": "Morföräldrarna hatar rollpersonen." },
+              "69-75": { "result": "kusin_hatar", "description": "En kusin hatar rollpersonen." },
+              "76-85": { "result": "partner_hatar", "description": "Partnern hatar rollpersonen. Slå om detta resultat om rollpersonen är ogift." },
+              "86-95": { "result": "svarforaldrar_hatar", "description": "Svärföräldrarna hatar rollpersonen. Slå om detta resultat om rollpersonen inte är gift eller förlovad." },
+              "96-100": { "result": "sla_om", "description": "av någon anledning finns inte detta resultat med i originalboken, så får du detta så slå om det tills du får ett resultat som duger." }
+            }
+          }
+        },
+        "49-51": {
+          "result": "hatad_av_hela_familjen",
+          "description": "Rollpersonen är hatad såpass mycket att det råder en mycket kylig stämning mellan denne och dennes släktingar. Rollpersonen är inte välkommen i deras gemenskap och kan inte förvänta sig någon hjälp från familjen. Exakt vad som gjort att familjens hat är så starkt är upp till Spelaren och Spelledaren."
+        },
+        "52-54": {
+          "result": "illatyckt_av_foraldrar",
+          "description": "Rollpersonen är illa omtyckt av föräldrarna, men inte av syskonen. Kanske är det något som inträffat tidigare, eller kanske bara för att rollpersonens tankar och ideal inte överensstämmer med de konservativa föräldrarnas. Det är även möjligt att föräldrarna helt enkelt tycker bättre om de andra barnen då dessa är mer som föräldrarna önskar."
+        },
+        "55-57": {
+          "result": "adopterad",
+          "description": "Rollpersonen är inte född inom sin familj utan har blivit adopterad. Vilka de riktiga föräldrar är kan variera, slå 1T100 och kontrollera:",
+          "has_subtable": true,
+          "subtable": {
+            "dice": "1d100",
+            "ranges": {
+              "1-20": { "result": "foraldrar_mordade_i_attkonflikt", "description": "Rollpersonens riktiga föräldrar blev mördade i en konflikt mellan ätterna." },
+              "21-60": { "result": "foraldrar_dog_i_olycka", "description": "Rollpersonens riktiga föräldrar dog i en tragisk olycka och rollpersonen togs om hand utav nära vänner till föräldrarna." },
+              "61-80": { "result": "foraldrar_forsvunna", "description": "Rollpersonens riktiga föräldrar är sedan rollpersonens barndom försvunna." },
+              "81-94": { "result": "foraldrar_flydde_landet", "description": "Rollpersonens riktiga föräldrar flydde landet av någon anledning." },
+              "95-100": { "result": "stulen_pga_formaga", "description": "Rollpersonen visade upp underliga förmågor som barn och föräldrarna stal rollpersonen och sade att barnet var deras. Slå ett slag på tabellen för Övernaturliga egenskaper (R1-37) för att se vilken typ av förmåga som rollpersonen har. Olämpliga resultat (såsom föremål av olika slag) slås om.", "special_rule": "roll_on_overnaturliga_egenskaper_r1-37" }
+            }
+          }
+        },
+        "58-60": {
+          "result": "alskad_av_familjen",
+          "description": "Rollpersonen är älskad av hela sin familj. Rollpersonens välmående, framgång och karriär går före allt annat. Rollpersonen är mycket bortskämd och kan be sin familj om vad som helst och de kommer antagligen att försöka göra rollpersonen till viljes"
+        },
+        "61-63": {
+          "result": "alskad_av_foraldrar_hatad_av_syskon",
+          "description": "Rollpersonen är älskad av sin familj, men hatad av sina syskon. Rollpersonens välmående och framgång går före allt annat till syskonens förtvivlan. Rollpersonen är mycket bortskämd och kan be sina föräldrar om nästan vad som helst."
+        },
+        "64-66": {
+          "result": "kand_forfader",
+          "description": "Rollpersonens familj har en mycket känd förfader som har ett namn som är legendariskt genom hela riket. Det kan ha varit en av de visaste magikraterna, en kraftfull general, en legendarisk dödsdansare, en känd upptäcktsresande eller liknande. Rollpersonen kan få lättare i vissa sociala situationer då han nämner sin förfaders namn."
+        },
+        "67-68": {
+          "result": "familjeuppgift",
+          "description": "Rollpersonens familj har en uppgift som gått i deras led under en mycket lång tid. Det kan vara alltifrån att se över ättens ägor, vårda de sjuka eller vakta någon typ av föremål som lämnats i deras vård. Det förväntas att rollpersonen kommer överta denna uppgift då dennes föräldrar eller syskon ej längre kan utföra den. Exakt vilken typ av uppgift det är bestäms av spelaren och spelledaren"
+        },
+        "69-72": {
+          "result": "blodsfejd",
+          "description": "Rollpersonens familj ligger i en djup och allvarlig blodsfejd mot en familj inom en av ätterna. Slå 1T100 på tabellen nedan för att se vilken ätt. Blir det samma ätt som rollpersonen är av så är konflikten inom ätten.",
+          "has_subtable": true,
+          "subtable": {
+            "dice": "1d100",
+            "ranges": {
+              "1-11": { "result": "abhixia", "description": "Abhixia" },
+              "12-22": { "result": "arginakus", "description": "Arginakus" },
+              "23-33": { "result": "cartika", "description": "Cartika" },
+              "34-44": { "result": "harim", "description": "Harim" },
+              "45-56": { "result": "kobinku", "description": "Kobinku" },
+              "57-67": { "result": "myrdinor", "description": "Myrdinor" },
+              "68-78": { "result": "sala", "description": "Sala" },
+              "79-89": { "result": "vaganda", "description": "Vaganda" },
+              "90-100": { "result": "zadhaz", "description": "Zadhaz" }
+            }
+          }
+        },
+        "73-75": {
+          "result": "forbannelse",
+          "description": "Rollpersonens familj sägs ha en förbannelse kastad över sig som löper vidare ned i ättleden. Folk i familjens närhet som känner till legenden om förbannelsen betraktar vanligen familjen med stor misstänksamhet. Det är mycket svårt att få folk ingifta i familjen då få vill låta sina söner och döttrar kastas under förbannelsen grepp. Exakt vad förbannelsen gör och om det överhuvudtaget finns en sådan är upp till spelledaren."
+        },
+        "76-78": {
+          "result": "arftlig_sjukdom",
+          "description": "Rollpersonens familj är drabbad av en ärftlig sjukdom. Detta kan vara allt från en nedbrytande fysisk åkomma till sinnessjukdom. Exakt hur sjukdomen artar sig är upp till Spelledaren. Alla slag för att se om Rollpersonen blivit gift är två nivåer svårare (+Ob2T6). Se tabellen under regeln för Giftermål i släkten",
+          "special_rule": "giftermal_svarare_ob2t6"
+        },
+        "79-82": {
+          "result": "skickliga_musiker",
+          "description": "Rollpersonens familj är en kända som skickliga musiker och alla familjemedlemmar kan hantera ett flertal instrument samt sjunga många av rikets sånger. Detta har smittat av sig på rollpersonen som får 1T6+4 enheter att placera på Sjunga, Dansa, Berättarkonst och Musik",
+          "skill_bonus": "1d6+4_enheter_pa_sjunga_dansa_berattarkonst_musik"
+        },
+        "83-85": {
+          "result": "kriminell_familj",
+          "description": "Rollpersonens familj är kriminell. En eller flera personer i rollpersonens familj har varit fängslade eller sitter i fängelse. Slå 1T6 för varje familjemedlem (ej för rollpersonen). Om resultatet blir '1' så sitter denna familjemedlem i fängelse. Den kvarvarande strafftiden är Ob2T6 år (slå för varje familjemedlem som sitter i fängelse). På grund av ryktet som familjen har så har rollpersonen en nivå svårare (+Ob1T6) på de flesta sociala färdigheter om personerna vet vilken familj Rollpersonen hör till. Detta gäller endast i samröre med Medborgare. Om rollpersonen kan visa sig annorlunda än sina släktingar kommer denna modifikation att försvinna."
+        },
+        "86-89": {
+          "result": "strikt_etikett",
+          "description": "Rollpersonens familj är mycket strikt och håller hårt på etikett och grace. Rollpersonen har övat på alla de seder och manér som är viktiga i det thalaskiska samhället. Rollpersonen får 1T6+2 enheter att höja Etikett.",
+          "skill_bonus": "1d6+2_enheter_pa_etikett"
+        },
+        "90-92": {
+          "result": "mycket_udda",
+          "description": "Rollpersonens familj är mycket udda på ett eller annat sätt. Spelaren bestämmer tillsammans med spelledaren hur pass udda familjen är. Exempel kan vara kannibalism, sinnessjukdomar eller samlarmani. Familjen kanske har en far som kan tala med djuren, en syster som har rymt till skogs och en broder som inte tål solljus."
+        },
+        "93-95": {
+          "result": "studerar_forbjuden_magi",
+          "description": "Rollpersonens föräldrar och kanske något äldre syskon tillhör ett hemligt sällskap där förbjuden magi studeras – kanske olika typer av demonologi och nekromanti utan statligt tillstånd. Rollpersonen har chansen att lära sig denna magi om han är magiskt skolad. Om detta skulle komma ut skulle det väcka stor uppståndelse och ett flertal familjemedlemmar skulle bli fängslade eller avrättade."
+        },
+        "96-98": {
+          "result": "stoder_reformatorerna",
+          "description": "Rollpersonens familj stöder Reformatorernas tankar på ett öppnare och friare samhälle. Om rollpersonen delar denna åsikt avgör hur omtyckt han är eller ej av sin familj. Om rollpersonen är av någon av de mer konservativa ätterna så kan detta leda till att hela familjen är utstött av ätten."
+        },
+        "99-100": {
+          "result": "sla_tva_ganger",
+          "description": "Slå två gånger på tabellen och använd båda resultaten..",
+          "special_rule": "roll_twice_and_combine"
+        }
+      }
+    }
+  }
+}

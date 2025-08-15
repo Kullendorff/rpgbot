@@ -1,0 +1,217 @@
+{
+  "egendomstabeller": {
+    "civiliserad_landsbygd": {
+      "titel": "Egendom: Civiliserad, Landsbygd",
+      "beskrivning": "Tabell för egendom som ägs av en civiliserad persons familj på landsbygden.",
+      "dice": "1d100",
+      "ranges": {
+        "1-20": {
+          "result": "torp",
+          "description": "Torp. 1 torp, 2 tunnland åkerjord eller betesmark, 1 häst, 1 ko, ob1t6 hönor."
+        },
+        "21-40": {
+          "result": "stort_torp",
+          "description": "Stort torp. 1 stort torp, 4 tunnland åkerjord eller betesmark, 1 häst, 1 ko, 1 gris, ob1t6+1 hönor. Torpet är stort nog för att RPs familj kan bo här, bekvämt men trångt"
+        },
+        "41-50": {
+          "result": "liten_gard",
+          "description": "Liten Gård. 1 litet boningshus, 1 liten ladugård, 8 tunnland åkerjord eller betesmark, 4 kor, 1 häst, 2 grisar, ob1T6+2 hönor, 1 dräng, 1 piga. RPs familj, drängen och pigan bor bekvämt men trångt i boningshuset."
+        },
+        "51-65": {
+          "result": "gard",
+          "description": "gård. 1 boningshus, 1 lada, 1 ladugård, 1 stall, 16 tunnland åkerjord eller betesmark, 6 tjänstehjon, 8 kor, 2 hästar, 1 oxe, 4 grisar, ob2T6 hönor. Huset är stort nog för att RPs familj kan bo bekvämt och ha varsitt eget rum. Tjänarna bor bekvämt, men trångt"
+        },
+        "66-80": {
+          "result": "stor_gard",
+          "description": "Stor gård. 24 tunnland åkerjord eller betesmark. 1 stort boningshus för familjen, 1 mindre boningshus för tjänstefolket, 2 lador, 1 stor ladugård, 1 stall, 8 tjänstehjon, 12 kalvar, 3 hästar, 2 oxar, 6 grisar, ob3T6 hönor. Det finns även 1 torparfamilj som arrenderar en del av marken."
+        },
+        "81-90": {
+          "result": "gods_eller_forlaning",
+          "description": "Om RP är en riddare, adlig eller motsvarande och spelgruppen kan och vill lägga lite tid på att skapa en förläning kan hen få en förläning. Hur man tar fram en förläning står i kapitellet om adelns plikter.\n\nOm RP är av “allmogen” eller motsvarande, eller om spelaren inte vill lägga tiden som krävs för att skapa en förläning åt sin adliga RP så får RP ett Gods. istället: 40 tunnland åkerjord eller betesmark. 1 stort boningshus för familjen, 1 mindre boningshus för tjänstefolket, 2 lador, 1 stor ladugård, 1 stall, 8 tjänstehjon, 12 kalvar, 3 hästar, 2 oxar, 6 grisar, ob3T6 hönor. 2T6 torparfamiljer arrenderar delar av marken. Spelaren och SL bestämmer hur stora torpen är."
+        },
+        "91-100": {
+          "result": "stort_gods_eller_forlaning",
+          "description": "Om RP är en riddare, adlig eller motsvarande och spelgruppen kan och vill lägga lite tid på att skapa en förläning kan hen få en förläning. Hur man tar fram en förläning står i kapitellet om adelns plikter.\n\nOm RP är av “allmogen” eller motsvarande, eller om spelaren inte vill lägga tiden som krävs för att skapa en förläning åt sin adliga RP så får RP ett Stort gods: 60 tunnland åkerjord eller betesmark. 1 stor herrgård för familjen, 1 mindre boningshus för tjänstefolket, 2 lador, 1 stor ladugård, 1 stall, 8 tjänstehjon, 12 kalvar, 3 hästar, 2 oxar, 6 grisar, ob3T6 hönor. Delar av marken arrenderas av en “liten gård” (som beskrivs i resultat 41-50 ovan) samt av 3T6 torparfamiljer. Spelaren och SL kommer överens om hur mycket mark som arrenderas ut."
+        },
+        "101-120": {
+          "result": "mycket_stort_gods_eller_forlaning",
+          "description": "Om RP är en riddare, adlig eller motsvarande och spelgruppen kan och vill lägga lite tid på att skapa en förläning kan hen få en förläning. Hur man tar fram en förläning står i kapitellet om adelns plikter.\n\nOm RP är av “allmogen” eller motsvarande, eller om spelaren inte vill lägga tiden som krävs för att skapa en förläning åt sin adliga RP så får RP ett Mycket stort gods: 80 tunnland åkerjord eller betesmark. 1 större herrgård för familjen, 2 mindre boningshus för tjänstefolket, 4 lador, 2 stora ladugårdar, 2 stall, 16 tjänstehjon, 24 kalvar, 6 hästar, 4 oxar, 12 grisar, ob6T6 hönor. Delar av marken arrenderas av en “gård” (som beskrivs i resultatet 51-65 ovan) och 4T6 torp. Vill man kan gården och torpen vara som en liten by en bit ifrån herrgården. Spelaren och SL bestämmer hur stora torpen är och hur mycket mark som arrenderas ut."
+        },
+        "121-150": {
+          "result": "grevskap_eller_forlaning",
+          "description": "Om RP är en riddare, adlig eller motsvarande och spelgruppen kan och vill lägga lite tid på att skapa en förläning kan hen få en förläning. Hur man tar fram en förläning står i kapitellet om adelns plikter.\n\nOm spelaren inte vill lägga tiden som krävs för att skapa en förläning åt sin adliga RP så får RP ett Grevskap (eller motsvarande i det landet RP bor) : 1 slott eller liten borg där familjen bor. 200 tunnland åkerjord eller betesmark. 2 mindre boningshus för tjänstefolket, 4 lador, 2 stora ladugårdar, 2 stall, 16 tjänstehjon, 24 kalvar, 6 hästar, 4 oxar, 12 grisar, ob6T6 hönor. Större delen av marken arrenderas av 1T6 gårdar (beskrivs ovan) och 1T6*10 torp. Vill man kan gårdarna och torpen vara belägna som en liten by en bit ifrån slottet. Spelaren och SL bestämmer hur myckat av marken som arrenderas ut till torp och gårdar."
+        },
+        "151+": {
+          "result": "hertigdome_eller_forlaning",
+          "description": "Om RP är en riddare, adlig eller motsvarande och spelgruppen kan och vill lägga lite tid på att skapa en förläning kan hen få en förläning. Hur man tar fram en förläning står i kapitellet om adelns plikter.\n\nOm spelaren inte vill lägga tiden som krävs för att skapa en förläning åt sin adliga RP så får RP ett Hertigdöme (eller motsvarande i det landet RP bor i.): 1 stort slott eller stor borg. 400 tunnland åkerjord eller betesmark. 2 mindre boningshus för tjänstefolket, 4 lador, 2 stora ladugårdar, 2 stall, 16 tjänstehjon, 24 kalvar, 6 hästar, 4 oxar, 12 grisar, ob6T6 hönor. Större delen av marken arrenderas ut till 2T6 gårdar (beskrivs ovan) och 1T6*20 torp. Vill man kan dessa gårdar och byar ligga som en liten by någonstans i grevskapet, eller i utkanten av någon stad som hertigdömet har beskattningsrätt på. Spelaren och SL bestämmer hur stora gårdarna och torpen är och hur mycket mark de arrenderar."
+        }
+      }
+    },
+    "civiliserad_stad": {
+      "titel": "Egendom: Civiliserad, Stad",
+      "beskrivning": "Tabell för egendom som ägs av en civiliserad persons familj i en stad.",
+      "dice": "1d100",
+      "ranges": {
+        "1-20": {
+          "result": "del_i_forfallet_flerfamiljshus",
+          "description": "En del i ett förfallet flerfamiljshus i ett enkelt kvarter. 2 rum där RPs familj bor. Vill spelaren det bor det även ett husdjur här, 1 höna eller 1 gris eller liknande. Huset har, förutom RPs familjs lägenhet, ob1T6 lägenheter till, med lika många familjer boende i dom."
+        },
+        "21-40": {
+          "result": "del_i_flerfamiljshus",
+          "description": "Del i ett flerfamiljshus. 2 rum + 1 kök där RPs familj bor. På baksidan av huset finns ett litet trädgårdsland och ett husdjur eller två exempelvis hönor eller 1 gris. Huset har, förutom RPs familjs lägenhet, ob1T6 lägenheter till, med lika många familjer boende i dom."
+        },
+        "41-50": {
+          "result": "mindre_hus",
+          "description": "Mindre hus i ett enkelt kvarter. RPs familj har 1 hus som består av 5 rum + 1 kök. Familjen har tillgång till tre av rummen. Övriga rum hyrs ut till en inneboende familj. På vinden bor en piga som arbetar för familjen. På bakgården finns en liten odling, ett hönshus och en gris."
+        },
+        "51-65": {
+          "result": "medelstort_stadshus",
+          "description": "Medelstort stadshus. Huset har 7 rum + 1 kök. Familjen har tillgång till 5 av rummen, övriga hyrs ut till 1 inneboende familj. På vinden bor 1 piga och 1 hushållerska som arbetar för familjen. På bakgården finns en mindre odling, 1 hönshus och 1 gris."
+        },
+        "66-90": {
+          "result": "stort_tvavaningshus",
+          "description": "Stort tvåvåningshus. Huset består av 10 rum + 1 kök. Familjen har tillgång till 6 av rummen, resten hyrs ut till 2 inneboende familjer. På vinden bor 1 hushållerska, 1 piga och 1 tjänare som arbetar för familjen. På bakgården finns 1 odling, och 1 litet hus där det bor 2 grisar, ob1T6 hönor och 1 häst"
+        },
+        "91-100": {
+          "result": "stor_lyxvilla",
+          "description": "Stor lyxvilla belägen i någon finare del av staden. Villan har 15 rum + 1 stort kök. Familjen har tillgång till alla rummen. Det finns 1 gård, 2 mindre hus i vilka det bor 8 tjänstehjon som arbetar för familjen. Det finns 1 stall med 1T6 hästar. I de enklare delarna av staden äger familjen dessutom 1T6 flerfamiljshus med vardera ob1T6 familjer som hyr lägenheter av familjen."
+        },
+        "101-120": {
+          "result": "stort_residens",
+          "description": "Stort residens beläget i den allra finaste delen av staden. Residenset har 24 rum + 2 kök. Familjen har tillgång till alla rummen. I närheten av residenset finns 2 små hus som familjen också äger och här bor 8 tjänstehjon som arbetar för familjen. Familjen äger 1 stall där det bor 2T6 hästar som familjen äger. I de enklare delarna av staden äger familjen dessutom 2T6 flerfamiljshus med vardera ob1T6 familjer som hyr lägenheter av familjen."
+        },
+        "121-150": {
+          "result": "palats",
+          "description": "Palats beläget i den allra finaste delen av staden. Palatset har 36 rum + 2 kök, fördelade på så många våningar som verkar rimligt. Familjen delar dessa rum med 20 tjänare som arbetar för familjen. Spelare och SL får dela upp rummen mellan familjen och tjänstefolket på ett sätt de anser rimligt. På palatsets borggård finns ett stall där det bor 3T6 hästar som familjen också äger. I de enklare delarna av staden äger familjen dessutom 3T6 flerfamiljshus med vardera ob1T6 familjer som hyr lägenheter av familjen. Strax utanför staden ger familjen 80 tunnland åkerjord eller betesmark som arrenderas av 2 gårdar och 4T6 torp."
+        },
+        "151+": {
+          "result": "storsta_palatset",
+          "description": "Största och finaste palatset i staden. 60 rum + 2 kök fördelade på så många våningar som verkar rimligt. Familjen delar dessa rum med 30 tjänare, Spelare och SL får dela upp rummen mellan familjen och tjänstefolket på ett sätt de anser rimligt. På borggården finns ett stall med 4T6 hästar som familjen också äger. I de enklare delarna av staden äger familjen dessutom 4T6 flerfamiljshus med vardera ob1T6 familjer som hyr lägenheter av familjen. Strax utanför staden äger familjen 200 tunnland åkerjord eller betesmark som arrenderas av 2t6 gårdar och 1T6*10 torp."
+        }
+      }
+    },
+    "primitiv": {
+      "titel": "Egendom: Primitiv Kultur",
+      "beskrivning": "Tabell för egendom som ägs av en primitiv persons familj.",
+      "dice": "1d100",
+      "ranges": {
+        "1-40": {
+          "result": "ett_talt_en_boskapshjord",
+          "description": "1 stort tält, 1 boskapsjord som består av ob1T6 stora djur ELLER ob3T6 medelstora djur, 1 riddjur.\n(stora djur kan vara kor, bufflar, kameler, hästar eller liknande. Medelstora djur kan vara får, getter eller liknande. Riddjur kan vara häst, kamel eller liknande. Exakt vilka djur det rör sig om beror på vart i Mundana familjen bor, samt spelarens preferenser)"
+        },
+        "41-60": {
+          "result": "tva_talt_en_boskapshjord",
+          "description": "2 stora tält, 1 boskapshjord som består av ob2T6 stora djur ELLER ob6T6 medelstora djur, 2 riddjur\n(stora djur kan vara kor, bufflar, kameler, hästar eller liknande. Medelstora djur kan vara får, getter eller liknande. Riddjur kan vara häst, kamel eller liknande. Exakt vilka djur det rör sig om beror på vart i Mundana familjen bor, samt spelarens preferenser)"
+        },
+        "61-80": {
+          "result": "tre_talt_en_boskapshjord",
+          "description": "3 stora tält, 1 boskapshjord bestående av ob4T6 stora djur ELLER ob12T6 medelstora djur, ob1T6 riddjur. (stora djur kan vara kor, bufflar, kameler, hästar eller liknande. Medelstora djur kan vara får, getter eller liknande. Riddjur kan vara häst, kamel eller liknande. Exakt vilka djur det rör sig om beror på vart i Mundana familjen bor, samt spelarens preferenser)"
+        },
+        "81-100": {
+          "result": "fyra_talt_vinterbostad",
+          "description": "4 stora tält, 1 boskapshjord bestående av ob8T6 stora djur ELLER ob3T6*10 medelstora djur, ob2T6 riddjur. Familjen äger dessutom en övervintringsbostad någonstans vilken består av 1 enkelt hus eller ett par hyddor.\n(stora djur kan vara kor, bufflar, kameler, hästar eller liknande. Medelstora djur kan vara får, getter eller liknande. Riddjur kan vara häst, kamel eller liknande. Exakt vilka djur det rör sig om beror på vart i Mundana familjen bor, samt spelarens preferenser)"
+        },
+        "101-120": {
+          "result": "sex_talt_vinter_sommarbostad",
+          "description": "6 stora och vackra tält. 1 boskapshjord bestående av ob2T6*10 stora djur ELLER ob6T6*10 medelstora djur, ob3T6 riddjur. Djuren är ovanligt välgödda och välmående. Familjen har en enkel vinterbostad vilken består av 1 enkelt hus eller ett par hyddor.dessutom en enkel sommarbostad byggd av lera och/eller trä någonstans i världen där djuren tycker om att beta på somrarna\n\n(stora djur kan vara kor, bufflar, kameler, hästar eller liknande. Medelstora djur kan vara får, getter eller liknande. Riddjur kan vara häst, kamel eller liknande. Exakt vilka djur det rör sig om beror på vart i Mundana familjen bor, samt spelarens preferenser)"
+        },
+        "121-150": {
+          "result": "tio_talt_och_stadshus",
+          "description": "10 stora och vackra tält. 1 boskapshjord bestående av ob6T6*10 stora djur ELLER ob2T6*100 medelstora djur, ob4T6 riddjur. Djuren är ovanligt välgödda och välmående. Familjen har en enkel vinterbostad vilken består av 1 enkelt hus eller ett par hyddor.dessutom en enkel sommarbostad byggd av lera och/eller trä någonstans i världen där djuren tycker om att beta på somrarna. Slutligen äger familjen ett hus i den närmsta staden, slå ett slg på tabellen för egendom för civiliserad person boende i stad utan att modifiera slaget med börd.\n\n(stora djur kan vara kor, bufflar, kameler, hästar eller liknande. Medelstora djur kan vara får, getter eller liknande. Riddjur kan vara häst, kamel eller liknande. Exakt vilka djur det rör sig om beror på vart i Mundana familjen bor, samt spelarens preferenser)",
+          "special_rule": "roll_on_civiliserad_stad_table_unmodified"
+        },
+        "151+": {
+          "result": "femton_talt_och_befast_vinterbostad_och_stadshus",
+          "description": "Femton stora och vackra tält. 1 boskapshjord bestående av ob3T6*50 stora djur ELLER ob4T6*100 medelstora djur, ob5T6 riddjur. Djuren är ovanligt välgödda och välmående. Familjen har en vinterbostad vilken består av 1 stort hus med en befäst pallisad med vakttorn, dessutom en enkel sommarbostad byggd av lera och/eller trä någonstans i världen där djuren tycker om att beta på somrarna. Slutligen äger familjen ett hus i den närmsta staden, slå ett slag på tabellen för egendom för civiliserad person boende i stad utan att modifiera slaget med börd.\n\n(stora djur kan vara kor, bufflar, kameler, hästar eller liknande. Medelstora djur kan vara får, getter eller liknande. Riddjur kan vara häst, kamel eller liknande. Exakt vilka djur det rör sig om beror på vart i Mundana familjen bor, samt spelarens preferenser)",
+          "special_rule": "roll_on_civiliserad_stad_table_unmodified"
+        }
+      }
+    },
+    "missla": {
+      "titel": "Egendom: Missla",
+      "beskrivning": "Tabell för egendom som ägs av en misslas familj. Resultatet kan variera beroende på om familjen bor på landsbygden eller i en stad.",
+      "dice": "1d100",
+      "ranges": {
+        "1-5": {
+          "result": "hemlos",
+          "description": "Egendomen har brunnit ner eller förlorats på något sätt. Misslan och hens familj är hemlösa"
+        },
+        "6-24": {
+          "result": "minimalt_boende",
+          "description": "Om misslan bor på landsbygden: Ett litet torp med springor i väggarna och läckande tak. 2 tunnland stenig åkerjord eller betesmark. Om misslan bor i en stad: ett skjul i en trång gränd ett slumkvarter",
+          "options": {
+            "landsbygd": "Ett litet torp med springor i väggarna och läckande tak. 2 tunnland stenig åkerjord eller betesmark.",
+            "stad": "Ett skjul i en trång gränd ett slumkvarter"
+          }
+        },
+        "25-42": {
+          "result": "fallfardigt_boende",
+          "description": "Om misslan bor på landsbygd: 1 litet fallfärdigt torp, 3 tunnland åkerjord elle betesmark. Om misslan bor i en stad: 1 litet fallfärdigt kyffe med läckande tak i hamnen eller slummen.",
+          "options": {
+            "landsbygd": "1 litet fallfärdigt torp, 3 tunnland åkerjord elle betesmark.",
+            "stad": "1 litet fallfärdigt kyffe med läckande tak i hamnen eller slummen."
+          }
+        },
+        "43-60": {
+          "result": "enklare_boende",
+          "description": "Om misslan bor på landsbygd: 1 stort torp, 5 tunnland åkerjord eller betesmark. Om misslan bor i staden: 1 litet hus eller lägenhet i stadens utkanter, nära stadsmuren om det finns en sådan.",
+          "options": {
+            "landsbygd": "1 stort torp, 5 tunnland åkerjord eller betesmark.",
+            "stad": "1 litet hus eller lägenhet i stadens utkanter, nära stadsmuren om det finns en sådan."
+          }
+        },
+        "61-78": {
+          "result": "medelgott_boende",
+          "description": "Om misslan bor på landsbygden: 1 liten gård, som innehåller 7 tunnland åkerjord eller betesmark, 1 litet boningshus, 1 liten ladugård, 1T6 mindre bodar eller uthus. Om misslan bor i en stad: 1 medelstort hus i någon av stadens trevligare delar. Det finns kanske hantverkare, handelsbodar eller något liknande som grannar.",
+          "options": {
+            "landsbygd": "1 liten gård, som innehåller 7 tunnland åkerjord eller betesmark, 1 litet boningshus, 1 liten ladugård, 1T6 mindre bodar eller uthus.",
+            "stad": "1 medelstort hus i någon av stadens trevligare delar. Det finns kanske hantverkare, handelsbodar eller något liknande som grannar."
+          }
+        },
+        "79-96": {
+          "result": "bra_boende",
+          "description": "Om misslan bor på landsbygden: 1 stor välskött gård, som har 12 tunnland åkerjord eller betesmark, 1 boningshus, 1 ladugård, 1 stall, 2T6 bodar och uthus. Om misslan bor i en stad: 1 fint, välbyggt, stort hus i någon finare del av staden. Grannarna kanske är stadens marknadsplats eller något större torg eller liknande.",
+          "options": {
+            "landsbygd": "1 stor välskött gård, som har 12 tunnland åkerjord eller betesmark, 1 boningshus, 1 ladugård, 1 stall, 2T6 bodar och uthus",
+            "stad": "1 fint, välbyggt, stort hus i någon finare del av staden. Grannarna kanske är stadens marknadsplats eller något större torg eller liknande."
+          }
+        },
+        "97-100": {
+          "result": "statligt_boende",
+          "description": "Om misslan bor på landsbygden: 1 ståtlig gård på en kulle eller mitt i en by, som även har 16 tunnland åkerjord eller betesmark, 1 stort och fint boningshus, 1 stor ladugård, 1 välskött stall, 3T6 bodar och uthus och ett vackert staket runt det hela. Om misslan bor i en stad: 1 ståtligt flervåningshus i stadens tjusigaste kvarter.",
+          "options": {
+            "landsbygd": "1 ståtlig gård på en kulle eller mitt i en by, som även har 16 tunnland åkerjord eller betesmark, 1 stort och fint boningshus, 1 stor ladugård, 1 välskött stall, 3T6 bodar och uthus och ett vackert staket runt det hela.",
+            "stad": "1 ståtligt flervåningshus i stadens tjusigaste kvarter."
+          }
+        }
+      }
+    },
+    "dvarg_ghor_drezin_roghan": {
+      "titel": "Egendom: Ghordvärgar, Drezindvärgar & Roghangrävare",
+      "beskrivning": "Tabell för egendom som ägs av dvärgar från Ghor- och Drezinklanerna samt grävare från Roghanklanen.",
+      "dice": "1d100",
+      "ranges": {
+        "1-30": {
+          "result": "stor_central_bostad_familj",
+          "description": "RPs familj har en stor bostad centralt belägen i en av dvärgfästets städer. En oguft RP delar ett rum med sina ogifta syskon om hen har några. En gift RP delar rum med sin make/maka. Bostaden har rinnande vatten så familjen behöver aldrig hämta vatten i brunnen."
+        },
+        "31-60": {
+          "result": "egen_bostad",
+          "description": "RP har en egen bostad i någon av dvärgfästets städer. RP kan själv välja vilka familjemedlemmar hen delar bostaden med, förslagsvis en make/maka och sina barn om hen är gift och har barn. Bostaden har rinnande vatten så RP behöver aldrig hämta vatten i brunnen."
+        },
+        "61-75": {
+          "result": "hantverksbod_med_bostad",
+          "description": "RPs familj har en hantverksbod i en av hantverkssalarna med en bostad i anslutning till den."
+        },
+        "76-90": {
+          "result": "stor_lyxig_central_bostad",
+          "description": "RPs familj har en stor, rymlig och lyxig bostad centralt belägen i en av dvärgfästets städer. Bostaden har rinnande vatten så familjen behöver aldrig hämta vatten i brunnen. De flesta familjemedlemmar har ett eget rum."
+        },
+        "91-100": {
+          "result": "bostad_i_gamla_stan",
+          "description": "RPs familj har en bostad i Gamla Stan, dvs den första delen av dvärgfästet som grävdes ut när fästet grundades för tusentals år sedan. Bostaden är stor, rymlig, lyxig, har rinnande vatten och de flesta eller kanske till och med alla familjemedlemmar har varsitt rum."
+        }
+      }
+    }
+  }
+}

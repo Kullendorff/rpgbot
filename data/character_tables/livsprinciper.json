@@ -1,0 +1,552 @@
+{
+  "livsprincip": {
+    "henea": {
+      "titel": "Livsprincip - Henea",
+      "beskrivning": "Varje folkslag har en uppsättning livsprinciper som är vanliga just för dem. Tabellen visar vilka principer som är vanligast hos respektive folkslag.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "dröm",
+          "description": "Dröm (ovanlig för alla, lite mindre ovanlig hos Kiriya)"
+        },
+        "3-12": {
+          "result": "enkelhet",
+          "description": "Enkelhet (vanlig hos Kirya, Learam och Henea)"
+        },
+        "13-14": {
+          "result": "frid",
+          "description": "Frid (ovanlig för Henea)"
+        },
+        "15-34": {
+          "result": "frihet",
+          "description": "Frihet (Extra vanlig hos Learam och Henea, vanlig hos Kiriya och Pyar"
+        },
+        "35-36": {
+          "result": "glädje",
+          "description": "Glädje (vanlig hos Kirya, ovanlig hos alla andra)"
+        },
+        "37-46": {
+          "result": "harmoni",
+          "description": "Harmoni (Vanlig hos Henea, ovanlig hos Pyar)"
+        },
+        "47-50": {
+          "result": "kunskap",
+          "description": "Kunskap (Vanlig hos Sanari)"
+        },
+        "51-54": {
+          "result": "kärlek",
+          "description": "Kärlek (Vanlig hos Kiriya)"
+        },
+        "55-58": {
+          "result": "lojalitet",
+          "description": "Lojalitet (vanlig hos Thism)"
+        },
+        "59-62": {
+          "result": "makt",
+          "description": "Makt (vanlig hos Sanari och Thism)"
+        },
+        "63-72": {
+          "result": "mod",
+          "description": "Mod (Vanlig hos Thism, Learam och Henea)"
+        },
+        "73-76": {
+          "result": "njutning",
+          "description": "Njutning (vanlig hos Kirya och Sanari)"
+        },
+        "77-80": {
+          "result": "ordning",
+          "description": "Ordning (vanlig hos Sanari och Thism"
+        },
+        "81-84": {
+          "result": "perfektion",
+          "description": "Perfektion (Väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "85-88": {
+          "result": "renhet",
+          "description": "Renhet (väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "89-92": {
+          "result": "sanning",
+          "description": "Sanning (vanlig hos Thism)"
+        },
+        "93-96": {
+          "result": "skönhet",
+          "description": "Skönhet (Vanlig hos Kiriya)"
+        },
+        "97-100": {
+          "result": "ära",
+          "description": "Ära (Vanlig hos Thism, Learam och Sanari"
+        }
+      }
+    },
+    "learam": {
+      "titel": "Livsprincip - Learam",
+      "beskrivning": "Varje folkslag har en uppsättning livsprinciper som är vanliga just för dem. Tabellen visar vilka principer som är vanligast hos respektive folkslag.",
+      "dice": "1d100",
+      "ranges": {
+        "1": {
+          "result": "dröm",
+          "description": "Dröm (ovanlig för alla, lite mindre ovanlig hos Kiriya)"
+        },
+        "2-11": {
+          "result": "enkelhet",
+          "description": "Enkelhet (vanlig hos Kirya, Learam och Henea)"
+        },
+        "12-15": {
+          "result": "frid",
+          "description": "Frid (ovanlig för Henea)"
+        },
+        "16-35": {
+          "result": "frihet",
+          "description": "Frihet (Extra vanlig hos Learam och Henea, vanlig hos Kiriya och Pyar"
+        },
+        "36": {
+          "result": "glädje",
+          "description": "Glädje (vanlig hos Kirya, ovanlig hos alla andra)"
+        },
+        "37-40": {
+          "result": "harmoni",
+          "description": "Harmoni (Vanlig hos Henea, ovanlig hos Pyar)"
+        },
+        "41-44": {
+          "result": "kunskap",
+          "description": "Kunskap (Vanlig hos Sanari)"
+        },
+        "45-48": {
+          "result": "kärlek",
+          "description": "Kärlek (Vanlig hos Kiriya)"
+        },
+        "49-52": {
+          "result": "lojalitet",
+          "description": "Lojalitet (vanlig hos Thism)"
+        },
+        "53-56": {
+          "result": "makt",
+          "description": "Makt (vanlig hos Sanari och Thism)"
+        },
+        "57-66": {
+          "result": "mod",
+          "description": "Mod (Vanlig hos Thism, Learam och Henea)"
+        },
+        "67-70": {
+          "result": "njutning",
+          "description": "Njutning (vanlig hos Kirya och Sanari)"
+        },
+        "71-74": {
+          "result": "ordning",
+          "description": "Ordning (vanlig hos Sanari och Thism"
+        },
+        "75-78": {
+          "result": "perfektion",
+          "description": "Perfektion (Väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "79-82": {
+          "result": "renhet",
+          "description": "Renhet (väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "83-86": {
+          "result": "sanning",
+          "description": "Sanning (vanlig hos Thism)"
+        },
+        "87-90": {
+          "result": "skönhet",
+          "description": "Skönhet (Vanlig hos Kiriya)"
+        },
+        "91-100": {
+          "result": "ära",
+          "description": "Ära (Vanlig hos Thism, Learam och Sanari"
+        }
+      }
+    },
+    "pyar": {
+      "titel": "Livsprincip - Pyar",
+      "beskrivning": "Varje folkslag har en uppsättning livsprinciper som är vanliga just för dem. Tabellen visar vilka principer som är vanligast hos respektive folkslag.",
+      "dice": "1d100",
+      "ranges": {
+        "1": {
+          "result": "dröm",
+          "description": "Dröm (ovanlig för alla, lite mindre ovanlig hos Kiriya)"
+        },
+        "2-6": {
+          "result": "enkelhet",
+          "description": "Enkelhet (vanlig hos Kirya, Learam och Henea)"
+        },
+        "7-11": {
+          "result": "frid",
+          "description": "Frid (ovanlig för Henea)"
+        },
+        "12-22": {
+          "result": "frihet",
+          "description": "Frihet (Extra vanlig hos Learam och Henea, vanlig hos Kiriya och Pyar"
+        },
+        "23-25": {
+          "result": "glädje",
+          "description": "Glädje (vanlig hos Kirya, ovanlig hos alla andra)"
+        },
+        "26-28": {
+          "result": "harmoni",
+          "description": "Harmoni (Vanlig hos Henea, ovanlig hos Pyar)"
+        },
+        "29-33": {
+          "result": "kunskap",
+          "description": "Kunskap (Vanlig hos Sanari)"
+        },
+        "34-38": {
+          "result": "kärlek",
+          "description": "Kärlek (Vanlig hos Kiriya)"
+        },
+        "39-43": {
+          "result": "lojalitet",
+          "description": "Lojalitet (vanlig hos Thism)"
+        },
+        "44-48": {
+          "result": "makt",
+          "description": "Makt (vanlig hos Sanari och Thism)"
+        },
+        "49-53": {
+          "result": "mod",
+          "description": "Mod (Vanlig hos Thism, Learam och Henea)"
+        },
+        "54-58": {
+          "result": "njutning",
+          "description": "Njutning (vanlig hos Kirya och Sanari)"
+        },
+        "59-63": {
+          "result": "ordning",
+          "description": "Ordning (vanlig hos Sanari och Thism"
+        },
+        "64-74": {
+          "result": "perfektion",
+          "description": "Perfektion (Väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "75-85": {
+          "result": "renhet",
+          "description": "Renhet (väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "86-90": {
+          "result": "sanning",
+          "description": "Sanning (vanlig hos Thism)"
+        },
+        "91-95": {
+          "result": "skönhet",
+          "description": "Skönhet (Vanlig hos Kiriya)"
+        },
+        "96-100": {
+          "result": "ära",
+          "description": "Ära (Vanlig hos Thism, Learam och Sanari"
+        }
+      }
+    },
+    "sanari": {
+      "titel": "Livsprincip - Sanari",
+      "beskrivning": "Varje folkslag har en uppsättning livsprinciper som är vanliga just för dem. Tabellen visar vilka principer som är vanligast hos respektive folkslag.",
+      "dice": "1d100",
+      "ranges": {
+        "1-2": {
+          "result": "dröm",
+          "description": "Dröm (ovanlig för alla, lite mindre ovanlig hos Kiriya)"
+        },
+        "3-6": {
+          "result": "enkelhet",
+          "description": "Enkelhet (vanlig hos Kirya, Learam och Henea)"
+        },
+        "7-10": {
+          "result": "frid",
+          "description": "Frid (ovanlig för Henea)"
+        },
+        "11-14": {
+          "result": "frihet",
+          "description": "Frihet (Extra vanlig hos Learam och Henea, vanlig hos Kiriya och Pyar"
+        },
+        "15-16": {
+          "result": "glädje",
+          "description": "Glädje (vanlig hos Kirya, ovanlig hos alla andra)"
+        },
+        "17-20": {
+          "result": "harmoni",
+          "description": "Harmoni (Vanlig hos Henea, ovanlig hos Pyar)"
+        },
+        "21-27": {
+          "result": "kunskap",
+          "description": "Kunskap (Vanlig hos Sanari)"
+        },
+        "28-31": {
+          "result": "kärlek",
+          "description": "Kärlek (Vanlig hos Kiriya)"
+        },
+        "32-35": {
+          "result": "lojalitet",
+          "description": "Lojalitet (vanlig hos Thism)"
+        },
+        "36-43": {
+          "result": "makt",
+          "description": "Makt (vanlig hos Sanari och Thism)"
+        },
+        "44-47": {
+          "result": "mod",
+          "description": "Mod (Vanlig hos Thism, Learam och Henea)"
+        },
+        "48-54": {
+          "result": "njutning",
+          "description": "Njutning (vanlig hos Kirya och Sanari)"
+        },
+        "55-61": {
+          "result": "ordning",
+          "description": "Ordning (vanlig hos Sanari och Thism"
+        },
+        "62-73": {
+          "result": "perfektion",
+          "description": "Perfektion (Väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "74-85": {
+          "result": "renhet",
+          "description": "Renhet (väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "86-89": {
+          "result": "sanning",
+          "description": "Sanning (vanlig hos Thism)"
+        },
+        "90-93": {
+          "result": "skönhet",
+          "description": "Skönhet (Vanlig hos Kiriya)"
+        },
+        "94-100": {
+          "result": "ära",
+          "description": "Ära (Vanlig hos Thism, Learam och Sanari"
+        }
+      }
+    },
+    "thism": {
+      "titel": "Livsprincip - Thism",
+      "beskrivning": "Varje folkslag har en uppsättning livsprinciper som är vanliga just för dem. Tabellen visar vilka principer som är vanligast hos respektive folkslag.",
+      "dice": "1d100",
+      "ranges": {
+        "1": {
+          "result": "dröm",
+          "description": "Dröm (ovanlig för alla, lite mindre ovanlig hos Kiriya)"
+        },
+        "2-3": {
+          "result": "enkelhet",
+          "description": "Enkelhet (vanlig hos Kirya, Learam och Henea)"
+        },
+        "4-5": {
+          "result": "frid",
+          "description": "Frid (ovanlig för Henea)"
+        },
+        "6-7": {
+          "result": "frihet",
+          "description": "Frihet (Extra vanlig hos Learam och Henea, vanlig hos Kiriya och Pyar"
+        },
+        "8": {
+          "result": "glädje",
+          "description": "Glädje (vanlig hos Kirya, ovanlig hos alla andra)"
+        },
+        "9-10": {
+          "result": "harmoni",
+          "description": "Harmoni (Vanlig hos Henea, ovanlig hos Pyar)"
+        },
+        "11-12": {
+          "result": "kunskap",
+          "description": "Kunskap (Vanlig hos Sanari)"
+        },
+        "13-14": {
+          "result": "kärlek",
+          "description": "Kärlek (Vanlig hos Kiriya)"
+        },
+        "15-22": {
+          "result": "lojalitet",
+          "description": "Lojalitet (vanlig hos Thism)"
+        },
+        "23-30": {
+          "result": "makt",
+          "description": "Makt (vanlig hos Sanari och Thism)"
+        },
+        "31-38": {
+          "result": "mod",
+          "description": "Mod (Vanlig hos Thism, Learam och Henea)"
+        },
+        "39-40": {
+          "result": "njutning",
+          "description": "Njutning (vanlig hos Kirya och Sanari)"
+        },
+        "41-48": {
+          "result": "ordning",
+          "description": "Ordning (vanlig hos Sanari och Thism"
+        },
+        "49-65": {
+          "result": "perfektion",
+          "description": "Perfektion (Väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "66-82": {
+          "result": "renhet",
+          "description": "Renhet (väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "83-90": {
+          "result": "sanning",
+          "description": "Sanning (vanlig hos Thism)"
+        },
+        "91-92": {
+          "result": "skönhet",
+          "description": "Skönhet (Vanlig hos Kiriya)"
+        },
+        "93-100": {
+          "result": "ära",
+          "description": "Ära (Vanlig hos Thism, Learam och Sanari"
+        }
+      }
+    },
+    "kiriya": {
+      "titel": "Livsprincip - Kiriya",
+      "beskrivning": "Varje folkslag har en uppsättning livsprinciper som är vanliga just för dem. Tabellen visar vilka principer som är vanligast hos respektive folkslag.",
+      "dice": "1d100",
+      "ranges": {
+        "1-3": {
+          "result": "dröm",
+          "description": "Dröm (ovanlig för alla, lite mindre ovanlig hos Kiriya)"
+        },
+        "4-11": {
+          "result": "enkelhet",
+          "description": "Enkelhet (vanlig hos Kirya, Learam och Henea)"
+        },
+        "12-15": {
+          "result": "frid",
+          "description": "Frid (ovanlig för Henea)"
+        },
+        "16-23": {
+          "result": "frihet",
+          "description": "Frihet (Extra vanlig hos Learam och Henea, vanlig hos Kiriya och Pyar"
+        },
+        "24-31": {
+          "result": "glädje",
+          "description": "Glädje (vanlig hos Kirya, ovanlig hos alla andra)"
+        },
+        "32-35": {
+          "result": "harmoni",
+          "description": "Harmoni (Vanlig hos Henea, ovanlig hos Pyar)"
+        },
+        "36-39": {
+          "result": "kunskap",
+          "description": "Kunskap (Vanlig hos Sanari)"
+        },
+        "40-47": {
+          "result": "kärlek",
+          "description": "Kärlek (Vanlig hos Kiriya)"
+        },
+        "48-51": {
+          "result": "lojalitet",
+          "description": "Lojalitet (vanlig hos Thism)"
+        },
+        "52-54": {
+          "result": "makt",
+          "description": "Makt (vanlig hos Sanari och Thism)"
+        },
+        "55-58": {
+          "result": "mod",
+          "description": "Mod (Vanlig hos Thism, Learam och Henea)"
+        },
+        "59-66": {
+          "result": "njutning",
+          "description": "Njutning (vanlig hos Kirya och Sanari)"
+        },
+        "67-69": {
+          "result": "ordning",
+          "description": "Ordning (vanlig hos Sanari och Thism"
+        },
+        "70-76": {
+          "result": "perfektion",
+          "description": "Perfektion (Väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "77-84": {
+          "result": "renhet",
+          "description": "Renhet (väldigt vanlig hos Sanari och Thism, vanlig hos Pyar och Kiriya)"
+        },
+        "85-88": {
+          "result": "sanning",
+          "description": "Sanning (vanlig hos Thism)"
+        },
+        "89-96": {
+          "result": "skönhet",
+          "description": "Skönhet (Vanlig hos Kiriya)"
+        },
+        "97-100": {
+          "result": "ära",
+          "description": "Ära (Vanlig hos Thism, Learam och Sanari"
+        }
+      }
+    }
+  },
+  "livsprincip_forklaringar": {
+    "dröm": {
+      "titel": "Dröm",
+      "forklaring": "Drömmens princip bottnar i tron att verkligheten aldrig kan bli lika fullkomlig som drömmen. Drömmen är därför något man inte kan nå i det vanliga livet, däremot kan man låta sig inspireras av den.\n\nEn alv som följer drömmens princip strävar efter ett så drömskt leverne som möjligt. Det handlar ofta om verklighetsflykt men lika gärna om den ständiga strävan att utveckla sin visionära förmåga. Denna livsprincip är ganska ovanlig och återfinns främst hos kiriya. En del av dessa alver nyttjar olika droger, som exempelvis alvgräs eller alkohol, för att hjälpa dem på vägen."
+    },
+    "enkelhet": {
+      "titel": "Enkelhet",
+      "forklaring": "En alv som följer enkelhetens princip njuter av att hänge sig åt de enkla tingen i livet som att äta, arbeta, sova och att helt enkelt bara vara. Enkelheten ses som själens naturliga tillstånd och lyx ses som någonting onödigt som bara stimulerar de mindre vackrare delarna av individers personlighet.\n\nDenna livsprincip är vanlig hos kiriya, léaram och henéa."
+    },
+    "frid": {
+      "titel": "Frid",
+      "forklaring": "Frid är ett inre tillstånd av stillhet såväl i känsla som i tanke. En alv som följer fridens princip eftersträvar lugn och ro i det mesta. Det handlar i regel om ett allmänt fridfullt leverne utan onödig stress men kan i det yttersta handla om en djup önskan att ständigt befinna sig i ett slags meditativt tillstånd bortom all sinnlig oro.\n\nPraktiserandet av denna princip innefattar både att aktivt försöka undvika omständigheter som rubbar friden samt att försöka lära sig hantera dessa omständigheter på bästa sätt då de väl uppstår. För vissa handlar detta om ett disciplinerat fokuserande på världsliga sysslor, för andra stunder av meditation och för en del flykt genom nyttjandet av droger.\n\nDenna livsprincip återfinns hos alla stammarna men är ovanlig hos henéa ."
+    },
+    "frihet": {
+      "titel": "Frihet",
+      "forklaring": "Frihetens princip handlar om att vara fri och kunna göra det man vill. Det handlar om att kunna vara sann mot sitt inre väsen och följa själens kall.\n\nEn alv som följer frihetens princip strävar ständigt efter självständighet, suveränitet och oberoende för att kunna vandra den väg denne själv helst önskar.\n\nDenna livsprincip är mycket vanlig hos léaram och henéa men också hos en del pyar och kiriya."
+    },
+    "glädje": {
+      "titel": "Glädje",
+      "forklaring": "Glädjens princip bygger på tron att glädje är ett idealtillstånd samt att delad glädje är dubbel glädje.\n\nDe alver som följer glädjens princip försöker därför att se till att deras vardag präglas av många skratt och försöker att bibehålla ett glatt sinnelag. De är också måna om att dela med sig av denna glädje till sin omgivning för att öka den totala glädjen.\n\nDet är nästan enbart kiriya som efterlever denna livsprincip och den är mycket vanlig inom stammen."
+    },
+    "harmoni": {
+      "titel": "Harmoni",
+      "forklaring": "Harmonins princip handlar om balans och naturlighet. De alver som följer denna princip eftersträvar balans i allt de vidtar sig och försöker således undvika överdrifter av alla slag.\n\nNaturlighet ses som ett rättsnöre och naturen är en stor källa för beundran och inspiration. De som följer denna princip försöker i högsta möjliga grad leva i samstämmighet med naturen.\n\nDenna livsprincip återfinns hos de flesta stammar men är absolut vanligast hos henéa och väldigt ovanlig hos pyar."
+    },
+    "kunskap": {
+      "titel": "Kunskap",
+      "forklaring": "Kunskap handlar om att veta och hysa insikt i hur saker och ting fungerar. Kunskapens livsprincip handlar om det ständiga sökandet efter fördjupad kunskap och insikt i så många av livets aspekter som möjligt. Man kan aldrig veta allt som finns att veta, och således finns det alltid mer att lära.\n\nEn alv som följer kunskapens princip söker ständigt att lära sig så mycket som möjligt. Denna livsprincip är absolut vanligast hos sanari men kan återfinnas hos alla alver som suktar efter kunskap och visdom."
+    },
+    "kärlek": {
+      "titel": "Kärlek",
+      "forklaring": "Kärlek handlar om ett givande av sig själv till andra. Kärlekens princip handlar om glädjen i att ge och i att se den positiva verkan av ens handlingar. Den som praktiserar kärlekens princip vill förstå sin omgivning och är sällan sen att förlåta då den som förstår varför någon handlar som de gör inte gärna dömer.\n\nEn alv som följer kärlekens princip ser kärlek som källan till livets glädje och vill i största möjliga mån sprida denna glädje till sin omgivning på bästa sätt. Denna livsprincip är vanlig hos kiriya."
+    },
+    "lojalitet": {
+      "titel": "Lojalitet",
+      "forklaring": "Lojalitet handlar om att vara trofast och pålitlig. Lojalitetens princip berör vikten av lojalitet i samhället.\n\nEn alv som följer denna princip försöker att vara de sina och sina ideal så lojal och hängiven det bara går. Inget pris anses för högt att betala för att bevisa sin lojalitet. Lojalitet är också något man kräver av de runtomkring sig och personer som uppvisar illojalitet föraktas över allt annat.\n\nDenna livsprincip är vanlig framförallt hos thism, speciellt hos de med någon militär anknytning."
+    },
+    "makt": {
+      "titel": "Makt",
+      "forklaring": "Makt handlar om kontroll. Den som har makt över sig själv kan också kontrollera sig själv i olika situationer och den som har världslig makt kan utöva kontroll över sin omgivning. Vanligtvis anses det att det först krävs att man har makt över sig själv om man skall kunna utöva yttre kontroll.\n\nEn alv som följer maktens princip strävar efter att tillskansa sig så mycket makt som möjligt på det inre eller yttre planet eller på dem båda.\n\nDenna livsprincip är vanlig hos både sanari och thism."
+    },
+    "mod": {
+      "titel": "Mod",
+      "forklaring": "Mod handlar framförallt om att inte vara rädd för rädslan. Den som följer modets princip strävar ständigt efter att möta och övervinna sin rädsla och att aldrig ge upp hoppet.\n\nEn alv som följer denna princip försöker ständigt bevisa sin tapperhet men även att alltid ha kurage nog att göra det rätta.\n\nDenna livsprincip är mycket vanlig hos alviska krigare, framförallt hos thism, léaram och henéa."
+    },
+    "njutning": {
+      "titel": "Njutning",
+      "forklaring": "Att njuta är att verkligen ta vara på varje ögonblick. Njutningens princip handlar om att vara så närvarande som möjligt i varje ögonblick av njutning.\n\nEn alv som följer denna princip är en sann hedonist och eftersträvar att uppleva njutning med alla sina sinnen och i alla dess tänkbara former. En ovanligare inriktning av denna princip är de följeslagare som dragit begreppet njutning till sin spets och som därför söker den även där den vanligtvis inte återfinns, till exempel i smärta.\n\nDenna livsprincip är absolut vanligast hos kiriya och sanari."
+    },
+    "ordning": {
+      "titel": "Ordning",
+      "forklaring": "Ordningens princip handlar om att försöka bringa ordning i all världens tumult. Exakt hur kan variera väldigt från individ till individ och beror framförallt vad som definieras som ordning respektive kaos.\n\nI vissa fall handlar det om sökandet efter rättvisa eller strävan efter att bringa mer godhet till världen, i andra fall om önskan av ren organisatorisk ordning eller estetisk symmetri. För andra handlar ordning av ett slags bevarande av det som redan är vilket resulterar i en väldigt konservativ läggning. En annan vanlig definiering av ordning är individens skyldighet mot regler, lagar och förordningar.\n\nDenna livsprincip återfinns hos de flesta alver men är extra vanlig hos sanari och thism."
+    },
+    "perfektion": {
+      "titel": "Perfektion",
+      "forklaring": "Perfektion handlar om strävan efter fulländning och fullkomlighet. Perfektionens livsprincip handlar om den eviga strävan att nå fulländning i allting man företar sig.\n\nEn alv som följer perfektionens princip specialiserar sig ofta på en eller ett fåtal saker för att kunna bli så fullkomlig som möjlig i dessa. Thism och sanari följer ofta denna princip men den är vanlig även hos pyar och kiriya."
+    },
+    "renhet": {
+      "titel": "Renhet",
+      "forklaring": "Renhet ses inte bara som en princip att eftersträva rent fysiskt sett, exempelvis via en städad omgivning, utan det handlar även om en mer själslig eller sinnlig renhet. Exakt vad som definierar renhetsbegreppet varierar och baseras framförallt utifrån att vara motsatsen mot vad som definieras som ”smutsigt” på ett tankemässigt och känslomässigt plan.\n\nAlver som följer denna princip lägger ned omfattande tid och möda för att bekämpa målet för det som anses vara ”smutsigt”. En del thism och sanari tolkar renhetens princip som att de måste värna om ”blodets renhet” det vill säga att de hyser en viss rasistisk läggning. Kiriya som följer renhetens princip får ofta ett väldigt nedlåtande sätt mot allt som inte upplevs som estetiskt och vackert.\n\nEn alv som följer renhetens princip hänger sig åt vad denne ser som renhet i sin omgivning såväl tankemässigt som känslomässigt.\n\nDenna livsprincip är vanlig framförallt hos sanari och thism men även hos kiriya och vissa pyar."
+    },
+    "sanning": {
+      "titel": "Sanning",
+      "forklaring": "Strävan efter sanning handlar om att vara sann mot sig själv och andra. Att vara sann mot sig själv innebär att alltid försöka fatta de rätta besluten baserade på sin inre övertygelse av vad som är rätt och fel. Att vara sann mot andra innebär förutom en äkta uppriktighet att ständigt sträva efter att skilja det sanna från det falska.\n\nEn alv som följer sanningens princip försöker ständigt att bekämpa det falska med alla möjliga medel.\n\nDenna livsprincip är vanligast hos thism."
+    },
+    "skönhet": {
+      "titel": "Skönhet",
+      "forklaring": "Strävan efter skönhet handlar om att vilja göra allting så vackert som möjligt. Skönhetens livsprincip är ett evigt sökande efter det vackra i tillvaron.\n\nEn alv som följer skönhetens princip skapar sig den skönhet denne söker genom vackra ting och/eller söker dem i sin omgivning. Ibland kan det också läggas stor vikt vid såväl det egna som andras utseende.\n\nDenna livsprincip är absolut vanligast hos kiriya."
+    },
+    "ära": {
+      "titel": "Ära",
+      "forklaring": "Strävan efter ära handlar om att hedra sig själv och sina närmsta genom storartade handlingar. Ärans princip bygger på att vinna ryktbarhet och berömmelse genom sina gärningar.\n\nDe alver som följer denna princip strävar efter att vinna gott anseende i samhället. Vägen till ära kan variera stort men målet är alltid detsamma.\n\nDenna livsprincip återfinns främst hos thism, léaram och sanari."
+    }
+  }
+}

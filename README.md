@@ -170,7 +170,6 @@ data/
   - 1 tärning: Resultat 1-3
   - Flera tärningar: Högst en tärning ≠ 1
 - **Fummel**: Två+ 6:or i första kastomgången
-- **Demonisk inspiration**: Hemlig GM-funktion för riggade resultat
 
 ### AI Kunskapsbas
 - **Omfattande regelböcker**: Stödjer fullständiga EON-regelböcker

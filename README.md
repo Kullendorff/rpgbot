@@ -118,18 +118,50 @@ src/
 
 **För de som bara vill spela utan AI-funktioner:**
 
+#### Steg 1: Skapa Discord Bot
+1. Gå till [Discord Developer Portal](https://discord.com/developers/applications)
+2. Klicka "New Application" och ge den ett namn (t.ex. "EON Diceroller")
+3. Gå till "Bot" sektionen i vänster meny
+4. Klicka "Add Bot"
+5. Under "Token" klicka "Copy" för att kopiera din bot-token
+6. Under "Privileged Gateway Intents" aktivera:
+   - ✅ **Message Content Intent** (viktigt!)
+   - ✅ **Server Members Intent** 
+   - ✅ **Presence Intent**
+
+#### Steg 2: Bjud in bot till din server
+1. Gå till "OAuth2" → "URL Generator" 
+2. Välj scopes: 
+   - ✅ **bot**
+   - ✅ **applications.commands**
+3. Välj Bot Permissions:
+   - ✅ **Send Messages**
+   - ✅ **Use Slash Commands** 
+   - ✅ **Read Message History**
+   - ✅ **Add Reactions**
+   - ✅ **Embed Links**
+4. Kopiera den genererade URL:en och öppna i webbläsare
+5. Välj din server och godkänn
+
+#### Steg 3: Installera och konfigurera
 ```bash
 # 1. Klona och installera
 git clone https://github.com/kullendorff/RPGBOT.git
 cd RPGBOT
 pip install -r requirements.txt
 
-# 2. Minimal konfiguration (.env)
-DISCORD_TOKEN=din_discord_token
+# 2. Skapa .env fil med din bot-token
+echo "DISCORD_TOKEN=din_kopierade_token_här" > .env
 
-# 3. Starta bot (hoppa över kunskapsbas-steg)
+# 3. Starta bot
 python src/main.py
 ```
+
+#### Steg 4: Testa i Discord
+Gå till din server och skriv:
+- `!roll 3d6` - Testa grundläggande tärning
+- `!chargen` - Starta karaktärsskapande
+- `!dicehelp` - Se alla kommandon
 
 **Vad fungerar utan AI:**
 - ✅ **Alla tärningskommandon**: `!roll`, `!ex`, `!count`, `!chance`
@@ -146,6 +178,22 @@ python src/main.py
 - ❌ AI-genererade sessionssammanfattningar
 
 **Detta ger dig 90% av botens funktionalitet utan några externa API:er eller databaser!**
+
+#### 🔧 Vanliga Problem & Lösningar
+
+**Boten svarar inte:**
+- ✅ Kontrollera att **Message Content Intent** är aktiverat i Developer Portal
+- ✅ Se till att boten har **Send Messages** behörighet i kanalen
+- ✅ Kolla att din .env fil innehåller rätt DISCORD_TOKEN
+
+**"Permission denied" fel:**
+- ✅ Boten behöver **Embed Links** och **Add Reactions** behörigheter
+- ✅ Kontrollera serverinställningar för botroller
+
+**Boten kraschar vid start:**
+- ✅ Kör `pip install -r requirements.txt` igen
+- ✅ Kontrollera att Python 3.8+ är installerat
+- ✅ Se till att .env filen är i rätt mapp (samma som main.py)
 
 ### 🧠 Fullständig Installation (Med AI)
 

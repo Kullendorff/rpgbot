@@ -280,11 +280,7 @@ class InteractiveCharacterCreator:
                 break
         
         if not race_mods:
-            print(f"DEBUG: Inga modifierare hittade för ras: {race}")
-            print(f"DEBUG: race_lower = '{race_lower}'")
-            print(f"DEBUG: Specialhantering aktiv = {session and session.data.get('thalamur_special') == 'thalasker_medborgare' and session.data.get('thalamur_samhällsklass') == 'Medborgare'}")
-            if session:
-                print(f"DEBUG: session.data = {session.data}")
+            print(f"Inga modifierare hittade för ras: {race}")
             return attributes.copy()
         
         # Applicera modifierare
@@ -835,13 +831,11 @@ class InteractiveCharacterCreator:
             
             # Återvända till steget vi var på innan citizenship-steget + gå till nästa
             return_step = session.data.pop('thalamur_citizenship_return_step', session.current_step)
-            print(f"DEBUG: Thalamur citizenship avslutad. return_step={return_step}, current_step var {session.current_step}")
             session.current_step = return_step
             self.save_session(session)
             
             # Gå till nästa steg från där vi var
             if self.next_step(session):
-                print(f"DEBUG: Gå till nästa steg från {return_step} -> {session.current_step}")
                 await self.show_current_step(ctx, session)
         else:
             await ctx.send("❌ Ogiltigt val. Använd:\n`!chargen slåätt` - Slumpmässig ätt\n`!chargen listaätter` - Visa alla ätter\n`!chargen [ättnamn]` - Välj specifik ätt\n`!chargen fortsätt` - Gå vidare (efter att ha valt ätt)")
@@ -2288,14 +2282,9 @@ class InteractiveCharacterCreator:
         kultur = session.data.get('kultur')
         hemland = session.data.get('hemland')
         
-        # DEBUG: Skriv ut all session data
-        print(f"DEBUG step_family_background - session.data: {session.data}")
-        print(f"DEBUG step_family_background - session.current_step: {session.current_step}")
-        print(f"DEBUG step_family_background - race: '{race}', age: '{age}', kultur: '{kultur}', hemland: '{hemland}'")
-        print(f"DEBUG step_family_background - race bool: {bool(race)}, age bool: {bool(age)}, kultur bool: {bool(kultur)}")
         
         if not race or not age or not kultur:
-            await ctx.send(f"❌ Fel: Folkslag, ålder och kultur måste vara satta först. (race={race}, age={age}, kultur={kultur})")
+            await ctx.send("❌ Fel: Folkslag, ålder och kultur måste vara satta först.")
             return
         
         # Specialhantering för Thalamur Medborgare - använd Thalasker för familjegenerering

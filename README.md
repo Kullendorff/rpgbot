@@ -23,10 +23,11 @@ En avancerad Discord-bot för tärningskast och kunskapshantering för det svens
 - **Fummeltabeller**: `!fummel` för kritiska misslyckanden
 - **Vapenskaderegler**: Automatisk hantering av olika vapentypers skador
 
-### 🎭 Sessionshantering & AI
+### 🎭 Karaktärsskapande & Session
+- **Komplett EON karaktärsskapande**: `!chargen` - 32 steg med automatisk tabellhantering
+- **Thalamur-specialsystem**: Ätter, medborgarätt och strategisk bakgrundsplacering
 - **Sessionshantering**: `!startsession "Äventyr i Trinsmyra"` och `!endsession`
 - **AI-sammanfattningar**: Automatiska humoristiska sessionssammanfattningar via Claude AI
-- **Spelledarverktyg**: Hemliga kommandon och demonisk inspiration
 
 ## 🏗️ Arkitektur (Modulär Design)
 
@@ -93,6 +94,14 @@ src/
 !fummel             # Fummeltabell
 ```
 
+### 🎭 Karaktärsskapande
+```
+!chargen             # Starta ny karaktär (32 EON-steg)
+!chargen start       # Starta ny karaktärssession
+!chargen status      # Visa nuvarande framsteg
+!chargen reset       # Återställ karaktärsskapande
+```
+
 ### 📊 Session & Admin
 ```
 !startsession "namn"  # Starta spelsession
@@ -105,14 +114,50 @@ src/
 
 ## 🛠️ Installation & Konfiguration
 
-### Snabbstart
+### 🎯 Enkel Installation (Utan AI/Kunskapsbas)
+
+**För de som bara vill spela utan AI-funktioner:**
+
 ```bash
 # 1. Klona och installera
 git clone https://github.com/kullendorff/RPGBOT.git
 cd RPGBOT
 pip install -r requirements.txt
 
-# 2. Konfigurera miljövariabler (.env)
+# 2. Minimal konfiguration (.env)
+DISCORD_TOKEN=din_discord_token
+
+# 3. Starta bot (hoppa över kunskapsbas-steg)
+python src/main.py
+```
+
+**Vad fungerar utan AI:**
+- ✅ **Alla tärningskommandon**: `!roll`, `!ex`, `!count`, `!chance`
+- ✅ **Stridsystem**: `!hugg`, `!stick`, `!kross`, `!fummel`
+- ✅ **Statistik**: `!stats`, `!mystats` 
+- ✅ **Karaktärsskapande**: `!chargen` (komplett EON system)
+- ✅ **Sessionshantering**: `!startsession`, `!endsession` (utan AI-sammanfattning)
+- ✅ **Hjälpkommandon**: `!dicehelp`, grundläggande `!regel`
+
+**Vad som INTE fungerar utan AI:**
+- ❌ `!ask` (AI-assisterade regelfrågor)
+- ❌ `!sök` (avancerad kunskapssökning) 
+- ❌ `!allt` (omfattande sökning)
+- ❌ AI-genererade sessionssammanfattningar
+
+**Detta ger dig 90% av botens funktionalitet utan några externa API:er eller databaser!**
+
+### 🧠 Fullständig Installation (Med AI)
+
+**För avancerade funktioner och kunskapsbas:**
+
+```bash
+# 1. Klona och installera
+git clone https://github.com/kullendorff/RPGBOT.git
+cd RPGBOT
+pip install -r requirements.txt
+
+# 2. Fullständig konfiguration (.env)
 DISCORD_TOKEN=din_discord_token
 PINECONE_API_KEY=din_pinecone_nyckel     # För vektorsökning
 ANTHROPIC_API_KEY=din_claude_nyckel      # För AI-funktioner
@@ -230,7 +275,8 @@ mypy src/
 ## 📋 Roadmap
 
 ### Kommande funktioner
-- [ ] **Karaktärsskapande**: Fullständig EON karaktärsgenerator
+- [x] **Karaktärsskapande**: ✅ Komplett EON karaktärsgenerator (människor klar)
+- [ ] **Karaktärsskapande utbyggnad**: Alver, dvärgar, tiraker
 - [ ] **Kampanjhantering**: Spara och hantera långa kampanjer
 - [ ] **Mob-strid**: Hantering av stora strider
 - [ ] **Grafiska tabeller**: Visuella representationer av statistik

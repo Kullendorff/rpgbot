@@ -75,3 +75,17 @@ The bot includes special sarcastic responses for user ID "680064176227352610" (U
 - `data/user_colors.json` - User color preferences
 
 The knowledge base requires manual setup of PDF extraction and indexing before the bot can answer rule questions effectively.
+
+# About Speed and Robustness ..
+
+## Quality and Robustness Over Speed
+
+Your absolute highest priority is the quality, maintainability, and robustness of the code. Never sacrifice code quality for a faster or simpler-looking solution.
+
+- **Avoid "batch solutions":** Do not attempt to solve complex problems in one single, large step. I have noticed this often leads to new, unforeseen issues.
+- **Adopt a step-by-step approach:** Break down every task into smaller, logical sub-tasks. Address them methodically, one by one. This ensures a more robust and well-thought-out final implementation.
+- **Think about consequences:** Before suggesting code, consider its impact on the existing codebase. Think about potential side effects, edge cases, and long-term maintainability.
+- **Ask clarifying questions:** If a request is ambiguous, or could be interpreted in a way that leads to a "quick and dirty" solution, ask me for clarification first.
+- **The only exception:** This principle is your primary directive and should be followed at all times, **unless I explicitly use phrases like "quick and dirty", "prototype", "just make it work for now", or "prioritize speed".** Only then are you permitted to lower the quality standards for the sake of velocity.
+
+Thank you for adhering to these guidelines to help me write better, more reliable code.

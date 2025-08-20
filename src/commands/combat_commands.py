@@ -13,7 +13,7 @@ from discord.ext import commands
 from fumble_tables import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
 
 
-def register_combat_commands(bot: commands.Bot, combat_manager, color_handler) -> None:
+def register_combat_commands(bot: commands.Bot, combat_manager, color_handler, embed_factory) -> None:
     """
     Register all combat commands with the bot.
     
@@ -56,10 +56,9 @@ def register_combat_commands(bot: commands.Bot, combat_manager, color_handler) -
             result: int = random.randint(1, 20)
             fummel_text: str = FUMBLE_TABLES[full_name][result]
             color: int = color_handler.get_user_color(ctx.author.id)
-            embed: discord.Embed = discord.Embed(
-                title=f"💥 Fummel: {full_name.capitalize()}",
-                description=f"Slag: {result}\n\n{fummel_text}",
-                color=color
+            embed = embed_factory.error_message(
+                ctx.author.id,
+                f"💥 Fummel: {full_name.capitalize()}\n\nSlag: {result}\n\n{fummel_text}"
             )
             await ctx.send(embed=embed)
 
@@ -99,9 +98,31 @@ def register_combat_commands(bot: commands.Bot, combat_manager, color_handler) -
                 direction=None,
                 use_malpunkter=use_malpunkter
             )
-            response: str = combat_manager.format_result(result)
-            color: int = color_handler.get_user_color(ctx.author.id)
-            embed: discord.Embed = discord.Embed(color=color, description=f"```\n{response}\n```")
+            # Formatera träffzone med både huvudområde och specifik kroppsdel
+            hit_zone_display = f"{result.hit_location.capitalize()} - {result.sub_location.capitalize()}"
+            
+            # Beräkna effektresultaten 
+            damage_effects = None
+            if result.damage_result and result.damage_result.effect_code:
+                from damage_tables import parse_effect_code
+                damage_effects = parse_effect_code(result.damage_result.effect_code, result.damage_value)
+            
+            embed = embed_factory.combat_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                weapon.capitalize(),
+                # INTE attack_roll - spelaren behöver inte se träffslaget
+                weapon_type=result.weapon_type.value,
+                damage_value=result.damage_value,
+                hit_zone=hit_zone_display,
+                # Ta bort damage_type - ger ingen användbar information
+                effect_code=result.damage_result.effect_code if result.damage_result else None,
+                description=result.damage_result.description if result.damage_result else None,
+                location_code=result.location_code,
+                special_effects=result.damage_result.effects if result.damage_result else [],
+                use_malpunkter=result.use_malpunkter,
+                damage_effects=damage_effects
+            )
             await ctx.send(embed=embed)
         except ValueError as e:
             await ctx.send(f"Fel: {str(e)}\nAnvändning: !{weapon} [nivå/område] [skada] [flaggor]")

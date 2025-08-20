@@ -17,11 +17,13 @@ async def allstats_command(ctx: commands.Context, roll_tracker, color_handler) -
     stats: dict = roll_tracker.get_all_time_stats()
     
     color: int = color_handler.get_user_color(ctx.author.id)
-    embed: discord.Embed = discord.Embed(
-        title="🏆 Permanent Statistik",
-        description="Sammanställd statistik över alla sessioner",
-        color=color
+    embed = embed_factory.stats_overview(
+        ctx.author.id,
+        "Alla spelare",
+        stats["basic_stats"]
     )
+    embed.title = "🏆 Permanent Statistik"
+    embed.description = "Sammanställd statistik över alla sessioner"
     
     # Grundläggande statistik
     basic_stats = stats["basic_stats"]
@@ -92,11 +94,13 @@ async def mystatsall_command(ctx: commands.Context, roll_tracker, color_handler)
         return
 
     color: int = color_handler.get_user_color(ctx.author.id)
-    embed: discord.Embed = discord.Embed(
-        title=f"🏆 {stats['user_name']}s Permanenta Statistik",
-        description="Sammanställd statistik över alla sessioner",
-        color=color
+    embed = embed_factory.stats_overview(
+        ctx.author.id,
+        stats['user_name'],
+        stats["basic_stats"]
     )
+    embed.title = f"🏆 {stats['user_name']}s Permanenta Statistik"
+    embed.description = "Sammanställd statistik över alla sessioner"
     
     # Grundläggande statistik
     basic_stats = stats["basic_stats"]
@@ -158,7 +162,7 @@ async def mystatsall_command(ctx: commands.Context, roll_tracker, color_handler)
     # Skicka embed
     await ctx.send(embed=embed)
 
-def register_commands(bot, roll_tracker, color_handler):
+def register_commands(bot, roll_tracker, color_handler, embed_factory):
     """Registrerar statistikkommandon till boten"""
     
     @bot.command(name='allstats')

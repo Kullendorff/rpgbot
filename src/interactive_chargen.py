@@ -79,8 +79,9 @@ class CharacterSession:
 class InteractiveCharacterCreator:
     """Huvudklass för interaktivt karaktärsskapande med full EON TableProcessor integration"""
     
-    def __init__(self, data_dir: str = None):
+    def __init__(self, embed_factory, data_dir: str = None):
         self.active_sessions: Dict[str, CharacterSession] = {}
+        self.embed_factory = embed_factory
         
         # Integration med befintliga system
         self.table_processor = TableProcessor(data_dir)
@@ -423,10 +424,10 @@ class InteractiveCharacterCreator:
         """Visar nuvarande status och progress för sessionen"""
         step_info = self.get_current_step_info(session)
         
-        embed = discord.Embed(
-            title=f"📊 Karaktärsskapande Status",
-            description=f"Steg {session.current_step}/{session.max_steps}: {step_info['title'] if step_info else 'Okänt'}",
-            color=0x0099ff
+        embed = self.embed_factory.admin_message(
+            session.user_id,
+            "Karaktärsskapande Status",
+            f"Steg {session.current_step}/{session.max_steps}: {step_info['title'] if step_info else 'Okänt'}"
         )
         
         # Visa fastställd data
@@ -494,10 +495,10 @@ class InteractiveCharacterCreator:
     
     async def step_gender(self, ctx, session: CharacterSession):
         """Steg 1: Välj kön"""
-        embed = discord.Embed(
-            title="🎭 Steg 1/32: Kön",
-            description="Välj rollpersonens kön:",
-            color=0x00ff00
+        embed = self.embed_factory.admin_message(
+            session.user_id,
+            "Steg 1/32: Kön",
+            "Välj rollpersonens kön:"
         )
         embed.add_field(
             name="Val",
@@ -538,10 +539,10 @@ class InteractiveCharacterCreator:
             return
         
         # Visa lista över länder (INTE folkslag)
-        embed = discord.Embed(
-            title="🏰 Steg 2/32: Hemland",
-            description="Välj rollpersonens hemland:",
-            color=0x00ff00
+        embed = self.embed_factory.admin_message(
+            session.user_id,
+            "Steg 2/32: Hemland",
+            "Välj rollpersonens hemland:"
         )
         
         # Visa första 20 länder i huvudlistan
@@ -618,10 +619,9 @@ class InteractiveCharacterCreator:
         
         if len(description) <= max_desc_length:
             # Kort beskrivning - visa allt i en embed
-            embed = discord.Embed(
-                title=f"🏰 Valt hemland: {homeland['title']}",
-                description=description,
-                color=0x00ff00
+            embed = self.embed_factory.success_message(
+                session.user_id,
+                f"🏰 Valt hemland: {homeland['title']}\n\n{description}"
             )
             embed.set_footer(text="Skriv: !chargen fortsätt eller !chargen ändra")
             await ctx.send(embed=embed)
@@ -633,23 +633,22 @@ class InteractiveCharacterCreator:
             for i, chunk in enumerate(chunks):
                 if i == 0:
                     # Första chunken - med titel
-                    embed = discord.Embed(
-                        title=f"🏰 Valt hemland: {homeland['title']}",
-                        description=chunk,
-                        color=0x00ff00
+                    embed = self.embed_factory.success_message(
+                        session.user_id,
+                        f"🏰 Valt hemland: {homeland['title']}\n\n{chunk}"
                     )
                 elif i == len(chunks) - 1:
                     # Sista chunken - med footer
-                    embed = discord.Embed(
-                        description=chunk,
-                        color=0x00ff00
+                    embed = self.embed_factory.success_message(
+                        session.user_id,
+                        chunk
                     )
                     embed.set_footer(text="Skriv: !chargen fortsätt eller !chargen ändra")
                 else:
                     # Mellan-chunkar - bara beskrivning
-                    embed = discord.Embed(
-                        description=chunk,
-                        color=0x00ff00
+                    embed = self.embed_factory.success_message(
+                        session.user_id,
+                        chunk
                     )
                 
                 await ctx.send(embed=embed)
@@ -671,9 +670,10 @@ class InteractiveCharacterCreator:
                   for i in range(0, len(self.homelands), chunk_size)]
         
         for chunk_num, chunk in enumerate(chunks, 1):
-            embed = discord.Embed(
-                title=f"🗺️ Tillgängliga länder (Del {chunk_num}/{len(chunks)})",
-                color=0x0099ff
+            embed = self.embed_factory.admin_message(
+                session.user_id,
+                f"Tillgängliga länder (Del {chunk_num}/{len(chunks)})",
+                ""
             )
             
             land_list = []
@@ -695,10 +695,10 @@ class InteractiveCharacterCreator:
     
     async def handle_thalamur_folkslag(self, ctx, session: CharacterSession):
         """Hanterar specialregler för Thalamur - alla är Vanar, val mellan Medborgare/Folket"""
-        embed = discord.Embed(
-            title="🏛️ Steg 3/32: Thalamur Samhällsklass",
-            description="Alla från **Thalamur** är **Vanar** som folkslag. Du måste välja samhällsklass:",
-            color=0x8b008b
+        embed = self.embed_factory.admin_message(
+            session.user_id,
+            "Steg 3/32: Thalamur Samhällsklass",
+            "Alla från **Thalamur** är **Vanar** som folkslag. Du måste välja samhällsklass:"
         )
         
         embed.add_field(
@@ -777,11 +777,7 @@ class InteractiveCharacterCreator:
                 await self.show_current_step(ctx, session)
             return
         
-        embed = discord.Embed(
-            title="🏛️ Thalaskisk Medborgarätt",
-            description="Som **Thalamur Medborgare** tillhör du en av rikets medborgarätter (ätter):",
-            color=0x800080
-        )
+        embed = self.embed_factory.admin_message(session.user_id, "🏛️ Thalaskisk Medborgarätt", "Som **Thalamur Medborgare** tillhör du en av rikets medborgarätter (ätter):")
         
         embed.add_field(
             name="🎲 Slumpmässig ätt",
@@ -855,11 +851,7 @@ class InteractiveCharacterCreator:
         
         if roll == 10:
             # Reroll mechanic
-            embed = discord.Embed(
-                title="🎲 Ätt-slag: 10 - Slå om!",
-                description="Du slog 10! Slå om för att få din ätt.",
-                color=0xff4500
-            )
+            embed = self.embed_factory.admin_message(session.user_id, "🎲 Ätt-slag: 10 - Slå om!", "Du slog 10! Slå om för att få din ätt.")
             embed.set_footer(text="Slår automatiskt om...")
             await ctx.send(embed=embed)
             
@@ -897,10 +889,10 @@ class InteractiveCharacterCreator:
         counter = 1
         
         for att_key, att_data in atter.items():
-            embed = discord.Embed(
-                title=f"🏛️ Ätt {counter}: {att_data['titel']}",
-                description=att_data['beskrivning'],
-                color=0x800080
+            embed = self.embed_factory.admin_message(
+                session.user_id,
+                f"Ätt {counter}: {att_data['titel']}",
+                att_data['beskrivning']
             )
             
             bonusar = att_data.get('bonusar', {})
@@ -968,10 +960,10 @@ class InteractiveCharacterCreator:
         self.save_session(session)
         
         # Visa bekräftelse
-        embed = discord.Embed(
-            title=f"✅ Vald ätt: {att_data['titel']}",
-            description=f"{roll_info}\n\n{att_data['beskrivning']}",
-            color=0x00ff00
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            f"✅ Vald ätt: {att_data['titel']}", 
+            f"{roll_info}\n\n{att_data['beskrivning']}"
         )
         
         bonusar = att_data.get('bonusar', {})
@@ -1021,11 +1013,7 @@ class InteractiveCharacterCreator:
             await ctx.send("❌ Fel: Inga folkslag kunde laddas.")
             return
         
-        embed = discord.Embed(
-            title="🏛️ Steg 3/32: Folkslag",
-            description="Välj rollpersonens folkslag:",
-            color=0x00ff00
-        )
+        embed = self.embed_factory.admin_message(session.user_id, "🏛️ Steg 3/32: Folkslag", "Välj rollpersonens folkslag:")
         
         # Visa folkslag organiserat per kategori
         all_folkslag = []
@@ -1131,9 +1119,10 @@ class InteractiveCharacterCreator:
         description = folkslag['description']
         
         # Skapa huvudembed med titel
-        embed = discord.Embed(
-            title=f"🏛️ Valt folkslag: {folkslag['title']}",
-            color=0x00ff00
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            f"🏛️ Valt folkslag: {folkslag['title']}", 
+            "Dina attributmodifierare och färdigheter:"
         )
         
         # Lägg till attributmodifierare från attribute_modifiers.json
@@ -1161,9 +1150,10 @@ class InteractiveCharacterCreator:
                      for i in range(0, len(description), 1800)]
             
             for i, chunk in enumerate(chunks):
-                embed = discord.Embed(
-                    description=chunk,
-                    color=0x00ff00
+                embed = self.embed_factory.admin_message(
+                    session.user_id, 
+                    f"Beskrivning (del {i+1}/{len(chunks)})", 
+                    chunk
                 )
                 
                 # Lägg bara footer på sista chunken OM den inte redan finns
@@ -1190,9 +1180,10 @@ class InteractiveCharacterCreator:
                   for i in range(0, len(all_folkslag), chunk_size)]
         
         for chunk_num, chunk in enumerate(chunks, 1):
-            embed = discord.Embed(
-                title=f"🏛️ Tillgängliga folkslag (Del {chunk_num}/{len(chunks)})",
-                color=0x0099ff
+            embed = self.embed_factory.admin_message(
+                session.user_id, 
+                f"🏛️ Tillgängliga folkslag (Del {chunk_num}/{len(chunks)})", 
+                "Välj ett folkslag från listan nedan:"
             )
             
             folkslag_list = []
@@ -1285,11 +1276,7 @@ class InteractiveCharacterCreator:
     
     async def step_age(self, ctx, session: CharacterSession):
         """Steg 4: Välj ålder"""
-        embed = discord.Embed(
-            title="⏰ Steg 4/32: Ålder",
-            description="Välj rollpersonens ålder:",
-            color=0x00ff00
-        )
+        embed = self.embed_factory.admin_message(session.user_id, "⏰ Steg 4/32: Ålder", "Välj rollpersonens ålder:")
         
         # Visa rekommendationer baserat på folkslag om det är satt
         if 'folkslag' in session.data:
@@ -1410,10 +1397,10 @@ class InteractiveCharacterCreator:
         """Visar detaljerad information om en kultur"""
         culture_data = culture_info['info']
         
-        embed = discord.Embed(
-            title=f"🏛️ {culture_info['title']}",
-            description=culture_data.get('beskrivning', 'Ingen beskrivning tillgänglig'),
-            color=0x0099ff
+        embed = self.embed_factory.admin_message(
+            ctx.author.id, 
+            f"🏛️ {culture_info['title']}", 
+            culture_data.get('beskrivning', 'Ingen beskrivning tillgänglig')
         )
         
         # Visa några exempel på professioner från denna kultur
@@ -1486,10 +1473,10 @@ class InteractiveCharacterCreator:
             chock = (final_attributes["STY"] + final_attributes["TÅL"] + final_attributes["VIL"]) // 3
             
             # Skapa embed för att visa resultatet
-            embed = discord.Embed(
-                title=f"🎲 Steg 6/32: Genererade Attribut ({method.upper()})",
-                description=f"Grundattribut med {session.data.get('folkslag', 'Okänd')} rasmodifierare:",
-                color=0x00ff00
+            embed = self.embed_factory.admin_message(
+                session.user_id, 
+                f"🎲 Steg 6/32: Genererade Attribut ({method.upper()})", 
+                f"Grundattribut med {session.data.get('folkslag', 'Okänd')} rasmodifierare:"
             )
             
             # Visa attributen med eventuella ändringar
@@ -1541,11 +1528,7 @@ class InteractiveCharacterCreator:
             await ctx.send("❌ Fel: Ingen kulturdata kunde laddas.")
             return
         
-        embed = discord.Embed(
-            title="🏛️ Steg 5/32: Kultur",
-            description="Välj rollpersonens familjekultur som bestämmer familjebakgrunden:",
-            color=0x00ff00
-        )
+        embed = self.embed_factory.admin_message(session.user_id, "🏛️ Steg 5/32: Kultur", "Välj rollpersonens familjekultur som bestämmer familjebakgrunden:")
         
         # Visa alla tillgängliga kulturer med numrering
         culture_list = []
@@ -1600,11 +1583,7 @@ class InteractiveCharacterCreator:
     async def step_attributes(self, ctx, session: CharacterSession):
         """Steg 6: Generera grundattribut med val av metod"""
         
-        embed = discord.Embed(
-            title="🎲 Steg 6/32: Grundattribut",
-            description="Välj metod för att generera rollpersonens grundattribut:",
-            color=0x00ff00
-        )
+        embed = self.embed_factory.admin_message(session.user_id, "🎲 Steg 6/32: Grundattribut", "Välj metod för att generera rollpersonens grundattribut:")
         
         embed.add_field(
             name="Tillgängliga metoder:",
@@ -1662,10 +1641,10 @@ class InteractiveCharacterCreator:
             antal_roll = random.randint(1, 100)
             antal_result = self.find_field_storning_result(table_data['störningar_cirefalier']['antal_störningar'], antal_roll)
             
-            embed = discord.Embed(
-                title="🎲 Antal Field-störningar",
-                description=f"Slag: {antal_roll}",
-                color=0xff6b35
+            embed = self.embed_factory.admin_message(
+                session.user_id, 
+                "🎲 Antal Field-störningar", 
+                f"Slag: {antal_roll}"
             )
             embed.add_field(name="Resultat", value=antal_result['description'], inline=False)
             
@@ -1742,10 +1721,10 @@ class InteractiveCharacterCreator:
                 })
             
             # Visa alla störningar
-            embed = discord.Embed(
-                title="🧬 Dina Field-störningar",
-                description=f"Resultat från {antal_slag} slag:",
-                color=0xff6b35
+            embed = self.embed_factory.admin_message(
+                session.user_id, 
+                "🧬 Dina Field-störningar", 
+                f"Resultat från {antal_slag} slag:"
             )
             
             for i, result in enumerate(results, 1):
@@ -1801,11 +1780,7 @@ class InteractiveCharacterCreator:
     
     async def step_character_traits(self, ctx, session: CharacterSession):
         """Steg 8: Karaktärsdrag - Val mellan slå fram eller hoppa över"""
-        embed = discord.Embed(
-            title="🎭 Steg 8/32: Karaktärsdrag",
-            description="Vill du slå fram karaktärsdrag för din rollperson?",
-            color=0x4169e1
-        )
+        embed = self.embed_factory.admin_message(session.user_id, "🎭 Steg 8/32: Karaktärsdrag", "Vill du slå fram karaktärsdrag för din rollperson?")
         
         embed.add_field(
             name="📋 Vad är karaktärsdrag?",
@@ -1896,10 +1871,10 @@ class InteractiveCharacterCreator:
             session.data.get('thalamur_samhällsklass') == 'Medborgare'):
             folkslag_display = "Thalasker"
         
-        embed = discord.Embed(
-            title="🎭 Dina Karaktärsdrag",
-            description=f"Karaktärsdrag för **{folkslag_display}**:",
-            color=0x32cd32
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            "🎭 Dina Karaktärsdrag", 
+            f"Karaktärsdrag för **{folkslag_display}**:"
         )
         
         for trait, data in results.items():
@@ -2651,10 +2626,10 @@ class InteractiveCharacterCreator:
         for i, chunk in enumerate(chunks):
             if i == 0 and len(chunks) == 1:
                 # Bara en chunk - med titel och valalternativ
-                embed = discord.Embed(
-                    title="👨‍👩‍👧‍👦 Steg 9/32: Komplett Familjebakgrund",
-                    description=chunk,
-                    color=0x00ff00
+                embed = self.embed_factory.admin_message(
+                    session.user_id, 
+                    "👨‍👩‍👧‍👦 Steg 9/32: Komplett Familjebakgrund", 
+                    chunk
                 )
                 embed.add_field(
                     name="📋 Vad vill du göra?",
@@ -2664,16 +2639,17 @@ class InteractiveCharacterCreator:
                 )
             elif i == 0:
                 # Första chunken av flera - bara med titel
-                embed = discord.Embed(
-                    title="👨‍👩‍👧‍👦 Steg 9/32: Komplett Familjebakgrund",
-                    description=chunk,
-                    color=0x00ff00
+                embed = self.embed_factory.admin_message(
+                    session.user_id, 
+                    "👨‍👩‍👧‍👦 Steg 9/32: Komplett Familjebakgrund", 
+                    chunk
                 )
             elif i == len(chunks) - 1:
                 # Sista chunken av flera - med valalternativ
-                embed = discord.Embed(
-                    description=chunk,
-                    color=0x00ff00
+                embed = self.embed_factory.admin_message(
+                    session.user_id, 
+                    "Familjebakgrund (slutdel)", 
+                    chunk
                 )
                 embed.add_field(
                     name="📋 Vad vill du göra?",
@@ -2683,9 +2659,10 @@ class InteractiveCharacterCreator:
                 )
             else:
                 # Mellan-chunkar
-                embed = discord.Embed(
-                    description=chunk,
-                    color=0x00ff00
+                embed = self.embed_factory.admin_message(
+                    session.user_id, 
+                    "Familjebakgrund (fortsättning)", 
+                    chunk
                 )
             
             await ctx.send(embed=embed)
@@ -2949,11 +2926,7 @@ class InteractiveCharacterCreator:
         background_rolls = self.calculate_background_rolls(race, age, attribute_sum)
         
         # Visa resultatet
-        embed = discord.Embed(
-            title="🎲 Steg 12/32: Antal Bakgrundslag",
-            description="Beräkning av hur många bakgrundslag du får:",
-            color=0x00ff00
-        )
+        embed = self.embed_factory.admin_message(session.user_id, "🎲 Steg 12/32: Antal Bakgrundslag", "Beräkning av hur många bakgrundslag du får:")
         
         # Visa beräkningskomponenter
         base_rolls = self.get_base_rolls_for_race(race)
@@ -3042,10 +3015,10 @@ class InteractiveCharacterCreator:
         placera_slag = bonusar.get('placera_slag', [])
         att_namn = thalamur_att_data.get('titel', 'Okänd ätt')
         
-        embed = discord.Embed(
-            title="🎯 Steg 13/32: Ätt-baserad Bakgrundslagplacering",
-            description=f"Som medlem av **{att_namn}** kan du placera vissa av dina {antal_slag} bakgrundslag:",
-            color=0x800080
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            "🎯 Steg 13/32: Ätt-baserad Bakgrundslagplacering", 
+            f"Som medlem av **{att_namn}** kan du placera vissa av dina {antal_slag} bakgrundslag:"
         )
         
         # Visa tillgängliga placeringar
@@ -3157,10 +3130,10 @@ class InteractiveCharacterCreator:
             await self.execute_placed_rolls(ctx, session)
             return
         
-        embed = discord.Embed(
-            title="🎯 Placera Bakgrundslag",
-            description=f"Du har **{remaining_rolls}** slag kvar att placera.",
-            color=0x800080
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            "🎯 Placera Bakgrundslag", 
+            f"Du har **{remaining_rolls}** slag kvar att placera."
         )
         
         # Visa tillgängliga kategorier
@@ -3365,10 +3338,10 @@ class InteractiveCharacterCreator:
     
     async def display_background_results(self, ctx, session: CharacterSession, results: List[Dict[str, Any]]):
         """Visar resultaten från huvudbakgrundstabellen"""
-        embed = discord.Embed(
-            title="🎲 Steg 13/32: Huvudbakgrundstabellen",
-            description=f"Resultat från {len(results)} slag:",
-            color=0x9932cc
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            "🎲 Steg 13/32: Huvudbakgrundstabellen", 
+            f"Resultat från {len(results)} slag:"
         )
         
         # Gruppera resultat för bättre visning
@@ -3610,10 +3583,10 @@ class InteractiveCharacterCreator:
     
     async def show_background_result_with_options(self, ctx, session: CharacterSession, detailed_result: Dict, original_result: Dict):
         """Visar bakgrundsresultat med behåll/slå om-alternativ"""
-        embed = discord.Embed(
-            title=f"🎯 Slag {session.data['current_background_index'] + 1}: {original_result['description']}",
-            description=f"Ursprungligt slag: {original_result['roll']} → {self.get_table_display_name(detailed_result['table_type'])}",
-            color=0x9932cc
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            f"🎯 Slag {session.data['current_background_index'] + 1}: {original_result['description']}", 
+            f"Ursprungligt slag: {original_result['roll']} → {self.get_table_display_name(detailed_result['table_type'])}"
         )
         
         embed.add_field(
@@ -3653,10 +3626,10 @@ class InteractiveCharacterCreator:
         """Visar slutlig sammanfattning av alla bakgrundsslag"""
         processed_results = session.data.get('processed_background_results', [])
         
-        embed = discord.Embed(
-            title="🏆 Steg 14/32: Bakgrundshändelser - Sammanfattning",
-            description=f"Alla {len(processed_results)} bakgrundsslag är nu bearbetade:",
-            color=0x00ff00
+        embed = self.embed_factory.admin_message(
+            session.user_id, 
+            "🏆 Steg 14/32: Bakgrundshändelser - Sammanfattning", 
+            f"Alla {len(processed_results)} bakgrundsslag är nu bearbetade:"
         )
         
         for i, result in enumerate(processed_results, 1):
@@ -3746,10 +3719,10 @@ class InteractiveCharacterCreator:
         embeds = []
         
         # Embed 1: Grundläggande information
-        basic_embed = discord.Embed(
-            title="🎭 Karaktärssammanfattning - Del 1: Grundläggande",
-            description=f"Komplett översikt av din genererade EON-karaktär:",
-            color=0x00ff00
+        basic_embed = self.embed_factory.admin_message(
+            session.user_id, 
+            "🎭 Karaktärssammanfattning - Del 1: Grundläggande", 
+            f"Komplett översikt av din genererade EON-karaktär:"
         )
         
         # Grundinfo
@@ -3862,10 +3835,7 @@ class InteractiveCharacterCreator:
         embeds.append(basic_embed)
         
         # Embed 2: Familjebakgrund
-        family_embed = discord.Embed(
-            title="👨‍👩‍👧‍👦 Karaktärssammanfattning - Del 2: Familjebakgrund",
-            color=0x9932cc
-        )
+        family_embed = self.embed_factory.admin_message(session.user_id, "👨‍👩‍👧‍👦 Karaktärssammanfattning - Del 2: Familjebakgrund", "")
         
         # Visa familjebakgrundssummary från den kompletta familjedatan
         family_data = session.data.get('komplett_familjebakgrund')
@@ -3931,10 +3901,7 @@ class InteractiveCharacterCreator:
         embeds.append(family_embed)
         
         # Embed 3: Bakgrundshändelser
-        background_embed = discord.Embed(
-            title="📚 Karaktärssammanfattning - Del 3: Bakgrundshändelser",
-            color=0x8b4513
-        )
+        background_embed = self.embed_factory.admin_message(session.user_id, "📚 Karaktärssammanfattning - Del 3: Bakgrundshändelser", "")
         
         # Antal bakgrundslag
         background_rolls = session.data.get('antal_bakgrundslag', 0)
@@ -3971,10 +3938,7 @@ class InteractiveCharacterCreator:
         embeds.append(background_embed)
         
         # Embed 4: Färdighetsbonus från olika källor
-        skills_embed = discord.Embed(
-            title="🎯 Karaktärssammanfattning - Del 4: Färdighetsbonus",
-            color=0x32cd32
-        )
+        skills_embed = self.embed_factory.admin_message(session.user_id, "🎯 Karaktärssammanfattning - Del 4: Färdighetsbonus", "")
         
         # Samla färdighetsbonus från alla källor
         skill_bonuses = self.collect_all_skill_bonuses(session)
@@ -4005,11 +3969,7 @@ class InteractiveCharacterCreator:
         embeds.append(skills_embed)
         
         # Embed 5: Slutlig statusuppdatering
-        final_embed = discord.Embed(
-            title="🏆 Karaktärsskapande Slutfört!",
-            description="Din EON-karaktär är nu redo för äventyr!",
-            color=0xffd700
-        )
+        final_embed = self.embed_factory.admin_message(session.user_id, "🏆 Karaktärsskapande Slutfört!", "Din EON-karaktär är nu redo för äventyr!")
         
         final_embed.add_field(
             name="✅ Slutförda steg:",

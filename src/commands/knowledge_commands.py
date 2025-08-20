@@ -6,7 +6,7 @@ import anthropic
 from core.constants import MAX_TOKENS
 
 
-def register_knowledge_commands(bot, knowledge_base, color_handler):
+def register_knowledge_commands(bot, knowledge_base, color_handler, embed_factory):
     """
     Registrerar alla kunskapsrelaterade kommandon för boten.
     
@@ -53,17 +53,13 @@ def register_knowledge_commands(bot, knowledge_base, color_handler):
             response = knowledge_base.generate_response(query, context)
             
             # Skapa embed för svaret
-            color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(
-                title=f"Svar på: {query[:100]}{'...' if len(query) > 100 else ''}",
-                description=response,
-                color=color
+            embed = embed_factory.knowledge_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                query,
+                response,
+                sources
             )
-            
-            # Lägg till källor om de finns
-            if sources:
-                source_text = "\n".join([f"• {source}" for source in sources])
-                embed.add_field(name="Källor", value=source_text, inline=False)
             
             # Skicka svaret
             await ctx.send(embed=embed)
@@ -132,16 +128,15 @@ def register_knowledge_commands(bot, knowledge_base, color_handler):
                 ]
             )
             
-            # Skicka tillbaka svaret
-            color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(
-                title=f"Svar på: {query}",
-                description=response.content[0].text,
-                color=color
+            # Skicka tillbaka svaret  
+            sources_list = list(set(p['source'] for p in all_passages[:15]))
+            embed = embed_factory.knowledge_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                query,
+                response.content[0].text,
+                sources_list
             )
-            
-            sources = ", ".join(set(p['source'] for p in all_passages[:15]))
-            embed.add_field(name="Källor", value=sources, inline=False)
             
             await ctx.send(embed=embed)        
             
@@ -215,12 +210,15 @@ def register_knowledge_commands(bot, knowledge_base, color_handler):
                     return
                 
                 # Skapa ett snyggt svar
-                color = color_handler.get_user_color(ctx.author.id)
-                embed = discord.Embed(
-                    title=f"Sökresultat för: {search_terms}",
-                    description=f"Hittade {len(results)} träffar",
-                    color=color
+                embed = embed_factory.knowledge_result(
+                    ctx.author.id,
+                    ctx.author.display_name,
+                    search_terms,
+                    f"Hittade {len(results)} träffar",
+                    [filename for filename, _ in results[:5]]
                 )
+                embed.title = f"📚 Sökresultat för: {search_terms}"
+                embed.clear_fields()  # Clear default fields from knowledge_result
                 
                 # Lägg till max 5 träffar i svaret
                 for i, (filename, excerpt) in enumerate(results[:5]):

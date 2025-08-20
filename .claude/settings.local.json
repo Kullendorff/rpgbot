@@ -12,8 +12,13 @@
       "Bash(git push:*)",
       "Bash(cp:*)",
       "Bash(grep:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git checkout:*)"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:\\"
+    ]
   }
 }

@@ -183,12 +183,12 @@ class CharacterCreator:
         return "\n".join(lines)
 
 
-def register_commands(bot, roll_tracker, color_handler):
+def register_commands(bot, roll_tracker, color_handler, embed_factory):
     """Registrerar rollpersonsskapande-kommandon till boten"""
     
     creator = CharacterCreator()
     bg_generator = AutomaticBackgroundGenerator()
-    chargen = InteractiveCharacterCreator()
+    chargen = InteractiveCharacterCreator(embed_factory)
     
     @bot.command(name='attribut')
     async def attribut_command(ctx: commands.Context, method: str = "3d6"):
@@ -200,7 +200,16 @@ def register_commands(bot, roll_tracker, color_handler):
             attributes = creator.generate_attributes(method)
             attribute_sum = sum(attributes.values())
             color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(title=f"🎲 Grundattribut ({method})", description=f"Genererat av {ctx.author.display_name}", color=color)
+            embed = embed_factory.dice_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                "attribut",
+                f"Grundattribut ({method})",
+                list(attributes.values()),
+                attribute_sum,
+                None,
+                None
+            )
             attr_text = "\n".join(f"**{attr}:** {value}" for attr, value in attributes.items())
             embed.add_field(name="Attribut", value=attr_text, inline=True)
             embed.add_field(name="Totalsumma", value=str(attribute_sum), inline=True)
@@ -223,7 +232,7 @@ def register_commands(bot, roll_tracker, color_handler):
         action_lower = action.lower()
         if action_lower == "lista":
             color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(title="🏛️ Tillgängliga Folkslag", description="Alla folkslag med attributmodifikationer", color=color)
+            embed = embed_factory.admin_message(ctx.author.id, "Tillgängliga Folkslag", "Alla folkslag med attributmodifikationer")
             for category, races in creator.tables['attribute_modifiers'].items():
                 if races:
                     race_list = ", ".join(race.capitalize() for race in races.keys())
@@ -243,7 +252,7 @@ def register_commands(bot, roll_tracker, color_handler):
                 await ctx.send(f"Folkslag '{action}' hittades inte. Använd `!folkslag lista` för att se alla.")
                 return
             color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(title=f"🏛️ {race_lower.capitalize()}", description="Attributmodifikationer", color=color)
+            embed = embed_factory.admin_message(ctx.author.id, f"{race_lower.capitalize()}", "Attributmodifikationer")
             mod_text = "\n".join(f"**{attr}:** {'+' if mod >= 0 else ''}{mod}" for attr, mod in race_mods.items())
             embed.add_field(name="Modifikationer", value=mod_text, inline=False)
             await ctx.send(embed=embed)
@@ -267,7 +276,7 @@ def register_commands(bot, roll_tracker, color_handler):
         results = creator.roll_on_table(table_name, antal)
         
         color = color_handler.get_user_color(ctx.author.id)
-        embed = discord.Embed(title=f"🎲 {typ.capitalize()} Egenskap{'er' if antal > 1 else ''}", description=f"Resultat för {ctx.author.display_name}", color=color)
+        embed = embed_factory.dice_result(ctx.author.id, ctx.author.display_name, "egenskap", f"{typ.capitalize()} Egenskap{'er' if antal > 1 else ''}", [], None, None, None)
         
         # FIX: Uppdaterad logik för att visa resultaten korrekt
         for result in results:
@@ -294,7 +303,7 @@ def register_commands(bot, roll_tracker, color_handler):
             character = creator.generate_complete_npc(folkslag, ålder)
             char_text = creator.format_character_display(character)
             color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(title="🧙‍♂️ Genererad NPC", description=char_text, color=color)
+            embed = embed_factory.admin_message(ctx.author.id, "Genererad NPC", char_text)
             embed.set_footer(text=f"Genererad av {ctx.author.display_name}")
             await ctx.send(embed=embed)
         except Exception as e:
@@ -307,7 +316,7 @@ def register_commands(bot, roll_tracker, color_handler):
             return
         results = creator.roll_on_table('background_tables', antal)
         color = color_handler.get_user_color(ctx.author.id)
-        embed = discord.Embed(title=f"🎲 Huvudbakgrundstabellen ({antal} slag)", description=f"Slaget av {ctx.author.display_name}", color=color)
+        embed = embed_factory.dice_result(ctx.author.id, ctx.author.display_name, "bakgrund", f"Huvudbakgrundstabellen ({antal} slag)", [], None, None, None)
         
         for i, result in enumerate(results, 1):
             if 'error' in result:
@@ -336,10 +345,10 @@ def register_commands(bot, roll_tracker, color_handler):
             summary = bg_generator.format_background_summary(background)
             
             color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(
-                title=f"👨‍👩‍👧‍👦 Familjebakgrund - {folkslag.capitalize()}, {ålder} år",
-                description=summary,
-                color=color
+            embed = embed_factory.admin_message(
+                ctx.author.id,
+                f"Familjebakgrund - {folkslag.capitalize()}, {ålder} år",
+                summary
             )
             embed.set_footer(text=f"Genererad av {ctx.author.display_name}")
             
@@ -428,10 +437,10 @@ def register_commands(bot, roll_tracker, color_handler):
         
         elif action == "help":
             # Visa hjälp
-            embed = discord.Embed(
-                title="🎲 Chargen - Interaktivt Karaktärsskapande",
-                description="Kommandon för 33-stegs EON karaktärsskapande",
-                color=0x0099ff
+            embed = embed_factory.admin_message(
+                ctx.author.id,
+                "Chargen - Interaktivt Karaktärsskapande",
+                "Kommandon för 33-stegs EON karaktärsskapande"
             )
             embed.add_field(
                 name="📋 Grundkommandon",
@@ -458,10 +467,9 @@ def register_commands(bot, roll_tracker, color_handler):
         
         elif action is None:
             # Visa huvudmeny
-            embed = discord.Embed(
-                title="🎲 EON Diceroller - Karaktärsskapande",
-                description="Välkommen till det interaktiva karaktärsskapande-systemet!",
-                color=0x00ff00
+            embed = embed_factory.success_message(
+                ctx.author.id,
+                "EON Diceroller - Karaktärsskapande\n\nVälkommen till det interaktiva karaktärsskapande-systemet!"
             )
             embed.add_field(
                 name="🚀 Kom igång",

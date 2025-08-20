@@ -14,7 +14,7 @@ from core.dice_engine import unlimited_d6s
 from core.constants import MAX_DICE, MAX_SIDES
 
 
-def register_utility_commands(bot: commands.Bot, roll_tracker, color_handler) -> None:
+def register_utility_commands(bot: commands.Bot, roll_tracker, color_handler, embed_factory) -> None:
     """
     Register all utility commands with the bot.
     
@@ -42,10 +42,10 @@ def register_utility_commands(bot: commands.Bot, roll_tracker, color_handler) ->
             ctx (commands.Context): Kontexten för kommandot.
         """
         color: int = color_handler.get_user_color(ctx.author.id)
-        embed: discord.Embed = discord.Embed(
-            title="🎲 Kullens Tärningsrullare",
-            description="För alla dina tärningsbehov. Nästan",
-            color=color
+        embed = embed_factory.admin_message(
+            ctx.author.id,
+            "Kullens Tärningsrullare",
+            "För alla dina tärningsbehov. Nästan"
         )
         embed.add_field(
             name="Grundläggande Tärningsslag",
@@ -141,14 +141,11 @@ def register_utility_commands(bot: commands.Bot, roll_tracker, color_handler) ->
             return
 
         color: int = color_handler.get_user_color(ctx.author.id)
-        embed: discord.Embed = discord.Embed(
-            title="Session Statistics",
-            description=(
-                f"Session: {session_id or roll_tracker.current_session}\n"
-                f"Total Players: {stats['session_info']['unique_players']}\n"
-                f"Total Rolls: {stats['session_info']['total_rolls']}"
-            ),
-            color=color
+        embed = embed_factory.stats_overview(
+            ctx.author.id,
+            "Session",
+            stats['session_info'],
+            session_id or roll_tracker.current_session
         )
         session_info: dict = stats["session_info"]
         embed.add_field(
@@ -205,10 +202,11 @@ def register_utility_commands(bot: commands.Bot, roll_tracker, color_handler) ->
             return
 
         color: int = color_handler.get_user_color(ctx.author.id)
-        embed: discord.Embed = discord.Embed(
-            title=f"Stats for {ctx.author.display_name}",
-            description=f"Session: {session_id or roll_tracker.current_session}",
-            color=color
+        embed = embed_factory.stats_overview(
+            ctx.author.id,
+            ctx.author.display_name,
+            stats,
+            session_id or roll_tracker.current_session
         )
 
         recent_rolls: List[dict] = stats["rolls"][:5]
@@ -308,13 +306,15 @@ def register_utility_commands(bot: commands.Bot, roll_tracker, color_handler) ->
             
             # Förbered resultattexten
             color = color_handler.get_user_color(ctx.author.id)
-            embed = discord.Embed(
-                title=f"{ctx.author.display_name}s Förbättringsslag",
-                description=(
-                    f"**Ob{num_dice}T6** för {'lättlärd' if is_easy_learnable else 'normal'} färdighet "
-                    f"med färdighetschans {skill_chance}"
-                ),
-                color=color
+            embed = embed_factory.dice_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                "höj",
+                f"Ob{num_dice}T6",
+                initial_rolls,
+                final_total,
+                skill_chance,
+                success
             )
             
             embed.add_field(name="Första kastomgången", value=str(initial_rolls), inline=False)

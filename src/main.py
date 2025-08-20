@@ -67,6 +67,10 @@ color_handler: ColorHandler = ColorHandler()
 roll_tracker: RollTracker = RollTracker()
 combat_manager: CombatManager = CombatManager()
 
+# Skapa embed factory (MÅSTE komma efter color_handler)
+from core.embed_factory import EmbedFactory
+embed_factory = EmbedFactory(color_handler)
+
 # Konfigurera mappar för regler och kunskapsindex
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(script_dir)
@@ -145,7 +149,7 @@ async def on_ready() -> None:
         print("Kunde inte initiera kunskapsbasen. Kommandot !ask kommer inte att fungera korrekt.")
         
     # Registrera statistikkommandona
-    stats_commands.register_commands(bot, roll_tracker, color_handler)
+    stats_commands.register_commands(bot, roll_tracker, color_handler, embed_factory)
     print("Statistikkommandon har registrerats (allstats, mystatsall).")
     
     # Registrera Skjut dom i huvudet-kommandon
@@ -153,24 +157,24 @@ async def on_ready() -> None:
     print("Skjut dom i huvudet-kommandon har registrerats (rull, fördel, nackdel, etc.).")
     
     # Registrera admin-kommandon
-    admin_commands.register_admin_commands(bot, roll_tracker, color_handler, knowledge_base)
+    admin_commands.register_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
     print("Admin-kommandon har registrerats (startsession, endsession, showsession, secret).")
     
     # Registrera nya modulära kommandon
-    register_dice_commands(bot, roll_tracker, color_handler, knowledge_base)
+    register_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
     print("Tärningskommandon har registrerats (roll, ex, count, chance).")
     
-    register_knowledge_commands(bot, knowledge_base, color_handler)
+    register_knowledge_commands(bot, knowledge_base, color_handler, embed_factory)
     print("Kunskapskommandon har registrerats (ask, allt, sök).")
     
-    register_combat_commands(bot, combat_manager, color_handler)
+    register_combat_commands(bot, combat_manager, color_handler, embed_factory)
     print("Stridskommandon har registrerats (hugg, stick, kross, fummel).")
     
-    register_utility_commands(bot, roll_tracker, color_handler)
+    register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
     print("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
 
     # Registrera karaktärsgenereringskommandon
-    character_creation.register_commands(bot, roll_tracker, color_handler)
+    character_creation.register_commands(bot, roll_tracker, color_handler, embed_factory)
     print("Karaktärsgenereringskommandon har registrerats.")
     
     print("Alla kommandon har registrerats och boten är redo!")

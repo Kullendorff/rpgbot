@@ -117,7 +117,7 @@ class CombatManager:
             "fot": "ben"
         }
 
-    def _get_hit_location(self, attack_level: str, location_roll: int, dtype: DamageType) -> Tuple[str, Optional[int], str]:
+    def _get_hit_location(self, attack_level: str, location_roll: int, dtype: DamageType) -> Tuple[str, Optional[int], str, str]:
         """
         Bestämmer träffområdet baserat på attacknivå, rullat värde och skadetyp.
         
@@ -127,7 +127,7 @@ class CombatManager:
             dtype (DamageType): Den aktuella skadetypen.
         
         Returns:
-            Tuple[str, Optional[int], str]: En tuple med (hit_location, sub_roll, sub_location).
+            Tuple[str, Optional[int], str, str]: En tuple med (hit_location, sub_roll, sub_location, table_code).
         
         Raises:
             ValueError: Om attack_level saknas i tabellen eller om slaget är ogiltigt.
@@ -141,8 +141,9 @@ class CombatManager:
                     sub_roll: int = random.randint(1, 10)
                     for (sub_lower, sub_upper), sub_location in self.DELOMRADE_TABLE["huvud"].items():
                         if sub_lower <= sub_roll <= sub_upper:
-                            return location, sub_roll, sub_location
-                return location, None, location
+                            return location, sub_roll, sub_location, code
+                # Använd subloc från tabellen istället för location - det är den exakta kroppsdelen
+                return location, None, subloc, code
         raise ValueError(f"Ogiltigt slag {location_roll} för {dtype.name} / {attack_level}")
 
     def _get_sub_location(self, main_location: str) -> Tuple[str, Optional[int]]:
@@ -168,7 +169,7 @@ class CombatManager:
         attack_level: Optional[str],
         location_override: Optional[str],
         damage_type: DamageType
-    ) -> Tuple[str, Optional[int], str, str]:
+    ) -> Tuple[str, Optional[int], str, str, str]:
         """
         Bestämmer träffområdet baserat på antingen override eller genom att slå slumpmässigt.
         
@@ -178,11 +179,12 @@ class CombatManager:
             damage_type (DamageType): Den aktuella skadetypen.
         
         Returns:
-            Tuple[str, Optional[int], str, str]:
+            Tuple[str, Optional[int], str, str, str]:
                 - damage_location: Området som används i skadetabellen.
                 - location_roll: Det rullade värdet (None om override används).
                 - hit_location: Huvudträffområdet.
                 - sub_location: Det bestämda delområdet.
+                - table_code: Den riktiga koden från tabellen.
         
         Raises:
             ValueError: Om varken attack_level eller override anges, eller om mappning misslyckas.
@@ -192,15 +194,15 @@ class CombatManager:
             sub_location, _ = self._get_sub_location(hit_location)
             location_roll: Optional[int] = None
             damage_location: Optional[str] = self.location_mapping.get(sub_location.lower())
-            return damage_location, location_roll, hit_location, sub_location
+            return damage_location, location_roll, hit_location, sub_location, "override"
         else:
             if not attack_level:
                 raise ValueError("Antingen attack_level eller location_override måste anges")
             location_roll = random.randint(1, 100)
-            hit_location, _, _ = self._get_hit_location(attack_level, location_roll, damage_type)
-            sub_location, _ = self._get_sub_location(hit_location)
+            hit_location, _, sub_location, table_code = self._get_hit_location(attack_level, location_roll, damage_type)
+            # Använd sub_location från tabellen direkt - det är den exakta kroppsdelen
             damage_location: Optional[str] = self.location_mapping.get(sub_location.lower())
-            return damage_location, location_roll, hit_location, sub_location
+            return damage_location, location_roll, hit_location, sub_location, table_code
 
     def process_attack(
         self,
@@ -245,7 +247,7 @@ class CombatManager:
         }[w_type]
 
         # Bestäm träffområde
-        damage_location, location_roll, hit_location, sub_location = self._determine_location(attack_level, location_override, damage_type)
+        damage_location, location_roll, hit_location, sub_location, table_code = self._determine_location(attack_level, location_override, damage_type)
         if not damage_location:
             raise ValueError(f"Kunde inte mappa träffområde: {hit_location} -> {sub_location}")
 
@@ -257,7 +259,8 @@ class CombatManager:
             use_malpunkter=use_malpunkter
         )
 
-        location_code: str = str(location_roll) if location_roll is not None else "override"
+        # Använd den riktiga koden från tabellen, inte träffslaget
+        location_code: str = table_code
 
         return CombatResult(
             weapon_type=w_type,

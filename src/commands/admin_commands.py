@@ -19,7 +19,7 @@ from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsErr
 from core.dice_engine import unlimited_d6s
 
 
-def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
+def register_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base):
     """
     Register all admin commands with the bot.
     
@@ -141,11 +141,10 @@ def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
                 summary = response.content[0].text.strip()
                 
                 # Skapa en snygg embed med sammanfattningen
-                color = color_handler.get_user_color(ctx.author.id)
-                embed = discord.Embed(
-                    title="🎭 Humoristisk sessionssammanfattning",
-                    description=summary,
-                    color=color
+                embed = embed_factory.admin_message(
+                    ctx.author.id,
+                    "Humoristisk sessionssammanfattning",
+                    summary
                 )
                 
                 # Lägg till grundläggande statistik
@@ -213,11 +212,8 @@ def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
             dice_args: List[str] = list(args[1:])
 
             color: int = color_handler.get_user_color(ctx.author.id)
-            result_embed: discord.Embed = discord.Embed(
-                title="🎲 Secret Roll",
-                description=f"Command: !{command_type} {' '.join(dice_args)}",
-                color=color
-            )
+            # Will be replaced with appropriate factory method based on command type
+            result_embed = None
 
             if command_type == "roll":
                 if len(dice_args) < 1 or len(dice_args) > 2:
@@ -245,17 +241,27 @@ def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
                     return
                 rolls: List[int] = [random.randint(1, sides) for _ in range(num_dice)]
                 total: int = sum(rolls) + modifier
-
-                result_embed.add_field(name="Rolls", value=str(rolls), inline=False)
-                if modifier != 0:
-                    result_embed.add_field(name="Modifier", value=str(modifier), inline=True)
-                result_embed.add_field(name="Total", value=str(total), inline=True)
-
+                
+                dice_expr = f"{num_dice}d{sides}"
+                if modifier > 0:
+                    dice_expr += f"+{modifier}"
+                elif modifier < 0:
+                    dice_expr += str(modifier)
+                
+                success = None
                 if target is not None:
-                    difference: int = target - total
-                    success: bool = total <= target
-                    result: str = f"✅ Success! ({difference:+d})" if success else f"❌ Failure ({difference:+d})"
-                    result_embed.add_field(name=f"Skill Check (Target: {target})", value=result, inline=False)
+                    success = total <= target
+
+                result_embed = embed_factory.dice_result(
+                    ctx.author.id,
+                    "Secret GM Roll",
+                    "secret",
+                    dice_expr,
+                    rolls,
+                    total,
+                    target,
+                    success
+                )
 
             elif command_type == "ex":
                 if len(dice_args) < 1 or len(dice_args) > 2:
@@ -381,10 +387,10 @@ def register_admin_commands(bot, roll_tracker, color_handler, knowledge_base):
 
             await ctx.author.send(embed=result_embed)
 
-            confirm_embed: discord.Embed = discord.Embed(
-                title="🎲 Secret Roll",
-                description=f"{ctx.author.display_name} made a secret {command_type}",
-                color=color
+            confirm_embed = embed_factory.admin_message(
+                ctx.author.id,
+                "Secret Roll",
+                f"{ctx.author.display_name} made a secret {command_type}"
             )
             await ctx.send(embed=confirm_embed)
 

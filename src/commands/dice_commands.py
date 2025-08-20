@@ -4,7 +4,7 @@ from typing import List, Optional, Tuple, Any
 import discord
 from discord.ext import commands
 
-def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
+def register_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base):
     """Registrera alla tärnings-relaterade kommandon."""
     
     # Import här för att undvika cirkulära imports
@@ -84,17 +84,21 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
                 success=None
             )
 
-            embed: discord.Embed = discord.Embed(
-                title=f"{ctx.author.display_name}'s Count Check",
-                description=f"**Rolling {num_dice}d{sides}**, counting results >= {target}",
-                color=color
+            embed = embed_factory.dice_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                "count",
+                f"{num_dice}d{sides}",
+                rolls,
+                None,  # No total for count
+                target,
+                successes > 0
             )
-            roll_display: str = ", ".join(formatted_rolls)
-            embed.add_field(name="Rolls", value=f"[{roll_display}]", inline=False)
-
+            
+            # Add custom field for count results
             success_text: str = "Success" if successes == 1 else "Successes"
             success_display: str = f"✨ {successes} {success_text}" if successes > 0 else "❌ No successes"
-            embed.add_field(name="Results", value=success_display, inline=False)
+            embed.add_field(name="Träffar", value=success_display, inline=False)
 
             await ctx.send(embed=embed)
             
@@ -239,20 +243,27 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
                 success=success
             )
 
-            embed: discord.Embed = discord.Embed(
-                title=f"{ctx.author.display_name}'s Roll",
-                description=f"**Rolling {num_dice}d{sides}{'+' + str(modifier) if modifier > 0 else str(modifier) if modifier < 0 else ''}**",
-                color=color
+            # Bygg dice expression för display
+            dice_expr = f"{num_dice}d{sides}"
+            if modifier > 0:
+                dice_expr += f"+{modifier}"
+            elif modifier < 0:
+                dice_expr += str(modifier)
+                
+            embed = embed_factory.dice_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                "roll",
+                dice_expr,
+                rolls,
+                total,
+                target,
+                success
             )
-            embed.add_field(name="Rolls", value=str(rolls), inline=False)
+            
+            # Add modifier field if present
             if modifier != 0:
-                embed.add_field(name="Modifier", value=str(modifier), inline=True)
-            embed.add_field(name="Total", value=str(total), inline=True)
-
-            if target is not None:
-                difference: int = target - total
-                result: str = f"✅ Success! ({difference:+d})" if total <= target else f"❌ Failure ({difference:+d})"
-                embed.add_field(name=f"Skill Check (Target: {target})", value=result, inline=False)
+                embed.add_field(name="Modifierare", value=str(modifier), inline=True)
                 
             await ctx.send(embed=embed)
             
@@ -381,18 +392,24 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
             else:
                 result_text = "Resultat: " + str(final_total)
 
-            color: int = color_handler.get_user_color(ctx.author.id)
-            embed: discord.Embed = discord.Embed(
-                title=f"{ctx.author.display_name}'s Obegränsade T6-slag",
-                description=(
-                    f"**{num_dice}d6{'+' + str(modifier) if modifier > 0 else str(modifier) if modifier < 0 else ''}**\n"
-                    "(Varje 6 tas bort från summan men genererar +2 nya tärningar)"
-                ),
-                color=color
+            # Bygg dice expression för display  
+            dice_expr = f"{num_dice}d6"
+            if modifier > 0:
+                dice_expr += f"+{modifier}"
+            elif modifier < 0:
+                dice_expr += str(modifier)
+                
+            embed = embed_factory.dice_result(
+                ctx.author.id,
+                ctx.author.display_name,
+                "ex",
+                dice_expr,
+                initial_rolls,
+                final_total,
+                target,
+                success
             )
-            embed.add_field(name="Första kastomgången", value=str(initial_rolls), inline=False)
             embed.add_field(name="Alla kast (inkl. extra)", value=str(all_rolls), inline=False)
-            embed.add_field(name="Slutsumma (utan 6:or) + ev. modifierare", value=str(final_total), inline=True)
 
             if target is not None:
                 difference: int = target - final_total
@@ -489,13 +506,19 @@ def register_dice_commands(bot, roll_tracker, color_handler, knowledge_base):
                 success_rate = simulate_unlimited_dice(num_dice, modifier, target)
                 
                 # Skapa ett snyggt svar
-                color = color_handler.get_user_color(ctx.author.id)
-                embed = discord.Embed(
-                    title="Sannolikhetsberäkning (Obegränsad T6)",
-                    description=f"Slag: `{dice_spec}` mot målvärde `{target}`",
-                    color=color
+                embed = embed_factory.dice_result(
+                    ctx.author.id,
+                    ctx.author.display_name,
+                    "chance",
+                    dice_spec,
+                    [],  # No actual rolls for probability
+                    None,  # No total
+                    target,
+                    None  # No actual success/fail
                 )
                 
+                # Override with probability specific content
+                embed.clear_fields()
                 embed.add_field(
                     name="Chans att lyckas",
                     value=f"**{success_rate:.1f}%**",

@@ -74,6 +74,84 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
         
         await interaction.response.send_message(embed=embed, ephemeral=True)
     
+    @manip_group.command(name="aktivera_id", description="Aktivera manipulation via User ID (hemligt)")
+    @app_commands.describe(
+        user_id="Discord User ID (högerklicka på användare > Kopiera Användar-ID)",
+        typ="Typ av manipulation"
+    )
+    @app_commands.choices(typ=[
+        app_commands.Choice(name="Lycka (automatisk framgång)", value="lycka"),
+        app_commands.Choice(name="Olycka (automatisk misslyckande)", value="olycka")
+    ])
+    @app_commands.default_permissions(manage_guild=True)
+    async def activate_player_manipulation_by_id(
+        interaction: discord.Interaction,
+        user_id: str,
+        typ: str
+    ):
+        """Aktivera hemlig manipulation för spelare via User ID."""
+        # KRITISK: GM-kontroll
+        if not any(role.name == 'Game Master' for role in interaction.user.roles):
+            await interaction.response.send_message(
+                "Du behöver Game Master-roll för detta kommando.", 
+                ephemeral=True
+            )
+            return
+        
+        # Validera User ID
+        try:
+            user_id_int = int(user_id)
+            user = bot.get_user(user_id_int)
+            if not user:
+                await interaction.response.send_message(
+                    f"❌ Kunde inte hitta användare med ID: {user_id}",
+                    ephemeral=True
+                )
+                return
+        except ValueError:
+            await interaction.response.send_message(
+                "❌ Ogiltigt User ID. Måste vara ett nummer.",
+                ephemeral=True
+            )
+            return
+        
+        success = manipulation_manager.set_player_manipulation(
+            user_id, typ, str(interaction.user.id)
+        )
+        
+        if success:
+            type_names = {
+                "lycka": "Lycka (automatisk framgång)",
+                "olycka": "Olycka (automatisk misslyckande)"
+            }
+            
+            embed = discord.Embed(
+                title="🎭 Hemlig Manipulation Aktiverad (via ID)",
+                description=f"**Spelare:** {user.display_name} ({user.name})\n"
+                           f"**User ID:** {user_id}\n"
+                           f"**Typ:** {type_names[typ]}\n\n"
+                           f"⚠️ **HEMLIGT** - Spelaren vet inte om detta!\n"
+                           f"Alla tärningsslag med målvärde kommer påverkas automatiskt.",
+                color=discord.Color.dark_purple()
+            )
+            
+            embed.add_field(
+                name="🔍 Vad händer nu?",
+                value=f"• {user.display_name}s slag manipuleras automatiskt\n"
+                      f"• Ingen visuell indikation för spelaren\n"
+                      f"• Endast slag med målvärde påverkas\n"
+                      f"• Använd `/manipulation status` för att se alla aktiva",
+                inline=False
+            )
+        else:
+            embed = discord.Embed(
+                title="❌ Manipulation Misslyckades",
+                description=f"Kunde inte aktivera manipulation för User ID: {user_id}",
+                color=discord.Color.red()
+            )
+        
+        await interaction.response.send_message(embed=embed, ephemeral=True)
+    
     @manip_group.command(name="aktivera_gm", description="Aktivera manipulation för dig själv (hemligt)")
     @app_commands.describe(typ="Typ av GM-manipulation")
     @app_commands.choices(typ=[

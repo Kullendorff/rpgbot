@@ -4,6 +4,7 @@ Implementerar session management, secret commands och GM-only funktionalitet.
 """
 
 import os
+import sys
 import time
 import json
 from datetime import datetime, timedelta
@@ -11,6 +12,9 @@ from typing import List, Optional, Dict, Any
 import discord
 from discord.ext import commands
 from discord import app_commands
+
+# Add src to path for imports
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import migration helpers
 from migration.helper import MigrationHelper, SlashCommandDecorator

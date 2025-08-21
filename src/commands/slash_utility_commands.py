@@ -44,17 +44,32 @@ class UtilitySlashCommands(commands.Cog):
         interaction: discord.Interaction,
         current: str,
     ) -> List[app_commands.Choice[str]]:
-        """Autocomplete för regelnamn."""
+        """Autocomplete för regelnamn och nummer."""
         try:
             rules = os.listdir(self.RULES_FOLDER)
-            rule_names = [os.path.splitext(rule)[0] for rule in rules if rule.endswith('.txt')]
+            txt_rules = sorted([rule for rule in rules if rule.endswith('.txt')])
+            rule_names = [os.path.splitext(rule)[0] for rule in txt_rules]
             
-            # Filtrera baserat på current input
-            matches = [
-                app_commands.Choice(name=rule_name.capitalize(), value=rule_name)
-                for rule_name in rule_names
-                if current.lower() in rule_name.lower()
-            ]
+            matches = []
+            
+            # Om input är numerisk, föreslå nummer
+            if current.isdigit():
+                for i, rule_name in enumerate(rule_names, 1):
+                    if str(i).startswith(current):
+                        matches.append(
+                            app_commands.Choice(name=f"{i}. {rule_name.title()}", value=str(i))
+                        )
+            else:
+                # Föreslå namn och nummer som matchar
+                for i, rule_name in enumerate(rule_names, 1):
+                    if current.lower() in rule_name.lower():
+                        # Lägg till både nummer och namn som alternativ
+                        matches.append(
+                            app_commands.Choice(name=f"{i}. {rule_name.title()}", value=str(i))
+                        )
+                        matches.append(
+                            app_commands.Choice(name=rule_name.title(), value=rule_name)
+                        )
             
             return matches[:25]  # Discord limit
         except:
@@ -433,23 +448,23 @@ class UtilitySlashCommands(commands.Cog):
 
     @app_commands.command(name="regel", description="Visa sparade regler från regelbiblioteket")
     @app_commands.describe(
-        namn="Namnet på regeln att visa (autocomplete tillgängligt)"
+        val="Regelnamn eller nummer (t.ex. 'strid' eller '1')"
     )
-    @app_commands.autocomplete(namn=rule_autocomplete)
+    @app_commands.autocomplete(val=rule_autocomplete)
     async def rule_slash(
         self,
         interaction: discord.Interaction,
-        namn: Optional[str] = None
+        val: Optional[str] = None
     ):
         """Slash command version av !regel med autocomplete."""
         start_time = time.time()
         
         try:
             rules = os.listdir(self.RULES_FOLDER)
-            txt_rules = [rule for rule in rules if rule.endswith('.txt')]
+            txt_rules = sorted([rule for rule in rules if rule.endswith('.txt')])  # Sorterad för konsistent numrering
             
-            if not namn:
-                # Lista alla regler
+            if not val:
+                # Lista alla regler med nummer
                 if not txt_rules:
                     embed = await self.helper.create_error_response(
                         interaction.user.id,
@@ -465,12 +480,17 @@ class UtilitySlashCommands(commands.Cog):
                     f"Totalt {len(txt_rules)} regler i biblioteket"
                 )
                 
-                # Gruppera regler i chunks för bättre presentation
+                # Skapa numrerad lista
                 rule_names = [os.path.splitext(rule)[0] for rule in txt_rules]
-                rule_text = "\n".join(f"• {rule_name.title()}" for rule_name in rule_names[:20])
+                rule_lines = []
                 
-                if len(rule_names) > 20:
-                    rule_text += f"\n... och {len(rule_names) - 20} till"
+                for i, rule_name in enumerate(rule_names, 1):
+                    rule_lines.append(f"`{i}.` **{rule_name.title()}**")
+                    if i >= 20:  # Begränsa för att inte överskrida Discord-gränser
+                        rule_lines.append(f"... och {len(rule_names) - 20} till")
+                        break
+                
+                rule_text = "\n".join(rule_lines)
                 
                 embed.add_field(
                     name="Regelnamn",
@@ -478,26 +498,45 @@ class UtilitySlashCommands(commands.Cog):
                     inline=False
                 )
                 
-                embed.set_footer(text="Använd /regel [regelnamn] för att visa en specifik regel")
+                embed.set_footer(text="Använd /regel val:1 eller /regel val:regelnamn för att visa specifik regel")
                 
             else:
-                # Visa specifik regel
-                rule_name = namn  # Använd parametern 'namn' som rule_name
-                rule_file = f"{rule_name}.txt"
-                if rule_file not in txt_rules:
-                    # Försök hitta match
-                    matches = [rule for rule in txt_rules if rule_name.lower() in rule.lower()]
-                    if matches:
-                        rule_file = matches[0]
+                # Visa specifik regel - hantera både nummer och namn
+                rule_file = None
+                rule_name = None
+                
+                # Kolla om input är ett nummer
+                if val.isdigit():
+                    rule_num = int(val)
+                    if 1 <= rule_num <= len(txt_rules):
+                        rule_file = txt_rules[rule_num - 1]  # Konvertera från 1-indexerad till 0-indexerad
                         rule_name = os.path.splitext(rule_file)[0]
                     else:
                         embed = await self.helper.create_error_response(
                             interaction.user.id,
-                            f"Regel '{rule_name}' hittades inte",
-                            f"Tillgängliga regler: {', '.join([os.path.splitext(r)[0] for r in txt_rules[:5]])}"
+                            f"Regel nummer {rule_num} finns inte",
+                            f"Tillgängliga regler: 1-{len(txt_rules)}. Använd /regel för att se listan."
                         )
                         await self.helper.send_response(interaction, embed=embed)
                         return
+                else:
+                    # Hantera som namn
+                    rule_name = val
+                    rule_file = f"{rule_name}.txt"
+                    if rule_file not in txt_rules:
+                        # Försök hitta match
+                        matches = [rule for rule in txt_rules if rule_name.lower() in rule.lower()]
+                        if matches:
+                            rule_file = matches[0]
+                            rule_name = os.path.splitext(rule_file)[0]
+                        else:
+                            embed = await self.helper.create_error_response(
+                                interaction.user.id,
+                                f"Regel '{rule_name}' hittades inte",
+                                f"Tillgängliga regler: {', '.join([os.path.splitext(r)[0] for r in txt_rules[:5]])}... Använd /regel för fullständig lista."
+                            )
+                            await self.helper.send_response(interaction, embed=embed)
+                            return
                 
                 # Läs regelfilen
                 with open(os.path.join(self.RULES_FOLDER, rule_file), "r", encoding="utf-8") as f:
@@ -514,7 +553,7 @@ class UtilitySlashCommands(commands.Cog):
             
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "regel", {
-                "rule_name": namn if namn else "all_rules",
+                "rule_name": val if val else "all_rules",
                 "rules_available": len(txt_rules)
             }, execution_time)
             

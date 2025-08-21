@@ -124,10 +124,33 @@ async def on_ready() -> None:
         from commands.slash_utility_commands import register_slash_utility_commands
         await register_slash_utility_commands(bot, roll_tracker, color_handler, embed_factory)
     
+    if FEATURE_FLAGS["slash_admin_enabled"]:
+        from commands.slash_admin_commands import register_slash_admin_commands
+        await register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+    
+    # Registrera kommentarkommandon FÖRE sync
+    from commands.slash_comment_commands import register_slash_comment_commands
+    register_slash_comment_commands(bot, user_settings, comment_generator, color_handler)
+    print("Slash kommentarkommandon registrerade (/kommentarer).")
+
+    # Registrera hemliga manipulationskommandon FÖRE sync
+    from commands.slash_manipulation_commands import register_slash_manipulation_commands
+    register_slash_manipulation_commands(bot, manipulation_manager, color_handler)
+    print("Slash manipulationskommandon registrerade (hemliga).")
+    
+    # DEBUG: Lägg till debug kommando för att testa användarpermissions
+    import sys
+    sys.path.append(os.path.join(project_root))
+    from debug_user_info import register_debug_command
+    register_debug_command(bot)
+    
     # Synka slash commands EN gång i slutet
     try:
         synced = await bot.tree.sync()
         print(f"Synced {len(synced)} slash commands with Discord")
+        # Debug: Lista alla synkade kommandon
+        for cmd in synced:
+            print(f"  - /{cmd.name}: {cmd.description}")
     except Exception as e:
         print(f'Failed to sync slash commands: {e}')
     
@@ -162,16 +185,6 @@ async def on_ready() -> None:
     
     register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
     print("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
-
-    # Registrera kommentarkommandon
-    from commands.slash_comment_commands import register_slash_comment_commands
-    register_slash_comment_commands(bot, user_settings, comment_generator, color_handler)
-    print("✅ Slash kommentarkommandon registrerade (/kommentarer).")
-
-    # Registrera hemliga manipulationskommandon
-    from commands.slash_manipulation_commands import register_slash_manipulation_commands
-    register_slash_manipulation_commands(bot, manipulation_manager, color_handler)
-    print("✅ Slash manipulationskommandon registrerade (hemliga).")
 
     # Registrera karaktärsgenereringskommandon
     character_creation.register_commands(bot, roll_tracker, color_handler, embed_factory)

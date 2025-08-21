@@ -18,8 +18,8 @@ FEATURE_FLAGS = {
     "dual_mode_knowledge": True,         # Kör både ! och / för knowledge commands
     
     # Admin commands
-    "slash_admin_enabled": False,        # /startsession, /endsession etc
-    "dual_mode_admin": False,            # Kör både ! och / för admin commands
+    "slash_admin_enabled": True,         # /startsession, /endsession etc
+    "dual_mode_admin": True,             # Kör både ! och / för admin commands
     
     # Utility commands
     "slash_utility_enabled": True,       # /stats, /mystats, /regel etc
@@ -54,11 +54,11 @@ COMMAND_FLAGS = {
     "sök": True,
     "allt": True,
     
-    # Admin commands - alla av för nu
-    "startsession": False,
-    "endsession": False,
-    "showsession": False,
-    "secret": False,
+    # Admin commands - aktiverade för GM
+    "startsession": True,
+    "endsession": True,
+    "showsession": True,
+    "secret": True,
     
     # Utility commands - aktivera för test
     "stats": True,

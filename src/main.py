@@ -1,4 +1,5 @@
 import os
+os.environ['FOR_DISABLE_CONSOLE_CTRL_HANDLER'] = '1'
 import random
 import re
 from typing import Tuple, Optional, List, Any, Dict, Union
@@ -130,13 +131,32 @@ async def on_ready() -> None:
     print(f"Rules folder: {RULES_FOLDER}")
     print(f"Index folder: {INDEX_FOLDER}")
     
-    # Rensa slash commands
+    # Registrera slash commands enligt feature flags
+    import sys
+    sys.path.append(os.path.join(project_root))
+    from config.feature_flags import FEATURE_FLAGS, is_command_enabled
+    if FEATURE_FLAGS["slash_dice_enabled"]:
+        from commands.slash_dice_commands import register_slash_dice_commands
+        await register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+    
+    if FEATURE_FLAGS["slash_knowledge_enabled"]:
+        from commands.slash_knowledge_commands import register_slash_knowledge_commands
+        await register_slash_knowledge_commands(bot, knowledge_base, color_handler, embed_factory)
+    
+    if FEATURE_FLAGS["slash_combat_enabled"]:
+        from commands.slash_combat_commands import register_slash_combat_commands
+        await register_slash_combat_commands(bot, combat_manager, color_handler, embed_factory)
+    
+    if FEATURE_FLAGS["slash_utility_enabled"]:
+        from commands.slash_utility_commands import register_slash_utility_commands
+        await register_slash_utility_commands(bot, roll_tracker, color_handler, embed_factory)
+    
+    # Synka slash commands EN gång i slutet
     try:
-        bot.tree.clear_commands(guild=None)
-        await bot.tree.sync()
-        print('Cleared all slash commands - only prefix commands (!ex) will work now')
+        synced = await bot.tree.sync()
+        print(f"Synced {len(synced)} slash commands with Discord")
     except Exception as e:
-        print(f'Failed to clear slash commands: {e}')
+        print(f'Failed to sync slash commands: {e}')
     
     # Ladda in Umnatak-kommentarer
     load_umnatak_comments()

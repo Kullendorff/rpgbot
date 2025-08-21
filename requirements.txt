@@ -2,7 +2,7 @@ discord.py>=2.0.0
 python-dotenv
 anthropic>=0.10.0
 sentence-transformers
-pinecone-client
+pinecone-client==2.2.4
 numpy
 tiktoken
 whoosh

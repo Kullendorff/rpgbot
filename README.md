@@ -5,29 +5,30 @@ En avancerad Discord-bot för tärningskast och kunskapshantering för det svens
 ## ✨ Huvudfunktioner
 
 ### 🎯 Tärningskast & Statistik
-- **Flexibla tärningskast**: `!roll 3d6+2`, `!roll 3D6 + 2`, `!roll d6` - alla format fungerar!
-- **Obegränsade T6-slag**: `!ex 3d6 15` för EON:s exploderande tärningar
-- **Räkna framgångar**: `!count 5d10 7` räknar resultat ≥ målvärde
-- **Sannolikhetsberäkning**: `!chance 3d6+2 15` visar lyckosannolikhet
-- **Hemliga slag**: `!secret roll 2d6` endast synligt för spelledaren
-- **Detaljerad statistik**: `!stats`, `!mystats` spårar alla slag
+- **Moderna slash commands**: `/roll tärningar:3d6+2`, `/roll tärningar:3D6+2 mål:15` - flexibla format!
+- **Obegränsade T6-slag**: `/ex antal:5 mål:12` för EON:s exploderande tärningar
+- **Räkna framgångar**: `/count tärningar:5d10 mål:7` räknar resultat ≥ målvärde
+- **Sannolikhetsberäkning**: `/chance antal:3 target:15` - EON-korrekt med exploderande d6:or
+- **Hemliga slag**: `/secret roll tärningar:2d6` endast synligt för spelledaren
+- **Detaljerad statistik**: `/stats`, `/mystats` spårar alla slag
 
 ### 🧠 AI-driven Kunskapsbas
-- **Intelligent sökning**: `!ask "Vad är Ferox?"` - AI-assisterad regelfrågor
-- **Snabbsökning**: `!sök ferox` för direkta sökresultat  
-- **Omfattande sökning**: `!allt ferox` genomsöker hela regelbiblioteket
-- **Regelreferenser**: `!regel strid` för snabba regeluppslag
+- **Intelligent sökning**: `/ask fråga:"Vad är Ferox?"` - AI-assisterad regelfrågor
+- **Snabbsökning**: `/sök term:ferox` för direkta sökresultat  
+- **Omfattande sökning**: `/allt term:ferox` genomsöker hela regelbiblioteket
+- **Regelreferenser**: `/regel namn:strid` för snabba regeluppslag
 
 ### ⚔️ Stridsystem
-- **Attacksimuleringar**: `!hugg`, `!stick`, `!kross` med realistiska skadeberäkningar
-- **Fummeltabeller**: `!fummel` för kritiska misslyckanden
+- **Attacksimuleringar**: `/hugg`, `/stick`, `/kross` med realistiska skadeberäkningar
+- **Fummeltabeller**: `/fummel` för kritiska misslyckanden
 - **Vapenskaderegler**: Automatisk hantering av olika vapentypers skador
 
 ### 🎭 Karaktärsskapande & Session
 - **Komplett EON karaktärsskapande**: `!chargen` - 32 steg med automatisk tabellhantering
 - **Thalamur-specialsystem**: Ätter, medborgarätt och strategisk bakgrundsplacering
-- **Sessionshantering**: `!startsession "Äventyr i Trinsmyra"` och `!endsession`
+- **Sessionshantering**: `/startsession namn:"Äventyr i Trinsmyra"` och `/endsession`
 - **AI-sammanfattningar**: Automatiska humoristiska sessionssammanfattningar via Claude AI
+- **Personaliserade kommentarer**: `/kommentarer` - SL kan aktivera anpassade kommentarer för spelares tärningsslag
 
 ## 🏗️ Arkitektur (Modulär Design)
 
@@ -68,30 +69,37 @@ src/
 
 ## 📋 Kommandon
 
-### 🎲 Tärningskommandon
+### 🎲 Tärningskommandon (Slash Commands)
 ```
-!roll XdY[+Z]        # Vanligt tärningskast
-!roll XdY[+Z] TARGET # Med framgångskontroll
-!ex XdY[+Z] TARGET   # Obegränsat T6-slag (EON)
-!count XdY TARGET    # Räkna framgångar ≥ målvärde
-!chance XdY TARGET   # Beräkna sannolikhet att lyckas
-!secret COMMAND      # Hemligt slag för spelledaren
-```
-
-### 🧠 Kunskapskommandon
-```
-!ask "fråga"         # AI-assisterad regelfråga
-!sök sökterm         # Snabbsökning i regelböcker
-!allt sökterm        # Omfattande sökning
-!regel kategori      # Regelreferens
+/roll tärningar:XdY[+Z]           # Vanligt tärningskast
+/roll tärningar:XdY[+Z] mål:TARGET # Med framgångskontroll  
+/ex antal:X mål:TARGET            # Exploderande T6-slag (EON)
+/count tärningar:XdY mål:TARGET   # Räkna framgångar ≥ målvärde
+/chance antal:X target:TARGET     # Sannolikhet för exploderande d6:or
+/secret roll tärningar:XdY        # Hemligt slag för spelledaren
 ```
 
-### ⚔️ Stridskommandon
+### 🧠 Kunskapskommandon (Slash Commands)
 ```
-!hugg               # Hugtvapen-attack
-!stick              # Stickvapenattack  
-!kross              # Krossvapenattack
-!fummel             # Fummeltabell
+/ask fråga:"din fråga"     # AI-assisterad regelfråga
+/sök term:sökterm          # Snabbsökning i regelböcker
+/allt term:sökterm         # Omfattande sökning
+/regel namn:kategori       # Regelreferens
+```
+
+### ⚔️ Stridskommandon (Slash Commands)
+```
+/hugg                # Hugtvapen-attack
+/stick               # Stickvapenattack  
+/kross               # Krossvapenattack
+/fummel              # Fummeltabell
+```
+
+### 🎭 SL-verktyg (Slash Commands)
+```
+/kommentarer aktivera spelare:@user    # Aktivera personliga kommentarer
+/kommentarer stil spelare:@user stil:encouraging # Ändra kommentarstil
+/kommentarer status spelare:@user      # Visa spelarens inställningar
 ```
 
 ### 🎭 Karaktärsskapande
@@ -102,14 +110,14 @@ src/
 !chargen reset       # Återställ karaktärsskapande
 ```
 
-### 📊 Session & Admin
+### 📊 Session & Admin (Slash Commands)
 ```
-!startsession "namn"  # Starta spelsession
-!endsession          # Avsluta med AI-sammanfattning
-!showsession         # Visa aktiv session
-!stats               # Serverstatistik
-!mystats             # Personlig statistik
-!dicehelp            # Hjälp för alla kommandon
+/startsession namn:"sessionnamn"  # Starta spelsession
+/endsession                       # Avsluta med AI-sammanfattning
+/showsession                      # Visa aktiv session
+/stats                           # Serverstatistik
+/mystats                         # Personlig statistik
+/dicehelp                        # Hjälp för alla kommandon
 ```
 
 ## 🛠️ Installation & Konfiguration
@@ -159,22 +167,23 @@ python src/main.py
 
 #### Steg 4: Testa i Discord
 Gå till din server och skriv:
-- `!roll 3d6` - Testa grundläggande tärning
-- `!chargen` - Starta karaktärsskapande
-- `!dicehelp` - Se alla kommandon
+- `/roll tärningar:3d6` - Testa grundläggande tärning
+- `!chargen` - Starta karaktärsskapande (fortfarande prefix command)
+- `/dicehelp` - Se alla kommandon
 
 **Vad fungerar utan AI:**
-- ✅ **Alla tärningskommandon**: `!roll`, `!ex`, `!count`, `!chance`
-- ✅ **Stridsystem**: `!hugg`, `!stick`, `!kross`, `!fummel`
-- ✅ **Statistik**: `!stats`, `!mystats` 
+- ✅ **Alla tärningskommandon**: `/roll`, `/ex`, `/count`, `/chance` 
+- ✅ **Stridsystem**: `/hugg`, `/stick`, `/kross`, `/fummel`
+- ✅ **Statistik**: `/stats`, `/mystats` 
 - ✅ **Karaktärsskapande**: `!chargen` (komplett EON system)
-- ✅ **Sessionshantering**: `!startsession`, `!endsession` (utan AI-sammanfattning)
-- ✅ **Hjälpkommandon**: `!dicehelp`, grundläggande `!regel`
+- ✅ **Sessionshantering**: `/startsession`, `/endsession` (utan AI-sammanfattning)
+- ✅ **Hjälpkommandon**: `/dicehelp`, grundläggande `/regel`
+- ✅ **Kommentarsystem**: `/kommentarer` (personaliserade kommentarer)
 
 **Vad som INTE fungerar utan AI:**
-- ❌ `!ask` (AI-assisterade regelfrågor)
-- ❌ `!sök` (avancerad kunskapssökning) 
-- ❌ `!allt` (omfattande sökning)
+- ❌ `/ask` (AI-assisterade regelfrågor)
+- ❌ `/sök` (avancerad kunskapssökning) 
+- ❌ `/allt` (omfattande sökning)
 - ❌ AI-genererade sessionssammanfattningar
 
 **Detta ger dig 90% av botens funktionalitet utan några externa API:er eller databaser!**
@@ -351,4 +360,4 @@ Detta projekt är licensierat under **MIT License**. Se `LICENSE` för detaljer.
 
 **Skapat med ❤️ för den svenska rollspelsgemenskapen**
 
-*Bot version: 2.0 | Senast uppdaterad: 2025-01-13*
+*Bot version: 2.1 | Senast uppdaterad: 2025-01-21*

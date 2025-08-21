@@ -549,17 +549,16 @@ class DiceSlashCommands(commands.Cog):
             )
             await self.helper.send_response(interaction, embed=embed)
 
-    @app_commands.command(name="chance", description="Simulera sannolikhet för att lyckas med tärningsslag")
+    @app_commands.command(name="chance", description="Simulera sannolikhet för exploderande d6:or (EON-system)")
     @app_commands.describe(
-        dice="Tärningsformel (t.ex. 3d6+2)",
-        target="Målvärde för framgång",
+        antal="Antal exploderande d6:or (1-20)",
+        target="Målvärde för framgång (EON: lägre = bättre)",
         iterations="Antal simuleringar (default 10000)"
     )
-    @app_commands.autocomplete(dice=dice_autocomplete)
     async def chance_slash(
         self,
         interaction: discord.Interaction,
-        dice: str,
+        antal: app_commands.Range[int, 1, 20],
         target: app_commands.Range[int, 1, 100],
         iterations: Optional[app_commands.Range[int, 1000, 100000]] = 10000
     ):
@@ -570,27 +569,7 @@ class DiceSlashCommands(commands.Cog):
         start_time = time.time()
         
         try:
-            # Parsa dice string
-            try:
-                dice_spec = self.parse_dice_string(dice)
-                dice_count, sides, modifier = dice_spec.count, dice_spec.sides, dice_spec.modifier
-            except self.InvalidDiceFormat as e:
-                embed = await self.helper.create_error_response(
-                    interaction.user.id,
-                    f"Ogiltig tärningsformel: {dice}",
-                    "Använd format som '3d6+2' eller '4d10-1'"
-                )
-                await self.helper.send_response(interaction, embed=embed)
-                return
-            except self.DiceLimitsError as e:
-                embed = await self.helper.create_error_response(
-                    interaction.user.id,
-                    str(e)
-                )
-                await self.helper.send_response(interaction, embed=embed)
-                return
-            
-            # Kör simulering
+            # Kör simulering med exploderande d6:or
             success_count = 0
             
             # Progress feedback för långa simuleringar
@@ -598,15 +577,16 @@ class DiceSlashCommands(commands.Cog):
                 progress_embed = self.embed_factory.admin_message(
                     interaction.user.id,
                     "Simulering pågår...",
-                    f"Kör {iterations:,} simuleringar av {dice} mot {target}"
+                    f"Kör {iterations:,} simuleringar av {antal}d6 (exploderande) mot {target}"
                 )
                 await interaction.followup.send(embed=progress_embed, ephemeral=True)
             
             for i in range(iterations):
-                # Rulla och kontrollera framgång
-                results = [random.randint(1, sides) for _ in range(dice_count)]
-                total = sum(results) + modifier
-                if total >= target:
+                # Använd exploderande d6-logik från unlimited_d6s
+                all_rolls, total, initial_rolls = self.unlimited_d6s(antal)
+                
+                # EON: lägre total = bättre, så success = total <= target
+                if total <= target:
                     success_count += 1
             
             # Beräkna statistik
@@ -620,7 +600,7 @@ class DiceSlashCommands(commands.Cog):
                 interaction.user.id,
                 interaction.user.display_name,
                 "chance",
-                f"{dice} mot {target}",
+                f"{antal}d6 (exploderande) mot {target}",
                 [],  # Inga faktiska resultat att visa
                 None,
                 target,
@@ -654,7 +634,7 @@ class DiceSlashCommands(commands.Cog):
             )
             
             await self.helper.log_command_usage(interaction, "chance", {
-                "dice": dice, "target": target, "iterations": iterations
+                "dice": f"{antal}d6", "target": target, "iterations": iterations
             }, execution_time)
             
             await self.helper.send_response(interaction, embed=embed)

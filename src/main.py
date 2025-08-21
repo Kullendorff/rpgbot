@@ -40,8 +40,8 @@ import interactive_chargen
 
 # Import för nya modulära komponenter
 from core.constants import (
-    UMNATAK_ID, MAX_DICE, MAX_SIDES, MAX_MESSAGE_LENGTH, 
-    MAX_TOKENS, UMNATAK_SUCCESS_COMMENTS
+    MAX_DICE, MAX_SIDES, MAX_MESSAGE_LENGTH, 
+    MAX_TOKENS
 )
 from utils.text_utils import clean_unicode, split_message, count_tokens
 from core.dice_parser import parse_dice_string
@@ -85,43 +85,16 @@ if not os.path.exists(RULES_FOLDER):
 # Globala objekt
 knowledge_base = KnowledgeBase()
 
-def load_umnatak_comments():
-    """
-    Laddar in syrliga kommentarer för Umnatak från en textfil.
-    Varje rad i filen blir en separat kommentar.
-    """
-    comments_file = os.path.join(project_root, "data", "config", "umnak_comments.txt")
-    try:
-        if os.path.exists(comments_file):
-            with open(comments_file, 'r', encoding='utf-8') as f:
-                # Läs in alla rader och filtrera bort tomma rader
-                global UMNATAK_SUCCESS_COMMENTS
-                UMNATAK_SUCCESS_COMMENTS.clear()
-                UMNATAK_SUCCESS_COMMENTS.extend([line.strip() for line in f.readlines() if line.strip()])
-            print(f"Laddade {len(UMNATAK_SUCCESS_COMMENTS)} kommentarer för Umnatak")
-        else:
-            print(f"Varning: Kunde inte hitta kommentarsfilen: {comments_file}")
-            # Sätt några standardkommentarer om filen saknas
-            UMNATAK_SUCCESS_COMMENTS.extend([
-                "Wow, du lyckades faktiskt!",
-                "Statistisk anomali - Umnatak lyckades.",
-                "En högst oväntad framgång."
-            ])
-    except Exception as e:
-        print(f"Fel vid laddning av Umnatak-kommentarer: {e}")
-        # Fallback-kommentarer
-        UMNATAK_SUCCESS_COMMENTS.extend(["Ovanligt att se dig lyckas, Umnatak!"])
+# Lägg till nya kommentarsystem
+from core.user_settings import UserSettingsManager
+from core.comment_styles import CommentGenerator
+user_settings = UserSettingsManager()
+comment_generator = CommentGenerator()
 
-def get_sarcastic_comment_for_umnatak() -> Optional[str]:
-    """
-    Returnerar en slumpmässig syrlig kommentar om Umnatak, men endast cirka 30% av gångerna.
-    Övriga gånger returneras None för att inte överanvända skämten.
-    """
-    if not UMNATAK_SUCCESS_COMMENTS:
-        return None
-    if random.random() < 0.3:  # 30% chans
-        return random.choice(UMNATAK_SUCCESS_COMMENTS)
-    return None
+# Lägg till hemligt manipulationssystem
+from core.manipulation_manager import ManipulationManager
+manipulation_manager = ManipulationManager()
+
 
 @bot.event
 async def on_ready() -> None:
@@ -158,9 +131,6 @@ async def on_ready() -> None:
     except Exception as e:
         print(f'Failed to sync slash commands: {e}')
     
-    # Ladda in Umnatak-kommentarer
-    load_umnatak_comments()
-    
     # Initiera kunskapsbasen vid start
     success = knowledge_base.initialize_knowledge_base()
     if success:
@@ -192,6 +162,16 @@ async def on_ready() -> None:
     
     register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
     print("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
+
+    # Registrera kommentarkommandon
+    from commands.slash_comment_commands import register_slash_comment_commands
+    register_slash_comment_commands(bot, user_settings, comment_generator, color_handler)
+    print("✅ Slash kommentarkommandon registrerade (/kommentarer).")
+
+    # Registrera hemliga manipulationskommandon
+    from commands.slash_manipulation_commands import register_slash_manipulation_commands
+    register_slash_manipulation_commands(bot, manipulation_manager, color_handler)
+    print("✅ Slash manipulationskommandon registrerade (hemliga).")
 
     # Registrera karaktärsgenereringskommandon
     character_creation.register_commands(bot, roll_tracker, color_handler, embed_factory)

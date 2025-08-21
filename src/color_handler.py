@@ -33,7 +33,8 @@ class ColorHandler:
             # Användare med valda färger
             680064176227352610: self.DISCORD_GOLD,   # Guld - varm och inbjudande
             477800979295633409: self.DISCORD_CYAN,   # Cyan - klar och tydlig
-            197809169296916480: self.DISCORD_GREEN   # Smaragdgrön - naturlig men distinkt
+            197809169296916480: self.DISCORD_GREEN,  # Smaragdgrön - naturlig men distinkt
+            223183062882713600: 0x4ECDC4              # Turkos/Teal - unik och elegant färg
         }
         self.colors: Dict[str, int] = self._load_colors()
     

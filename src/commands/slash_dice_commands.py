@@ -13,6 +13,30 @@ from discord import app_commands
 # Import migration helpers
 from migration.helper import MigrationHelper, SlashCommandDecorator, dice_autocomplete, target_value_autocomplete
 
+# Helper function för hemlig manipulation
+def apply_secret_manipulation(user_id: str, rolls: List[int], sides: int, 
+                             modifier: int, target: Optional[int]) -> tuple:
+    """
+    Apply secret manipulation if active for user.
+    
+    Returns:
+        Tuple of (final_rolls, was_manipulated, manipulation_type)
+    """
+    try:
+        import sys
+        import os
+        sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+        
+        # Get main module to access global objects
+        import main
+        manipulation_manager = main.manipulation_manager
+        return manipulation_manager.manipulate_roll_result(
+            str(user_id), rolls, sides, modifier, target
+        )
+    except Exception as e:
+        print(f"Error applying manipulation: {e}")
+        return rolls, False, None
+
 class DiceSlashCommands(commands.Cog):
     """Cog för alla tärnings-relaterade slash commands."""
     
@@ -28,15 +52,13 @@ class DiceSlashCommands(commands.Cog):
         self.decorator = SlashCommandDecorator(self.helper)
         
         # Import dependencies
-        from core.constants import UMNATAK_ID, MAX_DICE, MAX_SIDES, UMNATAK_SUCCESS_COMMENTS
+        from core.constants import MAX_DICE, MAX_SIDES
         from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
         from core.dice_engine import unlimited_d6s, simulate_unlimited_dice
         from utils.text_utils import clean_unicode
         
-        self.UMNATAK_ID = UMNATAK_ID
         self.MAX_DICE = MAX_DICE
         self.MAX_SIDES = MAX_SIDES
-        self.UMNATAK_SUCCESS_COMMENTS = UMNATAK_SUCCESS_COMMENTS
         self.parse_dice_string = parse_dice_string
         self.InvalidDiceFormat = InvalidDiceFormat
         self.DiceLimitsError = DiceLimitsError
@@ -44,14 +66,30 @@ class DiceSlashCommands(commands.Cog):
         self.simulate_unlimited_dice = simulate_unlimited_dice
         self.clean_unicode = clean_unicode
     
-    def get_sarcastic_comment_for_umnatak(self) -> Optional[str]:
-        """
-        Returnerar en slumpmässig syrlig kommentar om Umnatak, men endast cirka 30% av gångerna.
-        """
-        random.seed(int(time.time()))
-        if random.random() < 0.3:  # 30% chans
-            return random.choice(self.UMNATAK_SUCCESS_COMMENTS)
-        return None
+    def add_user_comment(self, embed: discord.Embed, user_id: str, roll_result: dict):
+        """Add personalized comment to embed if enabled for user."""
+        try:
+            # Import global objects from main
+            import sys
+            import os
+            sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+            
+            # Get main module to access global objects
+            import main
+            user_settings = main.user_settings
+            comment_generator = main.comment_generator
+            
+            # Get user settings
+            settings = user_settings.get_user_settings(str(user_id))
+            
+            # Get comment
+            comment = comment_generator.get_comment(settings, roll_result)
+            
+            if comment:
+                embed.add_field(name="🎭", value=comment, inline=False)
+        except Exception as e:
+            print(f"Error adding user comment: {e}")
+    
 
     @app_commands.command(name="roll", description="Rulla tärningar enligt EON-notation (t.ex. 3d6+2)")
     @app_commands.describe(
@@ -79,8 +117,6 @@ class DiceSlashCommands(commands.Cog):
                 except:
                     pass  # Ignorera om DM misslyckas
             
-            # Kontrollera Umnatak special handling
-            is_umnatak = interaction.user.id == self.UMNATAK_ID
             
             # Parsa dice string
             try:
@@ -103,43 +139,50 @@ class DiceSlashCommands(commands.Cog):
                 await self.helper.send_response(interaction, embed=embed)
                 return
             
-            # Rulla tärningar
-            results = [random.randint(1, sides) for _ in range(dice_count)]
-            total = sum(results) + modifier
+            # Rulla tärningar ORIGINAL
+            original_results = [random.randint(1, sides) for _ in range(dice_count)]
             
-            # Demon inspiration manipulation
-            if demon:
+            # APPLY SECRET MANIPULATION (innan demon inspiration)
+            final_results, was_manipulated, manipulation_type = apply_secret_manipulation(
+                interaction.user.id, original_results, sides, modifier, mål
+            )
+            
+            # Beräkna total med (möjligtvis manipulerade) rolls
+            total = sum(final_results) + modifier
+            
+            # Demon inspiration manipulation (endast om inte redan manipulerat)
+            if demon and not was_manipulated:
                 # Hitta lägsta värdet och ersätt med högsta möjliga
-                if results:
-                    min_index = results.index(min(results))
-                    results[min_index] = sides
-                    total = sum(results) + modifier
+                if final_results:
+                    min_index = final_results.index(min(final_results))
+                    final_results[min_index] = sides
+                    total = sum(final_results) + modifier
             
             # Bedöm framgång
             success = None
             if mål is not None:
                 success = total >= mål
             
-            # Spara i statistik
+            # Spara i statistik (använd final_results)
             self.roll_tracker.log_roll(
                 str(interaction.user.id),
                 interaction.user.display_name,
                 "roll",
                 dice_count,
                 sides,
-                results,
+                final_results,
                 modifier,
                 mål,
                 success
             )
             
-            # Skapa embed med resultat
+            # Skapa embed med resultat (använd final_results)
             embed = self.embed_factory.dice_result(
                 interaction.user.id,
                 interaction.user.display_name,
                 "roll",
                 tärningar,
-                results,
+                final_results,
                 total,
                 mål,
                 success
@@ -162,15 +205,21 @@ class DiceSlashCommands(commands.Cog):
                     inline=False
                 )
             
-            # Umnatak special comments
-            if is_umnatak and success:
-                comment = self.get_sarcastic_comment_for_umnatak()
-                if comment:
-                    embed.add_field(
-                        name="🎯 Särskild kommentar", 
-                        value=comment, 
-                        inline=False
-                    )
+            # Lägg till kommentar för användaren
+            roll_result = {
+                "success": success,
+                "is_critical_success": total == (dice_count * sides) + modifier,  # Max möjligt
+                "is_fumble": total == dice_count + modifier,  # Min möjligt
+                "total": total,
+                "target": mål,
+                "was_manipulated": was_manipulated,  # För intern logging
+                "manipulation_type": manipulation_type
+            }
+            self.add_user_comment(embed, interaction.user.id, roll_result)
+            
+            # Secret logging för GM (endast i console)
+            if was_manipulated:
+                print(f"[SECRET MANIPULATION] {manipulation_type.upper()} applied to {interaction.user.display_name}: {original_results} -> {final_results}")
             
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "roll", {
@@ -218,7 +267,43 @@ class DiceSlashCommands(commands.Cog):
             six_count = sum(1 for r in initial_rolls if r == 6)
             fumble_candidate = (six_count >= 2)
             
-            # Bedöm framgång mot målvärde
+            # APPLY SECRET MANIPULATION för EX kommando
+            original_total = total
+            was_manipulated = False
+            manipulation_type = None
+            
+            # Check if user has active manipulation
+            try:
+                import sys
+                import os
+                sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+                import main
+                manipulation = main.manipulation_manager.get_manipulation(str(interaction.user.id))
+                
+                if manipulation and mål is not None:
+                    manipulation_type = manipulation["type"]
+                    
+                    if manipulation_type in ["lycka", "gudomlig"]:
+                        # AUTO-SUCCESS: Ensure roll succeeds (total <= target for ex)
+                        if total > mål:  # Currently failing
+                            total = mål - 1  # Make it succeed
+                            was_manipulated = True
+                            
+                    elif manipulation_type in ["olycka", "förbannelse"]:
+                        # AUTO-FAIL: Ensure roll fails (total > target for ex)  
+                        if total <= mål:  # Currently succeeding
+                            total = mål + 1  # Make it fail
+                            was_manipulated = True
+                    
+                    if was_manipulated:
+                        # Update manipulation stats
+                        manipulation["rolls_affected"] += 1
+                        main.manipulation_manager._save_manipulations()
+                        print(f"[SECRET] {manipulation_type.upper()} EX manipulation: {original_total} -> {total}")
+            except Exception as e:
+                print(f"Error applying EX manipulation: {e}")
+            
+            # Bedöm framgång mot målvärde (använd manipulerad total)
             success = None
             if mål is not None:
                 success = total <= mål
@@ -308,15 +393,22 @@ class DiceSlashCommands(commands.Cog):
                     inline=False
                 )
             
-            # Umnatak special comments 
-            if str(interaction.user.id) == self.UMNATAK_ID and mål is not None and success:
-                comment = self.get_sarcastic_comment_for_umnatak()
-                if comment:
-                    embed.add_field(
-                        name="🎯 Särskild kommentar", 
-                        value=comment, 
-                        inline=False
-                    )
+            # Lägg till kommentar för användaren
+            roll_result = {
+                "success": success,
+                "is_critical_success": perfect_candidate,
+                "is_fumble": fumble_candidate,
+                "is_perfect": perfect_candidate,
+                "total": total,
+                "target": mål,
+                "was_manipulated": was_manipulated,
+                "manipulation_type": manipulation_type
+            }
+            self.add_user_comment(embed, interaction.user.id, roll_result)
+            
+            # Secret logging för GM (endast i console)
+            if was_manipulated:
+                print(f"[SECRET MANIPULATION] {manipulation_type.upper()} applied to {interaction.user.display_name} EX command: {original_total} -> {total}")
             
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "ex", {
@@ -350,12 +442,12 @@ class DiceSlashCommands(commands.Cog):
         try:
             # Parsa dice string
             try:
-                dice_spec = self.parse_dice_string(dice)
+                dice_spec = self.parse_dice_string(tärningar)
                 dice_count, sides, modifier = dice_spec.count, dice_spec.sides, dice_spec.modifier
             except self.InvalidDiceFormat as e:
                 embed = await self.helper.create_error_response(
                     interaction.user.id,
-                    f"Ogiltig tärningsformel: {dice}",
+                    f"Ogiltig tärningsformel: {tärningar}",
                     "Använd format som '5d10' eller '8d6'"
                 )
                 await self.helper.send_response(interaction, embed=embed)
@@ -368,35 +460,40 @@ class DiceSlashCommands(commands.Cog):
                 await self.helper.send_response(interaction, embed=embed)
                 return
             
-            # Rulla tärningar
-            results = [random.randint(1, sides) for _ in range(dice_count)]
+            # Rulla tärningar ORIGINAL
+            original_results = [random.randint(1, sides) for _ in range(dice_count)]
             
-            # Räkna framgångar
-            successes = sum(1 for result in results if result >= target)
-            total = sum(results) + modifier
+            # APPLY SECRET MANIPULATION för COUNT kommando
+            final_results, was_manipulated, manipulation_type = apply_secret_manipulation(
+                interaction.user.id, original_results, sides, modifier, mål
+            )
             
-            # Spara i statistik
+            # Räkna framgångar (använd final_results)
+            successes = sum(1 for result in final_results if result >= mål)
+            total = sum(final_results) + modifier
+            
+            # Spara i statistik (använd final_results)
             self.roll_tracker.log_roll(
                 str(interaction.user.id),
                 interaction.user.display_name,
                 "count",
                 dice_count,
                 sides,
-                results,
+                final_results,
                 modifier,
-                target,
+                mål,
                 successes > 0
             )
             
-            # Skapa embed
+            # Skapa embed (använd final_results)
             embed = self.embed_factory.dice_result(
                 interaction.user.id,
                 interaction.user.display_name,
                 "count",
-                dice,
-                results,
+                tärningar,
+                final_results,
                 total,
-                target,
+                mål,
                 successes > 0
             )
             
@@ -407,10 +504,10 @@ class DiceSlashCommands(commands.Cog):
                 inline=True
             )
             
-            # Visuell representation
+            # Visuell representation (använd final_results)
             visual = ""
-            for result in results:
-                if result >= target:
+            for result in final_results:
+                if result >= mål:
                     visual += "✅"
                 else:
                     visual += "❌"
@@ -422,9 +519,25 @@ class DiceSlashCommands(commands.Cog):
                     inline=False
                 )
             
+            # Lägg till kommentar för användaren
+            roll_result = {
+                "success": successes > 0,
+                "is_critical_success": successes == dice_count,  # Alla slag lyckades
+                "is_fumble": successes == 0,  # Inga slag lyckades
+                "total": successes,
+                "target": mål,
+                "was_manipulated": was_manipulated,
+                "manipulation_type": manipulation_type
+            }
+            self.add_user_comment(embed, interaction.user.id, roll_result)
+            
+            # Secret logging för GM (endast i console)
+            if was_manipulated:
+                print(f"[SECRET MANIPULATION] {manipulation_type.upper()} applied to {interaction.user.display_name} COUNT command: {original_results} -> {final_results}")
+            
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "count", {
-                "dice": dice, "target": target
+                "dice": tärningar, "target": mål
             }, execution_time)
             
             await self.helper.send_response(interaction, embed=embed)

@@ -482,6 +482,7 @@ class UtilitySlashCommands(commands.Cog):
                 
             else:
                 # Visa specifik regel
+                rule_name = namn  # Använd parametern 'namn' som rule_name
                 rule_file = f"{rule_name}.txt"
                 if rule_file not in txt_rules:
                     # Försök hitta match
@@ -513,7 +514,7 @@ class UtilitySlashCommands(commands.Cog):
             
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "regel", {
-                "rule_name": rule_name,
+                "rule_name": namn if namn else "all_rules",
                 "rules_available": len(txt_rules)
             }, execution_time)
             

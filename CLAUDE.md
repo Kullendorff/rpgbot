@@ -29,11 +29,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture Overview
 
-This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skjut Dem I Huvudet"). The bot provides dice rolling, combat simulation, rule lookups, and knowledge base queries.
+This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skjut Dem I Huvudet"). The bot provides dice rolling, combat simulation, rule lookups, knowledge base queries, and a comprehensive character creation system.
 
 ### Core Components
 
-**src/main.py** - Main bot entry point with Discord command handlers. Uses discord.py with command prefix `!`. Integrates with Pinecone for vector search, Anthropic Claude for AI responses, and local SQLite for roll tracking.
+**src/main.py** - Main bot entry point with Discord slash command handlers. Uses discord.py with slash commands (`/`). Integrates with Pinecone for vector search, Anthropic Claude for AI responses, and local SQLite for roll tracking.
 
 **Knowledge System** - Two-tiered search:
 - Whoosh index (`data/knowledge_index/`) for full-text search
@@ -46,25 +46,45 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 - `damage_tables.py` - Damage calculation by weapon type
 - `fumble_tables.py` - Critical failure handling
 
-**Roll Tracking** - SQLite database (`data/rolls.db`) tracks all dice rolls for statistics. Supports "perfect rolls" and "fumbles" for unlimited d6 rolls (`!ex` command).
+**Character Creation System** - Session-based character creation for EON:
+- `character_creation.py` - 32-step character creation process
+- `TableProcessor` - Automatic table handling for all EON tables
+- JSON-based data storage in `data/raser/` and related directories
+- Full support for humans, partial support for elves/dwarves/tiraks
 
-### Key Features
+**Roll Tracking** - SQLite database (`data/rolls.db`) tracks all dice rolls for statistics. Supports "perfect rolls" and "fumbles" for unlimited d6 rolls (`/ex` command).
 
-- **Dice Commands**: `!roll`, `!ex` (unlimited d6), `!count`, `!secret`
-- **Knowledge**: `!ask`, `!sök`, `!allt` - Query RPG rule database using AI
-- **Combat**: `!hugg`, `!stick`, `!kross`, `!fummel` - Weapon attack simulation
-- **Rules**: `!regel` - Quick rule lookups from `data/rules/`
-- **Stats**: `!stats`, `!mystats` - Roll statistics and session tracking
+**Embed Standardization** - All Discord embeds use centralized factory:
+- `src/core/embed_factory.py` - Consistent visual profile across all commands
+- Standard colors, emojis, and formatting
+- User-specific color preferences
 
-### Special User Handling
+### Key Features (All Slash Commands)
 
-The bot includes special sarcastic responses for user ID "680064176227352610" (Umnatak), loaded from `data/config/umnak_comments.txt`.
+- **Dice Commands**: `/roll`, `/ex` (unlimited d6), `/count`, `/chance`
+- **Knowledge**: `/ask`, `/sök`, `/allt` - Query RPG rule database using AI
+- **Combat**: `/hugg`, `/stick`, `/kross`, `/fummel` - Weapon attack simulation  
+- **Rules**: `/regel` - Quick rule lookups from `data/rules/`
+- **Stats**: `/stats`, `/mystats` - Roll statistics and session tracking
+- **GM Commands**: `/startsession`, `/endsession`, `/secret_roll`, `/gm_override`
+- **Character Creation**: `/create_character` - Interactive session-based character generation
+
 
 ### Module Structure
 
-- `color_handler.py` - Per-user Discord embed colors
-- `roll_tracker.py` - Database operations for roll statistics  
-- `stats_commands.py` - Statistics command implementations
+- `src/core/` - Core systems:
+  - `embed_factory.py` - Centralized Discord embed creation
+  - `color_handler.py` - Per-user Discord embed colors
+  
+- `src/commands/` - Slash command implementations:
+  - `slash_dice_commands.py` - Dice rolling with autocomplete
+  - `slash_combat_commands.py` - Combat mechanics
+  - `slash_knowledge_commands.py` - AI-powered knowledge search
+  - `slash_stats_commands.py` - Statistics and analytics
+  - `slash_admin_commands.py` - GM/admin tools
+  
+- `src/character_creation/` - Character generation system
+- `src/utils/` - Utility functions and helpers
 - `skjutdomihuvudet/` - Separate module for "Skjut Dem I Huvudet" RPG functionality
 
 ### Data Files
@@ -73,8 +93,23 @@ The bot includes special sarcastic responses for user ID "680064176227352610" (U
 - `data/rules/` - Quick reference rule files (txt format)
 - `data/sdih_decks/` - Card deck data for SDIH game
 - `data/user_colors.json` - User color preferences
+- `data/raser/` - Character creation race data (JSON)
+- `data/bakgrund/` - Background tables for character creation
+- `data/landerhemort/` - Homeland and origin data
 
 The knowledge base requires manual setup of PDF extraction and indexing before the bot can answer rule questions effectively.
+
+## Recent Major Updates
+
+### Completed Migrations
+- **Embed Standardization** - All embeds now use centralized factory for consistent UX
+- **Slash Command Migration** - Full conversion from prefix (`!`) to slash (`/`) commands
+- **Character Creation System** - Complete implementation for human characters with Thalamur special cases
+
+### Current Development Focus
+- Extending character creation to support non-human races (elves, dwarves, tiraks)
+- Performance optimizations for AI knowledge queries
+- Enhanced session management for GMs
 
 # About Speed and Robustness ..
 

@@ -48,6 +48,56 @@ class HomelandRaceMapper:
             print(f"Error loading homeland races data: {e}")
             self.homeland_races_data = {}
     
+    def _normalize_homeland_name(self, homeland: str) -> str:
+        """
+        Normalize homeland names to match the keys in homeland_races.json.
+        
+        Handles inconsistencies like:
+        - "Det_cirefaliska_samväldet" -> "Cirefaliska Samväldet"
+        - "Det cirefaliska samväldet" -> "Cirefaliska Samväldet"
+        
+        Args:
+            homeland: Original homeland name
+            
+        Returns:
+            Normalized homeland name for lookup
+        """
+        # First try exact match
+        if homeland in self.homeland_races_data:
+            return homeland
+        
+        # Common normalizations
+        normalized = homeland
+        
+        # Remove underscores and replace with spaces
+        normalized = normalized.replace('_', ' ')
+        
+        # Remove "Det " prefix if present (case insensitive)
+        if normalized.lower().startswith('det '):
+            normalized = normalized[4:]
+        
+        # Capitalize first letter of each word
+        normalized = ' '.join(word.capitalize() for word in normalized.split())
+        
+        # Check if normalized version exists
+        if normalized in self.homeland_races_data:
+            return normalized
+        
+        # Try some common variations
+        variations = [
+            homeland.replace('_', ' '),  # Just replace underscores
+            homeland.title(),            # Title case
+            homeland.upper(),           # All caps
+            homeland.lower()            # All lowercase
+        ]
+        
+        for variation in variations:
+            if variation in self.homeland_races_data:
+                return variation
+        
+        # Return original if no match found
+        return homeland
+    
     def get_races_for_homeland(self, homeland: str) -> List[Dict[str, Any]]:
         """
         Get filtered list of races for a specific homeland.
@@ -61,7 +111,9 @@ class HomelandRaceMapper:
         if not self.homeland_races_data:
             return []
         
-        homeland_data = self.homeland_races_data.get(homeland, [])
+        # Normalize the homeland name for lookup
+        normalized_homeland = self._normalize_homeland_name(homeland)
+        homeland_data = self.homeland_races_data.get(normalized_homeland, [])
         races = []
         
         for race_entry in homeland_data:
@@ -111,12 +163,17 @@ class HomelandRaceMapper:
         Returns:
             Tuple of (race_name, variant_name) or (None, None) if failed
         """
-        if not self.homeland_races_data or homeland not in self.homeland_races_data:
+        if not self.homeland_races_data:
+            return None, None
+        
+        # Normalize the homeland name for lookup
+        normalized_homeland = self._normalize_homeland_name(homeland)
+        if normalized_homeland not in self.homeland_races_data:
             return None, None
         
         # Roll T100
         roll = random.randint(1, 100)
-        homeland_data = self.homeland_races_data[homeland]
+        homeland_data = self.homeland_races_data[normalized_homeland]
         
         # Find matching race entry
         selected_race = None
@@ -226,7 +283,12 @@ class HomelandRaceMapper:
         Returns:
             True if homeland exists, False otherwise
         """
-        return bool(self.homeland_races_data and homeland in self.homeland_races_data)
+        if not self.homeland_races_data:
+            return False
+        
+        # Try normalization to find the homeland
+        normalized_homeland = self._normalize_homeland_name(homeland)
+        return normalized_homeland in self.homeland_races_data
     
     def get_race_statistics(self, homeland: str) -> Dict[str, Any]:
         """

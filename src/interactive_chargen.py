@@ -25,6 +25,12 @@ from character_creation.steps.age import AgeStep
 from character_creation.steps.homeland import HomelandStep
 from character_creation.steps.race import RaceStep
 from character_creation.steps.culture import CultureStep
+from character_creation.steps.attributes import AttributesStep
+from character_creation.steps.special_rules import SpecialRulesStep
+from character_creation.steps.traits import TraitsStep
+from character_creation.steps.family import FamilyStep
+from character_creation.steps.background import BackgroundStep
+from character_creation.steps.summary import SummaryStep
 
 class InteractiveCharacterCreator:
     """Huvudklass för interaktivt karaktärsskapande med full EON TableProcessor integration"""
@@ -62,6 +68,12 @@ class InteractiveCharacterCreator:
         self.homeland_step = HomelandStep(self.embed_factory, self.data_dir)
         self.race_step = RaceStep(self.embed_factory, self.data_dir)
         self.culture_step = CultureStep(self.embed_factory, self.data_dir)
+        self.attributes_step = AttributesStep(self.embed_factory, self.data_dir)
+        self.special_rules_step = SpecialRulesStep(self.embed_factory, self.data_dir)
+        self.traits_step = TraitsStep(self.embed_factory, self.data_dir)
+        self.family_step = FamilyStep(self.embed_factory, self.data_dir, self.bg_generator, self.table_processor)
+        self.background_step = BackgroundStep(self.embed_factory, self.data_dir, self.table_processor)
+        self.summary_step = SummaryStep(self.embed_factory, self.data_dir)
         
         # Definiera alla 33 steg
         self.steps = self._define_steps()
@@ -189,66 +201,6 @@ class InteractiveCharacterCreator:
         
         return culture_data
     
-    def generate_attributes(self, method: str = "3d6") -> Dict[str, int]:
-        """Genererar grundattribut enligt vald metod"""
-        attributes = {}
-        attribute_names = ["STY", "TÅL", "RÖR", "PER", "PSY", "VIL", "BIL", "SYN", "HÖR"]
-        
-        for attr in attribute_names:
-            if method == "3d6":
-                attributes[attr] = sum(random.randint(1, 6) for _ in range(3))
-            elif method == "4d6":
-                rolls = sorted([random.randint(1, 6) for _ in range(4)], reverse=True)
-                attributes[attr] = sum(rolls[:3])  # Ta bästa 3 av 4
-            elif method == "2d6+9":
-                attributes[attr] = sum(random.randint(1, 6) for _ in range(2)) + 9
-            else:
-                raise ValueError(f"Okänd metod: {method}")
-        
-        return attributes
-    
-    def apply_racial_modifiers(self, attributes: Dict[str, int], race: str, session: CharacterSession = None) -> Dict[str, int]:
-        """Applicerar rasmodifierare på grundattribut"""
-        # Ladda attributmodifierare från folkslag-data
-        modifiers_file = self.data_dir / 'folkslag' / 'attribute_modifiers.json'
-        
-        if not modifiers_file.exists():
-            print(f"Varning: Kan inte hitta {modifiers_file}")
-            return attributes.copy()
-        
-        try:
-            with open(modifiers_file, 'r', encoding='utf-8') as f:
-                all_modifiers = json.load(f)
-        except Exception as e:
-            print(f"Fel vid laddning av attributmodifierare: {e}")
-            return attributes.copy()
-        
-        # Hitta rätt rasmodifierare
-        race_lower = race.lower()
-        
-        # Specialhantering för Thalamur Medborgare - de använder Thalasker-modifierare
-        if (session and session.data.get('thalamur_special') == 'thalasker_medborgare' and 
-            session.data.get('thalamur_samhällsklass') == 'Medborgare'):
-            race_lower = 'thalasker'
-        race_mods = None
-        
-        for category, races in all_modifiers.items():
-            if race_lower in races:
-                race_mods = races[race_lower]
-                break
-        
-        if not race_mods:
-            print(f"Inga modifierare hittade för ras: {race}")
-            return attributes.copy()
-        
-        # Applicera modifierare
-        modified_attributes = attributes.copy()
-        for attr, modifier in race_mods.items():
-            if attr in modified_attributes:
-                modified_attributes[attr] += modifier
-                modified_attributes[attr] = max(1, modified_attributes[attr])  # Minimum 1
-        
-        return modified_attributes
     
     def _define_steps(self) -> List[Dict[str, Any]]:
         """Definierar alla 32 steg i EON karaktärsskapande-processen (Religion hoppas över)"""
@@ -483,34 +435,6 @@ class InteractiveCharacterCreator:
             # Gå till nästa steg automatiskt
             self.next_step(session)
             await self.show_current_step(ctx, session)
-        
-        user_input = input_text.strip()
-        selected_homeland = None
-        
-        # Försök tolka som nummer först
-        if user_input.isdigit():
-            index = int(user_input) - 1  # Convert to 0-based index
-            if 0 <= index < len(self.homelands):
-                selected_homeland = self.homelands[index]
-            else:
-                await ctx.send(f"❌ Ogiltigt nummer. Välj mellan 1-{len(self.homelands)}")
-                return
-        
-        # Annars försök matcha namn (case-insensitive)
-        else:
-            user_input_lower = user_input.lower()
-            for homeland in self.homelands:
-                if (homeland['name'].lower() == user_input_lower or 
-                    homeland['title'].lower() == user_input_lower):
-                    selected_homeland = homeland
-                    break
-            
-            if not selected_homeland:
-                await ctx.send(f"❌ Kunde inte hitta landet '{user_input}'. Skriv `!chargen lista` för alla länder.")
-                return
-        
-        # Visa valt land med FULL beskrivning från .txt-filen
-        await self.show_homeland_choice(ctx, session, selected_homeland)
     
     async def show_homeland_choice(self, ctx, session: CharacterSession, homeland: Dict[str, str]):
         """Visar valt hemland med full beskrivning"""
@@ -903,115 +827,17 @@ class InteractiveCharacterCreator:
         await ctx.send(embed=embed)
     
     async def step_race(self, ctx, session: CharacterSession):
-        """Steg 3: Välj folkslag - använder ny modul med hemlandsfiltrering"""
+        """Steg 3: Välj folkslag - använder ny modul"""
         await self.race_step.execute(ctx, session)
-        
-        if not self.folkslag_data:
-            await ctx.send("❌ Fel: Inga folkslag kunde laddas.")
-            return
-        
-        embed = self.embed_factory.admin_message(session.user_id, "🏛️ Steg 3/32: Folkslag", "Välj rollpersonens folkslag:")
-        
-        # Visa folkslag organiserat per kategori
-        all_folkslag = []
-        counter = 1
-        
-        for category, folkslag_list in self.folkslag_data.items():
-            if folkslag_list:  # Om kategorin har folkslag
-                category_text = []
-                for folkslag in folkslag_list:
-                    category_text.append(f"{counter}. {folkslag['title']}")
-                    all_folkslag.append(folkslag)
-                    counter += 1
-                
-                embed.add_field(
-                    name=f"📁 {category.title()}:",
-                    value="\n".join(category_text),
-                    inline=False
-                )
-        
-        # Fallback till attribute_modifiers om inga .txt filer finns
-        if not all_folkslag and 'attribute_modifiers' in self.table_processor.tables:
-            races_by_category = self.table_processor.tables['attribute_modifiers']
-            
-            for category, races in races_by_category.items():
-                if races:
-                    category_text = []
-                    for race_name in races.keys():
-                        all_folkslag.append({
-                            'name': race_name,
-                            'title': race_name.capitalize(),
-                            'description': f"Folkslag: {race_name.capitalize()}",
-                            'category': category
-                        })
-                        category_text.append(f"{counter}. {race_name.capitalize()}")
-                        counter += 1
-                    
-                    embed.add_field(
-                        name=f"📁 {category.capitalize()}:",
-                        value="\n".join(category_text),
-                        inline=False
-                    )
-        
-        embed.add_field(
-            name="Kommandon:",
-            value="`!chargen [nummer]` - Välj med nummer\n`!chargen [namn]` - Välj med namn\n`!chargen lista` - Visa alla folkslag",
-            inline=False
-        )
-        
-        # Spara all_folkslag för senare användning
-        session.temp_data = {'all_folkslag': all_folkslag}
-        self.save_session(session)
-        
-        await ctx.send(embed=embed)
     
     async def handle_folkslag_input(self, ctx, session: CharacterSession, input_text: str, *args):
         """Hanterar input för folkslag - använder ny modul"""
         success, error = await self.race_step.handle_input(ctx, session, input_text, *args)
-        
         if success:
-            # Uppdatera och spara session
             session.update_context()
             self.save_session(session)
-            
-            # Gå till nästa steg automatiskt
             self.next_step(session)
             await self.show_current_step(ctx, session)
-            await self.show_all_folkslag(ctx, session)
-            return
-        
-        all_folkslag = session.temp_data.get('all_folkslag', [])
-        if not all_folkslag:
-            await ctx.send("❌ Fel: Ingen folkslag-data tillgänglig.")
-            return
-        
-        user_input = input_text.strip()
-        selected_folkslag = None
-        
-        # Försök tolka som nummer först
-        if user_input.isdigit():
-            index = int(user_input) - 1
-            if 0 <= index < len(all_folkslag):
-                selected_folkslag = all_folkslag[index]
-            else:
-                await ctx.send(f"❌ Ogiltigt nummer. Välj mellan 1-{len(all_folkslag)}")
-                return
-        
-        # Annars försök matcha namn
-        else:
-            user_input_lower = user_input.lower()
-            for folkslag in all_folkslag:
-                if (folkslag['name'].lower() == user_input_lower or 
-                    folkslag['title'].lower() == user_input_lower):
-                    selected_folkslag = folkslag
-                    break
-            
-            if not selected_folkslag:
-                await ctx.send(f"❌ Kunde inte hitta folkslaget '{user_input}'. Skriv `!chargen lista` för alla folkslag.")
-                return
-        
-        # Visa valt folkslag med FULL beskrivning från .txt-filen
-        await self.show_folkslag_choice(ctx, session, selected_folkslag)
     
     async def show_folkslag_choice(self, ctx, session: CharacterSession, folkslag: Dict[str, str]):
         """Visar valt folkslag med full beskrivning och attributmodifierare"""
@@ -1193,70 +1019,11 @@ class InteractiveCharacterCreator:
     async def handle_kultur_input(self, ctx, session: CharacterSession, input_text: str, *args):
         """Hanterar input för kultur-steget - använder ny modul"""
         success, error = await self.culture_step.handle_input(ctx, session, input_text, *args)
-        
         if success:
-            # Uppdatera och spara session
             session.update_context()
             self.save_session(session)
-            
-            # Gå till nästa steg automatiskt
             self.next_step(session)
             await self.show_current_step(ctx, session)
-        if input_text.lower().startswith('info'):
-            parts = input_text.split()
-            if len(parts) >= 2:
-                try:
-                    info_number = int(parts[1])
-                    selected_culture = None
-                    
-                    for culture in culture_options:
-                        if culture['number'] == info_number:
-                            selected_culture = culture
-                            break
-                    
-                    if selected_culture:
-                        await self.show_culture_info(ctx, selected_culture)
-                    else:
-                        await ctx.send(f"❌ Ogiltigt nummer för info. Välj mellan 1-{len(culture_options)}")
-                        
-                except ValueError:
-                    await ctx.send("❌ Använd: !chargen info [nummer]")
-            else:
-                await ctx.send("❌ Använd: !chargen info [nummer]")
-            return
-        
-        # Hantera vanligt val
-        selected_culture = None
-        
-        # Försök tolka som nummer
-        if input_text.isdigit():
-            culture_number = int(input_text)
-            for culture in culture_options:
-                if culture['number'] == culture_number:
-                    selected_culture = culture
-                    break
-            
-            if not selected_culture:
-                await ctx.send(f"❌ Ogiltigt nummer. Välj mellan 1-{len(culture_options)}")
-                return
-        else:
-            await ctx.send("❌ Använd nummer för att välja kultur (t.ex. !chargen 2) eller !chargen info [nummer] för detaljer")
-            return
-        
-        # Spara vald kultur
-        session.data['kultur'] = selected_culture['key']
-        session.data['kultur_titel'] = selected_culture['title']
-        session.update_context()
-        
-        # Rensa temporär data
-        session.temp_data.clear()
-        self.save_session(session)
-        
-        await ctx.send(f"✅ Kultur vald: **{selected_culture['title']}**")
-        
-        # Gå till nästa steg
-        self.next_step(session)
-        await self.show_current_step(ctx, session)
     
     async def show_culture_info(self, ctx, culture_info: Dict[str, Any]):
         """Visar detaljerad information om en kultur"""
@@ -1300,407 +1067,59 @@ class InteractiveCharacterCreator:
         await ctx.send(embed=embed)
     
     async def handle_attribut_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för attribut-steget"""
-        input_text = input_text.strip().lower()
-        
-        # Mappa nummer till metoder
-        method_mapping = {
-            '1': '3d6',
-            '2': '4d6', 
-            '3': '2d6+9',
-            '3d6': '3d6',
-            '4d6': '4d6',
-            '2d6+9': '2d6+9'
-        }
-        
-        if input_text not in method_mapping:
-            await ctx.send("❌ Ogiltigt val. Använd:\n`!chargen 1` eller `!chargen 3d6` - Standard\n`!chargen 2` eller `!chargen 4d6` - Höga värden\n`!chargen 3` eller `!chargen 2d6+9` - Heroisk")
-            return
-        
-        # Konvertera till rätt metod
-        method = method_mapping[input_text]
-        
-        try:
-            # Generera grundattribut med vald metod
-            base_attributes = self.generate_attributes(method)
-            
-            # Hämta folkslag för att applicera rasmodifierare
-            folkslag = session.data.get('folkslag')
-            if not folkslag:
-                await ctx.send("❌ Fel: Folkslag måste vara satt först.")
-                return
-            
-            # Applicera rasmodifierare
-            final_attributes = self.apply_racial_modifiers(base_attributes, folkslag, session)
-            
-            # Beräkna totalsumma och chockvärde
-            attribute_sum = sum(final_attributes.values())
-            chock = (final_attributes["STY"] + final_attributes["TÅL"] + final_attributes["VIL"]) // 3
-            
-            # Skapa embed för att visa resultatet
-            embed = self.embed_factory.admin_message(
-                session.user_id, 
-                f"🎲 Steg 6/32: Genererade Attribut ({method.upper()})", 
-                f"Grundattribut med {session.data.get('folkslag', 'Okänd')} rasmodifierare:"
-            )
-            
-            # Visa attributen med eventuella ändringar
-            attr_text = []
-            for attr, final_value in final_attributes.items():
-                base_value = base_attributes[attr]
-                if final_value != base_value:
-                    # Visa förändring
-                    change = final_value - base_value
-                    change_str = f" ({base_value:+d}{change:+d})"
-                    attr_text.append(f"**{attr}:** {final_value}{change_str}")
-                else:
-                    attr_text.append(f"**{attr}:** {final_value}")
-            
-            embed.add_field(
-                name="Attribut:",
-                value="\n".join(attr_text),
-                inline=True
-            )
-            
-            embed.add_field(
-                name="Summering:",
-                value=f"**Totalsumma:** {attribute_sum}\n**Chockvärde:** {chock}",
-                inline=True
-            )
-            
-            embed.set_footer(text="Skriv: !chargen fortsätt eller !chargen ändra")
-            await ctx.send(embed=embed)
-            
-            # Spara temporärt för bekräftelse
-            session.temp_data = {
-                'attribut': final_attributes,
-                'grundattribut': base_attributes,
-                'metod': method.upper(),
-                'attribut_summa': attribute_sum,
-                'chockvärde': chock,
-                'awaiting_attribute_confirmation': True
-            }
+        """Hanterar input för attribut-steget - använder ny modul"""
+        success, error = await self.attributes_step.handle_input(ctx, session, input_text, *args)
+        if success:
+            session.update_context()
             self.save_session(session)
-            
-        except Exception as e:
-            await ctx.send(f"❌ Fel vid generering av attribut: {e}")
+            self.next_step(session)
+            await self.show_current_step(ctx, session)
     
     # Placeholder för resterande steg-hanterare
     async def step_culture(self, ctx, session: CharacterSession):
         """Steg 5: Välj kultur - använder ny modul"""
         await self.culture_step.execute(ctx, session)
-        
-        embed = self.embed_factory.admin_message(session.user_id, "🏛️ Steg 5/32: Kultur", "Välj rollpersonens familjekultur som bestämmer familjebakgrunden:")
-        
-        # Visa alla tillgängliga kulturer med numrering
-        culture_list = []
-        culture_options = []
-        
-        counter = 1
-        for culture_key, culture_info in self.culture_data.items():
-            culture_title = culture_info.get('titel', culture_key)
-            culture_list.append(f"{counter}. {culture_title}")
-            culture_options.append({
-                'number': counter,
-                'key': culture_key,
-                'title': culture_title,
-                'info': culture_info
-            })
-            counter += 1
-        
-        # Dela upp i två kolumner om det blir för många
-        if len(culture_list) <= 4:
-            embed.add_field(
-                name="Tillgängliga kulturer:",
-                value="\n".join(culture_list),
-                inline=False
-            )
-        else:
-            mid_point = (len(culture_list) + 1) // 2
-            embed.add_field(
-                name="Kulturer (1-3):",
-                value="\n".join(culture_list[:mid_point]),
-                inline=True
-            )
-            embed.add_field(
-                name="Kulturer (4-6):",
-                value="\n".join(culture_list[mid_point:]),
-                inline=True
-            )
-        
-        embed.add_field(
-            name="Kommandon:",
-            value="`!chargen [nummer]` - Välj med nummer (t.ex. !chargen 2)\n`!chargen info [nummer]` - Visa detaljerad beskrivning",
-            inline=False
-        )
-        
-        embed.set_footer(text="Kultur bestämmer vilken familjehuvudnäring som blir tillgänglig")
-        
-        await ctx.send(embed=embed)
-        
-        # Spara tillgängliga kulturer för input-hantering
-        session.temp_data['culture_options'] = culture_options
-        self.save_session(session)
     
     async def step_attributes(self, ctx, session: CharacterSession):
-        """Steg 6: Generera grundattribut med val av metod"""
-        
-        embed = self.embed_factory.admin_message(session.user_id, "🎲 Steg 6/32: Grundattribut", "Välj metod för att generera rollpersonens grundattribut:")
-        
-        embed.add_field(
-            name="Tillgängliga metoder:",
-            value="1. **3d6** - Standard (Genomsnitt ~10-11 per attribut)\n"
-                  "2. **4d6** - Höga värden (Bästa 3 av 4 tärningar)\n"
-                  "3. **2d6+9** - Heroisk (Genomsnitt ~16 per attribut)",
-            inline=False
-        )
-        
-        embed.add_field(
-            name="Attribut som genereras:",
-            value="STY, TÅL, RÖR, PER, PSY, VIL, BIL, SYN, HÖR",
-            inline=False
-        )
-        
-        embed.add_field(
-            name="Kommandon:",
-            value="`!chargen 1` eller `!chargen 3d6` - Standard metod\n"
-                  "`!chargen 2` eller `!chargen 4d6` - Höga värden\n"
-                  "`!chargen 3` eller `!chargen 2d6+9` - Heroisk metod",
-            inline=False
-        )
-        
-        embed.set_footer(text="Attribut kommer automatiskt modifieras av folkslag")
-        await ctx.send(embed=embed)
+        """Steg 6: Generera grundattribut - använder ny modul"""
+        await self.attributes_step.execute(ctx, session)
     
     async def step_special_rules(self, ctx, session: CharacterSession):
-        """Steg 7: Specialregler - Cirefalier field störningar"""
-        folkslag = session.data.get('folkslag', '').lower()
-        
-        # Kontrollera om spelaren är Cirefalier
-        if 'cirefalier' in folkslag:
-            await ctx.send("🧬 **Steg 7/32: Cirefaliers Field-störningar**")
-            await ctx.send("Som Cirefalier kan du ha bio/psykotropiska störningar. Slår först för att se hur många störningar du har...")
-            
-            # Slå för antal störningar
-            await self.roll_cirefalier_field_storningar(ctx, session)
-        else:
-            # Hoppa över för alla andra folkslag
-            await ctx.send("⏭️ Steg 7: Specialregler - Inget att göra för ditt folkslag")
-            
-            # Gå automatiskt till nästa steg
-            if self.next_step(session):
-                await self.show_current_step(ctx, session)
+        """Steg 7: Specialregler - använder ny modul"""
+        await self.special_rules_step.execute(ctx, session)
     
-    async def roll_cirefalier_field_storningar(self, ctx, session: CharacterSession):
-        """Slår för Cirefaliers field störningar"""
-        try:
-            # Ladda field störning tabellen
-            filepath = os.path.join(self.data_dir, 'field_storning.json')
-            with open(filepath, 'r', encoding='utf-8') as f:
-                table_data = json.load(f)
-            
-            # Slå för antal störningar
-            antal_roll = random.randint(1, 100)
-            antal_result = self.find_field_storning_result(table_data['störningar_cirefalier']['antal_störningar'], antal_roll)
-            
-            embed = self.embed_factory.admin_message(
-                session.user_id, 
-                "🎲 Antal Field-störningar", 
-                f"Slag: {antal_roll}"
-            )
-            embed.add_field(name="Resultat", value=antal_result['description'], inline=False)
-            
-            # Spara resultatet och hantera olika antal störningar
-            session.temp_data = {
-                'field_storning_antal': antal_result,
-                'field_storningar': []
-            }
-            
-            # Om ingen störning, gå vidare direkt
-            if antal_result['result'] == 'ingen_störning':
-                session.data['field_storningar'] = []
-                embed.add_field(name="Status", value="Inga field-störningar! 🎉", inline=False)
-                await ctx.send(embed=embed)
-                
-                # Gå vidare till nästa steg
-                if self.next_step(session):
-                    await self.show_current_step(ctx, session)
-            
-            # Annars hantera antal störningar som ska slås
-            elif antal_result['result'] == 'roll_twice':
-                # Speciell hantering för "slå två gånger till"
-                embed.add_field(name="⚠️ Speciellt", value="Slår två gånger till och adderar resultaten...", inline=False)
-                await ctx.send(embed=embed)
-                # TODO: Implementera dubbel roll logik
-                await self.handle_multiple_field_storning_rolls(ctx, session, 2)
-            
-            else:
-                # Bestäm antal slag baserat på resultat  
-                antal_slag = 0
-                if antal_result['result'] == 'en_störning':
-                    antal_slag = 1
-                elif antal_result['result'] == 'två_störningar':
-                    antal_slag = 2
-                elif antal_result['result'] == 'tre_störningar':
-                    antal_slag = 3
-                
-                embed.add_field(name="Nästa steg", value=f"Ska nu slå {antal_slag} gång(er) på störningstabellen...", inline=False)
-                await ctx.send(embed=embed)
-                
-                # Slå för de faktiska störningarna
-                await self.roll_actual_field_storningar(ctx, session, antal_slag)
-                
-        except Exception as e:
-            await ctx.send(f"❌ Fel vid hantering av field-störningar: {e}")
-            # Gå vidare ändå
-            if self.next_step(session):
-                await self.show_current_step(ctx, session)
     
-    def find_field_storning_result(self, table: dict, roll: int) -> dict:
-        """Hittar resultat från field-störning tabellen"""
-        for range_key, result_data in table['ranges'].items():
-            if self._is_roll_in_range(roll, range_key):
-                return result_data
-        return {"result": "error", "description": f"Inget resultat för slag {roll}"}
-    
-    async def roll_actual_field_storningar(self, ctx, session: CharacterSession, antal_slag: int):
-        """Slår de faktiska field-störningarna"""
-        try:
-            filepath = os.path.join(self.data_dir, 'field_storning.json')
-            with open(filepath, 'r', encoding='utf-8') as f:
-                table_data = json.load(f)
-            
-            störning_table = table_data['störningar_cirefalier']['störning']
-            results = []
-            
-            for i in range(antal_slag):
-                roll = random.randint(1, 100)
-                result = self.find_field_storning_result({'ranges': störning_table['ranges']}, roll)
-                results.append({
-                    'roll': roll,
-                    'result_key': result['result'],
-                    'description': result['description']
-                })
-            
-            # Visa alla störningar
-            embed = self.embed_factory.admin_message(
-                session.user_id, 
-                "🧬 Dina Field-störningar", 
-                f"Resultat från {antal_slag} slag:"
-            )
-            
-            for i, result in enumerate(results, 1):
-                embed.add_field(
-                    name=f"Störning {i} (Slag: {result['roll']})",
-                    value=result['description'],
-                    inline=False
-                )
-            
-            # Spara resultatet
-            session.data['field_storningar'] = results
-            session.temp_data.clear()
-            
-            embed.set_footer(text="Använd '!chargen fortsätt' för att gå vidare")
-            await ctx.send(embed=embed)
-            
-        except Exception as e:
-            await ctx.send(f"❌ Fel vid slående av field-störningar: {e}")
-            # Gå vidare ändå
-            if self.next_step(session):
-                await self.show_current_step(ctx, session)
-    
-    async def handle_multiple_field_storning_rolls(self, ctx, session: CharacterSession, extra_rolls: int):
-        """Hanterar flera slag på antal-tabellen (för roll_twice resultat)"""
-        # TODO: Implementera logik för att slå flera gånger på antal-tabellen
-        await ctx.send("⚠️ Multi-roll logik inte implementerad än, hoppar över...")
-        # Gå vidare till nästa steg
-        if self.next_step(session):
-            await self.show_current_step(ctx, session)
     
     async def handle_specialregler_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för specialregler (field störningar)"""
-        input_lower = input_text.strip().lower()
-        
-        if input_lower in ['fortsätt', 'behåll', 'next']:
-            # Bekräfta field störningar och gå vidare
-            if session.temp_data and 'field_storningar' in session.temp_data:
-                # Spara field störningar till huvuddata
-                session.data['field_storningar'] = session.temp_data.get('field_storningar', [])
-                session.temp_data.clear()
-            
-            # Gå till nästa steg
-            if self.next_step(session):
-                await self.show_current_step(ctx, session)
-        
-        elif input_lower in ['ändra', 'slåom']:
-            # Slå om field störningar
-            await ctx.send("🔄 Slår om field-störningar...")
-            await self.roll_cirefalier_field_storningar(ctx, session)
-        
-        else:
-            await ctx.send("❌ Ogiltigt val. Använd:\n`!chargen fortsätt` - Fortsätt med nuvarande störningar\n`!chargen slåom` - Slå om störningar")
+        """Hanterar input för specialregler - använder ny modul"""
+        success, error = await self.special_rules_step.handle_input(ctx, session, input_text, *args)
+        if success:
+            session.update_context()
+            self.save_session(session)
+            self.next_step(session)
+            await self.show_current_step(ctx, session)
     
     async def step_character_traits(self, ctx, session: CharacterSession):
-        """Steg 8: Karaktärsdrag - Val mellan slå fram eller hoppa över"""
-        embed = self.embed_factory.admin_message(session.user_id, "🎭 Steg 8/32: Karaktärsdrag", "Vill du slå fram karaktärsdrag för din rollperson?")
-        
-        embed.add_field(
-            name="📋 Vad är karaktärsdrag?",
-            value="Karaktärsdrag som Lojalitet, Heder, Amor, Aggression, Tro och Generositet ger din rollperson personlighet och djup. Dessa påverkar rollspelet men inte mekaniken direkt.",
-            inline=False
-        )
-        
-        embed.add_field(
-            name="✅ Dina alternativ:",
-            value="`!chargen slå` - Slå fram karaktärsdrag baserat på ditt folkslag\n`!chargen hoppa` - Hoppa över karaktärsdrag (rekommenderat för nybörjare)",
-            inline=False
-        )
-        
-        folkslag = session.data.get('folkslag', 'Okänt')
-        embed.add_field(
-            name="👤 Ditt folkslag:",
-            value=f"**{folkslag.capitalize()}** - Karaktärsdrag kommer slås enligt folkslagets värden",
-            inline=False
-        )
-        
-        embed.set_footer(text="Karaktärsdrag är valfria och påverkar främst rollspelet")
-        await ctx.send(embed=embed)
+        """Steg 8: Karaktärsdrag - använder ny modul"""
+        await self.traits_step.execute(ctx, session)
     
     async def handle_karaktärsdrag_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för karaktärsdrag-steget"""
-        input_lower = input_text.strip().lower()
-        
-        if input_lower in ['slå', 'roll', 'framslå']:
-            # Slå fram karaktärsdrag
-            await self.roll_character_traits(ctx, session)
-        
-        elif input_lower in ['hoppa', 'skip', 'hoppaöver', 'hoppa över']:
-            # Hoppa över karaktärsdrag
-            session.data['karaktärsdrag'] = {}
-            await ctx.send("⏭️ Hoppar över karaktärsdrag")
-            
-            # Gå till nästa steg
-            if self.next_step(session):
-                await self.show_current_step(ctx, session)
-        
-        elif input_lower in ['fortsätt', 'behåll'] and 'karaktärsdrag' in session.temp_data:
-            # Bekräfta slagna karaktärsdrag
-            session.data['karaktärsdrag'] = session.temp_data.get('karaktärsdrag', {})
-            session.temp_data.clear()
-            
-            await ctx.send("✅ Karaktärsdrag sparade!")
-            
-            # Gå till nästa steg
-            if self.next_step(session):
-                await self.show_current_step(ctx, session)
-        
-        elif input_lower in ['slåom', 'ändra'] and 'karaktärsdrag' in session.temp_data:
-            # Slå om karaktärsdrag
-            await ctx.send("🔄 Slår om karaktärsdrag...")
-            await self.roll_character_traits(ctx, session)
-        
-        else:
-            await ctx.send("❌ Ogiltigt val. Använd:\n`!chargen slå` - Slå fram karaktärsdrag\n`!chargen hoppa` - Hoppa över")
+        """Hanterar input för karaktärsdrag-steget - använder ny modul"""
+        success, error = await self.traits_step.handle_input(ctx, session, input_text, *args)
+        if success:
+            session.update_context()
+            self.save_session(session)
+            self.next_step(session)
+            await self.show_current_step(ctx, session)
+    
+    async def handle_familjebakgrund_input(self, ctx, session: CharacterSession, input_text: str, *args):
+        """Hanterar input för familjebakgrund-steget - använder ny modul"""
+        success, error = await self.family_step.handle_input(ctx, session, input_text, *args)
+        if success:
+            session.update_context()
+            self.save_session(session)
+            self.next_step(session)
+            await self.show_current_step(ctx, session)
     
     async def roll_character_traits(self, ctx, session: CharacterSession):
         """Slår karaktärsdrag baserat på folkslag"""
@@ -2113,39 +1532,8 @@ class InteractiveCharacterCreator:
         }
     
     async def step_family_background(self, ctx, session: CharacterSession):
-        """Steg 9: Komplett Automatisk Familjestorgenerering"""
-        race = session.data.get('folkslag')
-        age = session.data.get('ålder')
-        kultur = session.data.get('kultur')
-        hemland = session.data.get('hemland')
-        
-        
-        if not race or not age or not kultur:
-            await ctx.send("❌ Fel: Folkslag, ålder och kultur måste vara satta först.")
-            return
-        
-        # Specialhantering för Thalamur Medborgare - använd Thalasker för familjegenerering
-        family_generation_race = race
-        if (session.data.get('thalamur_special') == 'thalasker_medborgare' and 
-            session.data.get('thalamur_samhällsklass') == 'Medborgare'):
-            family_generation_race = 'Thalasker'
-        
-        try:
-            await ctx.send("🎲 Genererar komplett familjebakgrund... detta kan ta en stund")
-            
-            # STORGENERERING - Alla familj-aspekter på en gång
-            complete_family = await self.generate_complete_family_system(session, family_generation_race, age, kultur, hemland)
-            
-            # Spara som temporär data för behåll/ändra-funktionalitet
-            session.temp_data['generated_family'] = complete_family
-            self.save_session(session)
-            
-            # Formatera och visa resultatet (redan har behåll/ändra-funktionalitet inbyggt)
-            await self.display_complete_family(ctx, session, complete_family)
-            
-        except Exception as e:
-            await ctx.send(f"❌ Fel vid generering av komplett familjebakgrund: {e}")
-            print(f"Family generation error: {e}")  # För debugging
+        """Steg 9: Family background generation using modular system"""
+        await self.family_step.execute(ctx, session)
     
     async def generate_complete_family_system(self, session: CharacterSession, family_generation_race: str, age: int, kultur: str, hemland: str) -> Dict[str, Any]:
         """Genererar ALLA familj-aspekter på en gång"""
@@ -2754,111 +2142,37 @@ class InteractiveCharacterCreator:
         return "\n".join(summary_parts)
     
     async def step_family_tables(self, ctx, session: CharacterSession):
-        """Steg 10: Familjetabeller - Redan inkluderat i komplett familjebakgrund"""
-        await ctx.send("⏭️ Steg 10: Familjetabeller redan inkluderat i komplett familjebakgrund")
+        """Steg 10: Family tables - Skipped, handled by family step"""
+        await ctx.send("⏭️ Steg 10: Familjetabeller redan inkluderade i komplett familjebakgrund")
         
-        # Gå automatiskt till nästa steg
+        # Automatically go to next step
         if self.next_step(session):
             await self.show_current_step(ctx, session)
     
     async def step_parents(self, ctx, session: CharacterSession):
-        """Steg 11: Föräldrar - Redan inkluderat i komplett familjebakgrund"""  
-        await ctx.send("⏭️ Steg 11: Föräldrar redan inkluderat i komplett familjebakgrund")
+        """Steg 11: Parents - Skipped, handled by family step"""  
+        await ctx.send("⏭️ Steg 11: Föräldrar redan inkluderade i komplett familjebakgrund")
         
-        # Gå automatiskt till nästa steg
+        # Automatically go to next step
         if self.next_step(session):
             await self.show_current_step(ctx, session)
     
     async def step_background_count(self, ctx, session: CharacterSession):
-        """Steg 12: Beräkna antal bakgrundslag baserat på ras, ålder och attributsumma"""
-        
-        # Hämta nödvändig data
-        race = session.data.get('folkslag')
-        age = session.data.get('ålder')
-        attributes = session.data.get('attribut', {})
-        
-        if not race or not age or not attributes:
-            await ctx.send("❌ Fel: Folkslag, ålder och attribut måste vara satta först.")
-            return
-        
-        # Beräkna attributsumma
-        attribute_sum = sum(attributes.values())
-        
-        # Beräkna antal bakgrundslag (samma logik som i character_creation.py)
-        background_rolls = self.calculate_background_rolls(race, age, attribute_sum)
-        
-        # Visa resultatet
-        embed = self.embed_factory.admin_message(session.user_id, "🎲 Steg 12/32: Antal Bakgrundslag", "Beräkning av hur många bakgrundslag du får:")
-        
-        # Visa beräkningskomponenter
-        base_rolls = self.get_base_rolls_for_race(race)
-        embed.add_field(
-            name="Grundslag (Folkslag)",
-            value=f"**{race.capitalize()}:** {base_rolls} slag",
-            inline=True
-        )
-        
-        # Attributsumma bonus
-        attr_bonus = 0
-        if attribute_sum < 70: attr_bonus = 2
-        elif 71 <= attribute_sum <= 85: attr_bonus = 1
-        
-        embed.add_field(
-            name="Attributbonus",
-            value=f"Summa {attribute_sum}: +{attr_bonus} slag",
-            inline=True
-        )
-        
-        # Åldersbonus  
-        age_bonus = 0
-        if 31 <= age <= 45: age_bonus = 1
-        elif 46 <= age <= 60: age_bonus = 2
-        elif 61 <= age <= 80: age_bonus = 3
-        elif 81 <= age <= 100: age_bonus = 4
-        elif age > 100: age_bonus = 5
-        
-        embed.add_field(
-            name="Åldersbonus",
-            value=f"{age} år: +{age_bonus} slag",
-            inline=True
-        )
-        
-        embed.add_field(
-            name="**Totalt Antal Bakgrundslag**",
-            value=f"🎲 **{background_rolls} slag** på huvudbakgrundstabellen",
-            inline=False
-        )
-        
-        embed.set_footer(text="Skriv: !chargen fortsätt för att gå vidare")
-        await ctx.send(embed=embed)
-        
-        # Spara antalet slag
-        session.data['antal_bakgrundslag'] = background_rolls
-        self.save_session(session)
+        """Steg 12: Background count - using modular system"""
+        await self.background_step.execute(ctx, session)
     
     async def handle_bakgrundslag_antal_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för bakgrundslag-räkning"""
-        if input_text.lower().strip() in ['fortsätt', 'continue', 'next']:
-            # Gå till nästa steg
+        """Hanterar input för bakgrundslag-räkning - använder ny modul"""
+        success, error = await self.background_step.handle_input(ctx, session, input_text, *args)
+        if success:
+            session.update_context()
+            self.save_session(session)
             self.next_step(session)
             await self.show_current_step(ctx, session)
-        else:
-            await ctx.send("❌ Skriv `!chargen fortsätt` för att gå vidare till bakgrundslag.")
     
     async def step_main_background(self, ctx, session: CharacterSession):
-        """Steg 13: Slå på huvudbakgrundstabellen (med ätt-baserad placering för Thalamur Medborgare)"""
-        antal_slag = session.data.get('antal_bakgrundslag')
-        
-        if not antal_slag:
-            await ctx.send("❌ Fel: Antal bakgrundslag måste beräknas först.")
-            return
-        
-        # Kontrollera om spelaren har ätt-baserade placeringar
-        if self.has_placeable_background_rolls(session):
-            await self.handle_att_based_placement(ctx, session, antal_slag)
-        else:
-            # Standard slumpmässiga slag
-            await self.perform_random_background_rolls(ctx, session, antal_slag)
+        """Steg 13: Main background table - using modular system"""
+        await self.background_step.execute(ctx, session)
     
     def has_placeable_background_rolls(self, session: CharacterSession) -> bool:
         """Kontrollerar om spelaren har ätt-baserade placeringsmöjligheter"""
@@ -2947,20 +2261,13 @@ class InteractiveCharacterCreator:
         await self.display_background_results(ctx, session, results)
     
     async def handle_huvudbakgrund_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för huvudbakgrundstabellen-steget"""
-        input_lower = input_text.strip().lower()
-        
-        # Kontrollera om vi är i placeringsläge
-        if session.temp_data.get('placement_mode'):
-            await self.handle_placement_input(ctx, session, input_lower)
-            return
-        
-        if input_lower in ['fortsätt', 'next', 'nästa']:
-            # Gå vidare till steg 14 - Bearbeta bakgrundshändelser
+        """Hanterar input för huvudbakgrundstabellen-steget - använder ny modul"""
+        success, error = await self.background_step.handle_input(ctx, session, input_text, *args)
+        if success:
+            session.update_context()
+            self.save_session(session)
             self.next_step(session)
             await self.show_current_step(ctx, session)
-        else:
-            await ctx.send("Skriv `!chargen fortsätt` för att fortsätta till bearbetning av bakgrundshändelser.")
     
     async def handle_placement_input(self, ctx, session: CharacterSession, input_text: str):
         """Hanterar input för ätt-baserad placering"""
@@ -3254,43 +2561,8 @@ class InteractiveCharacterCreator:
         await ctx.send(embed=embed)
     
     async def step_background_events(self, ctx, session: CharacterSession):
-        """Steg 14: Slå på specifika bakgrundstabeller en i taget"""
-        results = session.data.get('huvudbakgrund_results')
-        
-        if not results:
-            await ctx.send("❌ Fel: Inga bakgrundsresultat att bearbeta.")
-            return
-        
-        # Kontrollera om vi redan har börjat bearbeta slag
-        if 'current_background_index' not in session.data:
-            session.data['current_background_index'] = 0
-            session.data['processed_background_results'] = []
-        
-        current_index = session.data['current_background_index']
-        
-        # Debug: Visa status
-        
-        # Kolla om vi är klara med alla slag
-        if current_index >= len(results):
-            await self.show_final_background_summary(ctx, session)
-            return
-        
-        # Hämta nuvarande slag att bearbeta
-        current_result = results[current_index]
-        result_type = current_result['result_key']
-        
-        await ctx.send(f"🎲 Bearbetar slag {current_index + 1}/{len(results)}: **{current_result['description']}**")
-        
-        # Slå på specifik tabell baserat på resultat
-        detailed_result = await self.roll_specific_background_table(ctx, session, result_type, current_result)
-        
-        if detailed_result:
-            # Visa resultatet med behåll/slå om-alternativ
-            await self.show_background_result_with_options(ctx, session, detailed_result, current_result)
-        else:
-            # Om ingen specifik tabell finns, gå vidare
-            await ctx.send(f"⚠️ Ingen specifik tabell för {result_type}, hoppar vidare...")
-            await self.advance_to_next_background_roll(ctx, session)
+        """Steg 14: Background events - using modular system"""
+        await self.background_step.execute(ctx, session)
     
     def get_table_display_name(self, table_type: str) -> str:
         """Returnerar ett läsbart namn för tabelltyper"""
@@ -3510,354 +2782,19 @@ class InteractiveCharacterCreator:
         await ctx.send(embed=embed)
     
     async def handle_bakgrundshändelser_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för bakgrundshändelser-steget"""
-        input_lower = input_text.strip().lower()
-        
-        # Kolla om vi håller på att bearbeta individuella bakgrundsslag
-        current_index = session.data.get('current_background_index', -1)
-        total_results = len(session.data.get('huvudbakgrund_results', []))
-        
-        if 'current_background_index' in session.data and session.data['current_background_index'] < len(session.data.get('huvudbakgrund_results', [])):
-            
-            if input_lower in ['fortsätt', 'behåll']:
-                # Fortsätt med det nuvarande resultatet
-                current_result = session.temp_data.get('current_detailed_result')
-                if current_result:
-                    # Lägg till i de bearbetade resultaten
-                    processed_results = session.data.get('processed_background_results', [])
-                    processed_results.append({
-                        'category': self.get_table_display_name(current_result['table_type']),
-                        'roll': current_result['roll'],
-                        'result': current_result['result'],
-                        'table_file': current_result['table_file']
-                    })
-                    session.data['processed_background_results'] = processed_results
-                    
-                    await ctx.send(f"✅ Fortsätter med resultatet: **{current_result['result']}**")
-                    await self.advance_to_next_background_roll(ctx, session)
-                else:
-                    await ctx.send("❌ Inget resultat att fortsätta med.")
-            
-            elif input_lower in ['slåom', 'slå om', 'reroll']:
-                # Slå om på samma tabell
-                current_result = session.temp_data.get('current_detailed_result')
-                if current_result:
-                    await ctx.send("🔄 Slår om...")
-                    # Hämta nuvarande originalresultat
-                    results = session.data.get('huvudbakgrund_results', [])
-                    current_index = session.data['current_background_index']
-                    original_result = results[current_index]
-                    
-                    # Slå igen på samma tabell
-                    detailed_result = await self.roll_specific_background_table(ctx, session, current_result['table_type'], original_result)
-                    if detailed_result:
-                        await self.show_background_result_with_options(ctx, session, detailed_result, original_result)
-                    else:
-                        await ctx.send("❌ Kunde inte slå om, hoppar vidare...")
-                        await self.advance_to_next_background_roll(ctx, session)
-                else:
-                    await ctx.send("❌ Inget resultat att slå om.")
-            
-            elif input_lower in ['hoppa', 'skip']:
-                # Hoppa över detta slag
-                await ctx.send("⏭️ Hoppar över detta slag...")
-                await self.advance_to_next_background_roll(ctx, session)
-            
-            else:
-                await ctx.send("❌ Ogiltigt val. Använd:\n`!chargen fortsätt` - Fortsätt med resultat\n`!chargen slåom` - Slå om\n`!chargen hoppa` - Hoppa över")
-        
-        elif input_lower in ['fortsätt', 'next', 'nästa']:
-            # Gå vidare till nästa steg (kommer att vara yrke eller liknande)
+        """Hanterar input för bakgrundshändelser-steget - använder ny modul"""
+        success, error = await self.background_step.handle_input(ctx, session, input_text, *args)
+        if success:
+            session.update_context()
+            self.save_session(session)
             self.next_step(session)
             await self.show_current_step(ctx, session)
-        else:
-            await ctx.send("Skriv `!chargen fortsätt` för att fortsätta till nästa fas av karaktärsskapandet.")
     
     async def step_final_summary(self, ctx, session: CharacterSession):
-        """Steg 15: Visa slutlig karaktärssammanfattning"""
-        await ctx.send("📊 Genererar komplett karaktärssammanfattning...")
+        """Steg 15: Character summary - using modular system"""
+        await self.summary_step.execute(ctx, session)
         
-        # Skapa flera embeds för att visa all information
-        embeds = []
-        
-        # Embed 1: Grundläggande information
-        basic_embed = self.embed_factory.admin_message(
-            session.user_id, 
-            "🎭 Karaktärssammanfattning - Del 1: Grundläggande", 
-            f"Komplett översikt av din genererade EON-karaktär:"
-        )
-        
-        # Grundinfo
-        folkslag_text = session.data.get('folkslag', 'Okänt').capitalize()
-        
-        # Lägg till Thalamur-specifik information
-        thalamur_special = session.data.get('thalamur_special')
-        if thalamur_special:
-            samhällsklass = session.data.get('thalamur_samhällsklass', '')
-            if samhällsklass:
-                folkslag_text += f" ({samhällsklass})"
-                
-                # Lägg till ätt information för Medborgare
-                if samhällsklass == 'Medborgare':
-                    thalamur_att = session.data.get('thalamur_ätt')
-                    thalamur_att_data = session.data.get('thalamur_ätt_data', {})
-                    if thalamur_att and thalamur_att_data:
-                        folkslag_text += f", Ätt {thalamur_att_data.get('titel', thalamur_att.title())}"
-        
-        basic_embed.add_field(
-            name="👤 Grundläggande Information",
-            value=f"**Kön:** {session.data.get('kön', 'Okänt').capitalize()}\n" +
-                  f"**Ålder:** {session.data.get('ålder', 'Okänt')} år\n" +
-                  f"**Hemland:** {session.data.get('hemland', 'Okänt')}\n" +
-                  f"**Folkslag:** {folkslag_text}\n" +
-                  f"**Kultur:** {session.data.get('kultur_namn', session.data.get('kultur', 'Okänt'))}",
-            inline=False
-        )
-        
-        # Thalamur ätt-information
-        thalamur_att_data = session.data.get('thalamur_ätt_data')
-        if thalamur_att_data:
-            bonusar = thalamur_att_data.get('bonusar', {})
-            att_info = []
-            
-            # Beskrivning
-            att_info.append(f"**Beskrivning:** {thalamur_att_data.get('beskrivning', 'Ingen beskrivning')}")
-            
-            # Placera slag
-            if 'placera_slag' in bonusar:
-                att_info.append(f"**Placera bakgrundslag på:** {', '.join(bonusar['placera_slag'])}")
-            
-            # Lättlärda färdigheter
-            if 'lattlarda_fardigheter' in bonusar:
-                att_info.append(f"**Lättlärda färdigheter:** {', '.join(bonusar['lattlarda_fardigheter'])}")
-            
-            # Extra kontakter
-            if 'extra_kontakter' in bonusar:
-                att_info.append(f"**Extra kontakter:** +{bonusar['extra_kontakter']}")
-            
-            # Special regel
-            if 'special_regel' in bonusar:
-                att_info.append(f"**Specialregel:** {bonusar['special_regel']}")
-            
-            basic_embed.add_field(
-                name=f"🏛️ Thalamurisk ätt: {thalamur_att_data.get('titel', 'Okänd')}",
-                value="\n".join(att_info),
-                inline=False
-            )
-        
-        # Field-störningar för Cirefalier
-        field_storningar = session.data.get('field_storningar', [])
-        if field_storningar:
-            storning_text = []
-            for i, storning in enumerate(field_storningar, 1):
-                storning_text.append(f"{i}. **{storning['result_key'].replace('_', ' ').title()}**")
-            
-            basic_embed.add_field(
-                name="🧬 Field-störningar (Cirefalier)",
-                value="\n".join(storning_text) if storning_text else "Inga störningar",
-                inline=False
-            )
-        elif 'cirefalier' in session.data.get('folkslag', '').lower():
-            basic_embed.add_field(
-                name="🧬 Field-störningar (Cirefalier)",
-                value="Inga störningar 🎉",
-                inline=False
-            )
-        
-        # Karaktärsdrag
-        karaktersdrag = session.data.get('karaktärsdrag', {})
-        if karaktersdrag:
-            trait_text = []
-            for trait, data in karaktersdrag.items():
-                if isinstance(data, dict) and 'value' in data:
-                    trait_text.append(f"**{trait.capitalize()}:** {data['value']}")
-                else:
-                    trait_text.append(f"**{trait.capitalize()}:** {data}")
-            
-            basic_embed.add_field(
-                name="🎭 Karaktärsdrag",
-                value="\n".join(trait_text) if trait_text else "Inga karaktärsdrag",
-                inline=False
-            )
-        
-        # Attribut
-        attributes = session.data.get('attribut', {})
-        if attributes:
-            attr_text = []
-            total = sum(attributes.values())
-            for attr, value in attributes.items():
-                attr_text.append(f"**{attr}:** {value}")
-            
-            basic_embed.add_field(
-                name="⚔️ Attribut",
-                value="\n".join(attr_text) + f"\n\n**Totalsumma:** {total}",
-                inline=True
-            )
-        
-        embeds.append(basic_embed)
-        
-        # Embed 2: Familjebakgrund
-        family_embed = self.embed_factory.admin_message(session.user_id, "👨‍👩‍👧‍👦 Karaktärssammanfattning - Del 2: Familjebakgrund", "")
-        
-        # Visa familjebakgrundssummary från den kompletta familjedatan
-        family_data = session.data.get('komplett_familjebakgrund')
-        if family_data:
-            # Extrahera nyckelinfo från familjedatan
-            family_text = []
-            
-            # Grundläggande familj
-            basic = family_data.get('basic', {})
-            if basic:
-                basic_summary = self._format_family_dict_summary(basic)
-                family_text.append("📅 **GRUNDLÄGGANDE FAMILJ**")
-                family_text.append(basic_summary)
-            
-            # Profession från kultur
-            profession = family_data.get('profession', {})
-            if profession and 'profession' in profession:
-                family_text.append(f"\n💼 **FAMILJENS HUVUDNÄRING**")
-                family_text.append(f"Familjen arbetar som **{profession['profession']}** (Slag: {profession['roll']})")
-                if profession.get('skills'):
-                    skills_text = ", ".join(profession['skills'])
-                    family_text.append(f"Färdigheter: {skills_text} (Bonus: {profession.get('skill_bonus', '1d6+1')})")
-            
-            # Rasspecifika egenskaper
-            race_specific = family_data.get('race_specific', {})
-            if race_specific:
-                family_text.append(f"\n🏛️ **RASSPECIFIKA EGENSKAPER**")
-                
-                if 'household' in race_specific:
-                    household = race_specific['household']
-                    family_text.append(f"🏠 **Hushåll:** {household.get('name', 'Okänt')}")
-                    if 'skills' in household:
-                        skills = ", ".join(household['skills'])
-                        family_text.append(f"Bonus: {skills} ({household.get('bonus', '1d6+1')})")
-                
-                if 'mentor' in race_specific:
-                    mentor = race_specific['mentor']
-                    family_text.append(f"🧙‍♂️ **Mentor:** {mentor.get('personality', 'Okänd personlighet')}")
-                    if 'skills' in mentor:
-                        skills = ", ".join(mentor['skills'])
-                        family_text.append(f"Mentor-färdigheter: {skills} ({mentor.get('bonus', '1d6+4')})")
-                
-                if 'social_class' in race_specific:
-                    social = race_specific['social_class']
-                    family_text.append(f"🏛️ **Social klass:** {social.get('name', 'Okänd')}")
-                    if 'attribute_effects' in social:
-                        effects = social['attribute_effects']
-                        effect_text = ", ".join([f"{attr}: {'+' if val >= 0 else ''}{val}" for attr, val in effects.items()])
-                        family_text.append(f"Attributeffekter: {effect_text}")
-            
-            if family_text:
-                # Begränsa längden för Discord embed
-                family_summary = "\n".join(family_text)
-                if len(family_summary) > 1800:
-                    family_summary = family_summary[:1800] + "..."
-                
-                family_embed.add_field(
-                    name="🏠 Familjebakgrund",
-                    value=family_summary,
-                    inline=False
-                )
-        
-        embeds.append(family_embed)
-        
-        # Embed 3: Bakgrundshändelser
-        background_embed = self.embed_factory.admin_message(session.user_id, "📚 Karaktärssammanfattning - Del 3: Bakgrundshändelser", "")
-        
-        # Antal bakgrundslag
-        background_rolls = session.data.get('antal_bakgrundslag', 0)
-        background_embed.add_field(
-            name="🎲 Bakgrundslag",
-            value=f"Totalt antal slag: **{background_rolls}**",
-            inline=False
-        )
-        
-        # Processed background results
-        processed_results = session.data.get('processed_background_results', [])
-        if processed_results:
-            results_text = []
-            for i, result in enumerate(processed_results, 1):
-                category = result.get('category', 'Okänt')
-                result_desc = result.get('result', 'Inget resultat')
-                # Begränsa längden för att få plats
-                short_desc = result_desc[:50] + "..." if len(result_desc) > 50 else result_desc
-                results_text.append(f"**{i}.** {category}: {short_desc}")
-            
-            background_embed.add_field(
-                name="📋 Erhållna bakgrundshändelser:",
-                value="\n".join(results_text[:10]),  # Max 10 resultat
-                inline=False
-            )
-            
-            if len(processed_results) > 10:
-                background_embed.add_field(
-                    name="📖 Ytterligare händelser:",
-                    value=f"... och {len(processed_results) - 10} ytterligare bakgrundshändelser",
-                    inline=False
-                )
-        
-        embeds.append(background_embed)
-        
-        # Embed 4: Färdighetsbonus från olika källor
-        skills_embed = self.embed_factory.admin_message(session.user_id, "🎯 Karaktärssammanfattning - Del 4: Färdighetsbonus", "")
-        
-        # Samla färdighetsbonus från alla källor
-        skill_bonuses = self.collect_all_skill_bonuses(session)
-        
-        if skill_bonuses:
-            skills_text = []
-            for skill, sources in skill_bonuses.items():
-                source_list = []
-                for source in sources:
-                    if source['bonus']:
-                        source_list.append(f"{source['source']}: {source['bonus']}")
-                    else:
-                        source_list.append(source['source'])
-                skills_text.append(f"**{skill.capitalize()}:** {', '.join(source_list)}")
-            
-            skills_embed.add_field(
-                name="📚 Erhållna färdighetsbonus:",
-                value="\n".join(skills_text),
-                inline=False
-            )
-        else:
-            skills_embed.add_field(
-                name="📚 Färdighetsbonus:",
-                value="Inga specifika färdighetsbonus dokumenterade (men kan finnas från bakgrundshändelser)",
-                inline=False
-            )
-        
-        embeds.append(skills_embed)
-        
-        # Embed 5: Slutlig statusuppdatering
-        final_embed = self.embed_factory.admin_message(session.user_id, "🏆 Karaktärsskapande Slutfört!", "Din EON-karaktär är nu redo för äventyr!")
-        
-        final_embed.add_field(
-            name="✅ Slutförda steg:",
-            value="• Grundläggande information (kön, ålder, hemland, ras)\n" +
-                  "• Kultur och familjebakgrund\n" +
-                  "• Attributgenerering med rasmodifierare\n" +
-                  "• Komplett automatisk familjegenerering\n" +
-                  "• Detaljerade bakgrundshändelser",
-            inline=False
-        )
-        
-        
-        final_embed.add_field(
-            name="🎮 Session avslutad:",
-            value=f"Karaktärsskapande-sessionen är nu slutförd.\n" +
-                  f"Använd `!chargen start` för att skapa en ny karaktär.",
-            inline=False
-        )
-        
-        embeds.append(final_embed)
-        
-        # Skicka alla embeds
-        for embed in embeds:
-            await ctx.send(embed=embed)
-        
-        # Rensa sessionen
+        # End the session after summary is complete
         self.end_session(str(ctx.author.id))
     
     def collect_all_skill_bonuses(self, session: CharacterSession) -> Dict[str, List[Dict[str, str]]]:

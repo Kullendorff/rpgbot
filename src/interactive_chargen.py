@@ -24,6 +24,7 @@ from character_creation.steps.gender import GenderStep
 from character_creation.steps.age import AgeStep
 from character_creation.steps.homeland import HomelandStep
 from character_creation.steps.race import RaceStep
+from character_creation.steps.culture import CultureStep
 
 class InteractiveCharacterCreator:
     """Huvudklass för interaktivt karaktärsskapande med full EON TableProcessor integration"""
@@ -60,6 +61,7 @@ class InteractiveCharacterCreator:
         self.age_step = AgeStep(self.embed_factory)
         self.homeland_step = HomelandStep(self.embed_factory, self.data_dir)
         self.race_step = RaceStep(self.embed_factory, self.data_dir)
+        self.culture_step = CultureStep(self.embed_factory, self.data_dir)
         
         # Definiera alla 33 steg
         self.steps = self._define_steps()
@@ -1189,15 +1191,17 @@ class InteractiveCharacterCreator:
             await self.show_current_step(ctx, session)
     
     async def handle_kultur_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för kultur-steget"""
-        input_text = input_text.strip()
-        culture_options = session.temp_data.get('culture_options', [])
+        """Hanterar input för kultur-steget - använder ny modul"""
+        success, error = await self.culture_step.handle_input(ctx, session, input_text, *args)
         
-        if not culture_options:
-            await ctx.send("❌ Ingen kulturdata tillgänglig. Försök visa steget igen.")
-            return
-        
-        # Hantera "info [nummer]" kommando
+        if success:
+            # Uppdatera och spara session
+            session.update_context()
+            self.save_session(session)
+            
+            # Gå till nästa steg automatiskt
+            self.next_step(session)
+            await self.show_current_step(ctx, session)
         if input_text.lower().startswith('info'):
             parts = input_text.split()
             if len(parts) >= 2:
@@ -1383,11 +1387,8 @@ class InteractiveCharacterCreator:
     
     # Placeholder för resterande steg-hanterare
     async def step_culture(self, ctx, session: CharacterSession):
-        """Steg 5: Välj kultur - Detta reglerar vad ens familj kommer ifrån"""
-        
-        if not self.culture_data:
-            await ctx.send("❌ Fel: Ingen kulturdata kunde laddas.")
-            return
+        """Steg 5: Välj kultur - använder ny modul"""
+        await self.culture_step.execute(ctx, session)
         
         embed = self.embed_factory.admin_message(session.user_id, "🏛️ Steg 5/32: Kultur", "Välj rollpersonens familjekultur som bestämmer familjebakgrunden:")
         

@@ -1,0 +1,59 @@
+Beskrivning av önskad funktionalitet: Dynamisk folkslagslista i karaktärsskaparen
+Mål:
+Förbättra den interaktiva karaktärsskaparen (!chargen) i Discord-boten. Specifikt ska steget där spelaren väljer folkslag (folkslag) göras kontextkänsligt baserat på det hemland (hemland) som valdes i föregående steg.
+
+Nuvarande process:
+
+Spelaren väljer ett hemland (t.ex. "Soldarn").
+
+Spelaren presenteras med en lång, statisk lista över alla möjliga folkslag i hela spelvärlden.
+
+Önskad ny process:
+
+Spelaren väljer ett hemland (t.ex. "Soldarn").
+
+Systemet ska nu använda det valda hemlandet för att dynamiskt generera och presentera en kort, filtrerad lista över de folkslag som är vanliga och logiska i just det hemlandet.
+
+Spelaren kan sedan välja ett folkslag från denna kurerade lista.
+
+Funktionella krav:
+
+Datakälla:
+
+Logiken ska baseras på en ny JSON-fil, homeland_races.json.
+
+Denna fil mappar ett hemlandsnamn (nyckel) till en lista av folkslag med tillhörande procentintervall (t.ex. {"range": "1-64", "folkslag": "Soldier (vanar)"}).
+
+Filen innehåller även nästlade "subtables" för att hantera varianter av folkslag (t.ex. olika sorters alver eller dvärgar).
+
+Logik för step_race (Steg 3 i !chargen):
+
+När en spelare når detta steg, ska systemet läsa det hemland som är sparat i spelarens session.
+
+Använd hemlandet för att hämta motsvarande folkslagslista från homeland_races.json.
+
+Skapa en ren, unik och numrerad lista av folkslagsnamn från den hämtade datan.
+
+Resultatet "Annat folkslag" ska inte inkluderas i listan som presenteras för spelaren.
+
+Presentera denna filtrerade lista i en Discord embed.
+
+Användarinteraktion:
+
+Val: Spelaren ska kunna välja ett folkslag genom att skriva antingen dess namn eller dess siffra i listan. Systemet måste validera input mot den dynamiskt genererade listan.
+
+Slumpa: Spelaren ska kunna skriva !chargen slumpa. Då ska systemet:
+
+Simulera ett T100-slag.
+
+Hitta motsvarande folkslag i homeland_races.json för det aktuella hemlandet.
+
+Om resultatet har en subtable (t.ex. för "Alv"), ska ett ytterligare T100-slag göras mot den nästlade tabellen för att bestämma den specifika varianten (t.ex. "Pyar").
+
+Presentera det slumpade resultatet för spelaren.
+
+Specialfall & Fallbacks:
+
+Den befintliga speciallogiken för hemlandet "Thalamur" ska bevaras och exekveras innan den nya filtreringslogiken.
+
+Om ett valt hemland av någon anledning inte finns i homeland_races.json, ska systemet ha en fallback-lösning, exempelvis att informera användaren och visa den gamla, kompletta listan.

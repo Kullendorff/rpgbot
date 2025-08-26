@@ -22,6 +22,8 @@ from character_creation.session import CharacterSession
 # Import av nya step-moduler
 from character_creation.steps.gender import GenderStep
 from character_creation.steps.age import AgeStep
+from character_creation.steps.homeland import HomelandStep
+from character_creation.steps.race import RaceStep
 
 class InteractiveCharacterCreator:
     """Huvudklass för interaktivt karaktärsskapande med full EON TableProcessor integration"""
@@ -56,6 +58,8 @@ class InteractiveCharacterCreator:
         # Initiera step-moduler
         self.gender_step = GenderStep(self.embed_factory)
         self.age_step = AgeStep(self.embed_factory)
+        self.homeland_step = HomelandStep(self.embed_factory, self.data_dir)
+        self.race_step = RaceStep(self.embed_factory, self.data_dir)
         
         # Definiera alla 33 steg
         self.steps = self._define_steps()
@@ -462,55 +466,21 @@ class InteractiveCharacterCreator:
             await self.show_current_step(ctx, session)
     
     async def step_homeland(self, ctx, session: CharacterSession):
-        """Steg 2: Välj hemland (INTE folkslag!)"""
-        
-        if not self.homelands:
-            await ctx.send("❌ Fel: Inga hemländer kunde laddas.")
-            return
-        
-        # Visa lista över länder (INTE folkslag)
-        embed = self.embed_factory.admin_message(
-            session.user_id,
-            "Steg 2/32: Hemland",
-            "Välj rollpersonens hemland:"
-        )
-        
-        # Visa första 20 länder i huvudlistan
-        land_list = []
-        for i, homeland in enumerate(self.homelands[:20], 1):
-            land_list.append(f"{i}. {homeland['title']}")
-        
-        embed.add_field(
-            name="Tillgängliga länder (1-20):",
-            value="\n".join(land_list),
-            inline=False
-        )
-        
-        if len(self.homelands) > 20:
-            embed.add_field(
-                name=f"Fler länder (21-{len(self.homelands)}):",
-                value=f"Skriv `!chargen lista` för alla {len(self.homelands)} länder",
-                inline=False
-            )
-        
-        embed.add_field(
-            name="Kommandon:",
-            value="`!chargen [nummer]` - Välj med nummer (t.ex. !chargen 15)\n`!chargen [namn]` - Välj med namn (t.ex. !chargen soldarn)\n`!chargen lista` - Visa alla länder",
-            inline=False
-        )
-        
-        await ctx.send(embed=embed)
+        """Steg 2: Välj hemland - använder ny modul"""
+        await self.homeland_step.execute(ctx, session)
     
     async def handle_hemland_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar användarinput för hemlandsval"""
+        """Hanterar användarinput för hemlandsval - använder ny modul"""
+        success, error = await self.homeland_step.handle_input(ctx, session, input_text, *args)
         
-        input_lower = input_text.lower()
-        
-        if input_lower == "lista":
-            await self.show_all_homelands(ctx, session)
-            return
-        
-        # Ta bort bekräftelse-hantering här - låt generella systemet hantera det
+        if success:
+            # Uppdatera och spara session
+            session.update_context()
+            self.save_session(session)
+            
+            # Gå till nästa steg automatiskt
+            self.next_step(session)
+            await self.show_current_step(ctx, session)
         
         user_input = input_text.strip()
         selected_homeland = None
@@ -931,13 +901,8 @@ class InteractiveCharacterCreator:
         await ctx.send(embed=embed)
     
     async def step_race(self, ctx, session: CharacterSession):
-        """Steg 3: Välj folkslag (EFTER hemland)"""
-        hemland = session.data.get('hemland', '').lower()
-        
-        # Specialregler för Thalamur
-        if 'thalamur' in hemland:
-            await self.handle_thalamur_folkslag(ctx, session)
-            return
+        """Steg 3: Välj folkslag - använder ny modul med hemlandsfiltrering"""
+        await self.race_step.execute(ctx, session)
         
         if not self.folkslag_data:
             await ctx.send("❌ Fel: Inga folkslag kunde laddas.")
@@ -999,15 +964,17 @@ class InteractiveCharacterCreator:
         await ctx.send(embed=embed)
     
     async def handle_folkslag_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för folkslag (steg 3)"""
-        hemland = session.data.get('hemland', '').lower()
+        """Hanterar input för folkslag - använder ny modul"""
+        success, error = await self.race_step.handle_input(ctx, session, input_text, *args)
         
-        # Specialhantering för Thalamur
-        if 'thalamur' in hemland:
-            await self.handle_thalamur_input(ctx, session, input_text, *args)
-            return
-        
-        if input_text.lower() == "lista":
+        if success:
+            # Uppdatera och spara session
+            session.update_context()
+            self.save_session(session)
+            
+            # Gå till nästa steg automatiskt
+            self.next_step(session)
+            await self.show_current_step(ctx, session)
             await self.show_all_folkslag(ctx, session)
             return
         

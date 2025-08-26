@@ -16,12 +16,65 @@ from eon_table_processor import TableProcessor, CharacterContext, create_charact
 from automatic_background import AutomaticBackgroundGenerator
 import random
 
-# Import CharacterSession från nya platsen
-from character_creation.session import CharacterSession
-
-# Import av nya step-moduler
-from character_creation.steps.gender import GenderStep
-from character_creation.steps.age import AgeStep
+@dataclass
+class CharacterSession:
+    """Hanterar en pågående karaktärsskapande-session för en användare"""
+    user_id: str
+    current_step: int = 1
+    max_steps: int = 32
+    data: Dict[str, Any] = None
+    temp_data: Dict[str, Any] = None  # Temporär data innan bekräftelse
+    context: CharacterContext = None
+    created_at: datetime = None
+    
+    def __post_init__(self):
+        if self.data is None:
+            self.data = {}
+        if self.temp_data is None:
+            self.temp_data = {}
+        if self.context is None:
+            self.context = CharacterContext()
+        if self.created_at is None:
+            self.created_at = datetime.now()
+    
+    def update_context(self):
+        """Uppdaterar CharacterContext baserat på nuvarande session-data"""
+        if 'folkslag' in self.data:
+            self.context = create_character_context(
+                folkslag=self.data['folkslag'],
+                kultur=self.data.get('kultur'),
+                social_class=self.data.get('social_class')
+            )
+            # Lägg till stam för alver om det finns
+            if 'stam' in self.data:
+                self.context.stam = self.data['stam']
+            if 'location' in self.data:
+                self.context.location = self.data['location']
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Konverterar session till dictionary för serialisering"""
+        return {
+            'user_id': self.user_id,
+            'current_step': self.current_step,
+            'max_steps': self.max_steps,
+            'data': self.data,
+            'temp_data': self.temp_data,
+            'created_at': self.created_at.isoformat()
+        }
+    
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> 'CharacterSession':
+        """Skapar session från dictionary"""
+        session = cls(
+            user_id=data['user_id'],
+            current_step=data['current_step'],
+            max_steps=data.get('max_steps', 33),
+            data=data.get('data', {}),
+            temp_data=data.get('temp_data', {}),
+            created_at=datetime.fromisoformat(data['created_at'])
+        )
+        session.update_context()
+        return session
 
 class InteractiveCharacterCreator:
     """Huvudklass för interaktivt karaktärsskapande med full EON TableProcessor integration"""
@@ -52,10 +105,6 @@ class InteractiveCharacterCreator:
         self.culture_data = self.load_culture_data()
         self.thalamur_atter_data = None  # Laddas vid behov
         self.thalask_family_data = None  # Laddas vid behov
-        
-        # Initiera step-moduler
-        self.gender_step = GenderStep(self.embed_factory)
-        self.age_step = AgeStep(self.embed_factory)
         
         # Definiera alla 33 steg
         self.steps = self._define_steps()
@@ -445,21 +494,42 @@ class InteractiveCharacterCreator:
     # =================
     
     async def step_gender(self, ctx, session: CharacterSession):
-        """Steg 1: Välj kön - använder ny modul"""
-        await self.gender_step.execute(ctx, session)
+        """Steg 1: Välj kön"""
+        embed = self.embed_factory.admin_message(
+            session.user_id,
+            "Steg 1/32: Kön",
+            "Välj rollpersonens kön:"
+        )
+        embed.add_field(
+            name="Val",
+            value="1. Kvinna\n2. Man\n3. Annat/icke-binärt",
+            inline=False
+        )
+        embed.set_footer(text="Skriv: !chargen kvinna, !chargen man, eller !chargen annat")
+        await ctx.send(embed=embed)
     
     async def handle_kön_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för kön-steget - använder ny modul"""
-        success, error = await self.gender_step.handle_input(ctx, session, input_text, *args)
+        """Hanterar input för kön-steget"""
+        input_lower = input_text.lower()
         
-        if success:
-            # Uppdatera och spara session
+        gender_map = {
+            '1': 'kvinna', 'kvinna': 'kvinna', 'female': 'kvinna',
+            '2': 'man', 'man': 'man', 'male': 'man',
+            '3': 'annat', 'annat': 'annat', 'icke-binärt': 'annat', 'other': 'annat'
+        }
+        
+        if input_lower in gender_map:
+            session.data['kön'] = gender_map[input_lower]
             session.update_context()
             self.save_session(session)
+            
+            await ctx.send(f"✅ Kön satt till: **{session.data['kön'].capitalize()}**")
             
             # Gå till nästa steg automatiskt
             self.next_step(session)
             await self.show_current_step(ctx, session)
+        else:
+            await ctx.send("❌ Ogiltigt val. Använd: kvinna, man, eller annat")
     
     async def step_homeland(self, ctx, session: CharacterSession):
         """Steg 2: Välj hemland (INTE folkslag!)"""
@@ -1205,21 +1275,57 @@ class InteractiveCharacterCreator:
             await self.show_current_step(ctx, session)
     
     async def step_age(self, ctx, session: CharacterSession):
-        """Steg 4: Välj ålder - använder ny modul"""
-        await self.age_step.execute(ctx, session)
+        """Steg 4: Välj ålder"""
+        embed = self.embed_factory.admin_message(session.user_id, "⏰ Steg 4/32: Ålder", "Välj rollpersonens ålder:")
+        
+        # Visa rekommendationer baserat på folkslag om det är satt
+        if 'folkslag' in session.data:
+            age_recommendations = {
+                'alv': "200-800 år (alver lever mycket länge)",
+                'dvärg': "50-200 år (dvärgar lever längre än människor)",
+                'tirak': "25-80 år (ungefär som människor)",
+                'thalask': "20-60 år (kortare livslängd)"
+            }
+            
+            folkslag = session.data['folkslag']
+            recommendation = age_recommendations.get(folkslag, "20-80 år (standard för människor)")
+            
+            embed.add_field(
+                name=f"Rekommendation för {folkslag.capitalize()}",
+                value=recommendation,
+                inline=False
+            )
+        
+        embed.add_field(
+            name="Ålderseffekter på bakgrundslag",
+            value="31-45 år: +1 slag\n46-60 år: +2 slag\n61-80 år: +3 slag\n81-100 år: +4 slag\n100+ år: +5 slag",
+            inline=False
+        )
+        
+        embed.set_footer(text="Skriv: !chargen [ålder] (t.ex. !chargen 25)")
+        await ctx.send(embed=embed)
     
     async def handle_ålder_input(self, ctx, session: CharacterSession, input_text: str, *args):
-        """Hanterar input för ålder-steget - använder ny modul"""
-        success, error = await self.age_step.handle_input(ctx, session, input_text, *args)
-        
-        if success:
-            # Uppdatera och spara session
+        """Hanterar input för ålder-steget"""
+        try:
+            age = int(input_text.strip())
+            
+            if age < 1 or age > 2000:  # Säkerhetscheck, alver kan bli över 1000
+                await ctx.send("❌ Åldern måste vara mellan 1 och 2000 år.")
+                return
+            
+            session.data['ålder'] = age
             session.update_context()
             self.save_session(session)
             
-            # Gå till nästa steg automatiskt
+            await ctx.send(f"✅ Ålder satt till: **{age} år**")
+            
+            # Gå till nästa steg
             self.next_step(session)
             await self.show_current_step(ctx, session)
+            
+        except ValueError:
+            await ctx.send("❌ Åldern måste vara ett nummer.")
     
     async def handle_kultur_input(self, ctx, session: CharacterSession, input_text: str, *args):
         """Hanterar input för kultur-steget"""

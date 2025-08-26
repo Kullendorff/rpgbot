@@ -1,0 +1,449 @@
+{
+  "Alarinn": [
+    { "range": "1-90", "folkslag": "Léaram" },
+    { "range": "91-95", "folkslag": "Tokon" },
+    {
+      "range": "96-98",
+      "folkslag": "Tiraker",
+      "subtable": [
+        { "range": "1-70", "variant": "Frakk" },
+        { "range": "71-90", "variant": "Marnakh" },
+        { "range": "91-100", "variant": "Bazirk" }
+      ]
+    },
+    { "range": "99-99", "folkslag": "Pyar" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Asharien": [
+    { "range": "1-64", "folkslag": "Asharier (vanar)" },
+    { "range": "64-66", "folkslag": "Aus (vanar)" },
+    {
+      "range": "67-77",
+      "folkslag": "Alv",
+      "subtable": [
+        { "range": "1-80", "variant": "Pyar" },
+        { "range": "81-90", "variant": "Kirya" },
+        { "range": "91-94", "variant": "Thism" },
+        { "range": "95-97", "variant": "Sanari" },
+        { "range": "98-99", "variant": "Learam" },
+        { "range": "100-100", "variant": "Henea" }
+      ]
+    },
+    { "range": "78-79", "folkslag": "Missla" },
+    {
+      "range": "80-87",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-90", "variant": "Zolod" },
+        { "range": "91-94", "variant": "Ghor" },
+        { "range": "95-98", "variant": "Roghan" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    {
+      "range": "88-94",
+      "folkslag": "Tirak",
+      "subtable": [
+        { "range": "1-90", "variant": "Marnakh" },
+        { "range": "91-98", "variant": "Frakk" },
+        { "range": "99-100", "variant": "Bazirk" }
+      ]
+    },
+    { "range": "95-97", "folkslag": "Jargier (vanar)" },
+    { "range": "98-99", "folkslag": "Sabrier (vanar)" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Cirefaliska Samväldet": [
+    { "range": "1-93", "folkslag": "Cirefalier" },
+    {
+      "range": "94-97",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-90", "variant": "Zolod" },
+        { "range": "91-94", "variant": "Roghan" },
+        { "range": "95-98", "variant": "Ghor" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    {
+      "range": "98-98",
+      "folkslag": "Alv",
+      "subtable": [
+        { "range": "1-80", "variant": "Pyar" },
+        { "range": "81-85", "variant": "Kirya" },
+        { "range": "86-94", "variant": "Thism" },
+        { "range": "95-97", "variant": "Sanari" },
+        { "range": "98-100", "variant": "Learam" }
+      ]
+    },
+    { "range": "99-100", "folkslag": "Annat folkslag" }
+  ],
+  "Colonan": [
+    { "range": "1-45", "folkslag": "Perenner (vanar)" },
+    { "range": "46-80", "folkslag": "Neromenzer (vanar)" },
+    { "range": "81-90", "folkslag": "Tokon (vanar)" },
+    {
+      "range": "91-97",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-50", "variant": "Ghor" },
+        { "range": "51-95", "variant": "Zolod" },
+        { "range": "96-98", "variant": "Roghan" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    { "range": "98-99", "folkslag": "Conrier (vanar)" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Consaber": [
+    { "range": "1-45", "folkslag": "Perenn (vanar)" },
+    { "range": "46-77", "folkslag": "Conrier (vanar)" },
+    { "range": "78-90", "folkslag": "Tokon (vanar)" },
+    {
+      "range": "91-93",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-50", "variant": "Ghor" },
+        { "range": "51-95", "variant": "Zolod" },
+        { "range": "96-98", "variant": "Roghan" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    { "range": "94-95", "folkslag": "Missla" },
+    {
+      "range": "96-97",
+      "folkslag": "Alv",
+      "subtable": [
+        { "range": "1-50", "variant": "Learam" },
+        { "range": "51-80", "variant": "Pyar" },
+        { "range": "81-90", "variant": "Thism" },
+        { "range": "91-97", "variant": "Kirya" },
+        { "range": "98-99", "variant": "Sanari" },
+        { "range": "100-100", "variant": "Henea" }
+      ]
+    },
+    { "range": "98-100", "folkslag": "Annat folkslag" }
+  ],
+  "Damarien": [
+    { "range": "1-83", "folkslag": "Damar (vanar)" },
+    { "range": "84-95", "folkslag": "Jargier (vanar)" },
+    {
+      "range": "96-98",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-90", "variant": "Zolod" },
+        { "range": "91-94", "variant": "Roghan" },
+        { "range": "95-98", "variant": "Ghor" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    { "range": "99-99", "folkslag": "Thism" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Dhurkoor": [
+    { "range": "1-20", "folkslag": "Darken" },
+    {
+      "range": "21-33",
+      "folkslag": "Tirak",
+      "subtable": [
+        { "range": "1-70", "variant": "Bazirk" },
+        { "range": "71-85", "variant": "Marnakh" },
+        { "range": "86-100", "variant": "Frakk" }
+      ]
+    },
+    { "range": "34-47", "folkslag": "Cirefalier" },
+    { "range": "48-58", "folkslag": "Sabrier (vanar)" },
+    { "range": "59-69", "folkslag": "Zhan" },
+    { "range": "70-100", "folkslag": "Annat folkslag" }
+  ],
+  "Drunok": [
+    { "range": "1-58", "folkslag": "Drunok (vanar)" },
+    { "range": "59-81", "folkslag": "Jargier (vanar)" },
+    { "range": "82-93", "folkslag": "Taup" },
+    { "range": "94-99", "folkslag": "Pyar" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Ebhron": [
+    { "range": "1-29", "folkslag": "Ebhronit (vanar)" },
+    { "range": "30-55", "folkslag": "Raun" },
+    { "range": "56-72", "folkslag": "Darken" },
+    { "range": "73-87", "folkslag": "Taup" },
+    { "range": "88-92", "folkslag": "Annat människofolk" },
+    {
+      "range": "93-96",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-80", "variant": "Zolod" },
+        { "range": "81-90", "variant": "Drezin" },
+        { "range": "91-95", "variant": "Ghor" },
+        { "range": "96-100", "variant": "Drezin" }
+      ]
+    },
+    {
+      "range": "97-98",
+      "folkslag": "Alv",
+      "subtable": [
+        { "range": "1-80", "variant": "Pyar" },
+        { "range": "81-90", "variant": "Learam" },
+        { "range": "91-94", "variant": "Kiriya" },
+        { "range": "95-97", "variant": "Thism" },
+        { "range": "98-99", "variant": "Sanari" },
+        { "range": "100-100", "variant": "Henea" }
+      ]
+    },
+    {
+      "range": "99-100",
+      "folkslag": "Tirak",
+      "subtable": [
+        { "range": "1-70", "variant": "Bazirk" },
+        { "range": "71-85", "variant": "Marnakh" },
+        { "range": "86-100", "variant": "Frakk" }
+      ]
+    }
+  ],
+  "Eumo": [
+    { "range": "1-47", "folkslag": "Tosh" },
+    { "range": "48-80", "folkslag": "Darken" },
+    { "range": "81-96", "folkslag": "Zhan" },
+    { "range": "97-99", "folkslag": "Vanar" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Eyrenskogarna": [
+    { "range": "1-90", "folkslag": "Eyren" },
+    { "range": "91-96", "folkslag": "Missla" },
+    { "range": "97-99", "folkslag": "Raun" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Forion": [
+    { "range": "1-82", "folkslag": "Forian (darken)" },
+    { "range": "83-92", "folkslag": "Pyar" },
+    { "range": "93-94", "folkslag": "Tosh" },
+    { "range": "95-96", "folkslag": "Cirefalier" },
+    { "range": "97-97", "folkslag": "Övärldare" },
+    { "range": "98-100", "folkslag": "Annat folkslag" }
+  ],
+  "Jargiska Kejsardömet": [
+    { "range": "1-96", "folkslag": "Jargier (vanar)" },
+    {
+      "range": "97-98",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-80", "variant": "Zolod" },
+        { "range": "81-90", "variant": "Ghor" },
+        { "range": "91-98", "variant": "Roghan" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    {
+      "range": "99-99",
+      "folkslag": "Alv",
+      "subtable": [
+        { "range": "1-75", "variant": "Thism" },
+        { "range": "76-100", "variant": "Kiriya" }
+      ]
+    },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Kamor": [
+    { "range": "1-80", "folkslag": "Kamorian" },
+    { "range": "81-90", "folkslag": "Henea (Falkens Flock)" },
+    { "range": "91-100", "folkslag": "Annat folkslag" }
+  ],
+  "Khazimbergen, Khrunbergen, Tarmassivet": [
+    { "range": "1-50", "folkslag": "Ghor" },
+    { "range": "51-100", "folkslag": "Frakk" }
+  ],
+  "Kinane’an Oro": [
+    { "range": "1-99", "folkslag": "Sanari" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Kragg-Bergen": [
+    { "range": "1-90", "folkslag": "Kragg" },
+    { "range": "91-96", "folkslag": "Missla" },
+    { "range": "97-99", "folkslag": "Raun" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Kryddöarna": [
+    { "range": "1-42", "folkslag": "Darken" },
+    { "range": "43-63", "folkslag": "Pyar" },
+    { "range": "64-83", "folkslag": "Zhan" },
+    { "range": "84-91", "folkslag": "Cirefalier" },
+    { "range": "92-96", "folkslag": "Sabrier" },
+    { "range": "97-100", "folkslag": "Annat folkslag" }
+  ],
+  "Lalasta": [
+    { "range": "1-98", "folkslag": "Lalaster (vanar)" },
+    { "range": "99-100", "folkslag": "Annat folkslag" }
+  ],
+  "Maazenträsket": [
+    { "range": "1-90", "folkslag": "Adasier" },
+    { "range": "91-100", "folkslag": "Annat folkslag" }
+  ],
+  "Menon-Aun": [
+    { "range": "1-93", "folkslag": "Aunurier" },
+    { "range": "94-98", "folkslag": "Zhan" },
+    { "range": "99-100", "folkslag": "Annat folkslag" }
+  ],
+  "Miam": [
+    { "range": "1-80", "folkslag": "Zhan" },
+    { "range": "81-99", "folkslag": "Aunurier" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Mio-Enara": [
+    { "range": "1-43", "folkslag": "Darken" },
+    { "range": "44-99", "folkslag": "Tosh" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Momolan": [
+    { "range": "1-69", "folkslag": "Zhan" },
+    { "range": "70-90", "folkslag": "Darken" },
+    {
+      "range": "91-99",
+      "folkslag": "Tirak",
+      "subtable": [
+        { "range": "1-70", "variant": "Frakk" },
+        { "range": "71-85", "variant": "Bazirk" },
+        { "range": "86-100", "variant": "Marnakh" }
+      ]
+    },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Muhad": [
+    { "range": "1-86", "folkslag": "Zhan" },
+    { "range": "87-95", "folkslag": "Darken" },
+    {
+      "range": "96-98",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-80", "variant": "Zolod" },
+        { "range": "81-90", "variant": "Ghor" },
+        { "range": "91-98", "variant": "Roghan" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    { "range": "99-100", "folkslag": "Annat folkslag" }
+  ],
+  "Pereine": [
+    { "range": "1-44", "folkslag": "Neromenzer (vanar)" },
+    { "range": "45-84", "folkslag": "Perenn (vanar)" },
+    { "range": "85-96", "folkslag": "Sanari" },
+    { "range": "97-99", "folkslag": "Conrier" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Soldarn": [
+    { "range": "1-64", "folkslag": "Soldier (vanar)" },
+    { "range": "65-74", "folkslag": "Cirefalier" },
+    {
+      "range": "75-83",
+      "folkslag": "Dvärg",
+      "subtable": [
+        { "range": "1-85", "variant": "Zolod" },
+        { "range": "86-93", "variant": "Ghor" },
+        { "range": "94-98", "variant": "Roghan" },
+        { "range": "99-100", "variant": "Drezin" }
+      ]
+    },
+    {
+      "range": "84-91",
+      "folkslag": "Alv",
+      "subtable": [
+        { "range": "1-80", "variant": "Pyar" },
+        { "range": "81-85", "variant": "Kiriya" },
+        { "range": "86-90", "variant": "Thism" },
+        { "range": "91-95", "variant": "Sanari" },
+        { "range": "96-98", "variant": "Henea" },
+        { "range": "99-100", "variant": "Learam" }
+      ]
+    },
+    {
+      "range": "92-94",
+      "folkslag": "Tirak",
+      "subtable": [
+        { "range": "1-80", "variant": "Marnakh" },
+        { "range": "81-95", "variant": "Bazirk" },
+        { "range": "96-100", "variant": "Frakk" }
+      ]
+    },
+    { "range": "95-97", "folkslag": "Missla" },
+    { "range": "98-100", "folkslag": "Annat folkslag" }
+  ],
+  "Sinadera": [
+    { "range": "1-99", "folkslag": "Bazirk" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Stora Arkipelagen": [
+    { "range": "1-34", "folkslag": "Oritonskt ursprung" },
+    { "range": "35-56", "folkslag": "Ursprungliga Lokala Öbor" },
+    { "range": "57-73", "folkslag": "Lohemskt ursprung" },
+    { "range": "74-87", "folkslag": "Forioner" },
+    {
+      "range": "88-95",
+      "folkslag": "Tirak",
+      "subtable": [
+        { "range": "1-90", "variant": "Bazirk" },
+        { "range": "91-99", "variant": "Marnakh" },
+        { "range": "100-100", "variant": "Frakk" }
+      ]
+    },
+    { "range": "96-97", "folkslag": "Cirefalier" },
+    { "range": "98-99", "folkslag": "Sabrier" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Sunariskogen": [
+    { "range": "1-50", "folkslag": "Kiriya" },
+    { "range": "51-80", "folkslag": "Thism" },
+    { "range": "81-90", "folkslag": "Sanari" },
+    { "range": "91-97", "folkslag": "Henea" },
+    { "range": "98-99", "folkslag": "Pyar" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Takalorr": [
+    {
+      "range": "1-94",
+      "folkslag": "Tirak",
+      "subtable": [
+        { "range": "1-90", "variant": "Bazirk" },
+        { "range": "91-95", "variant": "Marnakh" },
+        { "range": "96-100", "variant": "Frakk" }
+      ]
+    },
+    { "range": "95-96", "folkslag": "Asharier (vanar)" },
+    { "range": "97-97", "folkslag": "Jargier (vanar)" },
+    { "range": "98-99", "folkslag": "Henea" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Tarhai": [
+    { "range": "1-99", "folkslag": "Tarhaier (Zhan)" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Terne": [
+    { "range": "1-99", "folkslag": "Ternier (vanar)" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ],
+  "Thalamur": [
+    { "range": "1-95", "folkslag": "Neromenzer (vanar)" },
+    { "range": "96-100", "folkslag": "Annat folkslag" }
+  ],
+  "Västmark": [
+    { "range": "1-67", "folkslag": "Västmarkare (vanarer)" },
+    { "range": "68-80", "folkslag": "Marnakh" },
+    { "range": "81-90", "folkslag": "Bazirk" },
+    {
+      "range": "91-93",
+      "folkslag": "Alv",
+      "subtable": [
+        { "range": "1-90", "variant": "Pyar" },
+        { "range": "91-92", "variant": "Kiriya" },
+        { "range": "93-94", "variant": "Thism" },
+        { "range": "95-96", "variant": "Sanari" },
+        { "range": "97-98", "variant": "Learam" },
+        { "range": "99-100", "variant": "Henea" }
+      ]
+    },
+    { "range": "94-96", "folkslag": "Zolod" },
+    { "range": "97-97", "folkslag": "Ghor" },
+    { "range": "98-98", "folkslag": "Jargier (vanar)" },
+    { "range": "99-99", "folkslag": "Cirefalier" },
+    { "range": "100-100", "folkslag": "Annat folkslag" }
+  ]
+}

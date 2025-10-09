@@ -555,11 +555,12 @@ class DamageCalculator:
             DamageType.STICK: STICK_DAMAGE_TABLE
         }
 
-    def get_damage(self, damage_type: DamageType, location: str, damage_value: int, use_malpunkter: bool = False) -> DamageResult:
+    def get_damage(self, damage_type: DamageType, location: str, damage_value: int, use_malpunkter: bool = False, user_id: str = None) -> DamageResult:
         """
         Kollar i rätt tabell (HUGG/KROSS/STICK) -> location -> ytlig/allvarlig.
         Om allvarlig (damage_value >= 10) slår 1T10 i tabellen.
         Om Målpunkter används slås 1T6 istället för 1T10 (för bättre placerade träffar).
+        Hemlig manipulation: Om spelaren har "lycka"/"gudomlig" manipulation aktiveras automatiskt T6 (som Målpunkter).
         Annars returneras "ytlig" damage_result.
         """
         table = self.tables[damage_type]
@@ -571,9 +572,25 @@ class DamageCalculator:
             effect_code = table[location]["ytlig"]["effekt"]
             return DamageResult(effect_code, description="Ytlig skada")
 
+        # Kolla hemlig manipulation (lycka = automatisk T6 istället för T10)
+        actual_malpunkter = use_malpunkter
+        if user_id:
+            try:
+                import sys
+                import os
+                sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+                import main
+                manipulation = main.manipulation_manager.get_manipulation(user_id)
+
+                if manipulation and manipulation["type"] in ["lycka", "gudomlig"]:
+                    actual_malpunkter = True  # Hemligt aktivera T6
+                    print(f"[SECRET] {manipulation['type'].upper()} manipulation: Forcing T6 (målpunkter) for damage roll for user {user_id}")
+            except Exception as e:
+                print(f"[ERROR] Error checking manipulation in damage calculation: {e}")
+
         # Allvarlig skada
-        if use_malpunkter:
-            # Använd vanlig T6 istället för T10 vid Målpunkter
+        if actual_malpunkter:
+            # Använd vanlig T6 istället för T10 vid Målpunkter (eller hemlig manipulation)
             roll_t10 = random.randint(1, 6)
         else:
             roll_t10 = random.randint(1, 10)

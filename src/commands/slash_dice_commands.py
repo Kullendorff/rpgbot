@@ -238,12 +238,14 @@ class DiceSlashCommands(commands.Cog):
     @app_commands.command(name="ex", description="Rulla exploderande d6:or (obegränsad explosion på 6:or)")
     @app_commands.describe(
         antal="Antal d6:or att rulla (1-50)",
+        modifier="Modifier att lägga till (+/- värde, t.ex. +3 eller -2)",
         mål="Målvärde för att bedöma framgång (valfritt)"
     )
     async def ex_slash(
         self,
         interaction: discord.Interaction,
         antal: app_commands.Range[int, 1, 50],
+        modifier: Optional[app_commands.Range[int, -100, 100]] = 0,
         mål: Optional[app_commands.Range[int, 1, 100]] = None
     ):
         """Slash command version av !ex - exploderande d6."""
@@ -251,8 +253,11 @@ class DiceSlashCommands(commands.Cog):
         
         try:
             # Använd unlimited_d6s engine
-            all_rolls, total, initial_rolls = self.unlimited_d6s(antal)
+            all_rolls, total_dice, initial_rolls = self.unlimited_d6s(antal)
             results = all_rolls
+
+            # Lägg till modifier till totalen
+            total = total_dice + modifier
             
             # Kontrollera perfekta och fummelkriterier baserat på original implementation
             perfect_candidate = False
@@ -271,37 +276,38 @@ class DiceSlashCommands(commands.Cog):
             original_total = total
             was_manipulated = False
             manipulation_type = None
-            
+
             # Check if user has active manipulation
             try:
                 import sys
                 import os
                 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
                 import main
-                manipulation = main.manipulation_manager.get_manipulation(str(interaction.user.id))
-                
+                user_id_str = str(interaction.user.id)
+                manipulation = main.manipulation_manager.get_manipulation(user_id_str)
+
                 if manipulation and mål is not None:
                     manipulation_type = manipulation["type"]
-                    
+
                     if manipulation_type in ["lycka", "gudomlig"]:
                         # AUTO-SUCCESS: Ensure roll succeeds (total <= target for ex)
                         if total > mål:  # Currently failing
                             total = mål - 1  # Make it succeed
                             was_manipulated = True
-                            
+
                     elif manipulation_type in ["olycka", "förbannelse"]:
-                        # AUTO-FAIL: Ensure roll fails (total > target for ex)  
+                        # AUTO-FAIL: Ensure roll fails (total > target for ex)
                         if total <= mål:  # Currently succeeding
                             total = mål + 1  # Make it fail
                             was_manipulated = True
-                    
+
                     if was_manipulated:
                         # Update manipulation stats
                         manipulation["rolls_affected"] += 1
                         main.manipulation_manager._save_manipulations()
-                        print(f"[SECRET] {manipulation_type.upper()} EX manipulation: {original_total} -> {total}")
+                        print(f"[SECRET] {manipulation_type.upper()} EX manipulation: {original_total} (dice:{total_dice}+{modifier}) -> {total}")
             except Exception as e:
-                print(f"Error applying EX manipulation: {e}")
+                print(f"[ERROR] Error applying EX manipulation: {e}")
             
             # Bedöm framgång mot målvärde (använd manipulerad total)
             success = None
@@ -316,7 +322,7 @@ class DiceSlashCommands(commands.Cog):
                 antal,
                 6,
                 results,
-                0,  # modifier
+                modifier,  # modifier
                 mål,  # target
                 success,  # success
                 perfect_candidate,  # is_perfect
@@ -324,23 +330,38 @@ class DiceSlashCommands(commands.Cog):
             )
             
             # Skapa embed
+            dice_notation = f"{antal}d6"
+            if modifier != 0:
+                modifier_text = f"+{modifier}" if modifier > 0 else str(modifier)
+                dice_notation += modifier_text
+            dice_notation += " (exploderande)"
+
             embed = self.embed_factory.dice_result(
                 interaction.user.id,
                 interaction.user.display_name,
                 "ex",
-                f"{antal}d6 (exploderande)",
+                dice_notation,
                 initial_rolls,  # Show initial rolls in main display
                 total,
                 mål,
                 success
             )
-            
+
+            # Lägg till modifier info om den finns
+            if modifier != 0:
+                modifier_text = f"+{modifier}" if modifier > 0 else str(modifier)
+                embed.add_field(
+                    name="Modifierare",
+                    value=modifier_text,
+                    inline=True
+                )
+
             # Lägg till explosion info
             explosion_count = len(results) - antal
             if explosion_count > 0:
                 embed.add_field(
-                    name="💥 Explosioner", 
-                    value=f"{explosion_count} extra tärningar från 6:or", 
+                    name="💥 Explosioner",
+                    value=f"{explosion_count} extra tärningar från 6:or",
                     inline=True
                 )
             
@@ -412,7 +433,7 @@ class DiceSlashCommands(commands.Cog):
             
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "ex", {
-                "antal": antal, "target": mål
+                "antal": antal, "modifier": modifier, "target": mål
             }, execution_time)
             
             await self.helper.send_response(interaction, embed=embed)

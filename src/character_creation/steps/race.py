@@ -73,6 +73,9 @@ class RaceStep(BaseStep):
         # Get races for the selected homeland
         available_races = self.race_mapper.get_unique_race_names(homeland)
         
+        # Store available races in session for random generation
+        session.data['available_races'] = available_races if available_races else self.fallback_races
+        
         # Fallback if no races found for homeland
         if not available_races:
             return await self._handle_fallback_race_selection(ctx, session, homeland)
@@ -155,12 +158,17 @@ class RaceStep(BaseStep):
         
         # Handle special commands
         if input_text == 'slumpa':
+            print(f"DEBUG - handle_input: Processing 'slumpa' command")
             return await self._handle_random_race(ctx, session, homeland)
         elif input_text == 'alla':
             return await self._show_all_races(ctx, session)
         elif input_text.startswith('info'):
             await self._handle_race_info(ctx, input_text, homeland)
             return False, "Info request handled"
+        
+        # Handle Thalamur special input
+        if session.data.get('use_thalamur_special'):
+            return await self._handle_thalamur_input(ctx, session, input_text)
         
         # Handle race selection
         selected_race = self._validate_race_choice(input_text, homeland)
@@ -179,8 +187,14 @@ class RaceStep(BaseStep):
             await ctx.send(error_msg)
             return False, "Invalid race choice"
         
-        # Store selected race
+        # Store selected race in both formats for compatibility
         session.data['folkslag'] = selected_race
+        print(f"DEBUG - Race step: Saved folkslag='{selected_race}' to session.data")
+        
+        # Also store in temp_data format expected by interactive_chargen
+        race_info = {'name': selected_race, 'title': selected_race, 'category': 'human'}
+        session.temp_data = {'folkslag': race_info}
+        print(f"DEBUG - Race step: Saved folkslag info to temp_data: {race_info}")
         
         # Send confirmation
         confirmation_embed = discord.Embed(
@@ -204,38 +218,91 @@ class RaceStep(BaseStep):
     
     async def _handle_thalamur_special(self, ctx: commands.Context, 
                                      session: 'CharacterSession') -> discord.Embed:
-        """Handle special Thalamur logic (preserve existing functionality)."""
+        """Handle special Thalamur logic with proper race selection."""
         embed = self.embed_factory.admin_message(
             session.user_id,
             f"🏛️ Steg {self.step_number}/{session.max_steps}: Thalamur Folkslag",
-            "Thalamur har speciella folkslag-regler:"
+            "Som **Thalamur** medborgare måste du välja samhällsklass:"
         )
         
         embed.add_field(
-            name="🎭 Specialprocess",
+            name="👑 Medborgare",
             value=(
-                "Thalamur kräver specialhantering för:\n"
-                "• Medborgare vs Folket\n"
-                "• Ätt-system\n"
-                "• Unika kulturella aspekter\n\n"
-                "Den befintliga Thalamur-logiken kommer att användas."
+                "**Thalasker Medborgare** - Mäktig samhällsklass\n"
+                "• Har politisk makt och rättigheter\n"
+                "• Tillhör en av rikets ätter\n"
+                "• Kan använda magi"
             ),
             inline=False
         )
         
-        embed.set_footer(text="Thalamur-processen fortsätter enligt befintliga regler...")
+        embed.add_field(
+            name="👥 Folket", 
+            value=(
+                "**Vanar av Folket** - Vanliga medborgare\n"
+                "• Saknar politisk makt\n" 
+                "• Vanliga människor\n"
+                "• Ingen ätt-tillhörighet"
+            ),
+            inline=False
+        )
         
-        await ctx.send(embed=embed)
+        embed.add_field(
+            name="📝 Instruktioner",
+            value="• **medborgare** - Bli Thalasker Medborgare\n• **folket** - Bli Vanar av Folket",
+            inline=False
+        )
+        
+        embed.set_footer(text="Exempel: !chargen medborgare eller !chargen folket")
         
         # Set flag for existing Thalamur handler to take over
         session.data['use_thalamur_special'] = True
         
         return embed
     
+    async def _handle_thalamur_input(self, ctx: commands.Context, 
+                                   session: 'CharacterSession', 
+                                   input_text: str) -> Tuple[bool, Optional[str]]:
+        """Handle Thalamur-specific input (medborgare/folket)."""
+        input_lower = input_text.strip().lower()
+        
+        if input_lower in ['medborgare', 'medborgaren']:
+            # Vald Medborgare
+            session.data['folkslag'] = 'Thalasker'
+            session.data['folkslag_title'] = 'Thalasker Medborgare'
+            session.data['thalamur_samhällsklass'] = 'Medborgare'
+            session.data['thalamur_special'] = 'thalasker_medborgare'
+            
+            print(f"DEBUG - Thalamur: Saved folkslag='Thalasker' (Medborgare) to session.data")
+            
+            await ctx.send("✅ Du är nu **Thalasker Medborgare** från Thalamur!\n*Mäktig samhällsklass med potential för magi och politisk makt.*")
+            
+            return True, None
+            
+        elif input_lower in ['folket', 'folk']:
+            # Vald Folket
+            session.data['folkslag'] = 'Vanar'
+            session.data['folkslag_title'] = 'Vanar av Folket'
+            session.data['thalamur_samhällsklass'] = 'Folket'
+            session.data['thalamur_special'] = 'thalasker_folket'
+            
+            print(f"DEBUG - Thalamur: Saved folkslag='Vanar' (Folket) to session.data")
+            
+            await ctx.send("✅ Du är nu **Vanar av Folket** från Thalamur!\n*Vanliga människor utan politisk makt.*")
+            
+            return True, None
+        else:
+            await ctx.send("❌ Ogiltigt val. Använd:\n`!chargen medborgare` - Bli Thalasker Medborgare\n`!chargen folket` - Bli Vanar av Folket")
+            return False, "Invalid Thalamur choice"
+    
     async def _handle_fallback_race_selection(self, ctx: commands.Context, 
                                             session: 'CharacterSession',
                                             homeland: str) -> discord.Embed:
         """Handle fallback race selection when homeland data is not available."""
+        
+        # Store fallback races in session for random generation
+        session.data['available_races'] = self.fallback_races
+        
         embed = self.embed_factory.admin_message(
             session.user_id,
             f"🎭 Steg {self.step_number}/{session.max_steps}: Folkslag",
@@ -264,7 +331,6 @@ class RaceStep(BaseStep):
             )
         
         embed.set_footer(text="Använd namn eller nummer för att välja")
-        await ctx.send(embed=embed)
         
         return embed
     
@@ -272,6 +338,7 @@ class RaceStep(BaseStep):
                                 session: 'CharacterSession',
                                 homeland: str) -> Tuple[bool, Optional[str]]:
         """Handle random race selection using T100 rolls."""
+        print(f"DEBUG - _handle_random_race called for homeland: {homeland}")
         race_name, variant_name = self.race_mapper.roll_random_race(homeland)
         
         if not race_name:
@@ -292,10 +359,16 @@ class RaceStep(BaseStep):
         if variant_name and variant_name != race_name:
             full_race_name = f"{race_name} ({variant_name})"
         
-        # Store the race
+        # Store the race in both formats for compatibility
         session.data['folkslag'] = race_name
+        print(f"DEBUG - _handle_random_race: Saved folkslag='{race_name}' to session.data")
         if variant_name:
             session.data['folkslag_variant'] = variant_name
+        
+        # Also store in temp_data format expected by interactive_chargen
+        race_info = {'name': race_name, 'title': race_name, 'category': 'human'}
+        session.temp_data = {'folkslag': race_info}
+        print(f"DEBUG - _handle_random_race: Saved folkslag info to temp_data: {race_info}")
         
         # Create result embed
         random_embed = discord.Embed(

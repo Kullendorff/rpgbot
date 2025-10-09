@@ -61,6 +61,13 @@ class CombatManager:
                 (5, 8): "skalle",
                 (9, 10): "hals"
             },
+            "armar": {
+                (1, 2): "skuldra",
+                (3, 4): "överarm",
+                (5, 5): "armbåge",
+                (6, 8): "underarm",
+                (9, 10): "hand"
+            },
             "arm": {
                 (1, 2): "skuldra",
                 (3, 4): "överarm",
@@ -89,15 +96,17 @@ class CombatManager:
             # Huvudets delområden
             "huvud": "huvud",
             "ansikte": "ansikte",
-            "skalle": "skalle", 
+            "skalle": "skalle",
             "hals": "hals",
             # Armens delområden
+            "armar": "arm",
             "vänster arm": "arm",
             "höger arm": "arm",
             "arm": "arm",
             "skuldra": "arm",
             "överarm": "arm",
             "armbage": "arm",
+            "armbåge": "arm",
             "underarm": "arm",
             "hand": "arm",
             # Bröstkorg
@@ -111,10 +120,36 @@ class CombatManager:
             "höger ben": "ben",
             "ben": "ben",
             "höft": "ben",
-            "lår": "ben", 
+            "lår": "ben",
             "knä": "ben",
             "vad": "ben",
             "fot": "ben"
+        }
+
+        # Mappning från delområde till rustningskod (från träfftabellerna)
+        # Används när spelaren väljer specifikt område
+        self.location_code_mapping: dict[str, str] = {
+            # Huvud
+            "ansikte": "1",
+            "skalle": "2",
+            "hals": "3",
+            # Armar - visar båda koderna för vänster/höger
+            "skuldra": "4/5",
+            "överarm": "6/7",
+            "armbåge": "8/9",
+            "underarm": "10/11",
+            "hand": "12/13",
+            # Bröstkorg
+            "bröstkorg": "14",
+            # Buk
+            "mage": "15",
+            "underliv": "16",
+            # Ben - visar båda koderna för vänster/höger
+            "höft": "17/18",
+            "lår": "19/20",
+            "knä": "21/22",
+            "vad": "23/24",
+            "fot": "25/26"
         }
 
     def _get_hit_location(self, attack_level: str, location_roll: int, dtype: DamageType) -> Tuple[str, Optional[int], str, str]:
@@ -149,15 +184,15 @@ class CombatManager:
     def _get_sub_location(self, main_location: str) -> Tuple[str, Optional[int]]:
         """
         Slår för delområde för de kroppsdelar som har sådana.
-        
+
         Args:
-            main_location (str): Huvudområdet (ex. 'huvud' eller 'buk').
-        
+            main_location (str): Huvudområdet (ex. 'huvud', 'buk', 'armar', 'ben').
+
         Returns:
             Tuple[str, Optional[int]]: (sub_location, sub_roll) där sub_roll kan vara None.
         """
         main_lower: str = main_location.lower()
-        if main_lower in ["huvud", "buk"]:
+        if main_lower in ["huvud", "buk", "armar", "ben"]:
             sub_roll: int = random.randint(1, 10)
             for (sub_lower, sub_upper), sub_loc in self.DELOMRADE_TABLE[main_lower].items():
                 if sub_lower <= sub_roll <= sub_upper:
@@ -194,7 +229,11 @@ class CombatManager:
             sub_location, _ = self._get_sub_location(hit_location)
             location_roll: Optional[int] = None
             damage_location: Optional[str] = self.location_mapping.get(sub_location.lower())
-            return damage_location, location_roll, hit_location, sub_location, "override"
+
+            # Hämta rätt kod från location_code_mapping
+            table_code = self.location_code_mapping.get(sub_location.lower(), "?")
+
+            return damage_location, location_roll, hit_location, sub_location, table_code
         else:
             if not attack_level:
                 raise ValueError("Antingen attack_level eller location_override måste anges")
@@ -213,7 +252,8 @@ class CombatManager:
         is_mounted: bool,
         is_quadruped: bool,
         direction: Optional[str] = None,
-        use_malpunkter: bool = False
+        use_malpunkter: bool = False,
+        user_id: Optional[str] = None
     ) -> CombatResult:
         """
         Bearbetar en attack och returnerar ett CombatResult med all information.
@@ -256,7 +296,8 @@ class CombatManager:
             damage_type=damage_type,
             location=damage_location,
             damage_value=damage_value,
-            use_malpunkter=use_malpunkter
+            use_malpunkter=use_malpunkter,
+            user_id=user_id
         )
 
         # Använd den riktiga koden från tabellen, inte träffslaget

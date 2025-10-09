@@ -7,6 +7,9 @@ import json
 import os
 import random
 import discord
+import asyncio
+from datetime import datetime
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 from discord.ext import commands
 from automatic_background import AutomaticBackgroundGenerator
@@ -397,6 +400,10 @@ def register_commands(bot, roll_tracker, color_handler, embed_factory):
             else:
                 await ctx.send("Ingen aktiv session. Använd `!chargen start`")
         
+        elif action == "random":
+            # Kör komplett random-generering för testning
+            await run_random_character_generation(ctx, chargen, embed_factory)
+        
         elif action == "abort":
             # Avbryt session
             if chargen.end_session(str(ctx.author.id)):
@@ -506,4 +513,347 @@ def register_commands(bot, roll_tracker, color_handler, embed_factory):
             else:
                 await ctx.send("Ingen aktiv session. Använd `!chargen start` för att börja skapa en rollperson.")
 
+    async def run_random_character_generation(ctx, chargen, embed_factory):
+        """Kör en komplett random karaktärsgenerering för testning"""
+        import asyncio
+        from datetime import datetime
+        
+        # Starta loggning
+        start_time = datetime.now()
+        log_messages = []
+        error_count = 0
+        step_times = []
+        
+        try:
+            # Skapa initial embed
+            embed = embed_factory.admin_message(
+                ctx.author.id,
+                "🎲 Random Karaktärsgenerering",
+                "Startar automatisk testgenerering av karaktär..."
+            )
+            status_msg = await ctx.send(embed=embed)
+            
+            # Starta session
+            session = chargen.start_session(str(ctx.author.id))
+            log_messages.append(f"✅ Session startad")
+            
+            # Gå igenom alla 32 steg med säkerhetsbroms
+            max_attempts = 50  # Säkerhetsbroms för att förhindra oändlig loop
+            attempts = 0
+            while session.current_step <= 32 and attempts < max_attempts:
+                attempts += 1  # Räkna upp försök
+                step_start = datetime.now()
+                current_step = session.current_step
+                step_info = chargen.get_current_step_info(session)
+                step_name = step_info['name'] if step_info else f"steg_{current_step}"
+                
+                # Avbryt om vi nått odefinierade steg
+                if not step_info and current_step > 15:
+                    log_messages.append(f"⏹️ Avbryter på steg {current_step} - inga fler steg implementerade")
+                    break
+                
+                try:
+                    # Uppdatera status
+                    embed = embed_factory.admin_message(
+                        ctx.author.id,
+                        f"🎲 Random Test - Steg {current_step}/32",
+                        f"Bearbetar: **{step_info['title'] if step_info else 'Okänt'}**\n\n" +
+                        f"Fel hittills: {error_count}"
+                    )
+                    await status_msg.edit(embed=embed)
+                    
+                    # Hantera olika steg med random val
+                    if step_name == "kön":
+                        choice = random.choice(["man", "kvinna"])
+                        await chargen.handle_step_input(ctx, session, choice)
+                        log_messages.append(f"Steg {current_step} (kön): {choice}")
+                        
+                    elif step_name == "ålder":
+                        age = random.randint(16, 50)
+                        await chargen.handle_step_input(ctx, session, str(age))
+                        log_messages.append(f"Steg {current_step} (ålder): {age}")
+                        
+                    elif step_name == "hemland":
+                        # Hämta hemländer som har säkra folkslag (människor)
+                        human_races = ["vananer", "joraner", "taupiner", "kamorianer", "auser", "cirefalier", 
+                                     "darkener", "rauner", "veddo", "zhaner", "tosher", "lalaster", "aunurier", "adasier"]
+                        
+                        safe_homelands = []
+                        if chargen.homelands:
+                            for homeland in chargen.homelands:
+                                # Simulera att få folkslag för detta hemland
+                                homeland_name = homeland['name']
+                                # Kolla om detta hemland har säkra folkslag
+                                # Detta är en approximation - vi antar vissa hemländer är säkra
+                                if homeland_name.lower() in ['thalamur', 'det_cirefaliska_samväldet', 'jargiska_kejsardömet', 
+                                                           'kamor', 'kraggbergen', 'pereine', 'soldarn', 'väst']:
+                                    safe_homelands.append(homeland)
+                        
+                        if safe_homelands:
+                            homeland = random.choice(safe_homelands)
+                            await chargen.handle_step_input(ctx, session, homeland['name'])
+                            log_messages.append(f"Steg {current_step} (hemland): {homeland['name']} (säkert val)")
+                        elif chargen.homelands:
+                            # Fallback till alla hemländer om vi inte hittar säkra
+                            homeland = random.choice(chargen.homelands)
+                            await chargen.handle_step_input(ctx, session, homeland['name'])
+                            log_messages.append(f"Steg {current_step} (hemland): {homeland['name']} (fallback)")
+                        else:
+                            log_messages.append(f"⚠️ Steg {current_step}: Inga hemländer tillgängliga")
+                            chargen.next_step(session)
+                            
+                    elif step_name == "folkslag":
+                        # Visa steget först för att få tillgängliga alternativ
+                        await chargen.show_current_step(ctx, session)
+                        await asyncio.sleep(0.1)
+                        
+                        # Special handling for Thalamur
+                        homeland = session.character_data.get('hemland', '').lower()
+                        if homeland == 'thalamur' and session.character_data.get('use_thalamur_special'):
+                            # Choose randomly between Medborgare and Folket for Thalamur
+                            thalamur_choice = random.choice(['medborgare', 'folket'])
+                            await chargen.handle_step_input(ctx, session, thalamur_choice)
+                            log_messages.append(f"Steg {current_step} (folkslag): Thalamur {thalamur_choice}")
+                        else:
+                            # Standard race handling - just pick first available race instead of filtering
+                            available_races = session.character_data.get('available_races', [])
+                            
+                            if available_races:
+                                # Use the first available race (usually the most common for that homeland)
+                                first_race = available_races[0]
+                                await chargen.handle_step_input(ctx, session, first_race)
+                                log_messages.append(f"Steg {current_step} (folkslag): {first_race}")
+                            else:
+                                # If no races available, use fallback
+                                await chargen.handle_step_input(ctx, session, "slumpa")
+                                log_messages.append(f"Steg {current_step} (folkslag): slumpa (fallback)")
+                            
+                    elif step_name == "kultur":
+                        # Välj kultur baserat på folkslag
+                        cultures = session.character_data.get('available_cultures', [])
+                        if cultures:
+                            culture = random.choice(cultures)
+                            await chargen.handle_step_input(ctx, session, culture)
+                            log_messages.append(f"Steg {current_step} (kultur): {culture}")
+                        else:
+                            chargen.next_step(session)
+                            
+                    elif step_name in ["grundattribut", "härledda_attribut"]:
+                        # För attribut-steg, bekräfta automatiskt
+                        if session.temp_data:
+                            await chargen.confirm_current_choice(ctx, session)
+                            log_messages.append(f"Steg {current_step} ({step_name}): Auto-bekräftad")
+                        else:
+                            # Generera om det behövs
+                            await chargen.show_current_step(ctx, session)
+                            await asyncio.sleep(0.1)  # Ge tid för generering
+                            if session.temp_data:
+                                await chargen.confirm_current_choice(ctx, session)
+                            else:
+                                chargen.next_step(session)
+                            
+                    elif step_name in ["särskilda_egenskaper", "specialregler"]:
+                        # Vissa steg hoppar över automatiskt eller behöver bara bekräftelse
+                        # Först visa steget för att generera eventuell data
+                        await chargen.show_current_step(ctx, session)
+                        await asyncio.sleep(0.1)
+                        # Sen bekräfta eller gå vidare
+                        await chargen.handle_step_input(ctx, session, "fortsätt")
+                        log_messages.append(f"Steg {current_step} ({step_name}): Bekräftad")
+                        
+                    elif step_name == "karaktärsdrag":
+                        # Hantera karaktärsdrag - välj slå eller hoppa
+                        choice = random.choice(["slå", "hoppa"])
+                        await chargen.handle_step_input(ctx, session, choice)
+                        log_messages.append(f"Steg {current_step} (karaktärsdrag): {choice}")
+                        
+                    elif step_name == "familj":
+                        # Generera familjebakgrund först
+                        await chargen.show_current_step(ctx, session)
+                        await asyncio.sleep(0.2)  # Ge tid för generering
+                        
+                        # Nu bekräfta
+                        if 'familj' in session.character_data or session.temp_data:
+                            await chargen.handle_step_input(ctx, session, "fortsätt")
+                        else:
+                            # Om ingen familj genererades, försök igen
+                            await chargen.show_current_step(ctx, session)
+                            await asyncio.sleep(0.2)
+                            await chargen.handle_step_input(ctx, session, "fortsätt")
+                        log_messages.append(f"Steg {current_step} (familj): Genererad")
+                        
+                    elif "bakgrund" in step_name:
+                        # Hantera alla bakgrundssteg
+                        if step_name == "bakgrundshändelser":
+                            # Special handling for background events - need to process all results
+                            results = session.character_data.get('huvudbakgrund_results', [])
+                            processed_count = 0
+                            max_bg_attempts = len(results) * 2  # Safety limit
+                            bg_attempts = 0
+                            
+                            while bg_attempts < max_bg_attempts:
+                                bg_attempts += 1
+                                current_index = session.character_data.get('current_background_index', 0)
+                                
+                                # Check if we're done with all background results
+                                if current_index >= len(results):
+                                    log_messages.append(f"Steg {current_step} (bakgrundshändelser): Alla {len(results)} resultat processerade")
+                                    break
+                                
+                                # Process current result
+                                await chargen.handle_step_input(ctx, session, "fortsätt")
+                                processed_count += 1
+                                
+                                # Short delay to prevent overwhelm
+                                await asyncio.sleep(0.1)
+                            
+                            if bg_attempts >= max_bg_attempts:
+                                log_messages.append(f"Steg {current_step} (bakgrundshändelser): Avbruten efter {processed_count} resultat (säkerhetsbroms)")
+                        else:
+                            # Regular background step
+                            await chargen.handle_step_input(ctx, session, "fortsätt")
+                            log_messages.append(f"Steg {current_step} ({step_name}): Auto-genererad")
+                        
+                    elif step_name == "sammanfattning":
+                        # Sammanfattning - bara visa och gå vidare
+                        await chargen.show_current_step(ctx, session)
+                        await asyncio.sleep(0.1)
+                        chargen.next_step(session)
+                        log_messages.append(f"Steg {current_step} (sammanfattning): Visad")
+                        
+                    else:
+                        # Default: försök gå vidare eller bekräfta
+                        if session.temp_data:
+                            await chargen.confirm_current_choice(ctx, session)
+                        else:
+                            success = chargen.next_step(session)
+                            if not success:
+                                # Vi har nått slutet av implementerade steg
+                                log_messages.append(f"Steg {current_step}: Nådde slutet av implementerade steg")
+                                break
+                        log_messages.append(f"Steg {current_step} ({step_name}): Hoppade över")
+                    
+                    # Beräkna tid för steget
+                    step_time = (datetime.now() - step_start).total_seconds()
+                    step_times.append(step_time)
+                    
+                except Exception as e:
+                    error_count += 1
+                    error_msg = f"❌ Steg {current_step} ({step_name}): {str(e)}"
+                    log_messages.append(error_msg)
+                    print(f"Random generation error at step {current_step}: {e}")
+                    
+                    # Försök gå vidare ändå
+                    try:
+                        chargen.next_step(session)
+                    except:
+                        break
+                
+                # Förhindra oändlig loop
+                if session.current_step == current_step:
+                    chargen.next_step(session)
+                    log_messages.append(f"⚠️ Forcerade steg {current_step} → {session.current_step}")
+                    
+                # Lägg till kort delay för att undvika rate limits
+                await asyncio.sleep(0.2)
+            
+            # Kontrollera om vi stoppades av säkerhetsbromsen
+            if attempts >= max_attempts:
+                log_messages.append(f"🛑 Säkerhetsbroms aktiverad efter {max_attempts} försök")
+            
+            # Sammanställ resultat
+            total_time = (datetime.now() - start_time).total_seconds()
+            avg_step_time = sum(step_times) / len(step_times) if step_times else 0
+            
+            # Skapa slutrapport
+            report_embed = embed_factory.success_message(
+                ctx.author.id,
+                "✅ Random Karaktärsgenerering Klar!"
+            )
+            
+            # Lägg till statistik
+            report_embed.add_field(
+                name="📊 Statistik",
+                value=f"**Total tid:** {total_time:.1f} sekunder\n" +
+                      f"**Genomsnitt per steg:** {avg_step_time:.2f} sek\n" +
+                      f"**Antal fel:** {error_count}\n" +
+                      f"**Slutförda steg:** {len([m for m in log_messages if '✅' in m or 'Steg' in m])}/32",
+                inline=False
+            )
+            
+            # Visa karaktärsdata om möjligt
+            if session.character_data:
+                char_summary = []
+                if 'kön' in session.character_data:
+                    char_summary.append(f"**Kön:** {session.character_data['kön']}")
+                if 'ålder' in session.character_data:
+                    char_summary.append(f"**Ålder:** {session.character_data['ålder']}")
+                if 'hemland' in session.character_data:
+                    char_summary.append(f"**Hemland:** {session.character_data['hemland']}")
+                if 'folkslag' in session.character_data:
+                    char_summary.append(f"**Folkslag:** {session.character_data['folkslag']}")
+                if 'kultur' in session.character_data:
+                    char_summary.append(f"**Kultur:** {session.character_data['kultur']}")
+                
+                if char_summary:
+                    report_embed.add_field(
+                        name="👤 Karaktärsöversikt",
+                        value="\n".join(char_summary[:5]),  # Max 5 för att hålla det kort
+                        inline=False
+                    )
+            
+            # Visa fel om det finns några
+            if error_count > 0:
+                error_logs = [m for m in log_messages if '❌' in m][:5]  # Max 5 fel
+                if error_logs:
+                    report_embed.add_field(
+                        name="⚠️ Fel som uppstod",
+                        value="\n".join(error_logs),
+                        inline=False
+                    )
+            
+            await ctx.send(embed=report_embed)
+            
+            # Spara detaljerad logg till fil för debugging
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            project_root = os.path.dirname(script_dir)
+            log_file = f"random_chargen_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+            log_path = os.path.join(project_root, "data", "logs", log_file)
+            os.makedirs(os.path.dirname(log_path), exist_ok=True)
+            
+            with open(log_path, 'w', encoding='utf-8') as f:
+                f.write(f"Random Character Generation Log\n")
+                f.write(f"Generated: {datetime.now()}\n")
+                f.write(f"Total time: {total_time:.1f} seconds\n")
+                f.write(f"Errors: {error_count}\n\n")
+                f.write("Step Log:\n")
+                f.write("\n".join(log_messages))
+                f.write("\n\nFinal Character Data:\n")
+                f.write(json.dumps(session.character_data, indent=2, ensure_ascii=False))
+            
+            # Rensa session
+            chargen.end_session(str(ctx.author.id))
+            
+        except Exception as e:
+            # Kritiskt fel - men bara logga det om det inte är Discord-fel
+            if "Server disconnected" not in str(e) and "Connection closed" not in str(e):
+                try:
+                    error_embed = embed_factory.error_message(
+                        ctx.author.id,
+                        f"Kritiskt fel i random-generering: {str(e)}"
+                    )
+                    await ctx.send(embed=error_embed)
+                except:
+                    # Om vi inte kan skicka till Discord, bara logga lokalt
+                    print(f"Random generation error (Discord unavailable): {e}")
+            else:
+                # Discord-fel - bara logga lokalt
+                print(f"Random generation interrupted by Discord disconnect: {e}")
+            
+            # Försök rensa session
+            try:
+                chargen.end_session(str(ctx.author.id))
+            except:
+                pass
+    
     print("Rollpersonsskapande-kommandon har registrerats (attribut, folkslag, egenskap, npc, bakgrund, familjebakgrund, chargen).")

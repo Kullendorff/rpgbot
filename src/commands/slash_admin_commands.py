@@ -126,7 +126,7 @@ class AdminSlashCommands(commands.Cog):
             
             # Starta session i roll_tracker
             if hasattr(self.roll_tracker, 'start_session'):
-                self.roll_tracker.start_session(session_id, interaction.user.id)
+                self.roll_tracker.start_session(beskrivning)
             
             # Skapa bekräftelse embed
             embed = self.embed_factory.success_message(

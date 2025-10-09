@@ -135,7 +135,8 @@ class SpecialRulesStep(BaseStep):
         # Automatically roll for field disturbances
         await self._roll_field_disturbances(ctx, session)
         
-        return embed
+        # Return None to prevent double sending
+        return None
     
     async def _roll_field_disturbances(self, ctx: commands.Context, session: 'CharacterSession'):
         """Roll for Cirefalier field disturbances."""

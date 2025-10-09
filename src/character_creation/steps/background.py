@@ -91,21 +91,44 @@ class BackgroundStep(BaseStep):
         self.step_name = "bakgrundslag_antal"
         self.step_number = 12
         
-        # Get required data
+        # Get required data with debug output
         race = session.data.get('folkslag')
         age = session.data.get('ålder')
         attributes = session.data.get('attribut', {})
         
-        if not race or not age or not attributes:
+        # Check for critical missing data (race and age are required, attributes optional)
+        if not race or not age:
+            missing = []
+            if not race:
+                missing.append("folkslag")
+            if not age:
+                missing.append("ålder")
+            
             embed = self.embed_factory.error_message(
                 session.user_id,
-                "❌ Error: Race, age and attributes must be set first."
+                f"❌ Data saknas: {', '.join(missing)}\n"
+                f"Kontrollera att tidigare steg är genomförda."
             )
             await ctx.send(embed=embed)
-            return embed
+            
+            # Försök hämta data från character_data om det saknas
+            if not race and 'folkslag' in session.character_data:
+                session.data['folkslag'] = session.character_data['folkslag']
+                race = session.character_data['folkslag']
+            if not age and 'ålder' in session.character_data:
+                session.data['ålder'] = session.character_data['ålder']
+                age = session.character_data['ålder']
+            
+            # Om vi fortfarande saknar kritisk data, avbryt
+            if not race or not age:
+                return embed
         
-        # Calculate attribute sum
-        attribute_sum = sum(attributes.values())
+        # Calculate attribute sum (use default if attributes not set)
+        if attributes:
+            attribute_sum = sum(attributes.values())
+        else:
+            # Use a default/average attribute sum if attributes weren't rolled
+            attribute_sum = 100  # Average human attribute sum
         
         # Calculate background rolls
         background_rolls = self._calculate_background_rolls(race, age, attribute_sum)
@@ -127,16 +150,25 @@ class BackgroundStep(BaseStep):
         
         # Attribute sum bonus
         attr_bonus = 0
-        if attribute_sum < 70: 
-            attr_bonus = 2
-        elif 71 <= attribute_sum <= 85: 
-            attr_bonus = 1
-        
-        embed.add_field(
-            name="Attributbonus",
-            value=f"Summa {attribute_sum}: +{attr_bonus} slag",
-            inline=True
-        )
+        if attributes:  # Only calculate if attributes were rolled
+            if attribute_sum < 70: 
+                attr_bonus = 2
+            elif 71 <= attribute_sum <= 85: 
+                attr_bonus = 1
+            
+            embed.add_field(
+                name="Attributbonus",
+                value=f"Summa {attribute_sum}: +{attr_bonus} slag",
+                inline=True
+            )
+        else:
+            # No attributes rolled - use standard bonus
+            attr_bonus = 0
+            embed.add_field(
+                name="Attributbonus",
+                value=f"Inga attribut slagna: +{attr_bonus} slag",
+                inline=True
+            )
         
         # Age bonus  
         age_bonus = 0
@@ -444,17 +476,63 @@ class BackgroundStep(BaseStep):
         
         table_file = table_mapping.get(result_type)
         if not table_file:
-            return None
+            return {
+                'table_type': result_type,
+                'table_file': 'unknown',
+                'roll': 0,
+                'result': 'Error',
+                'description': f'No table mapping found for {result_type}',
+                'result_key': 'error',
+                'original_main_roll': original_result
+            }
         
         try:
             # Load the table
             table_data = self._load_background_subtable(table_file)
             if not table_data:
-                return None
+                return {
+                    'table_type': result_type,
+                    'table_file': table_file,
+                    'roll': 0,
+                    'result': 'Error',
+                    'description': f'Could not load table data from {table_file}',
+                    'result_key': 'error',
+                    'original_main_roll': original_result
+                }
             
             # Special handling for egendom tables
             if result_type == 'egendom':
                 return await self._roll_egendom_table(session, table_data, original_result)
+            
+            # Special handling for extra family roll
+            if result_type == 'extra_slag_familj':
+                # For extra family roll, we need to use the correct family table
+                # Get the race to determine which family table to use
+                race = session.data.get('folkslag', 'vananer')
+                
+                # Check if we should use special family tables
+                if race.lower() in ['cirefalier']:
+                    # Use special Cirefalier family table if needed
+                    pass  # For now use default
+                
+                # Find the correct family table in the loaded data
+                if 'familjetabeller' in table_data:
+                    # Use the first available family table (usually "övriga")
+                    family_tables = table_data['familjetabeller']
+                    if 'övriga' in family_tables:
+                        family_table = family_tables['övriga']
+                        roll = random.randint(1, 100)
+                        result_data = self._find_result_in_ranges(family_table['ranges'], roll)
+                        
+                        return {
+                            'table_type': result_type,
+                            'table_file': table_file,
+                            'roll': roll,
+                            'result': result_data.get('result', 'Unknown'),
+                            'description': result_data.get('description', 'No description available'),
+                            'result_key': result_data.get('result', 'unknown'),
+                            'original_main_roll': original_result
+                        }
             
             # Roll on the table
             roll = random.randint(1, 100)
@@ -472,11 +550,36 @@ class BackgroundStep(BaseStep):
             
         except Exception as e:
             print(f"Error rolling on table {result_type}: {e}")
-            return None
+            # Return a valid error result instead of None
+            return {
+                'table_type': result_type,
+                'table_file': table_file or 'unknown',
+                'roll': 0,
+                'result': 'Error',
+                'description': f'Could not roll on {result_type} table: {str(e)}',
+                'result_key': 'error',
+                'original_main_roll': original_result
+            }
     
     async def _show_background_result_with_options(self, ctx: commands.Context, session: 'CharacterSession',
                                                  detailed_result: Dict, original_result: Dict) -> discord.Embed:
         """Show background result with keep/reroll options."""
+        
+        # Defensive programming - ensure all required keys exist
+        if not detailed_result:
+            detailed_result = {
+                'table_type': 'unknown',
+                'roll': 0,
+                'result': 'Error',
+                'description': 'Could not process background result'
+            }
+        
+        # Ensure required keys exist with defaults
+        detailed_result.setdefault('table_type', 'unknown')
+        detailed_result.setdefault('roll', 0)
+        detailed_result.setdefault('result', 'Unknown result')
+        detailed_result.setdefault('description', 'No description available')
+        
         table_display_name = self._get_table_display_name(detailed_result['table_type'])
         
         embed = discord.Embed(
@@ -487,21 +590,21 @@ class BackgroundStep(BaseStep):
         
         embed.add_field(
             name="📋 Resultat",
-            value=detailed_result['result'],
+            value=str(detailed_result['result']),
             inline=False
         )
         
         embed.add_field(
             name="📖 Beskrivning",
-            value=detailed_result['description'],
+            value=str(detailed_result['description']),
             inline=False
         )
         
         embed.add_field(
             name="✅ Alternativ",
             value=(
-                "`!chargen fortsätt` - Behåll detta resultat\\n"
-                "`!chargen slåom` - Slå om på samma tabell\\n"
+                "`!chargen fortsätt` - Behåll detta resultat\n"
+                "`!chargen slåom` - Slå om på samma tabell\n"
                 "`!chargen hoppa` - Hoppa över detta resultat"
             ),
             inline=False
@@ -515,6 +618,30 @@ class BackgroundStep(BaseStep):
         
         return embed
     
+    def _find_result_in_ranges(self, ranges: Dict, roll: int) -> Dict:
+        """Find the result for a given roll in a range-based table."""
+        for range_str, result_data in ranges.items():
+            if '-' in range_str:
+                # Handle ranges like "1-25"
+                parts = range_str.split('-')
+                if len(parts) == 2:
+                    try:
+                        min_val = int(parts[0])
+                        max_val = int(parts[1])
+                        if min_val <= roll <= max_val:
+                            return result_data
+                    except ValueError:
+                        continue
+            else:
+                # Handle single values like "100"
+                try:
+                    if int(range_str) == roll:
+                        return result_data
+                except ValueError:
+                    continue
+        
+        return {"result": "error", "description": f"No result for roll {roll}"}
+    
     def _get_table_display_name(self, table_type: str) -> str:
         """Return readable name for table types."""
         display_names = {
@@ -526,7 +653,8 @@ class BackgroundStep(BaseStep):
             'förmögenhet': 'Förmögenhet',
             'händelser': 'Händelser',
             'börd': 'Börd',
-            'egendom': 'Egendom'
+            'egendom': 'Egendom',
+            'extra_slag_familj': 'Extra Slag på Familjetabell'
         }
         return display_names.get(table_type, table_type.replace('_', ' ').title())
     
@@ -828,7 +956,22 @@ class BackgroundStep(BaseStep):
     def _resolve_conditional_result(self, result_entry: Dict, session: 'CharacterSession') -> Dict[str, str]:
         """Resolve conditional result based on character data."""
         conditions = result_entry.get('conditions', {})
-        folkslag = session.data.get('folkslag', '').lower()
+        
+        # Try multiple sources for folkslag
+        folkslag = session.data.get('folkslag', '')
+        if not folkslag:
+            folkslag = session.character_data.get('folkslag', '')
+        if not folkslag and 'folkslag' in session.temp_data:
+            temp_folkslag = session.temp_data['folkslag']
+            if isinstance(temp_folkslag, dict):
+                folkslag = temp_folkslag.get('name', '')
+            else:
+                folkslag = str(temp_folkslag)
+        
+        folkslag = folkslag.lower()
+        
+        # Debug: print what folkslag we found
+        print(f"DEBUG - Conditional result resolution: folkslag='{folkslag}', conditions={list(conditions.keys())}")
         
         # Check dwarf conditions
         if 'is_dvärg' in conditions and any(dvarg in folkslag for dvarg in ['ghor', 'drezin', 'roghan', 'dvärg']):
@@ -876,6 +1019,35 @@ class BackgroundStep(BaseStep):
                 'description': condition_result.get('description', 'Icke-cirefalier resultat')
             }
         
+        # Check alv (elf) conditions
+        if 'is_alv' in conditions and any(elf in folkslag for elf in ['sanari', 'thism', 'kiriya', 'henea', 'learam', 'pyar', 'alv']):
+            condition_result = conditions['is_alv']
+            return {
+                'result': condition_result.get('result', 'alv_result'),
+                'description': condition_result.get('description', 'Alv-specifikt resultat')
+            }
+        
+        # Check tirak conditions 
+        if 'is_bazirk_frakktirak' in conditions and any(tirak in folkslag for tirak in ['bazirk', 'frakktirak', 'tirak']):
+            condition_result = conditions['is_bazirk_frakktirak']
+            return {
+                'result': condition_result.get('result', 'tirak_result'),
+                'description': condition_result.get('description', 'Tirak-specifikt resultat')
+            }
+        
+        # Check NOT alv/bazirk/frakktirak (i.e. human races)
+        if 'not_alv_bazirk_frakktirak' in conditions:
+            is_elf = any(elf in folkslag for elf in ['sanari', 'thism', 'kiriya', 'henea', 'learam', 'pyar', 'alv'])
+            is_tirak = any(tirak in folkslag for tirak in ['bazirk', 'frakktirak', 'tirak'])
+            
+            if not is_elf and not is_tirak:  # This is a human race
+                condition_result = conditions['not_alv_bazirk_frakktirak']
+                return {
+                    'result': condition_result.get('result', 'human_result'),
+                    'description': condition_result.get('description', 'Mänskligt resultat')
+                }
+        
+        
         # If no conditions match, return default
         return {
             'result': result_entry.get('result', 'conditional_unresolved'),
@@ -914,18 +1086,34 @@ class BackgroundStep(BaseStep):
     
     async def _roll_egendom_table(self, session: 'CharacterSession', table_data: dict, original_result: dict) -> dict:
         """Special handling for egendom (property) tables."""
-        # Placeholder - implement specific egendom logic if needed
-        roll = random.randint(1, 100)
-        result_data = self._find_subtable_result_with_conditions(table_data, roll, session)
-        
-        return {
-            'table_type': 'egendom',
-            'table_file': 'egendom.json',
-            'roll': roll,
-            'result': result_data['description'],
-            'result_key': result_data['result'],
-            'original_main_roll': original_result
-        }
+        try:
+            roll = random.randint(1, 100)
+            result_data = self._find_subtable_result_with_conditions(table_data, roll, session)
+            
+            # Ensure result_data is valid
+            if not result_data:
+                result_data = {'result': 'error', 'description': f'No result for roll {roll}'}
+            
+            return {
+                'table_type': 'egendom',
+                'table_file': 'egendom.json',
+                'roll': roll,
+                'result': result_data.get('result', 'Unknown property'),
+                'description': result_data.get('description', 'No description available'),
+                'result_key': result_data.get('result', 'unknown'),
+                'original_main_roll': original_result
+            }
+        except Exception as e:
+            print(f"Error in _roll_egendom_table: {e}")
+            return {
+                'table_type': 'egendom',
+                'table_file': 'egendom.json',
+                'roll': 0,
+                'result': 'Error',
+                'description': f'Error rolling on egendom table: {str(e)}',
+                'result_key': 'error',
+                'original_main_roll': original_result
+            }
     
     def get_help_text(self) -> str:
         """Get detailed help text for this step."""

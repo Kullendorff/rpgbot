@@ -271,8 +271,16 @@ class InteractiveCharacterCreator:
         """Sparar session till JSON-fil"""
         try:
             session_file = self.session_dir / f"{session.user_id}.json"
+            session_dict = session.to_dict()
+            
+            # Debug what we're saving
+            print(f"DEBUG - Saving session for {session.user_id}: step={session.current_step}")
+            print(f"DEBUG - Data keys: {list(session.data.keys())}")
+            if 'folkslag' in session.data:
+                print(f"DEBUG - Saving folkslag: '{session.data['folkslag']}'")
+                
             with open(session_file, 'w', encoding='utf-8') as f:
-                json.dump(session.to_dict(), f, ensure_ascii=False, indent=2)
+                json.dump(session_dict, f, ensure_ascii=False, indent=2)
         except Exception as e:
             print(f"Fel vid sparning av session för {session.user_id}: {e}")
     
@@ -286,7 +294,11 @@ class InteractiveCharacterCreator:
             with open(session_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
-            return CharacterSession.from_dict(data)
+            session = CharacterSession.from_dict(data)
+            print(f"DEBUG - Loaded session for {user_id}: step={session.current_step}, folkslag in data={('folkslag' in session.data)}")
+            if 'folkslag' in session.data:
+                print(f"DEBUG - Folkslag value: '{session.data['folkslag']}'")
+            return session
         except Exception as e:
             print(f"Fel vid laddning av session för {user_id}: {e}")
             return None
@@ -950,7 +962,12 @@ class InteractiveCharacterCreator:
             return
         
         current_step = session.current_step
-        step_info = self.steps[current_step - 1]
+        step_info = self.get_current_step_info(session)
+        
+        # If step_info is None, we're beyond defined steps
+        if not step_info:
+            await ctx.send("❌ Detta steg är inte implementerat än.")
+            return
         
         if step_info['name'] == 'hemland' and 'hemland' in session.temp_data:
             selected_homeland = session.temp_data['hemland']
@@ -964,6 +981,8 @@ class InteractiveCharacterCreator:
             session.data['folkslag'] = selected_folkslag['name']
             session.data['folkslag_title'] = selected_folkslag['title']
             session.data['folkslag_category'] = selected_folkslag['category']
+            print(f"DEBUG - confirm_current_choice: Moved folkslag='{selected_folkslag['name']}' from temp_data to data")
+            print(f"DEBUG - Session data now contains: {list(session.data.keys())}")
             
             # Uppdatera context för TableProcessor
             session.update_context()

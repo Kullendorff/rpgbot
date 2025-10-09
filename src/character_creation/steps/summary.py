@@ -77,12 +77,12 @@ class SummaryStep(BaseStep):
         """Create the basic information embed."""
         embed = self.embed_factory.admin_message(
             session.user_id, 
-            "🎭 Character Summary - Part 1: Basic Information", 
+            "🎭 Karaktärsöversikt - Del 1: Grundinformation", 
             "Complete overview of your generated EON character:"
         )
         
         # Basic info
-        folkslag_text = session.data.get('folkslag', 'Unknown').capitalize()
+        folkslag_text = session.data.get('folkslag', 'Okänt').capitalize()
         
         # Add Thalamur-specific information
         thalamur_special = session.data.get('thalamur_special')
@@ -100,11 +100,11 @@ class SummaryStep(BaseStep):
         
         embed.add_field(
             name="👤 Basic Information",
-            value=f"**Gender:** {session.data.get('kön', 'Unknown').capitalize()}\n" +
-                  f"**Age:** {session.data.get('ålder', 'Unknown')} years\n" +
-                  f"**Homeland:** {session.data.get('hemland', 'Unknown')}\n" +
-                  f"**Race:** {folkslag_text}\n" +
-                  f"**Culture:** {session.data.get('kultur_namn', session.data.get('kultur', 'Unknown'))}",
+            value=f"**Kön:** {session.data.get('kön', 'Okänt').capitalize()}\n" +
+                  f"**Ålder:** {session.data.get('ålder', 'Okänt')} år\n" +
+                  f"**Hemland:** {session.data.get('hemland', 'Okänt')}\n" +
+                  f"**Folkslag:** {folkslag_text}\n" +
+                  f"**Kultur:** {session.data.get('kultur_namn', session.data.get('kultur', 'Okänt'))}",
             inline=False
         )
         
@@ -134,7 +134,7 @@ class SummaryStep(BaseStep):
                 att_info.append(f"**Special rule:** {bonusar['special_regel']}")
             
             embed.add_field(
-                name=f"🏛️ Thalamur Family: {thalamur_att_data.get('titel', 'Unknown')}",
+                name=f"🏛️ Thalamur-familj: {thalamur_att_data.get('titel', 'Okänd')}",
                 value="\n".join(att_info),
                 inline=False
             )
@@ -194,7 +194,7 @@ class SummaryStep(BaseStep):
         """Create the family background embed."""
         embed = self.embed_factory.admin_message(
             session.user_id, 
-            "👨‍👩‍👧‍👦 Character Summary - Part 2: Family Background", 
+            "👨‍👩‍👧‍👦 Karaktärsöversikt - Del 2: Familjebakgrund", 
             ""
         )
         
@@ -213,11 +213,11 @@ class SummaryStep(BaseStep):
             # Profession from culture
             profession = family_data.get('profession', {})
             if profession and 'profession' in profession:
-                family_text.append(f"\n💼 **FAMILY PROFESSION**")
-                family_text.append(f"Family works as **{profession['profession']}** (Roll: {profession['roll']})")
+                family_text.append(f"\n💼 **FAMILJENS HUVUDNÄRING**")
+                family_text.append(f"Familjen arbetar som **{profession['profession']}** (Slag: {profession['roll']})")
                 if profession.get('skills'):
                     skills_text = ", ".join(profession['skills'])
-                    family_text.append(f"Skills: {skills_text} (Bonus: {profession.get('skill_bonus', '1d6+1')})")
+                    family_text.append(f"Färdigheter: {skills_text} (Bonus: {profession.get('skill_bonus', '1d6+1')})")
             
             # Race-specific properties
             race_specific = family_data.get('race_specific', {})
@@ -226,21 +226,21 @@ class SummaryStep(BaseStep):
                 
                 if 'household' in race_specific:
                     household = race_specific['household']
-                    family_text.append(f"🏠 **Household:** {household.get('name', 'Unknown')}")
+                    family_text.append(f"🏠 **Hushåll:** {household.get('name', 'Okänt')}")
                     if 'skills' in household:
                         skills = ", ".join(household['skills'])
                         family_text.append(f"Bonus: {skills} ({household.get('bonus', '1d6+1')})")
                 
                 if 'mentor' in race_specific:
                     mentor = race_specific['mentor']
-                    family_text.append(f"🧙‍♂️ **Mentor:** {mentor.get('personality', 'Unknown personality')}")
+                    family_text.append(f"🧙‍♂️ **Mentor:** {mentor.get('personality', 'Okänd personlighet')}")
                     if 'skills' in mentor:
                         skills = ", ".join(mentor['skills'])
                         family_text.append(f"Mentor skills: {skills} ({mentor.get('bonus', '1d6+4')})")
                 
                 if 'social_class' in race_specific:
                     social = race_specific['social_class']
-                    family_text.append(f"🏛️ **Social class:** {social.get('name', 'Unknown')}")
+                    family_text.append(f"🏛️ **Samhällsklass:** {social.get('name', 'Okänd')}")
                     if 'attribute_effects' in social:
                         effects = social['attribute_effects']
                         effect_text = ", ".join([f"{attr}: {'+' if val >= 0 else ''}{val}" for attr, val in effects.items()])
@@ -253,7 +253,7 @@ class SummaryStep(BaseStep):
                     family_summary = family_summary[:1800] + "..."
                 
                 embed.add_field(
-                    name="🏠 Family Background",
+                    name="🏠 Familjebakgrund",
                     value=family_summary,
                     inline=False
                 )
@@ -264,7 +264,7 @@ class SummaryStep(BaseStep):
         """Create the background events embed."""
         embed = self.embed_factory.admin_message(
             session.user_id, 
-            "📚 Character Summary - Part 3: Background Events", 
+            "📚 Karaktärsöversikt - Del 3: Bakgrundshändelser", 
             ""
         )
         
@@ -281,7 +281,7 @@ class SummaryStep(BaseStep):
         if processed_results:
             results_text = []
             for i, result in enumerate(processed_results, 1):
-                category = result.get('category', 'Unknown')
+                category = result.get('category', 'Okänd')
                 result_desc = result.get('result', 'No result')
                 # Limit length to fit
                 short_desc = result_desc[:50] + "..." if len(result_desc) > 50 else result_desc
@@ -301,8 +301,8 @@ class SummaryStep(BaseStep):
                 )
         else:
             embed.add_field(
-                name="📋 Background events:",
-                value="No specific background events processed yet.",
+                name="📋 Bakgrundshändelser:",
+                value="Inga specifika bakgrundshändelser har behandlats ännu.",
                 inline=False
             )
         
@@ -312,7 +312,7 @@ class SummaryStep(BaseStep):
         """Create the skill bonuses embed."""
         embed = self.embed_factory.admin_message(
             session.user_id, 
-            "🎯 Character Summary - Part 4: Skill Bonuses", 
+            "🎯 Karaktärsöversikt - Del 4: Färdighetsbonusar", 
             ""
         )
         
@@ -337,7 +337,7 @@ class SummaryStep(BaseStep):
             )
         else:
             embed.add_field(
-                name="📚 Skill bonuses:",
+                name="📚 Färdighetsbonusar:",
                 value="No specific skill bonuses documented (but may exist from background events)",
                 inline=False
             )
@@ -348,24 +348,24 @@ class SummaryStep(BaseStep):
         """Create the final completion embed."""
         embed = self.embed_factory.admin_message(
             session.user_id, 
-            "🏆 Character Creation Complete!", 
-            "Your EON character is now ready for adventure!"
+            "🏆 Karaktärsskapande Klart!", 
+            "Din EON-karaktär är nu redo för äventyr!"
         )
         
         embed.add_field(
-            name="✅ Completed steps:",
-            value="• Basic information (gender, age, homeland, race)\n" +
-                  "• Culture and family background\n" +
-                  "• Attribute generation with racial modifiers\n" +
-                  "• Complete automatic family generation\n" +
-                  "• Detailed background events",
+            name="✅ Genomförda steg:",
+            value="• Grundinformation (kön, ålder, hemland, folkslag)\n" +
+                  "• Kultur och familjebakgrund\n" +
+                  "• Attributgenerering med rasmodifieringar\n" +
+                  "• Komplett automatisk familjegenerering\n" +
+                  "• Detaljerade bakgrundshändelser",
             inline=False
         )
         
         embed.add_field(
-            name="🎮 Session ended:",
-            value=f"Character creation session is now complete.\n" +
-                  f"Use `!chargen start` to create a new character.",
+            name="🎮 Session avslutad:",
+            value=f"Karaktärsskapande-sessionen är nu avslutad.\n" +
+                  f"Använd `!chargen start` för att skapa en ny karaktär.",
             inline=False
         )
         
@@ -380,17 +380,25 @@ class SummaryStep(BaseStep):
         
         if 'father' in family_dict:
             father = family_dict['father']
-            parts.append(f"Father: {father.get('status', 'Unknown')} (Age: {father.get('age', '?')})")
+            age_text = father.get('age')
+            if age_text and str(age_text) != 'None':
+                parts.append(f"Fader: {father.get('status', 'okänd')} (Ålder: {age_text})")
+            else:
+                parts.append(f"Fader: {father.get('status', 'okänd')}")
         
         if 'mother' in family_dict:
             mother = family_dict['mother']
-            parts.append(f"Mother: {mother.get('status', 'Unknown')} (Age: {mother.get('age', '?')})")
+            age_text = mother.get('age')
+            if age_text and str(age_text) != 'None':
+                parts.append(f"Moder: {mother.get('status', 'okänd')} (Ålder: {age_text})")
+            else:
+                parts.append(f"Moder: {mother.get('status', 'okänd')}")
         
         if 'siblings' in family_dict:
             siblings = family_dict['siblings']
             if siblings:
                 sibling_count = len(siblings)
-                parts.append(f"Siblings: {sibling_count}")
+                parts.append(f"Syskon: {sibling_count}")
         
         return "\n".join(parts) if parts else "Basic family information"
     
@@ -423,7 +431,7 @@ class SummaryStep(BaseStep):
                     if skill not in skill_bonuses:
                         skill_bonuses[skill] = []
                     skill_bonuses[skill].append({
-                        'source': f"Elf household ({household.get('name', 'Unknown')})",
+                        'source': f"Alvhushåll ({household.get('name', 'Okänt')})",
                         'bonus': bonus
                     })
         
@@ -444,7 +452,7 @@ class SummaryStep(BaseStep):
         family_skill_bonuses = session.data.get('familj_skill_bonuses', [])
         for bonus_data in family_skill_bonuses:
             # This would need more specific implementation based on the bonus structure
-            source = bonus_data.get('source', 'Unknown source')
+            source = bonus_data.get('source', 'Okänd källa')
             bonus = bonus_data.get('bonus', '')
             
             # Add to general skill bonuses (since we don't know specific skills)
@@ -465,7 +473,7 @@ class SummaryStep(BaseStep):
                     if skill not in skill_bonuses:
                         skill_bonuses[skill] = []
                     skill_bonuses[skill].append({
-                        'source': f"Thalamur family ({thalamur_att_data.get('titel', 'Unknown')})",
+                        'source': f"Thalamur-familj ({thalamur_att_data.get('titel', 'Okänd')})",
                         'bonus': 'Easy to learn'
                     })
         

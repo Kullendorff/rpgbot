@@ -64,11 +64,11 @@
           "result": "mindre_hus",
           "description": "Mindre hus i ett enkelt kvarter. RPs familj har 1 hus som består av 5 rum + 1 kök. Familjen har tillgång till tre av rummen. Övriga rum hyrs ut till en inneboende familj. På vinden bor en piga som arbetar för familjen. På bakgården finns en liten odling, ett hönshus och en gris."
         },
-        "51-65": {
+        "51-66": {
           "result": "medelstort_stadshus",
           "description": "Medelstort stadshus. Huset har 7 rum + 1 kök. Familjen har tillgång till 5 av rummen, övriga hyrs ut till 1 inneboende familj. På vinden bor 1 piga och 1 hushållerska som arbetar för familjen. På bakgården finns en mindre odling, 1 hönshus och 1 gris."
         },
-        "66-90": {
+        "67-90": {
           "result": "stort_tvavaningshus",
           "description": "Stort tvåvåningshus. Huset består av 10 rum + 1 kök. Familjen har tillgång till 6 av rummen, resten hyrs ut till 2 inneboende familjer. På vinden bor 1 hushållerska, 1 piga och 1 tjänare som arbetar för familjen. På bakgården finns 1 odling, och 1 litet hus där det bor 2 grisar, ob1T6 hönor och 1 häst"
         },

@@ -25,10 +25,6 @@ FEATURE_FLAGS = {
     "slash_utility_enabled": True,       # /stats, /mystats, /regel etc
     "dual_mode_utility": True,           # Kör både ! och / för utility commands
     
-    # Character creation
-    "slash_chargen_enabled": False,      # /chargen
-    "dual_mode_chargen": False,          # Kör både ! och / för chargen
-
     # Delta Green commands
     "slash_deltagreen_enabled": True,    # /dgcheck, /dgluck, /dgstat, /dglethality, /dgsan
 
@@ -70,9 +66,6 @@ COMMAND_FLAGS = {
     "höj": True,
     "help": True,
     
-    # Character creation - av för nu
-    "chargen": False,
-
     # Delta Green commands
     "dgcheck": True,
     "dgstat": True,

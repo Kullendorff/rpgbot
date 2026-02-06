@@ -41,10 +41,6 @@ from commands.knowledge_commands import register_knowledge_commands
 from commands.combat_commands import register_combat_commands
 from commands.utility_commands import register_utility_commands
 
-# Import för rollpersonsskapande
-import character_creation
-import interactive_chargen
-
 # Import för nya modulära komponenter
 from core.constants import (
     MAX_DICE, MAX_SIDES, MAX_MESSAGE_LENGTH, 
@@ -190,10 +186,6 @@ async def on_ready() -> None:
 
     register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
     logger.info("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
-
-    # Registrera karaktärsgenereringskommandon
-    character_creation.register_commands(bot, roll_tracker, color_handler, embed_factory)
-    logger.info("Karaktärsgenereringskommandon har registrerats.")
 
     # Registrera spindelkommandon (gigantspindlar och små spindlar)
     from commands.slash_spider_commands import register_slash_spider_commands

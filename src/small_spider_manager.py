@@ -10,6 +10,7 @@ import sys
 from dataclasses import dataclass
 from typing import Optional, Dict, List, Tuple
 import anthropic
+from core.constants import CLAUDE_MODEL
 
 # TODO: Ta bort sys.path manipulation - använd proper package structure
 # sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -343,7 +344,7 @@ Attack mot {context['spider_name']}:
 Skriv ENDAST beskrivningen på svenska, ingen metakommentar eller annan text."""
 
             message = self.anthropic_client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model=CLAUDE_MODEL,
                 max_tokens=200,
                 messages=[{"role": "user", "content": prompt}]
             )

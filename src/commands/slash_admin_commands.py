@@ -42,7 +42,7 @@ class AdminSlashCommands(commands.Cog):
         # Import dice dependencies för secret commands
         from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
         from core.dice_engine import unlimited_d6s
-        from core.constants import MAX_DICE, MAX_SIDES
+        from core.constants import MAX_DICE, MAX_SIDES, CLAUDE_MODEL
         
         self.parse_dice_string = parse_dice_string
         self.InvalidDiceFormat = InvalidDiceFormat
@@ -303,7 +303,7 @@ class AdminSlashCommands(commands.Cog):
                     # Enkel AI-call utan timeout complexity för nu
                     if hasattr(self.knowledge_base, 'claude_client') and self.knowledge_base.claude_client:
                         response = self.knowledge_base.claude_client.messages.create(
-                            model="claude-sonnet-4-20250514",
+                            model=CLAUDE_MODEL,
                             max_tokens=300,
                             messages=[{"role": "user", "content": summary_prompt}]
                         )

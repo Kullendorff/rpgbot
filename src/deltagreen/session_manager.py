@@ -225,7 +225,7 @@ class SessionManager:
     def export_to_trip19(
         self,
         session: Dict,
-        output_dir: str = "D:/GDRIVE/My Drive/Johan/Gaming/Gammal leka bäst/Delta Green/Trip19"
+        output_dir: str = os.getenv("DG_TRIP19_DIR", "data/deltagreen/exports")
     ) -> Optional[str]:
         """
         Export session improvements to Trip19 folder.

@@ -22,6 +22,7 @@ from spider_damage_tables import (
     parse_effect_code
 )
 import anthropic
+from core.constants import CLAUDE_MODEL
 
 @dataclass
 class SpiderDamageResult:
@@ -517,7 +518,7 @@ Attack:
 Skriv ENDAST beskrivningen på svenska, ingen metakommentar eller annan text."""
 
             message = self.anthropic_client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model=CLAUDE_MODEL,
                 max_tokens=300,
                 messages=[{"role": "user", "content": prompt}]
             )

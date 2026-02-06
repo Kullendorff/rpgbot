@@ -3,7 +3,7 @@ from typing import Tuple, List, Optional
 from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
 import anthropic
-from .constants import MAX_TOKENS, DEFAULT_TOP_K
+from .constants import MAX_TOKENS, DEFAULT_TOP_K, CLAUDE_MODEL
 
 class KnowledgeBase:
     def __init__(self):
@@ -56,7 +56,7 @@ class KnowledgeBase:
                 # Testa anslutningen med ett enkelt API-anrop
                 print("Testar Claude API-anslutningen...")
                 test_response = self.claude_client.messages.create(
-                    model="claude-sonnet-4-20250514",
+                    model=CLAUDE_MODEL,
                     max_tokens=10,
                     messages=[
                         {"role": "user", "content": "Say hello"}
@@ -144,7 +144,7 @@ class KnowledgeBase:
         
         try:
             response = self.claude_client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model=CLAUDE_MODEL,
                 max_tokens=MAX_TOKENS,
                 messages=[
                     {

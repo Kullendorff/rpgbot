@@ -1,4 +1,8 @@
 # Constants for EON Diceroller Bot
+import os
+
+# AI Model - override via .env: CLAUDE_MODEL=claude-sonnet-4-5-20250929
+CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-5-20250929")
 
 # User IDs
 UMNATAK_ID = "680064176227352610"

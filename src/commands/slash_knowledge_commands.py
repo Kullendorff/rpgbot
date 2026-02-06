@@ -13,6 +13,7 @@ from discord import app_commands
 # Import migration helpers
 from migration.helper import MigrationHelper, SlashCommandDecorator
 from utils.ai_handler import AIHandler
+from core.constants import CLAUDE_MODEL
 
 class KnowledgeSlashCommands(commands.Cog):
     """Cog för alla kunskaps-relaterade slash commands."""
@@ -387,7 +388,7 @@ class KnowledgeSlashCommands(commands.Cog):
                 self.knowledge_base.claude_client.messages.create,
                 (),
                 {
-                    'model': "claude-3-5-sonnet-20240620",
+                    'model': CLAUDE_MODEL,
                     'max_tokens': 2000,
                     'messages': [{"role": "user", "content": prompt}]
                 },

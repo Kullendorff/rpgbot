@@ -14,7 +14,7 @@ import discord
 from discord.ext import commands
 
 # Import core modules
-from core.constants import MAX_TOKENS
+from core.constants import MAX_TOKENS, CLAUDE_MODEL
 from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
 from core.dice_engine import unlimited_d6s
 
@@ -119,7 +119,7 @@ def register_admin_commands(bot, roll_tracker, color_handler, embed_factory, kno
                     
                 # Skicka till Claude
                 response = knowledge_base.claude_client.messages.create(
-                    model="claude-sonnet-4-20250514",
+                    model=CLAUDE_MODEL,
                     max_tokens=MAX_TOKENS,
                     messages=[
                         {

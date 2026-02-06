@@ -5,10 +5,14 @@ Konverterar prefix commands (!roll, !ex, !count, !chance) till moderna slash com
 
 import random
 import time
+import logging
 from typing import List, Optional, Tuple, Any
 import discord
 from discord.ext import commands
 from discord import app_commands
+
+# Setup logging
+logger = logging.getLogger(__name__)
 
 # Import migration helpers
 from migration.helper import MigrationHelper, SlashCommandDecorator, dice_autocomplete, target_value_autocomplete
@@ -111,11 +115,13 @@ class DiceSlashCommands(commands.Cog):
         try:
             # Hantera demonisk inspiration
             if demon:
-                print(f"[DEBUG] Demonisk inspiration aktiverad av {interaction.user.display_name} i /roll {tärningar}")
+                logger.debug(f"Demonisk inspiration aktiverad av {interaction.user.display_name} i /roll {tärningar}")
                 try:
                     await interaction.user.send(f"🔥 Demonisk inspiration aktiverad")
-                except:
-                    pass  # Ignorera om DM misslyckas
+                except discord.Forbidden as e:
+                    logger.warning(f"Kunde inte skicka DM till {interaction.user.display_name}: DM permissions disabled")
+                except Exception as e:
+                    logger.error(f"Fel vid skick av DM till {interaction.user.display_name}: {e}")
             
             
             # Parsa dice string

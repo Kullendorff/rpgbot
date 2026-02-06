@@ -71,7 +71,7 @@ class CombatManager:
             "arm": {
                 (1, 2): "skuldra",
                 (3, 4): "överarm",
-                (5, 5): "armbage",
+                (5, 5): "armbåge",
                 (6, 8): "underarm",
                 (9, 10): "hand"
             },

@@ -121,7 +121,7 @@ def register_knowledge_commands(bot, knowledge_base, color_handler, embed_factor
                 return
                 
             response = knowledge_base.claude_client.messages.create(
-                model="claude-3-5-sonnet-20240620", 
+                model="claude-sonnet-4-20250514",
                 max_tokens=MAX_TOKENS,
                 messages=[
                     {"role": "user", "content": prompt}

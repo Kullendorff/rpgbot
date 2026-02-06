@@ -6,19 +6,50 @@ Helt osynliga för alla spelare.
 import discord
 from discord import app_commands
 from discord.ext import commands
-from typing import Optional
+from typing import Optional, List
+
+# Trip19 kampanj - fasta spelare
+TRIP19_AGENTS = [
+    ("368410767189606401", "Mac", "Marcus Riley"),
+    ("197809169296916480", "Trench", "Sam Novak"),
+    ("223183062882713600", "Scalpel", "Dr. Hanna Engler"),
+    ("680064176227352610", "Sparky", "Kai Zhang"),
+    ("477800979295633409", "Sullivan", "Father Michael"),
+]
 
 def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager, color_handler):
     """Register secret manipulation commands - GM ONLY."""
-    
+
+    # Autocomplete function for Trip19 agents
+    async def agent_autocomplete(
+        interaction: discord.Interaction,
+        current: str
+    ) -> List[app_commands.Choice[str]]:
+        """Autocomplete för Trip19-agenter."""
+        if current:
+            # Filter based on callsign or name
+            matching = [
+                (user_id, callsign, name)
+                for user_id, callsign, name in TRIP19_AGENTS
+                if current.lower() in callsign.lower() or current.lower() in name.lower()
+            ]
+        else:
+            matching = TRIP19_AGENTS
+
+        return [
+            app_commands.Choice(name=f"{callsign} ({name})", value=user_id)
+            for user_id, callsign, name in matching[:25]
+        ]
+
     # Manipulation group - HEMLIGT GM SYSTEM
     manip_group = app_commands.Group(name="manipulation", description="Hemligt tärningsmanipulation (endast GM)")
-    
+
     @manip_group.command(name="aktivera", description="Aktivera manipulation för spelare (hemligt)")
     @app_commands.describe(
-        spelare="Spelare att manipulera",
+        agent="Trip19 agent (autocomplete)",
         typ="Typ av manipulation"
     )
+    @app_commands.autocomplete(agent=agent_autocomplete)
     @app_commands.choices(typ=[
         app_commands.Choice(name="Lycka (automatisk framgång)", value="lycka"),
         app_commands.Choice(name="Olycka (automatisk misslyckande)", value="olycka")
@@ -26,40 +57,52 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
     @app_commands.default_permissions(manage_guild=True)
     async def activate_player_manipulation(
         interaction: discord.Interaction,
-        spelare: discord.Member,
+        agent: str,
         typ: str
     ):
         """Aktivera hemlig manipulation för spelare."""
         # KRITISK: GM-kontroll
         if not any(role.name == 'Game Master' for role in interaction.user.roles):
             await interaction.response.send_message(
-                "Du behöver Game Master-roll för detta kommando.", 
+                "Du behöver Game Master-roll för detta kommando.",
                 ephemeral=True
             )
             return
-        
+
+        # agent is now user_id from autocomplete
+        user_id = agent
+
+        # Fetch user info for display
+        try:
+            user = await bot.fetch_user(int(user_id))
+            display_name = f"{user.display_name} ({user.name})"
+        except:
+            # Fallback to finding in TRIP19_AGENTS
+            agent_info = next((cs for uid, cs, name in TRIP19_AGENTS if uid == user_id), None)
+            display_name = agent_info if agent_info else f"User {user_id}"
+
         success = manipulation_manager.set_player_manipulation(
-            str(spelare.id), typ, str(interaction.user.id)
+            user_id, typ, str(interaction.user.id)
         )
-        
+
         if success:
             type_names = {
                 "lycka": "Lycka (automatisk framgång)",
                 "olycka": "Olycka (automatisk misslyckande)"
             }
-            
+
             embed = discord.Embed(
                 title="🎭 Hemlig Manipulation Aktiverad",
-                description=f"**Spelare:** {spelare.display_name}\n"
+                description=f"**Spelare:** {display_name}\n"
                            f"**Typ:** {type_names[typ]}\n\n"
                            f"⚠️ **HEMLIGT** - Spelaren vet inte om detta!\n"
                            f"Alla tärningsslag med målvärde kommer påverkas automatiskt.",
                 color=discord.Color.dark_purple()
             )
-            
+
             embed.add_field(
                 name="🔍 Vad händer nu?",
-                value=f"• {spelare.display_name}s slag manipuleras automatiskt\n"
+                value=f"• {display_name}s slag manipuleras automatiskt\n"
                       f"• Ingen visuell indikation för spelaren\n"
                       f"• Endast slag med målvärde påverkas\n"
                       f"• Använd `/manipulation status` för att se alla aktiva",
@@ -71,7 +114,7 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
                 description="Kunde inte aktivera manipulation. Kontrollera parametrar.",
                 color=discord.Color.red()
             )
-        
+
         await interaction.response.send_message(embed=embed, ephemeral=True)
     
     @manip_group.command(name="aktivera_id", description="Aktivera manipulation via User ID (hemligt)")
@@ -208,37 +251,49 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
         await interaction.response.send_message(embed=embed, ephemeral=True)
     
     @manip_group.command(name="inaktivera", description="Inaktivera manipulation för spelare")
-    @app_commands.describe(spelare="Spelare att ta bort manipulation för")
+    @app_commands.describe(agent="Trip19 agent (autocomplete)")
+    @app_commands.autocomplete(agent=agent_autocomplete)
     @app_commands.default_permissions(manage_guild=True)
     async def deactivate_player_manipulation(
         interaction: discord.Interaction,
-        spelare: discord.Member
+        agent: str
     ):
         """Inaktivera manipulation för spelare."""
         # KRITISK: GM-kontroll
         if not any(role.name == 'Game Master' for role in interaction.user.roles):
             await interaction.response.send_message(
-                "Du behöver Game Master-roll för detta kommando.", 
+                "Du behöver Game Master-roll för detta kommando.",
                 ephemeral=True
             )
             return
-        
-        success = manipulation_manager.remove_manipulation(str(spelare.id))
-        
+
+        # agent is now user_id from autocomplete
+        user_id = agent
+
+        # Fetch user info for display
+        try:
+            user = await bot.fetch_user(int(user_id))
+            display_name = f"{user.display_name} ({user.name})"
+        except:
+            agent_info = next((cs for uid, cs, name in TRIP19_AGENTS if uid == user_id), None)
+            display_name = agent_info if agent_info else f"User {user_id}"
+
+        success = manipulation_manager.remove_manipulation(user_id)
+
         if success:
             embed = discord.Embed(
                 title="✅ Manipulation Inaktiverad",
-                description=f"Manipulation borttagen för {spelare.display_name}.\n"
+                description=f"Manipulation borttagen för {display_name}.\n"
                            f"Deras tärningsslag är nu normala igen.",
                 color=discord.Color.green()
             )
         else:
             embed = discord.Embed(
                 title="ℹ️ Ingen Manipulation",
-                description=f"{spelare.display_name} hade ingen aktiv manipulation.",
-                color=discord.Color.grey()
+                description=f"{display_name} hade ingen aktiv manipulation.",
+                color=discord.Color.light_grey()
             )
-        
+
         await interaction.response.send_message(embed=embed, ephemeral=True)
     
     @manip_group.command(name="inaktivera_gm", description="Inaktivera din egen manipulation")
@@ -266,7 +321,7 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
             embed = discord.Embed(
                 title="ℹ️ Ingen GM Manipulation",
                 description="Du hade ingen aktiv manipulation.",
-                color=discord.Color.grey()
+                color=discord.Color.light_grey()
             )
         
         await interaction.response.send_message(embed=embed, ephemeral=True)
@@ -289,7 +344,7 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
             embed = discord.Embed(
                 title="🎭 Aktiva Manipulationer",
                 description="Inga aktiva manipulationer för tillfället.",
-                color=discord.Color.grey()
+                color=discord.Color.light_grey()
             )
             await interaction.response.send_message(embed=embed, ephemeral=True)
             return
@@ -309,15 +364,20 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
         
         for user_id, data in all_manipulations.items():
             try:
-                user = bot.get_user(int(user_id))
-                display_name = user.display_name if user else f"User {user_id}"
-                
+                # Använd fetch_user() istället för get_user() för att alltid få användaren
+                try:
+                    user = await bot.fetch_user(int(user_id))
+                    display_name = f"{user.display_name} ({user.name})"
+                except:
+                    # Fallback om vi inte kan hämta användaren
+                    display_name = f"User {user_id}"
+
                 manipulation_type = data["type"]
                 rolls_affected = data["rolls_affected"]
                 activated_at = data["activated_at"][:10]  # Just date
-                
+
                 type_display = type_names.get(manipulation_type, manipulation_type)
-                
+
                 embed.add_field(
                     name=f"{type_display}",
                     value=f"**Spelare:** {display_name}\n"

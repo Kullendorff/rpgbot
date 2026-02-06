@@ -47,8 +47,10 @@ class MigrationHelper:
             # Fallback attempt
             try:
                 await interaction.followup.send(embed=embed, content=content)
-            except:
-                pass
+            except discord.HTTPException as fallback_error:
+                self.logger.error(f"Fallback followup also failed (Discord HTTP error): {fallback_error}")
+            except Exception as fallback_error:
+                self.logger.error(f"Fallback followup also failed (unexpected error): {fallback_error}")
     
     def parse_dice_flags(self, flags_str: str) -> Dict[str, bool]:
         """

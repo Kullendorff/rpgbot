@@ -5,10 +5,14 @@ Konverterar prefix commands (!help, !stats, !regel, !höj) till moderna slash co
 
 import os
 import time
+import logging
 from typing import List, Optional, Tuple, Any
 import discord
 from discord.ext import commands
 from discord import app_commands
+
+# Setup logging
+logger = logging.getLogger(__name__)
 
 # Import migration helpers
 from migration.helper import MigrationHelper, SlashCommandDecorator
@@ -72,7 +76,8 @@ class UtilitySlashCommands(commands.Cog):
                         )
             
             return matches[:25]  # Discord limit
-        except:
+        except Exception as e:
+            logger.error(f"Fel vid regel autocomplete: {e}")
             return []
 
     @app_commands.command(name="help", description="Visa detaljerad hjälp för EON Discord Bot kommandon")

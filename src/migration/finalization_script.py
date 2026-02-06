@@ -8,8 +8,11 @@ import sys
 import json
 import time
 import asyncio
+import logging
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Any
+
+logger = logging.getLogger(__name__)
 
 class MigrationFinalizer:
     """Hanterar slutlig övergång från prefix till slash commands."""
@@ -41,8 +44,12 @@ class MigrationFinalizer:
                 with open(config_path, 'r', encoding='utf-8') as f:
                     config = json.load(f)
                     return config.get('current_phase', 1)
-        except:
-            pass
+        except FileNotFoundError as e:
+            logger.debug(f"Migration phase config inte funnen, använder default fas 1: {e}")
+        except json.JSONDecodeError as e:
+            logger.warning(f"Kunde inte parsa migration phase config, använder default fas 1: {e}")
+        except Exception as e:
+            logger.error(f"Oväntat fel vid läsning av migration phase, använder default fas 1: {e}")
         return 1  # Default till fas 1
     
     def _set_current_phase(self, phase: int):
@@ -129,8 +136,8 @@ class MigrationFinalizer:
                         )
                         await user.send(dm_message)
                         await self._mark_dm_sent(user.id, command)
-                    except:
-                        pass  # Ignorera om DM misslyckas
+                    except Exception as e:
+                        logger.warning(f"Kunde inte skicka migration DM till {user.display_name} för kommando {command}: {e}")
                 
                 return True  # Låt kommandot köras
                 
@@ -206,14 +213,18 @@ class MigrationFinalizer:
         """Kontrollera om användare redan fått DM för detta kommando."""
         try:
             dm_log_file = os.path.join(self.migration_data_path, "dm_sent_log.json")
-            
+
             if os.path.exists(dm_log_file):
                 with open(dm_log_file, 'r', encoding='utf-8') as f:
                     dm_log = json.load(f)
                     return f"{user_id}_{command}" in dm_log
-                    
-        except:
-            pass
+
+        except FileNotFoundError as e:
+            logger.debug(f"DM log file inte funnen, returnerar False: {e}")
+        except json.JSONDecodeError as e:
+            logger.warning(f"Kunde inte parsa DM log file, returnerar False: {e}")
+        except Exception as e:
+            logger.error(f"Oväntat fel vid kontroll av DM log, returnerar False: {e}")
         return False
     
     async def _mark_dm_sent(self, user_id: int, command: str):

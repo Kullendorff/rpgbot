@@ -28,7 +28,10 @@ FEATURE_FLAGS = {
     # Character creation
     "slash_chargen_enabled": False,      # /chargen
     "dual_mode_chargen": False,          # Kör både ! och / för chargen
-    
+
+    # Delta Green commands
+    "slash_deltagreen_enabled": True,    # /dgcheck, /dgluck, /dgstat, /dglethality, /dgsan
+
     # Global flags
     "enable_slash_logging": True,        # Logga alla slash command användningar
     "enable_performance_monitoring": True, # Mät execution times
@@ -69,6 +72,23 @@ COMMAND_FLAGS = {
     
     # Character creation - av för nu
     "chargen": False,
+
+    # Delta Green commands
+    "dgcheck": True,
+    "dgstat": True,
+    "dgluck": True,
+    "dglethality": True,
+    "dgsan": True,
+    "dgagent": True,
+    "dgroll": True,
+    "dggmroll": True,
+    "dggmstatus": True,
+    "dggmset": True,
+    "dgstartsession": True,
+    "dgendsession": True,
+    "dgdmg": True,
+    "dggmdmg": True,
+    "dggmreset": True,
 }
 
 def is_command_enabled(command_name: str, group: str = None) -> bool:

@@ -62,3 +62,32 @@ Thumbs.db
 .worktrees/
 .security-key
 logs/security/
+
+# Claude Code memory & settings
+.claude/memory/
+.claude/settings.local.json
+
+# Project state files (generated, not source)
+CURRENT_STATE.md
+_index.md
+
+# Cleanup directories
+_CLEANUP*/
+
+# Runtime game data (generated per session/guild)
+data/deltagreen/
+data/character_tables/sessions/
+data/spider_status_*.json
+data/sdih_decks/
+
+# Windows artifacts
+NUL
+Thumbs.db
+
+# Backup directories (already in git history)
+backup_*/
+backups/
+old_cc_instr/
+
+# Logs
+logs/

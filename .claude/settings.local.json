@@ -1,25 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir:*)",
-      "Bash(python:*)",
-      "Bash(sed:*)",
-      "Bash(mv:*)",
-      "Bash(git add:*)",
-      "Bash(git reset:*)",
-      "Bash(rm:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(cp:*)",
-      "Bash(grep:*)",
-      "Bash(find:*)",
+      "Bash(shutdown /s /t 10 /c \"Claude Code audit klar. Stänger av om 10 sekunder. Tryck avbryt för att stoppa.\")",
+      "Bash(shutdown:*)",
       "Bash(git checkout:*)",
-      "Bash(del:*)",
+      "Bash(python:*)",
       "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(dir:*)",
+      "Bash(find:*)",
+      "Bash(test:*)",
       "Bash(powershell:*)",
-      "Bash(echo \"Exit code: $?\")"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
+    "ask": [],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [
       "C:\\"

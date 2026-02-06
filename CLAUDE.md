@@ -2,6 +2,25 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 🔄 Background Activities During Development
+
+**Allowed during Diceroller sessions:**
+- Moltbook check-ups when explicitly requested
+- Token allocation: Diceroller gets 90%, background gets 10%
+- In case of conflict: Diceroller always wins
+
+**Trigger examples:**
+- "Check Moltbook while I work on this"
+- "Monitor Moltbook in the background"
+- "What's happening on Moltbook?"
+
+**When background activity is running:**
+- Primary focus: Diceroller work (code quality, functionality, testing)
+- Secondary: Moltbook (limited scope - quick check/monitoring)
+- Report both results when complete
+
+---
+
 ## Development Commands
 
 ### Environment Setup
@@ -98,6 +117,88 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 - `data/landerhemort/` - Homeland and origin data
 
 The knowledge base requires manual setup of PDF extraction and indexing before the bot can answer rule questions effectively.
+
+---
+
+## .claude/ - AI Infrastructure (🆕 Memory System)
+
+### Structure
+```
+.claude/
+└── memory/                  # 🆕 Memory-system
+    └── learnings.md         # Diceroller-specifika lärdomar
+```
+
+**Global structure** (outside project):
+```
+~/.claude/
+├── hooks/
+│   └── session-start.js     # Auto-loader hook (Node.js)
+├── memory/
+│   └── learnings.md         # Globala lärdomar (alla projekt)
+└── settings.json            # Hooks-konfiguration
+```
+
+### Memory System
+
+**Vid session-start:**
+- SessionStart-hook körs automatiskt (`~/.claude/hooks/session-start.js`)
+- Hook läser projekt-filer: `_index.md`, `CLAUDE.md` (denna fil)
+- Hook läser **diceroller-specifik** learnings.md (`.claude/memory/learnings.md`)
+- Hook läser **global** learnings.md (`~/.claude/memory/learnings.md`)
+- Allt laddas automatiskt - full context from the start!
+
+### What's Documented in learnings.md
+
+**Diceroller-specific learnings** (`.claude/memory/learnings.md`):
+- **Discord.py migration** (prefix → slash commands)
+- **Embed standardization** (centralized factory pattern)
+- **Quality-över-speed beslut** (why step-by-step works better)
+- **EON rules** (exploderande T6, perfect rolls, fumbles)
+- **AI integration** (Claude API, Pinecone gotchas, rate limiting)
+- **SQLite patterns** (database locked, migrations, connection pooling)
+- **Async patterns** (Discord.py event handling, 3-second timeout)
+- **DiceSpec parser** (security, flexibility, error handling)
+- **Character creation** (32-step system, TableProcessor)
+- **Performance** (memory management for long-running bot)
+- **Testing** (automated testing strategy)
+
+**Global learnings** (`~/.claude/memory/learnings.md`):
+- Edit-verktyget (matcha korta strängar, inte långa)
+- Git triple-check (före push till public repos)
+- Validering (testa efter kritiska ändringar)
+- Hooks (robust error handling)
+
+### Benefits
+
+- ✅ **Konsistent context** varje session
+- ✅ **Inga glömda best practices** - dokumenterade och laddade automatiskt
+- ✅ **Dokumenterade lösningar** på vanliga problem
+- ✅ **Institutionell kunskap** som byggs upp över tid
+- ✅ **Historik av beslut** - varför, inte bara hur
+
+### How to Update learnings.md
+
+**När du löser ett problem eller upptäcker ett mönster:**
+1. Lägg till i `.claude/memory/learnings.md`
+2. Inkludera: Datum, Problem, Lösning, Kod-exempel
+3. Tagga vad det gäller för (Discord.py, AI, EON-rules, etc.)
+
+**Exempel:**
+```markdown
+## Discord.py: New Gotcha Discovered
+
+**Datum:** YYYY-MM-DD
+**Problem:** [Beskriv problem]
+**Lösning:** [Konkret lösning]
+**Kod-exempel:**
+```python
+# Lösning här
+```
+**Gäller:** Discord.py 2.0+ projekt
+```
+
+---
 
 ## Recent Major Updates
 

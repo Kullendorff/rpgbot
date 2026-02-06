@@ -500,9 +500,10 @@ async def register_slash_combat_commands(bot, combat_manager, color_handler, emb
     """
     Registrera slash combat commands med boten.
     """
-    import sys
-    import os
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+    # TODO: Ta bort sys.path manipulation - använd proper package structure
+    # import sys
+    # import os
+    # sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
     from config.feature_flags import is_command_enabled
     
     # Kontrollera om slash combat commands är aktiverade

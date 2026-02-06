@@ -15,6 +15,13 @@ import anthropic
 from whoosh.index import open_dir
 from whoosh.qparser import QueryParser
 
+# Initialize logging FIRST before any other imports
+from core.logging_config import setup_logging, get_logger
+
+# Set up logging
+setup_logging()
+logger = get_logger(__name__)
+
 # Importera gamla moduler (ska flyttas till utils/)
 from color_handler import ColorHandler
 from roll_tracker import RollTracker
@@ -99,14 +106,16 @@ manipulation_manager = ManipulationManager()
 @bot.event
 async def on_ready() -> None:
     """Skriver ut ett meddelande när boten har kopplat upp sig mot Discord."""
-    print(f"{bot.user} has connected to Discord!")
-    print(f"Working directory: {os.getcwd()}")
-    print(f"Rules folder: {RULES_FOLDER}")
-    print(f"Index folder: {INDEX_FOLDER}")
+    logger.info(f"{bot.user} has connected to Discord!")
+    logger.info(f"Working directory: {os.getcwd()}")
+    logger.info(f"Rules folder: {RULES_FOLDER}")
+    logger.info(f"Index folder: {INDEX_FOLDER}")
     
     # Registrera slash commands enligt feature flags
+    # Lägg till project_root till sys.path för att hitta config-modulen
     import sys
-    sys.path.append(os.path.join(project_root))
+    if project_root not in sys.path:
+        sys.path.insert(0, project_root)
     from config.feature_flags import FEATURE_FLAGS, is_command_enabled
     if FEATURE_FLAGS["slash_dice_enabled"]:
         from commands.slash_dice_commands import register_slash_dice_commands
@@ -127,70 +136,112 @@ async def on_ready() -> None:
     if FEATURE_FLAGS["slash_admin_enabled"]:
         from commands.slash_admin_commands import register_slash_admin_commands
         await register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    
+
+    # Registrera Delta Green kommandon
+    if FEATURE_FLAGS.get("slash_deltagreen_enabled", False):
+        from deltagreen.commands import register_slash_dg_commands
+        from deltagreen import AgentManager, SessionManager
+        dg_agent_manager = AgentManager()
+        dg_session_manager = SessionManager()
+        await register_slash_dg_commands(bot, embed_factory, dg_agent_manager, dg_session_manager)
+        logger.info("Delta Green kommandon registrerade (/dgcheck, /dgluck, /dgstat, /dglethality, /dgsan, /dgagent, /dgroll, /dggmroll, /dggmstatus, /dggmset, /dgstartsession, /dgendsession).")
+
     # Registrera kommentarkommandon FÖRE sync
     from commands.slash_comment_commands import register_slash_comment_commands
     register_slash_comment_commands(bot, user_settings, comment_generator, color_handler)
-    print("Slash kommentarkommandon registrerade (/kommentarer).")
+    logger.info("Slash kommentarkommandon registrerade (/kommentarer).")
 
     # Registrera hemliga manipulationskommandon FÖRE sync
     from commands.slash_manipulation_commands import register_slash_manipulation_commands
     register_slash_manipulation_commands(bot, manipulation_manager, color_handler)
-    print("Slash manipulationskommandon registrerade (hemliga).")
+    logger.info("Slash manipulationskommandon registrerade (hemliga).")
     
-    # DEBUG: Lägg till debug kommando för att testa användarpermissions
-    import sys
-    sys.path.append(os.path.join(project_root))
-    from debug_user_info import register_debug_command
-    register_debug_command(bot)
-    
-    # Synka slash commands EN gång i slutet
-    try:
-        synced = await bot.tree.sync()
-        print(f"Synced {len(synced)} slash commands with Discord")
-        # Debug: Lista alla synkade kommandon
-        for cmd in synced:
-            print(f"  - /{cmd.name}: {cmd.description}")
-    except Exception as e:
-        print(f'Failed to sync slash commands: {e}')
-    
-    # Initiera kunskapsbasen vid start
-    success = knowledge_base.initialize_knowledge_base()
-    if success:
-        print("Kunskapsbasen initierad och redo att användas.")
-    else:
-        print("Kunde inte initiera kunskapsbasen. Kommandot !ask kommer inte att fungera korrekt.")
-        
+    # DEBUG: Lägg till debug kommando för att testa användarpermissions (endast om DEBUG miljövariabel är satt)
+    DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() == "true"
+    if DEBUG_MODE:
+        from debug_user_info import register_debug_command
+        register_debug_command(bot)
+        logger.debug("DEBUG MODE: Debug kommando registrerat")
+
+    # Registrera prefix commands FÖRE sync för bättre struktur
+    # Även om prefix commands inte behöver synkas, är det bättre att registrera dem först
+
     # Registrera statistikkommandona
     stats_commands.register_commands(bot, roll_tracker, color_handler, embed_factory)
-    print("Statistikkommandon har registrerats (allstats, mystatsall).")
-    
+    logger.info("Statistikkommandon har registrerats (allstats, mystatsall).")
+
     # Registrera Skjut dom i huvudet-kommandon
     sdih_commands.register_commands(bot, roll_tracker, color_handler)
-    print("Skjut dom i huvudet-kommandon har registrerats (rull, fördel, nackdel, etc.).")
-    
+    logger.info("Skjut dom i huvudet-kommandon har registrerats (rull, fördel, nackdel, etc.).")
+
     # Registrera admin-kommandon
     admin_commands.register_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    print("Admin-kommandon har registrerats (startsession, endsession, showsession, secret).")
-    
+    logger.info("Admin-kommandon har registrerats (startsession, endsession, showsession, secret).")
+
     # Registrera nya modulära kommandon
     register_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    print("Tärningskommandon har registrerats (roll, ex, count, chance).")
-    
+    logger.info("Tärningskommandon har registrerats (roll, ex, count, chance).")
+
     register_knowledge_commands(bot, knowledge_base, color_handler, embed_factory)
-    print("Kunskapskommandon har registrerats (ask, allt, sök).")
-    
+    logger.info("Kunskapskommandon har registrerats (ask, allt, sök).")
+
     register_combat_commands(bot, combat_manager, color_handler, embed_factory)
-    print("Stridskommandon har registrerats (hugg, stick, kross, fummel).")
-    
+    logger.info("Stridskommandon har registrerats (hugg, stick, kross, fummel).")
+
     register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
-    print("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
+    logger.info("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
 
     # Registrera karaktärsgenereringskommandon
     character_creation.register_commands(bot, roll_tracker, color_handler, embed_factory)
-    print("Karaktärsgenereringskommandon har registrerats.")
-    
-    print("Alla kommandon har registrerats och boten är redo!")
+    logger.info("Karaktärsgenereringskommandon har registrerats.")
+
+    # Registrera spindelkommandon (gigantspindlar och små spindlar)
+    from commands.slash_spider_commands import register_slash_spider_commands
+    await register_slash_spider_commands(bot, color_handler)
+    logger.info("Gigantspindelkommandon har registrerats.")
+
+    from commands.slash_small_spider_commands import register_slash_small_spider_commands
+    await register_slash_small_spider_commands(bot, color_handler)
+    logger.info("Småspindelkommandon har registrerats.")
+
+    # Debug: Kontrollera att kommandona finns i bot.tree
+    tree_commands = bot.tree.get_commands()
+    spider_cmds = [cmd.name for cmd in tree_commands if 'spindel' in cmd.name.lower()]
+    logger.info(f"Spindelkommandon i bot.tree före sync: {spider_cmds}")
+
+    # Synka slash commands EFTER alla registreringar
+    try:
+        # Försök guild-specific sync först (instant) om GUILD_ID finns i .env
+        guild_id = os.getenv("GUILD_ID")
+        if guild_id:
+            guild = discord.Object(id=int(guild_id))
+            # VIKTIGT: Kopiera globala kommandon till guilden först!
+            bot.tree.copy_global_to(guild=guild)
+            # Rensa globala kommandon för att undvika dubbletter
+            bot.tree.clear_commands(guild=None)
+            synced = await bot.tree.sync(guild=guild)
+            logger.info(f"Synced {len(synced)} slash commands to guild {guild_id} (instant)")
+            # Synka tomma globala kommandon
+            await bot.tree.sync()
+        else:
+            synced = await bot.tree.sync()
+            logger.info(f"Synced {len(synced)} slash commands globally (may take up to 1 hour)")
+
+        # Debug: Lista alla synkade kommandon
+        logger.info("SYNKADE KOMMANDON:")
+        for cmd in synced:
+            logger.info(f"  - /{cmd.name}: {cmd.description}")
+    except Exception as e:
+        logger.error(f'Failed to sync slash commands: {e}', exc_info=True)
+
+    # Initiera kunskapsbasen vid start
+    success = knowledge_base.initialize_knowledge_base()
+    if success:
+        logger.info("Kunskapsbasen initierad och redo att användas.")
+    else:
+        logger.warning("Kunde inte initiera kunskapsbasen. Kommandot !ask kommer inte att fungera korrekt.")
+
+    logger.info("Alla kommandon har registrerats och boten är redo!")
 
 def main():
     """
@@ -198,22 +249,22 @@ def main():
     """
     # Kontrollera att tokens finns
     if not DISCORD_TOKEN:
-        print("Fel: DISCORD_TOKEN saknas i .env-filen!")
+        logger.error("Fel: DISCORD_TOKEN saknas i .env-filen!")
         return
-    
+
     # Skriv ut startinformation
-    print(f"Startar Diceroller Bot")
-    print(f"Working directory: {os.getcwd()}")
-    print(f"Rules folder: {RULES_FOLDER}")
-    print(f"Index folder: {INDEX_FOLDER}")
-    
+    logger.info(f"Startar Diceroller Bot")
+    logger.info(f"Working directory: {os.getcwd()}")
+    logger.info(f"Rules folder: {RULES_FOLDER}")
+    logger.info(f"Index folder: {INDEX_FOLDER}")
+
     # Visa tillgängliga kanaler
     if CHANNEL_IDS:
         channels = CHANNEL_IDS.split(',')
-        print(f"Bot konfigurerad för {len(channels)} kanaler: {', '.join(channels)}")
+        logger.info(f"Bot konfigurerad för {len(channels)} kanaler: {', '.join(channels)}")
 
     # Starta boten
-    print(f"Ansluter till Discord...")
+    logger.info(f"Ansluter till Discord...")
     bot.run(DISCORD_TOKEN)
 
 if __name__ == "__main__":

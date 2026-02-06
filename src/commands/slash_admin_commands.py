@@ -7,11 +7,14 @@ import os
 import sys
 import time
 import json
+import logging
 from datetime import datetime, timedelta
 from typing import List, Optional, Dict, Any
 import discord
 from discord.ext import commands
 from discord import app_commands
+
+logger = logging.getLogger(__name__)
 
 # Add src to path for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -180,8 +183,12 @@ class AdminSlashCommands(commands.Cog):
                         value=f"Diskussion: {thread.mention}",
                         inline=False
                     )
-            except:
-                pass  # Ignorera om thread creation misslyckas
+            except discord.Forbidden as e:
+                logger.warning(f"Kunde inte skapa session thread (saknar permissions): {e}")
+            except discord.HTTPException as e:
+                logger.warning(f"Kunde inte skapa session thread (Discord HTTP error): {e}")
+            except Exception as e:
+                logger.error(f"Oväntat fel vid skapande av session thread: {e}")
             
             # Notifiera spelare om angivna
             if spelare:
@@ -296,7 +303,7 @@ class AdminSlashCommands(commands.Cog):
                     # Enkel AI-call utan timeout complexity för nu
                     if hasattr(self.knowledge_base, 'claude_client') and self.knowledge_base.claude_client:
                         response = self.knowledge_base.claude_client.messages.create(
-                            model="claude-3-5-sonnet-20240620",
+                            model="claude-sonnet-4-20250514",
                             max_tokens=300,
                             messages=[{"role": "user", "content": summary_prompt}]
                         )
@@ -354,14 +361,18 @@ class AdminSlashCommands(commands.Cog):
                 dm_embed = embed.copy()
                 dm_embed.title = f"📋 Session Rapport: {session_id}"
                 await interaction.user.send(embed=dm_embed)
-                
+
                 embed.add_field(
                     name="📨 Rapport Skickad",
                     value="Detaljerad rapport skickad via DM",
                     inline=False
                 )
-            except:
-                pass  # Ignorera om DM misslyckas
+            except discord.Forbidden as e:
+                logger.warning(f"Kunde inte skicka session rapport DM till {interaction.user.display_name}: DM permissions disabled")
+            except discord.HTTPException as e:
+                logger.warning(f"Kunde inte skicka session rapport DM (Discord HTTP error): {e}")
+            except Exception as e:
+                logger.error(f"Oväntat fel vid skickande av session rapport DM: {e}")
             
             # Logga session end
             print(f"[SESSION] Session {session_id} avslutad av {interaction.user.display_name}")
@@ -605,8 +616,12 @@ class AdminSlashCommands(commands.Cog):
                 dm_embed = embed.copy()
                 dm_embed.title = f"🤫 Hemligt Slag Backup: {tärningar}"
                 await interaction.user.send(embed=dm_embed)
-            except:
-                pass  # Ignorera om DM misslyckas
+            except discord.Forbidden as e:
+                logger.warning(f"Kunde inte skicka secret_roll DM backup till {interaction.user.display_name}: DM permissions disabled")
+            except discord.HTTPException as e:
+                logger.warning(f"Kunde inte skicka secret_roll DM backup (Discord HTTP error): {e}")
+            except Exception as e:
+                logger.error(f"Oväntat fel vid skickande av secret_roll DM backup: {e}")
             
         except Exception as e:
             embed = await self.helper.create_error_response(
@@ -747,8 +762,12 @@ class AdminSlashCommands(commands.Cog):
                 dm_embed = embed.copy()
                 dm_embed.title = f"🤫 Hemligt EX Backup: {antal}d6"
                 await interaction.user.send(embed=dm_embed)
-            except:
-                pass
+            except discord.Forbidden as e:
+                logger.warning(f"Kunde inte skicka secret_ex DM backup till {interaction.user.display_name}: DM permissions disabled")
+            except discord.HTTPException as e:
+                logger.warning(f"Kunde inte skicka secret_ex DM backup (Discord HTTP error): {e}")
+            except Exception as e:
+                logger.error(f"Oväntat fel vid skickande av secret_ex DM backup: {e}")
             
         except Exception as e:
             embed = await self.helper.create_error_response(
@@ -872,8 +891,12 @@ class AdminSlashCommands(commands.Cog):
                 dm_embed = embed.copy()
                 dm_embed.title = f"🤫 Hemligt Count Backup: {tärningar}"
                 await interaction.user.send(embed=dm_embed)
-            except:
-                pass
+            except discord.Forbidden as e:
+                logger.warning(f"Kunde inte skicka secret_count DM backup till {interaction.user.display_name}: DM permissions disabled")
+            except discord.HTTPException as e:
+                logger.warning(f"Kunde inte skicka secret_count DM backup (Discord HTTP error): {e}")
+            except Exception as e:
+                logger.error(f"Oväntat fel vid skickande av secret_count DM backup: {e}")
             
         except Exception as e:
             embed = await self.helper.create_error_response(
@@ -982,8 +1005,12 @@ class AdminSlashCommands(commands.Cog):
             try:
                 # TODO: Implementera player notification
                 pass
-            except:
-                pass
+            except discord.Forbidden as e:
+                logger.warning(f"Kunde inte skicka player notification (saknar permissions): {e}")
+            except discord.HTTPException as e:
+                logger.warning(f"Kunde inte skicka player notification (Discord HTTP error): {e}")
+            except Exception as e:
+                logger.error(f"Oväntat fel vid skickande av player notification: {e}")
             
         except Exception as e:
             embed = await self.helper.create_error_response(
@@ -1261,7 +1288,10 @@ async def register_slash_admin_commands(bot, roll_tracker, color_handler, embed_
     """
     import sys
     import os
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+    # Lägg till project root för att hitta config-modulen
+    project_root = os.path.join(os.path.dirname(__file__), '..', '..')
+    if project_root not in sys.path:
+        sys.path.insert(0, project_root)
     from config.feature_flags import is_command_enabled
     
     # Kontrollera om slash admin commands är aktiverade

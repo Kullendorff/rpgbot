@@ -94,9 +94,9 @@ STICK_AVSTAND_NORMAL = [
     ((25,25),  ("höger arm",   "armbage",    "9")),
     ((26,28),  ("höger arm",   "underarm",   "11")),
     ((29,30),  ("höger arm",   "hand",       "13")),
-    ((31,36),  ("bröstkorg",   "bröstkorg",  "14")),
-    ((51,58),  ("buk",         "mage",       "15")),
-    ((59,60),  ("buk",         "underliv",   "16")),
+    ((31,50),  ("bröstkorg",   "bröstkorg",  "14")),
+    ((51,60),  ("buk",         "mage",       "15")),
+    ((61,64),  ("buk",         "underliv",   "16")),
     ((65,68),  ("vänster ben", "höft",       "17")),
     ((69,72),  ("vänster ben", "lår",        "19")),
     ((73,78),  ("vänster ben", "knä",        "21")),
@@ -149,9 +149,7 @@ STICK_AVSTAND_LOW = [
     ((79, 80),  ("höger ben",   "lår",        "20")),
     ((81, 84),  ("höger ben",   "knä",        "22")),
     ((85, 88),  ("höger ben",   "vad",        "24")),
-    ((89, 92),  ("höger ben",   "fot",        "26")),
-    ((93, 98),  ("höger ben",   "vad",        "24")),
-    ((99, 100), ("höger ben",   "fot",        "26"))
+    ((89, 100), ("höger ben",   "fot",        "26"))
 ]
 
 # Tabeller för ryttare och riddjur

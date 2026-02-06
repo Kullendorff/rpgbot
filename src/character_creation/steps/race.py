@@ -6,6 +6,7 @@ on the previously selected homeland. Uses homeland_races.json for contextual
 race lists and supports percentage-based random generation.
 """
 
+import logging
 import discord
 from discord.ext import commands
 from typing import Optional, Tuple, List, Dict, Any
@@ -14,6 +15,8 @@ from pathlib import Path
 from .base_step import BaseStep
 from ..utils.homeland_race_mapper import HomelandRaceMapper
 from ..utils.dice_roller import CharacterDiceRoller
+
+logger = logging.getLogger(__name__)
 
 
 class RaceStep(BaseStep):
@@ -158,7 +161,7 @@ class RaceStep(BaseStep):
         
         # Handle special commands
         if input_text == 'slumpa':
-            print(f"DEBUG - handle_input: Processing 'slumpa' command")
+            logger.debug(f"handle_input: Processing 'slumpa' command")
             return await self._handle_random_race(ctx, session, homeland)
         elif input_text == 'alla':
             return await self._show_all_races(ctx, session)
@@ -189,12 +192,12 @@ class RaceStep(BaseStep):
         
         # Store selected race in both formats for compatibility
         session.data['folkslag'] = selected_race
-        print(f"DEBUG - Race step: Saved folkslag='{selected_race}' to session.data")
-        
+        logger.debug(f"Race step: Saved folkslag='{selected_race}' to session.data")
+
         # Also store in temp_data format expected by interactive_chargen
         race_info = {'name': selected_race, 'title': selected_race, 'category': 'human'}
         session.temp_data = {'folkslag': race_info}
-        print(f"DEBUG - Race step: Saved folkslag info to temp_data: {race_info}")
+        logger.debug(f"Race step: Saved folkslag info to temp_data: {race_info}")
         
         # Send confirmation
         confirmation_embed = discord.Embed(
@@ -272,9 +275,9 @@ class RaceStep(BaseStep):
             session.data['folkslag_title'] = 'Thalasker Medborgare'
             session.data['thalamur_samhällsklass'] = 'Medborgare'
             session.data['thalamur_special'] = 'thalasker_medborgare'
-            
-            print(f"DEBUG - Thalamur: Saved folkslag='Thalasker' (Medborgare) to session.data")
-            
+
+            logger.debug(f"Thalamur: Saved folkslag='Thalasker' (Medborgare) to session.data")
+
             await ctx.send("✅ Du är nu **Thalasker Medborgare** från Thalamur!\n*Mäktig samhällsklass med potential för magi och politisk makt.*")
             
             return True, None
@@ -285,9 +288,9 @@ class RaceStep(BaseStep):
             session.data['folkslag_title'] = 'Vanar av Folket'
             session.data['thalamur_samhällsklass'] = 'Folket'
             session.data['thalamur_special'] = 'thalasker_folket'
-            
-            print(f"DEBUG - Thalamur: Saved folkslag='Vanar' (Folket) to session.data")
-            
+
+            logger.debug(f"Thalamur: Saved folkslag='Vanar' (Folket) to session.data")
+
             await ctx.send("✅ Du är nu **Vanar av Folket** från Thalamur!\n*Vanliga människor utan politisk makt.*")
             
             return True, None
@@ -334,11 +337,11 @@ class RaceStep(BaseStep):
         
         return embed
     
-    async def _handle_random_race(self, ctx: commands.Context, 
+    async def _handle_random_race(self, ctx: commands.Context,
                                 session: 'CharacterSession',
                                 homeland: str) -> Tuple[bool, Optional[str]]:
         """Handle random race selection using T100 rolls."""
-        print(f"DEBUG - _handle_random_race called for homeland: {homeland}")
+        logger.debug(f"_handle_random_race called for homeland: {homeland}")
         race_name, variant_name = self.race_mapper.roll_random_race(homeland)
         
         if not race_name:
@@ -361,14 +364,14 @@ class RaceStep(BaseStep):
         
         # Store the race in both formats for compatibility
         session.data['folkslag'] = race_name
-        print(f"DEBUG - _handle_random_race: Saved folkslag='{race_name}' to session.data")
+        logger.debug(f"_handle_random_race: Saved folkslag='{race_name}' to session.data")
         if variant_name:
             session.data['folkslag_variant'] = variant_name
-        
+
         # Also store in temp_data format expected by interactive_chargen
         race_info = {'name': race_name, 'title': race_name, 'category': 'human'}
         session.temp_data = {'folkslag': race_info}
-        print(f"DEBUG - _handle_random_race: Saved folkslag info to temp_data: {race_info}")
+        logger.debug(f"_handle_random_race: Saved folkslag info to temp_data: {race_info}")
         
         # Create result embed
         random_embed = discord.Embed(

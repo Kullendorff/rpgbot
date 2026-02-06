@@ -1,8 +1,11 @@
+import logging
 import sqlite3
 from datetime import datetime
 import json
 import os
 from typing import List, Dict, Any, Optional
+
+logger = logging.getLogger(__name__)
 
 class RollTracker:
     def __init__(self, db_path: str = None):
@@ -21,7 +24,7 @@ class RollTracker:
             self.db_path = db_path
             
         self.current_session = None
-        print(f"Använder databasfil: {self.db_path}")
+        logger.info(f"Använder databasfil: {self.db_path}")
         self.setup_database()
     
     def setup_database(self):
@@ -68,13 +71,13 @@ class RollTracker:
                 
                 if "is_perfect" not in columns:
                     conn.execute("ALTER TABLE rolls ADD COLUMN is_perfect INTEGER")
-                    print("Kolumn 'is_perfect' har lagts till")
-                
+                    logger.info("Kolumn 'is_perfect' har lagts till")
+
                 if "is_fumble" not in columns:
                     conn.execute("ALTER TABLE rolls ADD COLUMN is_fumble INTEGER")
-                    print("Kolumn 'is_fumble' har lagts till")
+                    logger.info("Kolumn 'is_fumble' har lagts till")
             except Exception as e:
-                print(f"Varning vid kontroll av kolumner: {e}")
+                logger.warning(f"Varning vid kontroll av kolumner: {e}")
     
     def start_session(self, description: Optional[str] = None) -> str:
         """
@@ -151,7 +154,7 @@ class RollTracker:
                 # Utför frågan
                 conn.execute(sql, basic_values)
         except Exception as e:
-            print(f"Fel vid loggning av tärningskast: {e}")
+            logger.error(f"Fel vid loggning av tärningskast: {e}")
     def get_session_stats(self, session_id: Optional[str] = None) -> Dict:
         """
         Hämtar detaljerad statistik för en session. Om inget session_id anges 
@@ -241,7 +244,7 @@ class RollTracker:
                         LIMIT 5
                     """, (session_id,)).fetchall()
             except Exception as e:
-                print(f"Fel vid hämtning av perfekt/fummel-statistik: {e}")
+                logger.error(f"Fel vid hämtning av perfekt/fummel-statistik: {e}")
                 perfect_fumble_stats = None
 
             # Sammanställ all statistik i ett strukturerat format
@@ -375,7 +378,7 @@ class RollTracker:
                             "fumble_rate": round((pf_stats['fumble_rolls'] or 0) * 100 / pf_stats['total_rolls'], 1) if pf_stats['total_rolls'] > 0 else 0
                         }
                 except Exception as e:
-                    print(f"Fel vid hämtning av spelarens perfekt/fummel-statistik: {e}")
+                    logger.error(f"Fel vid hämtning av spelarens perfekt/fummel-statistik: {e}")
             
             result = {"rolls": roll_list}
             

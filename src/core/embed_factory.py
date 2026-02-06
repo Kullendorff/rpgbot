@@ -205,3 +205,177 @@ class EmbedFactory:
         embed_title = f"{self.ADMIN_EMOJI} {title}"
         embed = self._get_base_embed(user_id, embed_title, content)
         return embed
+
+    # Delta Green Methods
+    def dg_roll_result(self, user_id: int, user_name: str, roll: int,
+                      tens: int, ones: int, target: int, result_type: str,
+                      skill_name: str = None, modifier: int = 0) -> discord.Embed:
+        """Standard mall för Delta Green d100-kast."""
+        title = "🔟 DELTA GREEN - Skill Check"
+
+        # Format tens/ones display
+        tens_display = str(tens) if tens != 0 else "0"
+        ones_display = str(ones) if ones != 0 else "0"
+
+        # Build description
+        desc_lines = [
+            "━━━━━━━━━━━━━━━━━━━━━━━━━",
+            f"",
+            f"🔟  [{tens_display}] [{ones_display}]  →  **{roll:02d}**",
+            f""
+        ]
+
+        # Target info
+        target_line = f"Target: **{target}%**"
+        if modifier != 0:
+            sign = "+" if modifier > 0 else ""
+            target_line += f" ({sign}{modifier})"
+        desc_lines.append(target_line)
+
+        # Result
+        if result_type == "critical_success":
+            result_emoji = "✨"
+            result_text = "CRITICAL SUCCESS"
+            result_color = 0xF1C40F  # Gold
+        elif result_type == "success":
+            result_emoji = "✅"
+            result_text = "SUCCESS"
+            result_color = 0x2ECC71  # Green
+        elif result_type == "failure":
+            result_emoji = "❌"
+            result_text = "FAILURE"
+            result_color = 0xE74C3C  # Red
+        else:  # fumble
+            result_emoji = "💀"
+            result_text = "FUMBLE"
+            result_color = 0x8E44AD  # Purple
+
+        desc_lines.append(f"Result: {result_emoji} **{result_text}**")
+
+        # Add special notes for matched digits
+        if tens == ones:
+            if result_type == "critical_success":
+                desc_lines.append("")
+                desc_lines.append("_Matched doubles on success!_")
+            elif result_type == "fumble":
+                desc_lines.append("")
+                desc_lines.append("_Matched doubles on failure!_")
+
+        embed = discord.Embed(
+            title=title,
+            description="\n".join(desc_lines),
+            color=result_color
+        )
+        embed.timestamp = datetime.utcnow()
+
+        # Add skill name if provided
+        if skill_name:
+            embed.set_footer(text=f"Skill: {skill_name} | {user_name}")
+        else:
+            embed.set_footer(text=user_name)
+
+        return embed
+
+    def dg_lethality_result(self, user_id: int, user_name: str,
+                           roll: int, tens: int, ones: int, rating: int,
+                           is_lethal: bool, damage: Optional[int] = None) -> discord.Embed:
+        """Standard mall för Delta Green lethality-kast."""
+        title = "💀 DELTA GREEN - Lethality Roll"
+
+        # Format tens/ones display
+        tens_display = str(tens) if tens != 0 else "0"
+        ones_display = str(ones) if ones != 0 else "0"
+
+        desc_lines = [
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            f"",
+            f"🎲  [{tens_display}] [{ones_display}]  →  **{roll:02d}**",
+            f"",
+            f"Lethality: **{rating}%**"
+        ]
+
+        if is_lethal:
+            desc_lines.append(f"Result: ☠️ **LETHAL - Instant Kill**")
+            desc_lines.append("")
+            desc_lines.append("_Target reduced to 0 HP._")
+            result_color = 0x8E44AD  # Purple
+        else:
+            desc_lines.append(f"Result: Non-Lethal")
+            desc_lines.append("")
+            tens_val = 10 if tens == 0 else tens
+            ones_val = 10 if ones == 0 else ones
+            desc_lines.append(f"💥 **Damage:** {tens_val} + {ones_val} = **{damage} HP**")
+            result_color = 0xE74C3C  # Red
+
+        embed = discord.Embed(
+            title=title,
+            description="\n".join(desc_lines),
+            color=result_color
+        )
+        embed.timestamp = datetime.utcnow()
+        embed.set_footer(text=user_name)
+
+        return embed
+
+    def dg_san_result(self, user_id: int, user_name: str,
+                     roll: int, tens: int, ones: int, san_before: int,
+                     san_loss: int, san_after: int, result_type: str,
+                     temporary_insanity: bool = False) -> discord.Embed:
+        """Standard mall för Delta Green SAN-check."""
+        title = "🧠 DELTA GREEN - Sanity Check"
+
+        # Format tens/ones display
+        tens_display = str(tens) if tens != 0 else "0"
+        ones_display = str(ones) if ones != 0 else "0"
+
+        desc_lines = [
+            "━━━━━━━━━━━━━━━━━━━━━━━━━",
+            f"",
+            f"🎲  [{tens_display}] [{ones_display}]  →  **{roll:02d}**",
+            f"",
+            f"Current SAN: **{san_before}%**",
+            f"Target: **{san_before}%**"
+        ]
+
+        # Result
+        if result_type in ("critical_success", "success"):
+            result_emoji = "✅"
+            result_text = "SUCCESS" if result_type == "success" else "CRITICAL SUCCESS"
+        else:
+            result_emoji = "❌"
+            result_text = "FAILURE" if result_type == "failure" else "FUMBLE"
+
+        desc_lines.append(f"Result: {result_emoji} **{result_text}**")
+        desc_lines.append("")
+
+        # SAN loss
+        if san_loss > 0:
+            desc_lines.append(f"**SAN Loss:** {san_loss}")
+            desc_lines.append(f"**SAN:** {san_before} → {san_after}")
+
+            if temporary_insanity:
+                desc_lines.append("")
+                desc_lines.append("⚠️ **TEMPORARY INSANITY TRIGGERED**")
+                desc_lines.append("_Lost 5+ SAN in one check!_")
+        else:
+            desc_lines.append("No SAN loss")
+
+        # Color based on severity
+        if temporary_insanity:
+            result_color = 0x8E44AD  # Purple
+        elif san_loss >= 3:
+            result_color = 0xE74C3C  # Red
+        elif san_loss > 0:
+            result_color = 0xF39C12  # Orange
+        else:
+            result_color = 0x2ECC71  # Green
+
+        embed = discord.Embed(
+            title=title,
+            description="\n".join(desc_lines),
+            color=result_color
+        )
+        embed.timestamp = datetime.utcnow()
+        embed.set_footer(text=user_name)
+
+        return embed

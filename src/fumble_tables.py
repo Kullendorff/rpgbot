@@ -64,7 +64,7 @@ FUMBLE_TABLES = {
     "avstand": {
         # Ursprungliga resultat
         1: "Skottet går av för tidigt och träffar i marken framför rollpersonen. Rollpersonen tappar kontroll över vapnet, hamnar i obalans och får inget gjort under denna och nästa runda.",
-        2: "Rollpersonen tappar greppet om sitt vapen som flyger iväg Ob1T6/2 meter. Riktningen bestäms slumpmässigt. Rollpersonen blir automatiskt förvinad under 1T6 rundor.Rollpersonen tappar greppet om sitt vapen som flyger iväg Ob1T6/2 meter. Riktningen bestäms slumpmässigt. Rollpersonen blir automatiskt försvarare under 1T6 rundor.",
+        2: "Rollpersonen tappar greppet om sitt vapen som flyger iväg Ob1T6/2 meter. Riktningen bestäms slumpmässigt. Rollpersonen blir automatiskt försvarare under 1T6 rundor.",
         3: "Projektilen går helt fel upp i skyn och rollpersonen tittar förundrat på denna, och blir försvarare i två rundor.",
         4: "Finns det någon annan person i skottfältet blir denne träffad istället för det tilltänkta målet. Möjliga offer slår ett normalsvårt slag (Ob3T6) mot Tur för att undvika att bli träffad. Finns flera offer i närheten blir den med sämst effekt träffad av projektilen.",
         5: "Rollpersonen vrickar foten vid en klumpig handling och faller till marken. Sänk FÖR med två (–2) under Ob1T6 dagar samt anteckna Ob1T6 kryss Smärta. Rollpersonen ligger ned och kan inte resa sig under Ob1T6 rundor.",

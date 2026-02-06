@@ -6,6 +6,7 @@ Hanterar attributgenerering, tabellslag och karaktärsskapande
 import json
 import os
 import random
+import logging
 import discord
 import asyncio
 from datetime import datetime
@@ -14,6 +15,9 @@ from typing import Dict, List, Optional, Tuple, Any
 from discord.ext import commands
 from automatic_background import AutomaticBackgroundGenerator
 from interactive_chargen import InteractiveCharacterCreator
+
+# Setup logging
+logger = logging.getLogger(__name__)
 
 class CharacterCreator:
     """Huvudklass för rollpersonsskapande funktionalitet"""
@@ -746,7 +750,8 @@ def register_commands(bot, roll_tracker, color_handler, embed_factory):
                     # Försök gå vidare ändå
                     try:
                         chargen.next_step(session)
-                    except:
+                    except Exception as next_error:
+                        logger.error(f"Kunde inte gå till nästa steg efter fel: {next_error}")
                         break
                 
                 # Förhindra oändlig loop
@@ -843,8 +848,12 @@ def register_commands(bot, roll_tracker, color_handler, embed_factory):
                         f"Kritiskt fel i random-generering: {str(e)}"
                     )
                     await ctx.send(embed=error_embed)
-                except:
+                except discord.HTTPException as discord_error:
                     # Om vi inte kan skicka till Discord, bara logga lokalt
+                    logger.warning(f"Kunde inte skicka error embed till Discord: {discord_error}")
+                    print(f"Random generation error (Discord unavailable): {e}")
+                except Exception as send_error:
+                    logger.error(f"Oväntat fel vid skickande av error embed: {send_error}")
                     print(f"Random generation error (Discord unavailable): {e}")
             else:
                 # Discord-fel - bara logga lokalt
@@ -853,7 +862,7 @@ def register_commands(bot, roll_tracker, color_handler, embed_factory):
             # Försök rensa session
             try:
                 chargen.end_session(str(ctx.author.id))
-            except:
-                pass
+            except Exception as cleanup_error:
+                logger.warning(f"Kunde inte rensa session efter fel: {cleanup_error}")
     
     print("Rollpersonsskapande-kommandon har registrerats (attribut, folkslag, egenskap, npc, bakgrund, familjebakgrund, chargen).")

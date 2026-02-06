@@ -5,11 +5,15 @@ Implementerar en komplett 33-stegs karaktärsskapande-process med session manage
 
 import json
 import os
+import logging
 import discord
 from datetime import datetime
 from typing import Dict, List, Optional, Any, Callable
 from dataclasses import dataclass, asdict
 from pathlib import Path
+
+# Setup logging
+logger = logging.getLogger(__name__)
 
 # Import av befintliga system
 from eon_table_processor import TableProcessor, CharacterContext, create_character_context
@@ -94,7 +98,7 @@ class InteractiveCharacterCreator:
         homeland_dir = self.data_dir / 'landerhemort'
         
         if not homeland_dir.exists():
-            print(f"Varning: Kan inte hitta {homeland_dir}")
+            logger.warning(f"Kan inte hitta {homeland_dir}")
             return []
         
         # Läs alla .txt filer i landerhemort/
@@ -116,9 +120,9 @@ class InteractiveCharacterCreator:
                 })
                 
             except Exception as e:
-                print(f"Fel vid laddning av {txt_file}: {e}")
-        
-        print(f"Laddade {len(homelands)} hemländer")
+                logger.error(f"Fel vid laddning av {txt_file}: {e}")
+
+        logger.info(f"Laddade {len(homelands)} hemländer")
         return homelands
     
     def load_folkslag(self) -> Dict[str, List[Dict[str, str]]]:
@@ -134,7 +138,7 @@ class InteractiveCharacterCreator:
         folkslag_dir = self.data_dir / 'folkslag'
         
         if not folkslag_dir.exists():
-            print(f"Varning: Kan inte hitta {folkslag_dir}")
+            logger.warning(f"Kan inte hitta {folkslag_dir}")
             return {}
         
         # Gå igenom alla undermappar (humans/, alver/, dvärgar/)
@@ -163,10 +167,10 @@ class InteractiveCharacterCreator:
                         })
                         
                     except Exception as e:
-                        print(f"Fel vid laddning av {txt_file}: {e}")
-        
+                        logger.error(f"Fel vid laddning av {txt_file}: {e}")
+
         total_folkslag = sum(len(races) for races in folkslag_data.values())
-        print(f"Laddade {total_folkslag} folkslag i {len(folkslag_data)} kategorier")
+        logger.info(f"Laddade {total_folkslag} folkslag i {len(folkslag_data)} kategorier")
         return folkslag_data
     
     def load_culture_data(self) -> Dict[str, Any]:
@@ -182,22 +186,22 @@ class InteractiveCharacterCreator:
         huvudnaring_file = self.data_dir / 'familj' / 'huvudnaring.json'
         
         if not huvudnaring_file.exists():
-            print(f"Varning: Kan inte hitta {huvudnaring_file}")
+            logger.warning(f"Kan inte hitta {huvudnaring_file}")
             return {}
-        
+
         try:
             with open(huvudnaring_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            
+
             # Extrahera kulturkategorierna från huvudnäring
             if 'familj_huvudnäring' in data:
                 culture_data = data['familj_huvudnäring']
-                print(f"Laddade {len(culture_data)} kulturkategorier från huvudnaring.json")
+                logger.info(f"Laddade {len(culture_data)} kulturkategorier från huvudnaring.json")
             else:
-                print("Varning: Kunde inte hitta 'familj_huvudnäring' i huvudnaring.json")
-                
+                logger.warning("Kunde inte hitta 'familj_huvudnäring' i huvudnaring.json")
+
         except Exception as e:
-            print(f"Fel vid laddning av {huvudnaring_file}: {e}")
+            logger.error(f"Fel vid laddning av {huvudnaring_file}: {e}")
         
         return culture_data
     
@@ -238,7 +242,7 @@ class InteractiveCharacterCreator:
                 if session:
                     self.active_sessions[user_id] = session
         except Exception as e:
-            print(f"Fel vid laddning av befintliga sessioner: {e}")
+            logger.error(f"Fel vid laddning av befintliga sessioner: {e}")
     
     def start_session(self, user_id: str) -> CharacterSession:
         """Startar en ny karaktärsskapande-session för användare"""
@@ -274,15 +278,15 @@ class InteractiveCharacterCreator:
             session_dict = session.to_dict()
             
             # Debug what we're saving
-            print(f"DEBUG - Saving session for {session.user_id}: step={session.current_step}")
-            print(f"DEBUG - Data keys: {list(session.data.keys())}")
+            logger.debug(f"Saving session for {session.user_id}: step={session.current_step}")
+            logger.debug(f"Data keys: {list(session.data.keys())}")
             if 'folkslag' in session.data:
-                print(f"DEBUG - Saving folkslag: '{session.data['folkslag']}'")
-                
+                logger.debug(f"Saving folkslag: '{session.data['folkslag']}'")
+
             with open(session_file, 'w', encoding='utf-8') as f:
                 json.dump(session_dict, f, ensure_ascii=False, indent=2)
         except Exception as e:
-            print(f"Fel vid sparning av session för {session.user_id}: {e}")
+            logger.error(f"Fel vid sparning av session för {session.user_id}: {e}")
     
     def load_session(self, user_id: str) -> Optional[CharacterSession]:
         """Laddar sparad session från fil"""
@@ -295,12 +299,12 @@ class InteractiveCharacterCreator:
                 data = json.load(f)
             
             session = CharacterSession.from_dict(data)
-            print(f"DEBUG - Loaded session for {user_id}: step={session.current_step}, folkslag in data={('folkslag' in session.data)}")
+            logger.debug(f"Loaded session for {user_id}: step={session.current_step}, folkslag in data={('folkslag' in session.data)}")
             if 'folkslag' in session.data:
-                print(f"DEBUG - Folkslag value: '{session.data['folkslag']}'")
+                logger.debug(f"Folkslag value: '{session.data['folkslag']}'")
             return session
         except Exception as e:
-            print(f"Fel vid laddning av session för {user_id}: {e}")
+            logger.error(f"Fel vid laddning av session för {user_id}: {e}")
             return None
     
     def get_current_step_info(self, session: CharacterSession) -> Dict[str, Any]:
@@ -981,8 +985,8 @@ class InteractiveCharacterCreator:
             session.data['folkslag'] = selected_folkslag['name']
             session.data['folkslag_title'] = selected_folkslag['title']
             session.data['folkslag_category'] = selected_folkslag['category']
-            print(f"DEBUG - confirm_current_choice: Moved folkslag='{selected_folkslag['name']}' from temp_data to data")
-            print(f"DEBUG - Session data now contains: {list(session.data.keys())}")
+            logger.debug(f"confirm_current_choice: Moved folkslag='{selected_folkslag['name']}' from temp_data to data")
+            logger.debug(f"Session data now contains: {list(session.data.keys())}")
             
             # Uppdatera context för TableProcessor
             session.update_context()
@@ -2007,7 +2011,11 @@ class InteractiveCharacterCreator:
                 if '+' in dice_str:
                     return int(dice_str.replace('+', ''))
                 return int(dice_str)
-        except:
+        except ValueError as e:
+            logger.warning(f"Kunde inte parsa dice string '{dice_str}': {e}, använder fallback 1")
+            return 1  # Säker fallback
+        except Exception as e:
+            logger.error(f"Oväntat fel vid parsing av dice string '{dice_str}': {e}")
             return 1  # Säker fallback
     
     def _is_roll_in_range(self, roll: int, range_str: str) -> bool:
@@ -2092,7 +2100,7 @@ class InteractiveCharacterCreator:
             
         except Exception as e:
             # Fallback - returnera grundläggande info
-            print(f"Varning: Kunde inte konvertera FamilyBackground: {e}")
+            logger.warning(f"Kunde inte konvertera FamilyBackground: {e}")
             return {
                 'birth_info': str(getattr(family_bg, 'birth_info', 'Okänd födelseinformation')),
                 'siblings': [],
@@ -2504,7 +2512,7 @@ class InteractiveCharacterCreator:
                 data = json.load(f)
                 return data['bakgrundstabeller']['huvudtabell']
         except Exception as e:
-            print(f"Fel vid laddning av huvudbakgrundstabellen: {e}")
+            logger.error(f"Fel vid laddning av huvudbakgrundstabellen: {e}")
             return None
     
     def find_background_result(self, table: Dict[str, Any], roll: int) -> Dict[str, Any]:
@@ -2642,7 +2650,7 @@ class InteractiveCharacterCreator:
             }
             
         except Exception as e:
-            print(f"Fel vid tabellslag för {result_type}: {e}")
+            logger.error(f"Fel vid tabellslag för {result_type}: {e}")
             return None
     
     def get_events_table_for_race(self, session: CharacterSession) -> str:
@@ -2681,7 +2689,7 @@ class InteractiveCharacterCreator:
             with open(filepath, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except Exception as e:
-            print(f"Fel vid laddning av {filename}: {e}")
+            logger.error(f"Fel vid laddning av {filename}: {e}")
             return None
     
     def find_subtable_result(self, table_data: Dict[str, Any], roll: int) -> str:

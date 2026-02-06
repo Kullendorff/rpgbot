@@ -574,19 +574,18 @@ class DamageCalculator:
 
         # Kolla hemlig manipulation (lycka = automatisk T6 istället för T10)
         actual_malpunkter = use_malpunkter
-        if user_id:
-            try:
-                import sys
-                import os
-                sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-                import main
-                manipulation = main.manipulation_manager.get_manipulation(user_id)
-
-                if manipulation and manipulation["type"] in ["lycka", "gudomlig"]:
-                    actual_malpunkter = True  # Hemligt aktivera T6
-                    print(f"[SECRET] {manipulation['type'].upper()} manipulation: Forcing T6 (målpunkter) for damage roll for user {user_id}")
-            except Exception as e:
-                print(f"[ERROR] Error checking manipulation in damage calculation: {e}")
+        # NOTE: Manipulation check disabled to avoid circular import (damage_tables -> main -> damage_tables)
+        # TODO: Implement dependency injection pattern to properly access manipulation_manager
+        # if user_id:
+        #     try:
+        #         manipulation = get_manipulation_manager().get_manipulation(user_id)  # Requires DI
+        #         if manipulation and manipulation["type"] in ["lycka", "gudomlig"]:
+        #             actual_malpunkter = True  # Hemligt aktivera T6
+        #             import logging
+        #             logging.debug(f"Manipulation {manipulation['type']} activated T6 for user {user_id}")
+        #     except Exception as e:
+        #         import logging
+        #         logging.error(f"Error checking manipulation in damage calculation: {e}")
 
         # Allvarlig skada
         if actual_malpunkter:

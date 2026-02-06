@@ -131,7 +131,7 @@ class DiceSlashCommands(commands.Cog):
             except self.InvalidDiceFormat as e:
                 embed = await self.helper.create_error_response(
                     interaction.user.id,
-                    f"Ogiltig tärningsformel: {dice}",
+                    f"Ogiltig tärningsformel: {tärningar}",
                     "Använd format som '3d6+2' eller '4d10-1'"
                 )
                 await self.helper.send_response(interaction, embed=embed)

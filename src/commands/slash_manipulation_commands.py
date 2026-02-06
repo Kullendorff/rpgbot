@@ -300,7 +300,7 @@ def register_slash_manipulation_commands(bot: commands.Bot, manipulation_manager
     @app_commands.default_permissions(manage_guild=True)
     async def deactivate_gm_manipulation(interaction: discord.Interaction):
         """Inaktivera GM:s egen manipulation."""
-        # KRITISCH: GM-kontroll
+        # KRITISK: GM-kontroll
         if not any(role.name == 'Game Master' for role in interaction.user.roles):
             await interaction.response.send_message(
                 "Du behöver Game Master-roll för detta kommando.", 

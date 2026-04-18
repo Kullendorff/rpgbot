@@ -47,6 +47,20 @@ WEAPON_DATA = {
 }
 
 # Delta Green armor data
+STAT_INDEX_TO_NAME = {1: "STR", 2: "CON", 3: "DEX", 4: "INT", 5: "POW", 6: "CHA"}
+
+BONUS_CHOICES = [
+    app_commands.Choice(name="+40%", value=40),
+    app_commands.Choice(name="+30%", value=30),
+    app_commands.Choice(name="+20%", value=20),
+    app_commands.Choice(name="+10%", value=10),
+    app_commands.Choice(name="Normal", value=0),
+    app_commands.Choice(name="-10%", value=-10),
+    app_commands.Choice(name="-20%", value=-20),
+    app_commands.Choice(name="-30%", value=-30),
+    app_commands.Choice(name="-40%", value=-40),
+]
+
 ARMOR_DATA = {
     "None": 0,
     "Riot helmet": 1,
@@ -68,23 +82,22 @@ class DeltaGreenCommands(commands.Cog):
         self.session_manager = session_manager
         logger.info("Delta Green commands initialized")
 
-    @app_commands.command(name="dgcheck", description="Delta Green skill check (d100 roll-under)")
+    @app_commands.command(name="dgcheck", description="Delta Green snabbkast med manuellt målvärde (utan agent)")
     @app_commands.describe(
-        skill="Skill percentage (0-99)",
-        bonus="Bonus or penalty (+20, -40, etc.)"
+        target="Målvärde att rulla mot (1-99)",
+        bonus="Bonus eller penalty (+20, -40, etc.)"
     )
+    @app_commands.choices(bonus=BONUS_CHOICES)
     async def dg_check(
         self,
         interaction: discord.Interaction,
-        skill: app_commands.Range[int, 0, 99],
-        bonus: Optional[app_commands.Range[int, -99, 99]] = 0
+        target: app_commands.Range[int, 1, 99],
+        bonus: Optional[int] = 0
     ):
-        """Perform a Delta Green skill check."""
+        """Quick d100 roll against a manual target value (no agent lookup)."""
         try:
-            # Perform the skill check
-            result = skill_check(skill, bonus)
+            result = skill_check(target, bonus or 0)
 
-            # Create embed
             embed = self.embed_factory.dg_roll_result(
                 user_id=interaction.user.id,
                 user_name=interaction.user.display_name,
@@ -93,11 +106,12 @@ class DeltaGreenCommands(commands.Cog):
                 ones=result.ones_die,
                 target=result.target,
                 result_type=result.result.value,
-                modifier=bonus
+                skill_name=f"Manuellt ({target}%)",
+                modifier=bonus or 0
             )
 
             await interaction.response.send_message(embed=embed)
-            logger.info(f"DG check: {interaction.user.display_name} rolled {result.roll} vs {result.target}")
+            logger.info(f"DG check: {interaction.user.display_name} rolled manual {target}% = {result.roll}")
 
         except Exception as e:
             logger.error(f"Error in dg_check: {e}", exc_info=True)
@@ -108,10 +122,8 @@ class DeltaGreenCommands(commands.Cog):
             )
             await interaction.response.send_message(embed=error_embed, ephemeral=True)
 
-    @app_commands.command(name="dgstat", description="Delta Green stat test (STATx5)")
-    @app_commands.describe(
-        stat="Stat value (3-18)"
-    )
+    @app_commands.command(name="dgstat", description="Delta Green stat-test (STATx5) – hämtar värde från din agent")
+    @app_commands.describe(stat="Vilken stat att testa")
     @app_commands.choices(stat=[
         app_commands.Choice(name="STR (Strength)", value=1),
         app_commands.Choice(name="CON (Constitution)", value=2),
@@ -125,22 +137,35 @@ class DeltaGreenCommands(commands.Cog):
         interaction: discord.Interaction,
         stat: int
     ):
-        """Perform a Delta Green stat test.
-
-        Note: This is a placeholder implementation. In the future, we'll integrate
-        with agent data to automatically use the agent's stat values.
-        """
+        """Perform a Delta Green stat test (STATx5) using agent data."""
         try:
-            # For now, ask user to provide stat value
-            # In Phase 3, this will be integrated with agent data
-            await interaction.response.send_message(
-                "**Delta Green Stat Test**\n\n"
-                "Please use `/dgcheck <target>` for now, where target = your stat × 5.\n\n"
-                "Example: For STR 12, use `/dgcheck 60`\n\n"
-                "_Agent integration coming in Phase 3!_",
-                ephemeral=True
+            agent = self.agent_manager.get_agent(str(interaction.user.id))
+            if not agent:
+                await interaction.response.send_message(
+                    "Du har ingen agent registrerad. Kontakta GM.",
+                    ephemeral=True
+                )
+                return
+
+            stat_name = STAT_INDEX_TO_NAME[stat]
+            stat_value = agent['stats'][stat_name]
+            result = stat_test(stat_value)
+
+            display_name = f"{agent['callsign']} ({interaction.user.display_name})"
+            embed = self.embed_factory.dg_roll_result(
+                user_id=interaction.user.id,
+                user_name=display_name,
+                roll=result.roll,
+                tens=result.tens_die,
+                ones=result.ones_die,
+                target=result.target,
+                result_type=result.result.value,
+                skill_name=f"{stat_name} x5 ({stat_value}→{result.target}%)",
+                modifier=0
             )
-            logger.info(f"DG stat test requested by {interaction.user.display_name} (placeholder)")
+
+            await interaction.response.send_message(embed=embed)
+            logger.info(f"DG stat test: {display_name} rolled {stat_name}x5 ({result.target}%) = {result.roll}")
 
         except Exception as e:
             logger.error(f"Error in dg_stat: {e}", exc_info=True)
@@ -223,28 +248,44 @@ class DeltaGreenCommands(commands.Cog):
             )
             await interaction.response.send_message(embed=error_embed, ephemeral=True)
 
-    @app_commands.command(name="dgsan", description="Delta Green sanity check")
+    @app_commands.command(name="dgsan", description="Delta Green SAN-check – hämtar SAN automatiskt från din agent")
     @app_commands.describe(
-        current_san="Current SAN value",
-        success_loss="SAN loss on success (e.g., '0', '1', '1d4')",
-        failure_loss="SAN loss on failure (e.g., '1', '1d6', '1d10')"
+        success_loss="SAN-förlust vid lyckad roll (t.ex. '0', '1', '1d4')",
+        failure_loss="SAN-förlust vid misslyckad roll (t.ex. '1', '1d6', '1d10')",
+        current_san="Åsidosätt agentens SAN-värde (valfritt)"
     )
     async def dg_san(
         self,
         interaction: discord.Interaction,
-        current_san: app_commands.Range[int, 0, 99],
         success_loss: str,
-        failure_loss: str
+        failure_loss: str,
+        current_san: Optional[app_commands.Range[int, 0, 99]] = None
     ):
-        """Perform a SAN check."""
+        """Perform a SAN check, auto-reading SAN from agent data and updating it after."""
         try:
+            agent = self.agent_manager.get_agent(str(interaction.user.id))
+
+            if current_san is None:
+                if not agent:
+                    await interaction.response.send_message(
+                        "Du har ingen agent registrerad och inget manuellt SAN-värde angavs. Kontakta GM.",
+                        ephemeral=True
+                    )
+                    return
+                current_san = agent['derived']['san']['current']
+
             # Perform the SAN check
             result = san_check(current_san, success_loss, failure_loss)
+
+            display_name = (
+                f"{agent['callsign']} ({interaction.user.display_name})"
+                if agent else interaction.user.display_name
+            )
 
             # Create embed
             embed = self.embed_factory.dg_san_result(
                 user_id=interaction.user.id,
-                user_name=interaction.user.display_name,
+                user_name=display_name,
                 roll=result.roll_result.roll,
                 tens=result.roll_result.tens_die,
                 ones=result.roll_result.ones_die,
@@ -255,8 +296,27 @@ class DeltaGreenCommands(commands.Cog):
                 temporary_insanity=result.triggered_temporary_insanity
             )
 
+            # Persist SAN loss to agent data and check for breaking point
+            if agent and result.san_loss > 0:
+                san_result = self.agent_manager.modify_san(
+                    str(interaction.user.id),
+                    -result.san_loss
+                )
+                if san_result:
+                    _, _, hit_breaking_point = san_result
+                    if hit_breaking_point:
+                        bp = agent['derived']['breaking_point']
+                        embed.add_field(
+                            name="⚠️ BREAKING POINT",
+                            value=f"SAN sjönk under Breaking Point ({bp})!\nAgenten drabbas av en permanent störning.",
+                            inline=False
+                        )
+
             await interaction.response.send_message(embed=embed)
-            logger.info(f"DG SAN check: {interaction.user.display_name} rolled {result.roll_result.roll}, lost {result.san_loss} SAN")
+            logger.info(
+                f"DG SAN check: {display_name} rolled {result.roll_result.roll}, "
+                f"lost {result.san_loss} SAN ({current_san} → {result.san_after})"
+            )
 
         except Exception as e:
             logger.error(f"Error in dg_san: {e}", exc_info=True)
@@ -327,17 +387,7 @@ class DeltaGreenCommands(commands.Cog):
         bonus="Bonus or penalty (+10, -20, +40, etc.)"
     )
     @app_commands.autocomplete(skill=skill_autocomplete)
-    @app_commands.choices(bonus=[
-        app_commands.Choice(name="+40%", value=40),
-        app_commands.Choice(name="+30%", value=30),
-        app_commands.Choice(name="+20%", value=20),
-        app_commands.Choice(name="+10%", value=10),
-        app_commands.Choice(name="Normal", value=0),
-        app_commands.Choice(name="-10%", value=-10),
-        app_commands.Choice(name="-20%", value=-20),
-        app_commands.Choice(name="-30%", value=-30),
-        app_commands.Choice(name="-40%", value=-40),
-    ])
+    @app_commands.choices(bonus=BONUS_CHOICES)
     async def dg_agent_roll(
         self,
         interaction: discord.Interaction,
@@ -476,6 +526,13 @@ class DeltaGreenCommands(commands.Cog):
 
         return "█" * filled + "░" * empty
 
+    def _find_agent_by_callsign(self, callsign: str) -> Optional[str]:
+        """Find user_id by agent callsign (case-insensitive). Returns None if not found."""
+        for user_id, cs in self.agent_manager.list_all_agents():
+            if cs.lower() == callsign.lower():
+                return user_id
+        return None
+
     # GM Commands
 
     async def agent_autocomplete(
@@ -500,17 +557,7 @@ class DeltaGreenCommands(commands.Cog):
         bonus="Bonus or penalty (+10, -20, +40, etc.)"
     )
     @app_commands.autocomplete(agent=agent_autocomplete)
-    @app_commands.choices(bonus=[
-        app_commands.Choice(name="+40%", value=40),
-        app_commands.Choice(name="+30%", value=30),
-        app_commands.Choice(name="+20%", value=20),
-        app_commands.Choice(name="+10%", value=10),
-        app_commands.Choice(name="Normal", value=0),
-        app_commands.Choice(name="-10%", value=-10),
-        app_commands.Choice(name="-20%", value=-20),
-        app_commands.Choice(name="-30%", value=-30),
-        app_commands.Choice(name="-40%", value=-40),
-    ])
+    @app_commands.choices(bonus=BONUS_CHOICES)
     @app_commands.checks.has_permissions(manage_guild=True)
     async def dg_gm_roll(
         self,
@@ -522,12 +569,7 @@ class DeltaGreenCommands(commands.Cog):
         """GM rolls for any agent."""
         try:
             # Find agent by callsign
-            all_agents = self.agent_manager.list_all_agents()
-            target_user_id = None
-            for user_id, callsign in all_agents:
-                if callsign.lower() == agent.lower():
-                    target_user_id = user_id
-                    break
+            target_user_id = self._find_agent_by_callsign(agent)
 
             if not target_user_id:
                 error_embed = self.embed_factory.error_message(
@@ -693,12 +735,7 @@ class DeltaGreenCommands(commands.Cog):
         """GM modifies agent attributes."""
         try:
             # Find agent by callsign
-            all_agents = self.agent_manager.list_all_agents()
-            target_user_id = None
-            for user_id, callsign in all_agents:
-                if callsign.lower() == agent.lower():
-                    target_user_id = user_id
-                    break
+            target_user_id = self._find_agent_by_callsign(agent)
 
             if not target_user_id:
                 error_embed = self.embed_factory.error_message(
@@ -925,31 +962,25 @@ class DeltaGreenCommands(commands.Cog):
 
         # Check if weapon has lethality
         if weapon["lethality"]:
-            roll, tens, ones = lethality_roll(weapon["lethality"])
-            is_lethal = roll <= weapon["lethality"]
+            let_result = lethality_roll(weapon["lethality"])
 
-            if is_lethal:
+            if let_result.is_lethal:
                 return {
                     "weapon": weapon_name,
                     "lethality": weapon["lethality"],
-                    "roll": roll,
+                    "roll": let_result.roll,
                     "is_lethal": True,
                     "damage": 0,
                     "description": "☠️ LETHAL - Instant Kill"
                 }
             else:
-                # Non-lethal: sum of dice
-                tens_val = 10 if tens == 0 else tens
-                ones_val = 10 if ones == 0 else ones
-                damage = tens_val + ones_val
-
                 return {
                     "weapon": weapon_name,
                     "lethality": weapon["lethality"],
-                    "roll": roll,
+                    "roll": let_result.roll,
                     "is_lethal": False,
-                    "damage": damage,
-                    "description": f"Non-lethal: {damage} HP damage"
+                    "damage": let_result.damage,
+                    "description": f"Non-lethal: {let_result.damage} HP damage"
                 }
 
         # Standard damage roll (e.g., "1d10", "2d8", "1d4-1", "1d12+2")
@@ -1111,12 +1142,7 @@ class DeltaGreenCommands(commands.Cog):
         """GM applies damage to an agent."""
         try:
             # Find agent by callsign
-            user_id = None
-            all_agents = self.agent_manager.list_all_agents()
-            for uid, callsign in all_agents:
-                if callsign.lower() == agent.lower():
-                    user_id = uid
-                    break
+            user_id = self._find_agent_by_callsign(agent)
 
             if not user_id:
                 error_embed = self.embed_factory.error_message(
@@ -1270,12 +1296,7 @@ class DeltaGreenCommands(commands.Cog):
         """GM resets agent to original HP/WP/SAN (current = max)."""
         try:
             # Find agent by callsign
-            user_id = None
-            all_agents = self.agent_manager.list_all_agents()
-            for uid, callsign in all_agents:
-                if callsign.lower() == agent.lower():
-                    user_id = uid
-                    break
+            user_id = self._find_agent_by_callsign(agent)
 
             if not user_id:
                 error_embed = self.embed_factory.error_message(

@@ -67,14 +67,11 @@ def roll_d100() -> Tuple[int, int, int]:
     tens = random.randint(0, 9)
     ones = random.randint(0, 9)
 
-    # Calculate total: 00 = 100
+    # Calculate total: both 00 = 100, otherwise (tens * 10) + ones
     if tens == 0 and ones == 0:
         total = 100
     else:
-        # 0 represents 10 when not both 00
-        tens_value = 10 if tens == 0 else tens
-        ones_value = ones
-        total = (tens_value * 10) + ones_value
+        total = (tens * 10) + ones
 
     return total, tens, ones
 

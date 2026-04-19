@@ -381,6 +381,37 @@ class DeltaGreenCommands(commands.Cog):
             )
             await interaction.response.send_message(embed=error_embed, ephemeral=True)
 
+    @app_commands.command(name="dgallt", description="Visa agentens fulla dossier – alla stats och alla skills > 0")
+    async def dg_agent_full(
+        self,
+        interaction: discord.Interaction
+    ):
+        """View full agent dossier: all stats, derived attributes, and every skill > 0."""
+        try:
+            agent = self.agent_manager.get_agent(str(interaction.user.id))
+
+            if not agent:
+                error_embed = self.embed_factory.error_message(
+                    interaction.user.id,
+                    "Du har ingen agent",
+                    "Kontakta GM för att få din agent skapad."
+                )
+                await interaction.response.send_message(embed=error_embed, ephemeral=True)
+                return
+
+            embed = self._create_full_agent_embed(interaction.user.id, agent)
+            await interaction.response.send_message(embed=embed, ephemeral=True)
+            logger.info(f"Full agent view: {interaction.user.display_name} ({agent['callsign']})")
+
+        except Exception as e:
+            logger.error(f"Error in dg_agent_full: {e}", exc_info=True)
+            error_embed = self.embed_factory.error_message(
+                interaction.user.id,
+                "Ett fel uppstod",
+                str(e)
+            )
+            await interaction.response.send_message(embed=error_embed, ephemeral=True)
+
     @app_commands.command(name="dgroll", description="Roll one of your agent's skills")
     @app_commands.describe(
         skill="Skill name (autocomplete available)",
@@ -505,12 +536,88 @@ class DeltaGreenCommands(commands.Cog):
             color=0x2C3E50  # Dark blue-grey for Delta Green
         )
 
-        # Add notes if critical
-        if agent.get('notes'):
-            notes = agent['notes']
-            if len(notes) > 200:
-                notes = notes[:197] + "..."
-            embed.add_field(name="⚠️ Notes", value=notes, inline=False)
+        return embed
+
+    def _create_full_agent_embed(self, user_id: int, agent: Dict) -> discord.Embed:
+        """Create a complete agent display embed with ALL stats and every skill > 0."""
+        title = f"🕵️ DELTA GREEN - Full Dossier"
+
+        desc_lines = [
+            "━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            "",
+            f"**{agent['callsign'].upper()}** – {agent['name']}",
+            f"_{agent['occupation']}_",
+            "",
+        ]
+
+        # Stats
+        stats = agent['stats']
+        desc_lines.append("**STATS**")
+        desc_lines.append(
+            f"STR {stats['STR']}  •  CON {stats['CON']}  •  DEX {stats['DEX']}"
+        )
+        desc_lines.append(
+            f"INT {stats['INT']}  •  POW {stats['POW']}  •  CHA {stats['CHA']}"
+        )
+        desc_lines.append("")
+
+        # Derived
+        hp = agent['derived']['hp']
+        wp = agent['derived']['wp']
+        san = agent['derived']['san']
+        bp = agent['derived']['breaking_point']
+        desc_lines.append("**DERIVED**")
+        desc_lines.append(f"HP {hp['current']}/{hp['max']}  •  WP {wp['current']}/{wp['max']}  •  SAN {san['current']}/{san['max']} (BP {bp})")
+
+        embed = discord.Embed(
+            title=title,
+            description="\n".join(desc_lines),
+            color=0x2C3E50
+        )
+
+        # Skills > 0, sorted high-to-low
+        skills = agent.get('skills', {})
+        active_skills = [(name, val) for name, val in skills.items() if val > 0]
+        active_skills.sort(key=lambda x: (-x[1], x[0]))
+
+        if not active_skills:
+            embed.add_field(
+                name="SKILLS",
+                value="_Inga skills med värde > 0._",
+                inline=False
+            )
+        else:
+            # Split into 3 columns for readability
+            lines = [f"`{val:>3}%` {name}" for name, val in active_skills]
+            num_cols = 3
+            per_col = (len(lines) + num_cols - 1) // num_cols
+            cols = [lines[i * per_col:(i + 1) * per_col] for i in range(num_cols)]
+
+            # Discord field value limit is 1024 chars – fall back to single column if overflow
+            col_values = ["\n".join(c) if c else "\u200b" for c in cols]
+            if any(len(v) > 1024 for v in col_values):
+                # Overflow – chunk into multiple safe fields
+                chunks = []
+                current_chunk = []
+                current_len = 0
+                for line in lines:
+                    if current_len + len(line) + 1 > 1000:
+                        chunks.append("\n".join(current_chunk))
+                        current_chunk = [line]
+                        current_len = len(line)
+                    else:
+                        current_chunk.append(line)
+                        current_len += len(line) + 1
+                if current_chunk:
+                    chunks.append("\n".join(current_chunk))
+
+                for i, chunk in enumerate(chunks):
+                    name = f"SKILLS ({len(active_skills)})" if i == 0 else "\u200b"
+                    embed.add_field(name=name, value=chunk, inline=False)
+            else:
+                embed.add_field(name=f"SKILLS ({len(active_skills)})", value=col_values[0], inline=True)
+                embed.add_field(name="\u200b", value=col_values[1], inline=True)
+                embed.add_field(name="\u200b", value=col_values[2], inline=True)
 
         return embed
 
@@ -549,6 +656,51 @@ class DeltaGreenCommands(commands.Cog):
             matching = all_agents[:25]
 
         return [app_commands.Choice(name=callsign, value=callsign) for user_id, callsign in matching[:25]]
+
+    @app_commands.command(name="dggmallt", description="[GM] Visa full dossier för valfri agent – alla stats och skills > 0")
+    @app_commands.describe(agent="Agent callsign (autocomplete)")
+    @app_commands.autocomplete(agent=agent_autocomplete)
+    @app_commands.checks.has_permissions(manage_guild=True)
+    async def dg_gm_full(
+        self,
+        interaction: discord.Interaction,
+        agent: str
+    ):
+        """GM view: full dossier for any agent."""
+        try:
+            target_user_id = self._find_agent_by_callsign(agent)
+
+            if not target_user_id:
+                error_embed = self.embed_factory.error_message(
+                    interaction.user.id,
+                    f"Agent '{agent}' hittades inte",
+                    "Använd `/dggmstatus` för att se alla agents."
+                )
+                await interaction.response.send_message(embed=error_embed, ephemeral=True)
+                return
+
+            agent_data = self.agent_manager.get_agent(target_user_id)
+            if not agent_data:
+                error_embed = self.embed_factory.error_message(
+                    interaction.user.id,
+                    f"Kunde inte ladda agent '{agent}'",
+                    "Kontrollera att agent-filen existerar."
+                )
+                await interaction.response.send_message(embed=error_embed, ephemeral=True)
+                return
+
+            embed = self._create_full_agent_embed(interaction.user.id, agent_data)
+            await interaction.response.send_message(embed=embed, ephemeral=True)
+            logger.info(f"GM full view: {interaction.user.display_name} viewed {agent_data['callsign']}")
+
+        except Exception as e:
+            logger.error(f"Error in dg_gm_full: {e}", exc_info=True)
+            error_embed = self.embed_factory.error_message(
+                interaction.user.id,
+                "Ett fel uppstod",
+                str(e)
+            )
+            await interaction.response.send_message(embed=error_embed, ephemeral=True)
 
     @app_commands.command(name="dggmroll", description="[GM] Roll for any agent's skill")
     @app_commands.describe(

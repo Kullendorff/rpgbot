@@ -142,6 +142,12 @@ async def on_ready() -> None:
         await register_slash_dg_commands(bot, embed_factory, dg_agent_manager, dg_session_manager)
         logger.info("Delta Green kommandon registrerade (/dgcheck, /dgluck, /dgstat, /dglethality, /dgsan, /dgagent, /dgroll, /dggmroll, /dggmstatus, /dggmset, /dgstartsession, /dgendsession).")
 
+    # Registrera Dragonbane kommandon (modul av Jonas, github.com/jonsal/dragonbane)
+    if FEATURE_FLAGS.get("slash_dragonbane_enabled", False):
+        from dragonbane.commands import register_slash_dragonbane_commands
+        await register_slash_dragonbane_commands(bot, embed_factory)
+        logger.info("Dragonbane kommandon registrerade (/dod_slag, /dod_fv, /dod_skada, /dod_pressa, /dod_init).")
+
     # Registrera kommentarkommandon FÖRE sync
     from commands.slash_comment_commands import register_slash_comment_commands
     register_slash_comment_commands(bot, user_settings, comment_generator, color_handler)

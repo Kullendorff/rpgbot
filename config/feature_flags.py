@@ -28,6 +28,9 @@ FEATURE_FLAGS = {
     # Delta Green commands
     "slash_deltagreen_enabled": True,    # /dgcheck, /dgluck, /dgstat, /dglethality, /dgsan
 
+    # Dragonbane commands (modul av Jonas, github.com/jonsal/dragonbane)
+    "slash_dragonbane_enabled": True,    # /dod_slag, /dod_fv, /dod_skada, /dod_pressa, /dod_init (modul av Jonas)
+
     # Global flags
     "enable_slash_logging": True,        # Logga alla slash command användningar
     "enable_performance_monitoring": True, # Mät execution times

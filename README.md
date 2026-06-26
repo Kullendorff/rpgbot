@@ -30,6 +30,15 @@ En avancerad Discord-bot för tärningskast och kunskapshantering för det svens
 - **AI-sammanfattningar**: Automatiska humoristiska sessionssammanfattningar via Claude AI
 - **Personaliserade kommentarer**: `/kommentarer` - SL kan aktivera anpassade kommentarer för spelares tärningsslag
 
+### 🐉 Dragonbane (Drakar och Demoner)
+- **Tärningsslag**: `/dod_slag expression:2T6+1T8+3`
+- **Färdighetsslag**: `/dod_fv skill:13 modifier:2 mode:fördel` (slag <= FV lyckas, 1 = drakslag, 20 = demonslag)
+- **Pressa slag**: `/dod_pressa skill:13 grundegenskap:STY`, eller knappen "Pressa slag" under ett misslyckat slag
+- **Skada**: `/dod_skada dice:1T10 bonus:2`
+- **Initiativ**: `/dod_init characters:Björn,Saga,Ragna` (kortlek 1-10, lägst agerar först)
+
+> **Dragonbane-modulen är byggd av Jonas** (https://github.com/jonsal/dragonbane). Den ursprungliga koden anpassades till botens arkitektur (Cog + embed_factory) och regelrättades: initiativ dras som kortlek (unika 1-10, lägst först) och tillstånd kan bindas till grundegenskap. Krediten visas även i sidfoten på varje Dragonbane-resultat i Discord. Heder och tack till Jonas.
+
 ## 🏗️ Arkitektur (Modulär Design)
 
 ```
@@ -351,6 +360,7 @@ Detta projekt är licensierat under **MIT License**. Se `LICENSE` för detaljer.
 
 ## 🙏 Erkännanden
 
+- **Jonas** (https://github.com/jonsal/dragonbane) för Dragonbane-modulen: tärninglogik och kommandouppsättning. Anpassad och regelrättad för den här boten.
 - **EON Rollspel** för det fantastiska rollspelssystemet
 - **Anthropic** för Claude AI
 - **Discord.py** för excellent Discord integration

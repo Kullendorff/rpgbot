@@ -5,7 +5,7 @@ Alla Discord embeds i boten ska skapas genom denna factory.
 
 import discord
 from typing import List, Dict, Any, Optional, Union
-from datetime import datetime
+from datetime import datetime, timezone
 
 class EmbedFactory:
     """Factory-klass för att skapa standardiserade Discord embeds."""
@@ -33,7 +33,7 @@ class EmbedFactory:
         """Skapa bas-embed med användarfärg och standardformatering."""
         color = self.color_handler.get_user_color(user_id)
         embed = discord.Embed(title=title, description=description, color=color)
-        embed.timestamp = datetime.utcnow()
+        embed.timestamp = datetime.now(timezone.utc)
         return embed
     
     def dice_result(self, user_id: int, user_name: str, command: str, 
@@ -183,7 +183,7 @@ class EmbedFactory:
             description=error_msg,
             color=self.ERROR_COLOR
         )
-        embed.timestamp = datetime.utcnow()
+        embed.timestamp = datetime.now(timezone.utc)
         
         if suggestion:
             embed.add_field(name="Förslag", value=suggestion, inline=False)
@@ -197,7 +197,7 @@ class EmbedFactory:
             description=message,
             color=self.SUCCESS_COLOR
         )
-        embed.timestamp = datetime.utcnow()
+        embed.timestamp = datetime.now(timezone.utc)
         return embed
     
     def admin_message(self, user_id: int, title: str, content: str) -> discord.Embed:
@@ -266,7 +266,7 @@ class EmbedFactory:
             description="\n".join(desc_lines),
             color=result_color
         )
-        embed.timestamp = datetime.utcnow()
+        embed.timestamp = datetime.now(timezone.utc)
 
         # Add skill name if provided
         if skill_name:
@@ -312,7 +312,7 @@ class EmbedFactory:
             description="\n".join(desc_lines),
             color=result_color
         )
-        embed.timestamp = datetime.utcnow()
+        embed.timestamp = datetime.now(timezone.utc)
         embed.set_footer(text=user_name)
 
         return embed
@@ -375,7 +375,206 @@ class EmbedFactory:
             description="\n".join(desc_lines),
             color=result_color
         )
-        embed.timestamp = datetime.utcnow()
+        embed.timestamp = datetime.now(timezone.utc)
         embed.set_footer(text=user_name)
 
+        return embed
+
+    def dg_project_result(
+        self,
+        user_id: int,
+        user_name: str,
+        callsign: str,
+        bond_name: str,
+        d4_roll: int,
+        wp_before: int,
+        wp_after: int,
+        san_loss_original: int,
+        san_loss_reduced: int,
+        bond_before: int,
+        bond_after: int,
+        projection_succeeded: bool,
+        unconscious: bool,
+        bond_broken: bool,
+        just_broke: bool,
+        ti_originally_triggered: bool,
+        ti_avoided: bool,
+    ) -> discord.Embed:
+        """
+        Delta Green "Projecting Onto a Bond" resultat-embed.
+
+        Renderar hela utfallet: D4-kostnad → WP → (vid framgång) reducerad
+        SAN-förlust + Bond-skada. Bruten Bond och undviken TI får egna
+        markeringar.
+        """
+        title = "💔 DELTA GREEN - Projecting Onto a Bond"
+
+        lines = [
+            "━━━━━━━━━━━━━━━━━━━━━━━━━",
+            "",
+            f"**Agent:** {callsign}",
+            f"**Bond:** {bond_name}",
+            "",
+            f"🎲  1D4 → **{d4_roll}**  _(WP-kostnad)_",
+            f"**WP:** {wp_before} → {wp_after}",
+            "",
+        ]
+
+        if projection_succeeded:
+            lines.append("✅ **Projection lyckades**")
+            lines.append("")
+            if san_loss_reduced < san_loss_original:
+                lines.append(
+                    f"**SAN-förlust:** {san_loss_original} → **{san_loss_reduced}** "
+                    f"_(reducerad med {san_loss_original - san_loss_reduced})_"
+                )
+            else:
+                lines.append(
+                    f"**SAN-förlust:** {san_loss_original} "
+                    f"_(ingen reducering — D4 gav noll nytta)_"
+                )
+
+            lines.append(f"**Bond:** {bond_before} → {bond_after}")
+
+            if just_broke:
+                lines.append("")
+                lines.append(f"💔 **Bond bruten:** _{bond_name}_ är permanent förlorad.")
+            elif bond_broken:
+                lines.append("")
+                lines.append(f"_({bond_name} var redan bruten.)_")
+
+            if ti_avoided:
+                lines.append("")
+                lines.append("🛡️ **Temporary Insanity undveks!**")
+                lines.append("_SAN-förlusten drogs ned under 5._")
+            elif ti_originally_triggered:
+                lines.append("")
+                lines.append("⚠️ **Temporary Insanity utlöstes ändå**")
+                lines.append(f"_Kvarvarande förlust är {san_loss_reduced} (≥ 5)._")
+        else:
+            lines.append("❌ **Projection misslyckades**")
+            lines.append(
+                "_Agenten föll medvetslös vid 0 WP. Ingen SAN-reducering, ingen Bond-skada._"
+            )
+
+        if unconscious:
+            lines.append("")
+            lines.append("😵 **Agenten är nu medvetslös.**")
+
+        # Färgval: bruten bond eller medvetslös = lila, misslyckad = röd,
+        # TI undveks = grön, annars orange (mitigerat men kostsamt)
+        if just_broke or unconscious:
+            color = 0x8E44AD
+        elif not projection_succeeded:
+            color = 0xE74C3C
+        elif ti_avoided:
+            color = 0x2ECC71
+        else:
+            color = 0xF39C12
+
+        embed = discord.Embed(
+            title=title,
+            description="\n".join(lines),
+            color=color,
+        )
+        embed.timestamp = datetime.now(timezone.utc)
+        embed.set_footer(text=user_name)
+        return embed
+
+    # ------------------------------------------------------------------
+    # Dragonbane (modul av Jonas, github.com/jonsal/dragonbane)
+    # ------------------------------------------------------------------
+    DRAGONBANE_CREDIT = "Dragonbane-modul av Jonas"
+
+    def _dragonbane_footer(self, embed: discord.Embed, user_name: str) -> None:
+        """Sätt en gemensam sidfot som krediterar Jonas på varje Dragonbane-embed."""
+        embed.timestamp = datetime.now(timezone.utc)
+        embed.set_footer(text=f"{user_name} • {self.DRAGONBANE_CREDIT}")
+
+    def dragonbane_skill_result(
+        self, user_id: int, user_name: str, skill: int, modifier: int,
+        target: int, mode: str, rolls: list, chosen_roll: int,
+        success: bool, critical: str = None, pushed: bool = False,
+        condition: str = None, attribute: str = None,
+    ) -> discord.Embed:
+        """Mall för Dragonbane färdighetsslag (och pressade slag)."""
+        prefix = "🐉 Dragonbane: Pressat slag" if pushed else "🐉 Dragonbane: Färdighetsslag"
+
+        if critical == "dragon":
+            color = 0xF1C40F        # Guld
+            result_emoji, result_text = "✨", "DRAKSLAG: Kritisk framgång!"
+        elif critical == "demon":
+            color = 0x8E44AD        # Lila
+            result_emoji, result_text = "💀", "DEMONSLAG: Kritiskt misslyckande!"
+        elif success:
+            color = 0x2ECC71        # Grön
+            result_emoji, result_text = "✅", "LYCKAT"
+        else:
+            color = 0xE74C3C        # Röd
+            result_emoji, result_text = "❌", "MISSLYCKAT"
+
+        rolls_text = ", ".join(str(r) for r in rolls)
+        desc_lines = [
+            f"**FV:** {skill}   **Mod:** {modifier:+d}   **Målvärde:** {target}",
+            f"**Läge:** {mode}",
+            f"**Slag:** {rolls_text}",
+            f"**Valt slag:** {chosen_roll}",
+            f"**Resultat:** {result_emoji} **{result_text}**",
+        ]
+
+        if pushed and condition:
+            if attribute:
+                desc_lines.append(f"**Tillstånd:** {condition} ({attribute})")
+            else:
+                desc_lines.append(
+                    f"**Tillstånd:** {condition} _(SL bestämmer det slutliga tillståndet)_"
+                )
+
+        embed = discord.Embed(title=prefix, description="\n".join(desc_lines), color=color)
+        self._dragonbane_footer(embed, user_name)
+        return embed
+
+    def dragonbane_expression_result(
+        self, user_id: int, user_name: str, expression: str,
+        breakdown_lines: list, total: int,
+    ) -> discord.Embed:
+        """Mall för fritt Dragonbane-tärningsuttryck (dod_slag)."""
+        embed = self._get_base_embed(user_id, "🎲 Dragonbane: Tärningsslag",
+                                     f"**{user_name}** slår `{expression}`")
+        details = "\n".join(breakdown_lines) if breakdown_lines else "Inga termer"
+        embed.add_field(name="Uppdelning", value=details, inline=False)
+        embed.add_field(name="Totalt", value=f"**{total}**", inline=False)
+        self._dragonbane_footer(embed, user_name)
+        return embed
+
+    def dragonbane_damage_result(
+        self, user_id: int, user_name: str, expression: str,
+        breakdown_lines: list, total: int,
+    ) -> discord.Embed:
+        """Mall för Dragonbane skadeslag (dod_skada)."""
+        embed = discord.Embed(
+            title="⚔️ Dragonbane: Skadeslag",
+            description=f"**{user_name}** slår skada `{expression}`",
+            color=0xC0392B,
+        )
+        details = "\n".join(breakdown_lines) if breakdown_lines else "Inga termer"
+        embed.add_field(name="Uppdelning", value=details, inline=False)
+        embed.add_field(name="Skada", value=f"**{total}**", inline=False)
+        self._dragonbane_footer(embed, user_name)
+        return embed
+
+    def dragonbane_initiative_result(
+        self, user_id: int, user_name: str, entries: list,
+    ) -> discord.Embed:
+        """Mall för Dragonbane-initiativ (dod_init). entries: lista med .name och .card."""
+        lines = [
+            f"{i + 1}. **{entry.name}**: kort {entry.card}"
+            for i, entry in enumerate(entries)
+        ]
+        embed = self._get_base_embed(
+            user_id, "⏱️ Dragonbane: Initiativ",
+            "Initiativordning (lägst kort agerar först):",
+        )
+        embed.add_field(name="Ordning", value="\n".join(lines), inline=False)
+        self._dragonbane_footer(embed, user_name)
         return embed

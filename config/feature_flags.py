@@ -31,6 +31,15 @@ FEATURE_FLAGS = {
     # Dragonbane commands (modul av Jonas, github.com/jonsal/dragonbane)
     "slash_dragonbane_enabled": True,    # /dod_slag, /dod_fv, /dod_skada, /dod_pressa, /dod_init (modul av Jonas)
 
+    # Star Wars D6 commands (WEG40120, 2nd Ed. Revised & Expanded)
+    "slash_starwars_enabled": True,      # /sw_slag, /sw_motstand, /sw_svarighet, /sw_init
+
+    # Spindel commands (gigantspindel + småspindlar, src/spindel/). Avstängd
+    # tills vidare — sätt till True för att slå på /spindel, /spindel_runda,
+    # /spindelstatus, /spindelreset, /spindeldump, /spawna_småspindlar,
+    # /attack_småspindel, /småspindelstatus, /reset_småspindlar.
+    "slash_spindel_enabled": False,
+
     # Global flags
     "enable_slash_logging": True,        # Logga alla slash command användningar
     "enable_performance_monitoring": True, # Mät execution times

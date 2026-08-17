@@ -204,10 +204,13 @@ class AIHandler:
         Returns:
             AI-svar eller None vid fel
         """
-        # Kontrollera att knowledge base är initialiserad
-        if not knowledge_base.pc or not knowledge_base.embedding_model or not knowledge_base.claude_client:
-            print("[AI_HANDLER] Knowledge base inte initialiserad, försöker initialisera...")
-            success = knowledge_base.initialize_knowledge_base()
+        # Kontrollera att knowledge base är initialiserad. ensure_ready()
+        # kör den blockerande laddningen i en bakgrundstråd (asyncio.to_thread)
+        # och delar lås med main.py:s bakgrundsjobb, så vi väntar bara in en
+        # redan pågående laddning istället för att starta en andra.
+        if not knowledge_base.is_ready:
+            print("[AI_HANDLER] Knowledge base inte initialiserad, väntar in laddningen...")
+            success = await knowledge_base.ensure_ready()
             if not success:
                 error_embed = await self.create_error_response(
                     interaction.user.id,

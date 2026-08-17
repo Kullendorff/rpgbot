@@ -33,11 +33,13 @@ def register_knowledge_commands(bot, knowledge_base, color_handler, embed_factor
         
         # Visa att boten bearbetar frågan
         async with ctx.typing():
-            # Kontrollera om kunskapsbasen är initialiserad
-            if not knowledge_base.pc or not knowledge_base.embedding_model or not knowledge_base.claude_client:
-                # Försök att initiera om
-                print("Kunskapsbasen är inte initialiserad, försöker initialisera...")
-                success = knowledge_base.initialize_knowledge_base()
+            # Kontrollera om kunskapsbasen är initialiserad. ensure_ready()
+            # kör laddningen i en bakgrundstråd och delar lås med
+            # bakgrundsjobbet i main.py, så vi väntar bara in en redan
+            # pågående laddning istället för att starta en andra.
+            if not knowledge_base.is_ready:
+                print("Kunskapsbasen är inte initialiserad, väntar in laddningen...")
+                success = await knowledge_base.ensure_ready()
                 if not success:
                     await ctx.send("⚠️ Kunskapsbasen kunde inte initialiseras. Kontrollera API-nycklar i .env-filen.")
                     return

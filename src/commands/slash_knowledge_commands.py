@@ -372,15 +372,20 @@ class KnowledgeSlashCommands(commands.Cog):
             
             prompt += f"\nBaserat på ovanstående information, svara på frågan: {query}"
             
-            # Kontrollera att Claude API är tillgänglig
-            if not self.knowledge_base.claude_client:
-                embed = await self.helper.create_error_response(
-                    interaction.user.id,
-                    "Claude API är inte tillgänglig",
-                    "Kontrollera ANTHROPIC_API_KEY i .env-filen"
-                )
-                await self.helper.send_response(interaction, embed=embed)
-                return
+            # Kontrollera att kunskapsbasen (inkl. Claude API) är
+            # tillgänglig. Försök vänta in en bakgrundsladdning som redan
+            # är igång (ensure_ready() delar lås med main.py:s
+            # bakgrundsjobb) innan vi ger upp — annars riskerar vi att visa
+            # "kontrollera API-nyckeln" fast KB:n bara höll på att starta.
+            if not self.knowledge_base.is_ready:
+                if not await self.knowledge_base.ensure_ready():
+                    embed = await self.helper.create_error_response(
+                        interaction.user.id,
+                        "Claude API är inte tillgänglig",
+                        "Kontrollera ANTHROPIC_API_KEY i .env-filen"
+                    )
+                    await self.helper.send_response(interaction, embed=embed)
+                    return
             
             # Använd AI handler för Claude API call
             success, response = await self.ai_handler.execute_with_timeout(

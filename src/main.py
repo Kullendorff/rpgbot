@@ -1,5 +1,6 @@
 import os
 os.environ['FOR_DISABLE_CONSOLE_CTRL_HANDLER'] = '1'
+import asyncio
 import random
 import re
 from typing import Tuple, Optional, List, Any, Dict, Union
@@ -146,7 +147,13 @@ async def on_ready() -> None:
     if FEATURE_FLAGS.get("slash_dragonbane_enabled", False):
         from dragonbane.commands import register_slash_dragonbane_commands
         await register_slash_dragonbane_commands(bot, embed_factory)
-        logger.info("Dragonbane kommandon registrerade (/dod_slag, /dod_fv, /dod_skada, /dod_pressa, /dod_init).")
+        logger.info("Dragonbane kommandon registrerade (/dod_slag, /dod_fv, /dod_skada, /dod_pressa, /dod_hoj, /dod_skrack, /dod_mumie, /dod_init).")
+
+    # Registrera Star Wars D6 kommandon (WEG40120, 2nd Ed. Revised & Expanded)
+    if FEATURE_FLAGS.get("slash_starwars_enabled", False):
+        from starwars.commands import register_slash_starwars_commands
+        await register_slash_starwars_commands(bot, embed_factory)
+        logger.info("Star Wars D6 kommandon registrerade (/sw_slag, /sw_motstand, /sw_svarighet, /sw_init).")
 
     # Registrera kommentarkommandon FÖRE sync
     from commands.slash_comment_commands import register_slash_comment_commands
@@ -193,19 +200,14 @@ async def on_ready() -> None:
     register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
     logger.info("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
 
-    # Registrera spindelkommandon (gigantspindlar och små spindlar)
-    from commands.slash_spider_commands import register_slash_spider_commands
-    await register_slash_spider_commands(bot, color_handler)
-    logger.info("Gigantspindelkommandon har registrerats.")
-
-    from commands.slash_small_spider_commands import register_slash_small_spider_commands
-    await register_slash_small_spider_commands(bot, color_handler)
-    logger.info("Småspindelkommandon har registrerats.")
-
-    # Debug: Kontrollera att kommandona finns i bot.tree
-    tree_commands = bot.tree.get_commands()
-    spider_cmds = [cmd.name for cmd in tree_commands if 'spindel' in cmd.name.lower()]
-    logger.info(f"Spindelkommandon i bot.tree före sync: {spider_cmds}")
+    # Registrera spindelkommandon (gigantspindlar och små spindlar).
+    # Flyttade till en egen paketmodul (src/spindel/) och avstängda tills
+    # vidare — sätt slash_spindel_enabled: True i config/feature_flags.py
+    # för att slå på dem igen.
+    if FEATURE_FLAGS.get("slash_spindel_enabled", False):
+        from spindel import register_slash_spindel_commands
+        await register_slash_spindel_commands(bot, color_handler)
+        logger.info("Spindelkommandon registrerade (gigantspindel + småspindlar).")
 
     # Synka slash commands EFTER alla registreringar
     try:
@@ -232,14 +234,22 @@ async def on_ready() -> None:
     except Exception as e:
         logger.error(f'Failed to sync slash commands: {e}', exc_info=True)
 
-    # Initiera kunskapsbasen vid start
-    success = knowledge_base.initialize_knowledge_base()
-    if success:
-        logger.info("Kunskapsbasen initierad och redo att användas.")
-    else:
-        logger.warning("Kunde inte initiera kunskapsbasen. Kommandot !ask kommer inte att fungera korrekt.")
+    # Ladda kunskapsbasen i bakgrunden — INTE synkront. Ett synkront anrop
+    # här blockerade tidigare event-loopen i ~6 sekunder direkt efter att
+    # kommandona synkats, vilket gjorde att interaktioner som kom in under
+    # den tiden dog med "404 Unknown Interaction" (Discords 3-sekundersgräns
+    # för interaktions-token hann gå ut innan loopen var fri att svara).
+    # knowledge_base.ensure_ready() kör den tunga initieringen via
+    # asyncio.to_thread och är race-säker mot samtidiga anrop från /ask etc.
+    async def _load_knowledge_base_in_background() -> None:
+        success = await knowledge_base.ensure_ready()
+        if success:
+            logger.info("Kunskapsbasen initierad och redo att användas.")
+        else:
+            logger.warning("Kunde inte initiera kunskapsbasen. Kommandot /ask kommer inte att fungera korrekt.")
 
-    logger.info("Alla kommandon har registrerats och boten är redo!")
+    asyncio.create_task(_load_knowledge_base_in_background())
+    logger.info("Alla kommandon har registrerats och boten är redo! (Kunskapsbasen laddas i bakgrunden.)")
 
 def main():
     """

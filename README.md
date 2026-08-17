@@ -39,6 +39,17 @@ En avancerad Discord-bot för tärningskast och kunskapshantering för det svens
 
 > **Dragonbane-modulen är byggd av Jonas** (https://github.com/jonsal/dragonbane). Den ursprungliga koden anpassades till botens arkitektur (Cog + embed_factory) och regelrättades: initiativ dras som kortlek (unika 1-10, lägst först) och tillstånd kan bindas till grundegenskap. Krediten visas även i sidfoten på varje Dragonbane-resultat i Discord. Heder och tack till Jonas.
 
+### ⚔️ Star Wars D6 (WEG40120, 2nd Ed. Revised & Expanded)
+- **Färdighets-/attributslag**: `/sw_slag kod:4D+2 svarighet:15` — Wild Die exploderar på 6:or, en etta på det första slaget ger SL tre alternativ (räkna in / dra bort ettan och högsta andra tärningen / komplikation), alla uträknade direkt i embeden
+- **Character Point**: knappen "+1D Character Point" under resultatet lägger till en ny tärning som också exploderar på 6:or (kan tryckas flera gånger)
+- **Force Point**: `/sw_slag kod:4D+2 force_point:true` — dubblar hela tärningspoolen (kan inte kombineras med Character Point samma runda)
+- **Multipla handlingar**: `/sw_slag kod:4D+2 handlingar:3` — automatiskt -1D per extra handling
+- **Motstått slag**: `/sw_motstand aktion:4D+2 forsvar:3D+1` — högst total vinner, oavgjort går till initiativtagaren
+- **Referens**: `/sw_svarighet` — svårighetsnivåer och modifikatorsteg
+- **Initiativ**: `/sw_init karaktarer:"Han 3D+2, Chewie 2D+1"`
+
+Regler verifierade mot källboken (WEG40120), inte bara OCR-texten — se `src/starwars/dice.py` för sidhänvisningar.
+
 ## 🏗️ Arkitektur (Modulär Design)
 
 ```

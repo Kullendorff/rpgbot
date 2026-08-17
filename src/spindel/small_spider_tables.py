@@ -1,7 +1,10 @@
-# small_spider_tables.py
+# src/spindel/small_spider_tables.py
 """
 Skadetabeller för Små Spindlar - EON RPG
 Förenklade tabeller med 2 zoner och 5 resultat per tabell
+
+Del av src/spindel/ — se __init__.py. Modulen är avstängd tills vidare
+(config/feature_flags.py: slash_spindel_enabled).
 """
 
 from typing import Dict, List, Tuple, Optional

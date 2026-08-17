@@ -650,3 +650,222 @@ class EmbedFactory:
         embed.add_field(name="Ordning", value="\n".join(lines), inline=False)
         self._dragonbane_footer(embed, user_name)
         return embed
+
+    # ------------------------------------------------------------------
+    # Star Wars D6 (WEG40120, 2nd Ed. Revised & Expanded)
+    # ------------------------------------------------------------------
+    # Rendering bara — alla regler (explosion, 1:e-specialregel, MTU,
+    # Force/Character Points, svårighetsband) är redan uträknade av
+    # src/starwars/dice.py innan de når dessa metoder.
+    STARWARS_CREDIT = "Star Wars D6 · WEG 2nd Ed. R&E"
+
+    def _starwars_footer(self, embed: discord.Embed, user_name: str) -> None:
+        """Sätt en gemensam sidfot för alla Star Wars D6-embeds."""
+        embed.timestamp = datetime.now(timezone.utc)
+        embed.set_footer(text=f"{user_name} • {self.STARWARS_CREDIT}")
+
+    def starwars_roll_result(
+        self, user_id: int, user_name: str, code_label: str,
+        regular_rolls: List[int], wild_rolls: List[int],
+        pips: int = 0, modifier: int = 0, total: int = 0,
+        cp_rolls: Optional[List[List[int]]] = None, actions: int = 1,
+        force_point: bool = False, base_code_label: Optional[str] = None,
+        difficulty: Optional[int] = None, success: Optional[bool] = None,
+        difficulty_band: Optional[str] = None,
+        total_if_removed: Optional[int] = None, description: Optional[str] = None,
+    ) -> discord.Embed:
+        """
+        Mall för Star Wars D6 färdighets-/attributslag (sw_slag). Wild Die
+        markeras med ⭐, spenderade Character Points med 🔹 — båda
+        exploderar på 6:or (räknas in och slås om), men bara Wild Die:s
+        FÖRSTA slag kan visa en 1:a som utlöser SL:s val mellan tre utfall.
+        """
+        cp_rolls = cp_rolls or []
+        wild_exploded = wild_rolls[0] == 6
+        wild_is_one = wild_rolls[0] == 1
+
+        # Om Wild Die visade 1 och ett svårighetstal finns: kolla om SL:s
+        # val faktiskt KAN ändra lyckat/misslyckat. Om alla tre alternativ
+        # (A/C använder `total`, B använder `total_if_removed`) hamnar på
+        # samma sida av svårighetstalet är utfallet redan klart — då ska
+        # bannern säga LYCKAT/MISSLYCKAT rakt av, inte gömma det bakom "SL
+        # avgör". Bara när valet genuint avgör resultatet blir det ambiguöst.
+        pass_fail_ambiguous = False
+        if wild_is_one and difficulty is not None and total_if_removed is not None:
+            success_a = total >= difficulty
+            success_b = total_if_removed >= difficulty
+            pass_fail_ambiguous = success_a != success_b
+            if not pass_fail_ambiguous:
+                success = success_a
+
+        # Prioritetsordning: en genuint ambiguös Wild Die-etta (SL:s val
+        # avgör lyckat/misslyckat) måste synas oavsett annat. Därefter styr
+        # faktiskt lyckat/misslyckat bannern — en exploderad Wild Die är
+        # bara en bra tärning, inte i sig ett annat utfall (syns redan via
+        # ⭐ i tärningsraden). "Exploderade" blir bara huvudbudskapet när
+        # inget svårighetstal fanns att slå mot.
+        if pass_fail_ambiguous:
+            color = 0x8E44AD        # Lila — SL:s val avgör lyckat/misslyckat
+            result_emoji, result_text = "⚠️", "WILD DIE = 1: UTFALLET AVGÖRS AV SL:S VAL"
+        elif wild_is_one and difficulty is None:
+            color = 0x8E44AD        # Lila — inget svårighetstal att döma mot, men SL måste ändå välja total
+            result_emoji, result_text = "⚠️", "WILD DIE = 1: SL AVGÖR"
+        elif success is True:
+            color = self.SUCCESS_COLOR
+            result_emoji, result_text = self.SUCCESS_EMOJI, "LYCKAT"
+        elif success is False:
+            color = self.ERROR_COLOR
+            result_emoji, result_text = self.FAILURE_EMOJI, "MISSLYCKAT"
+        elif wild_exploded:
+            color = 0xF1C40F        # Guld — inget svårighetstal, men Wild Die exploderade
+            result_emoji, result_text = "💥", "WILD DIE EXPLODERADE"
+        else:
+            color = self.INFO_COLOR
+            result_emoji, result_text = self.DICE_EMOJI, "SLAGET"
+
+        title_code = code_label
+        if base_code_label and base_code_label != code_label:
+            title_code = f"{base_code_label} → {code_label}"
+
+        header = f"**{title_code}** — {user_name}"
+        if description:
+            header += f"\n_{description}_"
+
+        embed = discord.Embed(
+            title="🎲 Star Wars: Färdighets-/attributslag",
+            description=header,
+            color=color,
+        )
+
+        wild_label = "⭐" + "→".join(str(r) for r in wild_rolls)
+        dice_parts = [str(r) for r in regular_rolls] + [wild_label]
+        embed.add_field(name="Tärningar", value=" · ".join(dice_parts), inline=False)
+
+        if cp_rolls:
+            cp_line = " · ".join(
+                "🔹" + "→".join(str(r) for r in chain) for chain in cp_rolls
+            )
+            embed.add_field(name="Character Points", value=cp_line, inline=False)
+
+        justering_lines = [f"**Pips:** {pips:+d}", f"**Mod:** {modifier:+d}"]
+        if actions > 1:
+            justering_lines.append(f"**Handlingar:** {actions} (avdrag -{actions - 1}D)")
+        if force_point:
+            justering_lines.append("**Force Point:** spenderad (poolen dubblad)")
+        embed.add_field(name="Justeringar", value="\n".join(justering_lines), inline=False)
+
+        result_lines = [f"**Totalt:** {total}"]
+        if pass_fail_ambiguous:
+            result_lines.append(f"{result_emoji} **{result_text}** mot {difficulty} — se alternativen nedan")
+        elif difficulty is not None:
+            result_lines.append(
+                f"{result_emoji} **{result_text}** mot {difficulty} ({total - difficulty:+d})"
+            )
+        else:
+            result_lines.append(f"{result_emoji} **{result_text}**")
+        if difficulty_band:
+            result_lines.append(f"Når **{difficulty_band}**")
+        embed.add_field(name="Resultat", value="\n".join(result_lines), inline=False)
+
+        if wild_is_one and total_if_removed is not None:
+            def _pf_badge(value: int) -> str:
+                if difficulty is None:
+                    return ""
+                badge = "✅ Lyckat" if value >= difficulty else "❌ Misslyckat"
+                return f" — {badge} mot {difficulty}"
+
+            embed.add_field(
+                name="⚠️ Wild Die visade 1 — SL väljer",
+                value=(
+                    f"**A)** Räkna in som vanligt → **{total}**{_pf_badge(total)}\n"
+                    f"**B)** Dra bort 1:an och högsta andra tärningen → **{total_if_removed}**{_pf_badge(total_if_removed)}\n"
+                    f"**C)** Räkna in som vanligt (**{total}**){_pf_badge(total)}, men något går fel "
+                    f"utöver utfallet"
+                ),
+                inline=False,
+            )
+
+        self._starwars_footer(embed, user_name)
+        return embed
+
+    def starwars_opposed_result(
+        self, initiator_name: str, defender_name: str,
+        initiator_code_label: str, defender_code_label: str,
+        initiator_total: int, defender_total: int,
+        winner: str, tie: bool,
+    ) -> discord.Embed:
+        """Mall för ett motstått slag (sw_motstand). Oavgjort vinns av initiativtagaren."""
+        winner_name = initiator_name if winner == "initiator" else defender_name
+
+        embed = discord.Embed(title="⚔️ Star Wars: Motstått slag", color=self.SUCCESS_COLOR)
+        embed.add_field(
+            name=f"{initiator_name} (initiativtagare)",
+            value=f"{initiator_code_label} → **{initiator_total}**",
+            inline=True,
+        )
+        embed.add_field(
+            name=defender_name,
+            value=f"{defender_code_label} → **{defender_total}**",
+            inline=True,
+        )
+
+        result_text = f"🏆 **{winner_name}** vinner"
+        if tie:
+            result_text += " (oavgjort — initiativtagaren avgör)"
+        embed.add_field(name="Resultat", value=result_text, inline=False)
+
+        self._starwars_footer(embed, initiator_name)
+        return embed
+
+    def starwars_difficulty_table(self, user_id: int, user_name: str) -> discord.Embed:
+        """Referenstabell över svårighetsnivåer och modifikatorsteg (sw_svarighet)."""
+        embed = self._get_base_embed(user_id, "📋 Star Wars: Svårighetstal")
+        embed.add_field(
+            name="Svårighetsnivåer",
+            value=(
+                "**Very Easy:** 1-5\n"
+                "**Easy:** 6-10\n"
+                "**Moderate:** 11-15\n"
+                "**Difficult:** 16-20\n"
+                "**Very Difficult:** 21-30\n"
+                "**Heroic:** 31+"
+            ),
+            inline=False,
+        )
+        embed.add_field(
+            name="Modifikatorsteg (situationsövertag)",
+            value=(
+                "+5 — litet övertag\n"
+                "+10 — tydligt övertag\n"
+                "+15 till +20 — avgörande/överväldigande övertag"
+            ),
+            inline=False,
+        )
+        self._starwars_footer(embed, user_name)
+        return embed
+
+    def starwars_initiative_result(
+        self, user_id: int, user_name: str, entries: List[Dict[str, Any]],
+    ) -> discord.Embed:
+        """
+        Mall för Star Wars-initiativ (sw_init). entries: lista med dicts
+        {"name": str, "total": int, "breakdown": str}, redan sorterad högst
+        först. "breakdown" (valfri) visar exakt vilka tärningar som slogs,
+        t.ex. "3+3+⭐6+4+2".
+        """
+        lines = []
+        for i, e in enumerate(entries):
+            line = f"{i + 1}. **{e['name']}**: {e['total']}"
+            if e.get("breakdown"):
+                line += f" ({e['breakdown']})"
+            lines.append(line)
+        embed = self._get_base_embed(
+            user_id, "⏱️ Star Wars: Initiativ", "Initiativordning (högst går först):",
+        )
+        embed.add_field(
+            name="Ordning",
+            value="\n".join(lines) if lines else "Inga karaktärer angivna",
+            inline=False,
+        )
+        self._starwars_footer(embed, user_name)
+        return embed

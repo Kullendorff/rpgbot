@@ -1,3 +1,4 @@
+import asyncio
 import os
 from typing import Tuple, List, Optional
 from pinecone import Pinecone
@@ -14,6 +15,33 @@ class KnowledgeBase:
         self.pinecone_api_key: Optional[str] = os.getenv("PINECONE_API_KEY")
         self.anthropic_api_key: Optional[str] = os.getenv("ANTHROPIC_API_KEY")
         self.pinecone_index_name: str = os.getenv("PINECONE_INDEX_NAME", "rpg-knowledge")
+        # Skyddar mot dubbel-laddning om flera kommandon triggar ensure_ready()
+        # samtidigt som bakgrundsjobbet i on_ready (se main.py). Säkert att
+        # skapa här utan en körande event-loop (Python 3.10+ binder lazy).
+        self._init_lock: asyncio.Lock = asyncio.Lock()
+
+    @property
+    def is_ready(self) -> bool:
+        """True om Pinecone, embedding-modell och Claude-klienten alla är initierade."""
+        return bool(self.pc and self.embedding_model and self.claude_client)
+
+    async def ensure_ready(self) -> bool:
+        """
+        Race-säker, icke-blockerande variant av initialize_knowledge_base().
+
+        Kör den blockerande initieringen (nätverksanrop + modellinladdning)
+        i en bakgrundstråd via asyncio.to_thread, så event-loopen aldrig
+        fryser. Ett lås garanterar att bara EN tråd åt gången faktiskt
+        laddar — om bakgrundsjobbet i on_ready redan är igång väntar ett
+        samtidigt kommandoanrop bara in det, istället för att starta en
+        andra, redundant (och tung) laddning.
+        """
+        if self.is_ready:
+            return True
+        async with self._init_lock:
+            if self.is_ready:  # någon annan hann bli klar medan vi väntade på låset
+                return True
+            return await asyncio.to_thread(self.initialize_knowledge_base)
 
     def initialize_knowledge_base(self) -> bool:
         """

@@ -1,21 +1,17 @@
-# commands/slash_spider_commands.py
+# src/spindel/slash_spider_commands.py
 """
-Slash-kommandon för Gigantspindel-stridssystem
+Slash-kommandon för Gigantspindel-stridssystem.
+
+Del av src/spindel/ — se __init__.py. Modulen är avstängd tills vidare
+(config/feature_flags.py: slash_spindel_enabled).
 """
 
-import os
-import sys
 import discord
 from discord import app_commands
 from typing import Optional
 import json
 
-# Lägg till parent directory i sys.path för att hitta spider_combat_manager
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
-
-from spider_combat_manager import SpiderCombatManager
+from .spider_combat_manager import SpiderCombatManager
 
 spider_managers = {}
 

@@ -61,6 +61,7 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 - **Rules**: `/regel` - Quick rule lookups from `data/rules/`
 - **Stats**: `/stats`, `/mystats` - Roll statistics and session tracking
 - **GM Commands**: `/startsession`, `/endsession`, `/secret_roll`, `/gm_override`
+- **Star Wars D6** (WEG40120, 2nd Ed. R&E): `/sw_slag`, `/sw_motstand`, `/sw_svarighet`, `/sw_init` - Wild Die-tärningsmotor med explosion, Force/Character Points
 
 ### Module Structure
 
@@ -77,10 +78,10 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
   - `slash_utility_commands.py` - Utility commands
   - `slash_manipulation_commands.py` - Manipulation mechanics
   - `slash_comment_commands.py` - Comment/annotation commands
-  - `slash_spider_commands.py` / `slash_small_spider_commands.py` - Spider combat
 
 - `src/deltagreen/` - Delta Green RPG module
-- `src/spider_combat_manager.py` / `src/small_spider_manager.py` - Spider combat systems
+- `src/starwars/` - Star Wars D6 (WEG40120) RPG module: `dice.py` (ren, testbar tärningsmotor, injicerbar Random), `commands.py` (Cog + CharacterPointView)
+- `src/spindel/` - Gigantspindel + småspindelstrid, egen paketmodul. **Avstängd tills vidare** (`config/feature_flags.py`: `slash_spindel_enabled: False`) — flyttades ut ur `src/` och `src/commands/` 2026-08-16, ingen aktiv användning atm. Sätt flaggan till `True` för att slå på `/spindel`, `/spindel_runda`, `/spindelstatus`, `/spindelreset`, `/spindeldump`, `/spawna_småspindlar`, `/attack_småspindel`, `/småspindelstatus`, `/reset_småspindlar` igen.
 - `src/utils/` - Utility functions and helpers
 - `src/skjutdomihuvudet/` - "Skjut Dem I Huvudet" RPG module
 

@@ -1,21 +1,19 @@
-# spider_combat_manager.py
+# src/spindel/spider_combat_manager.py
 """
 Stridshanterare för Gigantspindel
 Hanterar träffar, skador och spårning av spindelns status
+
+Del av src/spindel/ — se __init__.py. Modulen är avstängd tills vidare
+(config/feature_flags.py: slash_spindel_enabled).
 """
 
 import random
 import json
 import os
-import sys
 from dataclasses import dataclass
 from typing import Optional, Dict, List, Tuple
 
-# NOTE: sys.path manipulation removed - use proper package structure instead
-# TODO: Convert to proper package with __init__.py and use relative imports
-# sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-from spider_damage_tables import (
+from .spider_damage_tables import (
     SPIDER_DAMAGE_TABLES,
     SPIDER_ARMOR_VALUES,
     SPIDER_SUBLOCATION_TABLES,
@@ -96,8 +94,11 @@ class SpiderCombatManager:
     
     def _get_save_path(self) -> str:
         """Returnerar sökvägen för persistent lagring"""
+        # src/spindel/spider_combat_manager.py -> repo-roten är två steg upp
+        # (innan flytten till en egen paketmodul låg filen direkt i src/,
+        # då räckte ett steg — se git-historik för spider_combat_manager.py).
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(script_dir)
+        project_root = os.path.dirname(os.path.dirname(script_dir))
         data_dir = os.path.join(project_root, "data")
         
         if not os.path.exists(data_dir):

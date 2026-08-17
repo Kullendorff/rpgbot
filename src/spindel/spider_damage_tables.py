@@ -1,7 +1,10 @@
-# spider_damage_tables.py
+# src/spindel/spider_damage_tables.py
 """
 Skadetabeller för Gigantspindel - EON RPG
 Dramaturgiskt och actionbetonat fokus
+
+Del av src/spindel/ — se __init__.py. Modulen är avstängd tills vidare
+(config/feature_flags.py: slash_spindel_enabled).
 """
 
 from enum import Enum

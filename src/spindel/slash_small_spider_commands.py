@@ -1,20 +1,16 @@
-# commands/slash_small_spider_commands.py
+# src/spindel/slash_small_spider_commands.py
 """
-Slash-kommandon för Små Spindlar
+Slash-kommandon för Små Spindlar.
+
+Del av src/spindel/ — se __init__.py. Modulen är avstängd tills vidare
+(config/feature_flags.py: slash_spindel_enabled).
 """
 
 import discord
 from discord import app_commands
 from typing import Optional
-import sys
-import os
 
-# Lägg till parent directory i sys.path för att hitta small_spider_manager
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
-
-from small_spider_manager import SmallSpiderManager, SmallSpider
+from .small_spider_manager import SmallSpiderManager, SmallSpider
 
 small_spider_managers = {}
 

@@ -74,11 +74,13 @@ def register_admin_commands(bot, roll_tracker, color_handler, embed_factory, kno
         # Visa att boten bearbetar
         async with ctx.typing():
             try:
-                # Kontrollera om Claude API är tillgängligt
-                if not knowledge_base.claude_client:
-                    # Försök att initiera om
-                    print("Claude-klienten är inte initialiserad, försöker initiera...")
-                    success = knowledge_base.initialize_knowledge_base()
+                # Kontrollera om kunskapsbasen (inkl. Claude API) är
+                # tillgänglig. ensure_ready() kör laddningen i en
+                # bakgrundstråd och delar lås med bakgrundsjobbet i
+                # main.py, så vi väntar bara in en redan pågående laddning.
+                if not knowledge_base.is_ready:
+                    print("Kunskapsbasen är inte initialiserad, väntar in laddningen...")
+                    success = await knowledge_base.ensure_ready()
                     if not success:
                         await ctx.send("⚠️ Kunde inte skapa en sammanfattning - Claude API är inte tillgängligt.")
                         return

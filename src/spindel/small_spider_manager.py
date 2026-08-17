@@ -1,21 +1,20 @@
-# small_spider_manager.py
+# src/spindel/small_spider_manager.py
 """
 Stridshanterare för Små Spindlar
 Hanterar spawning, träffar, skador och automatiska chock/dödsslag
+
+Del av src/spindel/ — se __init__.py. Modulen är avstängd tills vidare
+(config/feature_flags.py: slash_spindel_enabled).
 """
 
 import random
 import os
-import sys
 from dataclasses import dataclass
 from typing import Optional, Dict, List, Tuple
 import anthropic
 from core.constants import CLAUDE_MODEL
 
-# TODO: Ta bort sys.path manipulation - använd proper package structure
-# sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-from small_spider_tables import (
+from .small_spider_tables import (
     SMALL_SPIDER_DAMAGE_TABLES,
     SMALL_SPIDER_ARMOR,
     SMALL_SPIDER_LOCATION_TABLE,

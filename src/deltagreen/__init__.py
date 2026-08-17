@@ -10,6 +10,7 @@ from .dice_functions import (
     D100Result,
     LethalityResult,
     SanCheckResult,
+    ProjectionResult,
     roll_d100,
     evaluate_result,
     skill_check,
@@ -18,6 +19,7 @@ from .dice_functions import (
     lethality_roll,
     san_check,
     parse_san_loss,
+    project_onto_bond,
 )
 
 from .agent_manager import AgentManager
@@ -28,6 +30,7 @@ __all__ = [
     'D100Result',
     'LethalityResult',
     'SanCheckResult',
+    'ProjectionResult',
     'roll_d100',
     'evaluate_result',
     'skill_check',
@@ -36,6 +39,7 @@ __all__ = [
     'lethality_roll',
     'san_check',
     'parse_san_loss',
+    'project_onto_bond',
     'AgentManager',
     'SessionManager',
 ]

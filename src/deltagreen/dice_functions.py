@@ -56,6 +56,32 @@ class SanCheckResult:
     triggered_temporary_insanity: bool  # 5+ SAN in one check
 
 
+@dataclass
+class ProjectionResult:
+    """
+    Result of "Projecting Onto a Bond" (Delta Green Agent's Handbook).
+
+    Rule summary: When an Agent loses SAN, the player may roll 1D4 and spend
+    that much WP. If the Agent still has at least 1 WP after the cost, the SAN
+    loss is reduced by the rolled amount (to a minimum of 0) and the chosen
+    Bond's score is reduced by the same amount. If the Agent no longer has
+    at least 1 WP, the projection fails: WP drops (the Agent falls unconscious
+    at 0 WP), no SAN is reduced, and no Bond damage is dealt.
+    """
+    d4_roll: int                    # The 1D4 rolled
+    wp_before: int
+    wp_after: int
+    unconscious: bool               # True if WP reached 0 (handled globally elsewhere)
+    projection_succeeded: bool      # True if SAN reduction applied
+    san_loss_original: int          # SAN loss before projection
+    san_loss_reduced: int           # SAN loss after projection (== original if failed)
+    bond_before: int
+    bond_after: int
+    bond_broken: bool               # Bond reduced to 0, permanently broken
+    ti_originally_triggered: bool   # Was TI (>=5) triggered by the original loss?
+    ti_avoided: bool                # True iff TI was triggered but no longer is
+
+
 def roll_d100() -> Tuple[int, int, int]:
     """
     Roll d100 and return (total, tens_die, ones_die).
@@ -273,4 +299,71 @@ def san_check(
         san_loss=san_loss,
         san_after=san_after,
         triggered_temporary_insanity=triggered_temporary_insanity
+    )
+
+
+def project_onto_bond(
+    current_wp: int,
+    san_loss: int,
+    bond_value: int,
+) -> ProjectionResult:
+    """
+    Perform "Projecting Onto a Bond" (Delta Green Agent's Handbook).
+
+    Mechanics:
+      1. Roll 1D4.
+      2. Reduce WP by that amount (cap at 0).
+      3. If WP >= 1 after the cost: reduce SAN loss by D4 (min 0) and reduce
+         the Bond's score by D4 (min 0; Bond is broken at 0).
+      4. If WP < 1 after the cost: projection FAILS. No SAN reduction, no
+         Bond damage. Agent is unconscious (caller is responsible for setting
+         the unconscious flag on the agent — this function only reports it).
+
+    This function is pure: it does not mutate any agent state. The caller
+    applies the WP change, SAN adjustment, Bond change and unconscious state.
+
+    Args:
+        current_wp: Agent's WP before projection. Must be >= 1 for a meaningful
+            attempt (caller should pre-check).
+        san_loss: SAN loss just determined by a SAN check.
+        bond_value: Current Bond score of the target Bond. Must be >= 1
+            (caller should pre-check; broken Bonds cannot be projected onto).
+
+    Returns:
+        ProjectionResult with full breakdown.
+    """
+    d4_roll = random.randint(1, 4)
+    wp_after = max(0, current_wp - d4_roll)
+
+    # Per RAW: "If your Agent still has at least 1 WP, reduce the SAN loss..."
+    projection_succeeded = wp_after >= 1
+    unconscious = wp_after <= 0
+
+    if projection_succeeded:
+        san_loss_reduced = max(0, san_loss - d4_roll)
+        bond_after = max(0, bond_value - d4_roll)
+        bond_broken = bond_after == 0
+    else:
+        # Projection fails — WP was spent but no mitigation applied.
+        san_loss_reduced = san_loss
+        bond_after = bond_value
+        bond_broken = False
+
+    ti_originally_triggered = san_loss >= 5
+    ti_still_triggered = san_loss_reduced >= 5
+    ti_avoided = ti_originally_triggered and not ti_still_triggered
+
+    return ProjectionResult(
+        d4_roll=d4_roll,
+        wp_before=current_wp,
+        wp_after=wp_after,
+        unconscious=unconscious,
+        projection_succeeded=projection_succeeded,
+        san_loss_original=san_loss,
+        san_loss_reduced=san_loss_reduced,
+        bond_before=bond_value,
+        bond_after=bond_after,
+        bond_broken=bond_broken,
+        ti_originally_triggered=ti_originally_triggered,
+        ti_avoided=ti_avoided,
     )

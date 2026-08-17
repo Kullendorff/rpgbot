@@ -7,11 +7,22 @@ Manages agent data with per-user ownership and JSON persistence.
 import json
 import os
 import logging
-from typing import Optional, Dict, List, Tuple
+from typing import Optional, Dict, List, Tuple, Any
 from datetime import datetime
 from difflib import get_close_matches
+from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass
+class BondModifyResult:
+    """Result of modifying a Bond's value."""
+    bond_name: str
+    old_value: int
+    new_value: int
+    broken: bool               # True iff bond just hit 0 (or was already 0 and stays)
+    just_broke: bool           # True iff this change broke it (old > 0, new == 0)
 
 
 class AgentManager:
@@ -31,6 +42,33 @@ class AgentManager:
         """Get file path for user's agent."""
         return os.path.join(self.data_dir, f"{user_id}.json")
 
+    @staticmethod
+    def _ensure_defaults(agent: Dict) -> Dict:
+        """
+        Lazy-inject newer fields into legacy agent dicts.
+
+        Mutates `agent` in place and returns it. Safe to call on already-migrated
+        agents. Called from `get_agent()` so both cached and freshly-loaded
+        agents get consistent shape.
+
+        Injects:
+          - conditions.unconscious = False      (root)
+          - bond['broken']         = False      (on every bond)
+        """
+        # Root-level conditions block
+        if 'conditions' not in agent or not isinstance(agent.get('conditions'), dict):
+            agent['conditions'] = {}
+        agent['conditions'].setdefault('unconscious', False)
+
+        # Per-bond 'broken' flag
+        bonds = agent.get('bonds')
+        if isinstance(bonds, list):
+            for b in bonds:
+                if isinstance(b, dict):
+                    b.setdefault('broken', False)
+
+        return agent
+
     def get_agent(self, user_id: str) -> Optional[Dict]:
         """
         Get agent for user.
@@ -45,7 +83,7 @@ class AgentManager:
 
         # Check cache first
         if user_id in self.cache:
-            return self.cache[user_id]
+            return self._ensure_defaults(self.cache[user_id])
 
         # Load from disk
         path = self._get_agent_path(user_id)
@@ -55,6 +93,7 @@ class AgentManager:
         try:
             with open(path, 'r', encoding='utf-8') as f:
                 agent = json.load(f)
+                self._ensure_defaults(agent)
                 self.cache[user_id] = agent
                 logger.debug(f"Loaded agent for {user_id}: {agent.get('callsign')}")
                 return agent
@@ -249,6 +288,11 @@ class AgentManager:
         """
         Modify WP by delta.
 
+        Globally enforces the "WP 0 = unconscious" rule: whenever WP hits 0
+        from any source (projection cost, exertion, GM override), the agent's
+        conditions.unconscious flag is set to True. WP rising above 0 does
+        NOT auto-clear the flag — waking up is its own narrative beat.
+
         Args:
             user_id: Discord user ID
             delta: Amount to change
@@ -265,6 +309,12 @@ class AgentManager:
         new_wp = max(0, min(max_wp, old_wp + delta))
 
         agent['derived']['wp']['current'] = new_wp
+
+        # Global unconscious trigger
+        if new_wp <= 0:
+            agent.setdefault('conditions', {})['unconscious'] = True
+            logger.info(f"Agent {agent['callsign']} is now UNCONSCIOUS (WP=0)")
+
         self.save_agent(user_id, agent)
 
         logger.info(f"Agent {agent['callsign']} WP: {old_wp} -> {new_wp}")
@@ -297,6 +347,149 @@ class AgentManager:
 
         logger.info(f"Agent {agent['callsign']} SAN: {old_san} -> {new_san} (BP: {breaking_point})")
         return (old_san, new_san, hit_breaking_point)
+
+    # ------------------------------------------------------------------
+    # Bonds
+    # ------------------------------------------------------------------
+
+    def _find_bond(self, agent: Dict, bond_name: str) -> Optional[Dict]:
+        """
+        Locate a bond on an agent by name. Exact match first, then fuzzy.
+
+        Returns the bond dict itself (mutating the return value mutates the
+        agent) or None if no reasonable match.
+        """
+        bonds = agent.get('bonds')
+        if not isinstance(bonds, list):
+            return None
+
+        # Exact (case-insensitive) match
+        lc = bond_name.lower()
+        for b in bonds:
+            if isinstance(b, dict) and b.get('name', '').lower() == lc:
+                return b
+
+        # Fuzzy match on name field
+        names = [b.get('name', '') for b in bonds if isinstance(b, dict)]
+        matches = get_close_matches(bond_name, names, n=1, cutoff=0.6)
+        if matches:
+            matched = matches[0]
+            for b in bonds:
+                if isinstance(b, dict) and b.get('name') == matched:
+                    logger.debug(f"Fuzzy matched bond '{bond_name}' to '{matched}'")
+                    return b
+
+        return None
+
+    def get_active_bonds(self, user_id: str) -> List[Dict]:
+        """
+        Return all non-broken bonds for autocomplete / selection.
+
+        Args:
+            user_id: Discord user ID
+
+        Returns:
+            List of bond dicts with `broken == False` and `value > 0`.
+            Empty list if agent/bonds missing.
+        """
+        agent = self.get_agent(str(user_id))
+        if not agent:
+            return []
+
+        bonds = agent.get('bonds')
+        if not isinstance(bonds, list):
+            return []
+
+        return [
+            b for b in bonds
+            if isinstance(b, dict)
+            and not b.get('broken', False)
+            and b.get('value', 0) > 0
+        ]
+
+    def modify_bond(
+        self,
+        user_id: str,
+        bond_name: str,
+        delta: int,
+    ) -> Optional[BondModifyResult]:
+        """
+        Adjust a bond's value (use a negative delta to reduce it).
+
+        Clamps at 0. Sets `broken = True` and persists it the moment the
+        bond's value reaches 0. Once broken, it stays broken (per DG RAW).
+
+        Args:
+            user_id: Discord user ID
+            bond_name: Bond name (exact or fuzzy)
+            delta: Amount to add to value (usually negative)
+
+        Returns:
+            BondModifyResult, or None if agent/bond not found.
+        """
+        agent = self.get_agent(str(user_id))
+        if not agent:
+            return None
+
+        bond = self._find_bond(agent, bond_name)
+        if bond is None:
+            logger.warning(f"Bond '{bond_name}' not found on agent {user_id}")
+            return None
+
+        old_value = int(bond.get('value', 0))
+        new_value = max(0, old_value + delta)
+        already_broken = bool(bond.get('broken', False)) or old_value == 0
+
+        bond['value'] = new_value
+        if new_value == 0:
+            bond['broken'] = True
+
+        just_broke = new_value == 0 and old_value > 0 and not already_broken
+        broken = bool(bond.get('broken', False))
+
+        self.save_agent(user_id, agent)
+
+        logger.info(
+            f"Agent {agent.get('callsign')} Bond '{bond.get('name')}': "
+            f"{old_value} -> {new_value} (broken={broken}, just_broke={just_broke})"
+        )
+
+        return BondModifyResult(
+            bond_name=bond.get('name', bond_name),
+            old_value=old_value,
+            new_value=new_value,
+            broken=broken,
+            just_broke=just_broke,
+        )
+
+    # ------------------------------------------------------------------
+    # Conditions
+    # ------------------------------------------------------------------
+
+    def set_condition(self, user_id: str, key: str, value: Any) -> bool:
+        """
+        Set a value in the agent's `conditions` block.
+
+        Generic helper so future state flags (unconscious, disoriented,
+        in_shock, ...) don't each need their own mutator.
+
+        Args:
+            user_id: Discord user ID
+            key: Condition key (e.g. 'unconscious')
+            value: New value (typically bool)
+
+        Returns:
+            True on success, False if agent not found.
+        """
+        agent = self.get_agent(str(user_id))
+        if not agent:
+            return False
+
+        conditions = agent.setdefault('conditions', {})
+        conditions[key] = value
+        self.save_agent(user_id, agent)
+        logger.info(f"Agent {agent.get('callsign')} condition '{key}' set to {value}")
+        return True
 
     def list_all_agents(self) -> List[Tuple[str, str]]:
         """

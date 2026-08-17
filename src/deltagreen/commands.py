@@ -16,13 +16,22 @@ from .dice_functions import (
     luck_roll,
     lethality_roll,
     san_check,
-    RollResult
+    project_onto_bond,
+    RollResult,
 )
 from .agent_manager import AgentManager
 from .session_manager import SessionManager
+from .san_check_cache import SanCheckCache
 
 # Setup logging
 logger = logging.getLogger(__name__)
+
+# TODO: ersätt med rollbaserad check eller config-fil när boten får fler SL.
+# Hårdkodar Johan som SL tills vidare — se CLAUDE.md / projekt-memo.
+DG_GM_USER_ID = "177927888819978240"
+
+# Hur länge efter en SAN-check som /dgproject är giltigt (i sekunder).
+DG_PROJECT_TTL_SECONDS = 15 * 60
 
 # Delta Green weapon data
 WEAPON_DATA = {
@@ -80,6 +89,8 @@ class DeltaGreenCommands(commands.Cog):
         self.embed_factory = embed_factory
         self.agent_manager = agent_manager
         self.session_manager = session_manager
+        # Tidsfönstrad cache för projecting onto a bond
+        self.san_check_cache = SanCheckCache(ttl_seconds=DG_PROJECT_TTL_SECONDS)
         logger.info("Delta Green commands initialized")
 
     @app_commands.command(name="dgcheck", description="Delta Green snabbkast med manuellt målvärde (utan agent)")
@@ -312,6 +323,32 @@ class DeltaGreenCommands(commands.Cog):
                             inline=False
                         )
 
+                # Spara i cachen så /dgproject kan hitta förlusten inom tidsfönstret.
+                # Vi sparar även om agenten råkar sakna aktiva Bonds — spelaren får
+                # då ett tydligare felmeddelande från /dgproject istället för tyst skeende.
+                self.san_check_cache.record(
+                    user_id=str(interaction.user.id),
+                    san_loss=result.san_loss,
+                    san_before=result.san_before,
+                    san_after=result.san_after,
+                    channel_id=str(interaction.channel_id) if interaction.channel_id else None,
+                    ti_triggered=result.triggered_temporary_insanity,
+                )
+
+                # Påminnelse till spelaren: du kan projicera på en Bond.
+                active_bonds = self.agent_manager.get_active_bonds(str(interaction.user.id))
+                if active_bonds:
+                    minutes = DG_PROJECT_TTL_SECONDS // 60
+                    embed.add_field(
+                        name="⏳ Projecting onto a Bond",
+                        value=(
+                            f"Du kan inom {minutes} minuter köra "
+                            f"`/dgproject bond:<namn>` för att spendera 1D4 WP och "
+                            f"reducera SAN-förlusten (och motsvarande Bond-värde)."
+                        ),
+                        inline=False,
+                    )
+
             await interaction.response.send_message(embed=embed)
             logger.info(
                 f"DG SAN check: {display_name} rolled {result.roll_result.roll}, "
@@ -324,6 +361,210 @@ class DeltaGreenCommands(commands.Cog):
                 interaction.user.id,
                 "Ett fel uppstod vid SAN-checken",
                 str(e)
+            )
+            await interaction.response.send_message(embed=error_embed, ephemeral=True)
+
+    # --- Projecting Onto a Bond ---
+
+    async def active_bond_autocomplete(
+        self,
+        interaction: discord.Interaction,
+        current: str,
+    ) -> List[app_commands.Choice[str]]:
+        """Autocomplete för aktiva (icke-brutna) Bonds."""
+        try:
+            # Om SL:en håller på att projicera på någon annans vägnar räcker det
+            # ändå med hens egna Bonds i autocompleten — spelarens namn skrivs för
+            # hand via `user`-parametern. Vi listar alltså den anropande användarens
+            # aktiva Bonds här. (Cleanare än att gissa target_user i autocomplete.)
+            caller_id = str(interaction.user.id)
+
+            # Om anroparen är SL och en `user`-param redan är ifylld, listar vi
+            # istället den spelarens Bonds så SL slipper skriva fritextigt.
+            target_id = caller_id
+            if caller_id == DG_GM_USER_ID:
+                # Discord skickar ifyllda namespace-fält via `interaction.namespace`
+                target_user = getattr(interaction.namespace, 'user', None)
+                if target_user is not None:
+                    target_id = str(target_user.id)
+
+            bonds = self.agent_manager.get_active_bonds(target_id)
+            names = [b.get('name', '') for b in bonds if b.get('name')]
+
+            if current:
+                matching = [n for n in names if current.lower() in n.lower()]
+            else:
+                matching = names
+
+            return [app_commands.Choice(name=n, value=n) for n in sorted(matching)[:25]]
+        except Exception as e:
+            logger.error(f"Error in active_bond_autocomplete: {e}", exc_info=True)
+            return []
+
+    @app_commands.command(
+        name="dgproject",
+        description="Projicera senaste SAN-förlusten på en Bond (spendera 1D4 WP)",
+    )
+    @app_commands.describe(
+        bond="Vilken Bond att projicera på",
+        user="(SL) projicera på en spelares vägnar",
+    )
+    @app_commands.autocomplete(bond=active_bond_autocomplete)
+    async def dg_project(
+        self,
+        interaction: discord.Interaction,
+        bond: str,
+        user: Optional[discord.User] = None,
+    ):
+        """Delta Green Projecting Onto a Bond (Agent's Handbook)."""
+        try:
+            caller_id = str(interaction.user.id)
+
+            # Avgör måluser: bara SL får projicera åt någon annan.
+            if user is not None and caller_id != DG_GM_USER_ID:
+                await interaction.response.send_message(
+                    "Bara SL kan projicera åt en annan spelare.",
+                    ephemeral=True,
+                )
+                return
+
+            target_user = user if user is not None else interaction.user
+            target_id = str(target_user.id)
+            acting_on_behalf = target_id != caller_id
+
+            # 1. Färsk SAN-check i cachen?
+            entry = self.san_check_cache.get_fresh(target_id)
+            if entry is None:
+                msg = "Ingen färsk SAN-check att projicera på."
+                if acting_on_behalf:
+                    msg = f"Ingen färsk SAN-check för {target_user.display_name} att projicera på."
+                msg += f" (Tidsfönster: {DG_PROJECT_TTL_SECONDS // 60} min.)"
+                await interaction.response.send_message(msg, ephemeral=True)
+                return
+
+            # 2. Agent finns?
+            agent = self.agent_manager.get_agent(target_id)
+            if not agent:
+                await interaction.response.send_message(
+                    "Ingen agent registrerad för denna användare.",
+                    ephemeral=True,
+                )
+                return
+
+            # 3. Tillräckligt med WP för att försöka? (Kostnaden är 1D4, så minst 1 WP
+            #    måste finnas för att det ska vara meningsfullt — men RAW tillåter
+            #    även försök med låg WP där man kan knockas. Vi tillåter anrop så
+            #    länge WP > 0; vid 0 WP är agenten redan medvetslös.)
+            wp_before = agent['derived']['wp']['current']
+            if wp_before <= 0:
+                await interaction.response.send_message(
+                    f"{agent['callsign']} har 0 WP och är medvetslös — ingen projection möjlig.",
+                    ephemeral=True,
+                )
+                return
+
+            # 4. Bond finns och är inte bruten?
+            target_bond = None
+            for b in agent.get('bonds', []):
+                if isinstance(b, dict) and b.get('name', '').lower() == bond.lower():
+                    target_bond = b
+                    break
+            # Fuzzy fallback
+            if target_bond is None:
+                from difflib import get_close_matches
+                names = [b.get('name', '') for b in agent.get('bonds', []) if isinstance(b, dict)]
+                matches = get_close_matches(bond, names, n=1, cutoff=0.6)
+                if matches:
+                    for b in agent.get('bonds', []):
+                        if b.get('name') == matches[0]:
+                            target_bond = b
+                            break
+
+            if target_bond is None:
+                await interaction.response.send_message(
+                    f"Hittade ingen Bond vid namn \"{bond}\" på {agent['callsign']}.",
+                    ephemeral=True,
+                )
+                return
+
+            if target_bond.get('broken', False) or target_bond.get('value', 0) <= 0:
+                await interaction.response.send_message(
+                    f"Bond \"{target_bond.get('name')}\" är redan bruten.",
+                    ephemeral=True,
+                )
+                return
+
+            bond_name_resolved = target_bond['name']
+            bond_value_before = int(target_bond['value'])
+
+            # 5. Kör den rena beräkningen
+            projection = project_onto_bond(
+                current_wp=wp_before,
+                san_loss=entry.san_loss,
+                bond_value=bond_value_before,
+            )
+
+            # 6. Applicera state — ordning: WP först (sätter unconscious globalt),
+            #    sedan SAN-restaurering + Bond-skada om projection lyckades.
+            self.agent_manager.modify_wp(target_id, -projection.d4_roll)
+
+            bond_modify_result = None
+            if projection.projection_succeeded:
+                # Restaurera partiell SAN. SAN drogs redan av i /dgsan med entry.san_loss.
+                # Nettomålet är entry.san_loss - projection.san_loss_reduced minus tillbaka.
+                san_refund = entry.san_loss - projection.san_loss_reduced
+                if san_refund > 0:
+                    self.agent_manager.modify_san(target_id, san_refund)
+
+                # Dra Bond
+                bond_modify_result = self.agent_manager.modify_bond(
+                    target_id, bond_name_resolved, -projection.d4_roll
+                )
+
+            # Cache: förbruka posten så spelaren inte kan projicera två gånger
+            # på samma förlust (även vid misslyckande — WP:n är redan spenderad).
+            self.san_check_cache.mark_consumed(target_id)
+
+            # 7. Rendera embed
+            display_name = (
+                f"{agent['callsign']} ({target_user.display_name})"
+                if not acting_on_behalf
+                else f"{agent['callsign']} ({target_user.display_name}) — projicerad av SL"
+            )
+
+            embed = self.embed_factory.dg_project_result(
+                user_id=interaction.user.id,
+                user_name=display_name,
+                callsign=agent['callsign'],
+                bond_name=bond_name_resolved,
+                d4_roll=projection.d4_roll,
+                wp_before=projection.wp_before,
+                wp_after=projection.wp_after,
+                san_loss_original=projection.san_loss_original,
+                san_loss_reduced=projection.san_loss_reduced,
+                bond_before=projection.bond_before,
+                bond_after=projection.bond_after,
+                projection_succeeded=projection.projection_succeeded,
+                unconscious=projection.unconscious,
+                bond_broken=projection.bond_broken,
+                just_broke=bond_modify_result.just_broke if bond_modify_result else False,
+                ti_originally_triggered=projection.ti_originally_triggered,
+                ti_avoided=projection.ti_avoided,
+            )
+
+            await interaction.response.send_message(embed=embed)
+            logger.info(
+                f"DG project: {display_name} onto '{bond_name_resolved}' "
+                f"d4={projection.d4_roll} succeeded={projection.projection_succeeded} "
+                f"ti_avoided={projection.ti_avoided} bond_broken={projection.bond_broken}"
+            )
+
+        except Exception as e:
+            logger.error(f"Error in dg_project: {e}", exc_info=True)
+            error_embed = self.embed_factory.error_message(
+                interaction.user.id,
+                "Ett fel uppstod vid projection",
+                str(e),
             )
             await interaction.response.send_message(embed=error_embed, ephemeral=True)
 

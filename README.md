@@ -14,7 +14,7 @@ En avancerad Discord-bot för tärningskast och kunskapshantering för det svens
 
 ### 🧠 AI-driven Kunskapsbas
 - **Intelligent sökning**: `/ask fråga:"Vad är Ferox?"` - AI-assisterad regelfrågor
-- **Snabbsökning**: `/sök term:ferox` för direkta sökresultat  
+- **Snabbsökning**: `/sök sökterm:ferox` för direkta sökresultat  
 - **Omfattande sökning**: `/allt term:ferox` genomsöker hela regelbiblioteket
 - **Regelreferenser**: `/regel namn:strid` för snabba regeluppslag
 
@@ -102,7 +102,7 @@ src/
 ### 🧠 Kunskapskommandon (Slash Commands)
 ```
 /ask fråga:"din fråga"     # AI-assisterad regelfråga
-/sök term:sökterm          # Snabbsökning i regelböcker
+/sök sökterm:sökterm       # Snabbsökning i regelböcker
 /allt term:sökterm         # Omfattande sökning
 /regel namn:kategori       # Regelreferens
 ```
@@ -202,7 +202,6 @@ Gå till din server och skriv:
 
 **Vad som INTE fungerar utan AI:**
 - ❌ `/ask` (AI-assisterade regelfrågor)
-- ❌ `/sök` (avancerad kunskapssökning) 
 - ❌ `/allt` (omfattande sökning)
 - ❌ AI-genererade sessionssammanfattningar
 

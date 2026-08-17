@@ -156,7 +156,7 @@ class KnowledgeSlashCommands(commands.Cog):
     ):
         """Slash command version av !sök - direktsökning i filer."""
         start_time = time.time()
-        
+
         try:
             # Validera input
             if len(sökterm.strip()) < 2:
@@ -167,11 +167,12 @@ class KnowledgeSlashCommands(commands.Cog):
                 )
                 await self.helper.send_response(interaction, embed=embed)
                 return
-            
-            # Defer om många resultat kan komma
-            if max_results > 10:
-                await self.helper.safe_defer(interaction)
-            
+
+            # Defer ovillkorligt — kostnaden (läsa alla filer i text_folder)
+            # beror inte på max_resultat, den beror på hur många filer som
+            # finns att genomsöka. Samma mönster som /allt.
+            await self.helper.safe_defer(interaction)
+
             # Hämta project root och text folder
             script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             project_root = os.path.dirname(script_dir)
@@ -189,13 +190,13 @@ class KnowledgeSlashCommands(commands.Cog):
             # Lista alla textfiler
             all_files = [f for f in os.listdir(text_folder) if f.endswith('.txt')]
             
-            # Filtrera filer baserat på source om angiven
-            if source:
-                files_to_search = [f for f in all_files if source.lower() in f.lower()]
+            # Filtrera filer baserat på källa om angiven
+            if källa:
+                files_to_search = [f for f in all_files if källa.lower() in f.lower()]
                 if not files_to_search:
                     embed = await self.helper.create_error_response(
                         interaction.user.id,
-                        f"Inga filer hittades för källa '{source}'",
+                        f"Inga filer hittades för källa '{källa}'",
                         f"Tillgängliga filer: {', '.join(all_files[:5])}{'...' if len(all_files) > 5 else ''}"
                     )
                     await self.helper.send_response(interaction, embed=embed)
@@ -214,7 +215,7 @@ class KnowledgeSlashCommands(commands.Cog):
                     # Hitta alla stycken med sökfrasen
                     paragraphs = content.split('\n\n')
                     for paragraph in paragraphs:
-                        if query.lower() in paragraph.lower():
+                        if sökterm.lower() in paragraph.lower():
                             # Begränsa styckets längd och rensa
                             clean_para = ' '.join(paragraph.split())
                             excerpt = (clean_para[:300] + '...') if len(clean_para) > 300 else clean_para
@@ -232,26 +233,26 @@ class KnowledgeSlashCommands(commands.Cog):
                 embed = self.embed_factory.knowledge_result(
                     interaction.user.id,
                     interaction.user.display_name,
-                    query,
-                    f"Inga träffar hittades för '{query}'",
+                    sökterm,
+                    f"Inga träffar hittades för '{sökterm}'",
                     []
                 )
                 await self.helper.send_response(interaction, embed=embed)
                 return
-            
-            # Begränsa till max_results
-            limited_results = results[:max_results]
-            
+
+            # Begränsa till max_resultat
+            limited_results = results[:max_resultat]
+
             # Skapa resultat embed
             embed = self.embed_factory.knowledge_result(
                 interaction.user.id,
                 interaction.user.display_name,
-                query,
+                sökterm,
                 f"Hittade {len(results)} träffar",
                 list(set([filename for filename, _ in limited_results]))
             )
-            
-            embed.title = f"📚 Sökresultat för: {query}"
+
+            embed.title = f"📚 Sökresultat för: {sökterm}"
             embed.clear_fields()  # Clear default fields
             
             # Lägg till träffar
@@ -263,16 +264,16 @@ class KnowledgeSlashCommands(commands.Cog):
                 )
             
             # Footer med info om begränsade resultat
-            if len(results) > max_results:
+            if len(results) > max_resultat:
                 embed.set_footer(
-                    text=f"Visar {max_results} av {len(results)} träffar. Använd mer specifika söktermer för bättre resultat."
+                    text=f"Visar {max_resultat} av {len(results)} träffar. Använd mer specifika söktermer för bättre resultat."
                 )
-            
+
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "sök", {
-                "query": query,
-                "source": source,
-                "max_results": max_results,
+                "sökterm": sökterm,
+                "källa": källa,
+                "max_resultat": max_resultat,
                 "total_results": len(results)
             }, execution_time)
             

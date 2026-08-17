@@ -66,6 +66,13 @@ logs/security/
 # Claude Code memory & settings
 .claude/memory/
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# Bot runtime artifacts (local process tracking)
+*.pid
+
+# Google Drive Desktop sync scratch (leaks into this folder, not project content)
+.tmp.driveupload/
 
 # Project state files (generated, not source)
 CURRENT_STATE.md

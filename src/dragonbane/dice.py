@@ -33,6 +33,92 @@ CONDITIONS: tuple[tuple[str, str], ...] = tuple(
     (condition, attr) for attr, condition in CONDITION_BY_ATTR.items()
 )
 
+# Skräcktabellen (T8): slås vid misslyckat PSY-slag mot en skräckattack.
+FEAR_TABLE: dict[int, tuple[str, str]] = {
+    1: (
+        "Kraftlös",
+        "Fasan tömmer dig på kraft och beslutsamhet. Du förlorar 2T6 VP "
+        "(lägst 0) och får tillståndet Uppgiven.",
+    ),
+    2: (
+        "Skakis",
+        "Du drabbas av plötslig darrning och får tillståndet Rädd.",
+    ),
+    3: (
+        "Flämtar",
+        "Fasan gör dig så skräckslagen att du börjar andas kraftigt och "
+        "får tillståndet Utmattad.",
+    ),
+    4: (
+        "Blek",
+        "Du blir vit som ett lakan i ansiktet. Du och alla andra "
+        "rollpersoner inom 10 meter som ser dig får tillståndet Rädd.",
+    ),
+    5: (
+        "Skrik",
+        "Du utstöter ett högt skrik av fasa. Alla andra rollpersoner som "
+        "hör dig utsätts omedelbart för en skräckattack (max ett PSY-slag "
+        "per skräckkälla).",
+    ),
+    6: (
+        "Vredesmod",
+        "Din skräck förvandlas till vrede. Du måste angripa källan till "
+        "skräcken på din nästa tur (i närstrid om möjligt) och får "
+        "tillståndet Arg.",
+    ),
+    7: (
+        "Paralyserad",
+        "Du stelnar av skräck och kan varken agera eller förflytta dig på "
+        "din nästa tur. Inför varje påföljande tur krävs ett nytt PSY-slag "
+        "(ej handling) för att bryta förlamningen.",
+    ),
+    8: (
+        "Vild panik",
+        "Du drabbas av total panik och flyr i högsta fart. På din nästa "
+        "tur måste du sprinta bort från skräckkällan, och lyckas med ett "
+        "nytt PSY-slag (ej handling) inför varje påföljande tur för att "
+        "återfå kontrollen.",
+    ),
+}
+
+# Mumiens anfallstabell (T6): monsterspecifik attack för mumie-motståndare.
+MUMMY_ATTACK_TABLE: dict[int, tuple[str, str]] = {
+    1: (
+        "Förbannelse!",
+        "Kastar en förbannelse över en motståndare inom 10 meter. Offret "
+        "utsätts för en skräckattack med nackdel på PSY-slaget.",
+    ),
+    2: (
+        "Dubbelslag!",
+        "Mumien slår med nävarna mot upp till två motståndare inom 2 "
+        "meter från varandra. De tar 2T6 krosskada och slås till marken.",
+    ),
+    3: (
+        "Insektssvärm!",
+        "Mumien spyr ut insekter över alla motståndare inom 4 meter. "
+        "Dessa tar T8 i skada (rustning skyddar inte) och måste lyckas "
+        "med ett PSY-slag för att inte förlora sin tur.",
+    ),
+    4: (
+        "Dödligt nappatag!",
+        "Mumien greppar och slungar iväg en motståndare 2T6 meter. "
+        "Offret landar liggande och tar lika mycket skada som avståndet.",
+    ),
+    5: (
+        "Strypning!",
+        "Mumien tar ett strypgrepp på en motståndare. Offret tar 2T6 "
+        "krosskada direkt (ingen rustning) och ytterligare T6 vid varje "
+        "ny tur för mumien. Kräv ett slag mot STY med nackdel för att "
+        "komma loss.",
+    ),
+    6: (
+        "Hjärtkross!",
+        "Mumiens ögon lyser blått och den försöker krossa offrets hjärta "
+        "på avstånd (upp till 10 meter). Offret tar T10 i skada (ingen "
+        "rustning), utsätts för en skräckattack och förlorar sin tur.",
+    ),
+}
+
 
 @dataclass
 class DiceTermResult:
@@ -80,6 +166,29 @@ class SkillCheckResult:
 class InitiativeEntry:
     name: str
     card: int
+
+
+@dataclass
+class AdvancementResult:
+    skill: int
+    roll: int
+    success: bool
+    new_skill: int
+
+
+@dataclass
+class FearResult:
+    roll: int
+    condition: str
+    description: str
+    vp_loss: int | None = None
+
+
+@dataclass
+class MummyAttackResult:
+    roll: int
+    name: str
+    description: str
 
 
 def _parse_term(raw_term: str) -> tuple[str, int]:
@@ -199,6 +308,56 @@ def dragonbane_skill_check(
         success=success,
         critical=critical,
     )
+
+
+def dragonbane_skill_advancement(
+    skill: int,
+    rng: Random | None = None,
+) -> AdvancementResult:
+    """
+    Färdighetsförbättring: slå 1T20. Slår du högre än nuvarande FV ökar
+    färdigheten med 1 (regelrätt Dragonbane-mekanik). Eftersom T20 aldrig
+    kan ge mer än 20 är FV 20 eller högre praktiskt taget omöjligt att
+    förbättra vidare.
+    """
+    rng = rng or Random()
+
+    if skill < 1 or skill > 30:
+        raise ValueError("Färdighetsvärde måste vara mellan 1 och 30")
+
+    roll = rng.randint(1, 20)
+    success = roll > skill
+    new_skill = skill + 1 if success else skill
+
+    return AdvancementResult(skill=skill, roll=roll, success=success, new_skill=new_skill)
+
+
+def roll_fear_table(rng: Random | None = None) -> FearResult:
+    """
+    Skräcktabellen: slå 1T8 och läs av resultatet. Används vid misslyckat
+    PSY-slag mot en skräckattack. Vid resultat 1 (Kraftlös) slås även
+    2T6 VP-förlust (i praktiken lägst 0, hanteras av den som bokför VP).
+    """
+    rng = rng or Random()
+
+    roll = rng.randint(1, 8)
+    condition, description = FEAR_TABLE[roll]
+
+    vp_loss = None
+    if roll == 1:
+        vp_loss = rng.randint(1, 6) + rng.randint(1, 6)
+
+    return FearResult(roll=roll, condition=condition, description=description, vp_loss=vp_loss)
+
+
+def roll_mummy_attack(rng: Random | None = None) -> MummyAttackResult:
+    """Mumiens anfallstabell: slå 1T6 och läs av vilken attack mumien gör."""
+    rng = rng or Random()
+
+    roll = rng.randint(1, 6)
+    name, description = MUMMY_ATTACK_TABLE[roll]
+
+    return MummyAttackResult(roll=roll, name=name, description=description)
 
 
 def roll_initiative(

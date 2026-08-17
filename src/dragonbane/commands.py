@@ -22,7 +22,10 @@ from .dice import (
     CONDITION_BY_ATTR,
     CONDITIONS,
     dragonbane_skill_check,
+    dragonbane_skill_advancement,
     roll_expression,
+    roll_fear_table,
+    roll_mummy_attack,
     roll_initiative,
 )
 
@@ -285,6 +288,68 @@ class DragonbaneCommands(commands.Cog):
             pushed=True,
             condition=condition,
             attribute=attr,
+        )
+        await interaction.response.send_message(embed=embed)
+
+    @app_commands.command(
+        name="dod_hoj",
+        description="Färdighetsförbättring: slå 1T20, högre än FV ger +1",
+    )
+    @app_commands.describe(skill="Nuvarande färdighetsvärde (1-30)")
+    async def dod_hoj(
+        self,
+        interaction: discord.Interaction,
+        skill: app_commands.Range[int, 1, 30],
+    ) -> None:
+        try:
+            result = dragonbane_skill_advancement(skill=skill)
+        except ValueError as err:
+            error = self.embed_factory.error_message(
+                interaction.user.id, "Ogiltigt förbättringsslag", str(err)
+            )
+            await interaction.response.send_message(embed=error, ephemeral=True)
+            return
+
+        embed = self.embed_factory.dragonbane_advancement_result(
+            user_id=interaction.user.id,
+            user_name=interaction.user.display_name,
+            skill=result.skill,
+            roll=result.roll,
+            success=result.success,
+            new_skill=result.new_skill,
+        )
+        await interaction.response.send_message(embed=embed)
+
+    @app_commands.command(
+        name="dod_skrack",
+        description="Slå på skräcktabellen (1T8) efter misslyckat PSY-slag mot en skräckattack",
+    )
+    async def dod_skrack(self, interaction: discord.Interaction) -> None:
+        result = roll_fear_table()
+
+        embed = self.embed_factory.dragonbane_fear_result(
+            user_id=interaction.user.id,
+            user_name=interaction.user.display_name,
+            roll=result.roll,
+            condition=result.condition,
+            description=result.description,
+            vp_loss=result.vp_loss,
+        )
+        await interaction.response.send_message(embed=embed)
+
+    @app_commands.command(
+        name="dod_mumie",
+        description="Slå på mumiens anfallstabell (1T6)",
+    )
+    async def dod_mumie(self, interaction: discord.Interaction) -> None:
+        result = roll_mummy_attack()
+
+        embed = self.embed_factory.dragonbane_mummy_attack_result(
+            user_id=interaction.user.id,
+            user_name=interaction.user.display_name,
+            roll=result.roll,
+            name=result.name,
+            description=result.description,
         )
         await interaction.response.send_message(embed=embed)
 

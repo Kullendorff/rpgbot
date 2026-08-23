@@ -77,8 +77,8 @@ class KnowledgeBase:
             print("Laddar embedding-modell...")
             self.embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
             
-            # Initiera Claude API
-            print(f"Initierar Claude API med nyckel: {self.anthropic_api_key[:4]}...{self.anthropic_api_key[-4:] if len(self.anthropic_api_key) > 8 else ''}")
+            # Initiera Claude API (logga ALDRIG nyckelfragment — stdout hamnar i bot_run.log)
+            print("Initierar Claude API...")
             try:
                 self.claude_client = anthropic.Anthropic(api_key=self.anthropic_api_key)
                 # Testa anslutningen med ett enkelt API-anrop

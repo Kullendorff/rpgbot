@@ -146,13 +146,13 @@ def register_commands(bot: commands.Bot, roll_tracker: Any, color_handler: Any) 
             
             # Försök först tolka som vapennamn
             try:
-                rolls, total, is_ob = roll_damage(weapon_name=weapon_or_dice)
+                rolls, total = roll_damage(weapon_name=weapon_or_dice)
                 weapon_name = weapon_or_dice.capitalize()
                 damage_formula = WEAPON_DAMAGE[weapon_or_dice]
             except (KeyError, ValueError):
                 # Om det inte är ett vapennamn, försök tolka som tärningsformel
                 try:
-                    rolls, total, is_ob = roll_damage(damage_string=weapon_or_dice)
+                    rolls, total = roll_damage(damage_string=weapon_or_dice)
                     weapon_name = "Anpassad"
                     damage_formula = weapon_or_dice
                 except ValueError:

@@ -177,11 +177,17 @@ def register_dice_commands(bot, roll_tracker, color_handler, embed_factory, know
             color: int = color_handler.get_user_color(ctx.author.id)
             rolls: List[int] = [random.randint(1, sides) for _ in range(num_dice)]
             total: int = sum(rolls) + modifier
-            
+
+            # Spara det ÄKTA kastet för statistiken: vid demonisk inspiration
+            # riggas de visade tärningarna/totalen, men rolls.db ska logga
+            # vad som faktiskt slogs — inte förfalskningen.
+            genuine_rolls: List[int] = list(rolls)
+            genuine_total: int = total
+
             # Manipulera resultatet vid demonisk influens
             if should_force_success:
-                # Det verkliga tärningskastet sparas för statistik, men vi visar ett riggat resultat
-                # Gör så att slaget precis lyckas med 1-3 enheter under målvärdet
+                # Visat resultat riggas till en knapp framgång (1-3 under mål);
+                # det äkta kastet ovan är redan säkrat för statistik.
                 success_margin = random.randint(1, 3)
                 original_total = total  # Spara det faktiska resultatet för intern spårning
                 total = target - success_margin  # Ändra totalen så att den precis klarar målvärdet
@@ -230,6 +236,7 @@ def register_dice_commands(bot, roll_tracker, color_handler, embed_factory, know
             success: Optional[bool] = None
             if target is not None:
                 success = total <= target
+            genuine_success: Optional[bool] = target is not None and genuine_total <= target
 
             roll_tracker.log_roll(
                 user_id=str(ctx.author.id),
@@ -237,10 +244,10 @@ def register_dice_commands(bot, roll_tracker, color_handler, embed_factory, know
                 command_type='roll',
                 num_dice=num_dice,
                 sides=sides,
-                roll_values=rolls,
+                roll_values=genuine_rolls,
                 modifier=modifier,
                 target=target,
-                success=success
+                success=genuine_success
             )
 
             # Bygg dice expression för display

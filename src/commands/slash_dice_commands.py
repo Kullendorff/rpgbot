@@ -113,8 +113,22 @@ class DiceSlashCommands(commands.Cog):
         start_time = time.time()
         
         try:
-            # Hantera demonisk inspiration
+            # Demonisk inspiration är ett GM-verktyg — gata för icke-GM:er.
+            # getattr skyddar mot DM-fallet där user saknar guild_permissions/roles.
             if demon:
+                perms = getattr(interaction.user, "guild_permissions", None)
+                is_gm = bool(perms and perms.manage_guild) or any(
+                    role.name in ("Game Master", "GM", "Spelledare", "Admin")
+                    for role in getattr(interaction.user, "roles", [])
+                )
+                if not is_gm:
+                    embed = await self.helper.create_error_response(
+                        interaction.user.id,
+                        "Demonisk inspiration kräver Game Master",
+                        "Flaggan 'demon' är reserverad spelledaren."
+                    )
+                    await self.helper.send_response(interaction, embed=embed)
+                    return
                 logger.debug(f"Demonisk inspiration aktiverad av {interaction.user.display_name} i /roll {tärningar}")
                 try:
                     await interaction.user.send(f"🔥 Demonisk inspiration aktiverad")

@@ -176,7 +176,11 @@ class CombatManager:
                     sub_roll: int = random.randint(1, 10)
                     for (sub_lower, sub_upper), sub_location in self.DELOMRADE_TABLE["huvud"].items():
                         if sub_lower <= sub_roll <= sub_upper:
-                            return location, sub_roll, sub_location, code
+                            # Härled rustningskoden från det faktiska delområdet —
+                            # annars kan plats och kod motsäga varandra (t.ex.
+                            # "ansikte" med halsens kod när omkastet ger 17–20).
+                            head_code = self.location_code_mapping.get(sub_location, code)
+                            return location, sub_roll, sub_location, head_code
                 # Använd subloc från tabellen istället för location - det är den exakta kroppsdelen
                 return location, None, subloc, code
         raise ValueError(f"Ogiltigt slag {location_roll} för {dtype.name} / {attack_level}")

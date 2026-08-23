@@ -6,10 +6,7 @@ from hit_tables import (
     WeaponType,
     AttackLevel,
     BASE_HIT_TABLE,
-    get_hit_location,
-    get_mounted_hit_modification,
-    get_mount_hit_location,
-    get_quadruped_hit_location
+    get_hit_location
 )
 from damage_tables import (
     DamageType,
@@ -253,8 +250,10 @@ class CombatManager:
         attack_level: Optional[str],
         damage_value: int,
         location_override: Optional[str],
-        is_mounted: bool,
-        is_quadruped: bool,
+        # Legacy-flaggor: mekaniken (tabellerna R2-46/47/48) är ej implementerad.
+        # Defaultvärdena låter legacy-anropare fungera till de tas bort i Batch 2.
+        is_mounted: bool = False,
+        is_quadruped: bool = False,
         direction: Optional[str] = None,
         use_malpunkter: bool = False,
         user_id: Optional[str] = None

@@ -21,7 +21,7 @@ from fumble_tables import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
 class ArmorModal(ui.Modal):
     """Modal för att ange rustningsvärde på träffområde."""
 
-    def __init__(self, combat_cog, weapon: str, bas_skada: int, result: Any, mounted: bool, quadruped: bool, malpunkter: bool):
+    def __init__(self, combat_cog, weapon: str, bas_skada: int, result: Any, malpunkter: bool):
         # Formatera träffområde för modal title
         hit_zone = f"{result.sub_location.capitalize()} ({result.location_code})"
         super().__init__(title=f"Träff: {hit_zone}")
@@ -30,8 +30,6 @@ class ArmorModal(ui.Modal):
         self.weapon = weapon
         self.bas_skada = bas_skada
         self.result = result
-        self.mounted = mounted
-        self.quadruped = quadruped
         self.malpunkter = malpunkter
 
     rustning = ui.TextInput(
@@ -127,10 +125,6 @@ class ArmorModal(ui.Modal):
 
             # Lägg till parametrar
             parameter_info = []
-            if self.mounted:
-                parameter_info.append("🐎 Ryttare")
-            if self.quadruped:
-                parameter_info.append("🦌 Fyrbent mål")
             if self.malpunkter:
                 parameter_info.append("🎯 Målpunkter")
 
@@ -210,8 +204,6 @@ class CombatSlashCommands(commands.Cog):
         level: Optional[str],
         location: Optional[str],
         damage: int,
-        mounted: bool,
-        quadruped: bool,
         malpunkter: bool
     ) -> None:
         """
@@ -223,8 +215,6 @@ class CombatSlashCommands(commands.Cog):
             level: Attack level om inget specifikt område anges
             location: Specifikt träffområde
             damage: Skadevärde
-            mounted: Ryttarflagga
-            quadruped: Fyrbeningsflagga
             malpunkter: Målpunkter-teknik
         """
         try:
@@ -248,10 +238,6 @@ class CombatSlashCommands(commands.Cog):
             
             # Skapa flags string för bakåtkompatibilitet
             flags = ""
-            if mounted:
-                flags += " --ryttare"
-            if quadruped:
-                flags += " --djur"
             if malpunkter:
                 flags += " --mp"
             
@@ -261,9 +247,6 @@ class CombatSlashCommands(commands.Cog):
                 attack_level=level_or_location if level_or_location.lower() in ["låg", "normal", "hög"] else None,
                 damage_value=damage,  # Basskada, kommer omberäknas efter rustning
                 location_override=location_override,
-                is_mounted=mounted,
-                is_quadruped=quadruped,
-                direction=None,
                 use_malpunkter=malpunkter,
                 user_id=str(interaction.user.id)
             )
@@ -274,8 +257,6 @@ class CombatSlashCommands(commands.Cog):
                 weapon=weapon,
                 bas_skada=damage,
                 result=result,
-                mounted=mounted,
-                quadruped=quadruped,
                 malpunkter=malpunkter
             )
 
@@ -300,8 +281,6 @@ class CombatSlashCommands(commands.Cog):
         bas_skada="Basskada INNAN rustning dras av (1-100)",
         nivå="Attacknivå om inget specifikt område väljs",
         område="Specifikt träffområde (valfritt)",
-        ryttare="Anfallet utförs från ryttare",
-        fyrfota="Målet är ett fyrbent djur",
         målpunkter="Använd Målpunkter-teknik (kräver specifikt område)"
     )
     @app_commands.choices(nivå=[
@@ -316,15 +295,13 @@ class CombatSlashCommands(commands.Cog):
         bas_skada: app_commands.Range[int, 1, 100],
         nivå: Optional[str] = "normal",
         område: Optional[str] = None,
-        ryttare: bool = False,
-        fyrfota: bool = False,
         målpunkter: bool = False
     ):
         """Slash command version av !hugg."""
         start_time = time.time()
 
         await self.process_slash_melee_command(
-            interaction, "hugg", nivå, område, bas_skada, ryttare, fyrfota, målpunkter
+            interaction, "hugg", nivå, område, bas_skada, målpunkter
         )
 
         execution_time = time.time() - start_time
@@ -332,8 +309,6 @@ class CombatSlashCommands(commands.Cog):
             "damage": bas_skada,
             "level": nivå,
             "location": område,
-            "mounted": ryttare,
-            "quadruped": fyrfota,
             "malpunkter": målpunkter
         }, execution_time)
 
@@ -342,8 +317,6 @@ class CombatSlashCommands(commands.Cog):
         bas_skada="Basskada INNAN rustning dras av (1-100)",
         nivå="Attacknivå om inget specifikt område väljs",
         område="Specifikt träffområde (valfritt)",
-        ryttare="Anfallet utförs från ryttare",
-        fyrfota="Målet är ett fyrbent djur",
         målpunkter="Använd Målpunkter-teknik (kräver specifikt område)"
     )
     @app_commands.choices(nivå=[
@@ -358,15 +331,13 @@ class CombatSlashCommands(commands.Cog):
         bas_skada: app_commands.Range[int, 1, 100],
         nivå: Optional[str] = "normal",
         område: Optional[str] = None,
-        ryttare: bool = False,
-        fyrfota: bool = False,
         målpunkter: bool = False
     ):
         """Slash command version av !stick."""
         start_time = time.time()
 
         await self.process_slash_melee_command(
-            interaction, "stick", nivå, område, bas_skada, ryttare, fyrfota, målpunkter
+            interaction, "stick", nivå, område, bas_skada, målpunkter
         )
 
         execution_time = time.time() - start_time
@@ -374,8 +345,6 @@ class CombatSlashCommands(commands.Cog):
             "damage": bas_skada,
             "level": nivå,
             "location": område,
-            "mounted": ryttare,
-            "quadruped": fyrfota,
             "malpunkter": målpunkter
         }, execution_time)
 
@@ -384,8 +353,6 @@ class CombatSlashCommands(commands.Cog):
         bas_skada="Basskada INNAN rustning dras av (1-100)",
         nivå="Attacknivå om inget specifikt område väljs",
         område="Specifikt träffområde (valfritt)",
-        ryttare="Anfallet utförs från ryttare",
-        fyrfota="Målet är ett fyrbent djur",
         målpunkter="Använd Målpunkter-teknik (kräver specifikt område)"
     )
     @app_commands.choices(nivå=[
@@ -400,15 +367,13 @@ class CombatSlashCommands(commands.Cog):
         bas_skada: app_commands.Range[int, 1, 100],
         nivå: Optional[str] = "normal",
         område: Optional[str] = None,
-        ryttare: bool = False,
-        fyrfota: bool = False,
         målpunkter: bool = False
     ):
         """Slash command version av !kross."""
         start_time = time.time()
 
         await self.process_slash_melee_command(
-            interaction, "kross", nivå, område, bas_skada, ryttare, fyrfota, målpunkter
+            interaction, "kross", nivå, område, bas_skada, målpunkter
         )
 
         execution_time = time.time() - start_time
@@ -416,8 +381,6 @@ class CombatSlashCommands(commands.Cog):
             "damage": bas_skada,
             "level": nivå,
             "location": område,
-            "mounted": ryttare,
-            "quadruped": fyrfota,
             "malpunkter": målpunkter
         }, execution_time)
 

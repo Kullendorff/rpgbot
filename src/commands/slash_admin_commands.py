@@ -106,13 +106,20 @@ class AdminSlashCommands(commands.Cog):
         
         try:
             guild_id = interaction.guild.id
-            session_id = f"session_{int(time.time())}"
             
             # Avsluta befintlig session om den finns
             if guild_id in self.current_sessions:
                 old_session = self.current_sessions[guild_id]
                 print(f"[SESSION] Automatisk avslutning av session {old_session['session_id']} innan ny start")
             
+            # Skapa ny session i roll_tracker först — dess returvärde är enda
+            # källan för sessions-ID:t. (Tidigare genererade cogen egna
+            # session_{epoch}-ID:n som aldrig matchade trackerns, vilket gjorde
+            # /endsession och get_session_stats döda.)
+            if self.roll_tracker.current_session is not None:
+                self.roll_tracker.end_session()
+            session_id = self.roll_tracker.start_session(beskrivning)
+
             # Skapa ny session
             session_data = {
                 'session_id': session_id,
@@ -124,12 +131,8 @@ class AdminSlashCommands(commands.Cog):
                 'events': [],
                 'roll_count': 0
             }
-            
+
             self.current_sessions[guild_id] = session_data
-            
-            # Starta session i roll_tracker
-            if hasattr(self.roll_tracker, 'start_session'):
-                self.roll_tracker.start_session(beskrivning)
             
             # Skapa bekräftelse embed
             embed = self.embed_factory.success_message(
@@ -319,9 +322,9 @@ class AdminSlashCommands(commands.Cog):
                     inline=False
                 )
             
-            # Avsluta session i roll_tracker
-            if hasattr(self.roll_tracker, 'end_session'):
-                self.roll_tracker.end_session(session_id)
+            # Avsluta session i roll_tracker. Metoden tar inga argument — den
+            # avslutar trackerns aktiva session (skapad av /startsession).
+            self.roll_tracker.end_session()
             
             # Arkivera session data
             archive_data = {

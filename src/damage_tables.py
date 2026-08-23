@@ -589,17 +589,18 @@ class DamageCalculator:
 
         # Allvarlig skada
         if actual_malpunkter:
-            # Använd vanlig T6 istället för T10 vid Målpunkter (eller hemlig manipulation)
-            roll_t10 = random.randint(1, 6)
+            # Målpunkter: extraskador slås med T6 istället för T10 enligt
+            # Krigarens väg ("för att symbolisera bättre placerade träffar").
+            roll_result = random.randint(1, 6)
         else:
-            roll_t10 = random.randint(1, 10)
-            
+            roll_result = random.randint(1, 10)
+
         for (max_val, sub_desc, effect_code, effects) in table[location]["allvarlig"]:
-            if roll_t10 <= max_val:
+            if roll_result <= max_val:
                 return DamageResult(effect_code, effects, description=sub_desc)
 
         # Om ingen rad matchade (borde ej hända)
-        raise ValueError(f"Kunde inte matcha T10-slag={roll_t10} i allvarlig skada för '{location}'.")
+        raise ValueError(f"Kunde inte matcha slag={roll_result} i allvarlig skada för '{location}'.")
 
 
 

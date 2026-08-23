@@ -24,8 +24,6 @@ En avancerad Discord-bot för tärningskast och kunskapshantering för det svens
 - **Vapenskaderegler**: Automatisk hantering av olika vapentypers skador
 
 ### 🎭 Karaktärsskapande & Session
-- **Komplett EON karaktärsskapande**: `!chargen` - 32 steg med automatisk tabellhantering
-- **Thalamur-specialsystem**: Ätter, medborgarätt och strategisk bakgrundsplacering
 - **Sessionshantering**: `/startsession namn:"Äventyr i Trinsmyra"` och `/endsession`
 - **AI-sammanfattningar**: Automatiska humoristiska sessionssammanfattningar via Claude AI
 - **Personaliserade kommentarer**: `/kommentarer` - SL kan aktivera anpassade kommentarer för spelares tärningsslag
@@ -122,14 +120,6 @@ src/
 /kommentarer status spelare:@user      # Visa spelarens inställningar
 ```
 
-### 🎭 Karaktärsskapande
-```
-!chargen             # Starta ny karaktär (32 EON-steg)
-!chargen start       # Starta ny karaktärssession
-!chargen status      # Visa nuvarande framsteg
-!chargen reset       # Återställ karaktärsskapande
-```
-
 ### 📊 Session & Admin (Slash Commands)
 ```
 /startsession namn:"sessionnamn"  # Starta spelsession
@@ -188,14 +178,12 @@ python src/main.py
 #### Steg 4: Testa i Discord
 Gå till din server och skriv:
 - `/roll tärningar:3d6` - Testa grundläggande tärning
-- `!chargen` - Starta karaktärsskapande (fortfarande prefix command)
 - `/dicehelp` - Se alla kommandon
 
 **Vad fungerar utan AI:**
 - ✅ **Alla tärningskommandon**: `/roll`, `/ex`, `/count`, `/chance` 
 - ✅ **Stridsystem**: `/hugg`, `/stick`, `/kross`, `/fummel`
 - ✅ **Statistik**: `/stats`, `/mystats` 
-- ✅ **Karaktärsskapande**: `!chargen` (komplett EON system)
 - ✅ **Sessionshantering**: `/startsession`, `/endsession` (utan AI-sammanfattning)
 - ✅ **Hjälpkommandon**: `/dicehelp`, grundläggande `/regel`
 - ✅ **Kommentarsystem**: `/kommentarer` (personaliserade kommentarer)

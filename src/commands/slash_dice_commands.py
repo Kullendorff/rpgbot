@@ -164,10 +164,11 @@ class DiceSlashCommands(commands.Cog):
                     final_results[min_index] = sides
                     total = sum(final_results) + modifier
             
-            # Bedöm framgång
+            # Bedöm framgång — EON är roll-under: lägre total = bättre.
+            # Samma bedömning som /ex, /secret_roll, legacy !roll och dice_engine.
             success = None
             if mål is not None:
-                success = total >= mål
+                success = total <= mål
             
             # Spara i statistik (använd final_results)
             self.roll_tracker.log_roll(

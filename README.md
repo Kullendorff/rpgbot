@@ -52,13 +52,13 @@ Regler verifierade mot källboken (WEG40120), inte bara OCR-texten — se `src/s
 
 ```
 src/
-├── main.py                 # Bot entry point (200 rader, ner från 1300+)
-├── commands/               # Kommandomoduler
-│   ├── dice_commands.py    # Tärningskommandon (roll, ex, count, chance)
-│   ├── admin_commands.py   # Admin/GM kommandon (secret, session)
-│   ├── knowledge_commands.py # AI kunskapskommandon (ask, sök, allt)
-│   ├── combat_commands.py  # Stridskommandon (hugg, stick, kross)
-│   └── utility_commands.py # Hjälpkommandon (stats, regel, dicehelp)
+├── main.py                 # Bot entry point
+├── commands/               # Slash-kommandomoduler
+│   ├── slash_dice_commands.py    # Tärningskommandon (/roll, /ex, /count, /chance)
+│   ├── slash_admin_commands.py   # Admin/GM kommandon (/secret_roll, session)
+│   ├── slash_knowledge_commands.py # AI kunskapskommandon (/ask, /sök, /allt)
+│   ├── slash_combat_commands.py  # Stridskommandon (/hugg, /stick, /kross)
+│   └── slash_utility_commands.py # Hjälpkommandon (/stats, /regel, /dicehelp)
 ├── core/                   # Kärnfunktionalitet
 │   ├── constants.py        # Globala konstanter och konfiguration
 │   ├── dice_parser.py      # Avancerad DiceSpec parser med säkerhet

@@ -1,8 +1,10 @@
-discord.py>=2.0.0
-python-dotenv
-anthropic>=0.10.0
-sentence-transformers
-pinecone-client==2.2.4
-numpy
-tiktoken
-whoosh
+discord.py>=2.5.2,<3.0
+python-dotenv==1.1.0
+anthropic>=0.50.0,<1.0
+sentence-transformers==4.1.0
+# OBS: koden använder `from pinecone import Pinecone` som kräver >=3.0
+# (2.x hade pinecone.init()-API:t) — pinna aldrig ned till 2.x igen.
+pinecone>=5.0.0
+numpy==2.2.5
+tiktoken==0.9.0
+whoosh==2.7.4

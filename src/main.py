@@ -32,15 +32,8 @@ from hit_tables import WeaponType  # om du vill ha typ-checking
 from fumble_tables import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
 
 # Import för ytterligare moduler
-import stats_commands
 # Import för Skjut dom i huvudet
 from skjutdomihuvudet import commands as sdih_commands
-# Import för nya kommandomoduler
-from commands import admin_commands
-from commands.dice_commands import register_dice_commands
-from commands.knowledge_commands import register_knowledge_commands
-from commands.combat_commands import register_combat_commands
-from commands.utility_commands import register_utility_commands
 
 # Import för nya modulära komponenter
 from core.constants import (
@@ -202,33 +195,9 @@ async def on_ready() -> None:
         register_debug_command(bot)
         logger.debug("DEBUG MODE: Debug kommando registrerat")
 
-    # Registrera prefix commands FÖRE sync för bättre struktur
-    # Även om prefix commands inte behöver synkas, är det bättre att registrera dem först
-
-    # Registrera statistikkommandona
-    stats_commands.register_commands(bot, roll_tracker, color_handler, embed_factory)
-    logger.info("Statistikkommandon har registrerats (allstats, mystatsall).")
-
     # Registrera Skjut dom i huvudet-kommandon
     sdih_commands.register_commands(bot, roll_tracker, color_handler)
     logger.info("Skjut dom i huvudet-kommandon har registrerats (rull, fördel, nackdel, etc.).")
-
-    # Registrera admin-kommandon
-    admin_commands.register_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    logger.info("Admin-kommandon har registrerats (startsession, endsession, showsession, secret).")
-
-    # Registrera nya modulära kommandon
-    register_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    logger.info("Tärningskommandon har registrerats (roll, ex, count, chance).")
-
-    register_knowledge_commands(bot, knowledge_base, color_handler, embed_factory)
-    logger.info("Kunskapskommandon har registrerats (ask, allt, sök).")
-
-    register_combat_commands(bot, combat_manager, color_handler, embed_factory)
-    logger.info("Stridskommandon har registrerats (hugg, stick, kross, fummel).")
-
-    register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
-    logger.info("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
 
     # Registrera spindelkommandon (gigantspindlar och små spindlar).
     # Flyttade till en egen paketmodul (src/spindel/) och avstängda tills

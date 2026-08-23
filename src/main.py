@@ -100,6 +100,36 @@ from core.manipulation_manager import ManipulationManager
 manipulation_manager = ManipulationManager()
 
 
+# Global felhantering: utan dessa fick oväntade fel användaren att se tysta
+# "The application did not respond" eftersom ingen handler fångade dem.
+# Medvetet minimalt — per-cog-hantering och _send_error()-helpers är
+# robusthetsfasen, inte detta skyddsnät.
+@bot.event
+async def on_app_command_error(interaction: discord.Interaction, error: discord.app_commands.AppCommandError) -> None:
+    """Fångar oväntade fel i alla slash-kommandon: logga full stacktrace, svara generiskt."""
+    cmd_name = getattr(getattr(interaction, "command", None), "name", "?")
+    logger.error(f"Oväntat fel i /{cmd_name}: {error}", exc_info=error)
+    try:
+        if interaction.response.is_done():
+            await interaction.followup.send("Ett internt fel uppstod. Det har loggats.", ephemeral=True)
+        else:
+            await interaction.response.send_message("Ett internt fel uppstod. Det har loggats.", ephemeral=True)
+    except discord.HTTPException:
+        pass
+
+
+@bot.event
+async def on_command_error(ctx: commands.Context, error: commands.CommandError) -> None:
+    """Fångar oväntade fel i prefix-kommandon: logga full stacktrace, meddela användaren."""
+    if isinstance(error, commands.CommandNotFound):
+        return  # okända kommandon hanteras tyst, som tidigare
+    logger.error(f"Oväntat fel i '{ctx.command}': {error}", exc_info=error)
+    try:
+        await ctx.send("Ett internt fel uppstod. Det har loggats.")
+    except discord.HTTPException:
+        pass
+
+
 @bot.event
 async def on_ready() -> None:
     """Skriver ut ett meddelande när boten har kopplat upp sig mot Discord."""

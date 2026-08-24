@@ -153,7 +153,7 @@ async def on_ready() -> None:
         logger.info("Star Wars D6 kommandon registrerade (/sw_slag, /sw_motstand, /sw_svarighet, /sw_init).")
 
     # Registrera EON kommandon (samlade efter övriga spelsystem: dg -> db -> sw -> eon)
-    if FEATURE_FLAGS["slash_combat_enabled"]:
+    if FEATURE_FLAGS["slash_eon_enabled"]:
         from eon.commands import register_slash_eon_commands
         await register_slash_eon_commands(
             bot, combat_manager, roll_tracker, color_handler, embed_factory

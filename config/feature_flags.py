@@ -8,8 +8,8 @@ FEATURE_FLAGS = {
     # Dice commands
     "slash_dice_enabled": True,          # /roll, /ex, /count, /chance
 
-    # Combat commands
-    "slash_combat_enabled": True,        # /hugg, /stick, /kross, /fummel
+    # EON commands
+    "slash_eon_enabled": True,           # /eon_hugg, /eon_stick, /eon_kross, /eon_fummel, /eon_regel, /eon_hoj
 
     # Admin commands
     "slash_admin_enabled": True,         # /startsession, /endsession etc
@@ -46,11 +46,13 @@ COMMAND_FLAGS = {
     "count": True,     # /count kommando aktiverat
     "chance": True,    # /chance kommando aktiverat
     
-    # Combat commands - aktivera för test
-    "hugg": True,
-    "stick": True,
-    "kross": True,
-    "fummel": True,
+    # EON commands - aktivera för test
+    "eon_hugg": True,
+    "eon_stick": True,
+    "eon_kross": True,
+    "eon_fummel": True,
+    "eon_regel": True,
+    "eon_hoj": True,
 
     # Admin commands - aktiverade för GM
     "startsession": True,
@@ -61,8 +63,6 @@ COMMAND_FLAGS = {
     # Utility commands - aktivera för test
     "stats": True,
     "mystats": True,
-    "regel": True,
-    "höj": True,
     "help": True,
     
     # Delta Green commands

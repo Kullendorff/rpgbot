@@ -79,10 +79,10 @@ class UtilitySlashCommands(commands.Cog):
                     name="⚔️ Stridskommandon",
                     value=(
                         "**Attacktyper:**\n"
-                        "`/hugg` - Hugganfall med träfftabeller\n"
-                        "`/stick` - Stickanfall med precision\n"
-                        "`/kross` - Krossanfall för trubbiga vapen\n"
-                        "`/fummel` - Slå på fummeltabeller\n\n"
+                        "`/eon_hugg` - Hugganfall med träfftabeller\n"
+                        "`/eon_stick` - Stickanfall med precision\n"
+                        "`/eon_kross` - Krossanfall för trubbiga vapen\n"
+                        "`/eon_fummel` - Slå på fummeltabeller\n\n"
                         "**Modifierare:** Ryttare, fyrbent mål, målpunkter"
                     ),
                     inline=False
@@ -96,8 +96,8 @@ class UtilitySlashCommands(commands.Cog):
                         "`/stats` - Sessionstatistik för alla spelare\n"
                         "`/mystats` - Din personliga statistik\n\n"
                         "**Verktyg:**\n"
-                        "`/regel` - Visa sparade regler\n"
-                        "`/höj` - Förbättringsslag för färdigheter"
+                        "`/eon_regel` - Visa sparade regler\n"
+                        "`/eon_hoj` - Förbättringsslag för färdigheter"
                     ),
                     inline=False
                 )

@@ -749,8 +749,8 @@ async def register_slash_eon_commands(bot, combat_manager, roll_tracker, color_h
     """
     from config.feature_flags import is_command_enabled
 
-    # Kontrollera om EON-stridskommandona är aktiverade
-    if not is_command_enabled("hugg", "combat"):
+    # Kontrollera om EON-kommandona är aktiverade
+    if not is_command_enabled("eon_hugg", "eon"):
         logger.info("EON-stridskommandon är inte aktiverade enligt feature flags")
         return
 

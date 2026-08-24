@@ -25,11 +25,12 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 
 **src/main.py** - Main bot entry point with Discord slash command handlers. Uses discord.py with slash commands (`/`). Integrates with local SQLite for roll tracking.
 
-**Combat System** - Modular combat mechanics:
-- `src/combat_manager.py` - Main combat orchestration
-- `src/hit_system.py` - Hit calculation logic
-- `src/damage_tables.py` - Damage calculation by weapon type
-- `src/fumble_tables.py` - Critical failure handling
+**EON Module** - EON mechanics as its own package (`src/eon/`, like deltagreen/dragonbane/starwars):
+- `src/eon/combat_manager.py` - Main combat orchestration
+- `src/eon/hit_tables.py` - Hit location calculation
+- `src/eon/damage_tables.py` - Damage calculation by weapon type
+- `src/eon/fumble_tables.py` - Critical failure handling
+- `src/eon/commands.py` - `EonCommands` Cog (combat + rules + improvement commands)
 
 **Roll Tracking** - SQLite database (`data/rolls.db`) tracks all dice rolls for statistics. Supports "perfect rolls" and "fumbles" for unlimited d6 rolls (`/ex` command).
 
@@ -41,8 +42,8 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 ### Key Features (All Slash Commands)
 
 - **Dice Commands**: `/roll`, `/ex` (unlimited d6), `/count`, `/chance`
-- **Combat**: `/hugg`, `/stick`, `/kross`, `/fummel` - Weapon attack simulation
-- **Rules**: `/regel` - Quick rule lookups from `data/rules/`
+- **EON**: `/eon_hugg`, `/eon_stick`, `/eon_kross`, `/eon_fummel` - Weapon attack simulation
+- **EON Rules**: `/eon_regel` - Quick rule lookups from `data/rules/`; `/eon_hoj` - improvement rolls
 - **Stats**: `/stats`, `/mystats` - Roll statistics and session tracking
 - **GM Commands**: `/startsession`, `/endsession`, `/secret_roll`, `/gm_override`
 

@@ -46,8 +46,8 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 ### Key Features (All Slash Commands)
 
 - **Dice Commands**: `/roll`, `/ex` (unlimited d6), `/count`, `/chance`
-- **Combat**: `/hugg`, `/stick`, `/kross`, `/fummel` - Weapon attack simulation
-- **Rules**: `/regel` - Quick rule lookups from `data/rules/`
+- **EON** (paket `src/eon/`): `/eon_hugg`, `/eon_stick`, `/eon_kross`, `/eon_fummel` - Weapon attack simulation
+- **EON Rules/Improvement** (`src/eon/`): `/eon_regel` - Quick rule lookups from `data/rules/`; `/eon_hoj` - improvement rolls
 - **Stats**: `/stats`, `/mystats` - Roll statistics and session tracking
 - **GM Commands**: `/startsession`, `/endsession`, `/showsession`, `/secret_roll`, `/secret_ex`, `/secret_count`, `/gm_override`, `/session_rollback`, `/player_stats`
 - **Utility**: `/help`, `/allstats`, `/mystatsall`
@@ -68,11 +68,13 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 
 - `src/commands/` - Slash command implementations (Cog-based, EON-only unless noted):
   - `slash_dice_commands.py` - Dice rolling with autocomplete
-  - `slash_combat_commands.py` - Combat mechanics
   - `slash_admin_commands.py` - GM/admin tools
   - `slash_utility_commands.py` - Utility commands
   - `slash_manipulation_commands.py` - Manipulation mechanics (`app_commands.Group`, not a Cog; bot-wide feature, not EON-specific)
   - `slash_comment_commands.py` - Comment/annotation commands (`app_commands.Group`, not a Cog; bot-wide feature, not EON-specific)
+- `src/eon/` - EON som eget paket (likt deltagreen/dragonbane/starwars):
+  - `hit_tables.py`, `damage_tables.py`, `fumble_tables.py`, `combat_manager.py` - Ren mekanik, re-exponerad via `__init__.py` (12 symboler, inga Discord-importer)
+  - `commands.py` - `EonCommands`-cogen: stridskommandona + `/eon_regel` + `/eon_hoj`; `register_slash_eon_commands`
 
 - `src/deltagreen/` - Delta Green RPG module (d100 percentile), includes bond-projection mechanics (`san_check_cache.py`)
 - `src/dragonbane/` - Dragonbane (Drakar och Demoner) RPG module, `dice.py` + `commands.py` (Cog), modul av Jonas
@@ -112,7 +114,7 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 - Extract `parse_effect_code()` to shared utility (duplicated in `damage_tables.py`, `src/spindel/spider_damage_tables.py`, `src/spindel/small_spider_tables.py` — lägre prioritet nu när spindel är avstängd; kräver regelbeslut eftersom else-grenen skiljer sig semantiskt)
 - Split large slash-command files (`slash_admin_commands.py` 1304 rader, `slash_utility_commands.py` 1099 rader, `deltagreen/commands.py`)
 - Migrate SDIH to slash commands
-- **Planerat: modularisera EON-kommandon till `src/eon/` med fullt namnbyte** (`/eon_roll` istället för `/roll`, etc.) — likt dragonbane/starwars/deltagreen. Medvetet inte påbörjat än. Gör legacy-prefix-borttagningen (punkten ovan) FÖRST, annars dubbelarbete. Notera vid genomförande: 23 av 29 kommandon har generiska namn (`/roll`, `/help`, `/stats`, `/startsession`...) utan alias-stöd i discord.py — namnbytet slår igenom instant vid nästa `bot.tree.sync()`, ingen mjuk övergång, spelarna måste lära om sig direkt. `roll_tracker.py` delas med SDIH och kan inte flytta rakt av; `color_handler`/`embed_factory` måste stanna delade.
+- **Genomfört (2026-08-24, branch `eon-modul`): EON modulariserad till `src/eon/`** — mekaniken (hit_tables, damage_tables, fumble_tables, combat_manager) + `EonCommands`-cogen, plan/bollplank i `C:\oxen-launch`. Namnbyte enbart för de sex EON-mekanikkommandona (`/eon_hugg`, `/eon_stick`, `/eon_kross`, `/eon_fummel`, `/eon_regel`, `/eon_hoj`); de generiska kommandona (`/roll`, `/help`, `/stats`, `/startsession`...) var aldrig del av genomförandet. `roll_tracker.py`/`color_handler`/`embed_factory` stannar delat. Namnbytet slår igenom vid nästa `bot.tree.sync()` — instant om `GUILD_ID` är satt, annars upp till ~1 h propagation.
 
 ---
 

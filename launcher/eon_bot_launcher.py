@@ -282,8 +282,8 @@ class EONBotLauncher(QMainWindow):
         <ul>
             <li><b>Tärningskast:</b> !roll, !ex, !count</li>
             <li><b>Hemliga tärningskast:</b> !secret</li>
-            <li><b>Regler:</b> !regel</li>
-            <li><b>Stridssimulering:</b> !hugg, !stick, !kross, !fummel</li>
+            <li><b>Regler:</b> /eon_regel</li>
+            <li><b>Stridssimulering:</b> /eon_hugg, /eon_stick, /eon_kross, /eon_fummel</li>
             <li><b>Statistik:</b> !stats, !mystats</li>
             <li><b>Sessionshantering:</b> !startsession, !endsession</li>
         </ul>

@@ -13,11 +13,11 @@ En avancerad Discord-bot för tärningskast och regeluppslag för det svenska ro
 - **Detaljerad statistik**: `/stats`, `/mystats` spårar alla slag
 
 ### 📚 Regeluppslag
-- **Regelreferenser**: `/regel namn:strid` för snabba regeluppslag från `data/rules/`
+- **Regelreferenser**: `/eon_regel namn:strid` för snabba regeluppslag från `data/rules/`
 
 ### ⚔️ Stridsystem
-- **Attacksimuleringar**: `/hugg`, `/stick`, `/kross` med realistiska skadeberäkningar
-- **Fummeltabeller**: `/fummel` för kritiska misslyckanden
+- **Attacksimuleringar**: `/eon_hugg`, `/eon_stick`, `/eon_kross` med realistiska skadeberäkningar
+- **Fummeltabeller**: `/eon_fummel` för kritiska misslyckanden
 - **Vapenskaderegler**: Automatisk hantering av olika vapentypers skador
 
 ### 🎭 Karaktärsskapande & Session
@@ -52,8 +52,8 @@ src/
 ├── commands/               # Slash-kommandomoduler
 │   ├── slash_dice_commands.py    # Tärningskommandon (/roll, /ex, /count, /chance)
 │   ├── slash_admin_commands.py   # Admin/GM kommandon (/secret_roll, session)
-│   ├── slash_combat_commands.py  # Stridskommandon (/hugg, /stick, /kross)
-│   └── slash_utility_commands.py # Hjälpkommandon (/stats, /regel, /dicehelp)
+│   └── slash_utility_commands.py # Hjälpkommandon (/stats, /dicehelp)
+├── eon/                    # EON som eget paket: mekanik + EonCommands (/eon_hugg, /eon_regel ...)
 ├── core/                   # Kärnfunktionalitet
 │   ├── constants.py        # Globala konstanter och konfiguration
 │   ├── dice_parser.py      # Avancerad DiceSpec parser med säkerhet
@@ -92,15 +92,15 @@ src/
 
 ### 📚 Regler (Slash Commands)
 ```
-/regel namn:kategori       # Regelreferens från data/rules/
+/eon_regel namn:kategori   # Regelreferens från data/rules/
 ```
 
 ### ⚔️ Stridskommandon (Slash Commands)
 ```
-/hugg                # Hugtvapen-attack
-/stick               # Stickvapenattack  
-/kross               # Krossvapenattack
-/fummel              # Fummeltabell
+/eon_hugg            # Hugtvapen-attack
+/eon_stick           # Stickvapenattack  
+/eon_kross           # Krossvapenattack
+/eon_fummel          # Fummeltabell
 ```
 
 ### 🎭 SL-verktyg (Slash Commands)
@@ -170,10 +170,10 @@ Gå till din server och skriv:
 
 **Allt fungerar utan externa API:er:**
 - ✅ **Alla tärningskommandon**: `/roll`, `/ex`, `/count`, `/chance` 
-- ✅ **Stridsystem**: `/hugg`, `/stick`, `/kross`, `/fummel`
+- ✅ **Stridsystem**: `/eon_hugg`, `/eon_stick`, `/eon_kross`, `/eon_fummel`
 - ✅ **Statistik**: `/stats`, `/mystats` 
 - ✅ **Sessionshantering**: `/startsession`, `/endsession`
-- ✅ **Hjälpkommandon**: `/dicehelp`, grundläggande `/regel`
+- ✅ **Hjälpkommandon**: `/dicehelp`, grundläggande `/eon_regel`
 - ✅ **Kommentarsystem**: `/kommentarer` (personaliserade kommentarer)
 
 #### 🔧 Vanliga Problem & Lösningar

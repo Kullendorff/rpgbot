@@ -196,9 +196,6 @@ async def register_slash_small_spider_commands(bot, color_handler):
             
             await interaction.response.send_message(embed=embed)
 
-            # Generera AI-beskrivning
-            ai_description = await manager.generate_ai_description(spider, result)
-
             # GM-RAPPORT (privat DM)
             gm_lines = []
             gm_lines.append("═" * 50)
@@ -220,11 +217,6 @@ async def register_slash_small_spider_commands(bot, color_handler):
             if result.effects:
                 gm_lines.append(f"Effekter: {', '.join(result.effects)}")
 
-            if ai_description:
-                gm_lines.append("")
-                gm_lines.append("【 AI-BESKRIVNING 】")
-                gm_lines.append(f'"{ai_description}"')
-            
             gm_lines.append("")
             gm_lines.append("─" * 50)
             gm_lines.append("【 TOTAL SKADA 】")

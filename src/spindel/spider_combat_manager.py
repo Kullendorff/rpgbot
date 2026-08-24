@@ -19,8 +19,6 @@ from .spider_damage_tables import (
     SPIDER_SUBLOCATION_TABLES,
     parse_effect_code
 )
-import anthropic
-from core.constants import CLAUDE_MODEL
 
 @dataclass
 class SpiderDamageResult:
@@ -82,13 +80,7 @@ class SpiderCombatManager:
         
         self.active_effects = []
         self.hit_history = []
-        
-        # Claude API för AI-beskrivningar
-        self.anthropic_client = None
-        anthropic_key = os.getenv("ANTHROPIC_API_KEY")
-        if anthropic_key:
-            self.anthropic_client = anthropic.Anthropic(api_key=anthropic_key)
-        
+
         # Ladda persistent data
         self._load_from_file()
     
@@ -487,49 +479,7 @@ class SpiderCombatManager:
             return f"{self.legs_destroyed} ben förstörda - Halv hastighet"
         else:
             return f"{self.legs_destroyed} ben förstörda - Kan knappt röra sig"
-    
-    async def _generate_ai_description(self, result: SpiderDamageResult) -> Optional[str]:
-        """Genererar AI-driven dramatisk beskrivning"""
-        if not self.anthropic_client:
-            return None
-        
-        try:
-            context = {
-                "weapon": result.weapon_type,
-                "location": result.sub_location,
-                "damage": result.effective_damage,
-                "description": result.description,
-                "effects": result.effects
-            }
-            
-            prompt = f"""Du är en dramatisk berättare för ett mörkt fantasy-rollspel i EON-universumet.
-Beskriv följande attack mot en gigantisk spindel i 2-3 meningar.
-Var actionbetonad, visuell och inkludera ljud, rörelser och reaktioner.
 
-MILJÖ: Striden utspelar sig i en snötyngd nordisk skog med höga granar och klippformationer i närheten.
-Snön yrrar, träden knakar och klipporna kastar mörka skuggor.
-
-Attack:
-- Vapentyp: {context['weapon']}
-- Träffområde: {context['location']}
-- Effektiv skada: {context['damage']}
-- Resultat: {context['description']}
-- Effekter: {', '.join(context['effects']) if context['effects'] else 'Inga särskilda effekter'}
-
-Skriv ENDAST beskrivningen på svenska, ingen metakommentar eller annan text."""
-
-            message = self.anthropic_client.messages.create(
-                model=CLAUDE_MODEL,
-                max_tokens=300,
-                messages=[{"role": "user", "content": prompt}]
-            )
-            
-            return message.content[0].text.strip()
-        
-        except Exception as e:
-            print(f"Fel vid AI-beskrivning: {e}")
-            return None
-    
     def format_gm_report(self, last_result: SpiderDamageResult, ai_description: Optional[str] = None) -> str:
         """Formaterar detaljerad rapport för GM"""
         lines = []

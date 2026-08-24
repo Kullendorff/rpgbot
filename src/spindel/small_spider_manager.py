@@ -11,8 +11,6 @@ import random
 import os
 from dataclasses import dataclass
 from typing import Optional, Dict, List, Tuple
-import anthropic
-from core.constants import CLAUDE_MODEL
 
 from .small_spider_tables import (
     SMALL_SPIDER_DAMAGE_TABLES,
@@ -130,12 +128,6 @@ class SmallSpiderManager:
         self.used_names: set = set()  # Namn som används av levande spindlar
         self.next_id = 1
 
-        # Claude API för AI-beskrivningar
-        self.anthropic_client = None
-        anthropic_key = os.getenv("ANTHROPIC_API_KEY")
-        if anthropic_key:
-            self.anthropic_client = anthropic.Anthropic(api_key=anthropic_key)
-    
     def _get_available_name(self) -> Optional[str]:
         """Hämtar ett ledigt namn från listan"""
         available = [name for name in SMALL_SPIDER_NAMES if name not in self.used_names]
@@ -301,58 +293,6 @@ class SmallSpiderManager:
         )
         
         return result
-
-    async def generate_ai_description(self, spider: SmallSpider, result: SmallSpiderDamageResult) -> Optional[str]:
-        """Genererar AI-driven dramatisk beskrivning för småspindel"""
-        if not self.anthropic_client:
-            return None
-
-        try:
-            context = {
-                "spider_name": spider.name,
-                "weapon": result.weapon_type,
-                "location": result.hit_location,
-                "damage": result.effective_damage,
-                "description": result.description,
-                "effects": result.effects,
-                "is_dead": result.is_dead,
-                "is_unconscious": result.is_unconscious
-            }
-
-            status = ""
-            if result.is_dead:
-                status = f"{spider.name} dog av träffen."
-            elif result.is_unconscious:
-                status = f"{spider.name} föll medvetslös."
-
-            prompt = f"""Du är en dramatisk berättare för ett mörkt fantasy-rollspel i EON-universumet.
-Beskriv följande attack mot en liten spindel vid namn {context['spider_name']} i 2-3 korta meningar.
-Var actionbetonad, visuell och inkludera ljud, rörelser och reaktioner.
-
-MILJÖ: Striden utspelar sig i en snötyngd nordisk skog med höga granar och klippformationer i närheten.
-Snön yrrar, träden knakar och klipporna kastar mörka skuggor.
-
-Attack mot {context['spider_name']}:
-- Vapentyp: {context['weapon']}
-- Träffområde: {context['location']}
-- Effektiv skada: {context['damage']}
-- Resultat: {context['description']}
-- Effekter: {', '.join(context['effects']) if context['effects'] else 'Inga särskilda effekter'}
-{f'- SLUTSTATUS: {status}' if status else ''}
-
-Skriv ENDAST beskrivningen på svenska, ingen metakommentar eller annan text."""
-
-            message = self.anthropic_client.messages.create(
-                model=CLAUDE_MODEL,
-                max_tokens=200,
-                messages=[{"role": "user", "content": prompt}]
-            )
-
-            return message.content[0].text.strip()
-
-        except Exception as e:
-            print(f"Fel vid AI-beskrivning för småspindel: {e}")
-            return None
 
     def reset(self):
         """Återställer alla spindlar"""

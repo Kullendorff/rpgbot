@@ -5,6 +5,7 @@ Del av paketet src/eon/: ren mekanik ligger i hit_tables/damage_tables/
 fumble_tables/combat_manager, detta är Discord-lagret.
 """
 
+import os
 import random
 import time
 import logging
@@ -19,6 +20,9 @@ logger = logging.getLogger(__name__)
 
 # Import migration helpers
 from migration.helper import MigrationHelper
+
+# Delad infrastruktur (absoluta importer)
+from core.dice_engine import unlimited_d6s
 
 # Relativa importer inuti paketet
 from .combat_manager import DamageType, WeaponType
@@ -162,7 +166,16 @@ class EonCommands(commands.Cog):
         
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
-    
+
+        # Configure paths for rules folder
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(script_dir))
+        self.RULES_FOLDER = os.path.join(project_root, "data", "rules")
+
+        # Create rules folder if it doesn't exist
+        if not os.path.exists(self.RULES_FOLDER):
+            os.makedirs(self.RULES_FOLDER)
+
     async def location_autocomplete(
         self,
         interaction: discord.Interaction,
@@ -455,6 +468,271 @@ class EonCommands(commands.Cog):
             
             await self.helper.send_response(interaction, embed=embed)
             
+        except Exception as e:
+            embed = await self.helper.create_error_response(
+                interaction.user.id,
+                f"Ett oväntat fel inträffade: {str(e)}"
+            )
+            await self.helper.send_response(interaction, embed=embed)
+
+
+    async def rule_autocomplete(
+        self,
+        interaction: discord.Interaction,
+        current: str,
+    ) -> List[app_commands.Choice[str]]:
+        """Autocomplete för regelnamn och nummer."""
+        try:
+            rules = os.listdir(self.RULES_FOLDER)
+            txt_rules = sorted([rule for rule in rules if rule.endswith('.txt')])
+            rule_names = [os.path.splitext(rule)[0] for rule in txt_rules]
+
+            matches = []
+
+            # Om input är numerisk, föreslå nummer
+            if current.isdigit():
+                for i, rule_name in enumerate(rule_names, 1):
+                    if str(i).startswith(current):
+                        matches.append(
+                            app_commands.Choice(name=f"{i}. {rule_name.title()}", value=str(i))
+                        )
+            else:
+                # Föreslå namn och nummer som matchar
+                for i, rule_name in enumerate(rule_names, 1):
+                    if current.lower() in rule_name.lower():
+                        # Lägg till både nummer och namn som alternativ
+                        matches.append(
+                            app_commands.Choice(name=f"{i}. {rule_name.title()}", value=str(i))
+                        )
+                        matches.append(
+                            app_commands.Choice(name=rule_name.title(), value=rule_name)
+                        )
+
+            return matches[:25]  # Discord limit
+        except Exception as e:
+            logger.error(f"Fel vid regel autocomplete: {e}")
+            return []
+
+    @app_commands.command(name="regel", description="Visa sparade regler från regelbiblioteket")
+    @app_commands.describe(
+        val="Regelnamn eller nummer (t.ex. 'strid' eller '1')"
+    )
+    @app_commands.autocomplete(val=rule_autocomplete)
+    async def rule_slash(
+        self,
+        interaction: discord.Interaction,
+        val: Optional[str] = None
+    ):
+        """Slash command version av !regel med autocomplete."""
+        start_time = time.time()
+
+        try:
+            rules = os.listdir(self.RULES_FOLDER)
+            txt_rules = sorted([rule for rule in rules if rule.endswith('.txt')])  # Sorterad för konsistent numrering
+
+            if not val:
+                # Lista alla regler med nummer
+                if not txt_rules:
+                    embed = await self.helper.create_error_response(
+                        interaction.user.id,
+                        "Inga regler tillgängliga",
+                        "Regelbiblioteket är tomt"
+                    )
+                    await self.helper.send_response(interaction, embed=embed)
+                    return
+
+                embed = self.embed_factory.admin_message(
+                    interaction.user.id,
+                    "📚 Tillgängliga Regler",
+                    f"Totalt {len(txt_rules)} regler i biblioteket"
+                )
+
+                # Skapa numrerad lista
+                rule_names = [os.path.splitext(rule)[0] for rule in txt_rules]
+                rule_lines = []
+
+                for i, rule_name in enumerate(rule_names, 1):
+                    rule_lines.append(f"`{i}.` **{rule_name.title()}**")
+                    if i >= 20:  # Begränsa för att inte överskrida Discord-gränser
+                        rule_lines.append(f"... och {len(rule_names) - 20} till")
+                        break
+
+                rule_text = "\n".join(rule_lines)
+
+                embed.add_field(
+                    name="Regelnamn",
+                    value=rule_text,
+                    inline=False
+                )
+
+                embed.set_footer(text="Använd /regel val:1 eller /regel val:regelnamn för att visa specifik regel")
+
+            else:
+                # Visa specifik regel - hantera både nummer och namn
+                rule_file = None
+                rule_name = None
+
+                # Kolla om input är ett nummer
+                if val.isdigit():
+                    rule_num = int(val)
+                    if 1 <= rule_num <= len(txt_rules):
+                        rule_file = txt_rules[rule_num - 1]  # Konvertera från 1-indexerad till 0-indexerad
+                        rule_name = os.path.splitext(rule_file)[0]
+                    else:
+                        embed = await self.helper.create_error_response(
+                            interaction.user.id,
+                            f"Regel nummer {rule_num} finns inte",
+                            f"Tillgängliga regler: 1-{len(txt_rules)}. Använd /regel för att se listan."
+                        )
+                        await self.helper.send_response(interaction, embed=embed)
+                        return
+                else:
+                    # Hantera som namn
+                    rule_name = val
+                    rule_file = f"{rule_name}.txt"
+                    if rule_file not in txt_rules:
+                        # Försök hitta match
+                        matches = [rule for rule in txt_rules if rule_name.lower() in rule.lower()]
+                        if matches:
+                            rule_file = matches[0]
+                            rule_name = os.path.splitext(rule_file)[0]
+                        else:
+                            embed = await self.helper.create_error_response(
+                                interaction.user.id,
+                                f"Regel '{rule_name}' hittades inte",
+                                f"Tillgängliga regler: {', '.join([os.path.splitext(r)[0] for r in txt_rules[:5]])}... Använd /regel för fullständig lista."
+                            )
+                            await self.helper.send_response(interaction, embed=embed)
+                            return
+
+                # Läs regelfilen
+                with open(os.path.join(self.RULES_FOLDER, rule_file), "r", encoding="utf-8") as f:
+                    content = f.read()
+
+                embed = self.embed_factory.admin_message(
+                    interaction.user.id,
+                    f"📜 Regel: {rule_name.title()}",
+                    content[:2000] if len(content) <= 2000 else content[:1997] + "..."
+                )
+
+                if len(content) > 2000:
+                    embed.set_footer(text="Regel trunkerad - fulltext för lång för Discord")
+
+            execution_time = time.time() - start_time
+            await self.helper.log_command_usage(interaction, "regel", {
+                "rule_name": val if val else "all_rules",
+                "rules_available": len(txt_rules)
+            }, execution_time)
+
+            await self.helper.send_response(interaction, embed=embed)
+
+        except Exception as e:
+            embed = await self.helper.create_error_response(
+                interaction.user.id,
+                f"Ett oväntat fel inträffade: {str(e)}"
+            )
+            await self.helper.send_response(interaction, embed=embed)
+
+    @app_commands.command(name="höj", description="Gör förbättringsslag för färdigheter enligt EON-regler")
+    @app_commands.describe(
+        värde="Nuvarande färdighetsvärde (1-30)",
+        lättlärd="Färdigheten är lättlärd (Ob4T6 istället för Ob3T6)"
+    )
+    async def improvement_slash(
+        self,
+        interaction: discord.Interaction,
+        värde: app_commands.Range[int, 1, 30],
+        lättlärd: bool = False
+    ):
+        """Slash command version av !höj."""
+        start_time = time.time()
+
+        try:
+            # Sätt antal tärningar beroende på om färdigheten är lättlärd
+            num_dice = 4 if lättlärd else 3
+
+            # Slå obegränsade T6
+            all_rolls, total, initial_rolls = unlimited_d6s(num_dice)
+
+            # Kontrollera om förbättringen lyckas (måste slå lika med eller över)
+            success = total >= värde
+            new_skill = värde + 1 if success else värde
+
+            # Skapa resultat embed
+            embed = self.embed_factory.dice_result(
+                interaction.user.id,
+                interaction.user.display_name,
+                "Förbättringsslag",
+                f"{num_dice}d6 (obegränsat)",
+                initial_rolls,
+                total,
+                värde,
+                success
+            )
+
+            # Lägg till förbättringsspecifik information
+            embed.add_field(
+                name="🎓 Färdighetsstatus",
+                value=f"{'Lättlärd' if lättlärd else 'Normal'} färdighet",
+                inline=True
+            )
+
+            embed.add_field(
+                name="📊 Nuvarande värde",
+                value=str(värde),
+                inline=True
+            )
+
+            embed.add_field(
+                name="🎯 Resultat",
+                value=f"{'✅ Förbättring!' if success else '❌ Ingen förbättring'}",
+                inline=True
+            )
+
+            if success:
+                embed.add_field(
+                    name="⬆️ Nytt färdighetsvärde",
+                    value=f"**{new_skill}** (+1)",
+                    inline=False
+                )
+            else:
+                embed.add_field(
+                    name="ℹ️ Krav för förbättring",
+                    value=f"Behöver slå {värde} eller över (slog {total})",
+                    inline=False
+                )
+
+            # Visa alla kast om explosioner inträffade
+            if len(all_rolls) > num_dice:
+                embed.add_field(
+                    name="💥 Alla kast (inkl. explosioner)",
+                    value=str(all_rolls),
+                    inline=False
+                )
+
+            # Logga i roll tracker (utan target eftersom det är skill improvement)
+            self.roll_tracker.log_roll(
+                str(interaction.user.id),
+                interaction.user.display_name,
+                "höj",
+                num_dice,
+                6,
+                all_rolls,
+                0,  # modifier
+                värde,  # target
+                success
+            )
+
+            execution_time = time.time() - start_time
+            await self.helper.log_command_usage(interaction, "höj", {
+                "current_skill": värde,
+                "easy_learnable": lättlärd,
+                "success": success,
+                "new_skill": new_skill
+            }, execution_time)
+
+            await self.helper.send_response(interaction, embed=embed)
+
         except Exception as e:
             embed = await self.helper.create_error_response(
                 interaction.user.id,

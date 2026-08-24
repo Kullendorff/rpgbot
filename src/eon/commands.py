@@ -1,5 +1,6 @@
 """
-EON-stridskommandon (Cog) — /hugg, /stick, /kross, /fummel.
+EON-kommandon (Cog) — /eon_hugg, /eon_stick, /eon_kross, /eon_fummel,
+/eon_regel, /eon_hoj.
 
 Del av paketet src/eon/: ren mekanik ligger i hit_tables/damage_tables/
 fumble_tables/combat_manager, detta är Discord-lagret.
@@ -294,7 +295,7 @@ class EonCommands(commands.Cog):
             )
             await self.helper.send_response(interaction, embed=embed)
 
-    @app_commands.command(name="hugg", description="Utför en hugganfall mot valfritt träffområde")
+    @app_commands.command(name="eon_hugg", description="Utför en hugganfall mot valfritt träffområde")
     @app_commands.describe(
         bas_skada="Basskada INNAN rustning dras av (1-100)",
         nivå="Attacknivå om inget specifikt område väljs",
@@ -307,7 +308,7 @@ class EonCommands(commands.Cog):
         app_commands.Choice(name="Hög nivå", value="hög")
     ])
     @app_commands.autocomplete(område=location_autocomplete)
-    async def hugg_slash(
+    async def eon_hugg(
         self,
         interaction: discord.Interaction,
         bas_skada: app_commands.Range[int, 1, 100],
@@ -323,14 +324,14 @@ class EonCommands(commands.Cog):
         )
 
         execution_time = time.time() - start_time
-        await self.helper.log_command_usage(interaction, "hugg", {
+        await self.helper.log_command_usage(interaction, "eon_hugg", {
             "damage": bas_skada,
             "level": nivå,
             "location": område,
             "malpunkter": målpunkter
         }, execution_time)
 
-    @app_commands.command(name="stick", description="Utför en stickanfall mot valfritt träffområde")
+    @app_commands.command(name="eon_stick", description="Utför en stickanfall mot valfritt träffområde")
     @app_commands.describe(
         bas_skada="Basskada INNAN rustning dras av (1-100)",
         nivå="Attacknivå om inget specifikt område väljs",
@@ -343,7 +344,7 @@ class EonCommands(commands.Cog):
         app_commands.Choice(name="Hög nivå", value="hög")
     ])
     @app_commands.autocomplete(område=location_autocomplete)
-    async def stick_slash(
+    async def eon_stick(
         self,
         interaction: discord.Interaction,
         bas_skada: app_commands.Range[int, 1, 100],
@@ -359,14 +360,14 @@ class EonCommands(commands.Cog):
         )
 
         execution_time = time.time() - start_time
-        await self.helper.log_command_usage(interaction, "stick", {
+        await self.helper.log_command_usage(interaction, "eon_stick", {
             "damage": bas_skada,
             "level": nivå,
             "location": område,
             "malpunkter": målpunkter
         }, execution_time)
 
-    @app_commands.command(name="kross", description="Utför en krossanfall mot valfritt träffområde")
+    @app_commands.command(name="eon_kross", description="Utför en krossanfall mot valfritt träffområde")
     @app_commands.describe(
         bas_skada="Basskada INNAN rustning dras av (1-100)",
         nivå="Attacknivå om inget specifikt område väljs",
@@ -379,7 +380,7 @@ class EonCommands(commands.Cog):
         app_commands.Choice(name="Hög nivå", value="hög")
     ])
     @app_commands.autocomplete(område=location_autocomplete)
-    async def kross_slash(
+    async def eon_kross(
         self,
         interaction: discord.Interaction,
         bas_skada: app_commands.Range[int, 1, 100],
@@ -395,14 +396,14 @@ class EonCommands(commands.Cog):
         )
 
         execution_time = time.time() - start_time
-        await self.helper.log_command_usage(interaction, "kross", {
+        await self.helper.log_command_usage(interaction, "eon_kross", {
             "damage": bas_skada,
             "level": nivå,
             "location": område,
             "malpunkter": målpunkter
         }, execution_time)
 
-    @app_commands.command(name="fummel", description="Slå på fummeltabellen för specifik vapentyp")
+    @app_commands.command(name="eon_fummel", description="Slå på fummeltabellen för specifik vapentyp")
     @app_commands.describe(
         vapen="Typ av vapen som fummel sker med"
     )
@@ -412,7 +413,7 @@ class EonCommands(commands.Cog):
         app_commands.Choice(name="Avståndsvapen", value="avs"),
         app_commands.Choice(name="Sköldar", value="sko")
     ])
-    async def fummel_slash(
+    async def eon_fummel(
         self,
         interaction: discord.Interaction,
         vapen: str
@@ -461,7 +462,7 @@ class EonCommands(commands.Cog):
             )
             
             execution_time = time.time() - start_time
-            await self.helper.log_command_usage(interaction, "fummel", {
+            await self.helper.log_command_usage(interaction, "eon_fummel", {
                 "weapon_type": vapen,
                 "result": result
             }, execution_time)
@@ -513,12 +514,12 @@ class EonCommands(commands.Cog):
             logger.error(f"Fel vid regel autocomplete: {e}")
             return []
 
-    @app_commands.command(name="regel", description="Visa sparade regler från regelbiblioteket")
+    @app_commands.command(name="eon_regel", description="Visa sparade regler från regelbiblioteket")
     @app_commands.describe(
         val="Regelnamn eller nummer (t.ex. 'strid' eller '1')"
     )
     @app_commands.autocomplete(val=rule_autocomplete)
-    async def rule_slash(
+    async def eon_regel(
         self,
         interaction: discord.Interaction,
         val: Optional[str] = None
@@ -565,7 +566,7 @@ class EonCommands(commands.Cog):
                     inline=False
                 )
 
-                embed.set_footer(text="Använd /regel val:1 eller /regel val:regelnamn för att visa specifik regel")
+                embed.set_footer(text="Använd /eon_regel val:1 eller /eon_regel val:regelnamn för att visa specifik regel")
 
             else:
                 # Visa specifik regel - hantera både nummer och namn
@@ -619,7 +620,7 @@ class EonCommands(commands.Cog):
                     embed.set_footer(text="Regel trunkerad - fulltext för lång för Discord")
 
             execution_time = time.time() - start_time
-            await self.helper.log_command_usage(interaction, "regel", {
+            await self.helper.log_command_usage(interaction, "eon_regel", {
                 "rule_name": val if val else "all_rules",
                 "rules_available": len(txt_rules)
             }, execution_time)
@@ -633,12 +634,12 @@ class EonCommands(commands.Cog):
             )
             await self.helper.send_response(interaction, embed=embed)
 
-    @app_commands.command(name="höj", description="Gör förbättringsslag för färdigheter enligt EON-regler")
+    @app_commands.command(name="eon_hoj", description="Gör förbättringsslag för färdigheter enligt EON-regler")
     @app_commands.describe(
         värde="Nuvarande färdighetsvärde (1-30)",
         lättlärd="Färdigheten är lättlärd (Ob4T6 istället för Ob3T6)"
     )
-    async def improvement_slash(
+    async def eon_hoj(
         self,
         interaction: discord.Interaction,
         värde: app_commands.Range[int, 1, 30],
@@ -714,7 +715,7 @@ class EonCommands(commands.Cog):
             self.roll_tracker.log_roll(
                 str(interaction.user.id),
                 interaction.user.display_name,
-                "höj",
+                "eon_hoj",
                 num_dice,
                 6,
                 all_rolls,
@@ -724,7 +725,7 @@ class EonCommands(commands.Cog):
             )
 
             execution_time = time.time() - start_time
-            await self.helper.log_command_usage(interaction, "höj", {
+            await self.helper.log_command_usage(interaction, "eon_hoj", {
                 "current_skill": värde,
                 "easy_learnable": lättlärd,
                 "success": success,

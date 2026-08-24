@@ -25,13 +25,12 @@ from migration.helper import MigrationHelper, SlashCommandDecorator
 class AdminSlashCommands(commands.Cog):
     """Cog för alla admin-relaterade slash commands."""
     
-    def __init__(self, bot, roll_tracker, color_handler, embed_factory, knowledge_base=None):
+    def __init__(self, bot, roll_tracker, color_handler, embed_factory):
         self.bot = bot
         self.roll_tracker = roll_tracker
         self.color_handler = color_handler
         self.embed_factory = embed_factory
-        self.knowledge_base = knowledge_base
-        
+
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
         self.decorator = SlashCommandDecorator(self.helper)
@@ -42,7 +41,7 @@ class AdminSlashCommands(commands.Cog):
         # Import dice dependencies för secret commands
         from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
         from core.dice_engine import unlimited_d6s
-        from core.constants import MAX_DICE, MAX_SIDES, CLAUDE_MODEL
+        from core.constants import MAX_DICE, MAX_SIDES
         
         self.parse_dice_string = parse_dice_string
         self.InvalidDiceFormat = InvalidDiceFormat
@@ -281,47 +280,6 @@ class AdminSlashCommands(commands.Cog):
                     inline=True
                 )
             
-            # Generera AI-sammanfattning om tillgänglig och >10 händelser
-            total_events = session_stats.get('basic_stats', {}).get('total_commands', 0)
-            ai_summary = None
-            
-            if self.knowledge_base and total_events >= 10:
-                try:
-                    # Skapa prompt för AI-sammanfattning
-                    summary_prompt = f"""
-                    Skapa en kort sammanfattning av denna EON-spelsession:
-                    
-                    Session ID: {session_id}
-                    Längd: {duration}
-                    Spelmaster: {session_data['gm_name']}
-                    Beskrivning: {session_data.get('description', 'Ingen beskrivning')}
-                    
-                    Statistik:
-                    - Totala tärningsslag: {session_stats.get('basic_stats', {}).get('total_rolls', 0)}
-                    - Använda kommandon: {session_stats.get('basic_stats', {}).get('total_commands', 0)}
-                    
-                    Skriv en kort, entusiastisk sammanfattning på svenska (max 200 ord).
-                    """
-                    
-                    # Enkel AI-call utan timeout complexity för nu
-                    if hasattr(self.knowledge_base, 'claude_client') and self.knowledge_base.claude_client:
-                        response = self.knowledge_base.claude_client.messages.create(
-                            model=CLAUDE_MODEL,
-                            max_tokens=300,
-                            messages=[{"role": "user", "content": summary_prompt}]
-                        )
-                        ai_summary = response.content[0].text
-                
-                except Exception as e:
-                    print(f"[SESSION] AI summary misslyckades: {e}")
-            
-            if ai_summary:
-                embed.add_field(
-                    name="🤖 AI Sammanfattning",
-                    value=ai_summary[:1000] + ("..." if len(ai_summary) > 1000 else ""),
-                    inline=False
-                )
-            
             # Avsluta session i roll_tracker. Metoden tar inga argument — den
             # avslutar trackerns aktiva session (skapad av /startsession).
             self.roll_tracker.end_session()
@@ -331,8 +289,7 @@ class AdminSlashCommands(commands.Cog):
                 **session_data,
                 'end_time': datetime.now().isoformat(),
                 'duration_seconds': duration.total_seconds(),
-                'stats': session_stats,
-                'ai_summary': ai_summary
+                'stats': session_stats
             }
             
             # Spara till fil (enkel arkivering)
@@ -383,9 +340,7 @@ class AdminSlashCommands(commands.Cog):
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "endsession", {
                 "session_id": session_id,
-                "duration_hours": duration.total_seconds() / 3600,
-                "total_events": total_events,
-                "ai_summary_generated": bool(ai_summary)
+                "duration_hours": duration.total_seconds() / 3600
             }, execution_time)
             
             await self.helper.send_response(interaction, embed=embed)
@@ -910,7 +865,7 @@ class AdminSlashCommands(commands.Cog):
 
 
 # Registrering function
-async def register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base=None):
+async def register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory):
     """
     Registrera slash admin commands med boten.
     """
@@ -928,6 +883,6 @@ async def register_slash_admin_commands(bot, roll_tracker, color_handler, embed_
         return
     
     # Lägg till cog
-    admin_cog = AdminSlashCommands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+    admin_cog = AdminSlashCommands(bot, roll_tracker, color_handler, embed_factory)
     await bot.add_cog(admin_cog)
     print("Slash admin commands har registrerats (/startsession, /endsession, /showsession, /secret_roll, /secret_ex, /secret_count).")

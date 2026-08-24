@@ -136,7 +136,7 @@ async def on_ready() -> None:
     
     if FEATURE_FLAGS["slash_admin_enabled"]:
         from commands.slash_admin_commands import register_slash_admin_commands
-        await register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+        await register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory)
 
     # Registrera Delta Green kommandon
     if FEATURE_FLAGS.get("slash_deltagreen_enabled", False):

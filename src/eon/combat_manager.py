@@ -2,13 +2,13 @@ import random
 from dataclasses import dataclass
 from typing import Optional, Tuple, Any
 
-from hit_tables import (
+from .hit_tables import (
     WeaponType,
     AttackLevel,
     BASE_HIT_TABLE,
     get_hit_location
 )
-from damage_tables import (
+from .damage_tables import (
     DamageType,
     DamageResult,
     DamageCalculator,

@@ -8,41 +8,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pip install -r requirements.txt` - Install Python dependencies
 - Create `.env` file with required API keys:
   - DISCORD_TOKEN (Discord bot token)
-  - PINECONE_API_KEY (for knowledge search)
-  - ANTHROPIC_API_KEY (for Claude integration)
-  - PINECONE_INDEX_NAME (default: "rpg-knowledge")
   - CHANNEL_IDS (comma-separated Discord channel IDs, optional — logged at startup, not enforced)
   - GUILD_ID (optional but recommended for dev — instant guild-scoped slash command sync instead of a global sync that can take up to an hour)
   - DEBUG_MODE (optional — `true` registers a debug user-info command)
-  - CLAUDE_MODEL (optional — overrides the default Claude model, see `src/core/constants.py`)
-  - OPENAI_API_KEY is no longer used anywhere in `src/` — safe to omit
 
 ### Running the Application
 - `python src/main.py` - Start the Discord bot
 - `python launcher/eon_bot_launcher.py` - Start the GUI launcher
 
-### Knowledge Base Management
-- Knowledge base initializes automatically at startup (`KnowledgeBase.ensure_ready()`, async via `asyncio.to_thread`)
-- The old PDF-extraction/indexing utilities (`utils/*.py`) were removed 2026-08-23 as one-time archaeology — Pinecone is the production stack
-
 ### Testing
 - Tests use `unittest`, not pytest (pytest isn't in `requirements.txt`, no test file imports it).
 - **Run tests as scripts, not as `-m unittest tests.X`** — a `tests` package installed in site-packages (from an unrelated dependency) shadows the local `tests/` directory during module import and silently resolves to the wrong package. Always: `python tests/test_X.py`.
-- Real test files: `test_starwars_dice.py`, `test_knowledge_base_async.py`, `test_deltagreen_agent_manager.py`, `test_deltagreen_project_flow.py`, `test_deltagreen_projection.py`, `test_deltagreen_san_cache.py`.
+- Real test files: `test_starwars_dice.py`, `test_deltagreen_agent_manager.py`, `test_deltagreen_project_flow.py`, `test_deltagreen_projection.py`, `test_deltagreen_san_cache.py`.
 - Deleted 2026-08-23 as dead weight: `tests/test.py` (printed DISCORD_TOKEN to stdout), `tests/test_embedding.py` (pre-1.0 OpenAI SDK), `tests/test_background.py` (imported retired chargen code), root `test_chargen.py`, root `debug_permissions.py`, root `debug_slash_commands.py` (production Discord + global tree.sync), the entire legacy prefix layer (`src/commands/*_commands.py`, `src/stats_commands.py`) and the `utils/` one-time scripts.
 
 ## Architecture Overview
 
-This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skjut Dem I Huvudet"). The bot provides dice rolling, combat simulation, rule lookups, and knowledge base queries.
+This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skjut Dem I Huvudet"). The bot provides dice rolling, combat simulation, and rule lookups.
 
 ### Core Components
 
-**src/main.py** - Main bot entry point with Discord slash command handlers. Uses discord.py with slash commands (`/`). Integrates with Pinecone for vector search, Anthropic Claude for AI responses, and local SQLite for roll tracking.
-
-**Knowledge System** - Two-tiered search:
-- Whoosh index (`data/knowledge_index/`) for full-text search
-- Pinecone vector database for semantic search
-- Extracted text from RPG books stored in `data/extracted_text/`
+**src/main.py** - Main bot entry point with Discord slash command handlers. Uses discord.py with slash commands (`/`). Integrates with local SQLite for roll tracking.
 
 **Combat System** - Modular combat mechanics:
 - `src/combat_manager.py` - Main combat orchestration
@@ -60,7 +46,6 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 ### Key Features (All Slash Commands)
 
 - **Dice Commands**: `/roll`, `/ex` (unlimited d6), `/count`, `/chance`
-- **Knowledge**: `/ask`, `/sök`, `/allt` - Query RPG rule database using AI
 - **Combat**: `/hugg`, `/stick`, `/kross`, `/fummel` - Weapon attack simulation
 - **Rules**: `/regel` - Quick rule lookups from `data/rules/`
 - **Stats**: `/stats`, `/mystats` - Roll statistics and session tracking
@@ -74,9 +59,8 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 ### Module Structure
 
 - `src/core/` - Core systems:
-  - `embed_factory.py` - Centralized Discord embed creation (also holds ~200 lines of de-facto EON-only methods with generic names — `dice_result`, `combat_result`, `stats_overview`, `knowledge_result` — alongside the properly prefixed `dg_*`, `dragonbane_*`, `starwars_*` methods)
+  - `embed_factory.py` - Centralized Discord embed creation (also holds ~200 lines of de-facto EON-only methods with generic names — `dice_result`, `combat_result`, `stats_overview` — alongside the properly prefixed `dg_*`, `dragonbane_*`, `starwars_*` methods)
   - `constants.py` - Centralized constants and env var config
-  - `knowledge_base.py` - Pinecone + SentenceTransformer + Claude API wrapper. `ensure_ready()` loads it in a background thread (`asyncio.to_thread`) behind a lock — never call `initialize_knowledge_base()` directly from a command handler, it blocks the event loop for several seconds
   - `dice_parser.py`, `dice_engine.py` - EON DiceSpec parsing and exploding-d6 probability
   - `logging_config.py`, `user_settings.py`, `comment_styles.py`, `manipulation_manager.py`
 - `src/color_handler.py` - Per-user Discord embed colors (shared across every module)
@@ -85,7 +69,6 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 - `src/commands/` - Slash command implementations (Cog-based, EON-only unless noted):
   - `slash_dice_commands.py` - Dice rolling with autocomplete
   - `slash_combat_commands.py` - Combat mechanics
-  - `slash_knowledge_commands.py` - AI-powered knowledge search
   - `slash_admin_commands.py` - GM/admin tools
   - `slash_utility_commands.py` - Utility commands
   - `slash_manipulation_commands.py` - Manipulation mechanics (`app_commands.Group`, not a Cog; bot-wide feature, not EON-specific)
@@ -95,27 +78,21 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 - `src/dragonbane/` - Dragonbane (Drakar och Demoner) RPG module, `dice.py` + `commands.py` (Cog), modul av Jonas
 - `src/starwars/` - Star Wars D6 (WEG40120) RPG module: `dice.py` (ren, testbar tärningsmotor, injicerbar Random), `commands.py` (Cog + CharacterPointView)
 - `src/spindel/` - Gigantspindel + småspindelstrid, egen paketmodul. **Avstängd tills vidare** (`config/feature_flags.py`: `slash_spindel_enabled: False`) — flyttades ut ur `src/` och `src/commands/` 2026-08-16, ingen aktiv användning atm. Sätt flaggan till `True` för att slå på `/spindel`, `/spindel_runda`, `/spindelstatus`, `/spindelreset`, `/spindeldump`, `/spawna_småspindlar`, `/attack_småspindel`, `/småspindelstatus`, `/reset_småspindlar` igen.
-- `src/utils/` - Utility functions and helpers (`ai_handler.py`, `stats_visualizer.py`, `text_utils.py`)
+- `src/utils/` - Utility functions and helpers (`stats_visualizer.py`, `text_utils.py`)
 - `src/skjutdomihuvudet/` - "Skjut Dem I Huvudet" RPG module (prefix-only, not yet migrated to slash)
 - `src/character_creation/` and `src/data/` - empty directories, dead weight left over from the retired character-creation system; safe to delete whenever someone gets around to it
 
 ### Data Files
 
-- `data/extracted_text/` - Text extracted from RPG PDFs
 - `data/rules/` - Quick reference rule files (txt format)
 - `data/sdih_decks/` - Card deck data for SDIH game
 - `data/user_colors.json` - User color preferences
 - `data/deltagreen/` - Delta Green module data
 - `data/character_tables/` - EON character-related tables, left over from the retired character-creation system
-- `data/knowledge_index/` - Whoosh full-text index
 - `data/rolls.db` - SQLite roll-tracking database
 - `data/config/` - `umnak_comments.txt`
 - `data/user_settings.json`, `data/secret_manipulations.json` - comment/manipulation system state
 - `data/spider_status_*.json` - leftover save state from the (now disabled) spindel module
-
-**Legacy FAISS-era data:** the faiss/npy artifacts were never git-tracked and no longer exist locally; `data/full_knowledge.txt` (12.8 MB, zero code references) was untracked from git 2026-08-23 but remains on disk if ever needed.
-
-The knowledge base requires manual setup of PDF extraction and indexing before the bot can answer rule questions effectively.
 
 ---
 
@@ -128,8 +105,7 @@ The knowledge base requires manual setup of PDF extraction and indexing before t
 - **Star Wars D6-modulen** (WEG40120, 2nd Ed. R&E) - `/sw_slag`, `/sw_motstand`, `/sw_svarighet`, `/sw_init`, regler verifierade mot källboken
 - **Delta Green bond-projektion** - `/dgproject` ("Projecting Onto a Bond"), `SanCheckCache`
 - **Spindel-modulen utflyttad** - egen paketmodul `src/spindel/`, avstängd tills vidare (`slash_spindel_enabled: False`)
-- **Asynkron kunskapsbasladdning** - `KnowledgeBase.ensure_ready()` kör initieringen via `asyncio.to_thread` bakom ett lås istället för synkront i `on_ready`, som tidigare blockerade event-loopen i ~6 sekunder vid varje omstart och orsakade "404 Unknown Interaction" på kommandon som kom in under fönstret
-- **`/sök`-buggen fixad** - felaktiga variabelnamn (`max_results`/`source`/`query` i kroppen mot `max_resultat`/`källa`/`sökterm` i signaturen) gjorde att kommandot alltid kastade `NameError`, sedan allra första incheckningen. Fixat till konsekventa svenska namn + ovillkorlig defer (kostnaden beror på antal filer att genomsöka, inte `max_resultat`).
+- **AI/kunskapsdelen borttagen (2026-08-24)** - hela kunskapsbasen (Pinecone + SentenceTransformer + Claude + Whoosh), `/ask`, `/sök`, `/allt`, AI-sessionssammanfattningen och spindelns AI-beskrivningar raderade; boten kräver nu bara `DISCORD_TOKEN`
 
 ### Current Development Focus
 - **Slash Command Migration KLAR (2026-08-23)** - legacy-prefixlagret (6 filer, ~1910 rader), dess main.py-registreringar och `dual_mode_*`-flaggorna raderade i commit `421e3d0`. Endast slash kvar; SDIH (`src/skjutdomihuvudet/`) är nästa migrationsmål.

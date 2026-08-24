@@ -12,7 +12,7 @@ from discord import app_commands
 from discord import ui
 
 # Import migration helpers
-from migration.helper import MigrationHelper, SlashCommandDecorator
+from migration.helper import MigrationHelper
 
 # Import fumble tables and weapon aliases
 from eon import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
@@ -156,7 +156,6 @@ class CombatSlashCommands(commands.Cog):
         
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
-        self.decorator = SlashCommandDecorator(self.helper)
     
     async def location_autocomplete(
         self,

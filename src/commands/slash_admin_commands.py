@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import migration helpers
-from migration.helper import MigrationHelper, SlashCommandDecorator
+from migration.helper import MigrationHelper
 
 class AdminSlashCommands(commands.Cog):
     """Cog för alla admin-relaterade slash commands."""
@@ -33,8 +33,7 @@ class AdminSlashCommands(commands.Cog):
 
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
-        self.decorator = SlashCommandDecorator(self.helper)
-        
+
         # Session management
         self.current_sessions = {}  # guild_id -> session_data
         

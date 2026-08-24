@@ -15,7 +15,7 @@ from discord import app_commands
 logger = logging.getLogger(__name__)
 
 # Import migration helpers
-from migration.helper import MigrationHelper, SlashCommandDecorator, dice_autocomplete, target_value_autocomplete
+from migration.helper import MigrationHelper, dice_autocomplete, target_value_autocomplete
 
 # Helper function för hemlig manipulation
 def apply_secret_manipulation(user_id: str, rolls: List[int], sides: int, 
@@ -52,8 +52,7 @@ class DiceSlashCommands(commands.Cog):
         
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
-        self.decorator = SlashCommandDecorator(self.helper)
-        
+
         # Import dependencies
         from core.constants import MAX_DICE, MAX_SIDES
         from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError

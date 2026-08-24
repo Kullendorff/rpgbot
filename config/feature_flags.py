@@ -11,9 +11,6 @@ FEATURE_FLAGS = {
     # Combat commands
     "slash_combat_enabled": True,        # /hugg, /stick, /kross, /fummel
 
-    # Knowledge commands
-    "slash_knowledge_enabled": True,     # /ask, /sök, /allt
-
     # Admin commands
     "slash_admin_enabled": True,         # /startsession, /endsession etc
 
@@ -54,12 +51,7 @@ COMMAND_FLAGS = {
     "stick": True,
     "kross": True,
     "fummel": True,
-    
-    # Knowledge commands - aktivera för test
-    "ask": True,
-    "sök": True,
-    "allt": True,
-    
+
     # Admin commands - aktiverade för GM
     "startsession": True,
     "endsession": True,

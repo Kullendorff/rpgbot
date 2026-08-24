@@ -15,7 +15,7 @@ from discord import app_commands
 logger = logging.getLogger(__name__)
 
 # Import migration helpers
-from migration.helper import MigrationHelper, SlashCommandDecorator
+from migration.helper import MigrationHelper
 
 # Import for dice engine functions
 from core.dice_engine import unlimited_d6s
@@ -32,8 +32,7 @@ class UtilitySlashCommands(commands.Cog):
         
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
-        self.decorator = SlashCommandDecorator(self.helper)
-        
+
         # Configure paths for rules folder
         script_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(os.path.dirname(script_dir))

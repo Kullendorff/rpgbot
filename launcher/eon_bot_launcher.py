@@ -29,11 +29,7 @@ class BotThread(QThread):
             # Skapa miljövariabler
             env = os.environ.copy()
             env['DISCORD_TOKEN'] = config.get('discord_token', '')
-            env['PINECONE_API_KEY'] = config.get('pinecone_api_key', '')
-            env['ANTHROPIC_API_KEY'] = config.get('anthropic_api_key', '')
-            env['OPENAI_API_KEY'] = config.get('openai_api_key', '')
             env['CHANNEL_IDS'] = config.get('channel_ids', '')
-            env['PINECONE_INDEX_NAME'] = config.get('pinecone_index_name', 'rpg-knowledge')
             
             # Hitta huvudskriptet (anta att det är main.py i src-mappen)
             script_path = os.path.join(os.path.dirname(self.config_path), 'src', 'main.py')
@@ -187,49 +183,7 @@ class EONBotLauncher(QMainWindow):
         discord_layout.addWidget(self.discord_token_input)
         discord_layout.addWidget(discord_help_btn)
         api_layout.addLayout(discord_layout)
-        
-        # Pinecone API
-        pinecone_layout = QHBoxLayout()
-        pinecone_label = QLabel("Pinecone API-nyckel:")
-        self.pinecone_api_input = QLineEdit()
-        self.pinecone_api_input.setEchoMode(QLineEdit.Password)
-        pinecone_help_btn = QPushButton("?")
-        pinecone_help_btn.setFixedSize(25, 25)
-        pinecone_help_btn.clicked.connect(lambda: self.open_help_url("https://app.pinecone.io/"))
-        
-        pinecone_layout.addWidget(pinecone_label)
-        pinecone_layout.addWidget(self.pinecone_api_input)
-        pinecone_layout.addWidget(pinecone_help_btn)
-        api_layout.addLayout(pinecone_layout)
-        
-        # Anthropic Claude API
-        anthropic_layout = QHBoxLayout()
-        anthropic_label = QLabel("Anthropic Claude API-nyckel:")
-        self.anthropic_api_input = QLineEdit()
-        self.anthropic_api_input.setEchoMode(QLineEdit.Password)
-        anthropic_help_btn = QPushButton("?")
-        anthropic_help_btn.setFixedSize(25, 25)
-        anthropic_help_btn.clicked.connect(lambda: self.open_help_url("https://console.anthropic.com/"))
-        
-        anthropic_layout.addWidget(anthropic_label)
-        anthropic_layout.addWidget(self.anthropic_api_input)
-        anthropic_layout.addWidget(anthropic_help_btn)
-        api_layout.addLayout(anthropic_layout)
-        
-        # OpenAI API
-        openai_layout = QHBoxLayout()
-        openai_label = QLabel("OpenAI API-nyckel:")
-        self.openai_api_input = QLineEdit()
-        self.openai_api_input.setEchoMode(QLineEdit.Password)
-        openai_help_btn = QPushButton("?")
-        openai_help_btn.setFixedSize(25, 25)
-        openai_help_btn.clicked.connect(lambda: self.open_help_url("https://platform.openai.com/"))
-        
-        openai_layout.addWidget(openai_label)
-        openai_layout.addWidget(self.openai_api_input)
-        openai_layout.addWidget(openai_help_btn)
-        api_layout.addLayout(openai_layout)
-        
+
         api_group.setLayout(api_layout)
         layout.addWidget(api_group)
         
@@ -249,17 +203,7 @@ class EONBotLauncher(QMainWindow):
         channel_layout.addWidget(self.channel_ids_input)
         channel_layout.addWidget(channel_help_btn)
         discord_config_layout.addLayout(channel_layout)
-        
-        # Pinecone index
-        pinecone_index_layout = QHBoxLayout()
-        pinecone_index_label = QLabel("Pinecone Index-namn:")
-        self.pinecone_index_input = QLineEdit()
-        self.pinecone_index_input.setText("rpg-knowledge")  # Standardvärde
-        
-        pinecone_index_layout.addWidget(pinecone_index_label)
-        pinecone_index_layout.addWidget(self.pinecone_index_input)
-        discord_config_layout.addLayout(pinecone_index_layout)
-        
+
         discord_group.setLayout(discord_config_layout)
         layout.addWidget(discord_group)
         
@@ -319,17 +263,11 @@ class EONBotLauncher(QMainWindow):
         <p>För att köra EON Diceroller Bot behöver du:</p>
         <ol>
             <li>En Discord-bot token</li>
-            <li>En Pinecone API-nyckel</li>
-            <li>En Anthropic Claude API-nyckel</li>
-            <li>En OpenAI API-nyckel</li>
             <li>ID för Discord-kanaler där boten ska vara aktiv (valfritt)</li>
         </ol>
-        
+
         <h3>Skaffa API-nycklar</h3>
         <p><b>Discord Token:</b> Gå till <a href="https://discord.com/developers/applications">Discord Developer Portal</a>, skapa en applikation, lägg till en bot, och kopiera token.</p>
-        <p><b>Pinecone API:</b> Skapa ett konto på <a href="https://app.pinecone.io/">Pinecone</a> och hämta din API-nyckel.</p>
-        <p><b>Anthropic Claude API:</b> Skaffa en API-nyckel från <a href="https://console.anthropic.com/">Anthropic Console</a>.</p>
-        <p><b>OpenAI API:</b> Skaffa en API-nyckel från <a href="https://platform.openai.com/">OpenAI Platform</a>.</p>
         
         <h3>Hitta kanal-ID i Discord</h3>
         <p>För att hitta ett kanal-ID i Discord:</p>
@@ -344,7 +282,6 @@ class EONBotLauncher(QMainWindow):
         <ul>
             <li><b>Tärningskast:</b> !roll, !ex, !count</li>
             <li><b>Hemliga tärningskast:</b> !secret</li>
-            <li><b>Kunskapsbas:</b> !ask, !sök, !allt</li>
             <li><b>Regler:</b> !regel</li>
             <li><b>Stridssimulering:</b> !hugg, !stick, !kross, !fummel</li>
             <li><b>Statistik:</b> !stats, !mystats</li>
@@ -388,11 +325,7 @@ class EONBotLauncher(QMainWindow):
                     config = json.load(f)
                     
                 self.discord_token_input.setText(config.get('discord_token', ''))
-                self.pinecone_api_input.setText(config.get('pinecone_api_key', ''))
-                self.anthropic_api_input.setText(config.get('anthropic_api_key', ''))
-                self.openai_api_input.setText(config.get('openai_api_key', ''))
                 self.channel_ids_input.setText(config.get('channel_ids', ''))
-                self.pinecone_index_input.setText(config.get('pinecone_index_name', 'rpg-knowledge'))
                 self.path_input.setText(config.get('bot_path', self.default_bot_path))
                 
                 self.log_message("Konfiguration laddad")
@@ -403,11 +336,7 @@ class EONBotLauncher(QMainWindow):
         try:
             config = {
                 'discord_token': self.discord_token_input.text(),
-                'pinecone_api_key': self.pinecone_api_input.text(),
-                'anthropic_api_key': self.anthropic_api_input.text(),
-                'openai_api_key': self.openai_api_input.text(),
                 'channel_ids': self.channel_ids_input.text(),
-                'pinecone_index_name': self.pinecone_index_input.text(),
                 'bot_path': self.path_input.text()
             }
             

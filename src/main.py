@@ -19,10 +19,7 @@ logger = get_logger(__name__)
 # Importera gamla moduler (ska flyttas till utils/)
 from color_handler import ColorHandler
 from roll_tracker import RollTracker
-from combat_manager import CombatManager
-from damage_tables import DamageType
-from hit_tables import WeaponType  # om du vill ha typ-checking
-from fumble_tables import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
+from eon import CombatManager
 
 # Import för ytterligare moduler
 # Import för Skjut dom i huvudet

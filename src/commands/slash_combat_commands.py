@@ -15,7 +15,7 @@ from discord import ui
 from migration.helper import MigrationHelper, SlashCommandDecorator
 
 # Import fumble tables and weapon aliases
-from fumble_tables import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
+from eon import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
 
 
 class ArmorModal(ui.Modal):
@@ -61,7 +61,7 @@ class ArmorModal(ui.Modal):
 
             # Nu behöver vi omberäkna skaderesultatet med den nya slutskadan
             # eftersom damage_result beror på damage_value >= 10
-            from combat_manager import DamageType, WeaponType
+            from eon import DamageType, WeaponType
 
             damage_type_map = {
                 "hugg": DamageType.HUGG,
@@ -95,7 +95,7 @@ class ArmorModal(ui.Modal):
             # Beräkna effektresultaten
             damage_effects = None
             if damage_result and damage_result.effect_code:
-                from damage_tables import parse_effect_code
+                from eon import parse_effect_code
                 damage_effects = parse_effect_code(damage_result.effect_code, final_damage)
 
             # Skapa embed för slutresultat

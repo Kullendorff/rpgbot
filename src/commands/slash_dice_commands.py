@@ -44,12 +44,11 @@ def apply_secret_manipulation(user_id: str, rolls: List[int], sides: int,
 class DiceSlashCommands(commands.Cog):
     """Cog för alla tärnings-relaterade slash commands."""
     
-    def __init__(self, bot, roll_tracker, color_handler, embed_factory, knowledge_base):
+    def __init__(self, bot, roll_tracker, color_handler, embed_factory):
         self.bot = bot
         self.roll_tracker = roll_tracker
         self.color_handler = color_handler
         self.embed_factory = embed_factory
-        self.knowledge_base = knowledge_base
         
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
@@ -690,7 +689,7 @@ class DiceSlashCommands(commands.Cog):
 
 
 # Registrering function för att ersätta gamla systemet
-async def register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base):
+async def register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory):
     """
     Registrera slash dice commands med boten.
     Denna ersätter register_dice_commands för slash commands.
@@ -706,6 +705,6 @@ async def register_slash_dice_commands(bot, roll_tracker, color_handler, embed_f
         return
     
     # Lägg till cog
-    dice_cog = DiceSlashCommands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+    dice_cog = DiceSlashCommands(bot, roll_tracker, color_handler, embed_factory)
     await bot.add_cog(dice_cog)
     print("Slash dice commands har registrerats (/roll, /ex, /count, /chance).")

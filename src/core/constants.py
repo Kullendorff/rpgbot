@@ -19,8 +19,5 @@ MAX_MESSAGE_LENGTH = 2000
 MAX_TOKENS = 1000
 DEFAULT_SIMULATION_TRIALS = 10000
 
-# Knowledge base settings
-DEFAULT_TOP_K = 5
-
 # Umnatak comments (will be loaded at runtime)
 UMNATAK_SUCCESS_COMMENTS = []

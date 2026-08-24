@@ -6,15 +6,8 @@ import re
 from typing import Tuple, Optional, List, Any, Dict, Union
 import time
 import discord
-import numpy as np
-import tiktoken
 from discord.ext import commands
 from dotenv import load_dotenv
-from pinecone import Pinecone
-from sentence_transformers import SentenceTransformer
-import anthropic
-from whoosh.index import open_dir
-from whoosh.qparser import QueryParser
 
 # Initialize logging FIRST before any other imports
 from core.logging_config import setup_logging, get_logger
@@ -37,13 +30,11 @@ from skjutdomihuvudet import commands as sdih_commands
 
 # Import för nya modulära komponenter
 from core.constants import (
-    MAX_DICE, MAX_SIDES, MAX_MESSAGE_LENGTH, 
-    MAX_TOKENS
+    MAX_DICE, MAX_SIDES, MAX_MESSAGE_LENGTH
 )
-from utils.text_utils import clean_unicode, split_message, count_tokens
+from utils.text_utils import clean_unicode, split_message
 from core.dice_parser import parse_dice_string
 from core.dice_engine import unlimited_d6s, simulate_unlimited_dice
-from core.knowledge_base import KnowledgeBase
 
 # Ladda miljövariabler från .env-filen
 load_dotenv()
@@ -51,9 +42,6 @@ load_dotenv()
 # Hämta tokens och API-nycklar från miljövariablerna
 DISCORD_TOKEN: Optional[str] = os.getenv('DISCORD_TOKEN')
 CHANNEL_IDS: Optional[str] = os.getenv('CHANNEL_IDS')
-PINECONE_API_KEY: Optional[str] = os.getenv("PINECONE_API_KEY")
-ANTHROPIC_API_KEY: Optional[str] = os.getenv("ANTHROPIC_API_KEY")
-PINECONE_INDEX_NAME: str = os.getenv("PINECONE_INDEX_NAME", "rpg-knowledge")
 
 # Konfigurera Discord-boten med nödvändiga behörigheter
 intents: discord.Intents = discord.Intents.default()
@@ -73,14 +61,12 @@ embed_factory = EmbedFactory(color_handler)
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(script_dir)
 RULES_FOLDER: str = os.path.join(project_root, "data", "rules")
-INDEX_FOLDER: str = os.path.join(project_root, "data", "knowledge_index")
 
 # Skapa mappen om den inte finns
 if not os.path.exists(RULES_FOLDER):
     os.makedirs(RULES_FOLDER)
 
 # Globala objekt
-knowledge_base = KnowledgeBase()
 
 # Lägg till nya kommentarsystem
 from core.user_settings import UserSettingsManager
@@ -129,8 +115,7 @@ async def on_ready() -> None:
     logger.info(f"{bot.user} has connected to Discord!")
     logger.info(f"Working directory: {os.getcwd()}")
     logger.info(f"Rules folder: {RULES_FOLDER}")
-    logger.info(f"Index folder: {INDEX_FOLDER}")
-    
+
     # Registrera slash commands enligt feature flags
     # Lägg till project_root till sys.path för att hitta config-modulen
     import sys
@@ -139,12 +124,8 @@ async def on_ready() -> None:
     from config.feature_flags import FEATURE_FLAGS, is_command_enabled
     if FEATURE_FLAGS["slash_dice_enabled"]:
         from commands.slash_dice_commands import register_slash_dice_commands
-        await register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    
-    if FEATURE_FLAGS["slash_knowledge_enabled"]:
-        from commands.slash_knowledge_commands import register_slash_knowledge_commands
-        await register_slash_knowledge_commands(bot, knowledge_base, color_handler, embed_factory)
-    
+        await register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory)
+
     if FEATURE_FLAGS["slash_combat_enabled"]:
         from commands.slash_combat_commands import register_slash_combat_commands
         await register_slash_combat_commands(bot, combat_manager, color_handler, embed_factory)
@@ -233,22 +214,7 @@ async def on_ready() -> None:
     except Exception as e:
         logger.error(f'Failed to sync slash commands: {e}', exc_info=True)
 
-    # Ladda kunskapsbasen i bakgrunden — INTE synkront. Ett synkront anrop
-    # här blockerade tidigare event-loopen i ~6 sekunder direkt efter att
-    # kommandona synkats, vilket gjorde att interaktioner som kom in under
-    # den tiden dog med "404 Unknown Interaction" (Discords 3-sekundersgräns
-    # för interaktions-token hann gå ut innan loopen var fri att svara).
-    # knowledge_base.ensure_ready() kör den tunga initieringen via
-    # asyncio.to_thread och är race-säker mot samtidiga anrop från /ask etc.
-    async def _load_knowledge_base_in_background() -> None:
-        success = await knowledge_base.ensure_ready()
-        if success:
-            logger.info("Kunskapsbasen initierad och redo att användas.")
-        else:
-            logger.warning("Kunde inte initiera kunskapsbasen. Kommandot /ask kommer inte att fungera korrekt.")
-
-    asyncio.create_task(_load_knowledge_base_in_background())
-    logger.info("Alla kommandon har registrerats och boten är redo! (Kunskapsbasen laddas i bakgrunden.)")
+    logger.info("Alla kommandon har registrerats och boten är redo!")
 
 def main():
     """
@@ -263,7 +229,6 @@ def main():
     logger.info(f"Startar Diceroller Bot")
     logger.info(f"Working directory: {os.getcwd()}")
     logger.info(f"Rules folder: {RULES_FOLDER}")
-    logger.info(f"Index folder: {INDEX_FOLDER}")
 
     # Visa tillgängliga kanaler
     if CHANNEL_IDS:

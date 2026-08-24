@@ -88,7 +88,6 @@ class UtilitySlashCommands(commands.Cog):
     @app_commands.choices(category=[
         app_commands.Choice(name="Tärningskommandon", value="dice"),
         app_commands.Choice(name="Stridskommandon", value="combat"),
-        app_commands.Choice(name="Kunskapskommandon", value="knowledge"),
         app_commands.Choice(name="Statistik & Sessioner", value="stats"),
         app_commands.Choice(name="Alla kommandon", value="all")
     ])
@@ -133,19 +132,6 @@ class UtilitySlashCommands(commands.Cog):
                         "`/kross` - Krossanfall för trubbiga vapen\n"
                         "`/fummel` - Slå på fummeltabeller\n\n"
                         "**Modifierare:** Ryttare, fyrbent mål, målpunkter"
-                    ),
-                    inline=False
-                )
-            
-            if category == "knowledge" or category == "all":
-                embed.add_field(
-                    name="🧠 Kunskapskommandon",
-                    value=(
-                        "**AI-assisterad sökning:**\n"
-                        "`/ask` - Ställ frågor till AI om EON-regler\n"
-                        "`/sök` - Sök direkt i regelböcker\n"
-                        "`/allt` - Omfattande AI-analys av alla dokument\n\n"
-                        "**Tips:** Använd specifika termer för bästa resultat"
                     ),
                     inline=False
                 )

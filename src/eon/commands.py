@@ -1,21 +1,29 @@
 """
-Slash commands för combat operations i EON Discord Bot.
-Konverterar prefix commands (!hugg, !stick, !kross, !fummel) till moderna slash commands.
+EON-stridskommandon (Cog) — /hugg, /stick, /kross, /fummel.
+
+Del av paketet src/eon/: ren mekanik ligger i hit_tables/damage_tables/
+fumble_tables/combat_manager, detta är Discord-lagret.
 """
 
 import random
 import time
+import logging
 from typing import List, Optional, Tuple, Any
 import discord
 from discord.ext import commands
 from discord import app_commands
 from discord import ui
 
+# Setup logging
+logger = logging.getLogger(__name__)
+
 # Import migration helpers
 from migration.helper import MigrationHelper
 
-# Import fumble tables and weapon aliases
-from eon import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
+# Relativa importer inuti paketet
+from .combat_manager import DamageType, WeaponType
+from .damage_tables import parse_effect_code
+from .fumble_tables import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
 
 
 class ArmorModal(ui.Modal):
@@ -61,8 +69,6 @@ class ArmorModal(ui.Modal):
 
             # Nu behöver vi omberäkna skaderesultatet med den nya slutskadan
             # eftersom damage_result beror på damage_value >= 10
-            from eon import DamageType, WeaponType
-
             damage_type_map = {
                 "hugg": DamageType.HUGG,
                 "stick": DamageType.STICK,
@@ -95,7 +101,6 @@ class ArmorModal(ui.Modal):
             # Beräkna effektresultaten
             damage_effects = None
             if damage_result and damage_result.effect_code:
-                from eon import parse_effect_code
                 damage_effects = parse_effect_code(damage_result.effect_code, final_damage)
 
             # Skapa embed för slutresultat
@@ -145,12 +150,13 @@ class ArmorModal(ui.Modal):
             import traceback
             traceback.print_exc()
 
-class CombatSlashCommands(commands.Cog):
-    """Cog för alla combat-relaterade slash commands."""
-    
-    def __init__(self, bot, combat_manager, color_handler, embed_factory):
+class EonCommands(commands.Cog):
+    """Cog för EON-stridskommandon."""
+
+    def __init__(self, bot, combat_manager, roll_tracker, color_handler, embed_factory):
         self.bot = bot
         self.combat_manager = combat_manager
+        self.roll_tracker = roll_tracker
         self.color_handler = color_handler
         self.embed_factory = embed_factory
         
@@ -458,22 +464,18 @@ class CombatSlashCommands(commands.Cog):
 
 
 # Registrering function
-async def register_slash_combat_commands(bot, combat_manager, color_handler, embed_factory):
+async def register_slash_eon_commands(bot, combat_manager, roll_tracker, color_handler, embed_factory):
     """
-    Registrera slash combat commands med boten.
+    Registrera EON-stridskommandona med boten.
     """
-    # TODO: Ta bort sys.path manipulation - använd proper package structure
-    # import sys
-    # import os
-    # sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
     from config.feature_flags import is_command_enabled
-    
-    # Kontrollera om slash combat commands är aktiverade
+
+    # Kontrollera om EON-stridskommandona är aktiverade
     if not is_command_enabled("hugg", "combat"):
-        print("Slash combat commands är inte aktiverade enligt feature flags")
+        logger.info("EON-stridskommandon är inte aktiverade enligt feature flags")
         return
-    
+
     # Lägg till cog
-    combat_cog = CombatSlashCommands(bot, combat_manager, color_handler, embed_factory)
-    await bot.add_cog(combat_cog)
-    print("Slash combat commands har registrerats (/hugg, /stick, /kross, /fummel).")
+    eon_cog = EonCommands(bot, combat_manager, roll_tracker, color_handler, embed_factory)
+    await bot.add_cog(eon_cog)
+    logger.info("EON-stridskommandon registrerade (/hugg, /stick, /kross, /fummel).")

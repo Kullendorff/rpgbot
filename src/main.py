@@ -123,10 +123,6 @@ async def on_ready() -> None:
         from commands.slash_dice_commands import register_slash_dice_commands
         await register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory)
 
-    if FEATURE_FLAGS["slash_combat_enabled"]:
-        from commands.slash_combat_commands import register_slash_combat_commands
-        await register_slash_combat_commands(bot, combat_manager, color_handler, embed_factory)
-    
     if FEATURE_FLAGS["slash_utility_enabled"]:
         from commands.slash_utility_commands import register_slash_utility_commands
         await register_slash_utility_commands(bot, roll_tracker, color_handler, embed_factory)
@@ -155,6 +151,13 @@ async def on_ready() -> None:
         from starwars.commands import register_slash_starwars_commands
         await register_slash_starwars_commands(bot, embed_factory)
         logger.info("Star Wars D6 kommandon registrerade (/sw_slag, /sw_motstand, /sw_svarighet, /sw_init).")
+
+    # Registrera EON kommandon (samlade efter övriga spelsystem: dg -> db -> sw -> eon)
+    if FEATURE_FLAGS["slash_combat_enabled"]:
+        from eon.commands import register_slash_eon_commands
+        await register_slash_eon_commands(
+            bot, combat_manager, roll_tracker, color_handler, embed_factory
+        )
 
     # Registrera kommentarkommandon FÖRE sync
     from commands.slash_comment_commands import register_slash_comment_commands

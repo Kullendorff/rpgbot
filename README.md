@@ -1,6 +1,6 @@
 # EON Diceroller Bot 🎲
 
-En avancerad Discord-bot för tärningskast och kunskapshantering för det svenska rollspelet EON, med stöd för "Skjut Dem I Huvudet".
+En avancerad Discord-bot för tärningskast och regeluppslag för det svenska rollspelet EON, med stöd för "Skjut Dem I Huvudet".
 
 ## ✨ Huvudfunktioner
 
@@ -12,22 +12,16 @@ En avancerad Discord-bot för tärningskast och kunskapshantering för det svens
 - **Hemliga slag**: `/secret roll tärningar:2d6` endast synligt för spelledaren
 - **Detaljerad statistik**: `/stats`, `/mystats` spårar alla slag
 
-### 🧠 AI-driven Kunskapsbas
-- **Intelligent sökning**: `/ask fråga:"Vad är Ferox?"` - AI-assisterad regelfrågor
-- **Snabbsökning**: `/sök sökterm:ferox` för direkta sökresultat  
-- **Omfattande sökning**: `/allt term:ferox` genomsöker hela regelbiblioteket
-- **Regelreferenser**: `/regel namn:strid` för snabba regeluppslag
+### 📚 Regeluppslag
+- **Regelreferenser**: `/eon_regel namn:strid` för snabba regeluppslag från `data/rules/`
 
 ### ⚔️ Stridsystem
-- **Attacksimuleringar**: `/hugg`, `/stick`, `/kross` med realistiska skadeberäkningar
-- **Fummeltabeller**: `/fummel` för kritiska misslyckanden
+- **Attacksimuleringar**: `/eon_hugg`, `/eon_stick`, `/eon_kross` med realistiska skadeberäkningar
+- **Fummeltabeller**: `/eon_fummel` för kritiska misslyckanden
 - **Vapenskaderegler**: Automatisk hantering av olika vapentypers skador
 
 ### 🎭 Karaktärsskapande & Session
-- **Komplett EON karaktärsskapande**: `!chargen` - 32 steg med automatisk tabellhantering
-- **Thalamur-specialsystem**: Ätter, medborgarätt och strategisk bakgrundsplacering
 - **Sessionshantering**: `/startsession namn:"Äventyr i Trinsmyra"` och `/endsession`
-- **AI-sammanfattningar**: Automatiska humoristiska sessionssammanfattningar via Claude AI
 - **Personaliserade kommentarer**: `/kommentarer` - SL kan aktivera anpassade kommentarer för spelares tärningsslag
 
 ### 🐉 Dragonbane (Drakar och Demoner)
@@ -54,21 +48,18 @@ Regler verifierade mot källboken (WEG40120), inte bara OCR-texten — se `src/s
 
 ```
 src/
-├── main.py                 # Bot entry point (200 rader, ner från 1300+)
-├── commands/               # Kommandomoduler
-│   ├── dice_commands.py    # Tärningskommandon (roll, ex, count, chance)
-│   ├── admin_commands.py   # Admin/GM kommandon (secret, session)
-│   ├── knowledge_commands.py # AI kunskapskommandon (ask, sök, allt)
-│   ├── combat_commands.py  # Stridskommandon (hugg, stick, kross)
-│   └── utility_commands.py # Hjälpkommandon (stats, regel, dicehelp)
+├── main.py                 # Bot entry point
+├── commands/               # Slash-kommandomoduler
+│   ├── slash_dice_commands.py    # Tärningskommandon (/roll, /ex, /count, /chance)
+│   ├── slash_admin_commands.py   # Admin/GM kommandon (/secret_roll, session)
+│   └── slash_utility_commands.py # Hjälpkommandon (/stats, /dicehelp)
+├── eon/                    # EON som eget paket: mekanik + EonCommands (/eon_hugg, /eon_regel ...)
 ├── core/                   # Kärnfunktionalitet
 │   ├── constants.py        # Globala konstanter och konfiguration
 │   ├── dice_parser.py      # Avancerad DiceSpec parser med säkerhet
-│   ├── dice_engine.py      # Obegränsade T6-slag och sannolikhet
-│   └── knowledge_base.py   # AI integration (Claude + Pinecone)
-├── utils/                  # Hjälpfunktioner
-│   └── text_utils.py       # Textbehandling och Unicode-hantering
-└── [Legacy moduler]        # Befintliga moduler (migration pågår)
+│   └── dice_engine.py      # Obegränsade T6-slag och sannolikhet
+└── utils/                  # Hjälpfunktioner
+    └── text_utils.py       # Textbehandling och Unicode-hantering
 ```
 
 ## 🚀 Nya Funktioner (v2.0)
@@ -99,20 +90,17 @@ src/
 /secret roll tärningar:XdY        # Hemligt slag för spelledaren
 ```
 
-### 🧠 Kunskapskommandon (Slash Commands)
+### 📚 Regler (Slash Commands)
 ```
-/ask fråga:"din fråga"     # AI-assisterad regelfråga
-/sök sökterm:sökterm       # Snabbsökning i regelböcker
-/allt term:sökterm         # Omfattande sökning
-/regel namn:kategori       # Regelreferens
+/eon_regel namn:kategori   # Regelreferens från data/rules/
 ```
 
 ### ⚔️ Stridskommandon (Slash Commands)
 ```
-/hugg                # Hugtvapen-attack
-/stick               # Stickvapenattack  
-/kross               # Krossvapenattack
-/fummel              # Fummeltabell
+/eon_hugg            # Hugtvapen-attack
+/eon_stick           # Stickvapenattack  
+/eon_kross           # Krossvapenattack
+/eon_fummel          # Fummeltabell
 ```
 
 ### 🎭 SL-verktyg (Slash Commands)
@@ -122,18 +110,10 @@ src/
 /kommentarer status spelare:@user      # Visa spelarens inställningar
 ```
 
-### 🎭 Karaktärsskapande
-```
-!chargen             # Starta ny karaktär (32 EON-steg)
-!chargen start       # Starta ny karaktärssession
-!chargen status      # Visa nuvarande framsteg
-!chargen reset       # Återställ karaktärsskapande
-```
-
 ### 📊 Session & Admin (Slash Commands)
 ```
 /startsession namn:"sessionnamn"  # Starta spelsession
-/endsession                       # Avsluta med AI-sammanfattning
+/endsession                       # Avsluta spelsession
 /showsession                      # Visa aktiv session
 /stats                           # Serverstatistik
 /mystats                         # Personlig statistik
@@ -142,9 +122,7 @@ src/
 
 ## 🛠️ Installation & Konfiguration
 
-### 🎯 Enkel Installation (Utan AI/Kunskapsbas)
-
-**För de som bara vill spela utan AI-funktioner:**
+### 🎯 Installation
 
 #### Steg 1: Skapa Discord Bot
 1. Gå till [Discord Developer Portal](https://discord.com/developers/applications)
@@ -188,24 +166,15 @@ python src/main.py
 #### Steg 4: Testa i Discord
 Gå till din server och skriv:
 - `/roll tärningar:3d6` - Testa grundläggande tärning
-- `!chargen` - Starta karaktärsskapande (fortfarande prefix command)
 - `/dicehelp` - Se alla kommandon
 
-**Vad fungerar utan AI:**
+**Allt fungerar utan externa API:er:**
 - ✅ **Alla tärningskommandon**: `/roll`, `/ex`, `/count`, `/chance` 
-- ✅ **Stridsystem**: `/hugg`, `/stick`, `/kross`, `/fummel`
+- ✅ **Stridsystem**: `/eon_hugg`, `/eon_stick`, `/eon_kross`, `/eon_fummel`
 - ✅ **Statistik**: `/stats`, `/mystats` 
-- ✅ **Karaktärsskapande**: `!chargen` (komplett EON system)
-- ✅ **Sessionshantering**: `/startsession`, `/endsession` (utan AI-sammanfattning)
-- ✅ **Hjälpkommandon**: `/dicehelp`, grundläggande `/regel`
+- ✅ **Sessionshantering**: `/startsession`, `/endsession`
+- ✅ **Hjälpkommandon**: `/dicehelp`, grundläggande `/eon_regel`
 - ✅ **Kommentarsystem**: `/kommentarer` (personaliserade kommentarer)
-
-**Vad som INTE fungerar utan AI:**
-- ❌ `/ask` (AI-assisterade regelfrågor)
-- ❌ `/allt` (omfattande sökning)
-- ❌ AI-genererade sessionssammanfattningar
-
-**Detta ger dig 90% av botens funktionalitet utan några externa API:er eller databaser!**
 
 #### 🔧 Vanliga Problem & Lösningar
 
@@ -223,37 +192,9 @@ Gå till din server och skriv:
 - ✅ Kontrollera att Python 3.8+ är installerat
 - ✅ Se till att .env filen är i rätt mapp (samma som main.py)
 
-### 🧠 Fullständig Installation (Med AI)
-
-**För avancerade funktioner och kunskapsbas:**
-
-```bash
-# 1. Klona och installera
-git clone https://github.com/kullendorff/RPGBOT.git
-cd RPGBOT
-pip install -r requirements.txt
-
-# 2. Fullständig konfiguration (.env)
-DISCORD_TOKEN=din_discord_token
-PINECONE_API_KEY=din_pinecone_nyckel     # För vektorsökning
-ANTHROPIC_API_KEY=din_claude_nyckel      # För AI-funktioner
-OPENAI_API_KEY=din_openai_nyckel         # Backup AI
-PINECONE_INDEX_NAME=rpg-knowledge
-CHANNEL_IDS=kanal1,kanal2                # Valfritt: begränsa kanaler
-
-# 3. Bygg kunskapsbas
-python utils/extract_all_pdfs.py        # Extrahera text från PDF:er
-python utils/index_knowledge.py         # Indexera för sökning
-
-# 4. Starta bot
-python src/main.py
-```
-
 ### Katalogstruktur
 ```
 data/
-├── knowledge_index/     # Whoosh sökindex
-├── extracted_text/      # Extraherad PDF-text
 ├── rules/              # Snabbreferenser (.txt)
 ├── rolls.db            # SQLite statistikdatabas
 ├── user_colors.json    # Användarfärger
@@ -266,9 +207,6 @@ data/
 ### Krav
 - **Python 3.8+**
 - **Discord.py** för Discord API
-- **Anthropic Claude** för AI-funktioner
-- **Pinecone** för vektorsökning
-- **Whoosh** för fulltextsökning
 - **SQLite** för statistik
 
 ### Prestanda
@@ -292,38 +230,20 @@ data/
   - Flera tärningar: Högst en tärning ≠ 1
 - **Fummel**: Två+ 6:or i första kastomgången
 
-### AI Kunskapsbas
-- **Omfattande regelböcker**: Stödjer fullständiga EON-regelböcker
-- **Kontextuell sökning**: AI förstår synonymer och sammanhang
-- **Flerspråkssökning**: Svenska och engelska termer
-- **Semantisk sökning**: Hittar relaterat innehåll även utan exakta matchningar
-
 ## 📈 Statistik & Spårning
 
 Boten spårar automatiskt:
 - **Alla tärningskast** med resultat och framgång/misslyckanden
 - **Perfekta slag och fummel** för obegränsade T6-slag
 - **Användningsstatistik** per kommando och spelare
-- **Sessionsdata** för AI-genererade sammanfattningar
+- **Sessionsdata**
 - **Popularitetsdata** för tärningskombinationer
-
-## 🤖 AI Integration
-
-### Claude AI (Anthropic)
-- **Regelfrågning**: Intelligent tolkning av komplexa regelfrågor
-- **Sessionssammanfattningar**: Humoristiska sammanfattningar av spelstatistik
-- **Kontextuell förståelse**: Kan resonera om spelregler och situationer
-
-### Vektorsökning (Pinecone)
-- **Semantisk sökning**: Förstår betydelsen, inte bara ord
-- **Snabb prestanda**: Subsekund-svar för de flesta sökningar
-- **Skalbarhet**: Hanterar stora regeldokument effektivt
 
 ## 🧪 Utveckling & Testning
 
 ### Kvalitetssäkring
 - **Automated Testing**: 15+ enhetstester för kärnfunktioner
-- **Integration Tests**: Validerar commands och AI-funktioner
+- **Integration Tests**: Validerar kommandon och moduler
 - **Security Testing**: DoS-skydd och input-validering
 - **Performance Testing**: Minnesanvändning och svarstider
 
@@ -372,7 +292,6 @@ Detta projekt är licensierat under **MIT License**. Se `LICENSE` för detaljer.
 
 - **Jonas** (https://github.com/jonsal/dragonbane) för Dragonbane-modulen: tärninglogik och kommandouppsättning. Anpassad och regelrättad för den här boten.
 - **EON Rollspel** för det fantastiska rollspelssystemet
-- **Anthropic** för Claude AI
 - **Discord.py** för excellent Discord integration
 - **Open Source Community** för alla fantastiska bibliotek
 

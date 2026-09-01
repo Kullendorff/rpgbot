@@ -15,7 +15,7 @@ from discord import app_commands
 logger = logging.getLogger(__name__)
 
 # Import migration helpers
-from migration.helper import MigrationHelper, SlashCommandDecorator, dice_autocomplete, target_value_autocomplete
+from migration.helper import MigrationHelper, dice_autocomplete, target_value_autocomplete
 
 # Helper function för hemlig manipulation
 def apply_secret_manipulation(user_id: str, rolls: List[int], sides: int, 
@@ -44,17 +44,15 @@ def apply_secret_manipulation(user_id: str, rolls: List[int], sides: int,
 class DiceSlashCommands(commands.Cog):
     """Cog för alla tärnings-relaterade slash commands."""
     
-    def __init__(self, bot, roll_tracker, color_handler, embed_factory, knowledge_base):
+    def __init__(self, bot, roll_tracker, color_handler, embed_factory):
         self.bot = bot
         self.roll_tracker = roll_tracker
         self.color_handler = color_handler
         self.embed_factory = embed_factory
-        self.knowledge_base = knowledge_base
         
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
-        self.decorator = SlashCommandDecorator(self.helper)
-        
+
         # Import dependencies
         from core.constants import MAX_DICE, MAX_SIDES
         from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
@@ -113,8 +111,22 @@ class DiceSlashCommands(commands.Cog):
         start_time = time.time()
         
         try:
-            # Hantera demonisk inspiration
+            # Demonisk inspiration är ett GM-verktyg — gata för icke-GM:er.
+            # getattr skyddar mot DM-fallet där user saknar guild_permissions/roles.
             if demon:
+                perms = getattr(interaction.user, "guild_permissions", None)
+                is_gm = bool(perms and perms.manage_guild) or any(
+                    role.name in ("Game Master", "GM", "Spelledare", "Admin")
+                    for role in getattr(interaction.user, "roles", [])
+                )
+                if not is_gm:
+                    embed = await self.helper.create_error_response(
+                        interaction.user.id,
+                        "Demonisk inspiration kräver Game Master",
+                        "Flaggan 'demon' är reserverad spelledaren."
+                    )
+                    await self.helper.send_response(interaction, embed=embed)
+                    return
                 logger.debug(f"Demonisk inspiration aktiverad av {interaction.user.display_name} i /roll {tärningar}")
                 try:
                     await interaction.user.send(f"🔥 Demonisk inspiration aktiverad")
@@ -164,10 +176,11 @@ class DiceSlashCommands(commands.Cog):
                     final_results[min_index] = sides
                     total = sum(final_results) + modifier
             
-            # Bedöm framgång
+            # Bedöm framgång — EON är roll-under: lägre total = bättre.
+            # Samma bedömning som /ex, /secret_roll, legacy !roll och dice_engine.
             success = None
             if mål is not None:
-                success = total >= mål
+                success = total <= mål
             
             # Spara i statistik (använd final_results)
             self.roll_tracker.log_roll(
@@ -675,7 +688,7 @@ class DiceSlashCommands(commands.Cog):
 
 
 # Registrering function för att ersätta gamla systemet
-async def register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base):
+async def register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory):
     """
     Registrera slash dice commands med boten.
     Denna ersätter register_dice_commands för slash commands.
@@ -691,6 +704,6 @@ async def register_slash_dice_commands(bot, roll_tracker, color_handler, embed_f
         return
     
     # Lägg till cog
-    dice_cog = DiceSlashCommands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+    dice_cog = DiceSlashCommands(bot, roll_tracker, color_handler, embed_factory)
     await bot.add_cog(dice_cog)
     print("Slash dice commands har registrerats (/roll, /ex, /count, /chance).")

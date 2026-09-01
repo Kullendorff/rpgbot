@@ -8,43 +8,29 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 - `pip install -r requirements.txt` - Install Python dependencies
 - Create `.env` file with required API keys:
   - DISCORD_TOKEN (Discord bot token)
-  - PINECONE_API_KEY (for knowledge search)
-  - ANTHROPIC_API_KEY (for Codex integration)
-  - OPENAI_API_KEY (optional)
-  - PINECONE_INDEX_NAME (default: "rpg-knowledge")
   - CHANNEL_IDS (comma-separated Discord channel IDs, optional)
 
 ### Running the Application
 - `python src/main.py` - Start the Discord bot
 - `python launcher/eon_bot_launcher.py` - Start the GUI launcher
 
-### Knowledge Base Management
-- `python utils/extract_all_pdfs.py` - Extract text from PDF files
-- `python utils/index_knowledge.py` - Create/update knowledge search index
-- `python utils/migrate_database_perfect_fumble.py` - Migrate database schema
-
 ### Testing
-- `python tests/test.py` - Basic tests
-- `python tests/test_embedding.py` - Test embedding functionality
+- Run test files as scripts: `python tests/test_X.py` (e.g. `test_starwars_dice.py`, `test_deltagreen_*.py`)
 
 ## Architecture Overview
 
-This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skjut Dem I Huvudet"). The bot provides dice rolling, combat simulation, rule lookups, and knowledge base queries.
+This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skjut Dem I Huvudet"). The bot provides dice rolling, combat simulation, and rule lookups.
 
 ### Core Components
 
-**src/main.py** - Main bot entry point with Discord slash command handlers. Uses discord.py with slash commands (`/`). Integrates with Pinecone for vector search, Anthropic Codex for AI responses, and local SQLite for roll tracking.
+**src/main.py** - Main bot entry point with Discord slash command handlers. Uses discord.py with slash commands (`/`). Integrates with local SQLite for roll tracking.
 
-**Knowledge System** - Two-tiered search:
-- Whoosh index (`data/knowledge_index/`) for full-text search
-- Pinecone vector database for semantic search
-- Extracted text from RPG books stored in `data/extracted_text/`
-
-**Combat System** - Modular combat mechanics:
-- `src/combat_manager.py` - Main combat orchestration
-- `src/hit_system.py` - Hit calculation logic
-- `src/damage_tables.py` - Damage calculation by weapon type
-- `src/fumble_tables.py` - Critical failure handling
+**EON Module** - EON mechanics as its own package (`src/eon/`, like deltagreen/dragonbane/starwars):
+- `src/eon/combat_manager.py` - Main combat orchestration
+- `src/eon/hit_tables.py` - Hit location calculation
+- `src/eon/damage_tables.py` - Damage calculation by weapon type
+- `src/eon/fumble_tables.py` - Critical failure handling
+- `src/eon/commands.py` - `EonCommands` Cog (combat + rules + improvement commands)
 
 **Roll Tracking** - SQLite database (`data/rolls.db`) tracks all dice rolls for statistics. Supports "perfect rolls" and "fumbles" for unlimited d6 rolls (`/ex` command).
 
@@ -56,9 +42,8 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 ### Key Features (All Slash Commands)
 
 - **Dice Commands**: `/roll`, `/ex` (unlimited d6), `/count`, `/chance`
-- **Knowledge**: `/ask`, `/sök`, `/allt` - Query RPG rule database using AI
-- **Combat**: `/hugg`, `/stick`, `/kross`, `/fummel` - Weapon attack simulation
-- **Rules**: `/regel` - Quick rule lookups from `data/rules/`
+- **EON**: `/eon_hugg`, `/eon_stick`, `/eon_kross`, `/eon_fummel` - Weapon attack simulation
+- **EON Rules**: `/eon_regel` - Quick rule lookups from `data/rules/`; `/eon_hoj` - improvement rolls
 - **Stats**: `/stats`, `/mystats` - Roll statistics and session tracking
 - **GM Commands**: `/startsession`, `/endsession`, `/secret_roll`, `/gm_override`
 
@@ -72,7 +57,6 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 - `src/commands/` - Slash command implementations:
   - `slash_dice_commands.py` - Dice rolling with autocomplete
   - `slash_combat_commands.py` - Combat mechanics
-  - `slash_knowledge_commands.py` - AI-powered knowledge search
   - `slash_admin_commands.py` - GM/admin tools
   - `slash_utility_commands.py` - Utility commands
   - `slash_manipulation_commands.py` - Manipulation mechanics
@@ -86,14 +70,11 @@ This is a Discord bot for the Swedish RPG "EON" (and some functionality for "Skj
 
 ### Data Files
 
-- `data/extracted_text/` - Text extracted from RPG PDFs
 - `data/rules/` - Quick reference rule files (txt format)
 - `data/sdih_decks/` - Card deck data for SDIH game
 - `data/user_colors.json` - User color preferences
 - `data/deltagreen/` - Delta Green module data
 - `data/character_tables/` - EON character-related tables
-
-The knowledge base requires manual setup of PDF extraction and indexing before the bot can answer rule questions effectively.
 
 ---
 

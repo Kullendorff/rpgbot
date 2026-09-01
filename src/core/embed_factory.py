@@ -22,7 +22,6 @@ class EmbedFactory:
     FAILURE_EMOJI = "❌"
     COMBAT_EMOJI = "⚔️"
     STATS_EMOJI = "📊"
-    KNOWLEDGE_EMOJI = "📚"
     ADMIN_EMOJI = "🔧"
 
     def __init__(self, color_handler):
@@ -151,27 +150,6 @@ class EmbedFactory:
             basic_stats.append(f"**Träffsäkerhet:** {stats_data['success_rate']:.1f}%")
 
         embed.add_field(name="Grundstatistik", value="\n".join(basic_stats), inline=False)
-
-        return embed
-
-    def knowledge_result(self, user_id: int, user_name: str, question: str,
-                        answer: str, sources: List[str] = None) -> discord.Embed:
-        """Standard mall för kunskapsresultat."""
-        title = f"{self.KNOWLEDGE_EMOJI} Kunskapssökning"
-        description = f"**Fråga från {user_name}:**\n*{question}*"
-
-        embed = self._get_base_embed(user_id, title, description)
-
-        # Svar (med längdbegränsning)
-        answer_text = answer[:1000] + "..." if len(answer) > 1000 else answer
-        embed.add_field(name="Svar", value=answer_text, inline=False)
-
-        # Källor om tillgängliga
-        if sources:
-            sources_text = "\n".join(f"• {source}" for source in sources[:3])
-            if len(sources) > 3:
-                sources_text += f"\n*...och {len(sources) - 3} till*"
-            embed.add_field(name="Källor", value=sources_text, inline=False)
 
         return embed
 

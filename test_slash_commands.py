@@ -54,7 +54,6 @@ print("\nTestar feature flags...")
 
 # Test feature flags
 print(f"Dice commands enabled: {FEATURE_FLAGS['slash_dice_enabled']}")
-print(f"Dual mode: {FEATURE_FLAGS['dual_mode_dice']}")
 print(f"Roll command enabled: {is_command_enabled('roll', 'dice')}")
 
 print("\nTestar dice parser integration...")

@@ -28,9 +28,7 @@ wheels/
 *.db-shm
 *.db-wal
 
-# Stora datafiler
-data/knowledge_index.faiss
-data/knowledge_texts.npy
+# Stora datafiler (generiska globs - specifika FAISS/numpy-filer fanns aldrig i repot)
 *.faiss
 *.npy
 
@@ -86,6 +84,9 @@ data/deltagreen/
 data/character_tables/sessions/
 data/spider_status_*.json
 data/sdih_decks/
+
+# GM:s hemliga tärningsmanipulationer (spelar-ID:n + fuskdata - hemliga för spelarna)
+data/secret_manipulations.json
 
 # Windows artifacts
 NUL

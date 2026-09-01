@@ -96,9 +96,8 @@ async def register_slash_spider_commands(bot, color_handler):
                 embed.set_footer(text="⚠️ ALLVARLIG SKADA!")
             
             await interaction.response.send_message(embed=embed)
-            
-            ai_description = await manager._generate_ai_description(result)
-            gm_report = manager.format_gm_report(result, ai_description)
+
+            gm_report = manager.format_gm_report(result)
             
             try:
                 await interaction.user.send(f"```\n{gm_report}\n```")

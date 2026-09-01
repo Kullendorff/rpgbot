@@ -717,7 +717,8 @@ class DeltaGreenCommands(commands.Cog):
             )
 
             await interaction.response.send_message(embed=embed)
-            logger.info(f"Agent roll: {agent['callsign']} rolled {skill} ({skill_value}%{bonus:+d if bonus else ''}) = {result.roll}")
+            bonus_suffix = f"{bonus:+d}" if bonus else ""
+            logger.info(f"Agent roll: {agent['callsign']} rolled {skill} ({skill_value}%{bonus_suffix}) = {result.roll}")
 
         except Exception as e:
             logger.error(f"Error in dg_agent_roll: {e}", exc_info=True)

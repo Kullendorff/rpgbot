@@ -6,15 +6,8 @@ import re
 from typing import Tuple, Optional, List, Any, Dict, Union
 import time
 import discord
-import numpy as np
-import tiktoken
 from discord.ext import commands
 from dotenv import load_dotenv
-from pinecone import Pinecone
-from sentence_transformers import SentenceTransformer
-import anthropic
-from whoosh.index import open_dir
-from whoosh.qparser import QueryParser
 
 # Initialize logging FIRST before any other imports
 from core.logging_config import setup_logging, get_logger
@@ -26,31 +19,19 @@ logger = get_logger(__name__)
 # Importera gamla moduler (ska flyttas till utils/)
 from color_handler import ColorHandler
 from roll_tracker import RollTracker
-from combat_manager import CombatManager
-from damage_tables import DamageType
-from hit_tables import WeaponType  # om du vill ha typ-checking
-from fumble_tables import FUMBLE_TABLES, WEAPON_TYPE_ALIASES
+from eon import CombatManager
 
 # Import för ytterligare moduler
-import stats_commands
 # Import för Skjut dom i huvudet
 from skjutdomihuvudet import commands as sdih_commands
-# Import för nya kommandomoduler
-from commands import admin_commands
-from commands.dice_commands import register_dice_commands
-from commands.knowledge_commands import register_knowledge_commands
-from commands.combat_commands import register_combat_commands
-from commands.utility_commands import register_utility_commands
 
 # Import för nya modulära komponenter
 from core.constants import (
-    MAX_DICE, MAX_SIDES, MAX_MESSAGE_LENGTH, 
-    MAX_TOKENS
+    MAX_DICE, MAX_SIDES, MAX_MESSAGE_LENGTH
 )
-from utils.text_utils import clean_unicode, split_message, count_tokens
+from utils.text_utils import clean_unicode, split_message
 from core.dice_parser import parse_dice_string
 from core.dice_engine import unlimited_d6s, simulate_unlimited_dice
-from core.knowledge_base import KnowledgeBase
 
 # Ladda miljövariabler från .env-filen
 load_dotenv()
@@ -58,9 +39,6 @@ load_dotenv()
 # Hämta tokens och API-nycklar från miljövariablerna
 DISCORD_TOKEN: Optional[str] = os.getenv('DISCORD_TOKEN')
 CHANNEL_IDS: Optional[str] = os.getenv('CHANNEL_IDS')
-PINECONE_API_KEY: Optional[str] = os.getenv("PINECONE_API_KEY")
-ANTHROPIC_API_KEY: Optional[str] = os.getenv("ANTHROPIC_API_KEY")
-PINECONE_INDEX_NAME: str = os.getenv("PINECONE_INDEX_NAME", "rpg-knowledge")
 
 # Konfigurera Discord-boten med nödvändiga behörigheter
 intents: discord.Intents = discord.Intents.default()
@@ -80,14 +58,12 @@ embed_factory = EmbedFactory(color_handler)
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(script_dir)
 RULES_FOLDER: str = os.path.join(project_root, "data", "rules")
-INDEX_FOLDER: str = os.path.join(project_root, "data", "knowledge_index")
 
 # Skapa mappen om den inte finns
 if not os.path.exists(RULES_FOLDER):
     os.makedirs(RULES_FOLDER)
 
 # Globala objekt
-knowledge_base = KnowledgeBase()
 
 # Lägg till nya kommentarsystem
 from core.user_settings import UserSettingsManager
@@ -100,14 +76,43 @@ from core.manipulation_manager import ManipulationManager
 manipulation_manager = ManipulationManager()
 
 
+# Global felhantering: utan dessa fick oväntade fel användaren att se tysta
+# "The application did not respond" eftersom ingen handler fångade dem.
+# Medvetet minimalt — per-cog-hantering och _send_error()-helpers är
+# robusthetsfasen, inte detta skyddsnät.
+@bot.event
+async def on_app_command_error(interaction: discord.Interaction, error: discord.app_commands.AppCommandError) -> None:
+    """Fångar oväntade fel i alla slash-kommandon: logga full stacktrace, svara generiskt."""
+    cmd_name = getattr(getattr(interaction, "command", None), "name", "?")
+    logger.error(f"Oväntat fel i /{cmd_name}: {error}", exc_info=error)
+    try:
+        if interaction.response.is_done():
+            await interaction.followup.send("Ett internt fel uppstod. Det har loggats.", ephemeral=True)
+        else:
+            await interaction.response.send_message("Ett internt fel uppstod. Det har loggats.", ephemeral=True)
+    except discord.HTTPException:
+        pass
+
+
+@bot.event
+async def on_command_error(ctx: commands.Context, error: commands.CommandError) -> None:
+    """Fångar oväntade fel i prefix-kommandon: logga full stacktrace, meddela användaren."""
+    if isinstance(error, commands.CommandNotFound):
+        return  # okända kommandon hanteras tyst, som tidigare
+    logger.error(f"Oväntat fel i '{ctx.command}': {error}", exc_info=error)
+    try:
+        await ctx.send("Ett internt fel uppstod. Det har loggats.")
+    except discord.HTTPException:
+        pass
+
+
 @bot.event
 async def on_ready() -> None:
     """Skriver ut ett meddelande när boten har kopplat upp sig mot Discord."""
     logger.info(f"{bot.user} has connected to Discord!")
     logger.info(f"Working directory: {os.getcwd()}")
     logger.info(f"Rules folder: {RULES_FOLDER}")
-    logger.info(f"Index folder: {INDEX_FOLDER}")
-    
+
     # Registrera slash commands enligt feature flags
     # Lägg till project_root till sys.path för att hitta config-modulen
     import sys
@@ -116,23 +121,15 @@ async def on_ready() -> None:
     from config.feature_flags import FEATURE_FLAGS, is_command_enabled
     if FEATURE_FLAGS["slash_dice_enabled"]:
         from commands.slash_dice_commands import register_slash_dice_commands
-        await register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    
-    if FEATURE_FLAGS["slash_knowledge_enabled"]:
-        from commands.slash_knowledge_commands import register_slash_knowledge_commands
-        await register_slash_knowledge_commands(bot, knowledge_base, color_handler, embed_factory)
-    
-    if FEATURE_FLAGS["slash_combat_enabled"]:
-        from commands.slash_combat_commands import register_slash_combat_commands
-        await register_slash_combat_commands(bot, combat_manager, color_handler, embed_factory)
-    
+        await register_slash_dice_commands(bot, roll_tracker, color_handler, embed_factory)
+
     if FEATURE_FLAGS["slash_utility_enabled"]:
         from commands.slash_utility_commands import register_slash_utility_commands
         await register_slash_utility_commands(bot, roll_tracker, color_handler, embed_factory)
     
     if FEATURE_FLAGS["slash_admin_enabled"]:
         from commands.slash_admin_commands import register_slash_admin_commands
-        await register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+        await register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory)
 
     # Registrera Delta Green kommandon
     if FEATURE_FLAGS.get("slash_deltagreen_enabled", False):
@@ -155,6 +152,13 @@ async def on_ready() -> None:
         await register_slash_starwars_commands(bot, embed_factory)
         logger.info("Star Wars D6 kommandon registrerade (/sw_slag, /sw_motstand, /sw_svarighet, /sw_init).")
 
+    # Registrera EON kommandon (samlade efter övriga spelsystem: dg -> db -> sw -> eon)
+    if FEATURE_FLAGS["slash_eon_enabled"]:
+        from eon.commands import register_slash_eon_commands
+        await register_slash_eon_commands(
+            bot, combat_manager, roll_tracker, color_handler, embed_factory
+        )
+
     # Registrera kommentarkommandon FÖRE sync
     from commands.slash_comment_commands import register_slash_comment_commands
     register_slash_comment_commands(bot, user_settings, comment_generator, color_handler)
@@ -172,33 +176,9 @@ async def on_ready() -> None:
         register_debug_command(bot)
         logger.debug("DEBUG MODE: Debug kommando registrerat")
 
-    # Registrera prefix commands FÖRE sync för bättre struktur
-    # Även om prefix commands inte behöver synkas, är det bättre att registrera dem först
-
-    # Registrera statistikkommandona
-    stats_commands.register_commands(bot, roll_tracker, color_handler, embed_factory)
-    logger.info("Statistikkommandon har registrerats (allstats, mystatsall).")
-
     # Registrera Skjut dom i huvudet-kommandon
     sdih_commands.register_commands(bot, roll_tracker, color_handler)
     logger.info("Skjut dom i huvudet-kommandon har registrerats (rull, fördel, nackdel, etc.).")
-
-    # Registrera admin-kommandon
-    admin_commands.register_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    logger.info("Admin-kommandon har registrerats (startsession, endsession, showsession, secret).")
-
-    # Registrera nya modulära kommandon
-    register_dice_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
-    logger.info("Tärningskommandon har registrerats (roll, ex, count, chance).")
-
-    register_knowledge_commands(bot, knowledge_base, color_handler, embed_factory)
-    logger.info("Kunskapskommandon har registrerats (ask, allt, sök).")
-
-    register_combat_commands(bot, combat_manager, color_handler, embed_factory)
-    logger.info("Stridskommandon har registrerats (hugg, stick, kross, fummel).")
-
-    register_utility_commands(bot, roll_tracker, color_handler, embed_factory)
-    logger.info("Verktygskommandon har registrerats (dicehelp, stats, mystats, regel, höj).")
 
     # Registrera spindelkommandon (gigantspindlar och små spindlar).
     # Flyttade till en egen paketmodul (src/spindel/) och avstängda tills
@@ -234,22 +214,7 @@ async def on_ready() -> None:
     except Exception as e:
         logger.error(f'Failed to sync slash commands: {e}', exc_info=True)
 
-    # Ladda kunskapsbasen i bakgrunden — INTE synkront. Ett synkront anrop
-    # här blockerade tidigare event-loopen i ~6 sekunder direkt efter att
-    # kommandona synkats, vilket gjorde att interaktioner som kom in under
-    # den tiden dog med "404 Unknown Interaction" (Discords 3-sekundersgräns
-    # för interaktions-token hann gå ut innan loopen var fri att svara).
-    # knowledge_base.ensure_ready() kör den tunga initieringen via
-    # asyncio.to_thread och är race-säker mot samtidiga anrop från /ask etc.
-    async def _load_knowledge_base_in_background() -> None:
-        success = await knowledge_base.ensure_ready()
-        if success:
-            logger.info("Kunskapsbasen initierad och redo att användas.")
-        else:
-            logger.warning("Kunde inte initiera kunskapsbasen. Kommandot /ask kommer inte att fungera korrekt.")
-
-    asyncio.create_task(_load_knowledge_base_in_background())
-    logger.info("Alla kommandon har registrerats och boten är redo! (Kunskapsbasen laddas i bakgrunden.)")
+    logger.info("Alla kommandon har registrerats och boten är redo!")
 
 def main():
     """
@@ -264,7 +229,6 @@ def main():
     logger.info(f"Startar Diceroller Bot")
     logger.info(f"Working directory: {os.getcwd()}")
     logger.info(f"Rules folder: {RULES_FOLDER}")
-    logger.info(f"Index folder: {INDEX_FOLDER}")
 
     # Visa tillgängliga kanaler
     if CHANNEL_IDS:

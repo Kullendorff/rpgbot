@@ -1,8 +1,4 @@
-discord.py>=2.0.0
-python-dotenv
-anthropic>=0.10.0
-sentence-transformers
-pinecone-client==2.2.4
-numpy
-tiktoken
-whoosh
+discord.py>=2.5.2,<3.0
+python-dotenv==1.1.0
+numpy==2.2.5
+matplotlib>=3.9,<4.0

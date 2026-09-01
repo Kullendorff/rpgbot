@@ -20,29 +20,27 @@ logger = logging.getLogger(__name__)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import migration helpers
-from migration.helper import MigrationHelper, SlashCommandDecorator
+from migration.helper import MigrationHelper
 
 class AdminSlashCommands(commands.Cog):
     """Cog för alla admin-relaterade slash commands."""
     
-    def __init__(self, bot, roll_tracker, color_handler, embed_factory, knowledge_base=None):
+    def __init__(self, bot, roll_tracker, color_handler, embed_factory):
         self.bot = bot
         self.roll_tracker = roll_tracker
         self.color_handler = color_handler
         self.embed_factory = embed_factory
-        self.knowledge_base = knowledge_base
-        
+
         # Migration helper för säker hantering
         self.helper = MigrationHelper(embed_factory)
-        self.decorator = SlashCommandDecorator(self.helper)
-        
+
         # Session management
         self.current_sessions = {}  # guild_id -> session_data
         
         # Import dice dependencies för secret commands
         from core.dice_parser import parse_dice_string, InvalidDiceFormat, DiceLimitsError
         from core.dice_engine import unlimited_d6s
-        from core.constants import MAX_DICE, MAX_SIDES, CLAUDE_MODEL
+        from core.constants import MAX_DICE, MAX_SIDES
         
         self.parse_dice_string = parse_dice_string
         self.InvalidDiceFormat = InvalidDiceFormat
@@ -106,13 +104,20 @@ class AdminSlashCommands(commands.Cog):
         
         try:
             guild_id = interaction.guild.id
-            session_id = f"session_{int(time.time())}"
             
             # Avsluta befintlig session om den finns
             if guild_id in self.current_sessions:
                 old_session = self.current_sessions[guild_id]
                 print(f"[SESSION] Automatisk avslutning av session {old_session['session_id']} innan ny start")
             
+            # Skapa ny session i roll_tracker först — dess returvärde är enda
+            # källan för sessions-ID:t. (Tidigare genererade cogen egna
+            # session_{epoch}-ID:n som aldrig matchade trackerns, vilket gjorde
+            # /endsession och get_session_stats döda.)
+            if self.roll_tracker.current_session is not None:
+                self.roll_tracker.end_session()
+            session_id = self.roll_tracker.start_session(beskrivning)
+
             # Skapa ny session
             session_data = {
                 'session_id': session_id,
@@ -124,12 +129,8 @@ class AdminSlashCommands(commands.Cog):
                 'events': [],
                 'roll_count': 0
             }
-            
+
             self.current_sessions[guild_id] = session_data
-            
-            # Starta session i roll_tracker
-            if hasattr(self.roll_tracker, 'start_session'):
-                self.roll_tracker.start_session(beskrivning)
             
             # Skapa bekräftelse embed
             embed = self.embed_factory.success_message(
@@ -278,58 +279,16 @@ class AdminSlashCommands(commands.Cog):
                     inline=True
                 )
             
-            # Generera AI-sammanfattning om tillgänglig och >10 händelser
-            total_events = session_stats.get('basic_stats', {}).get('total_commands', 0)
-            ai_summary = None
-            
-            if self.knowledge_base and total_events >= 10:
-                try:
-                    # Skapa prompt för AI-sammanfattning
-                    summary_prompt = f"""
-                    Skapa en kort sammanfattning av denna EON-spelsession:
-                    
-                    Session ID: {session_id}
-                    Längd: {duration}
-                    Spelmaster: {session_data['gm_name']}
-                    Beskrivning: {session_data.get('description', 'Ingen beskrivning')}
-                    
-                    Statistik:
-                    - Totala tärningsslag: {session_stats.get('basic_stats', {}).get('total_rolls', 0)}
-                    - Använda kommandon: {session_stats.get('basic_stats', {}).get('total_commands', 0)}
-                    
-                    Skriv en kort, entusiastisk sammanfattning på svenska (max 200 ord).
-                    """
-                    
-                    # Enkel AI-call utan timeout complexity för nu
-                    if hasattr(self.knowledge_base, 'claude_client') and self.knowledge_base.claude_client:
-                        response = self.knowledge_base.claude_client.messages.create(
-                            model=CLAUDE_MODEL,
-                            max_tokens=300,
-                            messages=[{"role": "user", "content": summary_prompt}]
-                        )
-                        ai_summary = response.content[0].text
-                
-                except Exception as e:
-                    print(f"[SESSION] AI summary misslyckades: {e}")
-            
-            if ai_summary:
-                embed.add_field(
-                    name="🤖 AI Sammanfattning",
-                    value=ai_summary[:1000] + ("..." if len(ai_summary) > 1000 else ""),
-                    inline=False
-                )
-            
-            # Avsluta session i roll_tracker
-            if hasattr(self.roll_tracker, 'end_session'):
-                self.roll_tracker.end_session(session_id)
+            # Avsluta session i roll_tracker. Metoden tar inga argument — den
+            # avslutar trackerns aktiva session (skapad av /startsession).
+            self.roll_tracker.end_session()
             
             # Arkivera session data
             archive_data = {
                 **session_data,
                 'end_time': datetime.now().isoformat(),
                 'duration_seconds': duration.total_seconds(),
-                'stats': session_stats,
-                'ai_summary': ai_summary
+                'stats': session_stats
             }
             
             # Spara till fil (enkel arkivering)
@@ -380,9 +339,7 @@ class AdminSlashCommands(commands.Cog):
             execution_time = time.time() - start_time
             await self.helper.log_command_usage(interaction, "endsession", {
                 "session_id": session_id,
-                "duration_hours": duration.total_seconds() / 3600,
-                "total_events": total_events,
-                "ai_summary_generated": bool(ai_summary)
+                "duration_hours": duration.total_seconds() / 3600
             }, execution_time)
             
             await self.helper.send_response(interaction, embed=embed)
@@ -905,384 +862,9 @@ class AdminSlashCommands(commands.Cog):
             )
             await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # ==================== GM CONTROL COMMANDS ====================
-    
-    @app_commands.command(name="gm_override", description="[GM] Ändra valfritt spelarresultat retroaktivt")
-    @app_commands.describe(
-        spelare="Användarnamn eller ID för spelaren",
-        nytt_resultat="Nytt resultat att använda",
-        orsak="Orsak till override (obligatorisk för audit)"
-    )
-    @app_commands.default_permissions(manage_guild=True)
-    async def gm_override_slash(
-        self,
-        interaction: discord.Interaction,
-        spelare: str,
-        nytt_resultat: str,
-        orsak: str
-    ):
-        """GM kan överskriva spelarresultat med logging."""
-        start_time = time.time()
-        
-        # KRITISK: GM-kontroll först
-        if not await self.check_gm_permission(interaction):
-            await self.send_gm_only_error(interaction)
-            return
-        
-        try:
-            # Bekräfta override med användaren
-            embed = self.embed_factory.admin_message(
-                interaction.user.id,
-                "⚠️ Bekräfta GM Override",
-                f"Du kommer att ändra resultat för {spelare}"
-            )
-            
-            embed.add_field(
-                name="🎯 Nytt Resultat",
-                value=nytt_resultat,
-                inline=True
-            )
-            
-            embed.add_field(
-                name="📝 Orsak",
-                value=orsak,
-                inline=True
-            )
-            
-            embed.add_field(
-                name="⚠️ VARNING",
-                value="Detta kommer att loggas extensivt för audit-ändamål",
-                inline=False
-            )
-            
-            # TODO: Implementera confirmation dialog med buttons
-            # För nu, kör override direkt
-            
-            # Logga override (KRITISK för audit)
-            override_log = {
-                'timestamp': datetime.now().isoformat(),
-                'gm_id': interaction.user.id,
-                'gm_name': interaction.user.display_name,
-                'player': spelare,
-                'new_result': nytt_resultat,
-                'reason': orsak,
-                'guild_id': interaction.guild.id
-            }
-            
-            print(f"[GM_OVERRIDE] {json.dumps(override_log, ensure_ascii=False)}")
-            
-            # Spara override till fil för audit
-            try:
-                override_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'overrides')
-                os.makedirs(override_dir, exist_ok=True)
-                
-                override_file = os.path.join(override_dir, f"override_{int(time.time())}.json")
-                with open(override_file, 'w', encoding='utf-8') as f:
-                    json.dump(override_log, f, ensure_ascii=False, indent=2)
-                
-            except Exception as e:
-                print(f"[GM_OVERRIDE] Kunde inte spara override-log: {e}")
-            
-            # Uppdatera embed med bekräftelse
-            embed.title = "✅ GM Override Genomförd"
-            embed.color = 0x00ff00  # Grön
-            
-            embed.add_field(
-                name="📋 Status",
-                value=f"Override genomförd och loggad",
-                inline=False
-            )
-            
-            execution_time = time.time() - start_time
-            await self.helper.log_command_usage(interaction, "gm_override", {
-                "player": spelare,
-                "reason_length": len(orsak)
-            }, execution_time)
-            
-            await self.helper.send_response(interaction, embed=embed)
-            
-            # Notifiera påverkad spelare (om möjligt)
-            try:
-                # TODO: Implementera player notification
-                pass
-            except discord.Forbidden as e:
-                logger.warning(f"Kunde inte skicka player notification (saknar permissions): {e}")
-            except discord.HTTPException as e:
-                logger.warning(f"Kunde inte skicka player notification (Discord HTTP error): {e}")
-            except Exception as e:
-                logger.error(f"Oväntat fel vid skickande av player notification: {e}")
-            
-        except Exception as e:
-            embed = await self.helper.create_error_response(
-                interaction.user.id,
-                f"Ett oväntat fel inträffade: {str(e)}"
-            )
-            await self.helper.send_response(interaction, embed=embed)
-
-    @app_commands.command(name="session_rollback", description="[GM] Ångra X antal händelser från aktuell session")
-    @app_commands.describe(
-        antal="Antal händelser att ångra (1-20)",
-        bekräfta="Skriv 'JA' för att bekräfta rollback"
-    )
-    @app_commands.default_permissions(manage_guild=True)
-    async def session_rollback_slash(
-        self,
-        interaction: discord.Interaction,
-        antal: app_commands.Range[int, 1, 20],
-        bekräfta: str
-    ):
-        """Rulla tillbaka session händelser."""
-        start_time = time.time()
-        
-        # KRITISK: GM-kontroll först
-        if not await self.check_gm_permission(interaction):
-            await self.send_gm_only_error(interaction)
-            return
-        
-        try:
-            guild_id = interaction.guild.id
-            
-            if guild_id not in self.current_sessions:
-                embed = await self.helper.create_error_response(
-                    interaction.user.id,
-                    "Ingen aktiv session",
-                    "Det finns ingen aktiv session att rulla tillbaka"
-                )
-                await self.helper.send_response(interaction, embed=embed)
-                return
-            
-            # Säkerhetskontroll - kräv explicit bekräftelse
-            if bekräfta.upper() != "JA":
-                embed = await self.helper.create_error_response(
-                    interaction.user.id,
-                    "Rollback avbruten",
-                    "Du måste skriva 'JA' för att bekräfta rollback"
-                )
-                await self.helper.send_response(interaction, embed=embed)
-                return
-            
-            session_data = self.current_sessions[guild_id]
-            session_id = session_data['session_id']
-            
-            # Hämta senaste händelser för preview
-            recent_events = []
-            if hasattr(self.roll_tracker, 'get_recent_events'):
-                recent_events = self.roll_tracker.get_recent_events(session_id, antal)
-            
-            # Skapa rollback embed
-            embed = self.embed_factory.admin_message(
-                interaction.user.id,
-                f"🔄 Session Rollback Genomförd",
-                f"Rullade tillbaka {antal} händelser från session {session_id}"
-            )
-            
-            if recent_events:
-                events_text = "\n".join([
-                    f"• {event.get('player_name', 'Unknown')}: {event.get('command', 'N/A')}"
-                    for event in recent_events[:5]  # Visa max 5 för brevity
-                ])
-                embed.add_field(
-                    name="📋 Återtagna Händelser",
-                    value=events_text,
-                    inline=False
-                )
-            
-            # Genomför rollback i roll_tracker
-            if hasattr(self.roll_tracker, 'rollback_events'):
-                success = self.roll_tracker.rollback_events(session_id, antal)
-                if not success:
-                    embed.add_field(
-                        name="⚠️ Varning",
-                        value="Rollback kanske inte kunde genomföras helt",
-                        inline=False
-                    )
-            
-            # Logga rollback för audit
-            rollback_log = {
-                'timestamp': datetime.now().isoformat(),
-                'gm_id': interaction.user.id,
-                'gm_name': interaction.user.display_name,
-                'session_id': session_id,
-                'events_count': antal,
-                'guild_id': interaction.guild.id
-            }
-            
-            print(f"[SESSION_ROLLBACK] {json.dumps(rollback_log, ensure_ascii=False)}")
-            
-            # Notifiera påverkade spelare
-            if recent_events:
-                affected_players = set(event.get('player_name', '') for event in recent_events if event.get('player_name'))
-                embed.add_field(
-                    name="👥 Påverkade Spelare",
-                    value=", ".join(affected_players) if affected_players else "Ingen",
-                    inline=False
-                )
-            
-            execution_time = time.time() - start_time
-            await self.helper.log_command_usage(interaction, "session_rollback", {
-                "session_id": session_id,
-                "events_count": antal
-            }, execution_time)
-            
-            await self.helper.send_response(interaction, embed=embed)
-            
-        except Exception as e:
-            embed = await self.helper.create_error_response(
-                interaction.user.id,
-                f"Ett oväntat fel inträffade: {str(e)}"
-            )
-            await self.helper.send_response(interaction, embed=embed)
-
-    @app_commands.command(name="player_stats", description="[GM] Visa detaljerad statistik för specifik spelare")
-    @app_commands.describe(
-        spelare="Användarnamn eller ID för spelaren",
-        period="Tidsperiod för statistik",
-        jämför="Jämför med server-genomsnitt"
-    )
-    @app_commands.choices(period=[
-        app_commands.Choice(name="Aktuell session", value="current"),
-        app_commands.Choice(name="Senaste veckan", value="week"),
-        app_commands.Choice(name="Alla tider", value="all")
-    ])
-    @app_commands.default_permissions(manage_guild=True)
-    async def player_stats_slash(
-        self,
-        interaction: discord.Interaction,
-        spelare: str,
-        period: str = "current",
-        jämför: bool = True
-    ):
-        """Detaljerad spelarstatistik för GM."""
-        await self.helper.safe_defer(interaction)  # Kan ta tid att beräkna
-        start_time = time.time()
-        
-        # KRITISK: GM-kontroll först
-        if not await self.check_gm_permission(interaction):
-            await self.send_gm_only_error(interaction)
-            return
-        
-        try:
-            # Försök hitta spelare (enkel implementering)
-            player_id = spelare
-            if not spelare.isdigit():
-                # TODO: Implementera player name lookup
-                pass
-            
-            # Hämta spelarstatistik
-            player_stats = {}
-            if hasattr(self.roll_tracker, 'get_detailed_player_stats'):
-                player_stats = self.roll_tracker.get_detailed_player_stats(player_id, period)
-            
-            if not player_stats or "error" in player_stats:
-                embed = await self.helper.create_error_response(
-                    interaction.user.id,
-                    f"Kunde inte hämta statistik för {spelare}",
-                    "Kontrollera att spelaren finns och har aktivitet"
-                )
-                await self.helper.send_response(interaction, embed=embed)
-                return
-            
-            # Skapa detaljerad stats embed
-            embed = self.embed_factory.stats_overview(
-                interaction.user.id,
-                f"📊 Detaljerad Statistik: {spelare}",
-                player_stats.get('basic_stats', {}),
-                period
-            )
-            
-            # Lägg till GM-specifika insights
-            if player_stats.get('patterns'):
-                patterns = player_stats['patterns']
-                insights = []
-                
-                if patterns.get('favorite_time'):
-                    insights.append(f"🕐 Mest aktiv: {patterns['favorite_time']}")
-                
-                if patterns.get('lucky_streak'):
-                    insights.append(f"🍀 Lyckoserie: {patterns['lucky_streak']} slag")
-                
-                if patterns.get('unlucky_streak'):
-                    insights.append(f"💀 Otursserie: {patterns['unlucky_streak']} slag")
-                
-                if insights:
-                    embed.add_field(
-                        name="🔍 Mönster & Insikter",
-                        value="\n".join(insights),
-                        inline=False
-                    )
-            
-            # Jämförelse med genomsnitt
-            if jämför and player_stats.get('comparison'):
-                comp = player_stats['comparison']
-                
-                comparison_text = []
-                if comp.get('success_rate_vs_avg'):
-                    diff = comp['success_rate_vs_avg']
-                    symbol = "📈" if diff > 0 else "📉" if diff < 0 else "➡️"
-                    comparison_text.append(f"{symbol} Framgång: {diff:+.1f}% vs genomsnitt")
-                
-                if comp.get('activity_vs_avg'):
-                    diff = comp['activity_vs_avg']
-                    symbol = "🔥" if diff > 1.5 else "❄️" if diff < 0.5 else "⚖️"
-                    comparison_text.append(f"{symbol} Aktivitet: {diff:.1f}x genomsnittet")
-                
-                if comparison_text:
-                    embed.add_field(
-                        name="📊 Jämförelse",
-                        value="\n".join(comparison_text),
-                        inline=False
-                    )
-            
-            # Ovanliga händelser (anomaly detection)
-            if player_stats.get('anomalies'):
-                anomalies = player_stats['anomalies']
-                anomaly_text = []
-                
-                for anomaly in anomalies[:3]:  # Max 3 anomalier
-                    anomaly_text.append(f"⚠️ {anomaly.get('description', 'Okänt')}")
-                
-                if anomaly_text:
-                    embed.add_field(
-                        name="🚨 Ovanliga Mönster",
-                        value="\n".join(anomaly_text),
-                        inline=False
-                    )
-            
-            # Kommandofördelning
-            if player_stats.get('command_breakdown'):
-                cmd_breakdown = player_stats['command_breakdown']
-                top_commands = sorted(cmd_breakdown.items(), key=lambda x: x[1], reverse=True)[:5]
-                
-                cmd_text = "\n".join([
-                    f"**{cmd}**: {count} användningar"
-                    for cmd, count in top_commands
-                ])
-                
-                embed.add_field(
-                    name="🎮 Mest Använda Kommandon",
-                    value=cmd_text,
-                    inline=False
-                )
-            
-            execution_time = time.time() - start_time
-            await self.helper.log_command_usage(interaction, "player_stats", {
-                "player": spelare,
-                "period": period,
-                "compare": jämför
-            }, execution_time)
-            
-            await self.helper.send_response(interaction, embed=embed)
-            
-        except Exception as e:
-            embed = await self.helper.create_error_response(
-                interaction.user.id,
-                f"Ett oväntat fel inträffade: {str(e)}"
-            )
-            await self.helper.send_response(interaction, embed=embed)
-
 
 # Registrering function
-async def register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory, knowledge_base=None):
+async def register_slash_admin_commands(bot, roll_tracker, color_handler, embed_factory):
     """
     Registrera slash admin commands med boten.
     """
@@ -1300,6 +882,6 @@ async def register_slash_admin_commands(bot, roll_tracker, color_handler, embed_
         return
     
     # Lägg till cog
-    admin_cog = AdminSlashCommands(bot, roll_tracker, color_handler, embed_factory, knowledge_base)
+    admin_cog = AdminSlashCommands(bot, roll_tracker, color_handler, embed_factory)
     await bot.add_cog(admin_cog)
-    print("Slash admin commands har registrerats (/startsession, /endsession, /showsession, /secret_roll, /secret_ex, /secret_count, /gm_override, /session_rollback, /player_stats).")
+    print("Slash admin commands har registrerats (/startsession, /endsession, /showsession, /secret_roll, /secret_ex, /secret_count).")

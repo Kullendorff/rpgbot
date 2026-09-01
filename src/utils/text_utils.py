@@ -1,11 +1,5 @@
-import tiktoken
 from typing import List
 
-def count_tokens(text: str) -> int:
-    """Räknar antal tokens i en given text med GPT-4:s tokenräknare."""
-    encoder = tiktoken.encoding_for_model("gpt-4")
-    return len(encoder.encode(text))
-    
 def clean_unicode(text):
     """
     Rensar en sträng från eventuella surrogatpar genom att först koda om till bytes 

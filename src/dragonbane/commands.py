@@ -80,6 +80,7 @@ class PushView(discord.ui.View):
         skill: int,
         modifier: int,
         mode: str,
+        antal: int = 1,
         attribute: Optional[str] = None,
     ) -> None:
         super().__init__(timeout=60)
@@ -87,6 +88,7 @@ class PushView(discord.ui.View):
         self.skill = skill
         self.modifier = modifier
         self.mode = mode
+        self.antal = antal
         self.attribute = attribute
         self.message: Optional[discord.Message] = None
 
@@ -113,7 +115,7 @@ class PushView(discord.ui.View):
 
         try:
             result = dragonbane_skill_check(
-                skill=self.skill, modifier=self.modifier, mode=self.mode
+                skill=self.skill, modifier=self.modifier, mode=self.mode, antal=self.antal
             )
         except ValueError as err:
             error = self.embed_factory.error_message(
@@ -130,6 +132,7 @@ class PushView(discord.ui.View):
             modifier=result.modifier,
             target=result.target,
             mode=result.mode,
+            antal=result.antal,
             rolls=result.rolls,
             chosen_roll=result.chosen_roll,
             success=result.success,
@@ -175,6 +178,7 @@ class DragonbaneCommands(commands.Cog):
         skill="Färdighetsvärde (1-30)",
         modifier="Situationsmodifikation (-10 till +10)",
         mode="normal, fördel eller nackdel",
+        antal="Stapling av fördel/nackdel utöver grundslaget, t.ex. 2 = trippel (house rule)",
     )
     async def dod_fv(
         self,
@@ -182,9 +186,10 @@ class DragonbaneCommands(commands.Cog):
         skill: app_commands.Range[int, 1, 30],
         modifier: app_commands.Range[int, -10, 10] = 0,
         mode: ModeLiteral = "normal",
+        antal: app_commands.Range[int, 1, 99] = 1,
     ) -> None:
         try:
-            result = dragonbane_skill_check(skill=skill, modifier=modifier, mode=mode)
+            result = dragonbane_skill_check(skill=skill, modifier=modifier, mode=mode, antal=antal)
         except ValueError as err:
             error = self.embed_factory.error_message(
                 interaction.user.id, "Ogiltigt färdighetsslag", str(err)
@@ -199,6 +204,7 @@ class DragonbaneCommands(commands.Cog):
             modifier=result.modifier,
             target=result.target,
             mode=result.mode,
+            antal=result.antal,
             rolls=result.rolls,
             chosen_roll=result.chosen_roll,
             success=result.success,
@@ -207,7 +213,9 @@ class DragonbaneCommands(commands.Cog):
 
         can_push = not result.success and result.critical != "demon"
         if can_push:
-            view = PushView(self.embed_factory, skill=skill, modifier=modifier, mode=result.mode)
+            view = PushView(
+                self.embed_factory, skill=skill, modifier=modifier, mode=result.mode, antal=antal
+            )
             await interaction.response.send_message(embed=embed, view=view)
             view.message = await interaction.original_response()
         else:
@@ -255,6 +263,7 @@ class DragonbaneCommands(commands.Cog):
         modifier="Situationsmodifikation (-10 till +10)",
         mode="normal, fördel eller nackdel",
         grundegenskap="Färdighetens grundegenskap (ger rätt tillstånd). Lämna tom för slump.",
+        antal="Stapling av fördel/nackdel utöver grundslaget, t.ex. 2 = trippel (house rule)",
     )
     async def dod_pressa(
         self,
@@ -263,9 +272,10 @@ class DragonbaneCommands(commands.Cog):
         modifier: app_commands.Range[int, -10, 10] = 0,
         mode: ModeLiteral = "normal",
         grundegenskap: Optional[AttrLiteral] = None,
+        antal: app_commands.Range[int, 1, 99] = 1,
     ) -> None:
         try:
-            result = dragonbane_skill_check(skill=skill, modifier=modifier, mode=mode)
+            result = dragonbane_skill_check(skill=skill, modifier=modifier, mode=mode, antal=antal)
         except ValueError as err:
             error = self.embed_factory.error_message(
                 interaction.user.id, "Ogiltigt färdighetsslag", str(err)
@@ -281,6 +291,7 @@ class DragonbaneCommands(commands.Cog):
             modifier=result.modifier,
             target=result.target,
             mode=result.mode,
+            antal=result.antal,
             rolls=result.rolls,
             chosen_roll=result.chosen_roll,
             success=result.success,

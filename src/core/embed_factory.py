@@ -473,7 +473,7 @@ class EmbedFactory:
         self, user_id: int, user_name: str, skill: int, modifier: int,
         target: int, mode: str, rolls: list, chosen_roll: int,
         success: bool, critical: str = None, pushed: bool = False,
-        condition: str = None, attribute: str = None,
+        condition: str = None, attribute: str = None, antal: int = 1,
     ) -> discord.Embed:
         """Mall för Dragonbane färdighetsslag (och pressade slag)."""
         prefix = "🐉 Dragonbane: Pressat slag" if pushed else "🐉 Dragonbane: Färdighetsslag"
@@ -491,10 +491,18 @@ class EmbedFactory:
             color = 0xE74C3C        # Röd
             result_emoji, result_text = "❌", "MISSLYCKAT"
 
+        if mode == "normal":
+            mode_text = "normal"
+        else:
+            dice_count = 1 + antal
+            keep = "lägsta" if mode == "fördel" else "högsta"
+            antal_label = f" ×{antal}" if antal > 1 else ""
+            mode_text = f"{mode}{antal_label} ({dice_count}T20, behåll {keep})"
+
         rolls_text = ", ".join(str(r) for r in rolls)
         desc_lines = [
             f"**FV:** {skill}   **Mod:** {modifier:+d}   **Målvärde:** {target}",
-            f"**Läge:** {mode}",
+            f"**Läge:** {mode_text}",
             f"**Slag:** {rolls_text}",
             f"**Valt slag:** {chosen_roll}",
             f"**Resultat:** {result_emoji} **{result_text}**",

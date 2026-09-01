@@ -156,6 +156,7 @@ class SkillCheckResult:
     modifier: int
     target: int
     mode: str
+    antal: int
     rolls: list[int]
     chosen_roll: int
     success: bool
@@ -266,9 +267,18 @@ def dragonbane_skill_check(
     skill: int,
     modifier: int = 0,
     mode: str = "normal",
+    antal: int = 1,
     rng: Random | None = None,
 ) -> SkillCheckResult:
-    """Färdighetsslag på T20. Slag <= målvärde lyckas. 1 = drake, 20 = demon."""
+    """
+    Färdighetsslag på T20. Slag <= målvärde lyckas. 1 = drake, 20 = demon.
+
+    `antal` staplar fördel/nackdel utöver grundslaget (house rule, se
+    dragonbane-stapling-av-f-rdelar-nackdelar.json): varje instans lägger
+    till ytterligare ett T20. T.ex. nackdel med antal=3 slår 4T20 och
+    behåller högsta. Officiella regler stödjer inte stapling; detta är ett
+    medvetet beslutat undantag.
+    """
     rng = rng or Random()
 
     if skill < 1 or skill > 30:
@@ -280,12 +290,18 @@ def dragonbane_skill_check(
     if normalized_mode not in {"normal", "fördel", "nackdel"}:
         raise ValueError("Läge måste vara normal, fördel eller nackdel")
 
+    if antal < 1 or antal > 99:
+        raise ValueError("Antal måste vara mellan 1 och 99")
+    if normalized_mode == "normal" and antal > 1:
+        raise ValueError("Antal kan bara staplas tillsammans med fördel eller nackdel")
+
     target = max(1, min(30, skill + modifier))
     if normalized_mode == "normal":
         rolls = [rng.randint(1, 20)]
         chosen_roll = rolls[0]
     else:
-        rolls = [rng.randint(1, 20), rng.randint(1, 20)]
+        dice_count = 1 + antal
+        rolls = [rng.randint(1, 20) for _ in range(dice_count)]
         chosen_roll = min(rolls) if normalized_mode == "fördel" else max(rolls)
 
     critical: str | None = None
@@ -303,6 +319,7 @@ def dragonbane_skill_check(
         modifier=modifier,
         target=target,
         mode=normalized_mode,
+        antal=antal,
         rolls=rolls,
         chosen_roll=chosen_roll,
         success=success,

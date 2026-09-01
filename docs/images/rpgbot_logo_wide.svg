@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" width="820" height="240">
+  <defs>
+    <linearGradient id="wbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="wtop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="wright" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="wleft" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <radialGradient id="wglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fde68a" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#fbbf24" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="820" height="240" rx="36" fill="url(#wbg)"/>
+
+  <!-- d20-märket, skalat och centrerat i vänsterfältet -->
+  <g transform="translate(30,20) scale(1.0)">
+    <!-- Hörn: A(100,35) B(161,70) C(161,140) D(100,175) E(39,140) F(39,70) -->
+    <polygon points="100,35 161,70 39,70" fill="url(#wtop)" stroke="#fbbf24" stroke-width="3" stroke-linejoin="round"/>
+    <polygon points="161,70 161,140 100,175" fill="url(#wright)" stroke="#fbbf24" stroke-width="3" stroke-linejoin="round"/>
+    <polygon points="39,70 39,140 100,175" fill="url(#wleft)" stroke="#fbbf24" stroke-width="3" stroke-linejoin="round"/>
+    <polygon points="39,70 161,70 100,175" fill="none" stroke="#ede9fe" stroke-width="2.5" opacity="0.9" stroke-linejoin="round"/>
+    <circle cx="100" cy="103" r="26" fill="url(#wglow)"/>
+    <text x="100" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"
+          font-size="30" font-weight="800" fill="#fef3c7">20</text>
+    <path d="M170 40 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5 z" fill="#fde68a" opacity="0.85"/>
+    <path d="M28 148 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4 z" fill="#c4b5fd" opacity="0.8"/>
+  </g>
+
+  <!-- Ordmärke -->
+  <text x="230" y="135" font-family="Segoe UI, Arial, sans-serif"
+        font-size="88" font-weight="800" letter-spacing="6" fill="url(#gold)">RPGBOT</text>
+
+  <!-- Tagline -->
+  <text x="233" y="185" font-family="Segoe UI, Arial, sans-serif"
+        font-size="26" font-weight="400" letter-spacing="10" fill="#c4b5fd">RULLA · KASTA · ÄVENTYRA</text>
+
+  <!-- Modul-streck: fyra små tärningssymboler för spelmodulerna -->
+  <g transform="translate(233,205)" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#8b5cf6">
+    <text x="0"   y="14" font-weight="700">EON</text>
+    <text x="80"  y="14" font-weight="700">∆G</text>
+    <text x="150" y="14" font-weight="700">DRAGONBANE</text>
+    <text x="330" y="14" font-weight="700">SW D6</text>
+  </g>
+</svg>

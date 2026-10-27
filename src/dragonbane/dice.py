@@ -213,7 +213,7 @@ def roll_expression(expression: str, rng: Random | None = None) -> ExpressionRes
         raise ValueError("Uttrycket innehåller ogiltiga tecken")
 
     # Normalisera svenskt T till d internt.
-    compact = expr.replace(" ", "").replace("T", "d").replace("D", "d")
+    compact = expr.replace(" ", "").replace("T", "d").replace("t", "d").replace("D", "d")
     if compact[0] == "d":
         compact = f"1{compact}"
 

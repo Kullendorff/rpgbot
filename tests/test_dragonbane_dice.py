@@ -14,7 +14,7 @@ import unittest
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.dragonbane.dice import dragonbane_skill_check
+from src.dragonbane.dice import dragonbane_skill_check, roll_expression
 
 
 class SequenceRandom:
@@ -100,6 +100,17 @@ class TestDragonbaneSkillCheckAntal(unittest.TestCase):
     def test_ogiltigt_lage_ger_valueerror(self):
         with self.assertRaises(ValueError):
             dragonbane_skill_check(skill=10, mode="ogiltigt")
+
+
+class TestRollExpressionGemener(unittest.TestCase):
+    def test_litet_t_tolkas_som_tarning(self):
+        result = roll_expression("1t8+2", rng=SequenceRandom([5]))
+        self.assertEqual(result.total, 7)
+        self.assertEqual(result.dice_terms[0].sides, 8)
+
+    def test_litet_t_utan_antal(self):
+        result = roll_expression("t6", rng=SequenceRandom([4]))
+        self.assertEqual(result.total, 4)
 
 
 if __name__ == "__main__":

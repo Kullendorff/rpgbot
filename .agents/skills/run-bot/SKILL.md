@@ -1,3 +1,11 @@
+---
+name: run-bot
+description: >-
+  Startar och stoppar Diceroller/EON-discordboten lokalt så den kan testas i Discord.
+  Använd när användaren skriver /run-bot eller ber om att "starta boten",
+  "sparka igång boten", "kör boten" eller "stoppa boten".
+---
+
 # Run Bot Skill
 
 Startar Diceroller/EON-discordboten lokalt så den kan testas i Discord.
@@ -11,6 +19,7 @@ Startar Diceroller/EON-discordboten lokalt så den kan testas i Discord.
 - `.env` måste finnas i repo-roten med minst `DISCORD_TOKEN`, `PINECONE_API_KEY`,
   `ANTHROPIC_API_KEY`. Utan `GUILD_ID` i `.env` tar slash-kommando-sync upp till en
   timme (global sync) istället för att synas direkt (guild-sync).
+  *(Notering för aktuell kodbas enl. `CLAUDE.md`: AI/kunskapsdelen är borttagen sedan 2026-08-24, så endast `DISCORD_TOKEN` krävs nu för att starta boten, plus valfritt `GUILD_ID` / `CHANNEL_IDS` / `DEBUG_MODE`.)*
 
 ## Workflow
 
@@ -83,3 +92,23 @@ kommandona kan dröja upp till en timme innan de syns.
 tasklist //FI "IMAGENAME eq python.exe"
 taskkill //PID <verklig-pid> //F
 ```
+
+---
+
+## Antigravity-specifika tillägg (PowerShell / `run_command`)
+
+I Antigravity körs kommandon i PowerShell (`pwsh`) via `run_command`:
+
+1. **Kolla körande processer i PowerShell:**
+   ```powershell
+   tasklist /FI "IMAGENAME eq python.exe"
+   ```
+   *(Obs: enkel `/` i PowerShell, inte `//` som i Git Bash).*
+2. **Starta boten:**
+   - För att boten ska nå Discord (nätverk) måste `run_command` köras med `BypassSandbox: true` och `IsDaemon: true` (t.ex. `python -u src/main.py`).
+3. **Läsa loggen i PowerShell:**
+   ```powershell
+   Get-Content -Tail 20 logs/eon_bot.log
+   ```
+4. **Stoppa boten:**
+   Använd `manage_task` (`Action: "kill"`) om den startades som en Antigravity-bakgrundstask, eller `taskkill /PID <verklig-pid> /F`.
